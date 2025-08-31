@@ -2,12 +2,12 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen, within } from "@testing-library/react";
 
-import { clickMultiSelectField } from "./MultiSelectField.testHelper";
+import { clickMultiSelectFieldOption } from "./MultiSelectField.testHelper";
 import { fillTextField } from "./TextField.testHelper";
 import { fillYearField } from "./YearField.testHelper";
 
-export async function clickGenreFilter(user: UserEvent, value: string) {
-  await clickMultiSelectField(user, "Genres", value);
+export async function clickGenreFilterOption(user: UserEvent, value: string) {
+  await clickMultiSelectFieldOption(user, "Genres", value);
 }
 
 export async function fillGradeFilter(

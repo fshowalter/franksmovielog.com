@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
-  clickCreditedAsFilter,
+  clickCreditedAsFilterOption,
   getCreditedAsFilter,
 } from "~/components/CreditedAsFilter.testHelper";
 import {
@@ -16,9 +16,9 @@ import {
   clickShowMore,
   getGroupedPosterList,
 } from "~/components/PosterList.testHelper";
-import { clickReviewedStatusFilter } from "~/components/ReviewedStatusFilter.testHelper";
+import { clickReviewedStatusFilterOption } from "~/components/ReviewedStatusFilter.testHelper";
 import {
-  clickGenreFilter,
+  clickGenreFilterOption,
   fillGradeFilter,
   fillReleaseYearFilter,
   fillReviewYearFilter,
@@ -88,10 +88,10 @@ describe("CastAndCrewMember", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickGenreFilter(user, "Action");
+    await clickGenreFilterOption(user, "Action");
 
     // Click to open the dropdown again
-    await clickGenreFilter(user, "Comedy");
+    await clickGenreFilterOption(user, "Comedy");
 
     await clickViewResults(user);
 
@@ -252,7 +252,7 @@ describe("CastAndCrewMember", () => {
 
     await clickToggleFilters(user);
 
-    await clickReviewedStatusFilter(user, "Reviewed");
+    await clickReviewedStatusFilterOption(user, "Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
@@ -268,7 +268,7 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await clickReviewedStatusFilter(user, "Not Reviewed");
+    await clickReviewedStatusFilterOption(user, "Not Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
@@ -284,12 +284,12 @@ describe("CastAndCrewMember", () => {
 
     render(<CastAndCrewMember {...props} />);
 
-    await clickReviewedStatusFilter(user, "Not Reviewed");
+    await clickReviewedStatusFilterOption(user, "Not Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
 
-    await clickReviewedStatusFilter(user, "All");
+    await clickReviewedStatusFilterOption(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -307,7 +307,7 @@ describe("CastAndCrewMember", () => {
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Director");
+    await clickCreditedAsFilterOption(user, "Director");
 
     await clickViewResults(user);
 
@@ -324,13 +324,13 @@ describe("CastAndCrewMember", () => {
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Director");
+    await clickCreditedAsFilterOption(user, "Director");
 
     await clickViewResults(user);
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "All");
+    await clickCreditedAsFilterOption(user, "All");
 
     await clickViewResults(user);
 
@@ -347,7 +347,7 @@ describe("CastAndCrewMember", () => {
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Writer");
+    await clickCreditedAsFilterOption(user, "Writer");
 
     await clickViewResults(user);
 
@@ -364,13 +364,13 @@ describe("CastAndCrewMember", () => {
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Writer");
+    await clickCreditedAsFilterOption(user, "Writer");
 
     await clickViewResults(user);
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "All");
+    await clickCreditedAsFilterOption(user, "All");
 
     await clickViewResults(user);
 
@@ -387,7 +387,7 @@ describe("CastAndCrewMember", () => {
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Performer");
+    await clickCreditedAsFilterOption(user, "Performer");
 
     await clickViewResults(user);
 
@@ -404,13 +404,13 @@ describe("CastAndCrewMember", () => {
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "Performer");
+    await clickCreditedAsFilterOption(user, "Performer");
 
     await clickViewResults(user);
 
     await clickToggleFilters(user);
 
-    await clickCreditedAsFilter(user, "All");
+    await clickCreditedAsFilterOption(user, "All");
 
     await clickViewResults(user);
 
@@ -431,7 +431,7 @@ describe("CastAndCrewMember", () => {
     // Apply multiple filters
     await fillTitleFilter(user, "Smokey");
 
-    await clickCreditedAsFilter(user, "Writer");
+    await clickCreditedAsFilterOption(user, "Writer");
 
     await clickViewResults(user);
 

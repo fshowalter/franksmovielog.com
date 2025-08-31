@@ -1,13 +1,35 @@
-import { act, render, screen, within } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { DRAWER_CLOSE_ANIMATION_MS } from "~/components/ListWithFilters/ListWithFilters";
-import { DROPDOWN_CLOSE_DELAY_MS } from "~/components/MultiSelectField";
-import { TEXT_FILTER_DEBOUNCE_MS } from "~/components/TextField";
+import {
+  clickClearFilters,
+  clickCloseFilters,
+  clickSortOption,
+  clickToggleFilters,
+  clickViewResults,
+} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+import {
+  clickShowMore,
+  getGroupedPosterList,
+} from "~/components/PosterList.testHelper";
+import {
+  clickGenreFilterOption,
+  fillReleaseYearFilter,
+  fillTitleFilter,
+  getTitleFilter,
+} from "~/components/TitleFilters.testHelper";
+import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { getProps } from "./getProps";
 import { Watchlist } from "./Watchlist";
+import {
+  clickCollectionFilterOption,
+  clickDirectorFilterOption,
+  clickPerformerFilterOption,
+  clickWriterFilterOption,
+  getDirectorFilter,
+  getPerformerFilter,
+} from "./Watchlist.testHelper";
 
 const props = await getProps();
 
@@ -37,409 +59,310 @@ describe("/watchlist", () => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Type the filter text
-    await user.type(screen.getByLabelText("Title"), "Lawyer Man");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTitleFilter(user, "Lawyer Man");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by not-found title", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Type the filter text
-    await user.type(screen.getByLabelText("Title"), "This movie doesn't exist");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTitleFilter(user, "Non-existent movie");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by director", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Director"),
-      "Howard Hawks",
-    );
+    await clickDirectorFilterOption(user, "Howard Hawks");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by director then show all", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Director"),
-      "Howard Hawks",
-    );
+    await clickDirectorFilterOption(user, "Howard Hawks");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // Open filter drawer again
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(screen.getByLabelText("Director"), "All");
+    await clickDirectorFilterOption(user, "All");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by performer", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Performer"),
-      "Bette Davis",
-    );
+    await clickPerformerFilterOption(user, "John Wayne");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by performer then show all", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Performer"),
-      "Bette Davis",
-    );
+    await clickPerformerFilterOption(user, "John Wayne");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
-    // Open filter drawer again
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(screen.getByLabelText("Performer"), "All");
+    await clickPerformerFilterOption(user, "All");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by writer", async ({ expect }) => {
     expect.hasAssertions();
+
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Writer"),
-      "Leigh Brackett",
-    );
+    await clickWriterFilterOption(user, "Leigh Brackett");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by writer then show all", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Writer"),
-      "Leigh Brackett",
-    );
+    await clickWriterFilterOption(user, "Leigh Brackett");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
-    // Open filter drawer again
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(screen.getByLabelText("Writer"), "All");
+    await clickWriterFilterOption(user, "All");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by collection", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Collection"),
-      "Universal Monsters",
-    );
+    await clickCollectionFilterOption(user, "Universal Monsters");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by collection then show all", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Collection"),
-      "Universal Monsters",
-    );
+    await clickCollectionFilterOption(user, "Universal Monsters");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
-    // Open filter drawer again
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    await userEvent.selectOptions(screen.getByLabelText("Collection"), "All");
+    await clickCollectionFilterOption(user, "All");
 
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by genres", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
-    const genresButton = screen.getByLabelText("Genres");
+    await clickGenreFilterOption(user, "Horror");
+    await clickGenreFilterOption(user, "Thriller");
 
-    // Click to open the dropdown
-    await user.click(genresButton);
+    await clickViewResults(user);
 
-    // Select Horror
-    const horrorOption = await screen.findByRole("option", { name: "Horror" });
-    await user.click(horrorOption);
-
-    // Advance timers for dropdown to close
-    act(() => {
-      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
-    });
-
-    // Click to open the dropdown again
-    await user.click(genresButton);
-
-    // Select Thriller
-    const thrillerOption = await screen.findByRole("option", {
-      name: "Thriller",
-    });
-    await user.click(thrillerOption);
-
-    // Advance timers for dropdown to close again
-    act(() => {
-      vi.advanceTimersByTime(DROPDOWN_CLOSE_DELAY_MS);
-    });
-
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
-
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by title A → Z", async ({ expect }) => {
     expect.hasAssertions();
 
+    // Setup userEvent with advanceTimers
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Title (A → Z)",
-    );
+    await clickSortOption(user, "Title (A → Z)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by title Z → A", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Title (Z → A)",
-    );
+    await clickSortOption(user, "Title (Z → A)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by release date with oldest first", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Release Date (Oldest First)",
-    );
+    await clickSortOption(user, "Release Date (Oldest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can sort by release date with newest first", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Sort"),
-      "Release Date (Newest First)",
-    );
+    await clickSortOption(user, "Release Date (Newest First)");
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can filter by release year", async ({ expect }) => {
     expect.hasAssertions();
 
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await userEvent.click(
-      screen.getByRole("button", { name: "Toggle filters" }),
-    );
+    await clickToggleFilters(user);
 
-    const fieldset = screen.getByRole("group", { name: "Release Year" });
-    const fromInput = within(fieldset).getByLabelText("From");
-    const toInput = within(fieldset).getByLabelText("to");
+    await fillReleaseYearFilter(user, "1930", "1935");
 
-    await userEvent.selectOptions(fromInput, "1930");
-    await userEvent.selectOptions(toInput, "1935");
-
-    await userEvent.click(
-      screen.getByRole("button", { name: /View \d+ Results/ }),
-    );
+    await clickViewResults(user);
 
     // List updates synchronously with fake timers
-
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can show more titles", async ({ expect }) => {
@@ -465,110 +388,94 @@ describe("/watchlist", () => {
       values: manyValues,
     };
 
+    const user = getUserWithFakeTimers();
+
     render(<Watchlist {...propsWithManyValues} />);
 
-    await userEvent.click(screen.getByText("Show More"));
+    await clickShowMore(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    expect(getGroupedPosterList()).toMatchSnapshot();
   });
 
   it("can clear all filters", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Apply multiple filters
-    await user.type(screen.getByLabelText("Title"), "Test");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTitleFilter(user, "No result");
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Director"),
-      "Howard Hawks",
-    );
+    await clickDirectorFilterOption(user, "Howard Hawks");
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Performer"),
-      "Bette Davis",
-    );
+    await clickPerformerFilterOption(user, "Bette Davis");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
+
+    const listBeforeClear = getGroupedPosterList().innerHTML;
 
     // Open filter drawer again
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Clear all filters
-    await user.click(screen.getByRole("button", { name: "Clear all filters" }));
+    await clickClearFilters(user);
 
     // Check that filters are cleared
-    expect(screen.getByLabelText("Title")).toHaveValue("");
-    expect(screen.getByLabelText("Director")).toHaveValue("All");
-    expect(screen.getByLabelText("Performer")).toHaveValue("All");
+    expect(getTitleFilter()).toHaveValue("");
+    expect(getDirectorFilter()).toHaveValue("All");
+    expect(getPerformerFilter()).toHaveValue("All");
 
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
 
-    expect(screen.getByTestId("grouped-poster-list")).toMatchSnapshot();
+    const listAfterClear = getGroupedPosterList().innerHTML;
+
+    expect(listBeforeClear).not.toEqual(listAfterClear);
   });
 
   it("can reset filters when closing drawer", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
-    const user = userEvent.setup({
-      advanceTimers: vi.advanceTimersByTime,
-    });
+    const user = getUserWithFakeTimers();
 
     render(<Watchlist {...props} />);
 
     // Open filter drawer
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Apply filters
-    await user.type(screen.getByLabelText("Title"), "Test");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTitleFilter(user, "red line");
 
-    await userEvent.selectOptions(
-      screen.getByLabelText("Director"),
-      "Howard Hawks",
-    );
+    await clickDirectorFilterOption(user, "Howard Hawks");
 
     // Apply the filters
-    await user.click(screen.getByRole("button", { name: /View \d+ Results/ }));
+    await clickViewResults(user);
+
+    const listBeforeReset = getGroupedPosterList().innerHTML;
 
     // Open filter drawer again
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Start typing a new filter but don't apply
-    await user.clear(screen.getByLabelText("Title"));
-    await user.type(screen.getByLabelText("Title"), "Another Test");
-    act(() => {
-      vi.advanceTimersByTime(TEXT_FILTER_DEBOUNCE_MS);
-    });
+    await fillTitleFilter(user, "Another Test");
 
     // Close the drawer with the X button (should reset pending changes)
-    await user.click(screen.getByRole("button", { name: "Close filters" }));
+    await clickCloseFilters(user);
 
-    // Wait for drawer close animation - onResetFilters is called after animation
-    act(() => {
-      vi.advanceTimersByTime(DRAWER_CLOSE_ANIMATION_MS);
-    });
+    const listAfterReset = getGroupedPosterList().innerHTML;
+
+    expect(listAfterReset).toEqual(listBeforeReset);
 
     // Open filter drawer again to verify filters were reset to last applied state
-    await user.click(screen.getByRole("button", { name: "Toggle filters" }));
+    await clickToggleFilters(user);
 
     // Should show the originally applied filter, not the pending change
-    expect(screen.getByLabelText("Title")).toHaveValue("Test");
-    expect(screen.getByLabelText("Director")).toHaveValue("Howard Hawks");
+    expect(getTitleFilter()).toHaveValue("red line");
+    expect(getDirectorFilter()).toHaveValue("Howard Hawks");
   });
 });

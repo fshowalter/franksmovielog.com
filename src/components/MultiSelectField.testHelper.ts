@@ -5,7 +5,7 @@ import { vi } from "vitest";
 
 import { DROPDOWN_CLOSE_DELAY_MS } from "./MultiSelectField";
 
-export async function clickMultiSelectField(
+export async function clickMultiSelectFieldOption(
   user: UserEvent,
   labelText: string,
   optionText: string,

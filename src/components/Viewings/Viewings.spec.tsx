@@ -8,7 +8,7 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
-import { clickReviewedStatusFilter } from "~/components/ReviewedStatusFilter.testHelper";
+import { clickReviewedStatusFilterOption } from "~/components/ReviewedStatusFilter.testHelper";
 import {
   fillReleaseYearFilter,
   fillTitleFilter,
@@ -19,10 +19,10 @@ import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 import { getProps } from "./getProps";
 import { Viewings } from "./Viewings";
 import {
-  clickMediumFilter,
+  clickMediumFilterOption,
   clickNextMonthButton,
   clickPreviousMonthButton,
-  clickVenueFilter,
+  clickVenueFilterOption,
   fillViewingYearFilter,
   getCalendar,
   getMediumFilter,
@@ -84,7 +84,7 @@ describe("Viewings", () => {
 
     await clickToggleFilters(user);
 
-    await clickMediumFilter(user, "Blu-ray");
+    await clickMediumFilterOption(user, "Blu-ray");
 
     // Apply the filter
     await clickViewResults(user);
@@ -103,7 +103,7 @@ describe("Viewings", () => {
 
     await clickToggleFilters(user);
 
-    await clickReviewedStatusFilter(user, "Reviewed");
+    await clickReviewedStatusFilterOption(user, "Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
@@ -121,7 +121,7 @@ describe("Viewings", () => {
 
     await clickToggleFilters(user);
 
-    await clickReviewedStatusFilter(user, "Not Reviewed");
+    await clickReviewedStatusFilterOption(user, "Not Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
@@ -139,14 +139,14 @@ describe("Viewings", () => {
 
     await clickToggleFilters(user);
 
-    await clickReviewedStatusFilter(user, "Not Reviewed");
+    await clickReviewedStatusFilterOption(user, "Not Reviewed");
 
     // Apply the filter
     await clickViewResults(user);
 
     await clickToggleFilters(user);
 
-    await clickReviewedStatusFilter(user, "All");
+    await clickReviewedStatusFilterOption(user, "All");
 
     await clickViewResults(user);
 
@@ -163,7 +163,7 @@ describe("Viewings", () => {
 
     await clickToggleFilters(user);
 
-    await clickMediumFilter(user, "Blu-ray");
+    await clickMediumFilterOption(user, "Blu-ray");
 
     // Apply the filter
     await clickViewResults(user);
@@ -171,7 +171,7 @@ describe("Viewings", () => {
     // Open filter drawer again
     await clickToggleFilters(user);
 
-    await clickMediumFilter(user, "All");
+    await clickMediumFilterOption(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -190,7 +190,7 @@ describe("Viewings", () => {
 
     await clickToggleFilters(user);
 
-    await clickVenueFilter(user, "Alamo Drafthouse Cinema - One Loudoun");
+    await clickVenueFilterOption(user, "Alamo Drafthouse Cinema - One Loudoun");
 
     // Apply the filter
     await clickViewResults(user);
@@ -208,7 +208,7 @@ describe("Viewings", () => {
 
     await clickToggleFilters(user);
 
-    await clickVenueFilter(user, "Alamo Drafthouse Cinema - One Loudoun");
+    await clickVenueFilterOption(user, "Alamo Drafthouse Cinema - One Loudoun");
 
     // Apply the filter
     await clickViewResults(user);
@@ -216,7 +216,7 @@ describe("Viewings", () => {
     // Open filter drawer again
     await clickToggleFilters(user);
 
-    await clickVenueFilter(user, "All");
+    await clickVenueFilterOption(user, "All");
 
     // Apply the filter
     await clickViewResults(user);
@@ -405,7 +405,7 @@ describe("Viewings", () => {
     // Apply multiple filters
     await fillTitleFilter(user, "Rio Bravo");
 
-    await clickMediumFilter(user, "Blu-ray");
+    await clickMediumFilterOption(user, "Blu-ray");
 
     await clickViewResults(user);
 
