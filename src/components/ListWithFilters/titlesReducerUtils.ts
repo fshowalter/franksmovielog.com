@@ -46,16 +46,6 @@ export enum TitlesActions {
   SHOW_MORE = "SHOW_MORE",
 }
 
-/**
- * Sort types for cast and crew member (all title sorts)
- */
-export type CastAndCrewMemberSort = TitleSortType;
-
-/**
- * Sort types for reviews (all title sorts)
- */
-export type ReviewsSort = TitleSortType;
-
 // Union type for all title-specific actions
 export type TitlesActionType<TSortValue = unknown> =
   | ListWithFiltersActionType<TSortValue>
@@ -326,7 +316,7 @@ export function handleReviewYearFilterAction<
 /**
  * Handle "Show More" action for title lists with pagination
  */
-export function handleShowMore<
+export function handleShowMoreAction<
   TItem,
   TSortValue,
   TExtendedState extends { showCount: number },
