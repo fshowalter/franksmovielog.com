@@ -363,21 +363,21 @@ export function sortGrade<T extends { gradeValue?: null | number }>() {
   };
 }
 
-export function sortReleaseDate<T extends { releaseSequence: string }>() {
+export function sortReleaseDate<T extends { releaseSequence: number }>() {
   return {
     "release-date-asc": (a: T, b: T) =>
-      sortString(a.releaseSequence, b.releaseSequence),
+      sortNumber(a.releaseSequence, b.releaseSequence),
     "release-date-desc": (a: T, b: T) =>
-      sortString(a.releaseSequence, b.releaseSequence) * -1,
+      sortNumber(a.releaseSequence, b.releaseSequence) * -1,
   };
 }
 
-export function sortReviewDate<T extends { reviewSequence?: null | string }>() {
+export function sortReviewDate<T extends { reviewSequence?: null | number }>() {
   return {
     "review-date-asc": (a: T, b: T) =>
-      sortString(a.reviewSequence || "", b.reviewSequence || ""),
+      sortNumber(a.reviewSequence || 0, b.reviewSequence || 0),
     "review-date-desc": (a: T, b: T) =>
-      sortString(a.reviewSequence || "", b.reviewSequence || "") * -1,
+      sortNumber(a.reviewSequence || 0, b.reviewSequence || 0) * -1,
   };
 }
 

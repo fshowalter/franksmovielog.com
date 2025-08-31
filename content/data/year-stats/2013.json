@@ -83,9 +83,9 @@
         {
           "imdbId": "tt0098622",
           "title": "Warlock",
-          "releaseYear": "1989",
           "sortTitle": "warlock-1989",
-          "releaseSequence": "1989-05-01tt0098622",
+          "releaseYear": "1989",
+          "releaseSequence": 2704,
           "genres": [
             "Action",
             "Fantasy",
@@ -95,19 +95,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-05",
-          "viewingSequence": 1,
+          "viewingSequence": 1384,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt0082418",
           "title": "Friday the 13th Part 2",
-          "releaseYear": "1981",
           "sortTitle": "friday-the-13th-part-2-1981",
-          "releaseSequence": "1981-05-01tt0082418",
+          "releaseYear": "1981",
+          "releaseSequence": 2316,
           "genres": [
             "Horror",
             "Mystery",
@@ -116,19 +117,20 @@
           "slug": "friday-the-13th-part-2-1981",
           "grade": "C+",
           "gradeValue": 7,
+          "gradeSequence": 770,
           "reviewDate": "2020-11-13",
-          "reviewSequence": "2020-11-13-2",
+          "reviewSequence": 1130,
           "viewingDate": "2013-09-21",
-          "viewingSequence": 2,
+          "viewingSequence": 1907,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt0083972",
           "title": "Friday the 13th: Part 3",
-          "releaseYear": "1982",
           "sortTitle": "friday-the-13th-part-3-1982",
-          "releaseSequence": "1982-08-13tt0083972",
+          "releaseYear": "1982",
+          "releaseSequence": 2393,
           "genres": [
             "Horror",
             "Thriller"
@@ -136,10 +138,11 @@
           "slug": "friday-the-13th-part-3-1982",
           "grade": "C-",
           "gradeValue": 5,
+          "gradeSequence": 1168,
           "reviewDate": "2021-03-12",
-          "reviewSequence": "2021-03-12-3",
+          "reviewSequence": 1255,
           "viewingDate": "2013-09-27",
-          "viewingSequence": 3,
+          "viewingSequence": 1443,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -153,28 +156,29 @@
         {
           "imdbId": "tt0093777",
           "title": "Prince of Darkness",
-          "releaseYear": "1987",
           "sortTitle": "prince-of-darkness-1987",
-          "releaseSequence": "1987-10-21tt0093777",
+          "releaseYear": "1987",
+          "releaseSequence": 2638,
           "genres": [
             "Horror"
           ],
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-20",
-          "viewingSequence": 1,
+          "viewingSequence": 1393,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt0082340",
           "title": "Escape from New York",
-          "releaseYear": "1981",
           "sortTitle": "escape-from-new-york-1981",
-          "releaseSequence": "1981-04-01tt0082340",
+          "releaseYear": "1981",
+          "releaseSequence": 2308,
           "genres": [
             "Action",
             "Adventure",
@@ -183,10 +187,11 @@
           "slug": "escape-from-new-york-1981",
           "grade": "C+",
           "gradeValue": 7,
+          "gradeSequence": 769,
           "reviewDate": "2012-05-05",
-          "reviewSequence": "2012-05-05-1",
+          "reviewSequence": 983,
           "viewingDate": "2013-08-08",
-          "viewingSequence": 2,
+          "viewingSequence": 1434,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -200,9 +205,9 @@
         {
           "imdbId": "tt0243655",
           "title": "Wet Hot American Summer",
-          "releaseYear": "2001",
           "sortTitle": "wet-hot-american-summer-2001",
-          "releaseSequence": "2001-01-23tt0243655",
+          "releaseYear": "2001",
+          "releaseSequence": 3057,
           "genres": [
             "Comedy",
             "Romance"
@@ -210,19 +215,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-20",
-          "viewingSequence": 1,
+          "viewingSequence": 1394,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1655460",
           "title": "Wanderlust",
-          "releaseYear": "2012",
           "sortTitle": "wanderlust-2012",
-          "releaseSequence": "2012-02-16tt1655460",
+          "releaseYear": "2012",
+          "releaseSequence": 3464,
           "genres": [
             "Comedy",
             "Romance"
@@ -230,10 +236,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-10-13",
-          "viewingSequence": 2,
+          "viewingSequence": 1449,
           "medium": "HBO HD",
           "venue": null
         }
@@ -247,9 +254,9 @@
         {
           "imdbId": "tt0036775",
           "title": "Double Indemnity",
-          "releaseYear": "1944",
           "sortTitle": "double-indemnity-1944",
-          "releaseSequence": "1944-04-24tt0036775",
+          "releaseYear": "1944",
+          "releaseSequence": 536,
           "genres": [
             "Crime",
             "Drama",
@@ -260,29 +267,31 @@
           "slug": "double-indemnity-1944",
           "grade": "A+",
           "gradeValue": 13,
+          "gradeSequence": 3,
           "reviewDate": "2008-06-15",
-          "reviewSequence": "2008-06-15-1",
+          "reviewSequence": 586,
           "viewingDate": "2013-01-27",
-          "viewingSequence": 1,
+          "viewingSequence": 1396,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt0055256",
           "title": "One, Two, Three",
-          "releaseYear": "1961",
           "sortTitle": "one-two-three-1961",
-          "releaseSequence": "1961-12-15tt0055256",
+          "releaseYear": "1961",
+          "releaseSequence": 1222,
           "genres": [
             "Comedy"
           ],
           "slug": "one-two-three-1961",
           "grade": "B+",
           "gradeValue": 10,
+          "gradeSequence": 177,
           "reviewDate": "2008-01-07",
-          "reviewSequence": "2008-01-07-1",
+          "reviewSequence": 395,
           "viewingDate": "2013-03-09",
-          "viewingSequence": 2,
+          "viewingSequence": 1416,
           "medium": "Netflix",
           "venue": null
         }
@@ -296,9 +305,9 @@
         {
           "imdbId": "tt0371746",
           "title": "Iron Man",
-          "releaseYear": "2008",
           "sortTitle": "iron-man-2008",
-          "releaseSequence": "2008-04-14tt0371746",
+          "releaseYear": "2008",
+          "releaseSequence": 3323,
           "genres": [
             "Action",
             "Adventure",
@@ -307,19 +316,20 @@
           "slug": "iron-man-2008",
           "grade": "A-",
           "gradeValue": 11,
+          "gradeSequence": 128,
           "reviewDate": "2008-05-01",
-          "reviewSequence": "2008-05-01-1",
+          "reviewSequence": 530,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 1,
+          "viewingSequence": 1950,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "releaseYear": "2010",
           "sortTitle": "iron-man-2-2010",
-          "releaseSequence": "2010-04-26tt1228705",
+          "releaseYear": "2010",
+          "releaseSequence": 3409,
           "genres": [
             "Action",
             "Sci-Fi"
@@ -327,10 +337,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 2,
+          "viewingSequence": 1409,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -344,9 +355,9 @@
         {
           "imdbId": "tt1340800",
           "title": "Tinker Tailor Soldier Spy",
-          "releaseYear": "2011",
           "sortTitle": "tinker-tailor-soldier-spy-2011",
-          "releaseSequence": "2011-09-05tt1340800",
+          "releaseYear": "2011",
+          "releaseSequence": 3446,
           "genres": [
             "Drama",
             "Mystery",
@@ -355,19 +366,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-04-30",
-          "viewingSequence": 1,
+          "viewingSequence": 1423,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1139797",
           "title": "Let the Right One In",
-          "releaseYear": "2008",
           "sortTitle": "let-the-right-one-in-2008",
-          "releaseSequence": "2008-01-26tt1139797",
+          "releaseYear": "2008",
+          "releaseSequence": 3312,
           "genres": [
             "Drama",
             "Fantasy",
@@ -377,10 +389,11 @@
           "slug": "let-the-right-one-in-2008",
           "grade": "A",
           "gradeValue": 12,
+          "gradeSequence": 63,
           "reviewDate": "2008-11-06",
-          "reviewSequence": "2008-11-06-1",
+          "reviewSequence": 712,
           "viewingDate": "2013-10-31",
-          "viewingSequence": 2,
+          "viewingSequence": 1455,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -394,9 +407,9 @@
         {
           "imdbId": "tt1190539",
           "title": "The Chaser",
-          "releaseYear": "2008",
           "sortTitle": "chaser-2008",
-          "releaseSequence": "2008-02-14tt1190539",
+          "releaseYear": "2008",
+          "releaseSequence": 3315,
           "genres": [
             "Action",
             "Crime",
@@ -406,19 +419,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-10-29",
-          "viewingSequence": 1,
+          "viewingSequence": 1453,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1230385",
           "title": "The Yellow Sea",
-          "releaseYear": "2010",
           "sortTitle": "yellow-sea-2010",
-          "releaseSequence": "2010-12-22tt1230385",
+          "releaseYear": "2010",
+          "releaseSequence": 3425,
           "genres": [
             "Action",
             "Crime",
@@ -428,10 +442,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-12-28",
-          "viewingSequence": 2,
+          "viewingSequence": 1480,
           "medium": "Netflix",
           "venue": null
         }
@@ -445,9 +460,9 @@
         {
           "imdbId": "tt1602613",
           "title": "Only God Forgives",
-          "releaseYear": "2013",
           "sortTitle": "only-god-forgives-2013",
-          "releaseSequence": "2013-05-22tt1602613",
+          "releaseYear": "2013",
+          "releaseSequence": 3515,
           "genres": [
             "Action",
             "Crime",
@@ -457,19 +472,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-11-16",
-          "viewingSequence": 1,
+          "viewingSequence": 1463,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1172570",
           "title": "Bronson",
-          "releaseYear": "2008",
           "sortTitle": "bronson-2008",
-          "releaseSequence": "2008-10-01tt1172570",
+          "releaseYear": "2008",
+          "releaseSequence": 3350,
           "genres": [
             "Action",
             "Crime",
@@ -478,10 +494,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-12-08",
-          "viewingSequence": 2,
+          "viewingSequence": 1472,
           "medium": "Netflix",
           "venue": null
         }
@@ -497,9 +514,9 @@
         {
           "imdbId": "tt0371746",
           "title": "Iron Man",
-          "releaseYear": "2008",
           "sortTitle": "iron-man-2008",
-          "releaseSequence": "2008-04-14tt0371746",
+          "releaseYear": "2008",
+          "releaseSequence": 3323,
           "genres": [
             "Action",
             "Adventure",
@@ -508,19 +525,20 @@
           "slug": "iron-man-2008",
           "grade": "A-",
           "gradeValue": 11,
+          "gradeSequence": 128,
           "reviewDate": "2008-05-01",
-          "reviewSequence": "2008-05-01-1",
+          "reviewSequence": 530,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 1,
+          "viewingSequence": 1950,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "releaseYear": "2010",
           "sortTitle": "iron-man-2-2010",
-          "releaseSequence": "2010-04-26tt1228705",
+          "releaseYear": "2010",
+          "releaseSequence": 3409,
           "genres": [
             "Action",
             "Sci-Fi"
@@ -528,19 +546,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 2,
+          "viewingSequence": 1409,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt1300854",
           "title": "Iron Man 3",
-          "releaseYear": "2013",
           "sortTitle": "iron-man-3-2013",
-          "releaseSequence": "2013-04-14tt1300854",
+          "releaseYear": "2013",
+          "releaseSequence": 3511,
           "genres": [
             "Action",
             "Adventure",
@@ -549,19 +568,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-05-02",
-          "viewingSequence": 3,
+          "viewingSequence": 1956,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
           "imdbId": "tt0119256",
           "title": "Hard Eight",
-          "releaseYear": "1996",
           "sortTitle": "hard-eight-1996",
-          "releaseSequence": "1996-01-20tt0119256",
+          "releaseYear": "1996",
+          "releaseSequence": 2918,
           "genres": [
             "Crime",
             "Drama"
@@ -569,10 +589,11 @@
           "slug": "hard-eight-1996",
           "grade": "A-",
           "gradeValue": 11,
+          "gradeSequence": 110,
           "reviewDate": "2021-07-08",
-          "reviewSequence": "2021-07-08-2",
+          "reviewSequence": 1333,
           "viewingDate": "2013-12-06",
-          "viewingSequence": 4,
+          "viewingSequence": 1470,
           "medium": "Netflix",
           "venue": null
         }
@@ -586,9 +607,9 @@
         {
           "imdbId": "tt0371746",
           "title": "Iron Man",
-          "releaseYear": "2008",
           "sortTitle": "iron-man-2008",
-          "releaseSequence": "2008-04-14tt0371746",
+          "releaseYear": "2008",
+          "releaseSequence": 3323,
           "genres": [
             "Action",
             "Adventure",
@@ -597,19 +618,20 @@
           "slug": "iron-man-2008",
           "grade": "A-",
           "gradeValue": 11,
+          "gradeSequence": 128,
           "reviewDate": "2008-05-01",
-          "reviewSequence": "2008-05-01-1",
+          "reviewSequence": 530,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 1,
+          "viewingSequence": 1950,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "releaseYear": "2010",
           "sortTitle": "iron-man-2-2010",
-          "releaseSequence": "2010-04-26tt1228705",
+          "releaseYear": "2010",
+          "releaseSequence": 3409,
           "genres": [
             "Action",
             "Sci-Fi"
@@ -617,19 +639,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 2,
+          "viewingSequence": 1409,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt1300854",
           "title": "Iron Man 3",
-          "releaseYear": "2013",
           "sortTitle": "iron-man-3-2013",
-          "releaseSequence": "2013-04-14tt1300854",
+          "releaseYear": "2013",
+          "releaseSequence": 3511,
           "genres": [
             "Action",
             "Adventure",
@@ -638,19 +661,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-05-02",
-          "viewingSequence": 3,
+          "viewingSequence": 1956,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
           "imdbId": "tt0993846",
           "title": "The Wolf of Wall Street",
-          "releaseYear": "2013",
           "sortTitle": "wolf-of-wall-street-2013",
-          "releaseSequence": "2013-12-09tt0993846",
+          "releaseYear": "2013",
+          "releaseSequence": 3539,
           "genres": [
             "Biography",
             "Comedy",
@@ -660,10 +684,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-12-27",
-          "viewingSequence": 4,
+          "viewingSequence": 1479,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -677,9 +702,9 @@
         {
           "imdbId": "tt0371746",
           "title": "Iron Man",
-          "releaseYear": "2008",
           "sortTitle": "iron-man-2008",
-          "releaseSequence": "2008-04-14tt0371746",
+          "releaseYear": "2008",
+          "releaseSequence": 3323,
           "genres": [
             "Action",
             "Adventure",
@@ -688,19 +713,20 @@
           "slug": "iron-man-2008",
           "grade": "A-",
           "gradeValue": 11,
+          "gradeSequence": 128,
           "reviewDate": "2008-05-01",
-          "reviewSequence": "2008-05-01-1",
+          "reviewSequence": 530,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 1,
+          "viewingSequence": 1950,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "releaseYear": "2010",
           "sortTitle": "iron-man-2-2010",
-          "releaseSequence": "2010-04-26tt1228705",
+          "releaseYear": "2010",
+          "releaseSequence": 3409,
           "genres": [
             "Action",
             "Sci-Fi"
@@ -708,19 +734,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 2,
+          "viewingSequence": 1409,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt1300854",
           "title": "Iron Man 3",
-          "releaseYear": "2013",
           "sortTitle": "iron-man-3-2013",
-          "releaseSequence": "2013-04-14tt1300854",
+          "releaseYear": "2013",
+          "releaseSequence": 3511,
           "genres": [
             "Action",
             "Adventure",
@@ -729,19 +756,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-05-02",
-          "viewingSequence": 3,
+          "viewingSequence": 1956,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
           "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
-          "releaseYear": "2013",
           "sortTitle": "thor-the-dark-world-2013",
-          "releaseSequence": "2013-10-22tt1981115",
+          "releaseYear": "2013",
+          "releaseSequence": 3534,
           "genres": [
             "Action",
             "Adventure",
@@ -751,10 +779,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-11-25",
-          "viewingSequence": 4,
+          "viewingSequence": 1957,
           "medium": null,
           "venue": "AMC Tysons Corner 16"
         }
@@ -768,9 +797,9 @@
         {
           "imdbId": "tt1212450",
           "title": "Lawless",
-          "releaseYear": "2012",
           "sortTitle": "lawless-2012",
-          "releaseSequence": "2012-05-19tt1212450",
+          "releaseYear": "2012",
+          "releaseSequence": 3474,
           "genres": [
             "Biography",
             "Crime",
@@ -780,19 +809,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-03-06",
-          "viewingSequence": 1,
+          "viewingSequence": 1414,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt1340800",
           "title": "Tinker Tailor Soldier Spy",
-          "releaseYear": "2011",
           "sortTitle": "tinker-tailor-soldier-spy-2011",
-          "releaseSequence": "2011-09-05tt1340800",
+          "releaseYear": "2011",
+          "releaseSequence": 3446,
           "genres": [
             "Drama",
             "Mystery",
@@ -801,19 +831,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-04-30",
-          "viewingSequence": 2,
+          "viewingSequence": 1423,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1291584",
           "title": "Warrior",
-          "releaseYear": "2011",
           "sortTitle": "warrior-2011",
-          "releaseSequence": "2011-09-09tt1291584",
+          "releaseYear": "2011",
+          "releaseSequence": 3449,
           "genres": [
             "Action",
             "Drama",
@@ -822,19 +853,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-11-04",
-          "viewingSequence": 3,
+          "viewingSequence": 1460,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1172570",
           "title": "Bronson",
-          "releaseYear": "2008",
           "sortTitle": "bronson-2008",
-          "releaseSequence": "2008-10-01tt1172570",
+          "releaseYear": "2008",
+          "releaseSequence": 3350,
           "genres": [
             "Action",
             "Crime",
@@ -843,10 +875,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-12-08",
-          "viewingSequence": 4,
+          "viewingSequence": 1472,
           "medium": "Netflix",
           "venue": null
         }
@@ -860,9 +893,9 @@
         {
           "imdbId": "tt1853728",
           "title": "Django Unchained",
-          "releaseYear": "2012",
           "sortTitle": "django-unchained-2012",
-          "releaseSequence": "2012-12-11tt1853728",
+          "releaseYear": "2012",
+          "releaseSequence": 3498,
           "genres": [
             "Comedy",
             "Drama",
@@ -871,19 +904,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-03",
-          "viewingSequence": 1,
+          "viewingSequence": 1383,
           "medium": null,
           "venue": "AMC Tysons Corner 16"
         },
         {
           "imdbId": "tt1228705",
           "title": "Iron Man 2",
-          "releaseYear": "2010",
           "sortTitle": "iron-man-2-2010",
-          "releaseSequence": "2010-04-26tt1228705",
+          "releaseYear": "2010",
+          "releaseSequence": 3409,
           "genres": [
             "Action",
             "Sci-Fi"
@@ -891,19 +925,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-02-17",
-          "viewingSequence": 2,
+          "viewingSequence": 1409,
           "medium": "Blu-ray",
           "venue": null
         },
         {
           "imdbId": "tt0119256",
           "title": "Hard Eight",
-          "releaseYear": "1996",
           "sortTitle": "hard-eight-1996",
-          "releaseSequence": "1996-01-20tt0119256",
+          "releaseYear": "1996",
+          "releaseSequence": 2918,
           "genres": [
             "Crime",
             "Drama"
@@ -911,10 +946,11 @@
           "slug": "hard-eight-1996",
           "grade": "A-",
           "gradeValue": 11,
+          "gradeSequence": 110,
           "reviewDate": "2021-07-08",
-          "reviewSequence": "2021-07-08-2",
+          "reviewSequence": 1333,
           "viewingDate": "2013-12-06",
-          "viewingSequence": 3,
+          "viewingSequence": 1470,
           "medium": "Netflix",
           "venue": null
         }
@@ -928,9 +964,9 @@
         {
           "imdbId": "tt0098622",
           "title": "Warlock",
-          "releaseYear": "1989",
           "sortTitle": "warlock-1989",
-          "releaseSequence": "1989-05-01tt0098622",
+          "releaseYear": "1989",
+          "releaseSequence": 2704,
           "genres": [
             "Action",
             "Fantasy",
@@ -940,19 +976,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-05",
-          "viewingSequence": 1,
+          "viewingSequence": 1384,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt0092074",
           "title": "TerrorVision",
-          "releaseYear": "1986",
           "sortTitle": "terrorvision-1986",
-          "releaseSequence": "1986-02-14tt0092074",
+          "releaseYear": "1986",
+          "releaseSequence": 2560,
           "genres": [
             "Comedy",
             "Horror",
@@ -961,19 +998,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-12",
-          "viewingSequence": 2,
+          "viewingSequence": 1386,
           "medium": "TCM HD",
           "venue": null
         },
         {
           "imdbId": "tt1172994",
           "title": "The House of the Devil",
-          "releaseYear": "2009",
           "sortTitle": "house-of-the-devil-2009",
-          "releaseSequence": "2009-04-25tt1172994",
+          "releaseYear": "2009",
+          "releaseSequence": 3379,
           "genres": [
             "Horror",
             "Mystery"
@@ -981,10 +1019,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-11-30",
-          "viewingSequence": 3,
+          "viewingSequence": 1468,
           "medium": "Netflix",
           "venue": null
         }
@@ -998,9 +1037,9 @@
         {
           "imdbId": "tt0091630",
           "title": "Night of the Creeps",
-          "releaseYear": "1986",
           "sortTitle": "night-of-the-creeps-1986",
-          "releaseSequence": "1986-08-22tt0091630",
+          "releaseYear": "1986",
+          "releaseSequence": 2589,
           "genres": [
             "Comedy",
             "Horror",
@@ -1009,19 +1048,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-12",
-          "viewingSequence": 1,
+          "viewingSequence": 1564,
           "medium": "TCM HD",
           "venue": null
         },
         {
           "imdbId": "tt0082340",
           "title": "Escape from New York",
-          "releaseYear": "1981",
           "sortTitle": "escape-from-new-york-1981",
-          "releaseSequence": "1981-04-01tt0082340",
+          "releaseYear": "1981",
+          "releaseSequence": 2308,
           "genres": [
             "Action",
             "Adventure",
@@ -1030,19 +1070,20 @@
           "slug": "escape-from-new-york-1981",
           "grade": "C+",
           "gradeValue": 7,
+          "gradeSequence": 769,
           "reviewDate": "2012-05-05",
-          "reviewSequence": "2012-05-05-1",
+          "reviewSequence": 983,
           "viewingDate": "2013-08-08",
-          "viewingSequence": 2,
+          "viewingSequence": 1434,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
           "imdbId": "tt1502404",
           "title": "Drive Angry",
-          "releaseYear": "2011",
           "sortTitle": "drive-angry-2011",
-          "releaseSequence": "2011-??-??tt1502404",
+          "releaseYear": "2011",
+          "releaseSequence": 3458,
           "genres": [
             "Action",
             "Comedy",
@@ -1052,10 +1093,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-11-02",
-          "viewingSequence": 3,
+          "viewingSequence": 1458,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1069,9 +1111,9 @@
         {
           "imdbId": "tt0091630",
           "title": "Night of the Creeps",
-          "releaseYear": "1986",
           "sortTitle": "night-of-the-creeps-1986",
-          "releaseSequence": "1986-08-22tt0091630",
+          "releaseYear": "1986",
+          "releaseSequence": 2589,
           "genres": [
             "Comedy",
             "Horror",
@@ -1080,19 +1122,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-12",
-          "viewingSequence": 1,
+          "viewingSequence": 1564,
           "medium": "TCM HD",
           "venue": null
         },
         {
           "imdbId": "tt0057569",
           "title": "The Terror",
-          "releaseYear": "1963",
           "sortTitle": "terror-1963",
-          "releaseSequence": "1963-05-30tt0057569",
+          "releaseYear": "1963",
+          "releaseSequence": 1281,
           "genres": [
             "Horror",
             "Thriller"
@@ -1100,19 +1143,20 @@
           "slug": "the-terror-1963",
           "grade": "C-",
           "gradeValue": 5,
+          "gradeSequence": 1123,
           "reviewDate": "2007-06-15",
-          "reviewSequence": "2007-06-15-1",
+          "reviewSequence": 135,
           "viewingDate": "2013-03-05",
-          "viewingSequence": 2,
+          "viewingSequence": 1413,
           "medium": "TCM HD",
           "venue": null
         },
         {
           "imdbId": "tt0114608",
           "title": "Tales from the Crypt: Demon Knight",
-          "releaseYear": "1995",
           "sortTitle": "tales-from-the-crypt-demon-knight-1995",
-          "releaseSequence": "1995-??-??tt0114608",
+          "releaseYear": "1995",
+          "releaseSequence": 2914,
           "genres": [
             "Action",
             "Fantasy",
@@ -1122,10 +1166,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-09-01",
-          "viewingSequence": 3,
+          "viewingSequence": 1916,
           "medium": "Netflix",
           "venue": null
         }
@@ -1139,9 +1184,9 @@
         {
           "imdbId": "tt0046288",
           "title": "Second Chance",
-          "releaseYear": "1953",
           "sortTitle": "second-chance-1953",
-          "releaseSequence": "1953-07-18tt0046288",
+          "releaseYear": "1953",
+          "releaseSequence": 848,
           "genres": [
             "Crime",
             "Drama",
@@ -1151,19 +1196,20 @@
           "slug": "second-chance-1953",
           "grade": "D",
           "gradeValue": 3,
+          "gradeSequence": 1569,
           "reviewDate": "2008-12-10",
-          "reviewSequence": "2008-12-10-2",
+          "reviewSequence": 753,
           "viewingDate": "2013-01-19",
-          "viewingSequence": 1,
+          "viewingSequence": 1389,
           "medium": "TCM HD",
           "venue": null
         },
         {
           "imdbId": "tt0044357",
           "title": "Angel Face",
-          "releaseYear": "1952",
           "sortTitle": "angel-face-1952",
-          "releaseSequence": "1952-12-31tt0044357",
+          "releaseYear": "1952",
+          "releaseSequence": 823,
           "genres": [
             "Crime",
             "Drama",
@@ -1174,19 +1220,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-19",
-          "viewingSequence": 2,
+          "viewingSequence": 1390,
           "medium": "TCM HD",
           "venue": null
         },
         {
           "imdbId": "tt0061619",
           "title": "El Dorado",
-          "releaseYear": "1966",
           "sortTitle": "el-dorado-1966",
-          "releaseSequence": "1966-12-17tt0061619",
+          "releaseYear": "1966",
+          "releaseSequence": 1454,
           "genres": [
             "Drama",
             "Romance",
@@ -1195,10 +1242,11 @@
           "slug": "el-dorado-1966",
           "grade": "B+",
           "gradeValue": 10,
+          "gradeSequence": 186,
           "reviewDate": "2008-07-16",
-          "reviewSequence": "2008-07-16-1",
+          "reviewSequence": 611,
           "viewingDate": "2013-03-23",
-          "viewingSequence": 3,
+          "viewingSequence": 1418,
           "medium": "Netflix",
           "venue": null
         }
@@ -1212,28 +1260,29 @@
         {
           "imdbId": "tt0093777",
           "title": "Prince of Darkness",
-          "releaseYear": "1987",
           "sortTitle": "prince-of-darkness-1987",
-          "releaseSequence": "1987-10-21tt0093777",
+          "releaseYear": "1987",
+          "releaseSequence": 2638,
           "genres": [
             "Horror"
           ],
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-20",
-          "viewingSequence": 1,
+          "viewingSequence": 1393,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt0082340",
           "title": "Escape from New York",
-          "releaseYear": "1981",
           "sortTitle": "escape-from-new-york-1981",
-          "releaseSequence": "1981-04-01tt0082340",
+          "releaseYear": "1981",
+          "releaseSequence": 2308,
           "genres": [
             "Action",
             "Adventure",
@@ -1242,19 +1291,20 @@
           "slug": "escape-from-new-york-1981",
           "grade": "C+",
           "gradeValue": 7,
+          "gradeSequence": 769,
           "reviewDate": "2012-05-05",
-          "reviewSequence": "2012-05-05-1",
+          "reviewSequence": 983,
           "viewingDate": "2013-08-08",
-          "viewingSequence": 2,
+          "viewingSequence": 1434,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
           "imdbId": "tt0067541",
           "title": "Wake in Fright",
-          "releaseYear": "1971",
           "sortTitle": "wake-in-fright-1971",
-          "releaseSequence": "1971-05-12tt0067541",
+          "releaseYear": "1971",
+          "releaseSequence": 1707,
           "genres": [
             "Drama",
             "Thriller"
@@ -1262,10 +1312,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-10-25",
-          "viewingSequence": 3,
+          "viewingSequence": 1450,
           "medium": "Netflix",
           "venue": null
         }
@@ -1281,9 +1332,9 @@
         {
           "imdbId": "tt0046288",
           "title": "Second Chance",
-          "releaseYear": "1953",
           "sortTitle": "second-chance-1953",
-          "releaseSequence": "1953-07-18tt0046288",
+          "releaseYear": "1953",
+          "releaseSequence": 848,
           "genres": [
             "Crime",
             "Drama",
@@ -1293,19 +1344,20 @@
           "slug": "second-chance-1953",
           "grade": "D",
           "gradeValue": 3,
+          "gradeSequence": 1569,
           "reviewDate": "2008-12-10",
-          "reviewSequence": "2008-12-10-2",
+          "reviewSequence": 753,
           "viewingDate": "2013-01-19",
-          "viewingSequence": 1,
+          "viewingSequence": 1389,
           "medium": "TCM HD",
           "venue": null
         },
         {
           "imdbId": "tt0044357",
           "title": "Angel Face",
-          "releaseYear": "1952",
           "sortTitle": "angel-face-1952",
-          "releaseSequence": "1952-12-31tt0044357",
+          "releaseYear": "1952",
+          "releaseSequence": 823,
           "genres": [
             "Crime",
             "Drama",
@@ -1316,10 +1368,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-19",
-          "viewingSequence": 2,
+          "viewingSequence": 1390,
           "medium": "TCM HD",
           "venue": null
         }
@@ -1333,28 +1386,29 @@
         {
           "imdbId": "tt0093777",
           "title": "Prince of Darkness",
-          "releaseYear": "1987",
           "sortTitle": "prince-of-darkness-1987",
-          "releaseSequence": "1987-10-21tt0093777",
+          "releaseYear": "1987",
+          "releaseSequence": 2638,
           "genres": [
             "Horror"
           ],
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-20",
-          "viewingSequence": 1,
+          "viewingSequence": 1393,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt0082340",
           "title": "Escape from New York",
-          "releaseYear": "1981",
           "sortTitle": "escape-from-new-york-1981",
-          "releaseSequence": "1981-04-01tt0082340",
+          "releaseYear": "1981",
+          "releaseSequence": 2308,
           "genres": [
             "Action",
             "Adventure",
@@ -1363,10 +1417,11 @@
           "slug": "escape-from-new-york-1981",
           "grade": "C+",
           "gradeValue": 7,
+          "gradeSequence": 769,
           "reviewDate": "2012-05-05",
-          "reviewSequence": "2012-05-05-1",
+          "reviewSequence": 983,
           "viewingDate": "2013-08-08",
-          "viewingSequence": 2,
+          "viewingSequence": 1434,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -1380,9 +1435,9 @@
         {
           "imdbId": "tt0243655",
           "title": "Wet Hot American Summer",
-          "releaseYear": "2001",
           "sortTitle": "wet-hot-american-summer-2001",
-          "releaseSequence": "2001-01-23tt0243655",
+          "releaseYear": "2001",
+          "releaseSequence": 3057,
           "genres": [
             "Comedy",
             "Romance"
@@ -1390,19 +1445,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-01-20",
-          "viewingSequence": 1,
+          "viewingSequence": 1394,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1655460",
           "title": "Wanderlust",
-          "releaseYear": "2012",
           "sortTitle": "wanderlust-2012",
-          "releaseSequence": "2012-02-16tt1655460",
+          "releaseYear": "2012",
+          "releaseSequence": 3464,
           "genres": [
             "Comedy",
             "Romance"
@@ -1410,10 +1466,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-10-13",
-          "viewingSequence": 2,
+          "viewingSequence": 1449,
           "medium": "HBO HD",
           "venue": null
         }
@@ -1427,9 +1484,9 @@
         {
           "imdbId": "tt0036775",
           "title": "Double Indemnity",
-          "releaseYear": "1944",
           "sortTitle": "double-indemnity-1944",
-          "releaseSequence": "1944-04-24tt0036775",
+          "releaseYear": "1944",
+          "releaseSequence": 536,
           "genres": [
             "Crime",
             "Drama",
@@ -1440,29 +1497,31 @@
           "slug": "double-indemnity-1944",
           "grade": "A+",
           "gradeValue": 13,
+          "gradeSequence": 3,
           "reviewDate": "2008-06-15",
-          "reviewSequence": "2008-06-15-1",
+          "reviewSequence": 586,
           "viewingDate": "2013-01-27",
-          "viewingSequence": 1,
+          "viewingSequence": 1396,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt0055256",
           "title": "One, Two, Three",
-          "releaseYear": "1961",
           "sortTitle": "one-two-three-1961",
-          "releaseSequence": "1961-12-15tt0055256",
+          "releaseYear": "1961",
+          "releaseSequence": 1222,
           "genres": [
             "Comedy"
           ],
           "slug": "one-two-three-1961",
           "grade": "B+",
           "gradeValue": 10,
+          "gradeSequence": 177,
           "reviewDate": "2008-01-07",
-          "reviewSequence": "2008-01-07-1",
+          "reviewSequence": 395,
           "viewingDate": "2013-03-09",
-          "viewingSequence": 2,
+          "viewingSequence": 1416,
           "medium": "Netflix",
           "venue": null
         }
@@ -1476,9 +1535,9 @@
         {
           "imdbId": "tt0104348",
           "title": "Glengarry Glen Ross",
-          "releaseYear": "1992",
           "sortTitle": "glengarry-glen-ross-1992",
-          "releaseSequence": "1992-08-30tt0104348",
+          "releaseYear": "1992",
+          "releaseSequence": 2818,
           "genres": [
             "Crime",
             "Drama",
@@ -1487,19 +1546,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-04-05",
-          "viewingSequence": 1,
+          "viewingSequence": 1419,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt0252503",
           "title": "Heist",
-          "releaseYear": "2001",
           "sortTitle": "heist-2001",
-          "releaseSequence": "2001-09-01tt0252503",
+          "releaseYear": "2001",
+          "releaseSequence": 3072,
           "genres": [
             "Action",
             "Crime",
@@ -1509,10 +1569,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-07-05",
-          "viewingSequence": 2,
+          "viewingSequence": 1432,
           "medium": "HBO HD",
           "venue": null
         }
@@ -1526,9 +1587,9 @@
         {
           "imdbId": "tt1300854",
           "title": "Iron Man 3",
-          "releaseYear": "2013",
           "sortTitle": "iron-man-3-2013",
-          "releaseSequence": "2013-04-14tt1300854",
+          "releaseYear": "2013",
+          "releaseSequence": 3511,
           "genres": [
             "Action",
             "Adventure",
@@ -1537,19 +1598,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-05-02",
-          "viewingSequence": 1,
+          "viewingSequence": 1956,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
           "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
-          "releaseYear": "2013",
           "sortTitle": "thor-the-dark-world-2013",
-          "releaseSequence": "2013-10-22tt1981115",
+          "releaseYear": "2013",
+          "releaseSequence": 3534,
           "genres": [
             "Action",
             "Adventure",
@@ -1559,10 +1621,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-11-25",
-          "viewingSequence": 2,
+          "viewingSequence": 1957,
           "medium": null,
           "venue": "AMC Tysons Corner 16"
         }
@@ -1576,38 +1639,40 @@
         {
           "imdbId": "tt1790886",
           "title": "The Campaign",
-          "releaseYear": "2012",
           "sortTitle": "campaign-2012",
-          "releaseSequence": "2012-08-04tt1790886",
+          "releaseYear": "2012",
+          "releaseSequence": 3484,
           "genres": [
             "Comedy"
           ],
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-09-14",
-          "viewingSequence": 1,
+          "viewingSequence": 1441,
           "medium": "HBO HD",
           "venue": null
         },
         {
           "imdbId": "tt1229340",
           "title": "Anchorman 2: The Legend Continues",
-          "releaseYear": "2013",
           "sortTitle": "anchorman-2-the-legend-continues-2013",
-          "releaseSequence": "2013-11-24tt1229340",
+          "releaseYear": "2013",
+          "releaseSequence": 3537,
           "genres": [
             "Comedy"
           ],
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-12-27",
-          "viewingSequence": 2,
+          "viewingSequence": 1507,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -1621,9 +1686,9 @@
         {
           "imdbId": "tt1190539",
           "title": "The Chaser",
-          "releaseYear": "2008",
           "sortTitle": "chaser-2008",
-          "releaseSequence": "2008-02-14tt1190539",
+          "releaseYear": "2008",
+          "releaseSequence": 3315,
           "genres": [
             "Action",
             "Crime",
@@ -1633,19 +1698,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-10-29",
-          "viewingSequence": 1,
+          "viewingSequence": 1453,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1230385",
           "title": "The Yellow Sea",
-          "releaseYear": "2010",
           "sortTitle": "yellow-sea-2010",
-          "releaseSequence": "2010-12-22tt1230385",
+          "releaseYear": "2010",
+          "releaseSequence": 3425,
           "genres": [
             "Action",
             "Crime",
@@ -1655,10 +1721,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-12-28",
-          "viewingSequence": 2,
+          "viewingSequence": 1480,
           "medium": "Netflix",
           "venue": null
         }
@@ -1672,9 +1739,9 @@
         {
           "imdbId": "tt1190539",
           "title": "The Chaser",
-          "releaseYear": "2008",
           "sortTitle": "chaser-2008",
-          "releaseSequence": "2008-02-14tt1190539",
+          "releaseYear": "2008",
+          "releaseSequence": 3315,
           "genres": [
             "Action",
             "Crime",
@@ -1684,19 +1751,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-10-29",
-          "viewingSequence": 1,
+          "viewingSequence": 1453,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1230385",
           "title": "The Yellow Sea",
-          "releaseYear": "2010",
           "sortTitle": "yellow-sea-2010",
-          "releaseSequence": "2010-12-22tt1230385",
+          "releaseYear": "2010",
+          "releaseSequence": 3425,
           "genres": [
             "Action",
             "Crime",
@@ -1706,10 +1774,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-12-28",
-          "viewingSequence": 2,
+          "viewingSequence": 1480,
           "medium": "Netflix",
           "venue": null
         }
@@ -1723,9 +1792,9 @@
         {
           "imdbId": "tt1602613",
           "title": "Only God Forgives",
-          "releaseYear": "2013",
           "sortTitle": "only-god-forgives-2013",
-          "releaseSequence": "2013-05-22tt1602613",
+          "releaseYear": "2013",
+          "releaseSequence": 3515,
           "genres": [
             "Action",
             "Crime",
@@ -1735,19 +1804,20 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-11-16",
-          "viewingSequence": 1,
+          "viewingSequence": 1463,
           "medium": "Netflix",
           "venue": null
         },
         {
           "imdbId": "tt1172570",
           "title": "Bronson",
-          "releaseYear": "2008",
           "sortTitle": "bronson-2008",
-          "releaseSequence": "2008-10-01tt1172570",
+          "releaseYear": "2008",
+          "releaseSequence": 3350,
           "genres": [
             "Action",
             "Crime",
@@ -1756,10 +1826,11 @@
           "slug": null,
           "grade": null,
           "gradeValue": null,
+          "gradeSequence": null,
           "reviewDate": null,
           "reviewSequence": null,
           "viewingDate": "2013-12-08",
-          "viewingSequence": 2,
+          "viewingSequence": 1472,
           "medium": "Netflix",
           "venue": null
         }

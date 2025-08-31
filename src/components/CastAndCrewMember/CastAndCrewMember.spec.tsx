@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+import { getFluidWidthPosterImageProps } from "~/api/posters";
 import {
   clickCreditedAsFilterOption,
   getCreditedAsFilter,
@@ -12,6 +13,7 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
+import { PosterListItemImageConfig } from "~/components/PosterList";
 import {
   clickShowMore,
   getGroupedPosterList,
@@ -27,10 +29,10 @@ import {
 } from "~/components/TitleFilters.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { CastAndCrewMember } from "./CastAndCrewMember";
+import { CastAndCrewMember, type Props } from "./CastAndCrewMember";
 import { getProps } from "./getProps";
 
-const props = await getProps("burt-reynolds");
+const props = await getProps("alfred-hitchcock");
 
 describe("CastAndCrewMember", () => {
   beforeEach(() => {
@@ -213,7 +215,7 @@ describe("CastAndCrewMember", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await fillReleaseYearFilter(user, "1970", "1980");
+    await fillReleaseYearFilter(user, "1945", "1950");
 
     // Apply the filter
     await clickViewResults(user);
@@ -233,7 +235,7 @@ describe("CastAndCrewMember", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await fillReviewYearFilter(user, "2021", "2022");
+    await fillReviewYearFilter(user, "2008", "2012");
 
     // Apply the filter
     await clickViewResults(user);
@@ -535,22 +537,37 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
+    const defaultPosterProps = await getFluidWidthPosterImageProps(
+      "default",
+      PosterListItemImageConfig,
+    );
+
     // Create props with more than 100 items to trigger pagination
-    const manyValues = Array.from({ length: 150 }, (_, i) => ({
+    const manyTitles: Props["titles"] = Array.from({ length: 150 }, (_, i) => ({
+      creditedAs: ["Director"],
+      genres: ["Test genre"],
       grade: i % 2 === 0 ? "B+" : undefined,
       gradeValue: i % 2 === 0 ? 8 : undefined,
       imdbId: `tt${String(i).padStart(7, "0")}`,
-      posterImageProps: undefined,
-      releaseSequence: `1970-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
+      posterImageProps: defaultPosterProps,
+      releaseSequence: i + 1,
       releaseYear: "1970",
-      reviewed: i % 2 === 0,
+      reviewDisplayDate: "",
+      reviewed: false,
+      reviewSequence: undefined,
+      reviewYear: "",
       slug: `test-movie-${i + 1}`,
       sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
       title: `Test Movie ${i + 1}`,
+      watchlistCollectionNames: ["Test Collection"],
+      watchlistDirectorNames: ["Test Writer"],
+      watchlistPerformerNames: ["Test Writer"],
+      watchlistWriterNames: ["Test Writer"],
     }));
-    const propsWithManyValues = {
+
+    const propsWithManyValues: Props = {
       ...props,
-      values: manyValues,
+      titles: manyTitles,
     };
 
     render(<CastAndCrewMember {...propsWithManyValues} />);

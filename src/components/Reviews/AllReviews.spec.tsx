@@ -22,7 +22,7 @@ import {
 } from "~/components/TitleFilters.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { AllReviews } from "./AllReviews";
+import { AllReviews, type Props } from "./AllReviews";
 import { getProps } from "./getProps";
 
 const props = await getProps();
@@ -295,7 +295,7 @@ describe("AllReviews", () => {
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
     // Create props with more than 100 items to trigger pagination
-    const manyValues = Array.from({ length: 150 }, (_, i) => ({
+    const manyValues: Props["values"] = Array.from({ length: 150 }, (_, i) => ({
       genres: ["Drama"],
       grade: "B+" as const,
       gradeValue: 8,
@@ -304,10 +304,10 @@ describe("AllReviews", () => {
         src: "test.jpg",
         srcSet: "test.jpg 1x",
       },
-      releaseSequence: `1930-01-${String(i + 1).padStart(2, "0")}tt${String(i).padStart(7, "0")}`,
+      releaseSequence: i + 1,
       releaseYear: "1930",
       reviewDisplayDate: "Jan 01, 2023",
-      reviewSequence: `2023-01-01-${i}`,
+      reviewSequence: i + 2,
       reviewYear: "2023",
       slug: `test-movie-${i + 1}`,
       sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
