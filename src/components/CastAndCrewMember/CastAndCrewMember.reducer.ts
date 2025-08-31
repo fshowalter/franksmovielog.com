@@ -1,8 +1,8 @@
 import type { ListWithFiltersState } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type {
-  CastAndCrewMemberSort,
   TitleFilterValues,
   TitlesActionType,
+  TitleSortType,
 } from "~/components/ListWithFilters/titlesReducerUtils";
 
 import {
@@ -19,7 +19,7 @@ import {
   handleReleaseYearFilterAction,
   handleReviewedStatusFilterAction,
   handleReviewYearFilterAction,
-  handleShowMore,
+  handleShowMoreAction,
   handleTitleFilterAction,
   SHOW_COUNT_DEFAULT,
   sortGrade,
@@ -47,7 +47,7 @@ export type CastAndCrewMemberFilterValues = TitleFilterValues & {
 };
 
 // Re-export sort type for convenience
-export type Sort = CastAndCrewMemberSort;
+export type Sort = TitleSortType;
 
 // Re-export actions for component convenience
 export const Actions = {
@@ -153,7 +153,7 @@ export function reducer(state: State, action: ActionType): State {
       });
     }
     case TitlesActions.SHOW_MORE: {
-      return handleShowMore(state, action, groupValues);
+      return handleShowMoreAction(state, action, groupValues);
     }
 
     default: {

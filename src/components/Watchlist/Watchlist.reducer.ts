@@ -19,7 +19,7 @@ import {
   createTitleGroupForValue,
   handleGenreFilterAction,
   handleReleaseYearFilterAction,
-  handleShowMore,
+  handleShowMoreAction,
   handleTitleFilterAction,
   SHOW_COUNT_DEFAULT,
   sortReleaseDate,
@@ -157,7 +157,7 @@ export function reducer(state: State, action: ActionType): State {
     }
 
     case TitlesActions.SHOW_MORE: {
-      return handleShowMore(state, action, groupValues);
+      return handleShowMoreAction(state, action, groupValues);
     }
 
     case WatchlistActions.PENDING_FILTER_COLLECTION: {

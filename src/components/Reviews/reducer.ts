@@ -3,9 +3,9 @@
  */
 import type { ListWithFiltersActionType } from "~/components/ListWithFilters/ListWithFilters.reducerUtils";
 import type {
-  ReviewsSort,
   TitlesActionType,
   TitlesListState,
+  TitleSortType,
 } from "~/components/ListWithFilters/titlesReducerUtils";
 import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
@@ -21,7 +21,7 @@ import {
   handleGradeFilterAction,
   handleReleaseYearFilterAction,
   handleReviewYearFilterAction,
-  handleShowMore,
+  handleShowMoreAction,
   handleTitleFilterAction,
   SHOW_COUNT_DEFAULT,
   sortGrade,
@@ -42,8 +42,8 @@ export const Actions = {
 } as const;
 
 export type ActionType = Extract<
-  TitlesActionType<ReviewsSort>,
-  | ListWithFiltersActionType<ReviewsSort>
+  TitlesActionType<TitleSortType>,
+  | ListWithFiltersActionType<TitleSortType>
   | { type: TitlesActions.PENDING_FILTER_GENRES }
   | { type: TitlesActions.PENDING_FILTER_GRADE }
   | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
@@ -53,19 +53,19 @@ export type ActionType = Extract<
 >;
 
 // Re-export sort type for convenience
-export type Sort = ReviewsSort;
+export type Sort = TitleSortType;
 
-type State = TitlesListState<ReviewsListItemValue, ReviewsSort> & {
+type State = TitlesListState<ReviewsListItemValue, TitleSortType> & {
   showCount: number;
 };
 
 // Create the groupForValue function using the generic builder
 const groupForValue = createTitleGroupForValue<
   ReviewsListItemValue,
-  ReviewsSort
+  TitleSortType
 >();
 
-const sortValues = buildSortValues<ReviewsListItemValue, ReviewsSort>({
+const sortValues = buildSortValues<ReviewsListItemValue, TitleSortType>({
   ...sortGrade<ReviewsListItemValue>(),
   ...sortReleaseDate<ReviewsListItemValue>(),
   ...sortReviewDate<ReviewsListItemValue>(),
@@ -80,7 +80,7 @@ export function initState({
   initialSort,
   values,
 }: {
-  initialSort: ReviewsSort;
+  initialSort: TitleSortType;
   values: ReviewsListItemValue[];
 }): State {
   const showCount = SHOW_COUNT_DEFAULT;
@@ -128,7 +128,7 @@ export function reducer(state: State, action: ActionType): State {
       });
     }
     case TitlesActions.SHOW_MORE: {
-      return handleShowMore(state, action, groupValues);
+      return handleShowMoreAction(state, action, groupValues);
     }
 
     default: {
