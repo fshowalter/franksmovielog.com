@@ -67,13 +67,13 @@ export const Actions = {
 
 export type ActionType =
   | Extract<
-      TitlesActionType<Sort>,
-      | ListWithFiltersActionType<Sort>
+      TitlesActionType,
       | { type: TitlesActions.PENDING_FILTER_GENRES }
       | { type: TitlesActions.PENDING_FILTER_RELEASE_YEAR }
       | { type: TitlesActions.PENDING_FILTER_TITLE }
       | { type: TitlesActions.SHOW_MORE }
     >
+  | ListWithFiltersActionType<Sort>
   | PendingFilterCollectionAction
   | PendingFilterDirectorAction
   | PendingFilterPerformerAction

@@ -47,9 +47,7 @@ export const Actions = {
   ...TitlesActions,
 } as const;
 
-export type ActionType =
-  | ListWithFiltersActionType<Sort>
-  | TitlesActionType<Sort>;
+export type ActionType = ListWithFiltersActionType<Sort> | TitlesActionType;
 
 type State = ListWithFiltersState<ListItemValue, Sort> & {
   showCount: number;
