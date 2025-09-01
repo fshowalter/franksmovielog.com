@@ -93,7 +93,7 @@ function MoreReviewsCard({
       className={`
         group/list-item relative w-full transform-gpu transition-all
         duration-500
-        has-[a:hover]:scale-105 has-[a:hover]:drop-shadow-2xl
+        has-[a:hover]:-translate-y-2 has-[a:hover]:drop-shadow-2xl
         tablet:w-[47%]
       `}
     >
@@ -111,7 +111,7 @@ function MoreReviewsCard({
             {...MoreReviewsImageConfig}
             className={`
               h-auto w-full transform-gpu transition-transform duration-500
-              group-has-[a:hover]/list-item:scale-105
+              group-has-[a:hover]/list-item:scale-110
             `}
             decoding="async"
             loading="lazy"

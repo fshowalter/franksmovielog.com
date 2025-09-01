@@ -40,7 +40,7 @@ export function HomeListItem({
         group/list-item relative mb-1 flex transform-gpu flex-col bg-default
         px-[8%] pt-12 transition-transform duration-500
         tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
-        tablet-landscape:has-[a:hover]:scale-105
+        tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:max-w-[31.33%]
       `}
@@ -59,7 +59,7 @@ export function HomeListItem({
           {...StillImageConfig}
           className={`
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-105
+            group-has-[a:hover]/list-item:scale-110
           `}
           decoding="async"
           loading="lazy"
