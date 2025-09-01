@@ -66,7 +66,7 @@ describe("Viewings", () => {
     await clickToggleFilters(user);
 
     // Type the filter text
-    await fillTitleFilter(user, "Rio Bravo");
+    await fillTitleFilter(user, "Curse");
 
     await clickViewResults(user);
 
@@ -440,7 +440,7 @@ describe("Viewings", () => {
     await clickToggleFilters(user);
 
     // Apply initial filter
-    await fillTitleFilter(user, "Rio Bravo");
+    await fillTitleFilter(user, "Curse");
 
     // Apply the filters
     await clickViewResults(user);
@@ -466,6 +466,6 @@ describe("Viewings", () => {
     await clickToggleFilters(user);
 
     // Should show the originally applied filter, not the pending change
-    expect(getTitleFilter()).toHaveValue("Rio Bravo");
+    expect(getTitleFilter()).toHaveValue("Curse");
   });
 });

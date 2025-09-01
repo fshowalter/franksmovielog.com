@@ -1068,8 +1068,8 @@ exports[`Viewings > can filter by medium 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhellraiser-1987.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -1079,15 +1079,12 @@ exports[`Viewings > can filter by medium 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/hellraiser-1987/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Hellraiser
                       
@@ -1096,7 +1093,7 @@ exports[`Viewings > can filter by medium 1`] = `
                     >
                       1987
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -1654,8 +1651,8 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -1665,15 +1662,12 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/psycho-circus-1966/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Psycho-Circus
                       
@@ -1682,7 +1676,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                     >
                       1966
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -1949,8 +1943,8 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -1960,15 +1954,12 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/horror-of-dracula-1958/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Horror of Dracula
                       
@@ -1977,7 +1968,7 @@ exports[`Viewings > can filter by medium then show all 1`] = `
                     >
                       1958
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -3010,8 +3001,8 @@ exports[`Viewings > can filter by release year 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -3021,15 +3012,12 @@ exports[`Viewings > can filter by release year 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/psycho-circus-1966/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Psycho-Circus
                       
@@ -3038,7 +3026,7 @@ exports[`Viewings > can filter by release year 1`] = `
                     >
                       1966
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -3305,8 +3293,8 @@ exports[`Viewings > can filter by release year 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -3316,15 +3304,12 @@ exports[`Viewings > can filter by release year 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/horror-of-dracula-1958/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Horror of Dracula
                       
@@ -3333,7 +3318,7 @@ exports[`Viewings > can filter by release year 1`] = `
                     >
                       1958
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -4366,8 +4351,8 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -4377,15 +4362,12 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/psycho-circus-1966/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Psycho-Circus
                       
@@ -4394,7 +4376,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                     >
                       1966
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -4661,8 +4643,8 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -4672,15 +4654,12 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/horror-of-dracula-1958/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Horror of Dracula
                       
@@ -4689,7 +4668,7 @@ exports[`Viewings > can filter by release year reversed 1`] = `
                     >
                       1958
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -5287,48 +5266,13 @@ exports[`Viewings > can filter by title 1`] = `
       >
         <td
           class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
-        "
-        />
-        <td
-          class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
-        "
-        />
-        <td
-          class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
-        "
-        />
-        <td
-          class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
-        "
-        />
-        <td
-          class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
-        "
-        />
-        <td
-          class="
         min-h-[100px] w-full border-default bg-calendar align-top
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Fri"
+          data-weekday="Sun"
         >
           <div
             class="
@@ -5344,7 +5288,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Sun
             </span>
             1
           </div>
@@ -5357,7 +5301,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Mon"
         >
           <div
             class="
@@ -5373,15 +5317,11 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Mon
             </span>
             2
           </div>
         </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
         <td
           class="
         min-h-[100px] w-full border-default bg-calendar align-top
@@ -5390,7 +5330,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Sun"
+          data-weekday="Tue"
         >
           <div
             class="
@@ -5406,7 +5346,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sun
+              Tue
             </span>
             3
           </div>
@@ -5419,7 +5359,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Mon"
+          data-weekday="Wed"
         >
           <div
             class="
@@ -5435,7 +5375,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Mon
+              Wed
             </span>
             4
           </div>
@@ -5448,7 +5388,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Tue"
+          data-weekday="Thu"
         >
           <div
             class="
@@ -5464,7 +5404,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Tue
+              Thu
             </span>
             5
           </div>
@@ -5477,7 +5417,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Wed"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -5493,7 +5433,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Wed
+              Fri
             </span>
             6
           </div>
@@ -5506,7 +5446,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Thu"
+          data-weekday="Sat"
         >
           <div
             class="
@@ -5522,11 +5462,15 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Sat
             </span>
             7
           </div>
         </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
         <td
           class="
         min-h-[100px] w-full border-default bg-calendar align-top
@@ -5535,7 +5479,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Fri"
+          data-weekday="Sun"
         >
           <div
             class="
@@ -5551,7 +5495,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Sun
             </span>
             8
           </div>
@@ -5564,68 +5508,6 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Sat"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sat
-            </span>
-            9
-          </div>
-        </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
-        <td
-          class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
-          data-weekday="Sun"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Sun
-            </span>
-            10
-          </div>
-        </td>
-        <td
-          class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
           data-weekday="Mon"
         >
           <div
@@ -5644,7 +5526,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Mon
             </span>
-            11
+            9
           </div>
         </td>
         <td
@@ -5672,6 +5554,152 @@ exports[`Viewings > can filter by title 1`] = `
           "
             >
               Tue
+            </span>
+            10
+          </div>
+        </td>
+        <td
+          class="
+        min-h-[100px] w-full border-default bg-calendar align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
+        block
+      "
+          data-weekday="Wed"
+        >
+          <div
+            class="
+          mb-1 px-container py-2 text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Wed
+            </span>
+            11
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        
+              bg-default
+              tablet:has-[a:hover]:-translate-y-2
+              tablet:has-[a:hover]:bg-default
+              tablet:has-[a:hover]:drop-shadow-2xl
+            
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
+        rounded-sm shadow-all
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-full
+      "
+                >
+                  <img
+                    alt=""
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcurse-of-the-demon-1957.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex grow flex-col items-start gap-y-1
+                    tablet:mt-2 tablet:w-full tablet:px-1
+                  "
+                >
+                  <a
+                    class="
+          text-base leading-5 font-semibold text-default transition-all
+          duration-500
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:opacity-0
+          hover:text-accent
+        "
+                    href="/reviews/curse-of-the-demon-1957/"
+                  >
+                    Curse of the Demon
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      1957
+                    </span>
+                  </a>
+                  <div
+                    class="font-sans text-xs font-light tracking-prose text-subtle"
+                  >
+                    TCM HD
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </td>
+        <td
+          class="
+        min-h-[100px] w-full border-default bg-calendar align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
+        hidden
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container py-2 text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
             </span>
             12
           </div>
@@ -5684,7 +5712,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Wed"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -5700,7 +5728,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Wed
+              Fri
             </span>
             13
           </div>
@@ -5713,7 +5741,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Thu"
+          data-weekday="Sat"
         >
           <div
             class="
@@ -5729,11 +5757,15 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Sat
             </span>
             14
           </div>
         </td>
+      </tr>
+      <tr
+        class="tablet-landscape:table-row"
+      >
         <td
           class="
         min-h-[100px] w-full border-default bg-calendar align-top
@@ -5742,7 +5774,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Fri"
+          data-weekday="Sun"
         >
           <div
             class="
@@ -5758,7 +5790,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Fri
+              Sun
             </span>
             15
           </div>
@@ -5771,7 +5803,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Sat"
+          data-weekday="Mon"
         >
           <div
             class="
@@ -5787,15 +5819,11 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sat
+              Mon
             </span>
             16
           </div>
         </td>
-      </tr>
-      <tr
-        class="tablet-landscape:table-row"
-      >
         <td
           class="
         min-h-[100px] w-full border-default bg-calendar align-top
@@ -5804,7 +5832,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Sun"
+          data-weekday="Tue"
         >
           <div
             class="
@@ -5820,7 +5848,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Sun
+              Tue
             </span>
             17
           </div>
@@ -5833,7 +5861,7 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Mon"
+          data-weekday="Wed"
         >
           <div
             class="
@@ -5849,7 +5877,7 @@ exports[`Viewings > can filter by title 1`] = `
             tablet-landscape:hidden
           "
             >
-              Mon
+              Wed
             </span>
             18
           </div>
@@ -5862,64 +5890,6 @@ exports[`Viewings > can filter by title 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            19
-          </div>
-        </td>
-        <td
-          class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
-          data-weekday="Wed"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Wed
-            </span>
-            20
-          </div>
-        </td>
-        <td
-          class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
           data-weekday="Thu"
         >
           <div
@@ -5938,7 +5908,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Thu
             </span>
-            21
+            19
           </div>
         </td>
         <td
@@ -5967,7 +5937,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Fri
             </span>
-            22
+            20
           </div>
         </td>
         <td
@@ -5996,7 +5966,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Sat
             </span>
-            23
+            21
           </div>
         </td>
       </tr>
@@ -6029,7 +5999,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Sun
             </span>
-            24
+            22
           </div>
         </td>
         <td
@@ -6058,7 +6028,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Mon
             </span>
-            25
+            23
           </div>
         </td>
         <td
@@ -6087,7 +6057,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Tue
             </span>
-            26
+            24
           </div>
         </td>
         <td
@@ -6116,7 +6086,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Wed
             </span>
-            27
+            25
           </div>
         </td>
         <td
@@ -6145,7 +6115,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Thu
             </span>
-            28
+            26
           </div>
         </td>
         <td
@@ -6174,7 +6144,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Fri
             </span>
-            29
+            27
           </div>
         </td>
         <td
@@ -6203,7 +6173,7 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Sat
             </span>
-            30
+            28
           </div>
         </td>
       </tr>
@@ -6236,23 +6206,67 @@ exports[`Viewings > can filter by title 1`] = `
             >
               Sun
             </span>
-            31
+            29
           </div>
         </td>
         <td
           class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
+        min-h-[100px] w-full border-default bg-calendar align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container py-2 text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
+          text-muted
         "
-        />
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
+            </span>
+            30
+          </div>
+        </td>
         <td
           class="
-          hidden min-h-[100px] border border-default bg-transparent p-2
-          align-top
-          tablet-landscape:table-cell
+        min-h-[100px] w-full border-default bg-calendar align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
+        hidden
+      "
+          data-weekday="Tue"
+        >
+          <div
+            class="
+          mb-1 px-container py-2 text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
+          text-muted
         "
-        />
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Tue
+            </span>
+            31
+          </div>
+        </td>
         <td
           class="
           hidden min-h-[100px] border border-default bg-transparent p-2
@@ -6646,8 +6660,8 @@ exports[`Viewings > can filter by venue 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fnightcrawler-2014.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -6657,15 +6671,12 @@ exports[`Viewings > can filter by venue 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/nightcrawler-2014/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Nightcrawler
                       
@@ -6674,7 +6685,7 @@ exports[`Viewings > can filter by venue 1`] = `
                     >
                       2014
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -7972,8 +7983,8 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -7983,15 +7994,12 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/psycho-circus-1966/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Psycho-Circus
                       
@@ -8000,7 +8008,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                     >
                       1966
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -8267,8 +8275,8 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -8278,15 +8286,12 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/horror-of-dracula-1958/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Horror of Dracula
                       
@@ -8295,7 +8300,7 @@ exports[`Viewings > can filter by venue then show all 1`] = `
                     >
                       1958
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -9810,8 +9815,8 @@ exports[`Viewings > can filter by viewing year 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fheadhunters-2011.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fheadhunters-2011.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fheadhunters-2011.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fheadhunters-2011.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fheadhunters-2011.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -9821,15 +9826,12 @@ exports[`Viewings > can filter by viewing year 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/headhunters-2011/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Headhunters
                       
@@ -9838,7 +9840,7 @@ exports[`Viewings > can filter by viewing year 1`] = `
                     >
                       2011
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -10294,8 +10296,8 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -10305,15 +10307,12 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/hard-eight-1996/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Hard Eight
                       
@@ -10322,7 +10321,7 @@ exports[`Viewings > can filter by viewing year reversed 1`] = `
                     >
                       1996
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -11635,8 +11634,8 @@ exports[`Viewings > can filter not reviewed then show all titles 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -11646,15 +11645,12 @@ exports[`Viewings > can filter not reviewed then show all titles 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/psycho-circus-1966/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Psycho-Circus
                       
@@ -11663,7 +11659,7 @@ exports[`Viewings > can filter not reviewed then show all titles 1`] = `
                     >
                       1966
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -11930,8 +11926,8 @@ exports[`Viewings > can filter not reviewed then show all titles 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -11941,15 +11937,12 @@ exports[`Viewings > can filter not reviewed then show all titles 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/horror-of-dracula-1958/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Horror of Dracula
                       
@@ -11958,7 +11951,7 @@ exports[`Viewings > can filter not reviewed then show all titles 1`] = `
                     >
                       1958
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -12919,7 +12912,7 @@ exports[`Viewings > can filter reviewed titles 1`] = `
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        block
+        hidden
       "
           data-weekday="Sat"
         >
@@ -12928,7 +12921,7 @@ exports[`Viewings > can filter reviewed titles 1`] = `
           mb-1 px-container py-2 text-sm font-medium
           tablet:px-6 tablet:text-xl tablet:font-normal
           tablet-landscape:py-0
-          text-default
+          text-muted
         "
           >
             <span
@@ -12940,94 +12933,6 @@ exports[`Viewings > can filter reviewed titles 1`] = `
               Sat
             </span>
             9
-          </div>
-          <div
-            class="@container/poster-list"
-          >
-            <ol
-              class="
-              flex flex-col
-              [--poster-list-item-width:33.33%]
-              tablet:flex-row tablet:flex-wrap
-              tablet-landscape:flex-col
-              tablet-landscape:[--poster-list-item-width:100%]
-              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
-            "
-            >
-              <li
-                class="
-        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
-        duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        
-              bg-default
-              tablet:has-[a:hover]:-translate-y-2
-              tablet:has-[a:hover]:bg-default
-              tablet:has-[a:hover]:drop-shadow-2xl
-            
-      "
-              >
-                <div
-                  class="
-        relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-all
-        after:duration-500
-        group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-full
-      "
-                >
-                  <img
-                    alt=""
-                    class="
-          aspect-poster w-full transform-gpu object-cover transition-transform
-          duration-500
-          group-has-[a:hover]/list-item:scale-110
-        "
-                    decoding="async"
-                    height="375"
-                    loading="lazy"
-                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
-                    width="250"
-                  />
-                </div>
-                <div
-                  class="
-                    flex grow flex-col items-start gap-y-1
-                    tablet:mt-2 tablet:w-full tablet:px-1
-                  "
-                >
-                  <a
-                    class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/psycho-circus-1966/"
-                  >
-                    Psycho-Circus
-                      
-                    <span
-                      class="text-xxs leading-none font-light text-subtle"
-                    >
-                      1966
-                    </span>
-                  </a>
-                  <div
-                    class="font-sans text-xs font-light tracking-prose text-subtle"
-                  >
-                    DVD
-                  </div>
-                </div>
-              </li>
-            </ol>
           </div>
         </td>
       </tr>
@@ -13214,7 +13119,7 @@ exports[`Viewings > can filter reviewed titles 1`] = `
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        block
+        hidden
       "
           data-weekday="Sat"
         >
@@ -13223,7 +13128,7 @@ exports[`Viewings > can filter reviewed titles 1`] = `
           mb-1 px-container py-2 text-sm font-medium
           tablet:px-6 tablet:text-xl tablet:font-normal
           tablet-landscape:py-0
-          text-default
+          text-muted
         "
           >
             <span
@@ -13235,94 +13140,6 @@ exports[`Viewings > can filter reviewed titles 1`] = `
               Sat
             </span>
             16
-          </div>
-          <div
-            class="@container/poster-list"
-          >
-            <ol
-              class="
-              flex flex-col
-              [--poster-list-item-width:33.33%]
-              tablet:flex-row tablet:flex-wrap
-              tablet-landscape:flex-col
-              tablet-landscape:[--poster-list-item-width:100%]
-              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
-            "
-            >
-              <li
-                class="
-        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
-        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
-        duration-500
-        tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
-        
-              bg-default
-              tablet:has-[a:hover]:-translate-y-2
-              tablet:has-[a:hover]:bg-default
-              tablet:has-[a:hover]:drop-shadow-2xl
-            
-      "
-              >
-                <div
-                  class="
-        relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
-        rounded-sm shadow-all
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        after:bg-default after:opacity-15 after:transition-all
-        after:duration-500
-        group-has-[a:hover]/list-item:after:opacity-0
-        tablet:w-full
-      "
-                >
-                  <img
-                    alt=""
-                    class="
-          aspect-poster w-full transform-gpu object-cover transition-transform
-          duration-500
-          group-has-[a:hover]/list-item:scale-110
-        "
-                    decoding="async"
-                    height="375"
-                    loading="lazy"
-                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
-                    width="250"
-                  />
-                </div>
-                <div
-                  class="
-                    flex grow flex-col items-start gap-y-1
-                    tablet:mt-2 tablet:w-full tablet:px-1
-                  "
-                >
-                  <a
-                    class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/horror-of-dracula-1958/"
-                  >
-                    Horror of Dracula
-                      
-                    <span
-                      class="text-xxs leading-none font-light text-subtle"
-                    >
-                      1958
-                    </span>
-                  </a>
-                  <div
-                    class="font-sans text-xs font-light tracking-prose text-subtle"
-                  >
-                    DVD
-                  </div>
-                </div>
-              </li>
-            </ol>
           </div>
         </td>
       </tr>
@@ -14457,8 +14274,8 @@ exports[`Viewings > can navigate to next month 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1950.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1950.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1950.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1950.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fcrisis-1950.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -14468,15 +14285,12 @@ exports[`Viewings > can navigate to next month 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/crisis-1950/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Crisis
                       
@@ -14485,7 +14299,7 @@ exports[`Viewings > can navigate to next month 1`] = `
                     >
                       1950
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -14578,8 +14392,8 @@ exports[`Viewings > can navigate to next month 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-crimson-cult-1968.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-crimson-cult-1968.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-crimson-cult-1968.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-crimson-cult-1968.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-crimson-cult-1968.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -14589,15 +14403,12 @@ exports[`Viewings > can navigate to next month 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/the-crimson-cult-1968/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     The Crimson Cult
                       
@@ -14606,7 +14417,7 @@ exports[`Viewings > can navigate to next month 1`] = `
                     >
                       1968
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -15018,8 +14829,8 @@ exports[`Viewings > can navigate to next month 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fbandido-1956.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -15029,15 +14840,12 @@ exports[`Viewings > can navigate to next month 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/bandido-1956/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Bandido!
                       
@@ -15046,7 +14854,7 @@ exports[`Viewings > can navigate to next month 1`] = `
                     >
                       1956
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -15524,8 +15332,8 @@ exports[`Viewings > can navigate to previous month 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhard-eight-1996.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -15535,15 +15343,12 @@ exports[`Viewings > can navigate to previous month 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/hard-eight-1996/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Hard Eight
                       
@@ -15552,7 +15357,7 @@ exports[`Viewings > can navigate to previous month 1`] = `
                     >
                       1996
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -16465,33 +16270,11 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         />
         <td
           class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
-          data-weekday="Fri"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
+          hidden min-h-[100px] border border-default bg-transparent p-2
+          align-top
+          tablet-landscape:table-cell
         "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Fri
-            </span>
-            1
-          </div>
-        </td>
+        />
         <td
           class="
         min-h-[100px] w-full border-default bg-calendar align-top
@@ -16518,7 +16301,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Sat
             </span>
-            2
+            1
           </div>
         </td>
       </tr>
@@ -16550,6 +16333,35 @@ exports[`Viewings > can show unreviewed titles 1`] = `
           "
             >
               Sun
+            </span>
+            2
+          </div>
+        </td>
+        <td
+          class="
+        min-h-[100px] w-full border-default bg-calendar align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container py-2 text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
             </span>
             3
           </div>
@@ -16562,7 +16374,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Mon"
+          data-weekday="Tue"
         >
           <div
             class="
@@ -16578,7 +16390,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             tablet-landscape:hidden
           "
             >
-              Mon
+              Tue
             </span>
             4
           </div>
@@ -16591,35 +16403,6 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            5
-          </div>
-        </td>
-        <td
-          class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
           data-weekday="Wed"
         >
           <div
@@ -16638,7 +16421,121 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Wed
             </span>
+            5
+          </div>
+        </td>
+        <td
+          class="
+        min-h-[100px] w-full border-default bg-calendar align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
+        block
+      "
+          data-weekday="Thu"
+        >
+          <div
+            class="
+          mb-1 px-container py-2 text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
+          text-default
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Thu
+            </span>
             6
+          </div>
+          <div
+            class="@container/poster-list"
+          >
+            <ol
+              class="
+              flex flex-col
+              [--poster-list-item-width:33.33%]
+              tablet:flex-row tablet:flex-wrap
+              tablet-landscape:flex-col
+              tablet-landscape:[--poster-list-item-width:100%]
+              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+            "
+            >
+              <li
+                class="
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
+        duration-500
+        tablet:w-(--poster-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        
+              bg-default
+              tablet:has-[a:hover]:-translate-y-2
+              tablet:has-[a:hover]:bg-default
+              tablet:has-[a:hover]:drop-shadow-2xl
+            
+      "
+              >
+                <div
+                  class="
+        relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
+        rounded-sm shadow-all
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:bg-default after:opacity-15 after:transition-all
+        after:duration-500
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-full
+      "
+                >
+                  <img
+                    alt=""
+                    class="
+          aspect-poster w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
+        "
+                    decoding="async"
+                    height="375"
+                    loading="lazy"
+                    sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    width="250"
+                  />
+                </div>
+                <div
+                  class="
+                    flex grow flex-col items-start gap-y-1
+                    tablet:mt-2 tablet:w-full tablet:px-1
+                  "
+                >
+                  <span
+                    class="
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
+                  >
+                    Nightcrawler
+                      
+                    <span
+                      class="text-xxs leading-none font-light text-subtle"
+                    >
+                      2014
+                    </span>
+                  </span>
+                  <div
+                    class="font-sans text-xs font-light tracking-prose text-subtle"
+                  >
+                    Alamo Drafthouse Cinema - One Loudoun
+                  </div>
+                </div>
+              </li>
+            </ol>
           </div>
         </td>
         <td
@@ -16649,7 +16546,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Thu"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -16665,7 +16562,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Fri
             </span>
             7
           </div>
@@ -16678,35 +16575,6 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Fri"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Fri
-            </span>
-            8
-          </div>
-        </td>
-        <td
-          class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
           data-weekday="Sat"
         >
           <div
@@ -16725,7 +16593,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Sat
             </span>
-            9
+            8
           </div>
         </td>
       </tr>
@@ -16757,6 +16625,35 @@ exports[`Viewings > can show unreviewed titles 1`] = `
           "
             >
               Sun
+            </span>
+            9
+          </div>
+        </td>
+        <td
+          class="
+        min-h-[100px] w-full border-default bg-calendar align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container py-2 text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
             </span>
             10
           </div>
@@ -16769,7 +16666,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Mon"
+          data-weekday="Tue"
         >
           <div
             class="
@@ -16785,7 +16682,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             tablet-landscape:hidden
           "
             >
-              Mon
+              Tue
             </span>
             11
           </div>
@@ -16798,7 +16695,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Tue"
+          data-weekday="Wed"
         >
           <div
             class="
@@ -16814,7 +16711,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             tablet-landscape:hidden
           "
             >
-              Tue
+              Wed
             </span>
             12
           </div>
@@ -16827,7 +16724,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Wed"
+          data-weekday="Thu"
         >
           <div
             class="
@@ -16843,7 +16740,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             tablet-landscape:hidden
           "
             >
-              Wed
+              Thu
             </span>
             13
           </div>
@@ -16856,7 +16753,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Thu"
+          data-weekday="Fri"
         >
           <div
             class="
@@ -16872,7 +16769,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             tablet-landscape:hidden
           "
             >
-              Thu
+              Fri
             </span>
             14
           </div>
@@ -16885,35 +16782,6 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Fri"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Fri
-            </span>
-            15
-          </div>
-        </td>
-        <td
-          class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
           data-weekday="Sat"
         >
           <div
@@ -16932,7 +16800,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Sat
             </span>
-            16
+            15
           </div>
         </td>
       </tr>
@@ -16964,6 +16832,35 @@ exports[`Viewings > can show unreviewed titles 1`] = `
           "
             >
               Sun
+            </span>
+            16
+          </div>
+        </td>
+        <td
+          class="
+        min-h-[100px] w-full border-default bg-calendar align-top
+        tablet:border tablet:px-2
+        tablet-landscape:mb-0 tablet-landscape:table-cell
+        tablet-landscape:w-[14.28%] tablet-landscape:py-2
+        hidden
+      "
+          data-weekday="Mon"
+        >
+          <div
+            class="
+          mb-1 px-container py-2 text-sm font-medium
+          tablet:px-6 tablet:text-xl tablet:font-normal
+          tablet-landscape:py-0
+          text-muted
+        "
+          >
+            <span
+              class="
+            mr-2 font-sans text-xs text-subtle uppercase
+            tablet-landscape:hidden
+          "
+            >
+              Mon
             </span>
             17
           </div>
@@ -16976,7 +16873,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Mon"
+          data-weekday="Tue"
         >
           <div
             class="
@@ -16992,7 +16889,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             tablet-landscape:hidden
           "
             >
-              Mon
+              Tue
             </span>
             18
           </div>
@@ -17005,35 +16902,6 @@ exports[`Viewings > can show unreviewed titles 1`] = `
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
         hidden
       "
-          data-weekday="Tue"
-        >
-          <div
-            class="
-          mb-1 px-container py-2 text-sm font-medium
-          tablet:px-6 tablet:text-xl tablet:font-normal
-          tablet-landscape:py-0
-          text-muted
-        "
-          >
-            <span
-              class="
-            mr-2 font-sans text-xs text-subtle uppercase
-            tablet-landscape:hidden
-          "
-            >
-              Tue
-            </span>
-            19
-          </div>
-        </td>
-        <td
-          class="
-        min-h-[100px] w-full border-default bg-calendar align-top
-        tablet:border tablet:px-2
-        tablet-landscape:mb-0 tablet-landscape:table-cell
-        tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        hidden
-      "
           data-weekday="Wed"
         >
           <div
@@ -17052,7 +16920,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Wed
             </span>
-            20
+            19
           </div>
         </td>
         <td
@@ -17081,7 +16949,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Thu
             </span>
-            21
+            20
           </div>
         </td>
         <td
@@ -17110,7 +16978,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Fri
             </span>
-            22
+            21
           </div>
         </td>
         <td
@@ -17139,7 +17007,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Sat
             </span>
-            23
+            22
           </div>
         </td>
       </tr>
@@ -17172,7 +17040,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Sun
             </span>
-            24
+            23
           </div>
         </td>
         <td
@@ -17201,7 +17069,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Mon
             </span>
-            25
+            24
           </div>
         </td>
         <td
@@ -17230,7 +17098,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Tue
             </span>
-            26
+            25
           </div>
         </td>
         <td
@@ -17259,7 +17127,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Wed
             </span>
-            27
+            26
           </div>
         </td>
         <td
@@ -17288,7 +17156,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Thu
             </span>
-            28
+            27
           </div>
         </td>
         <td
@@ -17317,7 +17185,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Fri
             </span>
-            29
+            28
           </div>
         </td>
         <td
@@ -17346,7 +17214,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Sat
             </span>
-            30
+            29
           </div>
         </td>
       </tr>
@@ -17379,7 +17247,7 @@ exports[`Viewings > can show unreviewed titles 1`] = `
             >
               Sun
             </span>
-            31
+            30
           </div>
         </td>
         <td
@@ -17957,8 +17825,8 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -17968,15 +17836,12 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/psycho-circus-1966/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Psycho-Circus
                       
@@ -17985,7 +17850,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                     >
                       1966
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -18252,8 +18117,8 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -18263,15 +18128,12 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/horror-of-dracula-1958/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Horror of Dracula
                       
@@ -18280,7 +18142,7 @@ exports[`Viewings > can sort by viewing date with newest first 1`] = `
                     >
                       1958
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -19382,8 +19244,8 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhalloween-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhalloween-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhalloween-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhalloween-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhalloween-1978.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -19393,15 +19255,12 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/halloween-1978/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     Halloween
                       
@@ -19410,7 +19269,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                     >
                       1978
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -19455,8 +19314,8 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                     height="375"
                     loading="lazy"
                     sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-thing-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-thing-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-thing-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-thing-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fthe-thing-1982.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                    src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                    srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                     width="250"
                   />
                 </div>
@@ -19466,15 +19325,12 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                 >
-                  <a
+                  <span
                     class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                    href="/reviews/the-thing-1982/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                   >
                     The Thing
                       
@@ -19483,7 +19339,7 @@ exports[`Viewings > can sort by viewing date with oldest first 1`] = `
                     >
                       1982
                     </span>
-                  </a>
+                  </span>
                   <div
                     class="font-sans text-xs font-light tracking-prose text-subtle"
                   >
@@ -20668,8 +20524,8 @@ exports[`Viewings > renders 1`] = `
                                 height="375"
                                 loading="lazy"
                                 sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                                srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fpsycho-circus-1966.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                                srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                                 width="250"
                               />
                             </div>
@@ -20679,15 +20535,12 @@ exports[`Viewings > renders 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                             >
-                              <a
+                              <span
                                 class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                                href="/reviews/psycho-circus-1966/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                               >
                                 Psycho-Circus  
                                 <span
@@ -20695,7 +20548,7 @@ exports[`Viewings > renders 1`] = `
                                 >
                                   1966
                                 </span>
-                              </a>
+                              </span>
                               <div
                                 class="font-sans text-xs font-light tracking-prose text-subtle"
                               >
@@ -20962,8 +20815,8 @@ exports[`Viewings > renders 1`] = `
                                 height="375"
                                 loading="lazy"
                                 sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
-                                srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhorror-of-dracula-1958.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif"
+                                srcset="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=63&h=95&q=80&f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=125&h=188&q=80&f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=250&h=375&q=80&f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fdefault.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=80&f=avif 500w"
                                 width="250"
                               />
                             </div>
@@ -20973,15 +20826,12 @@ exports[`Viewings > renders 1`] = `
                     tablet:mt-2 tablet:w-full tablet:px-1
                   "
                             >
-                              <a
+                              <span
                                 class="
-          text-base leading-5 font-semibold text-default transition-all
-          duration-500
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-          after:opacity-0
-          hover:text-accent
-        "
-                                href="/reviews/horror-of-dracula-1958/"
+        
+        block text-base leading-5 font-semibold
+        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+      "
                               >
                                 Horror of Dracula  
                                 <span
@@ -20989,7 +20839,7 @@ exports[`Viewings > renders 1`] = `
                                 >
                                   1958
                                 </span>
-                              </a>
+                              </span>
                               <div
                                 class="font-sans text-xs font-light tracking-prose text-subtle"
                               >

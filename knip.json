@@ -4,7 +4,8 @@
     "src/pages/**/*.astro",
     "src/layouts/search.ts",
     "src/layouts/navMenu.ts",
-    "eslint.html.config.js"
+    "eslint.html.config.js",
+    "src/pages/**/*.spec.ts"
   ],
   "project": [
     "**/*",
