@@ -40,7 +40,7 @@ export type ReviewContent = {
   viewings: ReviewViewing[];
 };
 
-export type ReviewExcerpt = {
+type ReviewExcerpt = {
   excerpt: string;
 };
 
