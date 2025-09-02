@@ -334,13 +334,13 @@
               Latest Reviews
             </h2>
             <ul
-              class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-[6vw] tablet:px-container laptop:gap-y-[3vw] desktop:gap-y-14"
+              class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-[6vw] tablet:px-container tablet:[--review-card-width:47%] laptop:gap-y-[3vw] laptop:[--review-card-width:31.33%] desktop:gap-y-14"
             >
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-midnight-meat-train-2008.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -356,7 +356,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -368,7 +368,7 @@
                     27 Apr 2024
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/the-midnight-meat-train-2008/"
                     >The Midnight Meat Train<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -386,7 +386,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       Sometimes, frustrating films are worse than bad ones. Such
@@ -408,10 +408,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-entity-1982.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -427,7 +427,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -439,7 +439,7 @@
                     18 Feb 2024
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/the-entity-1982/"
                     >The Entity<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -457,7 +457,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       Barbara Hershey plays a single mother who finds herself
@@ -478,10 +478,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Faqua-teen-forever-plantasm-2022.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -497,7 +497,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -509,7 +509,7 @@
                     31 Aug 2023
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/aqua-teen-forever-plantasm-2022/"
                     >Aqua Teen Forever: Plantasm<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -527,7 +527,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       For better and worse, it plays like an extended episode of
@@ -546,10 +546,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fbig-jim-mclain-1952.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -565,7 +565,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -577,7 +577,7 @@
                     31 Jul 2023
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/big-jim-mclain-1952/"
                     >Big Jim McLain<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -595,7 +595,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       John Wayne’s first production under his Wayne-Fellows
@@ -626,10 +626,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-heavenly-body-1944.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -645,7 +645,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -657,7 +657,7 @@
                     23 Jun 2023
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/the-heavenly-body-1944/"
                     >The Heavenly Body<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -675,7 +675,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       In this screwball comedy, William Powell plays an
@@ -700,10 +700,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-oklahoma-kid-1939.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -719,7 +719,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -731,7 +731,7 @@
                     06 Oct 2022
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/the-oklahoma-kid-1939/"
                     >The Oklahoma Kid<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -749,7 +749,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       Humphrey Bogart plays Whip McCord, the leader of an outlaw
@@ -770,10 +770,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Flive-and-let-die-1973.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -789,7 +789,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -801,7 +801,7 @@
                     01 Jul 2022
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/live-and-let-die-1973/"
                     >Live and Let Die<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -819,7 +819,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       <strong>Roger Moore’s James Bond debut.</strong> He
@@ -844,10 +844,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fpilgrimage-1933.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -863,7 +863,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -875,7 +875,7 @@
                     21 Jun 2022
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/pilgrimage-1933/"
                     >Pilgrimage<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -893,7 +893,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       Henrietta Crosman plays a rural woman who, rather than see
@@ -911,10 +911,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fno-time-to-die-2021.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -930,7 +930,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -942,7 +942,7 @@
                     16 Jun 2022
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/no-time-to-die-2021/"
                     >No Time to Die<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -960,7 +960,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       A retired James Bond steps back into action to thwart a
@@ -983,10 +983,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2F3-from-hell-2019.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -1002,7 +1002,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -1014,7 +1014,7 @@
                     17 Jan 2022
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/3-from-hell-2019/"
                     >3 from Hell<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -1032,7 +1032,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       Ten years after
@@ -1056,10 +1056,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fcroupier-1998.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -1075,7 +1075,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -1087,7 +1087,7 @@
                     25 Sept 2021
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/croupier-1998/"
                     >Croupier<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -1105,7 +1105,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       Clive Owen plays Jack, an aspiring writer who takes a job
@@ -1132,10 +1132,10 @@
                 </div>
               </li>
               <li
-                class="group/list-item relative mb-1 flex transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl laptop:max-w-[31.33%]"
+                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fharold-and-kumar-go-to-white-castle-2004.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -1151,7 +1151,7 @@
                     height="360"
                     sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
                     width="640"
-                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                    class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                   />
                 </div>
                 <div
@@ -1163,7 +1163,7 @@
                     14 Aug 2021
                   </div>
                   <a
-                    class="mb-3 block text-2.5xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent"
+                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
                     href="/reviews/harold-and-kumar-go-to-white-castle-2004/"
                     >Harold &amp; Kumar Go to White Castle<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -1181,7 +1181,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
+                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
                   >
                     <p>
                       John Cho and Kal Penn play roommates who spend a Friday

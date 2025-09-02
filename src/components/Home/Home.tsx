@@ -1,17 +1,22 @@
 import type { BackdropImageProps } from "~/api/backdrops";
+import type { ReviewCardValue } from "~/components/ReviewCard";
 
 import { Backdrop } from "~/components/Backdrop";
 import { Layout } from "~/components/Layout/Layout";
+import { ReviewCard } from "~/components/ReviewCard";
 import { SubHeading } from "~/components/SubHeading";
-
-import type { ListItemValue } from "./HomeListItem";
-
-import { HomeListItem } from "./HomeListItem";
 
 export type Props = {
   backdropImageProps: BackdropImageProps;
   deck: string;
-  values: ListItemValue[];
+  values: ReviewCardValue[];
+};
+
+export const HomeStillImageConfig = {
+  height: 360,
+  sizes:
+    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
+  width: 640,
 };
 
 export function Home({
@@ -34,13 +39,20 @@ export function Home({
           className={`
             flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8
             tablet:flex-row tablet:justify-between tablet:gap-y-[6vw]
-            tablet:px-container
-            laptop:gap-y-[3vw]
+            tablet:px-container tablet:[--review-card-width:47%]
+            laptop:gap-y-[3vw] laptop:[--review-card-width:31.33%]
             desktop:gap-y-14
           `}
         >
           {values.map((value) => {
-            return <HomeListItem key={value.reviewSequence} value={value} />;
+            return (
+              <ReviewCard
+                as="li"
+                imageConfig={HomeStillImageConfig}
+                key={value.imdbId}
+                value={value}
+              />
+            );
           })}
         </ul>
         <div
