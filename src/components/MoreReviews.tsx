@@ -1,5 +1,3 @@
-import type { StillImageProps } from "~/api/stills";
-
 import { ReviewCard, type ReviewCardValue } from "./ReviewCard";
 import { SubHeading } from "./SubHeading";
 
@@ -8,16 +6,6 @@ export const MoreReviewsImageConfig = {
   sizes:
     "(max-width: 767px) 84vw, (max-width: 1279px) calc((100vw - 96px) * 0.47), (max-width: 1695px) calc((100vw - 160px) * .22735), 350px",
   width: 640,
-};
-
-export type MoreReviewsValue = {
-  excerpt: string;
-  genres: string[];
-  grade: string;
-  releaseYear: string;
-  slug: string;
-  stillImageProps: StillImageProps;
-  title: string;
 };
 
 export function MoreReviews({
