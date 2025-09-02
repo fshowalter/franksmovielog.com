@@ -590,28 +590,33 @@ exports[`Home > matches snapshot 1`] = `
             class="
             flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8
             tablet:flex-row tablet:justify-between tablet:gap-y-[6vw]
-            tablet:px-container
-            laptop:gap-y-[3vw]
+            tablet:px-container tablet:[--review-card-width:47%]
+            laptop:gap-y-[3vw] laptop:[--review-card-width:31.33%]
             desktop:gap-y-14
           "
           >
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -620,7 +625,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -634,27 +639,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   27 Apr 2024
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/the-midnight-meat-train-2008/"
                 >
@@ -673,9 +687,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="D: 2 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
@@ -684,7 +698,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -715,21 +732,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -738,7 +760,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -752,27 +774,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   18 Feb 2024
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/the-entity-1982/"
                 >
@@ -791,9 +822,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="D+: 2 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
@@ -802,7 +833,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -826,21 +860,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -849,7 +888,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -863,27 +902,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   31 Aug 2023
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/aqua-teen-forever-plantasm-2022/"
                 >
@@ -902,9 +950,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="C+: 3 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/3-stars.svg"
                     width="120"
@@ -913,7 +961,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -937,21 +988,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -960,7 +1016,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -974,27 +1030,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   31 Jul 2023
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/big-jim-mclain-1952/"
                 >
@@ -1013,9 +1078,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="C: 3 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/3-stars.svg"
                     width="120"
@@ -1024,7 +1089,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -1057,21 +1125,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -1080,7 +1153,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -1094,27 +1167,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   23 Jun 2023
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/the-heavenly-body-1944/"
                 >
@@ -1133,9 +1215,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="D-: 1.5 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/1-half-stars.svg"
                     width="120"
@@ -1144,7 +1226,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -1168,21 +1253,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -1191,7 +1281,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -1205,27 +1295,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   06 Oct 2022
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/the-oklahoma-kid-1939/"
                 >
@@ -1244,9 +1343,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="C-: 2.5 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/2-half-stars.svg"
                     width="120"
@@ -1255,7 +1354,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -1279,21 +1381,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -1302,7 +1409,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -1316,27 +1423,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   01 Jul 2022
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/live-and-let-die-1973/"
                 >
@@ -1355,9 +1471,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="D+: 2 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
@@ -1366,7 +1482,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -1396,21 +1515,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -1419,7 +1543,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -1433,27 +1557,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   21 Jun 2022
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/pilgrimage-1933/"
                 >
@@ -1472,9 +1605,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="C: 3 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/3-stars.svg"
                     width="120"
@@ -1483,7 +1616,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -1504,21 +1640,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -1527,7 +1668,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -1541,27 +1682,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   16 Jun 2022
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/no-time-to-die-2021/"
                 >
@@ -1580,9 +1730,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="D: 2 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
@@ -1591,7 +1741,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -1621,21 +1774,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -1644,7 +1802,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -1658,27 +1816,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   17 Jan 2022
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/3-from-hell-2019/"
                 >
@@ -1697,9 +1864,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="D+: 2 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/2-stars.svg"
                     width="120"
@@ -1708,7 +1875,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -1740,21 +1910,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -1763,7 +1938,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -1777,27 +1952,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   25 Sept 2021
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/croupier-1998/"
                 >
@@ -1816,9 +2000,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="B: 4 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/4-stars.svg"
                     width="120"
@@ -1827,7 +2011,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>
@@ -1854,21 +2041,26 @@ exports[`Home > matches snapshot 1`] = `
             </li>
             <li
               class="
-        group/list-item relative mb-1 flex transform-gpu flex-col bg-default
-        px-[8%] pt-12 transition-transform duration-500
-        tablet:mb-0 tablet:max-w-[47%] tablet:px-0 tablet:pt-0
+        group/card relative mb-1 w-(--review-card-width) transform-gpu
+        bg-default transition-transform duration-500
+        tablet:mb-0
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
-        laptop:max-w-[31.33%]
+        
+              flex flex-col px-[8%] pt-12
+              tablet:px-0 tablet:pt-0
+            
       "
             >
               <div
                 class="
           relative mb-6 block overflow-hidden
           after:absolute after:top-0 after:left-0 after:aspect-video
-          after:size-full after:bg-default after:opacity-15 after:duration-500
-          group-has-[a:hover]/list-item:after:opacity-0
+          after:size-full after:bg-default after:duration-500
+          group-has-[a:hover]/card:after:opacity-0
           tablet:after:inset-x-0 tablet:after:top-0
+          after:opacity-15
+          
         "
               >
                 <img
@@ -1877,7 +2069,7 @@ exports[`Home > matches snapshot 1`] = `
         aspect-video
         
             h-auto w-full transform-gpu transition-transform duration-500
-            group-has-[a:hover]/list-item:scale-110
+            group-has-[a:hover]/card:scale-110
           
       "
                   decoding="async"
@@ -1891,27 +2083,36 @@ exports[`Home > matches snapshot 1`] = `
               </div>
               <div
                 class="
-          flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          flex grow flex-col
+          
+                px-1 pb-8
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              
+          
         "
               >
                 <div
                   class="
-            mb-3 font-sans text-xs leading-4 font-normal tracking-wider
-            text-subtle uppercase
-            laptop:tracking-wide
-          "
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle uppercase
+              laptop:tracking-wide
+            "
                 >
                   14 Aug 2021
                 </div>
                 <a
                   class="
-            mb-3 block text-2.5xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block font-medium text-default transition-all duration-500
             after:absolute after:top-0 after:left-0 after:z-sticky
             after:size-full
             hover:text-accent
+            
+                  text-2.5xl leading-7
+                  tablet:text-2xl
+                  laptop:text-2.5xl
+                
+            
           "
                   href="/reviews/harold-and-kumar-go-to-white-castle-2004/"
                 >
@@ -1930,9 +2131,9 @@ exports[`Home > matches snapshot 1`] = `
                   <img
                     alt="A-: 4.5 stars (out of 5)"
                     class="
-            mb-5
-            tablet:mb-8
-          "
+              mb-5
+              tablet:mb-8
+            "
                     height="24"
                     src="/svg/4-half-stars.svg"
                     width="120"
@@ -1941,7 +2142,10 @@ exports[`Home > matches snapshot 1`] = `
                 <div
                   class="
         rendered-markdown
-        leading-normal mb-6 text-lg tracking-prose text-muted
+        
+            tracking-prose text-muted
+            leading-normal mb-6 text-lg
+          
       "
                 >
                   <p>

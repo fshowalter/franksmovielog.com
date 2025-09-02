@@ -1,5 +1,5 @@
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { MoreReviewsValue } from "~/components/MoreReviews";
+import type { ReviewCardValue } from "~/components/ReviewCard";
 
 import { Backdrop } from "~/components/Backdrop";
 import { Layout } from "~/components/Layout/Layout";
@@ -10,7 +10,7 @@ export type Props = {
   backdropImageProps: BackdropImageProps;
   content: string | undefined;
   deck: string;
-  recentReviews: MoreReviewsValue[];
+  recentReviews: ReviewCardValue[];
   title: string;
 };
 
