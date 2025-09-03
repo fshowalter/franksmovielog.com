@@ -30,7 +30,7 @@ export function ReviewsSubNav({
             <li
               className={`
                 snap-start text-center whitespace-nowrap
-                ${active === key ? `text-inverse` : `text-inverse-subtle`}
+                ${active === key ? `text-white` : `text-grey`}
               `}
               key={value.href}
             >
@@ -46,7 +46,7 @@ export function ReviewsSubNav({
                   className={`
                     group/item block transform-gpu px-6 pt-8 pb-7 transition-all
                     duration-500
-                    hover:bg-accent hover:text-inverse
+                    hover:bg-accent hover:text-white
                   `}
                   href={value.href}
                 >
@@ -55,7 +55,7 @@ export function ReviewsSubNav({
                       relative inline-block pb-1
                       after:absolute after:bottom-0 after:left-0 after:h-0.5
                       after:w-full after:origin-center after:scale-x-0
-                      after:bg-(--fg-inverse)/80 after:transition-transform
+                      after:bg-white/80 after:transition-transform
                       after:duration-500
                       group-hover/item:after:scale-x-100
                     `}

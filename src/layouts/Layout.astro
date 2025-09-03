@@ -108,7 +108,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
           class={`
             absolute right-4 z-sticky mt-5 h-6 cursor-pointer border-none
             bg-subtle px-2 font-mono text-xs font-light text-muted
-            hover:bg-inverse hover:text-inverse
+            hover:bg-inverse hover:text-white
             focus:outline-accent
             tablet:right-6
             laptop:right-8
@@ -189,8 +189,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
               <!-- Border line after input -->
               <div
                 class={`
-                  absolute right-0 bottom-0 left-0 h-px
-                  bg-[var(--border-default)]
+                  absolute right-0 bottom-0 left-0 h-px bg-[var(--color-border)]
                 `}
               >
               </div>
@@ -231,7 +230,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
               class={`
                 mx-auto block h-10 w-full max-w-[430px] bg-canvas font-sans
                 text-xs font-medium tracking-[0.8px] text-default uppercase
-                hover:bg-inverse hover:text-inverse
+                hover:bg-inverse hover:text-white
                 focus:-outline-offset-2 focus:outline-accent
               `}
               id="pagefind-load-more"

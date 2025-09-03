@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export const DRAWER_CLOSE_ANIMATION_MS = 250;
+export const DRAWER_CLOSE_ANIMATION_MS = 50;
 const DRAWER_OPEN_ANIMATION_MS = 400;
 
 type Props<T extends string> = {
@@ -229,8 +229,8 @@ export function ListWithFilters<T extends string>({
             aria-label="Filters"
             className={`
               fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
-              flex-col items-start gap-y-5 bg-default text-left text-inverse
-              duration-200 ease-in-out
+              flex-col items-start gap-y-5 bg-default text-left duration-200
+              ease-in-out
               ${
                 filterDrawerVisible
                   ? `
@@ -342,7 +342,7 @@ export function ListWithFilters<T extends string>({
                       flex flex-1 transform-gpu cursor-pointer items-center
                       justify-center gap-x-4 rounded-sm bg-footer px-4 py-3
                       font-sans text-xs font-bold tracking-wide text-nowrap
-                      text-inverse uppercase transition-transform
+                      text-white uppercase transition-transform
                       hover:scale-105 hover:drop-shadow-md
                     `}
                     onClick={() => {

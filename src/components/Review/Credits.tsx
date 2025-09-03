@@ -94,8 +94,7 @@ export function Credits({
           place-content-center items-center rounded-md py-5 font-sans text-sm
           tracking-wide uppercase shadow-all transition-all
           group-target/credits:flex
-          hover:scale-105 hover:bg-footer hover:text-inverse
-          hover:drop-shadow-lg
+          hover:scale-105 hover:bg-footer hover:text-white hover:drop-shadow-lg
         `}
         href="#top"
       >

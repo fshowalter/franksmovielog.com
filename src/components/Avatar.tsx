@@ -21,7 +21,7 @@ export function Avatar({
     <div>
       <div className={className}>
         <svg
-          fill="var(--bg-canvas)"
+          fill="var(--background-color-canvas)"
           viewBox="0 0 16 16"
           width="100%"
           xmlns="http://www.w3.org/2000/svg"

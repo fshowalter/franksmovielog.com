@@ -51,7 +51,7 @@ function AllTimeLink({
     <li
       className={`
         snap-start text-center
-        ${"all" === currentYear ? "text-inverse" : `text-inverse-subtle`}
+        ${"all" === currentYear ? "text-white" : `text-grey`}
       `}
     >
       {"all" === currentYear ? (
@@ -68,7 +68,7 @@ function AllTimeLink({
           className={`
             group/all-time block transform-gpu px-4 pt-4 pb-3 whitespace-nowrap
             transition-all duration-500
-            hover:bg-accent hover:text-inverse
+            hover:bg-accent hover:text-white
           `}
           href={linkFunc("all")}
         >
@@ -76,9 +76,8 @@ function AllTimeLink({
             className={`
               relative inline-block pb-1
               after:absolute after:bottom-0 after:left-0 after:h-0.5
-              after:w-full after:origin-center after:scale-x-0
-              after:bg-(--fg-inverse) after:transition-transform
-              after:duration-500
+              after:w-full after:origin-center after:scale-x-0 after:bg-white
+              after:transition-transform after:duration-500
               group-hover/all-time:after:scale-x-100
             `}
           >
@@ -103,7 +102,7 @@ function YearLink({
     <li
       className={`
         snap-start text-center
-        ${year === currentYear ? "text-inverse" : `text-inverse-subtle`}
+        ${year === currentYear ? "text-white" : `text-grey`}
       `}
     >
       {year === currentYear ? (
@@ -120,7 +119,7 @@ function YearLink({
           className={`
             group/year block transform-gpu px-4 pt-4 pb-3 transition-all
             duration-500
-            hover:bg-accent hover:text-inverse
+            hover:bg-accent hover:text-white
           `}
           href={linkFunc(year)}
         >
@@ -128,9 +127,8 @@ function YearLink({
             className={`
               relative inline-block pb-1
               after:absolute after:bottom-0 after:left-0 after:h-0.5
-              after:w-full after:origin-center after:scale-x-0
-              after:bg-(--fg-inverse) after:transition-transform
-              after:duration-500
+              after:w-full after:origin-center after:scale-x-0 after:bg-white
+              after:transition-transform after:duration-500
               group-hover/year:after:scale-x-100
             `}
           >

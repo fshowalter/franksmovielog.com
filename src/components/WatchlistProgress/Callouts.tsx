@@ -142,7 +142,7 @@ function ProgressRing({
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
         fill={"none" as const}
-        stroke="var(--bg-canvas)"
+        stroke="var(--background-color-canvas)"
         strokeWidth={1.8}
       />
       <path
@@ -150,7 +150,7 @@ function ProgressRing({
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
         fill={"none" as const}
-        stroke="var(--bg-progress)"
+        stroke="var(--background-color-progress)"
         strokeDasharray={`${percent}, 100`}
         strokeLinecap="round"
         strokeWidth={1.8}

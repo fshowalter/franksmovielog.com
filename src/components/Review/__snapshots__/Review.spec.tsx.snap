@@ -252,7 +252,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
               class="
             invisible fixed top-0 right-0 flex h-full w-0
             transform-[translateX(100%)] flex-col items-start gap-y-5
-            overflow-hidden bg-footer text-left text-inverse opacity-0
+            overflow-hidden bg-footer text-left text-white opacity-0
             duration-200 ease-in-out
             tablet:max-w-[35vw] tablet:gap-y-10
             laptop:max-w-[25vw]
@@ -336,7 +336,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -357,7 +357,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -378,7 +378,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -399,7 +399,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -420,7 +420,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -465,7 +465,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -510,7 +510,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -1061,8 +1061,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           place-content-center items-center rounded-md py-5 font-sans text-sm
           tracking-wide uppercase shadow-all transition-all
           group-target/credits:flex
-          hover:scale-105 hover:bg-footer hover:text-inverse
-          hover:drop-shadow-lg
+          hover:scale-105 hover:bg-footer hover:text-white hover:drop-shadow-lg
         "
               href="#top"
             >
@@ -1597,7 +1596,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
         </script>
       </main>
       <footer
-        class="bg-footer text-inverse"
+        class="bg-footer text-white"
       >
         <div
           class="mx-auto max-w-(--breakpoint-laptop) px-container py-20"
@@ -1660,7 +1659,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             "
             >
               <div
-                class="pt-10 font-sans font-normal text-inverse-subtle"
+                class="pt-10 font-sans font-normal text-grey"
               >
                 <p
                   class="
@@ -1668,7 +1667,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                   first-letter:float-left first-letter:mt-[6px]
                   first-letter:pr-1 first-letter:font-sans
                   first-letter:text-[40px] first-letter:leading-[.8]
-                  first-letter:font-bold first-letter:text-inverse
+                  first-letter:font-bold first-letter:text-white
                 "
                 >
                   Hi there, I'm Frank, a husband and father old enough to have sat wide-eyed during 
@@ -1853,7 +1852,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -1874,7 +1873,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -1895,7 +1894,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -1916,7 +1915,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -1937,7 +1936,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -1982,7 +1981,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -2027,7 +2026,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -2342,7 +2341,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
               class="
             invisible fixed top-0 right-0 flex h-full w-0
             transform-[translateX(100%)] flex-col items-start gap-y-5
-            overflow-hidden bg-footer text-left text-inverse opacity-0
+            overflow-hidden bg-footer text-left text-white opacity-0
             duration-200 ease-in-out
             tablet:max-w-[35vw] tablet:gap-y-10
             laptop:max-w-[25vw]
@@ -2426,7 +2425,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -2447,7 +2446,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -2468,7 +2467,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -2489,7 +2488,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -2510,7 +2509,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -2555,7 +2554,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -2600,7 +2599,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -3169,8 +3168,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           place-content-center items-center rounded-md py-5 font-sans text-sm
           tracking-wide uppercase shadow-all transition-all
           group-target/credits:flex
-          hover:scale-105 hover:bg-footer hover:text-inverse
-          hover:drop-shadow-lg
+          hover:scale-105 hover:bg-footer hover:text-white hover:drop-shadow-lg
         "
               href="#top"
             >
@@ -5387,7 +5385,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
         </script>
       </main>
       <footer
-        class="bg-footer text-inverse"
+        class="bg-footer text-white"
       >
         <div
           class="mx-auto max-w-(--breakpoint-laptop) px-container py-20"
@@ -5450,7 +5448,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             "
             >
               <div
-                class="pt-10 font-sans font-normal text-inverse-subtle"
+                class="pt-10 font-sans font-normal text-grey"
               >
                 <p
                   class="
@@ -5458,7 +5456,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                   first-letter:float-left first-letter:mt-[6px]
                   first-letter:pr-1 first-letter:font-sans
                   first-letter:text-[40px] first-letter:leading-[.8]
-                  first-letter:font-bold first-letter:text-inverse
+                  first-letter:font-bold first-letter:text-white
                 "
                 >
                   Hi there, I'm Frank, a husband and father old enough to have sat wide-eyed during 
@@ -5643,7 +5641,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -5664,7 +5662,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -5685,7 +5683,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -5706,7 +5704,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -5727,7 +5725,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -5772,7 +5770,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
@@ -5817,7 +5815,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
                     <li
                       class="
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             "
                     >
