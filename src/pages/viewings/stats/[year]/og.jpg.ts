@@ -1,7 +1,7 @@
 import type { APIRoute, InferGetStaticPropsType } from "astro";
 
 import { getOpenGraphBackdropAsBase64String } from "~/api/backdrops";
-import { allStatYears } from "~/api/yearStats";
+import { allStatYears } from "~/api/stats";
 import { OpenGraphImage } from "~/components/OpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
 

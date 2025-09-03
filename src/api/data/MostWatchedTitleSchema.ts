@@ -34,3 +34,5 @@ export const MostWatchedTitleSchema = z
       title: data.title,
     };
   });
+
+export type MostWatchedTitle = z.infer<typeof MostWatchedTitleSchema>;

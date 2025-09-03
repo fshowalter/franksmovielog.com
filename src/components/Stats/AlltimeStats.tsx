@@ -1,23 +1,24 @@
-import type { AlltimeStats } from "~/api/alltimeStats";
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { MostWatchedMoviesListItemValue } from "~/components/MostWatchedMovies";
-import type { MostWatchedPeopleListItemValue } from "~/components/MostWatchedPeople";
+import type { AlltimeStats } from "~/api/stats";
 
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { DecadeDistribution } from "~/components/DecadeDistribution";
 import { Layout } from "~/components/Layout/Layout";
-import { MediaDistribution } from "~/components/MediaDistribution";
-import { MostWatchedDirectors } from "~/components/MostWatchedDirectors";
-import { MostWatchedMovies } from "~/components/MostWatchedMovies";
-import { MostWatchedPerformers } from "~/components/MostWatchedPerformers";
-import { MostWatchedWriters } from "~/components/MostWatchedWriters";
-import { StatsNavigation } from "~/components/StatsNavigation";
-import { VenueDistribution } from "~/components/VenueDistribution";
 
-import { Callouts } from "./Callouts";
+import type { MostWatchedMoviesListItemValue } from "./MostWatchedMovies";
+import type { MostWatchedPeopleListItemValue } from "./MostWatchedPeople";
+
+import { CalloutsGrid } from "./CalloutsGrid";
+import { DecadeDistribution } from "./DecadeDistribution";
 import { GradeDistribution } from "./GradeDistribution";
+import { MediaDistribution } from "./MediaDistribution";
+import { MostWatchedDirectors } from "./MostWatchedDirectors";
+import { MostWatchedMovies } from "./MostWatchedMovies";
+import { MostWatchedPerformers } from "./MostWatchedPerformers";
+import { MostWatchedWriters } from "./MostWatchedWriters";
+import { StatsNavigation } from "./StatsNavigation";
+import { VenueDistribution } from "./VenueDistribution";
 
-export type Props = {
+export type AllTimeStatsProps = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   distinctStatYears: readonly string[];
@@ -47,7 +48,7 @@ export function AlltimeStats({
   mostWatchedPerformers,
   mostWatchedWriters,
   stats,
-}: Props): React.JSX.Element {
+}: AllTimeStatsProps): React.JSX.Element {
   return (
     <Layout className="flex flex-col items-center bg-subtle">
       <Backdrop
@@ -66,11 +67,16 @@ export function AlltimeStats({
         }}
         years={distinctStatYears}
       />
-      <Callouts
-        reviewCount={stats.reviewCount}
-        titleCount={stats.titleCount}
-        viewingCount={stats.viewingCount}
-        watchlistTitlesReviewedCount={stats.watchlistTitlesReviewedCount}
+      <CalloutsGrid
+        stats={[
+          { label: "Viewings", value: stats.viewingCount },
+          { label: "Movies", value: stats.titleCount },
+          { label: "Reviews", value: stats.reviewCount },
+          {
+            label: "From Watchlist",
+            value: stats.watchlistTitlesReviewedCount,
+          },
+        ]}
       />
       <div
         className={`

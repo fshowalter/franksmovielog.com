@@ -52,3 +52,5 @@ export const MostWatchedPersonSchema = z
     // fix zod making anything with undefined optional
     return { count, name, slug, viewings };
   });
+
+export type MostWatchedPerson = z.infer<typeof MostWatchedPersonSchema>;

@@ -1,5 +1,4 @@
 type Props = {
-  className?: string;
   stats: StatItem[];
 };
 
@@ -8,17 +7,15 @@ type StatItem = {
   value: number;
 };
 
-export function StatsCalloutsGrid({
-  className,
-  stats,
-}: Props): React.JSX.Element {
-  const defaultClassName = `
-    flex flex-wrap justify-center gap-6 px-container
-    laptop:flex-nowrap
-  `;
-
+export function CalloutsGrid({ stats }: Props): React.JSX.Element {
   return (
-    <div className={className || defaultClassName}>
+    <div
+      className={`
+        flex flex-wrap justify-center gap-4 px-container
+        tablet:gap-6
+        laptop:flex-nowrap
+      `}
+    >
       {stats.map((stat) => (
         <StatsCallout key={stat.label} label={stat.label} value={stat.value} />
       ))}
