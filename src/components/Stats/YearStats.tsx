@@ -1,22 +1,23 @@
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { YearStats } from "~/api/yearStats";
-import type { MostWatchedMoviesListItemValue } from "~/components/MostWatchedMovies";
-import type { MostWatchedPeopleListItemValue } from "~/components/MostWatchedPeople";
+import type { YearStats } from "~/api/stats";
 
 import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { DecadeDistribution } from "~/components/DecadeDistribution";
 import { Layout } from "~/components/Layout/Layout";
-import { MediaDistribution } from "~/components/MediaDistribution";
-import { MostWatchedDirectors } from "~/components/MostWatchedDirectors";
-import { MostWatchedMovies } from "~/components/MostWatchedMovies";
-import { MostWatchedPerformers } from "~/components/MostWatchedPerformers";
-import { MostWatchedWriters } from "~/components/MostWatchedWriters";
-import { StatsNavigation } from "~/components/StatsNavigation";
-import { VenueDistribution } from "~/components/VenueDistribution";
 
-import { Callouts } from "./Callouts";
+import type { MostWatchedMoviesListItemValue } from "./MostWatchedMovies";
+import type { MostWatchedPeopleListItemValue } from "./MostWatchedPeople";
 
-export type Props = {
+import { CalloutsGrid } from "./CalloutsGrid";
+import { DecadeDistribution } from "./DecadeDistribution";
+import { MediaDistribution } from "./MediaDistribution";
+import { MostWatchedDirectors } from "./MostWatchedDirectors";
+import { MostWatchedMovies } from "./MostWatchedMovies";
+import { MostWatchedPerformers } from "./MostWatchedPerformers";
+import { MostWatchedWriters } from "./MostWatchedWriters";
+import { StatsNavigation } from "./StatsNavigation";
+import { VenueDistribution } from "./VenueDistribution";
+
+export type YearStatsProps = {
   backdropImageProps: BackdropImageProps;
   deck: string;
   distinctStatYears: readonly string[];
@@ -38,7 +39,7 @@ export function YearStats({
   mostWatchedWriters,
   stats,
   year,
-}: Props): React.JSX.Element {
+}: YearStatsProps): React.JSX.Element {
   return (
     <Layout className="flex flex-col items-center bg-subtle">
       <Backdrop
@@ -61,10 +62,17 @@ export function YearStats({
         }}
         years={distinctStatYears}
       />
-      <Callouts
-        newTitleCount={stats.newTitleCount}
-        titleCount={stats.titleCount}
-        viewingCount={stats.viewingCount}
+      <CalloutsGrid
+        className={`
+          flex flex-wrap justify-center gap-4 px-container
+          tablet:gap-6
+          laptop:flex-nowrap
+        `}
+        stats={[
+          { label: "Viewings", value: stats.viewingCount },
+          { label: "Movies", value: stats.titleCount },
+          { label: "New Movies", value: stats.newTitleCount },
+        ]}
       />
       <div
         className={`

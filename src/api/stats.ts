@@ -1,7 +1,10 @@
+import type { AlltimeStatsJson } from "./data/alltimeStatsJson";
 import type { YearStatsJson } from "./data/yearStatsJson";
 
+import { alltimeStatsJson } from "./data/alltimeStatsJson";
 import { allYearStatsJson } from "./data/yearStatsJson";
 
+export type AlltimeStats = AlltimeStatsJson & {};
 export type YearStats = YearStatsJson & {};
 
 const cache: Record<string, YearStats> = {};
@@ -21,6 +24,10 @@ export async function allStatYears() {
   }
 
   return [...statYears].toSorted();
+}
+
+export async function alltimeStats(): Promise<AlltimeStats> {
+  return await alltimeStatsJson();
 }
 
 export async function statsForYear(year: string): Promise<YearStats> {

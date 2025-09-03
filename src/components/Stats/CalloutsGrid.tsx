@@ -8,10 +8,7 @@ type StatItem = {
   value: number;
 };
 
-export function StatsCalloutsGrid({
-  className,
-  stats,
-}: Props): React.JSX.Element {
+export function CalloutsGrid({ className, stats }: Props): React.JSX.Element {
   const defaultClassName = `
     flex flex-wrap justify-center gap-6 px-container
     laptop:flex-nowrap
