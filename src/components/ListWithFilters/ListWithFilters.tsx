@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export const DRAWER_CLOSE_ANIMATION_MS = 50;
 const DRAWER_OPEN_ANIMATION_MS = 400;
 
 type Props<T extends string> = {
@@ -268,7 +267,6 @@ export function ListWithFilters<T extends string>({
                   aria-hidden="true"
                   className={`
                     h-4 w-4 transform-gpu
-                    ${isClosing ? "animate-spin-recoil" : ""}
                     ${isOpening ? "animate-spin-wind-up" : ""}
                   `}
                   fill="none"
