@@ -82,19 +82,14 @@ export function ListWithFilters<T extends string>({
   const handleCloseDrawer = useCallback(
     (shouldResetFilters = true) => {
       setIsClosing(true);
-      // Start the spin animation, then close after a short delay
-      const timeoutId = setTimeout(() => {
-        if (typeof document !== "undefined") {
-          document.body.classList.remove("overflow-hidden");
-        }
-        setFilterDrawerVisible(false);
-        setIsClosing(false);
-        if (shouldResetFilters) {
-          onResetFilters?.();
-        }
-        timeoutRefs.current.delete(timeoutId);
-      }, DRAWER_CLOSE_ANIMATION_MS);
-      timeoutRefs.current.add(timeoutId);
+      if (typeof document !== "undefined") {
+        document.body.classList.remove("overflow-hidden");
+      }
+      setFilterDrawerVisible(false);
+      setIsClosing(false);
+      if (shouldResetFilters) {
+        onResetFilters?.();
+      }
     },
     [onResetFilters],
   );
