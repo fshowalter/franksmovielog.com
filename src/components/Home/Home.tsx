@@ -66,7 +66,7 @@ export function Home({
               group/all-reviews mx-auto w-full max-w-button transform-gpu
               rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
               font-bold tracking-wide text-accent uppercase transition-all
-              hover:scale-105 hover:bg-accent hover:text-inverse
+              hover:scale-105 hover:bg-accent hover:text-white
             `}
             href="/reviews/"
           >
@@ -75,8 +75,8 @@ export function Home({
                 relative inline-block pb-1
                 after:absolute after:bottom-0 after:left-0 after:h-0.5
                 after:w-full after:origin-center after:scale-x-0
-                after:transform-gpu after:bg-(--fg-inverse)
-                after:transition-transform after:duration-500
+                after:transform-gpu after:bg-white after:transition-transform
+                after:duration-500
                 group-hover/all-reviews:after:scale-x-100
               `}
             >

@@ -5,8 +5,8 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 1`] = 
   aria-label="Filters"
   class="
               fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
-              flex-col items-start gap-y-5 bg-default text-left text-inverse
-              duration-200 ease-in-out
+              flex-col items-start gap-y-5 bg-default text-left duration-200
+              ease-in-out
               w-0 transform-[translateX(100%)] overflow-y-hidden
               tablet:gap-y-10
             "
@@ -107,7 +107,7 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 1`] = 
                       flex flex-1 transform-gpu cursor-pointer items-center
                       justify-center gap-x-4 rounded-sm bg-footer px-4 py-3
                       font-sans text-xs font-bold tracking-wide text-nowrap
-                      text-inverse uppercase transition-transform
+                      text-white uppercase transition-transform
                       hover:scale-105 hover:drop-shadow-md
                     "
           type="button"
@@ -129,8 +129,8 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 2`] = 
   aria-label="Filters"
   class="
               fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
-              flex-col items-start gap-y-5 bg-default text-left text-inverse
-              duration-200 ease-in-out
+              flex-col items-start gap-y-5 bg-default text-left duration-200
+              ease-in-out
               
                     bottom-0 w-full transform-[translateX(0)] overflow-y-auto
                     drop-shadow-2xl
@@ -234,7 +234,7 @@ exports[`ListWithFilters > filter drawer > opens and closes filter drawer 2`] = 
                       flex flex-1 transform-gpu cursor-pointer items-center
                       justify-center gap-x-4 rounded-sm bg-footer px-4 py-3
                       font-sans text-xs font-bold tracking-wide text-nowrap
-                      text-inverse uppercase transition-transform
+                      text-white uppercase transition-transform
                       hover:scale-105 hover:drop-shadow-md
                     "
           type="button"
@@ -382,8 +382,8 @@ exports[`ListWithFilters > renders 1`] = `
           aria-label="Filters"
           class="
               fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px]
-              flex-col items-start gap-y-5 bg-default text-left text-inverse
-              duration-200 ease-in-out
+              flex-col items-start gap-y-5 bg-default text-left duration-200
+              ease-in-out
               w-0 transform-[translateX(100%)] overflow-y-hidden
               tablet:gap-y-10
             "
@@ -484,7 +484,7 @@ exports[`ListWithFilters > renders 1`] = `
                       flex flex-1 transform-gpu cursor-pointer items-center
                       justify-center gap-x-4 rounded-sm bg-footer px-4 py-3
                       font-sans text-xs font-bold tracking-wide text-nowrap
-                      text-inverse uppercase transition-transform
+                      text-white uppercase transition-transform
                       hover:scale-105 hover:drop-shadow-md
                     "
                   type="button"

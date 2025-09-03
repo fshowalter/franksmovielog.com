@@ -56,7 +56,7 @@ export function BreadcrumbLink({
         relative inline-block font-sans text-sm font-bold tracking-wide
         text-[#fff]/85 uppercase
         after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-        after:origin-center after:scale-x-0 after:bg-(--fg-inverse)/75
+        after:origin-center after:scale-x-0 after:bg-white/75
         after:transition-transform after:duration-500
         hover:after:scale-x-100
       `}
@@ -149,7 +149,7 @@ function Wrapper({
       className={`
         ${sizes}
         relative flex w-full flex-col content-start items-center justify-end
-        gap-6 bg-[#2A2B2A] pt-40 pb-8 text-inverse
+        gap-6 bg-[#2A2B2A] pt-40 pb-8 text-white
         tablet:pt-40 tablet:pb-10
         laptop:pt-40 laptop:pb-16
       `}

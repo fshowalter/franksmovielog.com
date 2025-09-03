@@ -3,7 +3,7 @@ import { TableOfContents } from "./TableOfContents";
 
 export function Footer(): React.JSX.Element {
   return (
-    <footer className={"bg-footer text-inverse"}>
+    <footer className={"bg-footer text-white"}>
       <div className="mx-auto max-w-(--breakpoint-laptop) px-container py-20">
         <div
           className={`
@@ -38,14 +38,14 @@ export function Footer(): React.JSX.Element {
               tablet:pr-32
             `}
           >
-            <div className={`pt-10 font-sans font-normal text-inverse-subtle`}>
+            <div className={`pt-10 font-sans font-normal text-grey`}>
               <p
                 className={`
                   mb-6 text-pretty
                   first-letter:float-left first-letter:mt-[6px]
                   first-letter:pr-1 first-letter:font-sans
                   first-letter:text-[40px] first-letter:leading-[.8]
-                  first-letter:font-bold first-letter:text-inverse
+                  first-letter:font-bold first-letter:text-white
                 `}
               >
                 Hi there, I&apos;m Frank, a husband and father old enough to

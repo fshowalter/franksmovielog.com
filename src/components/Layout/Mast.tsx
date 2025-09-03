@@ -115,7 +115,7 @@ function HamburgerMenu({
           className={`
             invisible fixed top-0 right-0 flex h-full w-0
             transform-[translateX(100%)] flex-col items-start gap-y-5
-            overflow-hidden bg-footer text-left text-inverse opacity-0
+            overflow-hidden bg-footer text-left text-white opacity-0
             duration-200 ease-in-out
             tablet:max-w-[35vw] tablet:gap-y-10
             laptop:max-w-[25vw]

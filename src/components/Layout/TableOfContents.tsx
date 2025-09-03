@@ -50,7 +50,7 @@ function SubMenu({ values }: { values: NavItem[] }): false | React.JSX.Element {
           <li
             className={`
               mb-3 ml-1 font-sans text-[13px] font-medium tracking-wider
-              text-inverse-subtle uppercase
+              text-grey uppercase
               last:-mb-1
             `}
             key={value.target}
