@@ -63,11 +63,6 @@ export function YearStats({
         years={distinctStatYears}
       />
       <CalloutsGrid
-        className={`
-          flex flex-wrap justify-center gap-4 px-container
-          tablet:gap-6
-          laptop:flex-nowrap
-        `}
         stats={[
           { label: "Viewings", value: stats.viewingCount },
           { label: "Movies", value: stats.titleCount },
