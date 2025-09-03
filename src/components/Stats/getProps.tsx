@@ -102,7 +102,7 @@ async function createMostWatchedPeopleListItemValueProps(
 async function createMostWatchMoviesListItemValueProps(
   titles: MostWatchedTitle[],
 ): Promise<MostWatchedMoviesListItemValue[]> {
-  return await Promise.all(
+  return Promise.all(
     titles.map(async (title) => {
       return {
         ...title,
