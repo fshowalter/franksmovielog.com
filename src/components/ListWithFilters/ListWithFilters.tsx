@@ -71,7 +71,6 @@ export function ListWithFilters<T extends string>({
   totalCount,
 }: Props<T>): React.JSX.Element {
   const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
   const filtersRef = useRef<HTMLDivElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -80,12 +79,10 @@ export function ListWithFilters<T extends string>({
 
   const handleCloseDrawer = useCallback(
     (shouldResetFilters = true) => {
-      setIsClosing(true);
       if (typeof document !== "undefined") {
         document.body.classList.remove("overflow-hidden");
       }
       setFilterDrawerVisible(false);
-      setIsClosing(false);
       if (shouldResetFilters) {
         onResetFilters?.();
       }
@@ -136,7 +133,7 @@ export function ListWithFilters<T extends string>({
   // Handle escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent): void => {
-      if (e.key === "Escape" && filterDrawerVisible && !isClosing) {
+      if (e.key === "Escape" && filterDrawerVisible) {
         handleCloseDrawer();
         toggleButtonRef.current?.focus();
       }
@@ -144,7 +141,7 @@ export function ListWithFilters<T extends string>({
 
     document.addEventListener("keydown", handleKeyDown);
     return (): void => document.removeEventListener("keydown", handleKeyDown);
-  }, [filterDrawerVisible, handleCloseDrawer, isClosing]);
+  }, [filterDrawerVisible, handleCloseDrawer]);
 
   // Scroll to top of list when sort changes
   useEffect(() => {
@@ -213,9 +210,7 @@ export function ListWithFilters<T extends string>({
               }
             `}
             onClick={() => {
-              if (!isClosing) {
-                handleCloseDrawer();
-              }
+              handleCloseDrawer();
             }}
           />
 
@@ -253,13 +248,10 @@ export function ListWithFilters<T extends string>({
                   cursor-pointer items-center justify-center rounded-full
                   bg-canvas text-default drop-shadow-sm transition-transform
                   hover:scale-105 hover:drop-shadow-md
-                  ${isClosing ? "pointer-events-none" : ""}
                 `}
                 onClick={() => {
-                  if (!isClosing) {
-                    handleCloseDrawer();
-                    toggleButtonRef.current?.focus();
-                  }
+                  handleCloseDrawer();
+                  toggleButtonRef.current?.focus();
                 }}
                 type="button"
               >
