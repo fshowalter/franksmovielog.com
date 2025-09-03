@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export const DRAWER_CLOSE_ANIMATION_MS = 50;
 const DRAWER_OPEN_ANIMATION_MS = 400;
 
 type Props<T extends string> = {
@@ -82,19 +81,14 @@ export function ListWithFilters<T extends string>({
   const handleCloseDrawer = useCallback(
     (shouldResetFilters = true) => {
       setIsClosing(true);
-      // Start the spin animation, then close after a short delay
-      const timeoutId = setTimeout(() => {
-        if (typeof document !== "undefined") {
-          document.body.classList.remove("overflow-hidden");
-        }
-        setFilterDrawerVisible(false);
-        setIsClosing(false);
-        if (shouldResetFilters) {
-          onResetFilters?.();
-        }
-        timeoutRefs.current.delete(timeoutId);
-      }, DRAWER_CLOSE_ANIMATION_MS);
-      timeoutRefs.current.add(timeoutId);
+      if (typeof document !== "undefined") {
+        document.body.classList.remove("overflow-hidden");
+      }
+      setFilterDrawerVisible(false);
+      setIsClosing(false);
+      if (shouldResetFilters) {
+        onResetFilters?.();
+      }
     },
     [onResetFilters],
   );
@@ -273,7 +267,6 @@ export function ListWithFilters<T extends string>({
                   aria-hidden="true"
                   className={`
                     h-4 w-4 transform-gpu
-                    ${isClosing ? "animate-spin-recoil" : ""}
                     ${isOpening ? "animate-spin-wind-up" : ""}
                   `}
                   fill="none"
