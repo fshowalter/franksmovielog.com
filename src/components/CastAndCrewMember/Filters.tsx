@@ -1,5 +1,5 @@
-import { CreditedAsFilter } from "~/components/CreditedAsFilter";
-import { TitleFilters } from "~/components/TitleFilters";
+import { CreditedAsFilter } from "~/components/ListWithFilters/CreditedAsFilter";
+import { TitleFilters } from "~/components/ListWithFilters/TitleFilters";
 
 import type {
   ActionType,

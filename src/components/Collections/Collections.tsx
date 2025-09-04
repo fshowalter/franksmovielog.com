@@ -4,8 +4,8 @@ import type { AvatarImageProps } from "~/api/avatars";
 import type { Collection } from "~/api/collections";
 
 import { AvatarList, AvatarListItem } from "~/components/AvatarList";
-import { CollectionSortOptions } from "~/components/CollectionSortOptions";
 import { ListItemName } from "~/components/ListItemName";
+import { CollectionSortOptions } from "~/components/ListWithFilters/CollectionSortOptions";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 
 import type { Sort } from "./Collections.reducer";

@@ -1,6 +1,6 @@
-import type { CollectionFilterValues } from "~/components/ListWithFilters/collectionsReducerUtils";
+import { TextField } from "~/components/Fields/TextField";
 
-import { TextField } from "~/components/TextField";
+import type { CollectionFilterValues } from "./collectionsReducerUtils";
 
 export function CollectionFilters({
   name,

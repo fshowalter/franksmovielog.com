@@ -8,12 +8,12 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
-import { clickReviewedStatusFilterOption } from "~/components/ReviewedStatusFilter.testHelper";
+import { clickReviewedStatusFilterOption } from "~/components/ListWithFilters/ReviewedStatusFilter.testHelper";
 import {
   fillReleaseYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/TitleFilters.testHelper";
+} from "~/components/ListWithFilters/TitleFilters.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { getProps } from "./getProps";

@@ -1,4 +1,4 @@
-import { SelectField } from "~/components/SelectField";
+import { SelectField } from "~/components/Fields/SelectField";
 import { capitalize } from "~/utils/capitalize";
 
 export function CreditedAsFilter({

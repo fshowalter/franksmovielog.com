@@ -2,7 +2,7 @@ import type { KeyboardEvent } from "react";
 
 import { useEffect, useRef, useState } from "react";
 
-import { LabelText } from "~/components/LabelText";
+import { LabelText } from "./LabelText";
 
 export const DROPDOWN_CLOSE_DELAY_MS = 150;
 export const SCROLL_DELAY_MS = 50;

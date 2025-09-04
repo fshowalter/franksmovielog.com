@@ -5,9 +5,9 @@ import type { CastAndCrewMember } from "~/api/castAndCrew";
 
 import { AvatarListItem } from "~/components/AvatarList";
 import { GroupedAvatarList } from "~/components/AvatarList";
-import { CollectionSortOptions } from "~/components/CollectionSortOptions";
 import { ListItemCreditedAs } from "~/components/ListItemCreditedAs";
 import { ListItemName } from "~/components/ListItemName";
+import { CollectionSortOptions } from "~/components/ListWithFilters/CollectionSortOptions";
 import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
 
 import type { Sort } from "./CastAndCrew.reducer";

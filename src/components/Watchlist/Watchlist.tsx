@@ -11,8 +11,8 @@ import {
   ListHeaderButton,
   ListWithFilters,
 } from "~/components/ListWithFilters/ListWithFilters";
+import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
 import { GroupedPosterList, PosterListItem } from "~/components/PosterList";
-import { TitleSortOptions } from "~/components/TitleSortOptions";
 
 import type { Sort } from "./Watchlist.reducer";
 

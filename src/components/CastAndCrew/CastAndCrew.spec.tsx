@@ -5,11 +5,11 @@ import { getGroupedAvatarList } from "~/components/AvatarList.testHelper";
 import {
   fillNameFilter,
   getNameFilter,
-} from "~/components/CollectionFilters.testHelper";
+} from "~/components/ListWithFilters/CollectionFilters.testHelper";
 import {
   clickCreditedAsFilterOption,
   getCreditedAsFilter,
-} from "~/components/CreditedAsFilter.testHelper";
+} from "~/components/ListWithFilters/CreditedAsFilter.testHelper";
 import {
   clickClearFilters,
   clickCloseFilters,

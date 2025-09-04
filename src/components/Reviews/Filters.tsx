@@ -1,7 +1,7 @@
 import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
 
-import { TitleFilters } from "~/components/TitleFilters";
-import { TitleSortOptions } from "~/components/TitleSortOptions";
+import { TitleFilters } from "~/components/ListWithFilters/TitleFilters";
+import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
 
 import type { ActionType } from "./reducer";
 

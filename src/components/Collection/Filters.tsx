@@ -1,6 +1,6 @@
 import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
 
-import { TitleFilters } from "~/components/TitleFilters";
+import { TitleFilters } from "~/components/ListWithFilters/TitleFilters";
 
 import type { ActionType } from "./Collection.reducer";
 

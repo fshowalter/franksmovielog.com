@@ -1,7 +1,7 @@
-import { SelectField } from "~/components/SelectField";
-import { SelectOptions } from "~/components/SelectOptions";
-import { TitleFilters } from "~/components/TitleFilters";
-import { YearField } from "~/components/YearField";
+import { SelectField } from "~/components/Fields/SelectField";
+import { SelectOptions } from "~/components/Fields/SelectOptions";
+import { YearField } from "~/components/Fields/YearField";
+import { TitleFilters } from "~/components/ListWithFilters/TitleFilters";
 
 import type { ActionType, ViewingsFilterValues } from "./Viewings.reducer";
 
