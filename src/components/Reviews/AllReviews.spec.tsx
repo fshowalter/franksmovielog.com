@@ -9,17 +9,17 @@ import {
   clickViewResults,
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
 import {
-  clickShowMore,
-  getGroupedPosterList,
-} from "~/components/PosterList.testHelper";
-import {
   clickGenreFilterOption,
   fillGradeFilter,
   fillReleaseYearFilter,
   fillReviewYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/TitleFilters.testHelper";
+} from "~/components/ListWithFilters/TitleFilters.testHelper";
+import {
+  clickShowMore,
+  getGroupedPosterList,
+} from "~/components/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { AllReviews, type Props } from "./AllReviews";

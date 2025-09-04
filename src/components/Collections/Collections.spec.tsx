@@ -5,7 +5,7 @@ import { getAvatarList } from "~/components/AvatarList.testHelper";
 import {
   fillNameFilter,
   getNameFilter,
-} from "~/components/CollectionFilters.testHelper";
+} from "~/components/ListWithFilters/CollectionFilters.testHelper";
 import {
   clickClearFilters,
   clickCloseFilters,

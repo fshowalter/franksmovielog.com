@@ -1,4 +1,4 @@
-import { SelectField } from "./SelectField";
+import { SelectField } from "~/components/Fields/SelectField";
 
 export function ReviewedStatusFilter({
   initialValue,

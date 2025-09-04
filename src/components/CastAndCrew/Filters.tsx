@@ -1,5 +1,5 @@
-import { CollectionFilters } from "~/components/CollectionFilters";
-import { CreditedAsFilter } from "~/components/CreditedAsFilter";
+import { CollectionFilters } from "~/components/ListWithFilters/CollectionFilters";
+import { CreditedAsFilter } from "~/components/ListWithFilters/CreditedAsFilter";
 
 import type {
   ActionType,

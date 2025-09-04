@@ -1,6 +1,6 @@
-import { SelectField } from "~/components/SelectField";
-import { SelectOptions } from "~/components/SelectOptions";
-import { TitleFilters } from "~/components/TitleFilters";
+import { SelectField } from "~/components/Fields/SelectField";
+import { SelectOptions } from "~/components/Fields/SelectOptions";
+import { TitleFilters } from "~/components/ListWithFilters/TitleFilters";
 
 import type { ActionType, WatchlistFilterValues } from "./Watchlist.reducer";
 

@@ -1,9 +1,9 @@
-import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
+import { GradeField } from "~/components/Fields/GradeField";
+import { MultiSelectField } from "~/components/Fields/MultiSelectField";
+import { TextField } from "~/components/Fields/TextField";
+import { YearField } from "~/components/Fields/YearField";
 
-import { GradeField } from "~/components/GradeField";
-import { MultiSelectField } from "~/components/MultiSelectField";
-import { TextField } from "~/components/TextField";
-import { YearField } from "~/components/YearField";
+import type { TitleFilterValues } from "./titlesReducerUtils";
 
 import { ReviewedStatusFilter } from "./ReviewedStatusFilter";
 

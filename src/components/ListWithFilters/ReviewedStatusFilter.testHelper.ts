@@ -1,6 +1,6 @@
 import type { UserEvent } from "@testing-library/user-event";
 
-import { clickSelectFieldOption } from "./SelectField.testHelper";
+import { clickSelectFieldOption } from "~/components/Fields/SelectField.testHelper";
 
 export async function clickReviewedStatusFilterOption(
   user: UserEvent,
