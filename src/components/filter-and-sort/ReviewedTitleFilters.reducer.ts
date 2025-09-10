@@ -1,3 +1,5 @@
+import type { Sorter } from "./title.filters.reducer";
+
 import { updatePendingFilter } from "./filters.reducer";
 import {
   createInitialShowMoreState,
@@ -13,7 +15,7 @@ import {
   type TitleFiltersActionType,
   type TitleFiltersState,
   type TitleFiltersValues,
-} from "./TitleFilters.reducer";
+} from "./title.filters.reducer";
 
 export {
   createApplyPendingFiltersAction,
@@ -23,7 +25,7 @@ export {
   createSetReleaseYearPendingFilterAction,
   createSetTitlePendingFilterAction,
   createSortActionCreator,
-} from "./TitleFilters.reducer";
+} from "./title.filters.reducer";
 
 /**
  * Title-specific action types
@@ -103,12 +105,10 @@ export function createReviewedTitleFiltersReducer<
   TValue extends FilterableReviewedTitle,
   TSort,
   TState extends ReviewedTitleFiltersState<TValue, TSort>,
->() {
-  const TitleFiltersReducer = createTitleFiltersReducer<
-    TValue,
-    TSort,
-    TState
-  >();
+>({ sorter }: { sorter: Sorter<TValue, TSort> }) {
+  const TitleFiltersReducer = createTitleFiltersReducer<TValue, TSort, TState>({
+    sorter,
+  });
 
   return function reducer(
     state: TState,
