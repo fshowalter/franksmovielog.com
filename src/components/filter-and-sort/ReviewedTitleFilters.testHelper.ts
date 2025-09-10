@@ -2,13 +2,14 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen, within } from "@testing-library/react";
 
-import { clickMultiSelectFieldOption } from "~/components/fields/MultiSelectField.testHelper";
-import { fillTextField } from "~/components/fields/TextField.testHelper";
 import { fillYearField } from "~/components/fields/YearField.testHelper";
 
-export async function clickGenreFilterOption(user: UserEvent, value: string) {
-  await clickMultiSelectFieldOption(user, "Genres", value);
-}
+export {
+  clickGenresFilterOption,
+  fillReleaseYearFilter,
+  fillTitleFilter,
+  getTitleFilter,
+} from "./TitleFilters.testHelper";
 
 export async function fillGradeFilter(
   user: UserEvent,
@@ -23,26 +24,10 @@ export async function fillGradeFilter(
   await user.selectOptions(toInput, value2);
 }
 
-export async function fillReleaseYearFilter(
-  user: UserEvent,
-  value1: string,
-  value2: string,
-) {
-  await fillYearField(user, "Release Year", value1, value2);
-}
-
 export async function fillReviewYearFilter(
   user: UserEvent,
   value1: string,
   value2: string,
 ) {
   await fillYearField(user, "Review Year", value1, value2);
-}
-
-export async function fillTitleFilter(user: UserEvent, value: string) {
-  await fillTextField(user, "Title", value);
-}
-
-export function getTitleFilter() {
-  return screen.getByLabelText("Title");
 }

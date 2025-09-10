@@ -1,7 +1,7 @@
-import { GradeField } from "~/components/Fields/GradeField";
-import { MultiSelectField } from "~/components/Fields/MultiSelectField";
-import { TextField } from "~/components/Fields/TextField";
-import { YearField } from "~/components/Fields/YearField";
+import { GradeField } from "~/components/fields/GradeField";
+import { MultiSelectField } from "~/components/fields/MultiSelectField";
+import { TextField } from "~/components/fields/TextField";
+import { YearField } from "~/components/fields/YearField";
 
 import type { TitleFilterValues } from "./titlesReducerUtils";
 
