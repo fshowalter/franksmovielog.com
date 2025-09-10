@@ -1,4 +1,8 @@
-import type { FiltersActionType, FiltersState } from "./filters.reducer";
+import type {
+  FiltersActionType,
+  FiltersState,
+  Sorter,
+} from "./filters.reducer";
 
 export {
   createApplyPendingFiltersAction,
@@ -8,7 +12,7 @@ export {
   updatePendingFilter,
 } from "./filters.reducer";
 
-import type { TitleFilterValues } from "./titlesReducerUtils";
+export type { Sorter } from "./filters.reducer";
 
 import {
   createFiltersReducer,
@@ -80,12 +84,18 @@ export function createInitialTitleFiltersState<
   TSort,
 >({
   initialSort,
+  sorter,
   values,
 }: {
   initialSort: TSort;
+  sorter: Sorter<TValue, TSort>;
   values: TValue[];
 }): TitleFiltersState<TValue, TSort> {
-  const filterState = createInitialFiltersState({ initialSort, values });
+  const filterState = createInitialFiltersState({
+    initialSort,
+    sorter,
+    values,
+  });
   return {
     ...filterState,
   };
@@ -114,8 +124,8 @@ export function createTitleFiltersReducer<
   TValue extends FilterableTitle,
   TSort,
   TState extends TitleFiltersState<TValue, TSort>,
->() {
-  const filterReducer = createFiltersReducer<TValue, TSort, TState>();
+>({ sorter }: { sorter: Sorter<TValue, TSort> }) {
+  const filterReducer = createFiltersReducer<TValue, TSort, TState>({ sorter });
 
   return function reducer(
     state: TState,
@@ -215,7 +225,7 @@ function handleSetReleaseYearPendingFilterAction<
     action.values[0],
     action.values[1],
   );
-  const filterKey: keyof TitleFilterValues = "releaseYear";
+  const filterKey: keyof TitleFiltersValues = "releaseYear";
   return updatePendingFilter<TValue, TSort, TState>(
     state,
     filterKey,

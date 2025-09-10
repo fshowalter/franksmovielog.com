@@ -29,6 +29,11 @@ export type FiltersState<TValue, TSort> = {
   sort: TSort;
 };
 
+export type Sorter<TValue, TSort> = (
+  values: TValue[],
+  sortOrder: TSort,
+) => TValue[];
+
 /**
  * Base Action Type Definitions
  */
@@ -61,7 +66,7 @@ export function createFiltersReducer<
   TValue,
   TSort,
   TState extends FiltersState<TValue, TSort>,
->() {
+>({ sorter }: { sorter: Sorter<TValue, TSort> }) {
   return function reducer(
     state: TState,
     action: FiltersActionType<TSort>,
@@ -80,7 +85,7 @@ export function createFiltersReducer<
       }
 
       case FiltersActions.Sort: {
-        return updateSort<TValue, TSort, TState>(state, action);
+        return updateSort<TValue, TSort, TState>(state, action, sorter);
       }
 
       default: {
@@ -92,18 +97,22 @@ export function createFiltersReducer<
 
 export function createInitialFiltersState<TValue, TSort>({
   initialSort,
+  sorter,
   values,
 }: {
   initialSort: TSort;
+  sorter: Sorter<TValue, TSort>;
   values: TValue[];
 }): FiltersState<TValue, TSort> {
+  const sortedValues = sorter(values, initialSort);
+
   return {
-    allValues: values,
-    filteredValues: values,
+    allValues: sortedValues,
+    filteredValues: sortedValues,
     filters: {},
     filterValues: {},
     hasActiveFilters: false,
-    pendingFilteredCount: values.length,
+    pendingFilteredCount: sortedValues.length,
     pendingFilters: {},
     pendingFilterValues: {},
     sort: initialSort,
@@ -250,9 +259,12 @@ function resetPendingFilters<
 function updateSort<TValue, TSort, TState extends FiltersState<TValue, TSort>>(
   state: TState,
   action: SortAction<TSort>,
+  sorter: Sorter<TValue, TSort>,
 ): TState {
   return {
     ...state,
+    allValues: sorter(state.allValues, action.value),
+    filteredValues: sorter(state.filteredValues, action.value),
     sort: action.value,
   };
 }
