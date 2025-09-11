@@ -4,13 +4,15 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { FilterAndSortHeaderLink } from "~/components/filter-and-sort/FilterAndSortHeaderLink";
+import { selectFilteredValues } from "~/components/filter-and-sort/selectFilteredValues";
 import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
 import { GroupedPosterList } from "~/components/PosterList";
 
-import type { Sort } from "./Watchlist.reducer";
+import type { WatchlistSort } from "./Watchlist.selectors";
 
 import { Filters } from "./Filters";
-import { Actions, initState, reducer } from "./Watchlist.reducer";
+import { createInitialState, watchlistReducer } from "./Watchlist.reducer";
+import { selectSortedWatchlistValues } from "./Watchlist.selectors";
 import { WatchlistListItem } from "./WatchlistListItem";
 
 export type WatchlistProps = {
@@ -21,7 +23,7 @@ export type WatchlistProps = {
   distinctPerformers: string[];
   distinctReleaseYears: string[];
   distinctWriters: string[];
-  initialSort: Sort;
+  initialSort: WatchlistSort;
   values: WatchlistValue[];
 };
 
@@ -50,14 +52,18 @@ export function Watchlist({
   values,
 }: WatchlistProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
-    reducer,
+    watchlistReducer,
     {
       initialSort,
       values,
     },
-    initState,
+    createInitialState,
   );
   const [filterKey, setFilterKey] = useState(0);
+
+  const sortedValues = selectSortedWatchlistValues(state.values, state.sort);
+
+  const filteredValues = selectFilteredValues(state.filters, sortedValues);
 
   return (
     <FilterAndSortContainer

@@ -1,6 +1,6 @@
-import type { Sorter } from "./title.filters.reducer";
+import type { Sorter } from "./TitleFilters.reducer";
 
-import { updatePendingFilter } from "./filters.reducer";
+import { updatePendingFilter } from "./createFiltersReducer";
 import {
   createInitialShowMoreState,
   type ShowMoreAction,
@@ -15,7 +15,7 @@ import {
   type TitleFiltersActionType,
   type TitleFiltersState,
   type TitleFiltersValues,
-} from "./title.filters.reducer";
+} from "./TitleFilters.reducer";
 
 export {
   createApplyPendingFiltersAction,
@@ -25,7 +25,7 @@ export {
   createSetReleaseYearPendingFilterAction,
   createSetTitlePendingFilterAction,
   createSortActionCreator,
-} from "./title.filters.reducer";
+} from "./TitleFilters.reducer";
 
 /**
  * Title-specific action types

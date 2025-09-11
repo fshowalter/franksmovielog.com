@@ -3,10 +3,10 @@ import { collator } from "~/utils/collator";
 /**
  * Build sort values helper - creates a sort function from a sort map
  */
-export function createSortValues<V, S extends string>(
-  sortMap: Record<S, (a: V, b: V) => number>,
+export function createSorter<TValue, TSort extends string>(
+  sortMap: Record<TSort, (a: TValue, b: TValue) => number>,
 ) {
-  return (values: V[], sortOrder: S): V[] => {
+  return (values: TValue[], sortOrder: TSort): TValue[] => {
     const comparer = sortMap[sortOrder];
     return [...values].toSorted(comparer);
   };
