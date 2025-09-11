@@ -1,4 +1,4 @@
-import { updatePendingFilter } from "./filters.reducer";
+import { updatePendingFilter } from "./createFiltersReducer";
 import {
   createInitialShowMoreState,
   type ShowMoreAction,

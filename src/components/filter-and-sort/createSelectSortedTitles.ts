@@ -1,6 +1,17 @@
-export { createSortValues } from "./sorter";
+import { createSorter, sortNumber, sortString } from "./createSorter";
 
-import { createSortValues, sortNumber, sortString } from "./sorter";
+/**
+ * Interface for reviewed work items that can be sorted.
+ * Contains all the fields necessary for sorting and grouping reviewed works.
+ */
+export type SortableTitle = {
+  /** Numeric sequence for release year sorting */
+  releaseSequence: number;
+  /** Year the work was published */
+  releaseYear: string;
+  /** Normalized title for sorting (typically lowercase) */
+  sortTitle: string;
+};
 
 /**
  * Available sort options for titles.
@@ -12,28 +23,19 @@ export type TitleSort =
   | "title-asc"
   | "title-desc";
 
-/**
- * Interface for reviewed work items that can be sorted.
- * Contains all the fields necessary for sorting and grouping reviewed works.
- */
-type SortableTitle = {
-  /** Numeric sequence for release year sorting */
-  releaseSequence: number;
-  /** Year the work was published */
-  releaseYear: string;
-  /** Normalized title for sorting (typically lowercase) */
-  sortTitle: string;
-};
-
-export function createSortTitleValues<
+export function createSelectSortedTitles<
   TValue extends SortableTitle,
-  TSort extends string,
->(sortMap: Record<TSort, (a: TValue, b: TValue) => number> | undefined) {
-  return createSortValues<TValue, TSort>({
+  TSort extends TitleSort,
+>(sortMap?: Record<TSort, (a: TValue, b: TValue) => number>) {
+  const sorter = createSorter<TValue, TSort>({
     ...sortTitle<TValue>(),
     ...sortReleaseDate<TValue>(),
     ...sortMap,
   });
+
+  return function selectSortedTitles(values: TValue[], sort: TSort) {
+    return sorter(values, sort);
+  };
 }
 
 /**

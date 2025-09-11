@@ -12,27 +12,15 @@ export type FiltersActionType<TSort> =
   | SortAction<TSort>;
 
 export type FiltersState<TValue, TSort> = {
-  allValues: TValue[];
-  filteredValues: TValue[];
   filters: Record<string, (value: TValue) => boolean>;
   filterValues: Record<
     string,
     [number, number] | [string, string] | readonly string[] | string
   >; // Raw filter values for UI
-  hasActiveFilters: boolean;
-  pendingFilteredCount: number;
   pendingFilters: Record<string, (value: TValue) => boolean>;
-  pendingFilterValues: Record<
-    string,
-    [number, number] | [string, string] | readonly string[] | string
-  >; // Raw pending filter values for UI
   sort: TSort;
+  values: TValue[];
 };
-
-export type Sorter<TValue, TSort> = (
-  values: TValue[],
-  sortOrder: TSort,
-) => TValue[];
 
 /**
  * Base Action Type Definitions
@@ -66,7 +54,7 @@ export function createFiltersReducer<
   TValue,
   TSort,
   TState extends FiltersState<TValue, TSort>,
->({ sorter }: { sorter: Sorter<TValue, TSort> }) {
+>() {
   return function reducer(
     state: TState,
     action: FiltersActionType<TSort>,
@@ -85,7 +73,7 @@ export function createFiltersReducer<
       }
 
       case FiltersActions.Sort: {
-        return updateSort<TValue, TSort, TState>(state, action, sorter);
+        return updateSort<TValue, TSort, TState>(state, action);
       }
 
       default: {
@@ -97,25 +85,17 @@ export function createFiltersReducer<
 
 export function createInitialFiltersState<TValue, TSort>({
   initialSort,
-  sorter,
   values,
 }: {
   initialSort: TSort;
-  sorter: Sorter<TValue, TSort>;
   values: TValue[];
 }): FiltersState<TValue, TSort> {
-  const sortedValues = sorter(values, initialSort);
-
   return {
-    allValues: sortedValues,
-    filteredValues: sortedValues,
     filters: {},
     filterValues: {},
-    hasActiveFilters: false,
-    pendingFilteredCount: sortedValues.length,
     pendingFilters: {},
-    pendingFilterValues: {},
     sort: initialSort,
+    values,
   };
 }
 
@@ -151,27 +131,16 @@ export function updatePendingFilter<
     | undefined,
 ): TState {
   const pendingFilters = { ...state.pendingFilters };
-  const pendingFilterValues = { ...state.pendingFilterValues };
 
   if (filterFn === undefined || value === undefined) {
     delete pendingFilters[key];
-    delete pendingFilterValues[key];
   } else {
     pendingFilters[key] = filterFn;
-    pendingFilterValues[key] = value;
   }
-
-  const pendingFilteredCount = filterValues({
-    filters: pendingFilters,
-    values: state.allValues,
-  }).length;
 
   return {
     ...state,
-    hasActiveFilters: Object.keys(pendingFilterValues).length > 0,
-    pendingFilteredCount,
     pendingFilters,
-    pendingFilterValues,
   };
 }
 
@@ -183,18 +152,9 @@ function applyPendingFilters<
   TSort,
   TState extends FiltersState<TValue, TSort>,
 >(state: TState): TState {
-  const filteredValues = filterValues({
-    filters: state.pendingFilters,
-    values: state.allValues,
-  });
-
   return {
     ...state,
-    filteredValues: filteredValues,
     filters: { ...state.pendingFilters },
-    filterValues: { ...state.pendingFilterValues },
-    hasActiveFilters: Object.keys(state.pendingFilterValues).length > 0,
-    pendingFilteredCount: filteredValues.length,
   };
 }
 
@@ -206,32 +166,10 @@ function clearPendingFilters<
   TSort,
   TState extends FiltersState<TValue, TSort>,
 >(state: TState): TState {
-  const pendingFilteredCount = state.allValues.length;
-
   return {
     ...state,
-    hasActiveFilters: false,
-    pendingFilteredCount,
     pendingFilters: {},
-    pendingFilterValues: {},
   };
-}
-
-/**
- * Filter values helper - filters items based on multiple filter functions
- */
-function filterValues<TItem>({
-  filters,
-  values,
-}: {
-  filters: Record<string, (arg0: TItem) => boolean>;
-  values: readonly TItem[];
-}): TItem[] {
-  return values.filter((item) => {
-    return Object.values(filters).every((filter) => {
-      return filter(item);
-    });
-  });
 }
 
 /**
@@ -242,29 +180,18 @@ function resetPendingFilters<
   TSort,
   TState extends FiltersState<TValue, TSort>,
 >(state: TState): TState {
-  const pendingFilteredCount = filterValues({
-    filters: state.filters,
-    values: state.allValues,
-  }).length;
-
   return {
     ...state,
-    hasActiveFilters: Object.keys(state.filterValues).length > 0,
-    pendingFilteredCount,
     pendingFilters: { ...state.filters },
-    pendingFilterValues: { ...state.filterValues },
   };
 }
 
 function updateSort<TValue, TSort, TState extends FiltersState<TValue, TSort>>(
   state: TState,
   action: SortAction<TSort>,
-  sorter: Sorter<TValue, TSort>,
 ): TState {
   return {
     ...state,
-    allValues: sorter(state.allValues, action.value),
-    filteredValues: sorter(state.filteredValues, action.value),
     sort: action.value,
   };
 }

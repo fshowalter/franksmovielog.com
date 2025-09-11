@@ -1,8 +1,4 @@
-import type {
-  FiltersActionType,
-  FiltersState,
-  Sorter,
-} from "./filters.reducer";
+import type { FiltersActionType, FiltersState } from "./createFiltersReducer";
 
 export {
   createApplyPendingFiltersAction,
@@ -10,15 +6,15 @@ export {
   createResetPendingFiltersAction,
   createSortActionCreator,
   updatePendingFilter,
-} from "./filters.reducer";
+} from "./createFiltersReducer";
 
-export type { Sorter } from "./filters.reducer";
+import type { TitleSort } from "./createSelectSortedTitles";
 
 import {
   createFiltersReducer,
   createInitialFiltersState,
   updatePendingFilter,
-} from "./filters.reducer";
+} from "./createFiltersReducer";
 
 /**
  * Work-specific action types
@@ -52,7 +48,6 @@ export type TitleFiltersState<TValue extends FilterableTitle, TSort> = Omit<
   "filterValues" | "pendingFilterValues"
 > & {
   filterValues: TitleFiltersValues;
-  pendingFilterValues: TitleFiltersValues;
 };
 
 /**
@@ -81,21 +76,19 @@ type SetTitlePendingFilterAction = {
 
 export function createInitialTitleFiltersState<
   TValue extends FilterableTitle,
-  TSort,
+  TSort extends TitleSort,
 >({
   initialSort,
-  sorter,
   values,
 }: {
   initialSort: TSort;
-  sorter: Sorter<TValue, TSort>;
   values: TValue[];
 }): TitleFiltersState<TValue, TSort> {
   const filterState = createInitialFiltersState({
     initialSort,
-    sorter,
     values,
   });
+
   return {
     ...filterState,
   };
@@ -124,8 +117,8 @@ export function createTitleFiltersReducer<
   TValue extends FilterableTitle,
   TSort,
   TState extends TitleFiltersState<TValue, TSort>,
->({ sorter }: { sorter: Sorter<TValue, TSort> }) {
-  const filterReducer = createFiltersReducer<TValue, TSort, TState>({ sorter });
+>() {
+  const filterReducer = createFiltersReducer<TValue, TSort, TState>();
 
   return function reducer(
     state: TState,

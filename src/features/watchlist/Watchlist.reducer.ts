@@ -5,7 +5,7 @@ import {
   type TitleFiltersActionType,
   type TitleFiltersState,
   type TitleFiltersValues,
-} from "~/components/filter-and-sort/title.filters.reducer";
+} from "~/components/filter-and-sort/TitleFilters.reducer";
 
 export {
   createApplyPendingFiltersAction,
@@ -14,19 +14,12 @@ export {
   createSetGenresPendingFilterAction,
   createSetReleaseYearPendingFilterAction,
   createSetTitlePendingFilterAction,
-} from "~/components/filter-and-sort/title.filters.reducer";
-
-import {
-  createSortTitleValues,
-  createSortValues,
-  createTitleSortMap,
-  type TitleSort,
-} from "~/components/filter-and-sort/title.sorter";
+} from "~/components/filter-and-sort/TitleFilters.reducer";
 
 /**
  * Union type of all reviewed work-specific filter actions for Reviews page
  */
-export type WatchlistActionType = TitleFiltersActionType<TitleSort>;
+export type WatchlistActionType = TitleFiltersActionType<WatchlistSort>;
 
 import {
   createInitialShowMoreState,
@@ -34,21 +27,18 @@ import {
 } from "~/components/filter-and-sort/showMore.reducer";
 
 import type { WatchlistValue } from "./Watchlist";
+import type { WatchlistSort } from "./Watchlist.selectors";
 
 /**
  * Type definition for Reviews page filter values
  */
 export type WatchlistFiltersValues = TitleFiltersValues;
 
-export type WatchlistSort = TitleSort;
-
 /**
  * Internal state type for Reviews page reducer
  */
 type WatchlistState = ShowMoreState &
   TitleFiltersState<WatchlistValue, WatchlistSort>;
-
-const sortValues = createSortTitleValues<WatchlistValue, WatchlistSort>();
 
 /**
  * Initializes the state for the Reviews page reducer.
@@ -59,7 +49,7 @@ const sortValues = createSortTitleValues<WatchlistValue, WatchlistSort>();
  * @param params.values - Array of review data to initialize with
  * @returns Initial state for the Reviews page reducer
  */
-export function initState({
+export function createInitialState({
   initialSort,
   values,
 }: {
@@ -69,7 +59,6 @@ export function initState({
   const showMoreState = createInitialShowMoreState();
   const titleFilterState = createInitialTitleFiltersState({
     initialSort,
-    sorter: sortValues,
     values,
   });
 
@@ -87,7 +76,7 @@ export const watchlistReducer = createTitleFiltersReducer<
   WatchlistValue,
   WatchlistSort,
   WatchlistState
->({ sorter: sortValues });
+>();
 
 /**
  * Action creator for sort actions specific to the Watchlist page.
