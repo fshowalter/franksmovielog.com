@@ -1,11 +1,25 @@
-import {
-  createInitialTitleFiltersState,
-  createSortActionCreator,
-  createTitleFiltersReducer,
+import type { ShowMoreState } from "~/reducers/showMoreReducer";
+import type { SortState } from "~/reducers/sortReducer";
+import type {
   type TitleFiltersActionType,
   type TitleFiltersState,
   type TitleFiltersValues,
-} from "~/components/filter-and-sort/TitleFilters.reducer";
+} from "~/reducers/titleFiltersReducer";
+
+import {
+  createInitialShowMoreState,
+  createShowMoreAction,
+  showMoreReducer,
+} from "~/reducers/showMoreReducer";
+import {
+  createInitialSortState,
+  createSortActionCreator,
+  sortReducer,
+} from "~/reducers/sortReducer";
+import {
+  createInitialTitleFiltersState,
+  titleFiltersReducer,
+} from "~/reducers/titleFiltersReducer";
 
 export {
   createApplyPendingFiltersAction,
@@ -14,17 +28,12 @@ export {
   createSetGenresPendingFilterAction,
   createSetReleaseYearPendingFilterAction,
   createSetTitlePendingFilterAction,
-} from "~/components/filter-and-sort/TitleFilters.reducer";
+} from "~/reducers/titleFiltersReducer";
 
 /**
  * Union type of all reviewed work-specific filter actions for Reviews page
  */
 export type WatchlistActionType = TitleFiltersActionType<WatchlistSort>;
-
-import {
-  createInitialShowMoreState,
-  type ShowMoreState,
-} from "~/components/filter-and-sort/showMore.reducer";
 
 import type { WatchlistValue } from "./Watchlist";
 import type { WatchlistSort } from "./Watchlist.selectors";
