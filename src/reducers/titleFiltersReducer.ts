@@ -19,9 +19,9 @@ export type FilterableTitle = {
  */
 export type TitleFiltersAction =
   | FiltersAction
-  | GenresChangedAction
-  | ReleaseYearChangedAction
-  | TitleChangedAction;
+  | GenresFilterChangedAction
+  | ReleaseYearFilterChangedAction
+  | TitleFilterChangedAction;
 
 /**
  * Specialized state type for title-based lists with typed filter values
@@ -43,25 +43,25 @@ export type TitleFiltersValues = {
   title?: string;
 };
 
-type GenresChangedAction = {
-  type: "titleFilters/genresChanged";
+type GenresFilterChangedAction = {
+  type: "titleFilters/genresFilterChanged";
   values: readonly string[];
 };
 
-type ReleaseYearChangedAction = {
-  type: "titleFilters/releaseYearChanged";
+type ReleaseYearFilterChangedAction = {
+  type: "titleFilters/releaseYearFilterChanged";
   values: [string, string];
 };
 
-type TitleChangedAction = {
-  type: "titleFilters/titleChanged";
+type TitleFilterChangedAction = {
+  type: "titleFilters/titleFilterChanged";
   value: string;
 };
 
-export function createGenresUpdatedAction(
+export function createGenresFilterChangedAction(
   values: readonly string[],
-): GenresChangedAction {
-  return { type: "titleFilters/genresChanged", values };
+): GenresFilterChangedAction {
+  return { type: "titleFilters/genresFilterChanged", values };
 }
 
 export function createInitialTitleFiltersState<TValue extends FilterableTitle>({
@@ -78,14 +78,16 @@ export function createInitialTitleFiltersState<TValue extends FilterableTitle>({
   };
 }
 
-export function createReleaseYearUpdatedAction(
+export function createReleaseYearFilterChangedAction(
   values: [string, string],
-): ReleaseYearChangedAction {
-  return { type: "titleFilters/releaseYearChanged", values };
+): ReleaseYearFilterChangedAction {
+  return { type: "titleFilters/releaseYearFilterChanged", values };
 }
 
-export function createTitleUpdatedAction(value: string): TitleChangedAction {
-  return { type: "titleFilters/titleChanged", value };
+export function createTitleFilterChangedAction(
+  value: string,
+): TitleFilterChangedAction {
+  return { type: "titleFilters/titleFilterChanged", value };
 }
 
 // Create reducer function
@@ -95,16 +97,16 @@ export function titleFiltersReducer<
 >(state: TState, action: TitleFiltersAction): TState {
   switch (action.type) {
     // Field-specific shared filters
-    case "titleFilters/genresChanged": {
-      return handleGenresChanged<TValue, TState>(state, action);
+    case "titleFilters/genresFilterChanged": {
+      return handleGenresFilterChanged<TValue, TState>(state, action);
     }
 
-    case "titleFilters/releaseYearChanged": {
-      return handleReleaseYearChanged<TValue, TState>(state, action);
+    case "titleFilters/releaseYearFilterChanged": {
+      return handleReleaseYearFilterChanged<TValue, TState>(state, action);
     }
 
-    case "titleFilters/titleChanged": {
-      return handleTitleChanged<TValue, TState>(state, action);
+    case "titleFilters/titleFilterChanged": {
+      return handleTitleFilterChanged<TValue, TState>(state, action);
     }
     default: {
       return filtersReducer<TValue, TState>(state, action);
@@ -115,10 +117,10 @@ export function titleFiltersReducer<
 /**
  * Handle Genre filter action
  */
-function handleGenresChanged<
+function handleGenresFilterChanged<
   TValue extends FilterableTitle,
   TState extends TitleFiltersState<TValue>,
->(state: TState, action: GenresChangedAction): TState {
+>(state: TState, action: GenresFilterChangedAction): TState {
   return {
     ...state,
     pendingFilterValues: {
@@ -131,10 +133,10 @@ function handleGenresChanged<
 /**
  * Handle Release Year filter action
  */
-function handleReleaseYearChanged<
+function handleReleaseYearFilterChanged<
   TValue extends FilterableTitle,
   TState extends TitleFiltersState<TValue>,
->(state: TState, action: ReleaseYearChangedAction): TState {
+>(state: TState, action: ReleaseYearFilterChangedAction): TState {
   return {
     ...state,
     pendingFilterValues: {
@@ -147,10 +149,10 @@ function handleReleaseYearChanged<
 /**
  * Handle Title filter action
  */
-function handleTitleChanged<
+function handleTitleFilterChanged<
   TValue extends FilterableTitle,
   TState extends TitleFiltersState<TValue>,
->(state: TState, action: TitleChangedAction): TState {
+>(state: TState, action: TitleFilterChangedAction): TState {
   return {
     ...state,
     pendingFilterValues: {

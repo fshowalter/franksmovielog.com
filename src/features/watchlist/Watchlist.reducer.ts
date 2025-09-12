@@ -25,10 +25,10 @@ export { createShowMoreAction } from "~/reducers/showMoreReducer";
 export {
   createApplyFiltersAction,
   createClearFiltersAction,
-  createGenresUpdatedAction,
-  createReleaseYearUpdatedAction,
+  createGenresFilterChangedAction,
+  createReleaseYearFilterChangedAction,
   createResetFiltersAction,
-  createTitleUpdatedAction,
+  createTitleFilterChangedAction,
 } from "~/reducers/titleFiltersReducer";
 
 /**
@@ -45,7 +45,12 @@ import type { WatchlistSort } from "./Watchlist.selectors";
 /**
  * Type definition for Reviews page filter values
  */
-export type WatchlistFiltersValues = TitleFiltersValues;
+export type WatchlistFiltersValues = TitleFiltersValues & {
+  collection?: string;
+  director?: string;
+  performer?: string;
+  writer?: string;
+};
 
 /**
  * Internal state type for Reviews page reducer
