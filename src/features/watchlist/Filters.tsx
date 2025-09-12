@@ -2,9 +2,13 @@ import { SelectField } from "~/components/fields/SelectField";
 import { SelectOptions } from "~/components/fields/SelectOptions";
 import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
 
-import type { ActionType, WatchlistFilterValues } from "./Watchlist.reducer";
-
-import { Actions } from "./Watchlist.reducer";
+import {
+  createGenresUpdatedAction,
+  createReleaseYearUpdatedAction,
+  createTitleUpdatedAction,
+  type WatchlistAction,
+  type WatchlistFiltersValues,
+} from "./Watchlist.reducer";
 
 export function Filters({
   dispatch,
@@ -23,31 +27,25 @@ export function Filters({
   distinctPerformers: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctWriters: readonly string[];
-  filterValues: WatchlistFilterValues;
+  filterValues: WatchlistFiltersValues;
 }): React.JSX.Element {
   return (
     <>
       <TitleFilters
         genre={{
-          initialValue: filterValues.genre,
-          onChange: (values) =>
-            dispatch({
-              type: Actions.PENDING_FILTER_GENRES,
-              values,
-            }),
+          initialValue: filterValues.genres,
+          onChange: (values) => dispatch(createGenresUpdatedAction(values)),
           values: distinctGenres,
         }}
         releaseYear={{
           initialValue: filterValues.releaseYear,
           onChange: (values) =>
-            dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values }),
+            dispatch(createReleaseYearUpdatedAction(values)),
           values: distinctReleaseYears,
         }}
         title={{
           initialValue: filterValues.title,
-
-          onChange: (value) =>
-            dispatch({ type: Actions.PENDING_FILTER_TITLE, value }),
+          onChange: (value) => dispatch(createTitleUpdatedAction(value)),
         }}
       />
       <CreditSelectField
