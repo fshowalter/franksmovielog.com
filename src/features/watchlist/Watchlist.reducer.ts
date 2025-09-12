@@ -1,14 +1,13 @@
-import type { ShowMoreState } from "~/reducers/showMoreReducer";
-import type { SortState } from "~/reducers/sortReducer";
+import type { ShowMoreAction, ShowMoreState } from "~/reducers/showMoreReducer";
+import type { SortAction, SortState } from "~/reducers/sortReducer";
 import type {
-  type TitleFiltersActionType,
-  type TitleFiltersState,
-  type TitleFiltersValues,
+  TitleFiltersAction,
+  TitleFiltersState,
+  TitleFiltersValues,
 } from "~/reducers/titleFiltersReducer";
 
 import {
   createInitialShowMoreState,
-  createShowMoreAction,
   showMoreReducer,
 } from "~/reducers/showMoreReducer";
 import {
@@ -21,19 +20,24 @@ import {
   titleFiltersReducer,
 } from "~/reducers/titleFiltersReducer";
 
+export { createShowMoreAction } from "~/reducers/showMoreReducer";
+
 export {
-  createApplyPendingFiltersAction,
-  createClearPendingFiltersAction,
-  createResetPendingFiltersAction,
-  createSetGenresPendingFilterAction,
-  createSetReleaseYearPendingFilterAction,
-  createSetTitlePendingFilterAction,
+  createApplyFiltersAction,
+  createClearFiltersAction,
+  createGenresUpdatedAction,
+  createReleaseYearUpdatedAction,
+  createResetFiltersAction,
+  createTitleUpdatedAction,
 } from "~/reducers/titleFiltersReducer";
 
 /**
  * Union type of all reviewed work-specific filter actions for Reviews page
  */
-export type WatchlistActionType = TitleFiltersActionType<WatchlistSort>;
+export type WatchlistAction =
+  | ShowMoreAction
+  | SortAction<WatchlistSort>
+  | TitleFiltersAction;
 
 import type { WatchlistValue } from "./Watchlist";
 import type { WatchlistSort } from "./Watchlist.selectors";
@@ -47,7 +51,8 @@ export type WatchlistFiltersValues = TitleFiltersValues;
  * Internal state type for Reviews page reducer
  */
 type WatchlistState = ShowMoreState &
-  TitleFiltersState<WatchlistValue, WatchlistSort>;
+  SortState<WatchlistSort> &
+  TitleFiltersState<WatchlistValue>;
 
 /**
  * Initializes the state for the Reviews page reducer.
@@ -66,14 +71,15 @@ export function createInitialState({
   values: WatchlistValue[];
 }): WatchlistState {
   const showMoreState = createInitialShowMoreState();
+  const sortState = createInitialSortState({ initialSort });
   const titleFilterState = createInitialTitleFiltersState({
-    initialSort,
     values,
   });
 
   return {
     ...titleFilterState,
     ...showMoreState,
+    ...sortState,
   };
 }
 
@@ -81,11 +87,22 @@ export function createInitialState({
  * Reducer function for managing Reviews page state.
  * Handles filtering, sorting, and pagination actions for the reviews list.
  */
-export const watchlistReducer = createTitleFiltersReducer<
-  WatchlistValue,
-  WatchlistSort,
-  WatchlistState
->();
+export function watchlistReducer(
+  state: WatchlistState,
+  action: WatchlistAction,
+) {
+  switch (action.type) {
+    case "showMore/showMore": {
+      return showMoreReducer(state, action);
+    }
+    case "sort/sort": {
+      return sortReducer(state, action);
+    }
+    default: {
+      return titleFiltersReducer(state, action);
+    }
+  }
+}
 
 /**
  * Action creator for sort actions specific to the Watchlist page.

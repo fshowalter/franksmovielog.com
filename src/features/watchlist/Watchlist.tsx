@@ -1,18 +1,30 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { FilterAndSortHeaderLink } from "~/components/filter-and-sort/FilterAndSortHeaderLink";
-import { selectFilteredValues } from "~/components/filter-and-sort/selectFilteredValues";
 import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
 import { GroupedPosterList } from "~/components/PosterList";
 
 import type { WatchlistSort } from "./Watchlist.selectors";
 
 import { Filters } from "./Filters";
-import { createInitialState, watchlistReducer } from "./Watchlist.reducer";
-import { selectSortedWatchlistValues } from "./Watchlist.selectors";
+import {
+  createApplyFiltersAction,
+  createClearFiltersAction,
+  createInitialState,
+  createResetFiltersAction,
+  createShowMoreAction,
+  createSortAction,
+  watchlistReducer,
+} from "./Watchlist.reducer";
+import {
+  selectFilteredWatchlistValues,
+  selectGroupedValues,
+  selectHasActiveFilters,
+  selectSortedWatchlistValues,
+} from "./Watchlist.selectors";
 import { WatchlistListItem } from "./WatchlistListItem";
 
 export type WatchlistProps = {
@@ -59,11 +71,26 @@ export function Watchlist({
     },
     createInitialState,
   );
-  const [filterKey, setFilterKey] = useState(0);
 
   const sortedValues = selectSortedWatchlistValues(state.values, state.sort);
 
-  const filteredValues = selectFilteredValues(state.filters, sortedValues);
+  const filteredValues = selectFilteredWatchlistValues(
+    state.activeFilterValues,
+    sortedValues,
+  );
+
+  const groupedValues = selectGroupedValues(
+    sortedValues,
+    state.showCount,
+    state.sort,
+  );
+
+  const pendingFilteredCount = selectFilteredWatchlistValues(
+    state.pendingFilterValues,
+    sortedValues,
+  ).length;
+
+  const hasActiveFilters = selectHasActiveFilters(state.pendingFilterValues);
 
   return (
     <FilterAndSortContainer
@@ -77,42 +104,34 @@ export function Watchlist({
           distinctReleaseYears={distinctReleaseYears}
           distinctWriters={distinctWriters}
           filterValues={state.pendingFilterValues}
-          key={filterKey}
         />
       }
-      hasActiveFilters={state.hasActiveFilters}
+      hasActiveFilters={hasActiveFilters}
       headerLinks={
         <FilterAndSortHeaderLink href="/watchlist/progress/" text="progress" />
       }
-      onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onApplyFilters={() => dispatch(createApplyFiltersAction())}
       onClearFilters={() => {
-        dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
-        setFilterKey((k) => k + 1);
+        dispatch(createClearFiltersAction());
       }}
-      onFilterDrawerOpen={() =>
-        dispatch({ type: Actions.RESET_PENDING_FILTERS })
-      }
+      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
       onResetFilters={() => {
-        dispatch({ type: Actions.RESET_PENDING_FILTERS });
-        setFilterKey((k) => k + 1);
+        dispatch(createResetFiltersAction());
       }}
-      pendingFilteredCount={state.pendingFilteredCount}
+      pendingFilteredCount={pendingFilteredCount}
       sortProps={{
-        currentSortValue: state.sortValue,
+        currentSortValue: state.sort,
         onSortChange: (e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          }),
+          dispatch(createSortAction(e.target.value as WatchlistSort)),
         sortOptions: <TitleSortOptions options={["title", "release-date"]} />,
       }}
-      totalCount={state.filteredValues.length}
+      totalCount={filteredValues.length}
     >
       <div className="@container/list">
         <GroupedPosterList
-          groupedValues={state.groupedValues}
-          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
-          totalCount={state.filteredValues.length}
+          groupedValues={groupedValues}
+          onShowMore={() => dispatch(createShowMoreAction())}
+          totalCount={filteredValues.length}
           visibleCount={state.showCount}
         >
           {(value) => {

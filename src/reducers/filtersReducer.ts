@@ -1,45 +1,35 @@
-export enum FiltersActions {
-  Apply_Pending_Filters = "filters/applyPendingFilters",
-  Clear_Pending_Filters = "filters/clearPendingFilters",
-  Reset_Pending_Filters = "filters/resetPendingFilters",
-}
-
-export type FiltersActionType =
-  | ApplyPendingFiltersAction
-  | ClearPendingFiltersAction
-  | ResetPendingFiltersAction;
+export type FiltersAction =
+  | ApplyFiltersAction
+  | ClearFiltersAction
+  | ResetFiltersAction;
 
 export type FiltersState<TValue> = {
-  filters: Record<string, (value: TValue) => boolean>;
-  filterValues: Record<
-    string,
-    [number, number] | [string, string] | readonly string[] | string
-  >; // Raw filter values for UI
-  pendingFilters: Record<string, (value: TValue) => boolean>;
+  activeFilterValues: Record<string, unknown>;
+  pendingFilterValues: Record<string, unknown>;
   values: TValue[];
 };
 
 /**
  * Base Action Type Definitions
  */
-type ApplyPendingFiltersAction = {
-  type: FiltersActions.Apply_Pending_Filters;
+type ApplyFiltersAction = {
+  type: "filters/applied";
 };
 
-type ClearPendingFiltersAction = {
-  type: FiltersActions.Clear_Pending_Filters;
+type ClearFiltersAction = {
+  type: "filters/cleared";
 };
 
-type ResetPendingFiltersAction = {
-  type: FiltersActions.Reset_Pending_Filters;
+type ResetFiltersAction = {
+  type: "filters/reset";
 };
 
-export function createApplyPendingFiltersAction(): ApplyPendingFiltersAction {
-  return { type: FiltersActions.Apply_Pending_Filters };
+export function createApplyFiltersAction(): ApplyFiltersAction {
+  return { type: "filters/applied" };
 }
 
-export function createClearPendingFiltersAction(): ClearPendingFiltersAction {
-  return { type: FiltersActions.Clear_Pending_Filters };
+export function createClearFiltersAction(): ClearFiltersAction {
+  return { type: "filters/cleared" };
 }
 
 export function createInitialFiltersState<TValue>({
@@ -48,32 +38,31 @@ export function createInitialFiltersState<TValue>({
   values: TValue[];
 }): FiltersState<TValue> {
   return {
-    filters: {},
-    filterValues: {},
-    pendingFilters: {},
+    activeFilterValues: {},
+    pendingFilterValues: {},
     values,
   };
 }
 
-export function createResetPendingFiltersAction(): ResetPendingFiltersAction {
-  return { type: FiltersActions.Reset_Pending_Filters };
+export function createResetFiltersAction(): ResetFiltersAction {
+  return { type: "filters/reset" };
 }
 
 export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
   state: TState,
-  action: FiltersActionType,
+  action: FiltersAction,
 ): TState {
   switch (action.type) {
-    case FiltersActions.Apply_Pending_Filters: {
-      return applyPendingFilters<TValue, TState>(state);
+    case "filters/applied": {
+      return applyFilters<TValue, TState>(state);
     }
 
-    case FiltersActions.Clear_Pending_Filters: {
-      return clearPendingFilters<TValue, TState>(state);
+    case "filters/cleared": {
+      return clearFilters<TValue, TState>(state);
     }
 
-    case FiltersActions.Reset_Pending_Filters: {
-      return resetPendingFilters<TValue, TState>(state);
+    case "filters/reset": {
+      return resetFilters<TValue, TState>(state);
     }
 
     default: {
@@ -83,68 +72,37 @@ export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
 }
 
 /**
- * Update a pending filter
- */
-export function updatePendingFilter<
-  TValue,
-  TState extends FiltersState<TValue>,
->(
-  state: TState,
-  key: string,
-  filterFn: ((value: TValue) => boolean) | undefined,
-  value:
-    | [number, number]
-    | [string, string]
-    | readonly string[]
-    | string
-    | undefined,
-): TState {
-  const pendingFilters = { ...state.pendingFilters };
-
-  if (filterFn === undefined || value === undefined) {
-    delete pendingFilters[key];
-  } else {
-    pendingFilters[key] = filterFn;
-  }
-
-  return {
-    ...state,
-    pendingFilters,
-  };
-}
-
-/**
  * Apply pending filters to become active filters
  */
-function applyPendingFilters<TValue, TState extends FiltersState<TValue>>(
+function applyFilters<TValue, TState extends FiltersState<TValue>>(
   state: TState,
 ): TState {
   return {
     ...state,
-    filters: { ...state.pendingFilters },
+    activeFilterValues: { ...state.pendingFilterValues },
   };
 }
 
 /**
  * Clear all pending filters
  */
-function clearPendingFilters<TValue, TState extends FiltersState<TValue>>(
+function clearFilters<TValue, TState extends FiltersState<TValue>>(
   state: TState,
 ): TState {
   return {
     ...state,
-    pendingFilters: {},
+    filterValues: {},
   };
 }
 
 /**
  * Reset pending filters to current active filters
  */
-function resetPendingFilters<TValue, TState extends FiltersState<TValue>>(
+function resetFilters<TValue, TState extends FiltersState<TValue>>(
   state: TState,
 ): TState {
   return {
     ...state,
-    pendingFilters: { ...state.filters },
+    pendingFilterValues: { ...state.activeFilterValues },
   };
 }
