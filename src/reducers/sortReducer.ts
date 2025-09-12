@@ -1,9 +1,5 @@
-export enum SortActions {
-  Sort = "sort/sort",
-}
-
 export type SortAction<TSort> = {
-  type: SortActions.Sort;
+  type: "sort/sort";
   value: TSort;
 };
 
@@ -24,7 +20,7 @@ export function createInitialSortState<TSort>({
 export function createSortActionCreator<TSort>() {
   return function createSortAction(value: TSort): SortAction<TSort> {
     return {
-      type: SortActions.Sort,
+      type: "sort/sort",
       value,
     };
   };
@@ -35,7 +31,7 @@ export function sortReducer<TSort, TState extends SortState<TSort>>(
   action: SortAction<TSort>,
 ): TState {
   switch (action.type) {
-    case SortActions.Sort: {
+    case "sort/sort": {
       return updateSort<TSort, TState>(state, action);
     }
 

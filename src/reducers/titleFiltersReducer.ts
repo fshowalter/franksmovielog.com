@@ -1,26 +1,12 @@
-import type { FiltersActionType, FiltersState } from "./filtersReducer";
+import type { FiltersAction, FiltersState } from "./filtersReducer";
 
 export {
-  createApplyPendingFiltersAction,
-  createClearPendingFiltersAction,
-  createResetPendingFiltersAction,
-  updatePendingFilter,
+  createApplyFiltersAction,
+  createClearFiltersAction,
+  createResetFiltersAction,
 } from "./filtersReducer";
 
-import {
-  createInitialFiltersState,
-  filtersReducer,
-  updatePendingFilter,
-} from "./filtersReducer";
-
-/**
- * Work-specific action types
- */
-enum TitleFiltersActions {
-  Set_Genres_Pending_Filter = "titleFilters/setGenresPendingFilter",
-  Set_Release_Year_Pending_Filter = "titleFilters/setReleaseYearPendingFilter",
-  Set_Title_Pending_Filter = "titleFilters/setTitlePendingFilter",
-}
+import { createInitialFiltersState, filtersReducer } from "./filtersReducer";
 
 export type FilterableTitle = {
   genres: string[];
@@ -31,20 +17,21 @@ export type FilterableTitle = {
 /**
  * Union type of all title-specific filter actions
  */
-export type TitleFiltersActionType =
-  | FiltersActionType
-  | SetGenresPendingFilterAction
-  | SetReleaseYearPendingFilterAction
-  | SetTitlePendingFilterAction;
+export type TitleFiltersAction =
+  | FiltersAction
+  | GenresChangedAction
+  | ReleaseYearChangedAction
+  | TitleChangedAction;
 
 /**
  * Specialized state type for title-based lists with typed filter values
  */
 export type TitleFiltersState<TValue extends FilterableTitle> = Omit<
   FiltersState<TValue>,
-  "filterValues"
+  "activeFilterValues" | "pendingFilterValues"
 > & {
-  filterValues: TitleFiltersValues;
+  activeFilterValues: TitleFiltersValues;
+  pendingFilterValues: TitleFiltersValues;
 };
 
 /**
@@ -56,20 +43,26 @@ export type TitleFiltersValues = {
   title?: string;
 };
 
-type SetGenresPendingFilterAction = {
-  type: TitleFiltersActions.Set_Genres_Pending_Filter;
+type GenresChangedAction = {
+  type: "titleFilters/genresChanged";
   values: readonly string[];
 };
 
-type SetReleaseYearPendingFilterAction = {
-  type: TitleFiltersActions.Set_Release_Year_Pending_Filter;
+type ReleaseYearChangedAction = {
+  type: "titleFilters/releaseYearChanged";
   values: [string, string];
 };
 
-type SetTitlePendingFilterAction = {
-  type: TitleFiltersActions.Set_Title_Pending_Filter;
+type TitleChangedAction = {
+  type: "titleFilters/titleChanged";
   value: string;
 };
+
+export function createGenresUpdatedAction(
+  values: readonly string[],
+): GenresChangedAction {
+  return { type: "titleFilters/genresChanged", values };
+}
 
 export function createInitialTitleFiltersState<TValue extends FilterableTitle>({
   values,
@@ -85,44 +78,33 @@ export function createInitialTitleFiltersState<TValue extends FilterableTitle>({
   };
 }
 
-export function createSetGenresPendingFilterAction(
-  values: readonly string[],
-): SetGenresPendingFilterAction {
-  return { type: TitleFiltersActions.Set_Genres_Pending_Filter, values };
-}
-
-export function createSetReleaseYearPendingFilterAction(
+export function createReleaseYearUpdatedAction(
   values: [string, string],
-): SetReleaseYearPendingFilterAction {
-  return { type: TitleFiltersActions.Set_Release_Year_Pending_Filter, values };
+): ReleaseYearChangedAction {
+  return { type: "titleFilters/releaseYearChanged", values };
 }
 
-export function createSetTitlePendingFilterAction(
-  value: string,
-): SetTitlePendingFilterAction {
-  return { type: TitleFiltersActions.Set_Title_Pending_Filter, value };
+export function createTitleUpdatedAction(value: string): TitleChangedAction {
+  return { type: "titleFilters/titleChanged", value };
 }
 
 // Create reducer function
 export function titleFiltersReducer<
   TValue extends FilterableTitle,
   TState extends TitleFiltersState<TValue>,
->(state: TState, action: TitleFiltersActionType): TState {
+>(state: TState, action: TitleFiltersAction): TState {
   switch (action.type) {
     // Field-specific shared filters
-    case TitleFiltersActions.Set_Genres_Pending_Filter: {
-      return handleSetGenresPendingFilterAction<TValue, TState>(state, action);
+    case "titleFilters/genresChanged": {
+      return handleGenresChanged<TValue, TState>(state, action);
     }
 
-    case TitleFiltersActions.Set_Release_Year_Pending_Filter: {
-      return handleSetReleaseYearPendingFilterAction<TValue, TState>(
-        state,
-        action,
-      );
+    case "titleFilters/releaseYearChanged": {
+      return handleReleaseYearChanged<TValue, TState>(state, action);
     }
 
-    case TitleFiltersActions.Set_Title_Pending_Filter: {
-      return handleSetTitlePendingFilterAction<TValue, TState>(state, action);
+    case "titleFilters/titleChanged": {
+      return handleTitleChanged<TValue, TState>(state, action);
     }
     default: {
       return filtersReducer<TValue, TState>(state, action);
@@ -131,90 +113,49 @@ export function titleFiltersReducer<
 }
 
 /**
- * Create a Genre filter function
- */
-function createGenresFilter<TValue extends FilterableTitle>(
-  genres: readonly string[],
-) {
-  if (genres.length === 0) return;
-  return (value: TValue) => {
-    return genres.every((genre) => value.genres.includes(genre));
-  };
-}
-
-/**
- * Create a Release Year filter function
- */
-function createReleaseYearFilter<TValue extends FilterableTitle>(
-  minYear: string,
-  maxYear: string,
-) {
-  return (value: TValue): boolean => {
-    return value.releaseYear >= minYear && value.releaseYear <= maxYear;
-  };
-}
-
-/**
- * Create a Title filter function
- */
-function createTitleFilter<TValue extends FilterableTitle>(
-  value: string | undefined,
-) {
-  if (!value) return;
-  const regex = new RegExp(value, "i");
-  return (value: TValue): boolean => regex.test(value.title);
-}
-
-/**
  * Handle Genre filter action
  */
-function handleSetGenresPendingFilterAction<
+function handleGenresChanged<
   TValue extends FilterableTitle,
   TState extends TitleFiltersState<TValue>,
->(state: TState, action: SetGenresPendingFilterAction): TState {
-  const filterFn = createGenresFilter<TValue>(action.values);
-  const filterKey: keyof TitleFiltersValues = "genres";
-  return updatePendingFilter<TValue, TState>(
-    state,
-    filterKey,
-    filterFn,
-    action.values,
-  );
+>(state: TState, action: GenresChangedAction): TState {
+  return {
+    ...state,
+    pendingFilterValues: {
+      ...state.pendingFilterValues,
+      genres: action.values,
+    },
+  };
 }
 
 /**
  * Handle Release Year filter action
  */
-function handleSetReleaseYearPendingFilterAction<
+function handleReleaseYearChanged<
   TValue extends FilterableTitle,
   TState extends TitleFiltersState<TValue>,
->(state: TState, action: SetReleaseYearPendingFilterAction): TState {
-  const filterFn = createReleaseYearFilter<TValue>(
-    action.values[0],
-    action.values[1],
-  );
-  const filterKey: keyof TitleFiltersValues = "releaseYear";
-  return updatePendingFilter<TValue, TState>(
-    state,
-    filterKey,
-    filterFn,
-    action.values,
-  );
+>(state: TState, action: ReleaseYearChangedAction): TState {
+  return {
+    ...state,
+    pendingFilterValues: {
+      ...state.pendingFilterValues,
+      releaseYear: action.values,
+    },
+  };
 }
 
 /**
  * Handle Title filter action
  */
-function handleSetTitlePendingFilterAction<
+function handleTitleChanged<
   TValue extends FilterableTitle,
   TState extends TitleFiltersState<TValue>,
->(state: TState, action: SetTitlePendingFilterAction): TState {
-  const filterFn = createTitleFilter<TValue>(action.value);
-  const filterKey: keyof TitleFiltersValues = "title";
-  return updatePendingFilter<TValue, TState>(
-    state,
-    filterKey,
-    filterFn,
-    action.value,
-  );
+>(state: TState, action: TitleChangedAction): TState {
+  return {
+    ...state,
+    pendingFilterValues: {
+      ...state.pendingFilterValues,
+      title: action.value,
+    },
+  };
 }
