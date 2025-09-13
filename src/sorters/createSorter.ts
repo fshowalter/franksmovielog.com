@@ -7,6 +7,7 @@ export function createSorter<TValue, TSort extends string>(
   sortMap: Record<TSort, (a: TValue, b: TValue) => number>,
 ) {
   return (values: TValue[], sortOrder: TSort): TValue[] => {
+    console.log("sorter");
     const comparer = sortMap[sortOrder];
     return [...values].toSorted(comparer);
   };

@@ -115,7 +115,11 @@ export default defineConfig({
     enabled: false,
   },
   integrations: [
-    react(),
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler"]],
+      },
+    }),
     sitemap({
       filter: (page) => page !== "https://www.franksmovielog.com/gone/",
     }),
@@ -128,14 +132,6 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["fsevents"],
     },
-    plugins: [
-      tailwindcss(),
-      contentHmr(),
-      react({
-        babel: {
-          plugins: [["babel-plugin-react-compiler", {}]],
-        },
-      }),
-    ],
+    plugins: [tailwindcss(), contentHmr()],
   },
 });

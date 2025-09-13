@@ -28,21 +28,25 @@ export function selectFilteredWatchlistValues(
     createTitleFilter(filterValues.title),
   ].filter((filterFn) => filterFn !== undefined);
 
+  console.log(filters);
+
   return filterSortedValues({ filters, sortedValues });
 }
 
 export function selectGroupedValues(
-  sortedValues: WatchlistValue[],
+  filteredValues: WatchlistValue[],
   showCount: number,
   sort: WatchlistSort,
 ) {
-  const paginatedItems = sortedValues.slice(0, showCount);
+  console.log("selectGroupedValues");
+  const paginatedItems = filteredValues.slice(0, showCount);
   return groupValues(paginatedItems, sort);
 }
 
 export function selectHasActiveFilters(
   pendingFilterValues: WatchlistFiltersValues,
 ): boolean {
+  console.log("selectHasActiveFilters");
   return Object.keys(pendingFilterValues).length > 0;
 }
 

@@ -73,9 +73,7 @@ export function createInitialTitleFiltersState<TValue extends FilterableTitle>({
     values,
   });
 
-  return {
-    ...filterState,
-  };
+  return filterState;
 }
 
 export function createReleaseYearFilterChangedAction(
