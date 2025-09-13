@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useMemo, useReducer } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
@@ -72,25 +72,34 @@ export function Watchlist({
     createInitialState,
   );
 
-  const sortedValues = selectSortedWatchlistValues(state.values, state.sort);
+  console.log(state);
 
-  const filteredValues = selectFilteredWatchlistValues(
-    state.activeFilterValues,
-    sortedValues,
+  const sortedValues = useMemo(
+    () => selectSortedWatchlistValues(state.values, state.sort),
+    [state.values, state.sort],
   );
 
-  const groupedValues = selectGroupedValues(
-    sortedValues,
-    state.showCount,
-    state.sort,
+  const filteredValues = useMemo(
+    () => selectFilteredWatchlistValues(state.activeFilterValues, sortedValues),
+    [state.activeFilterValues, sortedValues],
   );
 
-  const pendingFilteredCount = selectFilteredWatchlistValues(
-    state.pendingFilterValues,
-    sortedValues,
-  ).length;
+  const groupedValues = useMemo(
+    () => selectGroupedValues(filteredValues, state.showCount, state.sort),
+    [filteredValues, state.showCount, state.sort],
+  );
 
-  const hasActiveFilters = selectHasActiveFilters(state.pendingFilterValues);
+  const pendingFilteredCount = useMemo(
+    () =>
+      selectFilteredWatchlistValues(state.pendingFilterValues, sortedValues)
+        .length,
+    [state.pendingFilterValues, sortedValues],
+  );
+
+  const hasActiveFilters = useMemo(
+    () => selectHasActiveFilters(state.pendingFilterValues),
+    [state.pendingFilterValues],
+  );
 
   return (
     <FilterAndSortContainer

@@ -91,7 +91,7 @@ function clearFilters<TValue, TState extends FiltersState<TValue>>(
 ): TState {
   return {
     ...state,
-    filterValues: {},
+    pendingFilterValues: {},
   };
 }
 
@@ -103,6 +103,7 @@ function resetFilters<TValue, TState extends FiltersState<TValue>>(
 ): TState {
   return {
     ...state,
+    activeFilterValues: state.activeFilterValues,
     pendingFilterValues: { ...state.activeFilterValues },
   };
 }

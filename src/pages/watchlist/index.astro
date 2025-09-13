@@ -22,6 +22,6 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
 >
   <ComponentLayout className="bg-subtle">
     <Backdrop deck={deck} imageProps={backdropImageProps} title="Watchlist" />
-    <Watchlist client:load {...interactiveProps} />
+    <Watchlist {...interactiveProps} client:load />
   </ComponentLayout>
 </Layout>

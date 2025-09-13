@@ -35,9 +35,13 @@ export {
  * Union type of all reviewed work-specific filter actions for Reviews page
  */
 export type WatchlistAction =
+  | CollectionFilterChangedAction
+  | DirectorFilterChangedAction
+  | PerformerFilterChangedAction
   | ShowMoreAction
   | SortAction<WatchlistSort>
-  | TitleFiltersAction;
+  | TitleFiltersAction
+  | WriterFilterChangedAction;
 
 import type { WatchlistValue } from "./Watchlist";
 import type { WatchlistSort } from "./Watchlist.selectors";
@@ -52,12 +56,50 @@ export type WatchlistFiltersValues = TitleFiltersValues & {
   writer?: string;
 };
 
+type CollectionFilterChangedAction = {
+  type: "watchlist/collectionFilterChanged";
+  value: string;
+};
+
+type DirectorFilterChangedAction = {
+  type: "watchlist/directorFilterChanged";
+  value: string;
+};
+
+type PerformerFilterChangedAction = {
+  type: "watchlist/performerFilterChanged";
+  value: string;
+};
+
 /**
  * Internal state type for Reviews page reducer
  */
-type WatchlistState = ShowMoreState &
-  SortState<WatchlistSort> &
-  TitleFiltersState<WatchlistValue>;
+type WatchlistState = Omit<
+  TitleFiltersState<WatchlistValue>,
+  "activeFilterValues" | "pendingFilterValues"
+> &
+  ShowMoreState &
+  SortState<WatchlistSort> & {
+    activeFilterValues: WatchlistFiltersValues;
+    pendingFilterValues: WatchlistFiltersValues;
+  };
+
+type WriterFilterChangedAction = {
+  type: "watchlist/writerFilterChanged";
+  value: string;
+};
+
+export function createCollectionFilterChangedAction(
+  value: string,
+): CollectionFilterChangedAction {
+  return { type: "watchlist/collectionFilterChanged", value };
+}
+
+export function createDirectorFilterChangedAction(
+  value: string,
+): DirectorFilterChangedAction {
+  return { type: "watchlist/directorFilterChanged", value };
+}
 
 /**
  * Initializes the state for the Reviews page reducer.
@@ -88,6 +130,18 @@ export function createInitialState({
   };
 }
 
+export function createPerformerFilterChangedAction(
+  value: string,
+): PerformerFilterChangedAction {
+  return { type: "watchlist/performerFilterChanged", value };
+}
+
+export function createWriterFilterChangedAction(
+  value: string,
+): WriterFilterChangedAction {
+  return { type: "watchlist/writerFilterChanged", value };
+}
+
 /**
  * Reducer function for managing Reviews page state.
  * Handles filtering, sorting, and pagination actions for the reviews list.
@@ -96,6 +150,7 @@ export function watchlistReducer(
   state: WatchlistState,
   action: WatchlistAction,
 ) {
+  console.log(action.type);
   switch (action.type) {
     case "showMore/showMore": {
       return showMoreReducer(state, action);
@@ -103,10 +158,74 @@ export function watchlistReducer(
     case "sort/sort": {
       return sortReducer(state, action);
     }
+    case "watchlist/collectionFilterChanged": {
+      return handleCollectionFilterChanged(state, action);
+    }
+    case "watchlist/directorFilterChanged": {
+      return handleDirectorFilterChanged(state, action);
+    }
+    case "watchlist/performerFilterChanged": {
+      return handlePerformerFilterChanged(state, action);
+    }
+    case "watchlist/writerFilterChanged": {
+      return handleWriterFilterChanged(state, action);
+    }
     default: {
       return titleFiltersReducer(state, action);
     }
   }
+}
+
+function handleCollectionFilterChanged(
+  state: WatchlistState,
+  action: CollectionFilterChangedAction,
+): WatchlistState {
+  return {
+    ...state,
+    pendingFilterValues: {
+      ...state.pendingFilterValues,
+      collection: action.value,
+    },
+  };
+}
+
+function handleDirectorFilterChanged(
+  state: WatchlistState,
+  action: DirectorFilterChangedAction,
+): WatchlistState {
+  return {
+    ...state,
+    pendingFilterValues: {
+      ...state.pendingFilterValues,
+      director: action.value,
+    },
+  };
+}
+
+function handlePerformerFilterChanged(
+  state: WatchlistState,
+  action: PerformerFilterChangedAction,
+): WatchlistState {
+  return {
+    ...state,
+    pendingFilterValues: {
+      ...state.pendingFilterValues,
+      performer: action.value,
+    },
+  };
+}
+
+function handleWriterFilterChanged(
+  state: WatchlistState,
+  action: WriterFilterChangedAction,
+): WatchlistState {
+  return {
+    ...state,
+    pendingFilterValues: {
+      ...state.pendingFilterValues,
+      writer: action.value,
+    },
+  };
 }
 
 /**
