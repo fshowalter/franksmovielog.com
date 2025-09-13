@@ -1,0 +1,47 @@
+import type {
+  FilterableReviewedTitle,
+  ReviewedTitleFiltersValues,
+} from "~/reducers/reviewedTitleFiltersReducer";
+
+import { selectFilteredTitles } from "./createSelectFilteredTitles";
+
+export function selectFilteredReviewedTitles<
+  TValue extends FilterableReviewedTitle,
+>(
+  filterValues: ReviewedTitleFiltersValues,
+  sortedValues: TValue[],
+  extraFilters: ((value: TValue) => boolean)[],
+) {
+  const filters: ((value: TValue) => boolean)[] = [
+    createGradeFilter(filterValues.gradeValue),
+    createReviewYearFilter(filterValues.reviewYear),
+    ...extraFilters,
+  ].filter((filterFn) => filterFn !== undefined);
+
+  return selectFilteredTitles(filterValues, sortedValues, filters);
+}
+
+/**
+ * Create a Genre filter function
+ */
+function createGradeFilter<TValue extends FilterableReviewedTitle>(
+  filterValue?: [number, number],
+) {
+  if (!filterValue) return;
+  return (value: TValue): boolean => {
+    return (
+      value.gradeValue >= filterValue[0] && value.gradeValue <= filterValue[1]
+    );
+  };
+}
+
+function createReviewYearFilter<TValue extends FilterableReviewedTitle>(
+  filterValue?: [string, string],
+) {
+  if (!filterValue) return;
+  return (value: TValue): boolean => {
+    return (
+      value.reviewYear >= filterValue[0] && value.reviewYear <= filterValue[1]
+    );
+  };
+}

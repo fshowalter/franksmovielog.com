@@ -4,6 +4,7 @@ export {
   createApplyFiltersAction,
   createClearFiltersAction,
   createResetFiltersAction,
+  selectHasPendingFilters,
 } from "./filtersReducer";
 
 import { createInitialFiltersState, filtersReducer } from "./filtersReducer";

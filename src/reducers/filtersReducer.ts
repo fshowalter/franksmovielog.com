@@ -71,6 +71,13 @@ export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
   }
 }
 
+export function selectHasPendingFilters<
+  TValue,
+  TState extends FiltersState<TValue>,
+>(state: TState): boolean {
+  return Object.keys(state.pendingFilterValues).length > 0;
+}
+
 /**
  * Apply pending filters to become active filters
  */

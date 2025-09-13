@@ -25,8 +25,8 @@ export type TitleSort =
 
 export function createTitleSorter<
   TValue extends SortableTitle,
-  TSort extends TitleSort,
->(sortMap?: Record<TSort, (a: TValue, b: TValue) => number>) {
+  TSort extends string,
+>(sortMap?: Record<string, (a: TValue, b: TValue) => number>) {
   const sorter = createSorter<TValue, TSort>({
     ...sortTitle<TValue>(),
     ...sortReleaseDate<TValue>(),

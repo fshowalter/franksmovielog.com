@@ -33,11 +33,7 @@ export function createSelectSortedTitles<
     ...sortMap,
   });
 
-  console.log("createSelectSortedTitles");
-
   return function selectSortedTitles(values: TValue[], sort: TSort) {
-    console.log("selectSortedTitles");
-
     return sorter(values, sort);
   };
 }

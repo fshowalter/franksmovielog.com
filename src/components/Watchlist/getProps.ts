@@ -2,7 +2,7 @@ import type { BackdropImageProps } from "~/api/backdrops";
 
 import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
-import { allWatchlistTitles } from "~/api/watchlistTitles";
+import { allWatchlistTitles } from "~/api/watchlist-titles";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { PosterListItemImageConfig } from "~/components/PosterList";
 

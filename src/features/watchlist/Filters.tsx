@@ -8,13 +8,10 @@ import type {
 } from "./Watchlist.reducer";
 
 import {
-  createCollectionFilterChangedAction,
-  createDirectorFilterChangedAction,
   createGenresFilterChangedAction,
-  createPerformerFilterChangedAction,
   createReleaseYearFilterChangedAction,
   createTitleFilterChangedAction,
-  createWriterFilterChangedAction,
+  createWatchlistFilterChangedAction,
 } from "./Watchlist.reducer";
 
 export function Filters({
@@ -59,28 +56,32 @@ export function Filters({
       <CreditSelectField
         initialValue={filterValues.director}
         label="Director"
-        onChange={(value) => dispatch(createDirectorFilterChangedAction(value))}
+        onChange={(value) =>
+          dispatch(createWatchlistFilterChangedAction("director", value))
+        }
         options={distinctDirectors}
       />
       <CreditSelectField
         initialValue={filterValues.performer}
         label="Performer"
         onChange={(value) =>
-          dispatch(createPerformerFilterChangedAction(value))
+          dispatch(createWatchlistFilterChangedAction("performer", value))
         }
         options={distinctPerformers}
       />
       <CreditSelectField
         initialValue={filterValues.writer}
         label="Writer"
-        onChange={(value) => dispatch(createWriterFilterChangedAction(value))}
+        onChange={(value) =>
+          dispatch(createWatchlistFilterChangedAction("writer", value))
+        }
         options={distinctWriters}
       />
       <CreditSelectField
         initialValue={filterValues.collection}
         label="Collection"
         onChange={(value) =>
-          dispatch(createCollectionFilterChangedAction(value))
+          dispatch(createWatchlistFilterChangedAction("collection", value))
         }
         options={distinctCollections}
       />

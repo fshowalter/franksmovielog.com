@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
-import type { WatchlistTitle } from "~/api/watchlistTitles";
+import type { WatchlistTitle } from "~/api/watchlist-titles";
 
 import { ListItemDetails } from "~/components/ListItemDetails";
 import { ListItemGenres } from "~/components/ListItemGenres";

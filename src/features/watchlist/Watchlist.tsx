@@ -1,4 +1,4 @@
-import { useMemo, useReducer } from "react";
+import { StrictMode, useReducer } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
@@ -6,10 +6,13 @@ import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSo
 import { FilterAndSortHeaderLink } from "~/components/filter-and-sort/FilterAndSortHeaderLink";
 import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
 import { GroupedPosterList } from "~/components/PosterList";
-
-import type { WatchlistSort } from "./Watchlist.selectors";
+import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import { Filters } from "./Filters";
+import { filterWatchlistValues } from "./filterWatchlistValues";
+import { groupWatchlistValues } from "./groupWatchlistValues";
+import { sortWatchlistValues, type WatchlistSort } from "./sortWatchlistValues";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -17,14 +20,9 @@ import {
   createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
+  selectHasPendingFilters,
   watchlistReducer,
 } from "./Watchlist.reducer";
-import {
-  selectFilteredWatchlistValues,
-  selectGroupedValues,
-  selectHasActiveFilters,
-  selectSortedWatchlistValues,
-} from "./Watchlist.selectors";
 import { WatchlistListItem } from "./WatchlistListItem";
 
 export type WatchlistProps = {
@@ -72,34 +70,23 @@ export function Watchlist({
     createInitialState,
   );
 
-  console.log(state);
-
-  const sortedValues = useMemo(
-    () => selectSortedWatchlistValues(state.values, state.sort),
-    [state.values, state.sort],
+  const [groupedValues, totalCount] = useGroupedValues(
+    sortWatchlistValues,
+    filterWatchlistValues,
+    groupWatchlistValues,
+    state.values,
+    state.sort,
+    state.activeFilterValues,
+    state.showCount,
   );
 
-  const filteredValues = useMemo(
-    () => selectFilteredWatchlistValues(state.activeFilterValues, sortedValues),
-    [state.activeFilterValues, sortedValues],
+  const pendingFilteredCount = usePendingFilterCount(
+    filterWatchlistValues,
+    state.values,
+    state.pendingFilterValues,
   );
 
-  const groupedValues = useMemo(
-    () => selectGroupedValues(filteredValues, state.showCount, state.sort),
-    [filteredValues, state.showCount, state.sort],
-  );
-
-  const pendingFilteredCount = useMemo(
-    () =>
-      selectFilteredWatchlistValues(state.pendingFilterValues, sortedValues)
-        .length,
-    [state.pendingFilterValues, sortedValues],
-  );
-
-  const hasActiveFilters = useMemo(
-    () => selectHasActiveFilters(state.pendingFilterValues),
-    [state.pendingFilterValues],
-  );
+  const hasActiveFilters = selectHasPendingFilters(state);
 
   return (
     <FilterAndSortContainer
@@ -134,13 +121,13 @@ export function Watchlist({
           dispatch(createSortAction(e.target.value as WatchlistSort)),
         sortOptions: <TitleSortOptions options={["title", "release-date"]} />,
       }}
-      totalCount={filteredValues.length}
+      totalCount={totalCount}
     >
       <div className="@container/list">
         <GroupedPosterList
           groupedValues={groupedValues}
           onShowMore={() => dispatch(createShowMoreAction())}
-          totalCount={filteredValues.length}
+          totalCount={totalCount}
           visibleCount={state.showCount}
         >
           {(value) => {
@@ -155,5 +142,17 @@ export function Watchlist({
         </GroupedPosterList>
       </div>
     </FilterAndSortContainer>
+  );
+}
+
+export function WatchlistClient({
+  props,
+}: {
+  props: WatchlistProps;
+}): React.JSX.Element {
+  return (
+    <StrictMode>
+      <Watchlist {...props} />
+    </StrictMode>
   );
 }

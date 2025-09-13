@@ -29,45 +29,37 @@ export {
   createReleaseYearFilterChangedAction,
   createResetFiltersAction,
   createTitleFilterChangedAction,
+  selectHasPendingFilters,
 } from "~/reducers/titleFiltersReducer";
 
 /**
  * Union type of all reviewed work-specific filter actions for Reviews page
  */
 export type WatchlistAction =
-  | CollectionFilterChangedAction
-  | DirectorFilterChangedAction
-  | PerformerFilterChangedAction
   | ShowMoreAction
   | SortAction<WatchlistSort>
   | TitleFiltersAction
-  | WriterFilterChangedAction;
+  | WatchlistFilterChangedAction;
 
+import type { WatchlistSort } from "./sortWatchlistValues";
 import type { WatchlistValue } from "./Watchlist";
-import type { WatchlistSort } from "./Watchlist.selectors";
 
 /**
  * Type definition for Reviews page filter values
  */
-export type WatchlistFiltersValues = TitleFiltersValues & {
+export type WatchlistFiltersValues = ExtraWatchlistFiltersValues &
+  TitleFiltersValues;
+
+type ExtraWatchlistFiltersValues = {
   collection?: string;
   director?: string;
   performer?: string;
   writer?: string;
 };
 
-type CollectionFilterChangedAction = {
-  type: "watchlist/collectionFilterChanged";
-  value: string;
-};
-
-type DirectorFilterChangedAction = {
-  type: "watchlist/directorFilterChanged";
-  value: string;
-};
-
-type PerformerFilterChangedAction = {
-  type: "watchlist/performerFilterChanged";
+type WatchlistFilterChangedAction = {
+  filter: keyof ExtraWatchlistFiltersValues;
+  type: "watchlist/filterChanged";
   value: string;
 };
 
@@ -83,23 +75,6 @@ type WatchlistState = Omit<
     activeFilterValues: WatchlistFiltersValues;
     pendingFilterValues: WatchlistFiltersValues;
   };
-
-type WriterFilterChangedAction = {
-  type: "watchlist/writerFilterChanged";
-  value: string;
-};
-
-export function createCollectionFilterChangedAction(
-  value: string,
-): CollectionFilterChangedAction {
-  return { type: "watchlist/collectionFilterChanged", value };
-}
-
-export function createDirectorFilterChangedAction(
-  value: string,
-): DirectorFilterChangedAction {
-  return { type: "watchlist/directorFilterChanged", value };
-}
 
 /**
  * Initializes the state for the Reviews page reducer.
@@ -130,16 +105,11 @@ export function createInitialState({
   };
 }
 
-export function createPerformerFilterChangedAction(
+export function createWatchlistFilterChangedAction(
+  filter: keyof ExtraWatchlistFiltersValues,
   value: string,
-): PerformerFilterChangedAction {
-  return { type: "watchlist/performerFilterChanged", value };
-}
-
-export function createWriterFilterChangedAction(
-  value: string,
-): WriterFilterChangedAction {
-  return { type: "watchlist/writerFilterChanged", value };
+): WatchlistFilterChangedAction {
+  return { filter, type: "watchlist/filterChanged", value };
 }
 
 /**
@@ -150,7 +120,6 @@ export function watchlistReducer(
   state: WatchlistState,
   action: WatchlistAction,
 ) {
-  console.log(action.type);
   switch (action.type) {
     case "showMore/showMore": {
       return showMoreReducer(state, action);
@@ -158,17 +127,8 @@ export function watchlistReducer(
     case "sort/sort": {
       return sortReducer(state, action);
     }
-    case "watchlist/collectionFilterChanged": {
-      return handleCollectionFilterChanged(state, action);
-    }
-    case "watchlist/directorFilterChanged": {
-      return handleDirectorFilterChanged(state, action);
-    }
-    case "watchlist/performerFilterChanged": {
-      return handlePerformerFilterChanged(state, action);
-    }
-    case "watchlist/writerFilterChanged": {
-      return handleWriterFilterChanged(state, action);
+    case "watchlist/filterChanged": {
+      return handleWatchlistFilterChanged(state, action);
     }
     default: {
       return titleFiltersReducer(state, action);
@@ -176,54 +136,15 @@ export function watchlistReducer(
   }
 }
 
-function handleCollectionFilterChanged(
+function handleWatchlistFilterChanged(
   state: WatchlistState,
-  action: CollectionFilterChangedAction,
+  action: WatchlistFilterChangedAction,
 ): WatchlistState {
   return {
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      collection: action.value,
-    },
-  };
-}
-
-function handleDirectorFilterChanged(
-  state: WatchlistState,
-  action: DirectorFilterChangedAction,
-): WatchlistState {
-  return {
-    ...state,
-    pendingFilterValues: {
-      ...state.pendingFilterValues,
-      director: action.value,
-    },
-  };
-}
-
-function handlePerformerFilterChanged(
-  state: WatchlistState,
-  action: PerformerFilterChangedAction,
-): WatchlistState {
-  return {
-    ...state,
-    pendingFilterValues: {
-      ...state.pendingFilterValues,
-      performer: action.value,
-    },
-  };
-}
-
-function handleWriterFilterChanged(
-  state: WatchlistState,
-  action: WriterFilterChangedAction,
-): WatchlistState {
-  return {
-    ...state,
-    pendingFilterValues: {
-      ...state.pendingFilterValues,
-      writer: action.value,
+      [action.filter]: action.value,
     },
   };
 }
