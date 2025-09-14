@@ -1,9 +1,13 @@
-import type {
-  FilterableReviewedTitle,
-  ReviewedTitleFiltersValues,
-} from "~/reducers/reviewedTitleFiltersReducer";
+import type { ReviewedTitleFiltersValues } from "~/reducers/reviewedTitleFiltersReducer";
+
+import type { FilterableTitle } from "./filterTitles";
 
 import { filterTitles } from "./filterTitles";
+
+export type FilterableReviewedTitle = FilterableTitle & {
+  gradeValue: number;
+  reviewYear: string;
+};
 
 export function filterReviewedTitles<TValue extends FilterableReviewedTitle>(
   filterValues: ReviewedTitleFiltersValues,

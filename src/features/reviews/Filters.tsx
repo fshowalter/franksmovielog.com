@@ -26,13 +26,13 @@ export function Filters({
 }): React.JSX.Element {
   return (
     <ReviewedTitleFilters
-      genre={{
-        initialValue: filterValues.genre,
+      genres={{
+        initialValue: filterValues.genres,
         onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
         values: distinctGenres,
       }}
       grade={{
-        initialValue: filterValues.grade,
+        initialValue: filterValues.gradeValue,
         onChange: (values) => dispatch(createGradeFilterChangedAction(values)),
       }}
       releaseYear={{

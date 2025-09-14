@@ -9,12 +9,6 @@ export {
 
 import { createInitialFiltersState, filtersReducer } from "./filtersReducer";
 
-export type FilterableTitle = {
-  genres: string[];
-  releaseYear: string;
-  title: string;
-};
-
 /**
  * Union type of all title-specific filter actions
  */
@@ -27,7 +21,7 @@ export type TitleFiltersAction =
 /**
  * Specialized state type for title-based lists with typed filter values
  */
-export type TitleFiltersState<TValue extends FilterableTitle> = Omit<
+export type TitleFiltersState<TValue> = Omit<
   FiltersState<TValue>,
   "activeFilterValues" | "pendingFilterValues"
 > & {
@@ -65,7 +59,7 @@ export function createGenresFilterChangedAction(
   return { type: "titleFilters/genresFilterChanged", values };
 }
 
-export function createInitialTitleFiltersState<TValue extends FilterableTitle>({
+export function createInitialTitleFiltersState<TValue>({
   values,
 }: {
   values: TValue[];
@@ -91,7 +85,7 @@ export function createTitleFilterChangedAction(
 
 // Create reducer function
 export function titleFiltersReducer<
-  TValue extends FilterableTitle,
+  TValue,
   TState extends TitleFiltersState<TValue>,
 >(state: TState, action: TitleFiltersAction): TState {
   switch (action.type) {
@@ -117,7 +111,7 @@ export function titleFiltersReducer<
  * Handle Genre filter action
  */
 function handleGenresFilterChanged<
-  TValue extends FilterableTitle,
+  TValue,
   TState extends TitleFiltersState<TValue>,
 >(state: TState, action: GenresFilterChangedAction): TState {
   return {
@@ -133,7 +127,7 @@ function handleGenresFilterChanged<
  * Handle Release Year filter action
  */
 function handleReleaseYearFilterChanged<
-  TValue extends FilterableTitle,
+  TValue,
   TState extends TitleFiltersState<TValue>,
 >(state: TState, action: ReleaseYearFilterChangedAction): TState {
   return {
@@ -149,7 +143,7 @@ function handleReleaseYearFilterChanged<
  * Handle Title filter action
  */
 function handleTitleFilterChanged<
-  TValue extends FilterableTitle,
+  TValue,
   TState extends TitleFiltersState<TValue>,
 >(state: TState, action: TitleFilterChangedAction): TState {
   return {

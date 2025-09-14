@@ -1,5 +1,4 @@
 import type {
-  FilterableTitle,
   TitleFiltersAction,
   TitleFiltersState,
   TitleFiltersValues,
@@ -20,11 +19,6 @@ import {
   titleFiltersReducer,
 } from "./titleFiltersReducer";
 
-export type FilterableReviewedTitle = FilterableTitle & {
-  gradeValue: number;
-  reviewYear: string;
-};
-
 /**
  * Union type of all title-specific filter actions
  */
@@ -33,14 +27,13 @@ export type ReviewedTitleFiltersAction =
   | ReviewYearFilterChangedAction
   | TitleFiltersAction;
 
-export type ReviewedTitleFiltersState<TValue extends FilterableReviewedTitle> =
-  Omit<
-    TitleFiltersState<TValue>,
-    "activeFilterValues" | "pendingFilterValues"
-  > & {
-    activeFilterValues: ReviewedTitleFiltersValues;
-    pendingFilterValues: ReviewedTitleFiltersValues;
-  };
+export type ReviewedTitleFiltersState<TValue> = Omit<
+  TitleFiltersState<TValue>,
+  "activeFilterValues" | "pendingFilterValues"
+> & {
+  activeFilterValues: ReviewedTitleFiltersValues;
+  pendingFilterValues: ReviewedTitleFiltersValues;
+};
 
 export type ReviewedTitleFiltersValues = TitleFiltersValues & {
   gradeValue?: [number, number];
@@ -63,9 +56,11 @@ export function createGradeFilterChangedAction(
   return { type: "reviewedTitleFilters/gradeFilterChanged", values };
 }
 
-export function createInitialReviewedTitleFiltersState<
-  TValue extends FilterableReviewedTitle,
->({ values }: { values: TValue[] }): ReviewedTitleFiltersState<TValue> {
+export function createInitialReviewedTitleFiltersState<TValue>({
+  values,
+}: {
+  values: TValue[];
+}): ReviewedTitleFiltersState<TValue> {
   const titleFilterState = createInitialTitleFiltersState({
     values,
   });
@@ -85,7 +80,7 @@ export function createReviewYearFilterChangedAction(
 
 // Create reducer function
 export function reviewedTitleFiltersReducer<
-  TValue extends FilterableReviewedTitle,
+  TValue,
   TState extends ReviewedTitleFiltersState<TValue>,
 >(state: TState, action: ReviewedTitleFiltersAction): TState {
   switch (action.type) {
@@ -105,7 +100,7 @@ export function reviewedTitleFiltersReducer<
 }
 
 function handleGradeFilterChanged<
-  TValue extends FilterableReviewedTitle,
+  TValue,
   TState extends ReviewedTitleFiltersState<TValue>,
 >(state: TState, action: GradeFilterChangedAction): TState {
   return {
@@ -118,7 +113,7 @@ function handleGradeFilterChanged<
 }
 
 function handleReviewYearFilterChanged<
-  TValue extends FilterableReviewedTitle,
+  TValue,
   TState extends ReviewedTitleFiltersState<TValue>,
 >(state: TState, action: ReviewYearFilterChangedAction): TState {
   return {

@@ -1,7 +1,10 @@
-import type {
-  FilterableTitle,
-  TitleFiltersValues,
-} from "~/reducers/titleFiltersReducer";
+import type { TitleFiltersValues } from "~/reducers/titleFiltersReducer";
+
+export type FilterableTitle = {
+  genres: string[];
+  releaseYear: string;
+  title: string;
+};
 
 export function filterTitles<TValue extends FilterableTitle>(
   filterValues: TitleFiltersValues,

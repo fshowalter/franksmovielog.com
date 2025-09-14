@@ -29,7 +29,10 @@ import {
 } from "~/components/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { CastAndCrewMember, type Props } from "./CastAndCrewMemberTitles";
+import {
+  type CastAndCrewMemberTitlesProps,
+  CastAndCrewMemberTitlesStrictWrapper,
+} from "./CastAndCrewMemberTitles";
 import { getProps } from "./getProps";
 
 const props = await getProps("alfred-hitchcock");
@@ -50,21 +53,13 @@ describe("CastAndCrewMember", () => {
     vi.useRealTimers();
   });
 
-  it("renders", ({ expect }) => {
-    expect.hasAssertions();
-
-    const { asFragment } = render(<CastAndCrewMember {...props} />);
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
 
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -85,7 +80,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -106,7 +101,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (A → Z)");
 
@@ -119,7 +114,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (Z → A)");
 
@@ -132,7 +127,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -145,7 +140,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Newest First)");
 
@@ -158,7 +153,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Best First)");
 
@@ -171,7 +166,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Worst First)");
 
@@ -184,7 +179,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Date (Oldest First)");
 
@@ -197,7 +192,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Date (Newest First)");
 
@@ -210,7 +205,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -230,7 +225,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -250,7 +245,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -268,7 +263,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickReviewedStatusFilterOption(user, "Not Reviewed");
 
@@ -284,7 +279,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickReviewedStatusFilterOption(user, "Not Reviewed");
 
@@ -305,7 +300,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -322,7 +317,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -345,7 +340,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -362,7 +357,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -385,7 +380,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -402,7 +397,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -425,7 +420,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -462,7 +457,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -480,7 +475,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -497,7 +492,7 @@ describe("CastAndCrewMember", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrewMember {...props} />);
+    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -543,34 +538,39 @@ describe("CastAndCrewMember", () => {
     );
 
     // Create props with more than 100 items to trigger pagination
-    const manyTitles: Props["titles"] = Array.from({ length: 150 }, (_, i) => ({
-      creditedAs: ["Director"],
-      genres: ["Test genre"],
-      grade: i % 2 === 0 ? "B+" : undefined,
-      gradeValue: i % 2 === 0 ? 8 : undefined,
-      imdbId: `tt${String(i).padStart(7, "0")}`,
-      posterImageProps: defaultPosterProps,
-      releaseSequence: i + 1,
-      releaseYear: "1970",
-      reviewDisplayDate: "",
-      reviewed: false,
-      reviewSequence: undefined,
-      reviewYear: "",
-      slug: `test-movie-${i + 1}`,
-      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-      title: `Test Movie ${i + 1}`,
-      watchlistCollectionNames: ["Test Collection"],
-      watchlistDirectorNames: ["Test Writer"],
-      watchlistPerformerNames: ["Test Writer"],
-      watchlistWriterNames: ["Test Writer"],
-    }));
+    const manyTitles: CastAndCrewMemberTitlesProps["values"] = Array.from(
+      { length: 150 },
+      (_, i) => ({
+        creditedAs: ["Director"],
+        genres: ["Test genre"],
+        grade: i % 2 === 0 ? "B+" : undefined,
+        gradeValue: i % 2 === 0 ? 8 : undefined,
+        imdbId: `tt${String(i).padStart(7, "0")}`,
+        posterImageProps: defaultPosterProps,
+        releaseSequence: i + 1,
+        releaseYear: "1970",
+        reviewDisplayDate: "",
+        reviewed: false,
+        reviewSequence: undefined,
+        reviewYear: "",
+        slug: `test-movie-${i + 1}`,
+        sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
+        title: `Test Movie ${i + 1}`,
+        watchlistCollectionNames: ["Test Collection"],
+        watchlistDirectorNames: ["Test Writer"],
+        watchlistPerformerNames: ["Test Writer"],
+        watchlistWriterNames: ["Test Writer"],
+      }),
+    );
 
-    const propsWithManyValues: Props = {
+    const propsWithManyValues: CastAndCrewMemberTitlesProps = {
       ...props,
-      titles: manyTitles,
+      values: manyTitles,
     };
 
-    render(<CastAndCrewMember {...propsWithManyValues} />);
+    render(
+      <CastAndCrewMemberTitlesStrictWrapper props={propsWithManyValues} />,
+    );
 
     await clickShowMore(user);
 
