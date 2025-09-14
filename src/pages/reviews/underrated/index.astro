@@ -1,14 +1,14 @@
 ---
 import React from "react";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/Layout/Layout";
-import { getPropsForUnderrated as getProps } from "~/components/Reviews/getProps";
-import { ReviewsSubNav } from "~/components/Reviews/ReviewsSubNav";
-import { Underrated } from "~/components/Reviews/Underrated";
+import { getUnderratedProps } from "~/features/reviews/getProps";
+import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
+import { UnderratedStrictWrapper } from "~/features/reviews/Underrated";
 import Layout from "~/layouts/Layout.astro";
 
-const props = await getProps();
+const props = await getUnderratedProps();
 
 // Separate layout props from interactive props
 const { backdropImageProps, deck, ...interactiveProps } = props;
@@ -33,6 +33,6 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
       title="Underrated Surprises"
     />
     <ReviewsSubNav active="underrated" />
-    <Underrated client:load {...interactiveProps} />
+    <UnderratedStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
 </Layout>

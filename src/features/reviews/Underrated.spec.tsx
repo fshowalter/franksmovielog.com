@@ -20,10 +20,10 @@ import {
 } from "~/components/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { getPropsForUnderrated } from "./getProps";
-import { type Props, Underrated } from "./Underrated";
+import { getUnderratedProps } from "./getProps";
+import { type UnderratedProps, UnderratedStrictWrapper } from "./Underrated";
 
-const props = await getPropsForUnderrated();
+const props = await getUnderratedProps();
 
 describe("Underrated", () => {
   beforeEach(() => {
@@ -42,7 +42,7 @@ describe("Underrated", () => {
   });
 
   it("renders", ({ expect }) => {
-    const { asFragment } = render(<Underrated {...props} />);
+    const { asFragment } = render(<UnderratedStrictWrapper props={props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -53,7 +53,7 @@ describe("Underrated", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -70,24 +70,27 @@ describe("Underrated", () => {
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
     // Create props with more than 100 items to trigger pagination
-    const manyValues: Props["values"] = Array.from({ length: 150 }, (_, i) => ({
-      genres: ["Drama"],
-      grade: "B+" as const,
-      gradeValue: 8,
-      imdbId: `tt${String(i).padStart(7, "0")}`,
-      posterImageProps: {
-        src: "test.jpg",
-        srcSet: "test.jpg 1x",
-      },
-      releaseSequence: i + 1,
-      releaseYear: "1930",
-      reviewDisplayDate: "Jan 01, 2023",
-      reviewSequence: i + 1,
-      reviewYear: "2023",
-      slug: `test-movie-${i + 1}`,
-      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-      title: `Test Movie ${i + 1}`,
-    }));
+    const manyValues: UnderratedProps["values"] = Array.from(
+      { length: 150 },
+      (_, i) => ({
+        genres: ["Drama"],
+        grade: "B+" as const,
+        gradeValue: 8,
+        imdbId: `tt${String(i).padStart(7, "0")}`,
+        posterImageProps: {
+          src: "test.jpg",
+          srcSet: "test.jpg 1x",
+        },
+        releaseSequence: i + 1,
+        releaseYear: "1930",
+        reviewDisplayDate: "Jan 01, 2023",
+        reviewSequence: i + 1,
+        reviewYear: "2023",
+        slug: `test-movie-${i + 1}`,
+        sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
+        title: `Test Movie ${i + 1}`,
+      }),
+    );
     const propsWithManyValues = {
       ...props,
       values: manyValues,
@@ -95,7 +98,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...propsWithManyValues} />);
+    render(<UnderratedStrictWrapper props={propsWithManyValues} />);
 
     await clickShowMore(user);
 
@@ -107,7 +110,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (A → Z)");
 
@@ -119,7 +122,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (Z → A)");
 
@@ -131,7 +134,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -143,7 +146,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Newest First)");
 
@@ -155,7 +158,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Best First)");
 
@@ -167,7 +170,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Worst First)");
 
@@ -179,7 +182,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -199,7 +202,7 @@ describe("Underrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -227,7 +230,7 @@ describe("Underrated", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -250,7 +253,7 @@ describe("Underrated", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -285,7 +288,7 @@ describe("Underrated", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Underrated {...props} />);
+    render(<UnderratedStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);

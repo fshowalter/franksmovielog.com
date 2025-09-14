@@ -20,10 +20,10 @@ import {
 } from "~/components/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { getPropsForUnderseen } from "./getProps";
-import { type Props, Underseen } from "./Underseen";
+import { getUnderseenProps } from "./getProps";
+import { type UnderseenProps, UnderseenStrictWrapper } from "./Underseen";
 
-const props = await getPropsForUnderseen();
+const props = await getUnderseenProps();
 
 describe("Underseen", () => {
   beforeEach(() => {
@@ -42,7 +42,7 @@ describe("Underseen", () => {
   });
 
   it("renders", ({ expect }) => {
-    const { asFragment } = render(<Underseen {...props} />);
+    const { asFragment } = render(<UnderseenStrictWrapper props={props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -53,7 +53,7 @@ describe("Underseen", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -70,24 +70,27 @@ describe("Underseen", () => {
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
     // Create props with more than 100 items to trigger pagination
-    const manyValues: Props["values"] = Array.from({ length: 150 }, (_, i) => ({
-      genres: ["Drama"],
-      grade: "B+" as const,
-      gradeValue: 8,
-      imdbId: `tt${String(i).padStart(7, "0")}`,
-      posterImageProps: {
-        src: "test.jpg",
-        srcSet: "test.jpg 1x",
-      },
-      releaseSequence: i + 1,
-      releaseYear: "1930",
-      reviewDisplayDate: "Jan 01, 2023",
-      reviewSequence: i + 1,
-      reviewYear: "2023",
-      slug: `test-movie-${i + 1}`,
-      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-      title: `Test Movie ${i + 1}`,
-    }));
+    const manyValues: UnderseenProps["values"] = Array.from(
+      { length: 150 },
+      (_, i) => ({
+        genres: ["Drama"],
+        grade: "B+" as const,
+        gradeValue: 8,
+        imdbId: `tt${String(i).padStart(7, "0")}`,
+        posterImageProps: {
+          src: "test.jpg",
+          srcSet: "test.jpg 1x",
+        },
+        releaseSequence: i + 1,
+        releaseYear: "1930",
+        reviewDisplayDate: "Jan 01, 2023",
+        reviewSequence: i + 1,
+        reviewYear: "2023",
+        slug: `test-movie-${i + 1}`,
+        sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
+        title: `Test Movie ${i + 1}`,
+      }),
+    );
     const propsWithManyValues = {
       ...props,
       values: manyValues,
@@ -95,7 +98,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...propsWithManyValues} />);
+    render(<UnderseenStrictWrapper props={propsWithManyValues} />);
 
     await clickShowMore(user);
 
@@ -107,7 +110,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (A → Z)");
 
@@ -119,7 +122,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (Z → A)");
 
@@ -131,7 +134,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -143,7 +146,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Newest First)");
 
@@ -155,7 +158,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Best First)");
 
@@ -167,7 +170,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Worst First)");
 
@@ -179,7 +182,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Date (Oldest First)");
 
@@ -191,7 +194,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Date (Newest First)");
 
@@ -203,7 +206,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -220,7 +223,7 @@ describe("Underseen", () => {
   it("can filter by release year reversed", async ({ expect }) => {
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -249,7 +252,7 @@ describe("Underseen", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -270,7 +273,7 @@ describe("Underseen", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -305,7 +308,7 @@ describe("Underseen", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Underseen {...props} />);
+    render(<UnderseenStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);

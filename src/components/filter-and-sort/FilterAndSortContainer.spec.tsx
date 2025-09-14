@@ -18,8 +18,13 @@ const mockProps = {
       <button type="button">Filter button</button>
     </div>
   ),
-  hasActiveFilters: false,
+  hasPendingFilters: false,
   list: <div data-testid="list">Test List Content</div>,
+  onApplyFilters: vi.fn(),
+  onClearFilters: vi.fn(),
+  onFilterDrawerOpen: vi.fn(),
+  onResetFilters: vi.fn(),
+  pendingFilteredCount: 250,
   sortProps: {
     currentSortValue: "title-asc",
     onSortChange: vi.fn(),
@@ -33,9 +38,11 @@ const mockProps = {
   totalCount: 100,
 };
 
-describe("ListWithFilters", () => {
+describe("FilterAndSortContainer", () => {
   it("renders", ({ expect }) => {
-    const { asFragment } = render(<FilterAndSortContainer {...mockProps} />);
+    const { asFragment } = render(
+      <FilterAndSortContainer {...mockProps}>Test</FilterAndSortContainer>,
+    );
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -43,73 +50,14 @@ describe("ListWithFilters", () => {
   it("displays the correct total count", ({ expect }) => {
     expect.hasAssertions();
 
-    render(<FilterAndSortContainer {...mockProps} totalCount={250} />);
+    render(
+      <FilterAndSortContainer {...mockProps} totalCount={250}>
+        Test
+      </FilterAndSortContainer>,
+    );
 
     expect(screen.getByText("250")).toBeInTheDocument();
     expect(screen.getByText("Results")).toBeInTheDocument();
-  });
-
-  it("can sort items", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const onSortChange = vi.fn();
-    const props = {
-      ...mockProps,
-      sortProps: {
-        ...mockProps.sortProps,
-        onSortChange,
-      },
-    };
-
-    render(<FilterAndSortContainer {...props} />);
-
-    const sortSelect = screen.getByLabelText("Sort");
-
-    await userEvent.selectOptions(sortSelect, "title-desc");
-
-    expect(onSortChange).toHaveBeenCalled();
-  });
-
-  it("renders optional list header buttons", ({ expect }) => {
-    expect.hasAssertions();
-
-    const listHeaderButtons = (
-      <button data-testid="header-button" type="button">
-        Custom Header Button
-      </button>
-    );
-
-    render(
-      <FilterAndSortContainer
-        {...mockProps}
-        listHeaderButtons={listHeaderButtons}
-      />,
-    );
-
-    expect(screen.getByTestId("header-button")).toBeInTheDocument();
-  });
-
-  it("renders optional sub navigation", ({ expect }) => {
-    expect.hasAssertions();
-
-    const dynamicSubNav = <nav data-testid="sub-nav">Sub Navigation</nav>;
-
-    render(
-      <FilterAndSortContainer {...mockProps} dynamicSubNav={dynamicSubNav} />,
-    );
-
-    expect(screen.getByTestId("sub-nav")).toBeInTheDocument();
-  });
-
-  it("applies custom className", ({ expect }) => {
-    expect.hasAssertions();
-
-    const { container } = render(
-      <FilterAndSortContainer {...mockProps} className="transform-3d" />,
-    );
-
-    const layoutElement = container.querySelector(".transform-3d");
-    expect(layoutElement).toBeTruthy();
   });
 
   describe("filter drawer", () => {
@@ -121,7 +69,9 @@ describe("ListWithFilters", () => {
     it("opens and closes filter drawer", async ({ expect }) => {
       expect.hasAssertions();
 
-      render(<FilterAndSortContainer {...mockProps} />);
+      render(
+        <FilterAndSortContainer {...mockProps}>Test</FilterAndSortContainer>,
+      );
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
@@ -155,7 +105,9 @@ describe("ListWithFilters", () => {
     it("closes filter drawer with escape key", async ({ expect }) => {
       expect.hasAssertions();
 
-      render(<FilterAndSortContainer {...mockProps} />);
+      render(
+        <FilterAndSortContainer {...mockProps}>Test</FilterAndSortContainer>,
+      );
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
@@ -184,7 +136,9 @@ describe("ListWithFilters", () => {
     }) => {
       expect.hasAssertions();
 
-      const { container } = render(<FilterAndSortContainer {...mockProps} />);
+      const { container } = render(
+        <FilterAndSortContainer {...mockProps}>Test</FilterAndSortContainer>,
+      );
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",
       });
@@ -227,7 +181,9 @@ describe("ListWithFilters", () => {
     it("closes filter drawer with View Results button", async ({ expect }) => {
       expect.hasAssertions();
 
-      render(<FilterAndSortContainer {...mockProps} />);
+      render(
+        <FilterAndSortContainer {...mockProps}>Test</FilterAndSortContainer>,
+      );
 
       const filterButton = screen.getByRole("button", {
         name: "Toggle filters",

@@ -1,10 +1,14 @@
 import type { GroupFn } from "~/groupers/groupValues";
-import type { SortableTitle } from "~/sorters/createTitleSorter";
 
 import { getGroupLetter, groupValues } from "~/groupers/groupValues";
 
+export type GroupableTitle = {
+  releaseYear: string;
+  sortTitle: string;
+};
+
 export function groupTitleValues<
-  TValue extends SortableTitle,
+  TValue extends GroupableTitle,
   TSort extends string,
 >(
   filteredValues: TValue[],
@@ -21,7 +25,7 @@ export function groupTitleValues<
 }
 
 function createGroupForTitleValue<
-  TValue extends SortableTitle,
+  TValue extends GroupableTitle,
   TSort extends string,
 >(grouper: GroupFn<TValue, TSort> = () => "") {
   return function groupForTitleValue(value: TValue, sort: TSort) {

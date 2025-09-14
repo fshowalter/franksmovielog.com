@@ -1,21 +1,32 @@
-import { useReducer, useState } from "react";
+import { StrictMode, useReducer } from "react";
 
-import { ListWithFilters } from "~/components/ListWithFilters/ListWithFilters";
-import { GroupedPosterList } from "~/components/PosterList";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
+import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { Sort } from "./reducer";
-import type { ReviewsListItemValue } from "./ReviewsListItem";
-
+import { filterReviewsValues } from "./filteredReviewsValues";
 import { Filters, SortOptions } from "./Filters";
-import { Actions, initState, reducer } from "./reducer";
-import { ReviewsListItem } from "./ReviewsListItem";
+import { groupReviewsValues } from "./groupReviewsValues";
+import {
+  createApplyFiltersAction,
+  createClearFiltersAction,
+  createInitialState,
+  createResetFiltersAction,
+  createShowMoreAction,
+  createSortAction,
+  reviewsReducer,
+  selectHasPendingFilters,
+} from "./reducer";
+import { ReviewsListItem, type ReviewsValue } from "./ReviewsListItem";
+import { type ReviewsSort, sortReviewsValues } from "./sortReviewsValues";
 
-export type Props = {
+export type UnderratedProps = {
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
-  initialSort: Sort;
-  values: ReviewsListItemValue[];
+  initialSort: ReviewsSort;
+  values: ReviewsValue[];
 };
 
 export function Underrated({
@@ -24,19 +35,36 @@ export function Underrated({
   distinctReviewYears,
   initialSort,
   values,
-}: Props): React.JSX.Element {
+}: UnderratedProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
-    reducer,
+    reviewsReducer,
     {
       initialSort,
       values,
     },
-    initState,
+    createInitialState,
   );
-  const [filterKey, setFilterKey] = useState(0);
+
+  const [groupedValues, totalCount] = useGroupedValues(
+    sortReviewsValues,
+    filterReviewsValues,
+    groupReviewsValues,
+    state.values,
+    state.sort,
+    state.activeFilterValues,
+    state.showCount,
+  );
+
+  const pendingFilteredCount = usePendingFilterCount(
+    filterReviewsValues,
+    state.values,
+    state.pendingFilterValues,
+  );
+
+  const hasPendingFilters = selectHasPendingFilters(state);
 
   return (
-    <ListWithFilters
+    <FilterAndSortContainer
       filters={
         <Filters
           dispatch={dispatch}
@@ -44,43 +72,46 @@ export function Underrated({
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
-          key={filterKey}
         />
       }
-      hasActiveFilters={state.hasActiveFilters}
-      list={
-        <GroupedPosterList
-          groupedValues={state.groupedValues}
-          onShowMore={() => dispatch({ type: Actions.SHOW_MORE })}
-          totalCount={state.filteredValues.length}
-          visibleCount={state.showCount}
-        >
-          {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
-        </GroupedPosterList>
-      }
-      onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      hasPendingFilters={hasPendingFilters}
+      onApplyFilters={() => dispatch(createApplyFiltersAction())}
       onClearFilters={() => {
-        dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
-        setFilterKey((k) => k + 1);
+        dispatch(createClearFiltersAction());
       }}
-      onFilterDrawerOpen={() =>
-        dispatch({ type: Actions.RESET_PENDING_FILTERS })
-      }
+      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
       onResetFilters={() => {
-        dispatch({ type: Actions.RESET_PENDING_FILTERS });
-        setFilterKey((k) => k + 1);
+        dispatch(createResetFiltersAction());
       }}
-      pendingFilteredCount={state.pendingFilteredCount}
+      pendingFilteredCount={pendingFilteredCount}
       sortProps={{
-        currentSortValue: state.sortValue,
+        currentSortValue: state.sort,
         onSortChange: (e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          }),
+          dispatch(createSortAction(e.target.value as ReviewsSort)),
         sortOptions: <SortOptions />,
       }}
-      totalCount={state.filteredValues.length}
-    />
+      totalCount={totalCount}
+    >
+      <GroupedPosterList
+        groupedValues={groupedValues}
+        onShowMore={() => dispatch(createShowMoreAction())}
+        totalCount={totalCount}
+        visibleCount={state.showCount}
+      >
+        {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
+      </GroupedPosterList>
+    </FilterAndSortContainer>
+  );
+}
+
+export function UnderratedStrictWrapper({
+  props,
+}: {
+  props: UnderratedProps;
+}): React.JSX.Element {
+  return (
+    <StrictMode>
+      <Underrated {...props} />
+    </StrictMode>
   );
 }

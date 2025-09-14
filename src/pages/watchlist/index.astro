@@ -2,7 +2,7 @@
 import { Backdrop } from "~/components/Backdrop";
 import { Layout as ComponentLayout } from "~/components/Layout/Layout";
 import { getProps } from "~/components/Watchlist/getProps";
-import { WatchlistClient } from "~/features/watchlist/Watchlist";
+import { WatchlistStrictWrapper } from "~/features/watchlist/Watchlist";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
@@ -22,6 +22,6 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
 >
   <ComponentLayout className="bg-subtle">
     <Backdrop deck={deck} imageProps={backdropImageProps} title="Watchlist" />
-    <WatchlistClient client:load props={interactiveProps} />
+    <WatchlistStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
 </Layout>

@@ -22,10 +22,10 @@ import {
 } from "~/components/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { AllReviews, type Props } from "./AllReviews";
-import { getProps } from "./getProps";
+import { type AllReviewsProps, AllReviewsStrictWrapper } from "./AllReviews";
+import { getAllReviewsProps } from "./getProps";
 
-const props = await getProps();
+const props = await getAllReviewsProps();
 
 describe("AllReviews", () => {
   beforeEach(() => {
@@ -44,7 +44,7 @@ describe("AllReviews", () => {
   });
 
   it("renders", ({ expect }) => {
-    const { asFragment } = render(<AllReviews {...props} />);
+    const { asFragment } = render(<AllReviewsStrictWrapper props={props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -54,7 +54,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -71,7 +71,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Date (Newest First)");
 
@@ -83,7 +83,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Date (Oldest First)");
 
@@ -95,7 +95,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (A → Z)");
 
@@ -107,7 +107,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (Z → A)");
 
@@ -119,7 +119,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -131,7 +131,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Newest First)");
 
@@ -143,7 +143,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Best First)");
 
@@ -155,7 +155,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Worst First)");
 
@@ -167,7 +167,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -183,7 +183,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -205,7 +205,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -221,7 +221,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -241,7 +241,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -257,7 +257,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -275,7 +275,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -295,24 +295,27 @@ describe("AllReviews", () => {
   it("can show more titles", async ({ expect }) => {
     expect.hasAssertions();
     // Create props with more than 100 items to trigger pagination
-    const manyValues: Props["values"] = Array.from({ length: 150 }, (_, i) => ({
-      genres: ["Drama"],
-      grade: "B+" as const,
-      gradeValue: 8,
-      imdbId: `tt${String(i).padStart(7, "0")}`,
-      posterImageProps: {
-        src: "test.jpg",
-        srcSet: "test.jpg 1x",
-      },
-      releaseSequence: i + 1,
-      releaseYear: "1930",
-      reviewDisplayDate: "Jan 01, 2023",
-      reviewSequence: i + 2,
-      reviewYear: "2023",
-      slug: `test-movie-${i + 1}`,
-      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-      title: `Test Movie ${i + 1}`,
-    }));
+    const manyValues: AllReviewsProps["values"] = Array.from(
+      { length: 150 },
+      (_, i) => ({
+        genres: ["Drama"],
+        grade: "B+" as const,
+        gradeValue: 8,
+        imdbId: `tt${String(i).padStart(7, "0")}`,
+        posterImageProps: {
+          src: "test.jpg",
+          srcSet: "test.jpg 1x",
+        },
+        releaseSequence: i + 1,
+        releaseYear: "1930",
+        reviewDisplayDate: "Jan 01, 2023",
+        reviewSequence: i + 2,
+        reviewYear: "2023",
+        slug: `test-movie-${i + 1}`,
+        sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
+        title: `Test Movie ${i + 1}`,
+      }),
+    );
     const propsWithManyValues = {
       ...props,
       values: manyValues,
@@ -320,7 +323,7 @@ describe("AllReviews", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...propsWithManyValues} />);
+    render(<AllReviewsStrictWrapper props={propsWithManyValues} />);
 
     await clickShowMore(user);
 
@@ -333,7 +336,7 @@ describe("AllReviews", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -371,7 +374,7 @@ describe("AllReviews", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<AllReviews {...props} />);
+    render(<AllReviewsStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);

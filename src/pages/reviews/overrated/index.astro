@@ -1,14 +1,14 @@
 ---
 import React from "react";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/Layout/Layout";
-import { getPropsForOverrated as getProps } from "~/components/Reviews/getProps";
-import { Overrated } from "~/components/Reviews/Overrated";
-import { ReviewsSubNav } from "~/components/Reviews/ReviewsSubNav";
+import { getOverratedProps } from "~/features/reviews/getProps";
+import { OverratedStrictWrapper } from "~/features/reviews/Overrated";
+import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
 import Layout from "~/layouts/Layout.astro";
 
-const props = await getProps();
+const props = await getOverratedProps();
 
 // Separate layout props from interactive props
 const { backdropImageProps, deck, ...interactiveProps } = props;
@@ -38,6 +38,6 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
       title="Overrated"
     />
     <ReviewsSubNav active="overrated" />
-    <Overrated client:load {...interactiveProps} />
+    <OverratedStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
 </Layout>

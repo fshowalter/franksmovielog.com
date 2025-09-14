@@ -1,11 +1,15 @@
-import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
+import { ReviewedTitleFilters } from "~/components/filter-and-sort/ReviewedTitleFilters";
+import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
-import { TitleFilters } from "~/components/ListWithFilters/TitleFilters";
-import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
-
-import type { ActionType } from "./reducer";
-
-import { Actions } from "./reducer";
+import {
+  createGenresFilterChangedAction,
+  createGradeFilterChangedAction,
+  createReleaseYearFilterChangedAction,
+  createReviewYearFilterChangedAction,
+  createTitleFilterChangedAction,
+  type ReviewsAction,
+  type ReviewsFiltersValues,
+} from "./reducer";
 
 export function Filters({
   dispatch,
@@ -14,56 +18,43 @@ export function Filters({
   distinctReviewYears,
   filterValues,
 }: {
-  dispatch: React.Dispatch<ActionType>;
+  dispatch: React.Dispatch<ReviewsAction>;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  filterValues: TitleFilterValues;
+  filterValues: ReviewsFiltersValues;
 }): React.JSX.Element {
   return (
-    <TitleFilters
+    <ReviewedTitleFilters
       genre={{
         initialValue: filterValues.genre,
-        onChange: (values) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_GENRES,
-            values,
-          }),
+        onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
         values: distinctGenres,
       }}
       grade={{
         initialValue: filterValues.grade,
-        onChange: (values) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_GRADE,
-            values,
-          }),
+        onChange: (values) => dispatch(createGradeFilterChangedAction(values)),
       }}
       releaseYear={{
         initialValue: filterValues.releaseYear,
         onChange: (values) =>
-          dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values }),
+          dispatch(createReleaseYearFilterChangedAction(values)),
         values: distinctReleaseYears,
       }}
       reviewYear={{
         initialValue: filterValues.reviewYear,
         onChange: (values) =>
-          dispatch({ type: Actions.PENDING_FILTER_REVIEW_YEAR, values }),
+          dispatch(createReviewYearFilterChangedAction(values)),
         values: distinctReviewYears,
       }}
       title={{
         initialValue: filterValues.title,
-        onChange: (value) =>
-          dispatch({ type: Actions.PENDING_FILTER_TITLE, value }),
+        onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
       }}
     />
   );
 }
 
 export function SortOptions(): React.JSX.Element {
-  return (
-    <TitleSortOptions
-      options={["title", "grade", "release-date", "review-date"]}
-    />
-  );
+  return <ReviewedTitleSortOptions />;
 }

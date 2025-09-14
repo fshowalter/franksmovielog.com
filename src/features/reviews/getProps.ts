@@ -1,20 +1,20 @@
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
+import type { ReviewsValue } from "~/features/reviews/ReviewsListItem";
 
 import { getBackdropImageProps } from "~/api/backdrops";
-import { allOverratedDisappointments } from "~/api/overratedDisappointments";
+import { allOverratedDisappointments } from "~/api/overrated-disappointments";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allReviews } from "~/api/reviews";
-import { allUnderratedSurprises } from "~/api/underratedSurprises";
-import { allUnderseenGems } from "~/api/underseenGems";
-import { BackdropImageConfig } from "~/components/Backdrop";
-import { PosterListItemImageConfig } from "~/components/PosterList";
+import { allUnderratedSurprises } from "~/api/underrated-surprises";
+import { allUnderseenGems } from "~/api/underseen-gems";
+import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
+import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
 
-import type { Props } from "./AllReviews";
-import type { Props as OverratedProps } from "./Overrated";
-import type { Props as UnderratedProps } from "./Underrated";
-import type { Props as UnderseenProps } from "./Underseen";
+import type { AllReviewsProps } from "./AllReviews";
+import type { OverratedProps } from "./Overrated";
+import type { UnderratedProps } from "./Underrated";
+import type { UnderseenProps } from "./Underseen";
 
 type PageProps<T> = T & {
   backdropImageProps: BackdropImageProps;
@@ -22,11 +22,13 @@ type PageProps<T> = T & {
   metaDescription: string;
 };
 
-export async function getProps(): Promise<PageProps<Props>> {
+export async function getAllReviewsProps(): Promise<
+  PageProps<AllReviewsProps>
+> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
     await allReviews();
 
-  const values = await buildReviewListItemValues(reviews, true);
+  const values = await buildReviewValues(reviews, true);
 
   return {
     backdropImageProps: await getBackdropImageProps(
@@ -44,9 +46,7 @@ export async function getProps(): Promise<PageProps<Props>> {
   };
 }
 
-export async function getPropsForOverrated(): Promise<
-  PageProps<OverratedProps>
-> {
+export async function getOverratedProps(): Promise<PageProps<OverratedProps>> {
   const {
     distinctGenres,
     distinctReleaseYears,
@@ -54,10 +54,7 @@ export async function getPropsForOverrated(): Promise<
     overratedDisappointments,
   } = await allOverratedDisappointments();
 
-  const values = await buildReviewListItemValues(
-    overratedDisappointments,
-    false,
-  );
+  const values = await buildReviewValues(overratedDisappointments, false);
 
   return {
     backdropImageProps: await getBackdropImageProps(
@@ -75,7 +72,7 @@ export async function getPropsForOverrated(): Promise<
   };
 }
 
-export async function getPropsForUnderrated(): Promise<
+export async function getUnderratedProps(): Promise<
   PageProps<UnderratedProps>
 > {
   const {
@@ -85,7 +82,7 @@ export async function getPropsForUnderrated(): Promise<
     underratedSurprises,
   } = await allUnderratedSurprises();
 
-  const values = await buildReviewListItemValues(underratedSurprises, false);
+  const values = await buildReviewValues(underratedSurprises, false);
 
   return {
     backdropImageProps: await getBackdropImageProps(
@@ -103,9 +100,7 @@ export async function getPropsForUnderrated(): Promise<
   };
 }
 
-export async function getPropsForUnderseen(): Promise<
-  PageProps<UnderseenProps>
-> {
+export async function getUnderseenProps(): Promise<PageProps<UnderseenProps>> {
   const {
     distinctGenres,
     distinctReleaseYears,
@@ -113,7 +108,7 @@ export async function getPropsForUnderseen(): Promise<
     underseenGems,
   } = await allUnderseenGems();
 
-  const values = await buildReviewListItemValues(underseenGems, false);
+  const values = await buildReviewValues(underseenGems, false);
 
   return {
     backdropImageProps: await getBackdropImageProps(
@@ -131,7 +126,7 @@ export async function getPropsForUnderseen(): Promise<
   };
 }
 
-async function buildReviewListItemValues(
+async function buildReviewValues(
   reviews: {
     genres: string[];
     grade: string;
@@ -146,12 +141,12 @@ async function buildReviewListItemValues(
     title: string;
   }[],
   includeReviewMonth: boolean,
-): Promise<ReviewsListItemValue[]> {
+): Promise<ReviewsValue[]> {
   return Promise.all(
     reviews.map(async (review) => {
       const date = review.reviewDate;
 
-      const value: ReviewsListItemValue = {
+      const value: ReviewsValue = {
         genres: review.genres,
         grade: review.grade,
         gradeValue: review.gradeValue,

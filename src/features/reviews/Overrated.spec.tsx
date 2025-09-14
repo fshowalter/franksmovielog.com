@@ -20,10 +20,10 @@ import {
 } from "~/components/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { getPropsForOverrated } from "./getProps";
-import { Overrated } from "./Overrated";
+import { getOverratedProps } from "./getProps";
+import { OverratedStrictWrapper } from "./Overrated";
 
-const props = await getPropsForOverrated();
+const props = await getOverratedProps();
 
 describe("Overrated", () => {
   beforeEach(() => {
@@ -42,7 +42,7 @@ describe("Overrated", () => {
   });
 
   it("renders", ({ expect }) => {
-    const { asFragment } = render(<Overrated {...props} />);
+    const { asFragment } = render(<OverratedStrictWrapper props={props} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
@@ -53,7 +53,7 @@ describe("Overrated", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -94,7 +94,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...propsWithManyValues} />);
+    render(<OverratedStrictWrapper props={propsWithManyValues} />);
 
     await clickShowMore(user);
 
@@ -106,7 +106,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (A → Z)");
 
@@ -118,7 +118,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Title (Z → A)");
 
@@ -130,7 +130,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -142,7 +142,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Release Date (Newest First)");
 
@@ -154,7 +154,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Best First)");
 
@@ -166,7 +166,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickSortOption(user, "Grade (Worst First)");
 
@@ -178,7 +178,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -194,7 +194,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -216,7 +216,7 @@ describe("Overrated", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     await clickToggleFilters(user);
 
@@ -236,7 +236,7 @@ describe("Overrated", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     const listBeforeFilters = getGroupedPosterList().innerHTML;
 
@@ -270,7 +270,7 @@ describe("Overrated", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<Overrated {...props} />);
+    render(<OverratedStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);

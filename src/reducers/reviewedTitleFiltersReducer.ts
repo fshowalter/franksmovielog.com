@@ -13,6 +13,7 @@ export {
   createReleaseYearFilterChangedAction,
   createResetFiltersAction,
   createTitleFilterChangedAction,
+  selectHasPendingFilters,
 } from "./titleFiltersReducer";
 
 import {

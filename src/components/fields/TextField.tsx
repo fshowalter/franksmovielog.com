@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { debounceOnChange } from "~/utils/debounce";
 
 import { LabelText } from "./LabelText";
@@ -19,8 +17,6 @@ export function TextField({
   onInputChange: onChangeHandler;
   placeholder: string;
 }): React.JSX.Element {
-  // Initialize with the initial value, then manage state internally
-  const [localValue, setLocalValue] = useState(initialValue || "");
   const debouncedHandleChange = debounceOnChange(
     onInputChange,
     TEXT_FILTER_DEBOUNCE_MS,
@@ -28,7 +24,6 @@ export function TextField({
 
   const handleChange = (e: React.FormEvent<HTMLInputElement>): void => {
     const newValue = (e.target as HTMLInputElement).value;
-    setLocalValue(newValue); // Update immediately for responsive typing
     debouncedHandleChange(newValue); // Debounce the callback
   };
 
@@ -41,10 +36,10 @@ export function TextField({
           outline-accent
           placeholder:text-default placeholder:opacity-50
         `}
+        defaultValue={initialValue}
         onChange={handleChange}
         placeholder={placeholder}
         type="text"
-        value={localValue}
       />
     </label>
   );

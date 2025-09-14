@@ -1,4 +1,4 @@
-import { selectFilteredTitles } from "~/selectors/createSelectFilteredTitles";
+import { filterTitles } from "~/filterers/filterTitles";
 
 import type { WatchlistFiltersValues } from "./Watchlist.reducer";
 import type { WatchlistValue } from "./WatchlistListItem";
@@ -14,7 +14,7 @@ export function filterWatchlistValues(
     createCollectionFilter(filterValues.collection),
   ].filter((filterFn) => filterFn !== undefined);
 
-  return selectFilteredTitles(filterValues, sortedValues, extraFilters);
+  return filterTitles(filterValues, sortedValues, extraFilters);
 }
 
 function createCollectionFilter(filterValue?: string) {

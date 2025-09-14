@@ -86,7 +86,7 @@ export function Watchlist({
     state.pendingFilterValues,
   );
 
-  const hasActiveFilters = selectHasPendingFilters(state);
+  const hasPendingFilters = selectHasPendingFilters(state);
 
   return (
     <FilterAndSortContainer
@@ -102,7 +102,7 @@ export function Watchlist({
           filterValues={state.pendingFilterValues}
         />
       }
-      hasActiveFilters={hasActiveFilters}
+      hasPendingFilters={hasPendingFilters}
       headerLinks={
         <FilterAndSortHeaderLink href="/watchlist/progress/" text="progress" />
       }
@@ -145,7 +145,7 @@ export function Watchlist({
   );
 }
 
-export function WatchlistClient({
+export function WatchlistStrictWrapper({
   props,
 }: {
   props: WatchlistProps;

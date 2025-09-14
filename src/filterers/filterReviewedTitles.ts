@@ -3,11 +3,9 @@ import type {
   ReviewedTitleFiltersValues,
 } from "~/reducers/reviewedTitleFiltersReducer";
 
-import { selectFilteredTitles } from "./createSelectFilteredTitles";
+import { filterTitles } from "./filterTitles";
 
-export function selectFilteredReviewedTitles<
-  TValue extends FilterableReviewedTitle,
->(
+export function filterReviewedTitles<TValue extends FilterableReviewedTitle>(
   filterValues: ReviewedTitleFiltersValues,
   sortedValues: TValue[],
   extraFilters: ((value: TValue) => boolean)[],
@@ -18,7 +16,7 @@ export function selectFilteredReviewedTitles<
     ...extraFilters,
   ].filter((filterFn) => filterFn !== undefined);
 
-  return selectFilteredTitles(filterValues, sortedValues, filters);
+  return filterTitles(filterValues, sortedValues, filters);
 }
 
 /**

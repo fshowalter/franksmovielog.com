@@ -14,7 +14,7 @@ type Props<T extends string> = {
   children: React.ReactNode;
   className?: string;
   filters: React.ReactNode;
-  hasActiveFilters: boolean;
+  hasPendingFilters: boolean;
   headerLinks?: React.ReactNode;
   onApplyFilters: () => void;
   onClearFilters: () => void;
@@ -30,7 +30,7 @@ export function FilterAndSortContainer<T extends string>({
   children,
   className,
   filters,
-  hasActiveFilters,
+  hasPendingFilters,
   headerLinks,
   onApplyFilters,
   onClearFilters,
@@ -47,6 +47,7 @@ export function FilterAndSortContainer<T extends string>({
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
   const timeoutRefs = useRef<Set<NodeJS.Timeout>>(new Set());
   const prevSortValueRef = useRef<T>(sortProps.currentSortValue);
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const handleCloseDrawer = useCallback(
     (shouldResetFilters = true) => {
@@ -56,9 +57,11 @@ export function FilterAndSortContainer<T extends string>({
       setFilterDrawerVisible(false);
       if (shouldResetFilters) {
         onResetFilters();
+        console.log(formRef?.current);
+        formRef?.current?.reset();
       }
     },
-    [onResetFilters],
+    [onResetFilters, formRef],
   );
 
   const onFilterClick = useCallback(
@@ -204,12 +207,13 @@ export function FilterAndSortContainer<T extends string>({
             id="filters"
             ref={filtersRef}
           >
-            <div
+            <form
               className={`
                 flex h-full w-full flex-col text-sm
                 tablet:text-base
                 [@media(min-height:815px)]:pt-12
               `}
+              ref={formRef}
             >
               {/* Close button */}
               <button
@@ -278,18 +282,18 @@ export function FilterAndSortContainer<T extends string>({
                       uppercase transition-transform
                       enabled:hover:scale-105 enabled:hover:drop-shadow-md
                       ${
-                        hasActiveFilters
+                        hasPendingFilters
                           ? "cursor-pointer text-default"
                           : "cursor-not-allowed text-muted opacity-50"
                       }
                     `}
-                    disabled={hasActiveFilters ? undefined : false}
+                    disabled={hasPendingFilters ? undefined : false}
                     onClick={() => {
-                      if (hasActiveFilters) {
+                      if (hasPendingFilters) {
                         onClearFilters?.();
                       }
                     }}
-                    type="button"
+                    type="reset"
                   >
                     Clear
                   </button>
@@ -315,7 +319,7 @@ export function FilterAndSortContainer<T extends string>({
                   </button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

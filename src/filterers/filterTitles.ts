@@ -3,7 +3,7 @@ import type {
   TitleFiltersValues,
 } from "~/reducers/titleFiltersReducer";
 
-export function selectFilteredTitles<TValue extends FilterableTitle>(
+export function filterTitles<TValue extends FilterableTitle>(
   filterValues: TitleFiltersValues,
   sortedValues: TValue[],
   extraFilters: ((value: TValue) => boolean)[],

@@ -29,6 +29,7 @@ export {
   createResetFiltersAction,
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,
+  selectHasPendingFilters,
 } from "~/reducers/reviewedTitleFiltersReducer";
 
 export { createShowMoreAction } from "~/reducers/showMoreReducer";
@@ -42,7 +43,7 @@ export type ReviewsAction =
   | SortAction<ReviewsSort>;
 
 import type { ReviewsValue } from "./ReviewsListItem";
-import type { ReviewsSort } from "./selectSortedReviewsValues";
+import type { ReviewsSort } from "./sortReviewsValues";
 
 /**
  * Type definition for Reviews page filter values

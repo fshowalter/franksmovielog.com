@@ -1,10 +1,15 @@
 import type { GroupFn } from "~/groupers/groupValues";
-import type { SortableReviewedTitle } from "~/sorters/createReviewedTitleSorter";
 
-import { groupTitleValues } from "./groupTitleValues";
+import { type GroupableTitle, groupTitleValues } from "./groupTitleValues";
 
-export function selectGroupedReviewedTitleValues<
-  TValue extends SortableReviewedTitle,
+type GroupableReviewedTitle = GroupableTitle & {
+  grade: string;
+  reviewMonth?: string;
+  reviewYear: string;
+};
+
+export function groupReviewedTitleValues<
+  TValue extends GroupableReviewedTitle,
   TSort extends string,
 >(
   filteredValues: TValue[],
@@ -21,7 +26,7 @@ export function selectGroupedReviewedTitleValues<
 }
 
 function createGroupForReviewedTitleValue<
-  TValue extends SortableReviewedTitle,
+  TValue extends GroupableReviewedTitle,
   TSort extends string,
 >(grouper: GroupFn<TValue, TSort> = () => "") {
   return function groupForTitleValue(value: TValue, sort: TSort) {

@@ -2,11 +2,11 @@ import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewsListItemValue } from "~/components/Reviews/ReviewsListItem";
 
 import { getBackdropImageProps } from "~/api/backdrops";
-import { allOverratedDisappointments } from "~/api/overratedDisappointments";
+import { allOverratedDisappointments } from "~/api/overrated-disappointments";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allReviews } from "~/api/reviews";
-import { allUnderratedSurprises } from "~/api/underratedSurprises";
-import { allUnderseenGems } from "~/api/underseenGems";
+import { allUnderratedSurprises } from "~/api/underrated-surprises";
+import { allUnderseenGems } from "~/api/underseen-gems";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { PosterListItemImageConfig } from "~/components/PosterList";
 import { displayDate } from "~/utils/displayDate";

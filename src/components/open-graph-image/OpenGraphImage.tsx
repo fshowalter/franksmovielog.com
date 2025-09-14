@@ -1,14 +1,18 @@
-export type HomeOpenGraphImageComponentType = (
-  props: HomeOpenGraphImageProps,
+export type OpenGraphImageComponentType = (
+  props: OpenGraphImageProps,
 ) => React.JSX.Element;
 
-type HomeOpenGraphImageProps = {
+type OpenGraphImageProps = {
   backdrop: string;
+  sectionHead?: string;
+  title: string;
 };
 
 export function OpenGraphImage({
   backdrop,
-}: HomeOpenGraphImageProps): React.JSX.Element {
+  sectionHead = "Frank's Movie Log",
+  title,
+}: OpenGraphImageProps): React.JSX.Element {
   // eslint-disable-next-line react-compiler/react-compiler
   "use no memo";
 
@@ -31,41 +35,45 @@ export function OpenGraphImage({
       />
       <div
         style={{
+          backgroundImage:
+            "radial-gradient(400px at left bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0)) 25%",
           bottom: 0,
           display: "flex",
           flexDirection: "column",
           paddingBottom: "64px",
           paddingLeft: "80px",
           paddingRight: "80px",
-          paddingTop: "32px",
+          paddingTop: "332px",
           position: "absolute",
           width: "1200px",
         }}
       >
         <div
           style={{
-            color: "#fff",
-            display: "flex",
-            fontFamily: "FrankRuhlLibre",
-            fontSize: "72px",
-            fontWeight: 800,
-            lineHeight: 1,
-            textShadow: "1px 1px 2px black",
+            color: "#c29d52",
+            fontFamily: "Assistant",
+            fontSize: "18px",
+            fontWeight: 700,
+            marginBottom: "8px",
+            textTransform: "uppercase",
           }}
         >
-          Frank&apos;s Movie Log
+          {sectionHead}
         </div>
         <div
           style={{
-            color: "#c29d52",
-            fontFamily: "Assistant",
-            fontSize: "20px",
-            fontWeight: 700,
-            marginBottom: "8px",
+            color: "#fff",
+            display: "flex",
+            flexWrap: "wrap",
+            fontFamily: "FrankRuhlLibre",
+            fontSize: "88px",
+            fontWeight: 800,
+            lineHeight: 1,
             textShadow: "1px 1px 2px black",
+            textWrap: "balance",
           }}
         >
-          Quality reviews of films of questionable quality.
+          {title}
         </div>
       </div>
     </div>

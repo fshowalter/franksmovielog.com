@@ -17,11 +17,8 @@ export type ReviewedTitleSort =
   | TitleSort;
 
 export type SortableReviewedTitle = SortableTitle & {
-  grade: string;
   gradeValue: number;
-  reviewMonth?: string;
   reviewSequence: number;
-  reviewYear: string;
 };
 
 export function createReviewedTitleSorter<
@@ -41,9 +38,9 @@ export function createReviewedTitleSorter<
 
 function sortGrade<TValue extends SortableReviewedTitle>() {
   return {
-    "title-asc": (a: TValue, b: TValue) =>
+    "grade-asc": (a: TValue, b: TValue) =>
       sortNumber(a.gradeValue, b.gradeValue),
-    "title-desc": (a: TValue, b: TValue) =>
+    "grade-desc": (a: TValue, b: TValue) =>
       sortNumber(a.gradeValue, b.gradeValue) * -1,
   };
 }
