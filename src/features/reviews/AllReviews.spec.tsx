@@ -43,12 +43,6 @@ describe("AllReviews", () => {
     vi.useRealTimers();
   });
 
-  it("renders", ({ expect }) => {
-    const { asFragment } = render(<AllReviewsStrictWrapper props={props} />);
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
 

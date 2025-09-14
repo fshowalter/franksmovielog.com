@@ -30,15 +30,7 @@ export function sortReducer<TSort, TState extends SortState<TSort>>(
   state: TState,
   action: SortAction<TSort>,
 ): TState {
-  switch (action.type) {
-    case "sort/sort": {
-      return updateSort<TSort, TState>(state, action);
-    }
-
-    default: {
-      return state;
-    }
-  }
+  return updateSort<TSort, TState>(state, action);
 }
 
 function updateSort<TSort, TState extends SortState<TSort>>(

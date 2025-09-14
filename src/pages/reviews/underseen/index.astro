@@ -1,14 +1,14 @@
 ---
 import React from "react";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/Layout/Layout";
-import { getPropsForUnderseen as getProps } from "~/components/Reviews/getProps";
-import { ReviewsSubNav } from "~/components/Reviews/ReviewsSubNav";
-import { Underseen } from "~/components/Reviews/Underseen";
+import { getUnderseenProps } from "~/features/reviews/getProps";
+import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
+import { Underseen } from "~/features/reviews/Underseen";
 import Layout from "~/layouts/Layout.astro";
 
-const props = await getProps();
+const props = await getUnderseenProps();
 
 // Separate layout props from interactive props
 const { backdropImageProps, deck, ...interactiveProps } = props;

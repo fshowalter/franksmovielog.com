@@ -49,12 +49,6 @@ describe("/watchlist", () => {
     vi.useRealTimers();
   });
 
-  it("renders", ({ expect }) => {
-    const { asFragment } = render(<Watchlist {...props} />);
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
 

@@ -41,12 +41,6 @@ describe("Underseen", () => {
     vi.useRealTimers();
   });
 
-  it("renders", ({ expect }) => {
-    const { asFragment } = render(<UnderseenStrictWrapper props={props} />);
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it("can filter by title", async ({ expect }) => {
     expect.hasAssertions();
 

@@ -29,10 +29,6 @@ export function showMoreReducer<TState extends ShowMoreState>(
     case "showMore/showMore": {
       return handleShowMoreAction<TState>(state);
     }
-
-    default: {
-      return state;
-    }
   }
 }
 

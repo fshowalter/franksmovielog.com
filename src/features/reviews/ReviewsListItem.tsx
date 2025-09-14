@@ -27,7 +27,7 @@ export type ReviewsValue = {
 export function ReviewsListItem({
   value,
 }: {
-  value: ReviewsListItemValue;
+  value: ReviewsValue;
 }): React.JSX.Element {
   return (
     <PosterListItem posterImageProps={value.posterImageProps}>

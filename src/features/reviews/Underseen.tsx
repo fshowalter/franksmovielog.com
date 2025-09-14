@@ -2,7 +2,6 @@ import { StrictMode, useReducer } from "react";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
-import { ReviewsListItem } from "~/components/Reviews/ReviewsListItem";
 import { useGroupedValues } from "~/hooks/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
@@ -21,6 +20,7 @@ import {
   reviewsReducer,
   selectHasPendingFilters,
 } from "./reducer";
+import { ReviewsListItem } from "./ReviewsListItem";
 import { type ReviewsSort, sortReviewsValues } from "./sortReviewsValues";
 
 export type UnderseenProps = {
