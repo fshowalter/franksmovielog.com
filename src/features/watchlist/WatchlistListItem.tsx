@@ -6,18 +6,7 @@ import { ListItemTitle } from "~/components/ListItemTitle";
 import { ListItemWatchlistReason } from "~/components/ListItemWatchlistReason";
 import { PosterListItem } from "~/components/PosterList";
 
-export type WatchlistValue = {
-  genres: string[];
-  imdbId: string;
-  releaseSequence: number;
-  releaseYear: string;
-  sortTitle: string;
-  title: string;
-  watchlistCollectionNames: string[];
-  watchlistDirectorNames: string[];
-  watchlistPerformerNames: string[];
-  watchlistWriterNames: string[];
-};
+import type { WatchlistValue } from "./Watchlist";
 
 export function WatchlistListItem({
   defaultPosterImageProps,

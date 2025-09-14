@@ -50,16 +50,12 @@ export function GradeField({
   label,
   onGradeChange,
 }: {
-  initialValues: number[] | undefined;
+  initialValues: [number, number] | undefined;
   label: string;
   onGradeChange: (values: [number, number]) => void;
 }): React.JSX.Element {
-  const [minValue, setMinValue] = useState(
-    initialValues && initialValues.length > 0 ? initialValues[0] : 1,
-  );
-  const [maxValue, setMaxValue] = useState(
-    initialValues && initialValues.length > 1 ? initialValues[1] : 13,
-  );
+  const [minValue, setMinValue] = useState(initialMinGradeValue(initialValues));
+  const [maxValue, setMaxValue] = useState(initialMaxGradeValue(initialValues));
 
   const handleMinChange = (value: string): void => {
     const newMin = Number.parseInt(value, 10);
@@ -92,8 +88,8 @@ export function GradeField({
             From
           </span>
           <SelectInput
+            defaultValue={initialMinGradeValue(initialValues)}
             onChange={(e) => handleMinChange(e.target.value)}
-            value={minValue}
           >
             {[...gradeOptions].reverse()}
           </SelectInput>
@@ -103,8 +99,8 @@ export function GradeField({
             to
           </span>
           <SelectInput
+            defaultValue={initialMaxGradeValue(initialValues)}
             onChange={(e) => handleMaxChange(e.target.value)}
-            value={maxValue}
           >
             {[...gradeOptions]}
           </SelectInput>
@@ -112,4 +108,12 @@ export function GradeField({
       </div>
     </fieldset>
   );
+}
+
+function initialMaxGradeValue(selectedValues?: [number, number]): number {
+  return selectedValues ? selectedValues[1] : 13;
+}
+
+function initialMinGradeValue(selectedValues?: [number, number]): number {
+  return selectedValues ? selectedValues[0] : 1;
 }

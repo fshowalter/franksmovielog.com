@@ -14,7 +14,7 @@ export function SelectInput({
         leading-6 text-subtle shadow-all outline-accent
       `}
       defaultValue={defaultValue}
-      key={defaultValue}
+      key={defaultValue} // work-around for React 19 bug: https://github.com/facebook/react/issues/32362
       onChange={onChange}
     >
       {children}

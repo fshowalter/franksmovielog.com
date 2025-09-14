@@ -1,6 +1,6 @@
 import { createTitleSorter, type TitleSort } from "~/sorters/createTitleSorter";
 
-import type { WatchlistValue } from "./WatchlistListItem";
+import type { WatchlistValue } from "./Watchlist";
 
 export type WatchlistSort = TitleSort;
 

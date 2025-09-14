@@ -1,7 +1,7 @@
 import { groupTitleValues } from "~/groupers/groupTitleValues";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
-import type { WatchlistValue } from "./WatchlistListItem";
+import type { WatchlistValue } from "./Watchlist";
 
 export function groupWatchlistValues(
   filteredValues: WatchlistValue[],

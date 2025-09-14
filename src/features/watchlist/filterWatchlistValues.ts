@@ -1,7 +1,7 @@
 import { filterTitles } from "~/filterers/filterTitles";
 
+import type { WatchlistValue } from "./Watchlist";
 import type { WatchlistFiltersValues } from "./Watchlist.reducer";
-import type { WatchlistValue } from "./WatchlistListItem";
 
 export function filterWatchlistValues(
   sortedValues: WatchlistValue[],
