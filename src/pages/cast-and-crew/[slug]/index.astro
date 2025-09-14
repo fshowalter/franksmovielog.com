@@ -1,11 +1,11 @@
 ---
 import React from "react";
 
-import { allCastAndCrew } from "~/api/castAndCrew";
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { CastAndCrewMember } from "~/components/CastAndCrewMember/CastAndCrewMember";
-import { getProps } from "~/components/CastAndCrewMember/getProps";
+import { allCastAndCrew } from "~/api/cast-and-crew";
+import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/Layout/Layout";
+import { CastAndCrewMemberTitlesStrictWrapper } from "~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles";
+import { getProps } from "~/features/cast-and-crew-member-titles/getProps";
 import Layout from "~/layouts/Layout.astro";
 
 interface Props {
@@ -46,15 +46,18 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
     description: deck,
     type: "website",
   }}
-  title={`${props.value.name} movie reviews`}
+  title={`${props.name} movie reviews`}
 >
   <ComponentLayout className="bg-subtle">
     <Backdrop
       breadcrumb={breadcrumb}
       deck={deck}
       imageProps={backdropImageProps}
-      title={props.value.name}
+      title={props.name}
     />
-    <CastAndCrewMember client:load {...interactiveProps} />
+    <CastAndCrewMemberTitlesStrictWrapper
+      client:load
+      props={interactiveProps}
+    />
   </ComponentLayout>
 </Layout>

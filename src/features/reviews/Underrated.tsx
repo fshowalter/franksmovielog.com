@@ -15,7 +15,7 @@ import {
   createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
-  reviewsReducer,
+  reducer,
   selectHasPendingFilters,
 } from "./reducer";
 import { ReviewsListItem, type ReviewsValue } from "./ReviewsListItem";
@@ -37,7 +37,7 @@ export function Underrated({
   values,
 }: UnderratedProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
-    reviewsReducer,
+    reducer,
     {
       initialSort,
       values,

@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { describe, it } from "vitest";
 
-import { allCastAndCrew } from "~/api/castAndCrew.ts";
+import { allCastAndCrew } from "~/api/cast-and-crew.ts";
 
 import * as OgEndpoint from "./og.jpg.ts";
 

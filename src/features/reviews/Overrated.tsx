@@ -17,7 +17,7 @@ import {
   createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
-  reviewsReducer,
+  reducer,
   selectHasPendingFilters,
 } from "./reducer";
 import { ReviewsListItem } from "./ReviewsListItem";
@@ -39,7 +39,7 @@ export function Overrated({
   values,
 }: OverratedProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
-    reviewsReducer,
+    reducer,
     {
       initialSort,
       values,

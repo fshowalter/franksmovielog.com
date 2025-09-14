@@ -1,7 +1,7 @@
 import type { APIRoute, InferGetStaticPropsType } from "astro";
 
 import { getOpenGraphBackdropAsBase64String } from "~/api/backdrops";
-import { allCastAndCrew } from "~/api/castAndCrew";
+import { allCastAndCrew } from "~/api/cast-and-crew";
 import { OpenGraphImage } from "~/components/open-graph-image/OpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
 

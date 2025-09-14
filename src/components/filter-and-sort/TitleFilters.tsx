@@ -2,27 +2,25 @@ import { MultiSelectField } from "~/components/fields/MultiSelectField";
 import { TextField } from "~/components/fields/TextField";
 import { YearField } from "~/components/fields/YearField";
 
-import type { TitleFilterValues } from "./titlesReducerUtils";
-
 type TitleFiltersProps = {
-  genre: {
-    initialValue: TitleFilterValues["genre"];
+  genres: {
+    initialValue?: readonly string[];
     onChange: (values: string[]) => void;
     values: readonly string[];
   };
   releaseYear: {
-    initialValue: TitleFilterValues["releaseYear"];
+    initialValue?: [string, string];
     onChange: (values: [string, string]) => void;
     values: readonly string[];
   };
   title: {
-    initialValue: TitleFilterValues["title"];
+    initialValue?: string;
     onChange: (value: string) => void;
   };
 };
 
 export function TitleFilters({
-  genre,
+  genres,
   releaseYear,
   title,
 }: TitleFiltersProps): React.JSX.Element {
@@ -41,10 +39,10 @@ export function TitleFilters({
         years={releaseYear.values}
       />
       <MultiSelectField
-        initialValues={genre.initialValue}
+        initialValues={genres.initialValue}
         label="Genres"
-        onChange={genre.onChange}
-        options={genre.values}
+        onChange={genres.onChange}
+        options={genres.values}
       />
     </>
   );

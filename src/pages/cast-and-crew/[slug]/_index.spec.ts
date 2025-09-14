@@ -6,7 +6,7 @@ import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
-import { allCastAndCrew } from "~/api/castAndCrew";
+import { allCastAndCrew } from "~/api/cast-and-crew";
 import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
 
 import Review from "./index.astro";

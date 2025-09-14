@@ -3,24 +3,22 @@ import type { ComponentProps } from "react";
 import { GradeField } from "~/components/fields/GradeField";
 import { YearField } from "~/components/fields/YearField";
 
-import type { ReviewedTitleFiltersValues } from "./ReviewedTitleFilters.reducer";
-
 import { TitleFilters } from "./TitleFilters";
 
 type Props = ComponentProps<typeof TitleFilters> & {
   grade: {
-    initialValue: ReviewedTitleFiltersValues["gradeValue"];
+    initialValue?: [number, number];
     onChange: (values: [number, number]) => void;
   };
   reviewYear: {
-    initialValue: ReviewedTitleFiltersValues["reviewYear"];
+    initialValue?: [string, string];
     onChange: (values: [string, string]) => void;
     values: readonly string[];
   };
 };
 
 export function ReviewedTitleFilters({
-  genre,
+  genres,
   grade,
   releaseYear,
   reviewYear,
@@ -28,7 +26,7 @@ export function ReviewedTitleFilters({
 }: Props): React.JSX.Element {
   return (
     <>
-      <TitleFilters genre={genre} releaseYear={releaseYear} title={title} />
+      <TitleFilters genres={genres} releaseYear={releaseYear} title={title} />
       <GradeField
         initialValues={grade.initialValue}
         label="Grade"

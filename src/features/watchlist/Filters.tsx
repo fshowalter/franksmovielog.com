@@ -36,7 +36,7 @@ export function Filters({
   return (
     <>
       <TitleFilters
-        genre={{
+        genres={{
           initialValue: filterValues.genres,
           onChange: (values) =>
             dispatch(createGenresFilterChangedAction(values)),

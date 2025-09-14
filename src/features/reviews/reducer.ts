@@ -83,7 +83,7 @@ export function createInitialState({
   };
 }
 
-export function reviewsReducer(state: ReviewsState, action: ReviewsAction) {
+export function reducer(state: ReviewsState, action: ReviewsAction) {
   switch (action.type) {
     case "showMore/showMore": {
       return showMoreReducer(state, action);

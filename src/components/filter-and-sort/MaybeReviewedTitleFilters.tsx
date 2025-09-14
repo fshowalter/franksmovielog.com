@@ -1,44 +1,35 @@
 import type { ComponentProps } from "react";
 
-import { GradeField } from "~/components/fields/GradeField";
-import { YearField } from "~/components/fields/YearField";
+import { ReviewedStatusFilter } from "./ReviewedStatusFilter";
+import { ReviewedTitleFilters } from "./ReviewedTitleFilters";
 
-import type { TitleFilterValues } from "./titlesReducerUtils";
-
-import { TitleFilters } from "./TitleFilters";
-
-type Props = ComponentProps<typeof TitleFilters> & {
-  grade: {
-    initialValue: TitleFilterValues["grade"];
-    onChange: (values: [number, number]) => void;
-  };
-  reviewYear: {
-    initialValue: TitleFilterValues["reviewYear"];
-    onChange: (values: [string, string]) => void;
-    values: readonly string[];
+type Props = ComponentProps<typeof ReviewedTitleFilters> & {
+  reviewedStatus: {
+    initialValue?: string;
+    onChange: (value: string) => void;
   };
 };
 
-export function ReviewedTitleFilters({
-  genre,
+export function MaybeReviewedTitleFilters({
+  genres,
   grade,
   releaseYear,
+  reviewedStatus,
   reviewYear,
   title,
 }: Props): React.JSX.Element {
   return (
     <>
-      <TitleFilters genre={genre} releaseYear={releaseYear} title={title} />
-      <GradeField
-        initialValues={grade.initialValue}
-        label="Grade"
-        onGradeChange={grade.onChange}
+      <ReviewedTitleFilters
+        genres={genres}
+        grade={grade}
+        releaseYear={releaseYear}
+        reviewYear={reviewYear}
+        title={title}
       />
-      <YearField
-        initialValues={reviewYear.initialValue}
-        label="Review Year"
-        onYearChange={reviewYear.onChange}
-        years={reviewYear.values}
+      <ReviewedStatusFilter
+        initialValue={reviewedStatus.initialValue}
+        onChange={reviewedStatus.onChange}
       />
     </>
   );

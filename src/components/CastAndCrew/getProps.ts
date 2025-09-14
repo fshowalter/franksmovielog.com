@@ -2,7 +2,7 @@ import type { BackdropImageProps } from "~/api/backdrops";
 
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
-import { allCastAndCrew } from "~/api/castAndCrew";
+import { allCastAndCrew } from "~/api/cast-and-crew";
 import { AvatarListItemImageConfig } from "~/components/AvatarList";
 import { BackdropImageConfig } from "~/components/Backdrop";
 

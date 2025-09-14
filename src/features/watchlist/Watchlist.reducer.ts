@@ -116,10 +116,7 @@ export function createWatchlistFilterChangedAction(
  * Reducer function for managing Reviews page state.
  * Handles filtering, sorting, and pagination actions for the reviews list.
  */
-export function watchlistReducer(
-  state: WatchlistState,
-  action: WatchlistAction,
-) {
+export function reducer(state: WatchlistState, action: WatchlistAction) {
   switch (action.type) {
     case "showMore/showMore": {
       return showMoreReducer(state, action);

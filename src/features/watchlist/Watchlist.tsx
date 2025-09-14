@@ -20,8 +20,8 @@ import {
   createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
+  reducer,
   selectHasPendingFilters,
-  watchlistReducer,
 } from "./Watchlist.reducer";
 import { WatchlistListItem } from "./WatchlistListItem";
 
@@ -62,7 +62,7 @@ export function Watchlist({
   values,
 }: WatchlistProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
-    watchlistReducer,
+    reducer,
     {
       initialSort,
       values,

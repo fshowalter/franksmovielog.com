@@ -1,9 +1,8 @@
-import type { TitleFilterValues } from "~/components/ListWithFilters/titlesReducerUtils";
-
 import type {
   FilterableTitle,
   TitleFiltersAction,
   TitleFiltersState,
+  TitleFiltersValues,
 } from "./titleFiltersReducer";
 
 export {
@@ -43,7 +42,7 @@ export type ReviewedTitleFiltersState<TValue extends FilterableReviewedTitle> =
     pendingFilterValues: ReviewedTitleFiltersValues;
   };
 
-export type ReviewedTitleFiltersValues = TitleFilterValues & {
+export type ReviewedTitleFiltersValues = TitleFiltersValues & {
   gradeValue?: [number, number];
   reviewYear?: [string, string];
 };

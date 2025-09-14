@@ -1,15 +1,13 @@
 import { StrictMode, useReducer } from "react";
 
+import type { PosterImageProps } from "~/api/posters";
+
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
 import { useGroupedValues } from "~/hooks/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { ReviewsValue } from "./ReviewsListItem";
-
-import { filterReviewsValues } from "./filteredReviewsValues";
-import { Filters, SortOptions } from "./Filters";
-import { groupReviewsValues } from "./groupReviewsValues";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -19,38 +17,67 @@ import {
   createSortAction,
   reducer,
   selectHasPendingFilters,
-} from "./reducer";
-import { ReviewsListItem } from "./ReviewsListItem";
-import { type ReviewsSort, sortReviewsValues } from "./sortReviewsValues";
+} from "./CastAndCrewMemberTitles.reducer";
+import { CastAndCrewMemberTitleListItem } from "./CastAndCrewMemberTitlesListItem";
+import { filterCastAndCrewMemberTitlesValues } from "./filterCastAndCrewMemberTitlesValues";
+import { Filters } from "./Filters";
+import { groupCastAndCrewMemberTitlesValues } from "./groupCastAndCrewMemberTitlesValues";
+import {
+  type CastAndCrewMemberTitlesSort,
+  sortCastAndCrewMemberTitlesValues,
+} from "./sortCastAndCrewMemberTitlesValues";
 
-export type AllReviewsProps = {
+export type CastAndCrewMemberTitlesProps = {
+  distinctCreditKinds: readonly string[];
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  initialSort: ReviewsSort;
-  values: ReviewsValue[];
+  initialSort: CastAndCrewMemberTitlesSort;
+  values: CastAndCrewMemberTitlesValue[];
 };
 
-export function AllReviews({
+export type CastAndCrewMemberTitlesValue = {
+  creditedAs: string[];
+  genres: string[];
+  grade?: string;
+  gradeValue?: number;
+  imdbId: string;
+  posterImageProps: PosterImageProps;
+  releaseSequence: number;
+  releaseYear: string;
+  reviewDisplayDate?: string;
+  reviewSequence?: number;
+  reviewYear?: string;
+  slug?: string;
+  sortTitle: string;
+  title: string;
+  watchlistCollectionNames: string[];
+  watchlistDirectorNames: string[];
+  watchlistPerformerNames: string[];
+  watchlistWriterNames: string[];
+};
+
+export function CastAndCrewMemberTitles({
+  distinctCreditKinds,
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
   values,
-}: AllReviewsProps): React.JSX.Element {
+}: CastAndCrewMemberTitlesProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
       initialSort,
-      values,
+      values: [...values],
     },
     createInitialState,
   );
 
   const [groupedValues, totalCount] = useGroupedValues(
-    sortReviewsValues,
-    filterReviewsValues,
-    groupReviewsValues,
+    sortCastAndCrewMemberTitlesValues,
+    filterCastAndCrewMemberTitlesValues,
+    groupCastAndCrewMemberTitlesValues,
     state.values,
     state.sort,
     state.activeFilterValues,
@@ -58,7 +85,7 @@ export function AllReviews({
   );
 
   const pendingFilteredCount = usePendingFilterCount(
-    filterReviewsValues,
+    filterCastAndCrewMemberTitlesValues,
     state.values,
     state.pendingFilterValues,
   );
@@ -70,6 +97,7 @@ export function AllReviews({
       filters={
         <Filters
           dispatch={dispatch}
+          distinctCreditKinds={distinctCreditKinds}
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
@@ -89,8 +117,14 @@ export function AllReviews({
       sortProps={{
         currentSortValue: state.sort,
         onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as ReviewsSort)),
-        sortOptions: <SortOptions />,
+          dispatch(
+            createSortAction(e.target.value as CastAndCrewMemberTitlesSort),
+          ),
+        sortOptions: (
+          <TitleSortOptions
+            options={["grade", "release-date", "review-date", "title"]}
+          />
+        ),
       }}
       totalCount={totalCount}
     >
@@ -100,20 +134,24 @@ export function AllReviews({
         totalCount={totalCount}
         visibleCount={state.showCount}
       >
-        {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
+        {(value) => {
+          return (
+            <CastAndCrewMemberTitleListItem key={value.imdbId} value={value} />
+          );
+        }}
       </GroupedPosterList>
     </FilterAndSortContainer>
   );
 }
 
-export function AllReviewsStrictWrapper({
+export function CastAndCrewMemberTitlesStrictWrapper({
   props,
 }: {
-  props: AllReviewsProps;
+  props: CastAndCrewMemberTitlesProps;
 }): React.JSX.Element {
   return (
     <StrictMode>
-      <AllReviews {...props} />
+      <CastAndCrewMemberTitles {...props} />
     </StrictMode>
   );
 }

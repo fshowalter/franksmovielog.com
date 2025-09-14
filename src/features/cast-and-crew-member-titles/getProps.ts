@@ -5,19 +5,20 @@ import type { BackdropImageProps } from "~/api/backdrops";
 
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
-import { castAndCrewMember } from "~/api/castAndCrew";
+import { castAndCrewMember } from "~/api/cast-and-crew";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { BackdropImageConfig } from "~/components/Backdrop";
 import { PosterListItemImageConfig } from "~/components/PosterList";
 import { displayDate } from "~/utils/displayDate";
 
-import type { Props } from "./CastAndCrewMember";
+import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
 
-type PageProps = Props & {
+type PageProps = CastAndCrewMemberTitlesProps & {
   avatarImageProps: AvatarImageProps | undefined;
   backdropImageProps: BackdropImageProps;
   deck: string;
   metaDescription: string;
+  name: string;
 };
 
 export async function getProps(slug: string): Promise<PageProps> {
@@ -34,12 +35,14 @@ export async function getProps(slug: string): Promise<PageProps> {
       BackdropImageConfig,
     ),
     deck: deck(member),
+    distinctCreditKinds: member.creditedAs,
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "release-date-asc",
     metaDescription: metaDescription(member),
-    titles: await Promise.all(
+    name: member.name,
+    values: await Promise.all(
       member.titles.map(async (title) => {
         return {
           ...title,
@@ -58,11 +61,14 @@ export async function getProps(slug: string): Promise<PageProps> {
         };
       }),
     ),
-    value: member,
   };
 }
 
-function deck(value: Props["value"]) {
+function deck(value: {
+  creditedAs: string[];
+  reviewCount: number;
+  titleCount: number;
+}) {
   const creditString = new Intl.ListFormat().format(value.creditedAs);
 
   const creditList =
@@ -81,7 +87,7 @@ function deck(value: Props["value"]) {
   return `${creditList} with ${value.reviewCount} reviewed${watchlistTitleCount} ${titles}.`;
 }
 
-function metaDescription(value: Props["value"]) {
+function metaDescription(value: { creditedAs: string[]; name: string }) {
   const creditMap: Record<string, string> = {
     director: "directed by",
     performer: "with",

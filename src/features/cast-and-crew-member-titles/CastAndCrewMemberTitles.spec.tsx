@@ -29,7 +29,7 @@ import {
 } from "~/components/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { CastAndCrewMember, type Props } from "./CastAndCrewMember";
+import { CastAndCrewMember, type Props } from "./CastAndCrewMemberTitles";
 import { getProps } from "./getProps";
 
 const props = await getProps("alfred-hitchcock");

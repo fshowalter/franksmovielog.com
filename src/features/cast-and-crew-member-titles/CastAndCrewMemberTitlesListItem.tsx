@@ -1,0 +1,45 @@
+import { ListItemCreditedAs } from "~/components/list-item-credited-as/ListItemCreditedAs";
+import { ListItemDetails } from "~/components/list-item-details/ListItemDetails";
+import { ListItemGenres } from "~/components/list-item-genres/ListItemGenres";
+import { ListItemGrade } from "~/components/list-item-grade/ListItemGrade";
+import { ListItemReviewDate } from "~/components/list-item-review-date/ListItemReviewDate";
+import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
+import { ListItemWatchlistReason } from "~/components/list-item-watchlist-reason/ListItemWatchlistReason";
+import { PosterListItem } from "~/components/poster-list/PosterListItem";
+
+import type { CastAndCrewMemberTitleValue } from "./CastAndCrewMemberTitles";
+
+export function CastAndCrewMemberTitleListItem({
+  value,
+}: {
+  value: CastAndCrewMemberTitleValue;
+}): React.JSX.Element {
+  return (
+    <PosterListItem
+      hasReview={!!value.slug}
+      posterImageProps={value.posterImageProps}
+    >
+      <ListItemDetails>
+        <ListItemTitle
+          slug={value.slug}
+          title={value.title}
+          year={value.releaseYear}
+        />
+        <ListItemCreditedAs values={value.creditedAs} />
+        {value.grade && <ListItemGrade grade={value.grade} />}
+        {!value.grade && (
+          <ListItemWatchlistReason
+            collectionNames={value.watchlistCollectionNames}
+            directorNames={value.watchlistDirectorNames}
+            performerNames={value.watchlistPerformerNames}
+            writerNames={value.watchlistWriterNames}
+          />
+        )}
+        {value.grade && (
+          <ListItemReviewDate displayDate={value.reviewDisplayDate} />
+        )}
+        <ListItemGenres values={value.genres} />
+      </ListItemDetails>
+    </PosterListItem>
+  );
+}

@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
-import type { CastAndCrewMember } from "~/api/castAndCrew";
+import type { CastAndCrewMember } from "~/api/cast-and-crew";
 
 import { AvatarListItem } from "~/components/AvatarList";
 import { GroupedAvatarList } from "~/components/AvatarList";
