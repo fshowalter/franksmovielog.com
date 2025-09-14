@@ -3,12 +3,12 @@ import { SelectInput } from "./SelectInput";
 
 export function SelectField({
   children,
-  initialValue,
+  defaultValue,
   label,
   onChange,
 }: {
   children: React.ReactNode;
-  initialValue: string | undefined;
+  defaultValue: string | undefined;
   label: string;
   onChange: (value: string) => void;
 }): React.JSX.Element {
@@ -20,7 +20,7 @@ export function SelectField({
   return (
     <label className={`flex flex-col`}>
       <LabelText value={label} />
-      <SelectInput onChange={handleChange} value={initialValue}>
+      <SelectInput defaultValue={defaultValue} onChange={handleChange}>
         {children}
       </SelectInput>
     </label>

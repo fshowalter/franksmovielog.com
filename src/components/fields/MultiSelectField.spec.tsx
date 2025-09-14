@@ -999,4 +999,111 @@ describe("MultiSelectField", () => {
       });
     });
   });
+
+  describe("Form reset behavior", () => {
+    it("resets to initial values when form is reset", async ({ expect }) => {
+      const onChange = vi.fn();
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <form>
+          <MultiSelectField
+            {...defaultProps}
+            initialValues={["Option 1", "Option 2"]}
+            onChange={onChange}
+          />
+        </form>,
+      );
+
+      // Verify initial state
+      expect(screen.getByText("Option 1")).toBeInTheDocument();
+      expect(screen.getByText("Option 2")).toBeInTheDocument();
+
+      // Open dropdown and select additional options
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      await user.click(screen.getByText("Option 3"));
+
+      // Verify Option 3 was added
+      expect(screen.getByText("Option 3")).toBeInTheDocument();
+      expect(onChange).toHaveBeenLastCalledWith(["Option 1", "Option 2", "Option 3"]);
+
+      // Reset the form
+      const form = container.querySelector("form");
+      act(() => {
+        form?.reset();
+      });
+
+      // Should reset to initial values
+      await waitFor(() => {
+        expect(screen.getByText("Option 1")).toBeInTheDocument();
+        expect(screen.getByText("Option 2")).toBeInTheDocument();
+        expect(screen.queryByText("Option 3")).not.toBeInTheDocument();
+      });
+    });
+
+    it("clears all selections when form is reset with no initial values", async ({
+      expect
+    }) => {
+      const onChange = vi.fn();
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <form>
+          <MultiSelectField {...defaultProps} onChange={onChange} />
+        </form>,
+      );
+
+      // Select some options
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+      await user.click(screen.getByText("Option 1"));
+      await user.click(screen.getByText("Option 2"));
+
+      // Verify options were selected
+      expect(screen.getByText("Option 1")).toBeInTheDocument();
+      expect(screen.getByText("Option 2")).toBeInTheDocument();
+
+      // Reset the form
+      const form = container.querySelector("form");
+      act(() => {
+        form?.reset();
+      });
+
+      // Should clear all selections
+      await waitFor(() => {
+        expect(screen.getByText("Select...")).toBeInTheDocument();
+        expect(screen.queryByText("Option 1")).not.toBeInTheDocument();
+        expect(screen.queryByText("Option 2")).not.toBeInTheDocument();
+      });
+    });
+
+    it("closes dropdown when form is reset", async ({ expect }) => {
+      const user = userEvent.setup();
+
+      const { container } = render(
+        <form>
+          <MultiSelectField {...defaultProps} />
+        </form>,
+      );
+
+      // Open dropdown
+      const button = screen.getByRole("button", { name: "Test Label" });
+      await user.click(button);
+
+      // Verify dropdown is open
+      expect(screen.getByRole("listbox")).toBeInTheDocument();
+
+      // Reset the form
+      const form = container.querySelector("form");
+      act(() => {
+        form?.reset();
+      });
+
+      // Dropdown should be closed
+      await waitFor(() => {
+        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
+      });
+    });
+  });
 });

@@ -46982,7 +46982,7 @@ exports[`/watchlist > renders 1`] = `
             "
           id="filters"
         >
-          <div
+          <form
             class="
                 flex h-full w-full flex-col text-sm
                 tablet:text-base
@@ -47052,7 +47052,6 @@ exports[`/watchlist > renders 1`] = `
         "
                   placeholder="Enter all or part of a title"
                   type="text"
-                  value=""
                 />
               </label>
               <fieldset
@@ -47084,6 +47083,7 @@ exports[`/watchlist > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="1929"
                       >
                         1929
@@ -47165,6 +47165,7 @@ exports[`/watchlist > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="1980"
                       >
                         1980
@@ -47478,7 +47479,7 @@ exports[`/watchlist > renders 1`] = `
                       enabled:hover:scale-105 enabled:hover:drop-shadow-md
                       cursor-not-allowed text-muted opacity-50
                     "
-                  type="button"
+                  type="reset"
                 >
                   Clear
                 </button>
@@ -47496,7 +47497,7 @@ exports[`/watchlist > renders 1`] = `
                 </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

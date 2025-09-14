@@ -547,7 +547,7 @@
             </div>
           </header>
           <astro-island
-            uid="Zknu60"
+            uid="ZzFVBm"
             prefix="r3"
             component-url="~/features/watchlist/Watchlist"
             component-export="WatchlistStrictWrapper"
@@ -4001,7 +4001,7 @@
                     class="fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px] flex-col items-start gap-y-5 bg-default text-left duration-200 ease-in-out w-0 transform-[translateX(100%)] overflow-y-hidden tablet:gap-y-10"
                     id="filters"
                   >
-                    <div
+                    <form
                       class="flex h-full w-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
                     >
                       <button
@@ -4040,7 +4040,6 @@
                             class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
                             placeholder="Enter all or part of a title"
                             type="text"
-                            value=""
                         /></label>
                         <fieldset class="text-subtle">
                           <legend
@@ -4199,7 +4198,7 @@
                           <button
                             aria-label="Clear all filters"
                             class="flex items-center justify-center gap-x-4 rounded-sm bg-canvas px-4 py-3 font-sans text-xs text-nowrap uppercase transition-transform enabled:hover:scale-105 enabled:hover:drop-shadow-md cursor-not-allowed text-muted opacity-50"
-                            type="button"
+                            type="reset"
                           >
                             Clear</button
                           ><button
@@ -4212,7 +4211,7 @@
                           </button>
                         </div>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>

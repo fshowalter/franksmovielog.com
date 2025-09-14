@@ -54,7 +54,7 @@ export function Filters({
         }}
       />
       <CreditSelectField
-        initialValue={filterValues.director}
+        defaultValue={filterValues.director}
         label="Director"
         onChange={(value) =>
           dispatch(createWatchlistFilterChangedAction("director", value))
@@ -62,7 +62,7 @@ export function Filters({
         options={distinctDirectors}
       />
       <CreditSelectField
-        initialValue={filterValues.performer}
+        defaultValue={filterValues.performer}
         label="Performer"
         onChange={(value) =>
           dispatch(createWatchlistFilterChangedAction("performer", value))
@@ -70,7 +70,7 @@ export function Filters({
         options={distinctPerformers}
       />
       <CreditSelectField
-        initialValue={filterValues.writer}
+        defaultValue={filterValues.writer}
         label="Writer"
         onChange={(value) =>
           dispatch(createWatchlistFilterChangedAction("writer", value))
@@ -78,7 +78,7 @@ export function Filters({
         options={distinctWriters}
       />
       <CreditSelectField
-        initialValue={filterValues.collection}
+        defaultValue={filterValues.collection}
         label="Collection"
         onChange={(value) =>
           dispatch(createWatchlistFilterChangedAction("collection", value))
@@ -90,18 +90,18 @@ export function Filters({
 }
 
 function CreditSelectField({
-  initialValue,
+  defaultValue,
   label,
   onChange,
   options,
 }: {
-  initialValue: string | undefined;
+  defaultValue: string | undefined;
   label: string;
   onChange: (value: string) => void;
   options: readonly string[];
 }): React.JSX.Element {
   return (
-    <SelectField initialValue={initialValue} label={label} onChange={onChange}>
+    <SelectField defaultValue={defaultValue} label={label} onChange={onChange}>
       <SelectOptions options={options} />
     </SelectField>
   );

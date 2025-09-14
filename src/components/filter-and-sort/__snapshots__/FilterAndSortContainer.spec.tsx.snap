@@ -12,7 +12,7 @@ exports[`FilterAndSortContainer > filter drawer > opens and closes filter drawer
             "
   id="filters"
 >
-  <div
+  <form
     class="
                 flex h-full w-full flex-col text-sm
                 tablet:text-base
@@ -96,7 +96,7 @@ exports[`FilterAndSortContainer > filter drawer > opens and closes filter drawer
                       enabled:hover:scale-105 enabled:hover:drop-shadow-md
                       cursor-not-allowed text-muted opacity-50
                     "
-          type="button"
+          type="reset"
         >
           Clear
         </button>
@@ -116,7 +116,7 @@ exports[`FilterAndSortContainer > filter drawer > opens and closes filter drawer
         </button>
       </div>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
@@ -135,7 +135,7 @@ exports[`FilterAndSortContainer > filter drawer > opens and closes filter drawer
             "
   id="filters"
 >
-  <div
+  <form
     class="
                 flex h-full w-full flex-col text-sm
                 tablet:text-base
@@ -219,7 +219,7 @@ exports[`FilterAndSortContainer > filter drawer > opens and closes filter drawer
                       enabled:hover:scale-105 enabled:hover:drop-shadow-md
                       cursor-not-allowed text-muted opacity-50
                     "
-          type="button"
+          type="reset"
         >
           Clear
         </button>
@@ -239,7 +239,7 @@ exports[`FilterAndSortContainer > filter drawer > opens and closes filter drawer
         </button>
       </div>
     </div>
-  </div>
+  </form>
 </div>
 `;
 
@@ -377,7 +377,7 @@ exports[`FilterAndSortContainer > renders 1`] = `
             "
           id="filters"
         >
-          <div
+          <form
             class="
                 flex h-full w-full flex-col text-sm
                 tablet:text-base
@@ -461,7 +461,7 @@ exports[`FilterAndSortContainer > renders 1`] = `
                       enabled:hover:scale-105 enabled:hover:drop-shadow-md
                       cursor-not-allowed text-muted opacity-50
                     "
-                  type="button"
+                  type="reset"
                 >
                   Clear
                 </button>
@@ -479,7 +479,7 @@ exports[`FilterAndSortContainer > renders 1`] = `
                 </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

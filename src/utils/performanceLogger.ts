@@ -113,11 +113,6 @@ export class PerformanceLogger {
     fn: () => Promise<T>,
     metadata?: Record<string, unknown>,
   ): Promise<T> {
-    // Skip performance tracking in test environments to avoid timing conflicts
-    if (import.meta.env.MODE === "test") {
-      return await fn();
-    }
-
     // Use unique ID to avoid timing conflicts in parallel execution
     const id = `${name}_${++this.counter}_${Date.now()}`;
     this.startWithId(id, name, metadata);
@@ -144,11 +139,6 @@ export class PerformanceLogger {
     fn: () => T,
     metadata?: Record<string, unknown>,
   ): T {
-    // Skip performance tracking in test environments to avoid timing conflicts
-    if (import.meta.env.MODE === "test") {
-      return fn();
-    }
-
     // Use unique ID to avoid timing conflicts
     const id = `${name}_${++this.counter}_${Date.now()}`;
     this.startWithId(id, name, metadata);

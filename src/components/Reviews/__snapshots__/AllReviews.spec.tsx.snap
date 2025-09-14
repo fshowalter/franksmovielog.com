@@ -59235,7 +59235,6 @@ exports[`AllReviews > renders 1`] = `
         "
                   placeholder="Enter all or part of a title"
                   type="text"
-                  value=""
                 />
               </label>
               <fieldset
@@ -59267,6 +59266,7 @@ exports[`AllReviews > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="1930"
                       >
                         1930
@@ -59393,6 +59393,7 @@ exports[`AllReviews > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="2022"
                       >
                         2022
@@ -59535,6 +59536,7 @@ exports[`AllReviews > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="2014"
                       >
                         2014
@@ -59581,6 +59583,7 @@ exports[`AllReviews > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="2024"
                       >
                         2024

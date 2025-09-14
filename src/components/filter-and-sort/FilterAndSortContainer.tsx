@@ -57,7 +57,6 @@ export function FilterAndSortContainer<T extends string>({
       setFilterDrawerVisible(false);
       if (shouldResetFilters) {
         onResetFilters();
-        console.log(formRef?.current);
         formRef?.current?.reset();
       }
     },

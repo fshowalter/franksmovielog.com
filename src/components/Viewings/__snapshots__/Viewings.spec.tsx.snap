@@ -21434,7 +21434,6 @@ exports[`Viewings > renders 1`] = `
         "
                   placeholder="Enter all or part of a title"
                   type="text"
-                  value=""
                 />
               </label>
               <label
@@ -21500,6 +21499,7 @@ exports[`Viewings > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="1931"
                       >
                         1931
@@ -21626,6 +21626,7 @@ exports[`Viewings > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="2014"
                       >
                         2014
@@ -21768,6 +21769,7 @@ exports[`Viewings > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="2011"
                       >
                         2011
@@ -21804,6 +21806,7 @@ exports[`Viewings > renders 1`] = `
       "
                     >
                       <option
+                        selected=""
                         value="2014"
                       >
                         2014

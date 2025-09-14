@@ -408,6 +408,30 @@ export function MultiSelectField({
     }
   }, [isOpen]);
 
+  // AIDEV-NOTE: Listen for form reset events and clear selections when form is reset
+  // This ensures the component responds properly to form.reset() calls from any source
+  useEffect(() => {
+    // Find the parent form element by traversing up from any element in the component
+    const container = buttonRef.current?.parentElement;
+    if (!container) return;
+
+    const form = container.closest("form");
+    if (!form) return;
+
+    const handleFormReset = (): void => {
+      // Reset to initial values when form is reset
+      setSelectedOptions(initialValues ? [...initialValues] : []);
+      setIsOpen(false);
+      setHighlightedIndex(-1);
+    };
+
+    form.addEventListener("reset", handleFormReset);
+
+    return (): void => {
+      form.removeEventListener("reset", handleFormReset);
+    };
+  }, [initialValues]);
+
   // Cleanup timeouts on unmount
   useEffect(() => {
     return (): void => {
