@@ -230,24 +230,6 @@
   }
 }
 
-@keyframes spin-wind-up {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  30% {
-    transform: rotate(-45deg); /* 45 degree counter-clockwise overshoot */
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@utility animate-spin-wind-up {
-  animation: spin-wind-up 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
 @layer components {
   .rendered-markdown {
     a {
