@@ -1,4 +1,6 @@
-import { createTitleSorter, type TitleSort } from "~/sorters/createTitleSorter";
+import type { TitleSort } from "~/sorters/createTitleSorter";
+
+import { createTitleSorter } from "~/sorters/createTitleSorter";
 
 import type { WatchlistValue } from "./Watchlist";
 

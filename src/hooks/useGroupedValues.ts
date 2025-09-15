@@ -3,19 +3,13 @@ import { useState } from "react";
 export function useGroupedValues<TValue, TSort, TFilterValues>(
   sorter: (values: TValue[], sort: TSort) => TValue[],
   filterer: (values: TValue[], filterValues: TFilterValues) => TValue[],
-  grouper: (
-    values: TValue[],
-    sort: TSort,
-    showCount: number,
-  ) => Map<string, TValue[]>,
+  grouper: (values: TValue[], sort: TSort) => Map<string, TValue[]>,
   values: TValue[],
   sort: TSort,
   activeFilterValues: TFilterValues,
-  showCount: number,
 ): [Map<string, TValue[]>, number] {
   const [currentSort, setSort] = useState<TSort>();
   const [currentFilterValues, setFilterValues] = useState<TFilterValues>();
-  const [currentShowCount, setShowCount] = useState<number>();
   const [groupedValues, setGroupedValues] = useState<Map<string, TValue[]>>(
     new Map<string, TValue[]>(),
   );
@@ -23,19 +17,17 @@ export function useGroupedValues<TValue, TSort, TFilterValues>(
 
   if (
     Object.is(currentSort, sort) &&
-    Object.is(currentFilterValues, activeFilterValues) &&
-    Object.is(currentShowCount, showCount)
+    Object.is(currentFilterValues, activeFilterValues)
   ) {
     return [groupedValues, totalCount];
   }
 
   setSort(sort);
   setFilterValues(activeFilterValues);
-  setShowCount(showCount);
 
   const sortedValues = sorter(values, sort);
   const filteredValues = filterer(sortedValues, activeFilterValues);
-  setGroupedValues(grouper(filteredValues, sort, showCount));
+  setGroupedValues(grouper(filteredValues, sort));
   setTotalCount(filteredValues.length);
 
   return [groupedValues, totalCount];

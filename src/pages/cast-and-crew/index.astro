@@ -1,8 +1,8 @@
 ---
-import { Backdrop } from "~/components/Backdrop";
-import { CastAndCrew } from "~/components/CastAndCrew/CastAndCrew";
-import { getProps } from "~/components/CastAndCrew/getProps";
+import { Backdrop } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/Layout/Layout";
+import { CastAndCrewStrictWrapper } from "~/features/cast-and-crew/CastAndCrew";
+import { getProps } from "~/features/cast-and-crew/getProps";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
@@ -22,6 +22,6 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
 >
   <ComponentLayout className="bg-subtle">
     <Backdrop deck={deck} imageProps={backdropImageProps} title="Cast & Crew" />
-    <CastAndCrew client:load {...interactiveProps} />
+    <CastAndCrewStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
 </Layout>

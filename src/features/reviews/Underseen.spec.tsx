@@ -7,21 +7,23 @@ import {
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import {
-  clickGenreFilterOption,
+  clickGenresFilterOption,
   fillReleaseYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/ListWithFilters/TitleFilters.testHelper";
+} from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
 import {
   clickShowMore,
   getGroupedPosterList,
-} from "~/components/PosterList.testHelper";
+} from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
+import type { UnderseenProps } from "./Underseen";
+
 import { getUnderseenProps } from "./getProps";
-import { type UnderseenProps, UnderseenStrictWrapper } from "./Underseen";
+import { UnderseenStrictWrapper } from "./Underseen";
 
 const props = await getUnderseenProps();
 
@@ -251,8 +253,8 @@ describe("Underseen", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickGenreFilterOption(user, "Horror");
-    await clickGenreFilterOption(user, "Action");
+    await clickGenresFilterOption(user, "Horror");
+    await clickGenresFilterOption(user, "Action");
 
     // Apply the filter
     await clickViewResults(user);
@@ -274,7 +276,7 @@ describe("Underseen", () => {
 
     // Apply multiple filters
     await fillTitleFilter(user, "Beyond");
-    await clickGenreFilterOption(user, "Horror");
+    await clickGenresFilterOption(user, "Horror");
 
     await clickViewResults(user);
 

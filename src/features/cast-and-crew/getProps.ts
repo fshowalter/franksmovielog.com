@@ -6,10 +6,10 @@ import { allCastAndCrew } from "~/api/cast-and-crew";
 import { AvatarListItemImageConfig } from "~/components/AvatarList";
 import { BackdropImageConfig } from "~/components/Backdrop";
 
-import type { Props } from "./CastAndCrew";
-import type { ListItemValue } from "./CastAndCrew";
+import type { CastAndCrewProps } from "./CastAndCrew";
+import type { CastAndCrewValue } from "./CastAndCrew";
 
-type PageProps = Props & {
+type PageProps = CastAndCrewProps & {
   backdropImageProps: BackdropImageProps;
   deck: string;
   metaDescription: string;
@@ -20,7 +20,7 @@ export async function getProps(): Promise<PageProps> {
 
   const values = await Promise.all(
     castAndCrew.map(async (member) => {
-      const value: ListItemValue = {
+      const value: CastAndCrewValue = {
         avatarImageProps: await getAvatarImageProps(
           member.slug,
           AvatarListItemImageConfig,

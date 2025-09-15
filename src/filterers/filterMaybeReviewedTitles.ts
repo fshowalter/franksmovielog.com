@@ -6,7 +6,9 @@ export type FilterableMaybeReviewedTitle = FilterableTitle & {
   slug?: string;
 };
 
-import { type FilterableTitle, filterTitles } from "./filterTitles";
+import type { FilterableTitle } from "./filterTitles";
+
+import { filterTitles } from "./filterTitles";
 
 export function filterMaybeReviewedTitles<
   TValue extends FilterableMaybeReviewedTitle,

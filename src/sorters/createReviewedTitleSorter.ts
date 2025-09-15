@@ -1,9 +1,7 @@
+import type { SortableTitle, TitleSort } from "./createTitleSorter";
+
 import { sortNumber } from "./createSorter";
-import {
-  createTitleSorter,
-  type SortableTitle,
-  type TitleSort,
-} from "./createTitleSorter";
+import { createTitleSorter } from "./createTitleSorter";
 
 /**
  * Available sort options for titles.

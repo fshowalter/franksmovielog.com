@@ -7,12 +7,12 @@ import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
 import { ListItemWatchlistReason } from "~/components/list-item-watchlist-reason/ListItemWatchlistReason";
 import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
-import type { CastAndCrewMemberTitleValue } from "./CastAndCrewMemberTitles";
+import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 
 export function CastAndCrewMemberTitleListItem({
   value,
 }: {
-  value: CastAndCrewMemberTitleValue;
+  value: CastAndCrewMemberTitlesValue;
 }): React.JSX.Element {
   return (
     <PosterListItem
@@ -35,7 +35,7 @@ export function CastAndCrewMemberTitleListItem({
             writerNames={value.watchlistWriterNames}
           />
         )}
-        {value.grade && (
+        {value.reviewDisplayDate && (
           <ListItemReviewDate displayDate={value.reviewDisplayDate} />
         )}
         <ListItemGenres values={value.genres} />

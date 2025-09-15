@@ -13,6 +13,8 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
 
+import separateTypeImports from "./eslint-rules/separate-type-imports.js";
+
 export default tsEslint.config(
   {
     ignores: [
@@ -54,11 +56,19 @@ export default tsEslint.config(
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
+    plugins: {
+      "local": {
+        rules: {
+          "separate-type-imports": separateTypeImports,
+        },
+      },
+    },
     rules: {
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/consistent-type-imports": "off", // Turned off in favor of our custom rule
       "@typescript-eslint/no-import-type-side-effects": "error",
+      "local/separate-type-imports": "error",
       "no-restricted-imports": [
         "error",
         {

@@ -1,17 +1,9 @@
 import { CreditedAsFilter } from "~/components/filter-and-sort/CreditedAsFilter";
 import { MaybeReviewedTitleFilters } from "~/components/filter-and-sort/MaybeReviewedTitleFilters";
 
-import {
-  type CastAndCrewMemberTitlesAction,
-  type CastAndCrewMemberTitlesFiltersValues,
-  createCreditedAsFilterChangedAction,
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
-  createReviewedStatusFilterChangedAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
-} from "./CastAndCrewMemberTitles.reducer";
+import type { CastAndCrewMemberTitlesAction, CastAndCrewMemberTitlesFiltersValues } from "./CastAndCrewMemberTitles.reducer";
+
+import { createCreditedAsFilterChangedAction, createGenresFilterChangedAction, createGradeFilterChangedAction, createReleaseYearFilterChangedAction, createReviewedStatusFilterChangedAction, createReviewYearFilterChangedAction, createTitleFilterChangedAction } from "./CastAndCrewMemberTitles.reducer";
 
 export function Filters({
   dispatch,

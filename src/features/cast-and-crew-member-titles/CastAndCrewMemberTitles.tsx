@@ -3,10 +3,11 @@ import { StrictMode, useReducer } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
-import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
+
+import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitlesValues";
 
 import {
   createApplyFiltersAction,
@@ -22,10 +23,8 @@ import { CastAndCrewMemberTitleListItem } from "./CastAndCrewMemberTitlesListIte
 import { filterCastAndCrewMemberTitlesValues } from "./filterCastAndCrewMemberTitlesValues";
 import { Filters } from "./Filters";
 import { groupCastAndCrewMemberTitlesValues } from "./groupCastAndCrewMemberTitlesValues";
-import {
-  type CastAndCrewMemberTitlesSort,
-  sortCastAndCrewMemberTitlesValues,
-} from "./sortCastAndCrewMemberTitlesValues";
+import { sortCastAndCrewMemberTitlesValues } from "./sortCastAndCrewMemberTitlesValues";
+import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
 export type CastAndCrewMemberTitlesProps = {
   distinctCreditKinds: readonly string[];
@@ -74,7 +73,7 @@ export function CastAndCrewMemberTitles({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = useGroupedValues(
+  const [groupedValues, totalCount] = usePaginatedGroupedValues(
     sortCastAndCrewMemberTitlesValues,
     filterCastAndCrewMemberTitlesValues,
     groupCastAndCrewMemberTitlesValues,
@@ -120,11 +119,7 @@ export function CastAndCrewMemberTitles({
           dispatch(
             createSortAction(e.target.value as CastAndCrewMemberTitlesSort),
           ),
-        sortOptions: (
-          <TitleSortOptions
-            options={["grade", "release-date", "review-date", "title"]}
-          />
-        ),
+        sortOptions: <ReviewedTitleSortOptions />,
       }}
       totalCount={totalCount}
     >

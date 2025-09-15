@@ -1,0 +1,121 @@
+import { StrictMode, useReducer } from "react";
+
+import type { AvatarImageProps } from "~/api/avatars";
+
+import { GroupedAvatarList } from "~/components/avatar-list/GroupedAvatarList";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { CollectionSortOptions } from "~/components/filter-and-sort/CollectionSortOptions";
+import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
+
+import type { CastAndCrewSort } from "./sortCastAndCrewValues";
+
+import { AlphabetSubNav } from "./AlphabetSubNav";
+import {
+  createApplyFiltersAction,
+  createClearFiltersAction,
+  createInitialState,
+  createResetFiltersAction,
+  createSortAction,
+  reducer,
+  selectHasPendingFilters,
+} from "./CastAndCrew.reducer";
+import { CastAndCrewListItem } from "./CastAndCrewListItem";
+import { filterCastAndCrewValues } from "./filterCastAndCrewValues";
+import { Filters } from "./Filters";
+import { groupCastAndCrewValues } from "./groupCastAndCrewValues";
+import { sortCastAndCrewValues } from "./sortCastAndCrewValues";
+
+export type CastAndCrewProps = {
+  initialSort: CastAndCrewSort;
+  values: CastAndCrewValue[];
+};
+
+export type CastAndCrewValue = {
+  avatarImageProps: AvatarImageProps | undefined;
+  creditedAs: string[];
+  name: string;
+  reviewCount: number;
+  slug: string;
+};
+
+export function CastAndCrew({
+  initialSort,
+  values,
+}: CastAndCrewProps): React.JSX.Element {
+  const [state, dispatch] = useReducer(
+    reducer,
+    {
+      initialSort,
+      values,
+    },
+    createInitialState,
+  );
+
+  const [groupedValues, totalCount] = useGroupedValues(
+    sortCastAndCrewValues,
+    filterCastAndCrewValues,
+    groupCastAndCrewValues,
+    state.values,
+    state.sort,
+    state.activeFilterValues,
+  );
+
+  const pendingFilteredCount = usePendingFilterCount(
+    filterCastAndCrewValues,
+    state.values,
+    state.pendingFilterValues,
+  );
+
+  const hasPendingFilters = selectHasPendingFilters(state);
+
+  return (
+    <FilterAndSortContainer
+      className={state.sort.startsWith("name-") ? `[--scroll-offset:52px]` : ""}
+      filters={
+        <Filters dispatch={dispatch} filterValues={state.pendingFilterValues} />
+      }
+      hasPendingFilters={hasPendingFilters}
+      onApplyFilters={() => dispatch(createApplyFiltersAction())}
+      onClearFilters={() => {
+        dispatch(createClearFiltersAction());
+      }}
+      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onResetFilters={() => {
+        dispatch(createResetFiltersAction());
+      }}
+      pendingFilteredCount={pendingFilteredCount}
+      sortProps={{
+        currentSortValue: state.sort,
+        onSortChange: (e) =>
+          dispatch(createSortAction(e.target.value as CastAndCrewSort)),
+        sortOptions: <CollectionSortOptions />,
+      }}
+      topNav={
+        <AlphabetSubNav groupedValues={groupedValues} sortValue={state.sort} />
+      }
+      totalCount={totalCount}
+    >
+      <GroupedAvatarList
+        groupedValues={groupedValues}
+        groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
+      >
+        {(value) => {
+          return <CastAndCrewListItem key={value.name} value={value} />;
+        }}
+      </GroupedAvatarList>
+    </FilterAndSortContainer>
+  );
+}
+
+export function CastAndCrewStrictWrapper({
+  props,
+}: {
+  props: CastAndCrewProps;
+}): React.JSX.Element {
+  return (
+    <StrictMode>
+      <CastAndCrew {...props} />
+    </StrictMode>
+  );
+}

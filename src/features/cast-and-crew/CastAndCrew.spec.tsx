@@ -1,25 +1,25 @@
 import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { getGroupedAvatarList } from "~/components/AvatarList.testHelper";
+import { getGroupedAvatarList } from "~/components/avatar-list/AvatarList.testHelper";
 import {
   fillNameFilter,
   getNameFilter,
-} from "~/components/ListWithFilters/CollectionFilters.testHelper";
+} from "~/components/filter-and-sort/CollectionFilters.testHelper";
 import {
   clickCreditedAsFilterOption,
   getCreditedAsFilter,
-} from "~/components/ListWithFilters/CreditedAsFilter.testHelper";
+} from "~/components/filter-and-sort/CreditedAsFilter.testHelper";
 import {
   clickClearFilters,
   clickCloseFilters,
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { CastAndCrew } from "./CastAndCrew";
+import { CastAndCrewStrictWrapper } from "./CastAndCrew";
 import { getProps } from "./getProps";
 
 const props = await getProps();
@@ -46,7 +46,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -67,7 +67,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     await clickSortOption(user, "Name (Z → A)");
 
@@ -80,7 +80,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     await clickSortOption(user, "Name (A → Z)");
 
@@ -93,7 +93,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Count (Most First)");
 
@@ -106,7 +106,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Count (Fewest First)");
 
@@ -119,7 +119,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -139,7 +139,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -167,7 +167,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -188,7 +188,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -216,7 +216,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -237,7 +237,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -266,7 +266,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -303,7 +303,7 @@ describe("CastAndCrew", () => {
     // Setup userEvent with advanceTimers
     const user = getUserWithFakeTimers();
 
-    render(<CastAndCrew {...props} />);
+    render(<CastAndCrewStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);

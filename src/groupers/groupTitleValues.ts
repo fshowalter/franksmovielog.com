@@ -16,9 +16,10 @@ export function groupTitleValues<
   sort: TSort,
   extraGrouper?: GroupFn<TValue, TSort>,
 ) {
+  const paginatedValues = filteredValues.slice(0, showCount);
+
   return groupValues(
-    filteredValues,
-    showCount,
+    paginatedValues,
     sort,
     createGroupForTitleValue(extraGrouper),
   );

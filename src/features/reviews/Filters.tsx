@@ -1,15 +1,9 @@
 import { ReviewedTitleFilters } from "~/components/filter-and-sort/ReviewedTitleFilters";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
-import {
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
-  type ReviewsAction,
-  type ReviewsFiltersValues,
-} from "./reducer";
+import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
+
+import { createGenresFilterChangedAction, createGradeFilterChangedAction, createReleaseYearFilterChangedAction, createReviewYearFilterChangedAction, createTitleFilterChangedAction } from "./reducer";
 
 export function Filters({
   dispatch,

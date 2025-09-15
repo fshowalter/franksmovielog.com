@@ -7,17 +7,17 @@ import {
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import {
-  clickGenreFilterOption,
+  clickGenresFilterOption,
   fillReleaseYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/ListWithFilters/TitleFilters.testHelper";
+} from "~/components/filter-and-sort/TitleFilters.testHelper";
 import {
   clickShowMore,
   getGroupedPosterList,
-} from "~/components/PosterList.testHelper";
+} from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { getProps } from "./getProps";
@@ -284,8 +284,8 @@ describe("/watchlist", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickGenreFilterOption(user, "Horror");
-    await clickGenreFilterOption(user, "Thriller");
+    await clickGenresFilterOption(user, "Horror");
+    await clickGenresFilterOption(user, "Thriller");
 
     await clickViewResults(user);
 

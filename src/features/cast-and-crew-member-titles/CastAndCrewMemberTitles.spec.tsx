@@ -5,34 +5,33 @@ import { getFluidWidthPosterImageProps } from "~/api/posters";
 import {
   clickCreditedAsFilterOption,
   getCreditedAsFilter,
-} from "~/components/ListWithFilters/CreditedAsFilter.testHelper";
+} from "~/components/filter-and-sort/CreditedAsFilter.testHelper";
 import {
   clickClearFilters,
   clickCloseFilters,
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
-import { clickReviewedStatusFilterOption } from "~/components/ListWithFilters/ReviewedStatusFilter.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
+import { clickReviewedStatusFilterOption } from "~/components/filter-and-sort/ReviewedStatusFilter.testHelper";
 import {
-  clickGenreFilterOption,
+  clickGenresFilterOption,
   fillGradeFilter,
   fillReleaseYearFilter,
   fillReviewYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/ListWithFilters/TitleFilters.testHelper";
-import { PosterListItemImageConfig } from "~/components/PosterList";
+} from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
+import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import {
   clickShowMore,
   getGroupedPosterList,
 } from "~/components/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import {
-  type CastAndCrewMemberTitlesProps,
-  CastAndCrewMemberTitlesStrictWrapper,
-} from "./CastAndCrewMemberTitles";
+import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
+
+import { CastAndCrewMemberTitlesStrictWrapper } from "./CastAndCrewMemberTitles";
 import { getProps } from "./getProps";
 
 const props = await getProps("alfred-hitchcock");
@@ -85,10 +84,10 @@ describe("CastAndCrewMember", () => {
     // Open filter drawer
     await clickToggleFilters(user);
 
-    await clickGenreFilterOption(user, "Action");
+    await clickGenresFilterOption(user, "Action");
 
     // Click to open the dropdown again
-    await clickGenreFilterOption(user, "Comedy");
+    await clickGenresFilterOption(user, "Comedy");
 
     await clickViewResults(user);
 

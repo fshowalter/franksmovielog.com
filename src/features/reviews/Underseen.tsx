@@ -2,10 +2,11 @@ import { StrictMode, useReducer } from "react";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
-import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { ReviewsValue } from "./ReviewsListItem";
+import type { ReviewsSort } from "./sortReviewsValues";
 
 import { filterReviewsValues } from "./filteredReviewsValues";
 import { Filters, SortOptions } from "./Filters";
@@ -21,7 +22,7 @@ import {
   selectHasPendingFilters,
 } from "./reducer";
 import { ReviewsListItem } from "./ReviewsListItem";
-import { type ReviewsSort, sortReviewsValues } from "./sortReviewsValues";
+import { sortReviewsValues } from "./sortReviewsValues";
 
 export type UnderseenProps = {
   distinctGenres: readonly string[];
@@ -47,7 +48,7 @@ export function Underseen({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = useGroupedValues(
+  const [groupedValues, totalCount] = usePaginatedGroupedValues(
     sortReviewsValues,
     filterReviewsValues,
     groupReviewsValues,

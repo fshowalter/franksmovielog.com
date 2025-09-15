@@ -7,22 +7,24 @@ import {
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import {
-  clickGenreFilterOption,
+  clickGenresFilterOption,
   fillGradeFilter,
   fillReleaseYearFilter,
   fillReviewYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/ListWithFilters/TitleFilters.testHelper";
+} from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
 import {
   clickShowMore,
   getGroupedPosterList,
-} from "~/components/PosterList.testHelper";
+} from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { type AllReviewsProps, AllReviewsStrictWrapper } from "./AllReviews";
+import type { AllReviewsProps } from "./AllReviews";
+
+import { AllReviewsStrictWrapper } from "./AllReviews";
 import { getAllReviewsProps } from "./getProps";
 
 const props = await getAllReviewsProps();
@@ -255,9 +257,9 @@ describe("AllReviews", () => {
 
     await clickToggleFilters(user);
 
-    await clickGenreFilterOption(user, "Horror");
+    await clickGenresFilterOption(user, "Horror");
 
-    await clickGenreFilterOption(user, "Comedy");
+    await clickGenresFilterOption(user, "Comedy");
 
     await clickViewResults(user);
 

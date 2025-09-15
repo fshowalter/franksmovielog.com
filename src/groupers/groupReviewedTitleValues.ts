@@ -1,6 +1,8 @@
 import type { GroupFn } from "~/groupers/groupValues";
 
-import { type GroupableTitle, groupTitleValues } from "./groupTitleValues";
+import type { GroupableTitle } from "./groupTitleValues";
+
+import { groupTitleValues } from "./groupTitleValues";
 
 type GroupableReviewedTitle = GroupableTitle & {
   grade: string;

@@ -64,10 +64,6 @@ export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
     case "filters/reset": {
       return resetFilters<TValue, TState>(state);
     }
-
-    default: {
-      return state;
-    }
   }
 }
 

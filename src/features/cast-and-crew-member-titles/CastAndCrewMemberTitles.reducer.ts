@@ -1,13 +1,8 @@
+import type { MaybeReviewedTitleFiltersAction, MaybeReviewedTitleFiltersState, MaybeReviewedTitleFiltersValues } from "~/reducers/maybeReviewedTitleFiltersReducer";
 import type { ShowMoreAction, ShowMoreState } from "~/reducers/showMoreReducer";
 import type { SortAction, SortState } from "~/reducers/sortReducer";
 
-import {
-  createInitialMaybeReviewedTitleFiltersState,
-  type MaybeReviewedTitleFiltersAction,
-  maybeReviewedTitleFiltersReducer,
-  type MaybeReviewedTitleFiltersState,
-  type MaybeReviewedTitleFiltersValues,
-} from "~/reducers/maybeReviewedTitleFiltersReducer";
+import { createInitialMaybeReviewedTitleFiltersState, maybeReviewedTitleFiltersReducer } from "~/reducers/maybeReviewedTitleFiltersReducer";
 import {
   createInitialShowMoreState,
   showMoreReducer,

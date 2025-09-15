@@ -7,17 +7,17 @@ import {
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import {
-  clickGenreFilterOption,
+  clickGenresFilterOption,
   fillReleaseYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/ListWithFilters/TitleFilters.testHelper";
+} from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
 import {
   clickShowMore,
   getGroupedPosterList,
-} from "~/components/PosterList.testHelper";
+} from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { getOverratedProps } from "./getProps";
@@ -214,8 +214,8 @@ describe("Overrated", () => {
 
     await clickToggleFilters(user);
 
-    await clickGenreFilterOption(user, "Horror");
-    await clickGenreFilterOption(user, "Comedy");
+    await clickGenresFilterOption(user, "Horror");
+    await clickGenresFilterOption(user, "Comedy");
 
     // Apply the filter
     await clickViewResults(user);
@@ -240,7 +240,7 @@ describe("Overrated", () => {
     // Apply multiple filters
     await fillTitleFilter(user, "Test");
 
-    await clickGenreFilterOption(user, "Horror");
+    await clickGenresFilterOption(user, "Horror");
 
     await clickViewResults(user);
 

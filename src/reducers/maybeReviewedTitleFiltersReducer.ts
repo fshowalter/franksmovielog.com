@@ -1,10 +1,6 @@
-import {
-  createInitialReviewedTitleFiltersState,
-  type ReviewedTitleFiltersAction,
-  reviewedTitleFiltersReducer,
-  type ReviewedTitleFiltersState,
-  type ReviewedTitleFiltersValues,
-} from "./reviewedTitleFiltersReducer";
+import type { ReviewedTitleFiltersAction, ReviewedTitleFiltersState, ReviewedTitleFiltersValues } from "./reviewedTitleFiltersReducer";
+
+import { createInitialReviewedTitleFiltersState, reviewedTitleFiltersReducer } from "./reviewedTitleFiltersReducer";
 
 export {
   createApplyFiltersAction,

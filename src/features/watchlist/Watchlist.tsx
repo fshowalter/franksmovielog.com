@@ -5,14 +5,16 @@ import type { PosterImageProps } from "~/api/posters";
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { FilterAndSortHeaderLink } from "~/components/filter-and-sort/FilterAndSortHeaderLink";
 import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
-import { GroupedPosterList } from "~/components/PosterList";
-import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
+import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
+
+import type { WatchlistSort } from "./sortWatchlistValues";
 
 import { Filters } from "./Filters";
 import { filterWatchlistValues } from "./filterWatchlistValues";
 import { groupWatchlistValues } from "./groupWatchlistValues";
-import { sortWatchlistValues, type WatchlistSort } from "./sortWatchlistValues";
+import { sortWatchlistValues } from "./sortWatchlistValues";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -70,7 +72,7 @@ export function Watchlist({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = useGroupedValues(
+  const [groupedValues, totalCount] = usePaginatedGroupedValues(
     sortWatchlistValues,
     filterWatchlistValues,
     groupWatchlistValues,

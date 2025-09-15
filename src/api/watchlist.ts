@@ -1,13 +1,10 @@
 import { collator } from "~/utils/collator";
 
-import {
-  type WatchlistProgressJson,
-  watchlistProgressJson,
-} from "./data/watchlistProgressJson";
-import {
-  allWatchlistTitlesJson,
-  type WatchlistTitleJson,
-} from "./data/watchlistTitlesJson";
+import type { WatchlistProgressJson } from "./data/watchlistProgressJson";
+import type { WatchlistTitleJson } from "./data/watchlistTitlesJson";
+
+import { watchlistProgressJson } from "./data/watchlistProgressJson";
+import { allWatchlistTitlesJson } from "./data/watchlistTitlesJson";
 
 export type WatchlistProgress = WatchlistProgressJson & {};
 

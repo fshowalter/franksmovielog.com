@@ -15,16 +15,13 @@ export function getGroupLetter(str: string): string {
 }
 
 export function groupValues<TValue, TSort extends string>(
-  filteredValues: TValue[],
-  showCount: number,
+  values: TValue[],
   sort: TSort,
   grouper: GroupFn<TValue, TSort>,
 ) {
-  const paginatedItems = filteredValues.slice(0, showCount);
-
   const grouped = new Map<string, TValue[]>();
 
-  for (const value of paginatedItems) {
+  for (const value of values) {
     const key = grouper(value, sort);
     const group = grouped.get(key) || [];
     group.push(value);

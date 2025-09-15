@@ -9,10 +9,9 @@ import strip from "strip-markdown";
 import { ENABLE_CACHE } from "~/utils/cache";
 import { perfLogger } from "~/utils/performanceLogger";
 
-import {
-  allCollectionsJson,
-  type CollectionJson,
-} from "./data/collectionsJson";
+import type { CollectionJson } from "./data/collectionsJson";
+
+import { allCollectionsJson } from "./data/collectionsJson";
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 

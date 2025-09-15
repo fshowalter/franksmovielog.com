@@ -1,21 +1,10 @@
+import type { ShowMoreAction, ShowMoreState } from "./showMore.reducer";
 import type { Sorter } from "./TitleFilters.reducer";
+import type { FilterableTitle, TitleFiltersActionType, TitleFiltersState, TitleFiltersValues } from "./TitleFilters.reducer";
 
 import { updatePendingFilter } from "./createFiltersReducer";
-import {
-  createInitialShowMoreState,
-  type ShowMoreAction,
-  ShowMoreActions,
-  showMoreReducer,
-  type ShowMoreState,
-} from "./showMore.reducer";
-import {
-  createInitialTitleFiltersState,
-  createTitleFiltersReducer,
-  type FilterableTitle,
-  type TitleFiltersActionType,
-  type TitleFiltersState,
-  type TitleFiltersValues,
-} from "./TitleFilters.reducer";
+import { createInitialShowMoreState, ShowMoreActions, showMoreReducer } from "./showMore.reducer";
+import { createInitialTitleFiltersState, createTitleFiltersReducer } from "./TitleFilters.reducer";
 
 export {
   createApplyPendingFiltersAction,

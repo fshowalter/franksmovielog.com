@@ -1,4 +1,4 @@
-import { AvatarListItemImageConfig } from "src/components/AvatarList";
+import { AvatarListItemImageConfig } from "src/components/avatar-list/AvatarListItem";
 
 import type { AvatarImageProps } from "~/api/avatars";
 import type { BackdropImageProps } from "~/api/backdrops";
@@ -7,8 +7,8 @@ import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { castAndCrewMember } from "~/api/cast-and-crew";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
-import { BackdropImageConfig } from "~/components/Backdrop";
-import { PosterListItemImageConfig } from "~/components/PosterList";
+import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
+import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";

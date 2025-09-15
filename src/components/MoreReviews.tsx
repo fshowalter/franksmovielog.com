@@ -1,4 +1,6 @@
-import { ReviewCard, type ReviewCardValue } from "./ReviewCard";
+import type { ReviewCardValue } from "./ReviewCard";
+
+import { ReviewCard } from "./ReviewCard";
 import { SubHeading } from "./SubHeading";
 
 export const MoreReviewsImageConfig = {

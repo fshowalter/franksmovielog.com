@@ -11,14 +11,10 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters";
 import { PosterListItem } from "~/components/PosterList";
 
+import type { ActionType, Sort } from "./Viewings.reducer";
+
 import { Filters } from "./Filters";
-import {
-  Actions,
-  type ActionType,
-  initState,
-  reducer,
-  type Sort,
-} from "./Viewings.reducer";
+import { Actions, initState, reducer } from "./Viewings.reducer";
 
 export type ListItemValue = Pick<
   Viewing,

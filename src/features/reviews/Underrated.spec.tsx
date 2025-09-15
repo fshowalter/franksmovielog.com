@@ -7,21 +7,23 @@ import {
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import {
-  clickGenreFilterOption,
+  clickGenresFilterOption,
   fillReleaseYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/ListWithFilters/TitleFilters.testHelper";
+} from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
 import {
   clickShowMore,
   getGroupedPosterList,
-} from "~/components/PosterList.testHelper";
+} from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
+import type { UnderratedProps } from "./Underrated";
+
 import { getUnderratedProps } from "./getProps";
-import { type UnderratedProps, UnderratedStrictWrapper } from "./Underrated";
+import { UnderratedStrictWrapper } from "./Underrated";
 
 const props = await getUnderratedProps();
 
@@ -230,8 +232,8 @@ describe("Underrated", () => {
     await clickToggleFilters(user);
 
     // Click to open the dropdown
-    await clickGenreFilterOption(user, "Horror");
-    await clickGenreFilterOption(user, "Comedy");
+    await clickGenresFilterOption(user, "Horror");
+    await clickGenresFilterOption(user, "Comedy");
 
     // Apply the filter
     await clickViewResults(user);
@@ -254,7 +256,7 @@ describe("Underrated", () => {
 
     // Apply multiple filters
     await fillTitleFilter(user, "Test");
-    await clickGenreFilterOption(user, "Horror");
+    await clickGenresFilterOption(user, "Horror");
 
     await clickViewResults(user);
 
