@@ -1,73 +1,11 @@
 import type { PosterImageProps } from "~/api/posters";
 
-import { GroupingListItem } from "./GroupingListItem";
-
 export const PosterListItemImageConfig = {
   height: 375,
   sizes:
     "(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)",
   width: 250,
 };
-
-export function GroupedPosterList<T>({
-  children,
-  groupedValues,
-  groupItemClassName,
-  onShowMore,
-  totalCount,
-  visibleCount,
-  ...rest
-}: {
-  children: (item: T) => React.ReactNode;
-  groupedValues: Map<string, Iterable<T>>;
-  groupItemClassName?: string;
-  onShowMore?: () => void;
-  totalCount: number;
-  visibleCount: number;
-}): React.JSX.Element {
-  return (
-    <>
-      <ol data-testid="grouped-poster-list" {...rest}>
-        {[...groupedValues].map((groupedValue) => {
-          const [group, groupValues] = groupedValue;
-          return (
-            <GroupingListItem
-              className={groupItemClassName}
-              groupText={group}
-              key={group}
-            >
-              {" "}
-              <div className="tablet:-mx-6">
-                <PosterList>
-                  {[...groupValues].map((value) => children(value))}
-                </PosterList>
-              </div>
-            </GroupingListItem>
-          );
-        })}
-      </ol>
-      {onShowMore && (
-        <div className="flex flex-col items-center px-container py-10">
-          {totalCount > visibleCount && (
-            <button
-              className={`
-                mx-auto w-full max-w-button transform-gpu cursor-pointer
-                rounded-md bg-canvas py-5 text-center font-sans text-sm
-                font-bold tracking-wide uppercase shadow-all
-                transition-transform
-                hover:scale-105 hover:drop-shadow-lg
-              `}
-              onClick={onShowMore}
-              type="button"
-            >
-              Show More
-            </button>
-          )}
-        </div>
-      )}
-    </>
-  );
-}
 
 export function PosterList({
   children,
