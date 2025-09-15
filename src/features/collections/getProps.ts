@@ -3,13 +3,13 @@ import type { BackdropImageProps } from "~/api/backdrops";
 import { getAvatarImageProps } from "~/api/avatars";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { allCollections } from "~/api/collections";
-import { AvatarListItemImageConfig } from "~/components/AvatarList";
-import { BackdropImageConfig } from "~/components/Backdrop";
+import { AvatarListItemImageConfig } from "~/components/avatar-list/AvatarListItem";
+import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
 
-import type { Props } from "./Collections";
-import type { ListItemValue } from "./Collections";
+import type { CollectionsProps } from "./Collections";
+import type { CollectionsValue } from "./Collections";
 
-type PageProps = Props & {
+type PageProps = CollectionsProps & {
   backdropImageProps: BackdropImageProps;
   deck: string;
 };
@@ -19,7 +19,7 @@ export async function getProps(): Promise<PageProps> {
 
   const values = await Promise.all(
     collections.map(async (collection) => {
-      const listItemValue: ListItemValue = {
+      const listItemValue: CollectionsValue = {
         avatarImageProps: await getAvatarImageProps(
           collection.slug,
           AvatarListItemImageConfig,

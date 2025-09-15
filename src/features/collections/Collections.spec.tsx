@@ -15,7 +15,7 @@ import {
 } from "~/components/ListWithFilters/ListWithFilters.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
-import { Collections } from "./Collections";
+import { CollectionsStrictWrapper } from "./Collections";
 import { getProps } from "./getProps";
 
 const props = await getProps();
@@ -41,7 +41,7 @@ describe("Collections", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Collections {...props} />);
+    render(<CollectionsStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -61,7 +61,7 @@ describe("Collections", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Collections {...props} />);
+    render(<CollectionsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Name (Z → A)");
 
@@ -73,7 +73,7 @@ describe("Collections", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Collections {...props} />);
+    render(<CollectionsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Name (A → Z)");
 
@@ -85,7 +85,7 @@ describe("Collections", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Collections {...props} />);
+    render(<CollectionsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Count (Most First)");
 
@@ -97,7 +97,7 @@ describe("Collections", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Collections {...props} />);
+    render(<CollectionsStrictWrapper props={props} />);
 
     await clickSortOption(user, "Review Count (Fewest First)");
 
@@ -109,7 +109,7 @@ describe("Collections", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Collections {...props} />);
+    render(<CollectionsStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);
@@ -142,7 +142,7 @@ describe("Collections", () => {
 
     const user = getUserWithFakeTimers();
 
-    render(<Collections {...props} />);
+    render(<CollectionsStrictWrapper props={props} />);
 
     // Open filter drawer
     await clickToggleFilters(user);

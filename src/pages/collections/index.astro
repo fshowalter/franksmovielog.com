@@ -1,8 +1,8 @@
 ---
 import { Backdrop } from "~/components/Backdrop";
-import { Collections } from "~/components/Collections/Collections";
-import { getProps } from "~/components/Collections/getProps";
 import { Layout as ComponentLayout } from "~/components/Layout/Layout";
+import { CollectionsStrictWrapper } from "~/features/collections/Collections";
+import { getProps } from "~/features/collections/getProps";
 import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
@@ -22,6 +22,6 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
 >
   <ComponentLayout className="bg-subtle">
     <Backdrop deck={deck} imageProps={backdropImageProps} title="Collections" />
-    <Collections client:load {...interactiveProps} />
+    <CollectionsStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
 </Layout>

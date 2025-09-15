@@ -2,15 +2,14 @@ import { StrictMode, useReducer } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
 
-import { GroupedAvatarList } from "~/components/avatar-list/GroupedAvatarList";
+import { AvatarList } from "~/components/avatar-list/AvatarList";
 import { CollectionSortOptions } from "~/components/filter-and-sort/CollectionSortOptions";
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { useFilteredValues } from "~/hooks/useFilteredValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { CastAndCrewSort } from "./sortCastAndCrew";
+import type { CollectionsSort } from "./sortCollections";
 
-import { AlphabetSubNav } from "./AlphabetSubNav";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -19,30 +18,29 @@ import {
   createSortAction,
   reducer,
   selectHasPendingFilters,
-} from "./CastAndCrew.reducer";
-import { CastAndCrewListItem } from "./CastAndCrewListItem";
-import { filterCastAndCrew } from "./filterCastAndCrew";
+} from "./Collections.reducer";
+import { CollectionsListItem } from "./CollectionsListItem";
+import { filterCollections } from "./filterCollections";
 import { Filters } from "./Filters";
-import { groupCastAndCrew } from "./groupCastAndCrew";
-import { sortCastAndCrew } from "./sortCastAndCrew";
+import { sortCollections } from "./sortCollections";
 
-export type CastAndCrewProps = {
-  initialSort: CastAndCrewSort;
-  values: CastAndCrewValue[];
+export type CollectionsProps = {
+  initialSort: CollectionsSort;
+  values: CollectionsValue[];
 };
 
-export type CastAndCrewValue = {
+export type CollectionsValue = {
   avatarImageProps: AvatarImageProps | undefined;
-  creditedAs: string[];
   name: string;
   reviewCount: number;
   slug: string;
+  titleCount: number;
 };
 
-export function CastAndCrew({
+export function Collections({
   initialSort,
   values,
-}: CastAndCrewProps): React.JSX.Element {
+}: CollectionsProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {
@@ -52,17 +50,16 @@ export function CastAndCrew({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = useGroupedValues(
-    sortCastAndCrew,
-    filterCastAndCrew,
-    groupCastAndCrew,
+  const [filteredValues, totalCount] = useFilteredValues(
+    sortCollections,
+    filterCollections,
     state.values,
     state.sort,
     state.activeFilterValues,
   );
 
   const pendingFilteredCount = usePendingFilterCount(
-    filterCastAndCrew,
+    filterCollections,
     state.values,
     state.pendingFilterValues,
   );
@@ -88,34 +85,33 @@ export function CastAndCrew({
       sortProps={{
         currentSortValue: state.sort,
         onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as CastAndCrewSort)),
+          dispatch(createSortAction(e.target.value as CollectionsSort)),
         sortOptions: <CollectionSortOptions />,
       }}
-      topNav={
-        <AlphabetSubNav groupedValues={groupedValues} sortValue={state.sort} />
-      }
       totalCount={totalCount}
     >
-      <GroupedAvatarList
-        groupedValues={groupedValues}
-        groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
+      <AvatarList
+        className={`
+          mt-4 bg-subtle
+          tablet-landscape:my-24
+        `}
       >
-        {(value) => {
-          return <CastAndCrewListItem key={value.name} value={value} />;
-        }}
-      </GroupedAvatarList>
+        {filteredValues.map((value) => {
+          return <CollectionsListItem key={value.name} value={value} />;
+        })}
+      </AvatarList>
     </FilterAndSortContainer>
   );
 }
 
-export function CastAndCrewStrictWrapper({
+export function CollectionsStrictWrapper({
   props,
 }: {
-  props: CastAndCrewProps;
+  props: CollectionsProps;
 }): React.JSX.Element {
   return (
     <StrictMode>
-      <CastAndCrew {...props} />
+      <Collections {...props} />
     </StrictMode>
   );
 }
