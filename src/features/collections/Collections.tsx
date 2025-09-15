@@ -34,7 +34,6 @@ export type CollectionsValue = {
   name: string;
   reviewCount: number;
   slug: string;
-  titleCount: number;
 };
 
 export function Collections({
@@ -50,7 +49,7 @@ export function Collections({
     createInitialState,
   );
 
-  const [filteredValues, totalCount] = useFilteredValues(
+  const filteredValues = useFilteredValues(
     sortCollections,
     filterCollections,
     state.values,
@@ -88,7 +87,7 @@ export function Collections({
           dispatch(createSortAction(e.target.value as CollectionsSort)),
         sortOptions: <CollectionSortOptions />,
       }}
-      totalCount={totalCount}
+      totalCount={filteredValues.length}
     >
       <AvatarList
         className={`

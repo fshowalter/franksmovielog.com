@@ -1,13 +1,13 @@
 import { getBackdropImageProps } from "~/api/backdrops";
 import { loadExcerptHtml, mostRecentReviews } from "~/api/reviews";
 import { getStillImageProps } from "~/api/stills";
-import { BackdropImageConfig } from "~/components/Backdrop";
+import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
 
-import type { Props } from "./Home";
+import type { HomeProps } from "./Home";
 
 import { HomeStillImageConfig } from "./Home";
 
-export async function getProps(): Promise<Props> {
+export async function getProps(): Promise<HomeProps> {
   const titles = await mostRecentReviews(12);
 
   const values = await Promise.all(

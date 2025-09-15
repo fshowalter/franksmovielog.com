@@ -6,25 +6,24 @@ export function useFilteredValues<TValue, TSort, TFilterValues>(
   values: TValue[],
   sort: TSort,
   activeFilterValues: TFilterValues,
-): [TValue[], number] {
+): TValue[] {
   const [currentSort, setSort] = useState<TSort>();
   const [currentFilterValues, setFilterValues] = useState<TFilterValues>();
   const [filteredValues, setFilteredValues] = useState<TValue[]>([]);
-  const [totalCount, setTotalCount] = useState<number>(0);
 
   if (
     Object.is(currentSort, sort) &&
     Object.is(currentFilterValues, activeFilterValues)
   ) {
-    return [filteredValues, totalCount];
+    return filteredValues;
   }
 
   setSort(sort);
   setFilterValues(activeFilterValues);
 
   const sortedValues = sorter(values, sort);
-  setFilteredValues(filterer(sortedValues, activeFilterValues));
-  setTotalCount(filteredValues.length);
+  const newFilteredValues = filterer(sortedValues, activeFilterValues);
+  setFilteredValues(newFilteredValues);
 
-  return [filteredValues, totalCount];
+  return newFilteredValues;
 }

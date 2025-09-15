@@ -5,7 +5,7 @@ import fs from "node:fs/promises";
 import satori from "satori";
 import sharp from "sharp";
 
-import type { HomeOpenGraphImageComponentType } from "~/components/Home/OpenGraphImage";
+import type { HomeOpenGraphImageComponentType } from "~/features/home/OpenGraphImage";
 import type { OpenGraphImageComponentType } from "~/components/OpenGraphImage";
 import type { ReviewOpenGraphImageComponentType } from "~/components/Review/OpenGraphImage";
 

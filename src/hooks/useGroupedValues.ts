@@ -27,8 +27,9 @@ export function useGroupedValues<TValue, TSort, TFilterValues>(
 
   const sortedValues = sorter(values, sort);
   const filteredValues = filterer(sortedValues, activeFilterValues);
-  setGroupedValues(grouper(filteredValues, sort));
+  const newGroupedValues = grouper(filteredValues, sort);
+  setGroupedValues(newGroupedValues);
   setTotalCount(filteredValues.length);
 
-  return [groupedValues, totalCount];
+  return [newGroupedValues, filteredValues.length];
 }

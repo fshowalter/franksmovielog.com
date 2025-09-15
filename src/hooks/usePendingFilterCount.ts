@@ -17,5 +17,5 @@ export function usePendingFilterCount<TValue, TFilterValues>(
   const filteredValues = filterer(values, pendingFilterValues);
   setPendingFilterCount(filteredValues.length);
 
-  return pendingFilterCount;
+  return filteredValues.length;
 }

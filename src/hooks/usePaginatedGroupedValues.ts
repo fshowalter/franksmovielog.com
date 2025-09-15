@@ -35,8 +35,9 @@ export function usePaginatedGroupedValues<TValue, TSort, TFilterValues>(
 
   const sortedValues = sorter(values, sort);
   const filteredValues = filterer(sortedValues, activeFilterValues);
-  setGroupedValues(grouper(filteredValues, sort, showCount));
+  const newGroupedValues = grouper(filteredValues, sort, showCount);
+  setGroupedValues(newGroupedValues);
   setTotalCount(filteredValues.length);
 
-  return [groupedValues, totalCount];
+  return [newGroupedValues, filteredValues.length];
 }

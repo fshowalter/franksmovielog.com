@@ -27,7 +27,6 @@ export async function getProps(): Promise<PageProps> {
         name: collection.name,
         reviewCount: collection.reviewCount,
         slug: collection.slug,
-        titleCount: collection.titleCount,
       };
 
       return listItemValue;
