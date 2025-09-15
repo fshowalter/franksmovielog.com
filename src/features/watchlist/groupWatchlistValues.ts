@@ -1,4 +1,4 @@
-import { groupTitleValues } from "~/groupers/groupTitleValues";
+import { groupTitles } from "~/groupers/groupTitles";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
 import type { WatchlistValue } from "./Watchlist";
@@ -8,5 +8,5 @@ export function groupWatchlistValues(
   sort: WatchlistSort,
   showCount: number,
 ) {
-  return groupTitleValues(filteredValues, showCount, sort);
+  return groupTitles(filteredValues, showCount, sort);
 }

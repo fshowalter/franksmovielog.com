@@ -1,10 +1,11 @@
 import type { BackdropImageProps } from "~/api/backdrops";
-import type { ReviewCardValue } from "~/components/ReviewCard";
+import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
 
-import { Backdrop } from "~/components/Backdrop";
+import { Backdrop } from "~/components/backdrop/Backdrop";
 import { Layout } from "~/components/Layout/Layout";
-import { LongFormText } from "~/components/LongFormText";
-import { MoreReviews, MoreReviewsHeading } from "~/components/MoreReviews";
+import { LongFormText } from "~/components/long-form-text/LongFormText";
+import { MoreReviews } from "~/components/more-reviews/MoreReviews";
+import { MoreReviewsHeading } from "~/components/more-reviews/MoreReviewsHeading";
 
 export type Props = {
   backdropImageProps: BackdropImageProps;

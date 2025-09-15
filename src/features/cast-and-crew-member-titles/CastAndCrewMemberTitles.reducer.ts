@@ -1,8 +1,15 @@
-import type { MaybeReviewedTitleFiltersAction, MaybeReviewedTitleFiltersState, MaybeReviewedTitleFiltersValues } from "~/reducers/maybeReviewedTitleFiltersReducer";
+import type {
+  MaybeReviewedTitleFiltersAction,
+  MaybeReviewedTitleFiltersState,
+  MaybeReviewedTitleFiltersValues,
+} from "~/reducers/maybeReviewedTitleFiltersReducer";
 import type { ShowMoreAction, ShowMoreState } from "~/reducers/showMoreReducer";
 import type { SortAction, SortState } from "~/reducers/sortReducer";
 
-import { createInitialMaybeReviewedTitleFiltersState, maybeReviewedTitleFiltersReducer } from "~/reducers/maybeReviewedTitleFiltersReducer";
+import {
+  createInitialMaybeReviewedTitleFiltersState,
+  maybeReviewedTitleFiltersReducer,
+} from "~/reducers/maybeReviewedTitleFiltersReducer";
 import {
   createInitialShowMoreState,
   showMoreReducer,
@@ -14,7 +21,7 @@ import {
 } from "~/reducers/sortReducer";
 
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
-import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitlesValues";
+import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
 
 export {
   createApplyFiltersAction,

@@ -8,7 +8,7 @@ import { CollectionSortOptions } from "~/components/filter-and-sort/CollectionSo
 import { useGroupedValues } from "~/hooks/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { CastAndCrewSort } from "./sortCastAndCrewValues";
+import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 import { AlphabetSubNav } from "./AlphabetSubNav";
 import {
@@ -21,10 +21,10 @@ import {
   selectHasPendingFilters,
 } from "./CastAndCrew.reducer";
 import { CastAndCrewListItem } from "./CastAndCrewListItem";
-import { filterCastAndCrewValues } from "./filterCastAndCrewValues";
+import { filterCastAndCrew } from "./filterCastAndCrew";
 import { Filters } from "./Filters";
-import { groupCastAndCrewValues } from "./groupCastAndCrewValues";
-import { sortCastAndCrewValues } from "./sortCastAndCrewValues";
+import { groupCastAndCrew } from "./groupCastAndCrew";
+import { sortCastAndCrew } from "./sortCastAndCrew";
 
 export type CastAndCrewProps = {
   initialSort: CastAndCrewSort;
@@ -53,16 +53,16 @@ export function CastAndCrew({
   );
 
   const [groupedValues, totalCount] = useGroupedValues(
-    sortCastAndCrewValues,
-    filterCastAndCrewValues,
-    groupCastAndCrewValues,
+    sortCastAndCrew,
+    filterCastAndCrew,
+    groupCastAndCrew,
     state.values,
     state.sort,
     state.activeFilterValues,
   );
 
   const pendingFilteredCount = usePendingFilterCount(
-    filterCastAndCrewValues,
+    filterCastAndCrew,
     state.values,
     state.pendingFilterValues,
   );

@@ -2,9 +2,9 @@
 import React from "react";
 
 import { allCollections } from "~/api/collections";
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { Collection } from "~/components/Collection/Collection";
-import { getProps } from "~/components/Collection/getProps";
+import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
+import { CollectionTitlesStrictWrapper } from "~/features/collection-titles/CollectionTitles";
+import { getProps } from "~/features/collection-titles/getProps";
 import { Layout as ComponentLayout } from "~/components/Layout/Layout";
 import Layout from "~/layouts/Layout.astro";
 
@@ -32,7 +32,13 @@ const { slug } = Astro.props;
 const props = await getProps(slug);
 
 // Separate layout props from interactive props
-const { backdropImageProps, ...interactiveProps } = props;
+const {
+  backdropImageProps,
+  name,
+  description,
+  descriptionHtml,
+  ...interactiveProps
+} = props;
 
 const breadcrumb = React.createElement(BreadcrumbLink, {
   children: "Collections",
@@ -40,28 +46,28 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
 });
 
 const deckElement = React.createElement("span", {
-  dangerouslySetInnerHTML: { __html: props.value.descriptionHtml },
+  dangerouslySetInnerHTML: { __html: descriptionHtml },
 });
 ---
 
 <Layout
   canonical={true}
   meta={{
-    description: `${props.value.name} movie reviews: ${props.value.description} Sort by oldest or newest, best or worst, or title.`,
+    description: `${name} movie reviews: ${description} Sort by oldest or newest, best or worst, or title.`,
   }}
   openGraph={{
-    description: props.value.description || "",
+    description: description || "",
     type: "website",
   }}
-  title={`${props.value.name} movie reviews`}
+  title={`${name} movie reviews`}
 >
   <ComponentLayout className="bg-subtle">
     <Backdrop
       breadcrumb={breadcrumb}
       deck={deckElement}
       imageProps={backdropImageProps}
-      title={props.value.name}
+      title={name}
     />
-    <Collection client:load {...interactiveProps} />
+    <CollectionTitlesStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
 </Layout>

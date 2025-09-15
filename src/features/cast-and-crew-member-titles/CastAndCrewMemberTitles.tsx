@@ -7,7 +7,7 @@ import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitlesValues";
+import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
 
 import {
   createApplyFiltersAction,
@@ -20,10 +20,10 @@ import {
   selectHasPendingFilters,
 } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitleListItem } from "./CastAndCrewMemberTitlesListItem";
-import { filterCastAndCrewMemberTitlesValues } from "./filterCastAndCrewMemberTitlesValues";
+import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 import { Filters } from "./Filters";
-import { groupCastAndCrewMemberTitlesValues } from "./groupCastAndCrewMemberTitlesValues";
-import { sortCastAndCrewMemberTitlesValues } from "./sortCastAndCrewMemberTitlesValues";
+import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
+import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
 export type CastAndCrewMemberTitlesProps = {
@@ -74,9 +74,9 @@ export function CastAndCrewMemberTitles({
   );
 
   const [groupedValues, totalCount] = usePaginatedGroupedValues(
-    sortCastAndCrewMemberTitlesValues,
-    filterCastAndCrewMemberTitlesValues,
-    groupCastAndCrewMemberTitlesValues,
+    sortCastAndCrewMemberTitles,
+    filterCastAndCrewMemberTitles,
+    groupCastAndCrewMemberTitles,
     state.values,
     state.sort,
     state.activeFilterValues,
@@ -84,7 +84,7 @@ export function CastAndCrewMemberTitles({
   );
 
   const pendingFilteredCount = usePendingFilterCount(
-    filterCastAndCrewMemberTitlesValues,
+    filterCastAndCrewMemberTitles,
     state.values,
     state.pendingFilterValues,
   );

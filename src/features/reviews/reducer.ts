@@ -43,7 +43,7 @@ export type ReviewsAction =
   | SortAction<ReviewsSort>;
 
 import type { ReviewsValue } from "./ReviewsListItem";
-import type { ReviewsSort } from "./sortReviewsValues";
+import type { ReviewsSort } from "./sortReviews";
 
 /**
  * Type definition for Reviews page filter values

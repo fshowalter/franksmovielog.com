@@ -5,7 +5,7 @@ import sharp from "sharp";
 
 import { allReviews } from "~/api/reviews";
 import { fileForGrade } from "~/components/Grade";
-import { OpenGraphImage } from "~/components/Review/OpenGraphImage";
+import { OpenGraphImage } from "~/features/review/OpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;

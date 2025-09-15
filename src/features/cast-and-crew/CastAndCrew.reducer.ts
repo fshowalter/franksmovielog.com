@@ -16,12 +16,19 @@ export {
 
 export { createShowMoreAction } from "~/reducers/showMoreReducer";
 
-import type { CollectionFiltersAction, CollectionFiltersState, CollectionFiltersValues } from "~/reducers/collectionFiltersReducer";
+import type {
+  CollectionFiltersAction,
+  CollectionFiltersState,
+  CollectionFiltersValues,
+} from "~/reducers/collectionFiltersReducer";
 
-import { collectionFiltersReducer, createInitialCollectionFiltersState } from "~/reducers/collectionFiltersReducer";
+import {
+  collectionFiltersReducer,
+  createInitialCollectionFiltersState,
+} from "~/reducers/collectionFiltersReducer";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
-import type { CastAndCrewSort } from "./sortCastAndCrewValues";
+import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 /**
  * Union type of all reviewed work-specific filter actions for Reviews page

@@ -1,5 +1,5 @@
 import type { CastAndCrewValue } from "./CastAndCrew";
-import type { CastAndCrewSort } from "./sortCastAndCrewValues";
+import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 export function AlphabetSubNav({
   groupedValues,

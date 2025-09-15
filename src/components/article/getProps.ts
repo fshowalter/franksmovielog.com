@@ -2,8 +2,8 @@ import { getBackdropImageProps } from "~/api/backdrops";
 import { getPage } from "~/api/pages";
 import { loadExcerptHtml, mostRecentReviews } from "~/api/reviews";
 import { getStillImageProps } from "~/api/stills";
-import { BackdropImageConfig } from "~/components/Backdrop";
-import { MoreReviewsImageConfig } from "~/components/MoreReviews";
+import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
+import { MoreReviewsImageConfig } from "~/components/more-reviews/MoreReviews";
 
 import type { Props } from "./Article";
 

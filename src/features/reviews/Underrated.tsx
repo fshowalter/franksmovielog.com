@@ -6,11 +6,11 @@ import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { ReviewsValue } from "./ReviewsListItem";
-import type { ReviewsSort } from "./sortReviewsValues";
+import type { ReviewsSort } from "./sortReviews";
 
-import { filterReviewsValues } from "./filteredReviewsValues";
+import { filterReviews } from "./filteredReviews";
 import { Filters, SortOptions } from "./Filters";
-import { groupReviewsValues } from "./groupReviewsValues";
+import { groupReviews } from "./groupReviews";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -22,7 +22,7 @@ import {
   selectHasPendingFilters,
 } from "./reducer";
 import { ReviewsListItem } from "./ReviewsListItem";
-import { sortReviewsValues } from "./sortReviewsValues";
+import { sortReviews } from "./sortReviews";
 
 export type UnderratedProps = {
   distinctGenres: string[];
@@ -49,9 +49,9 @@ export function Underrated({
   );
 
   const [groupedValues, totalCount] = usePaginatedGroupedValues(
-    sortReviewsValues,
-    filterReviewsValues,
-    groupReviewsValues,
+    sortReviews,
+    filterReviews,
+    groupReviews,
     state.values,
     state.sort,
     state.activeFilterValues,
@@ -59,7 +59,7 @@ export function Underrated({
   );
 
   const pendingFilteredCount = usePendingFilterCount(
-    filterReviewsValues,
+    filterReviews,
     state.values,
     state.pendingFilterValues,
   );
