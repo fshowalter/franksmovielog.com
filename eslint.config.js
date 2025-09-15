@@ -10,12 +10,13 @@ import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactCompiler from "eslint-plugin-react-compiler";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import { defineConfig } from "eslint/config";
 import globals from "globals";
-import tsEslint from "typescript-eslint";
+import tseslint from "typescript-eslint";
 
 import separateTypeImports from "./eslint-rules/separate-type-imports.js";
 
-export default tsEslint.config(
+export default defineConfig(
   {
     ignores: [
       "dist/",
@@ -47,7 +48,7 @@ export default tsEslint.config(
     },
   },
   {
-    extends: [...tsEslint.configs.recommendedTypeChecked],
+    extends: [tseslint.configs.recommendedTypeChecked],
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
@@ -57,7 +58,7 @@ export default tsEslint.config(
       },
     },
     plugins: {
-      "local": {
+      local: {
         rules: {
           "separate-type-imports": separateTypeImports,
         },

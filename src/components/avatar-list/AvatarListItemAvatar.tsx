@@ -3,14 +3,14 @@ import type { AvatarImageProps } from "~/api/avatars";
 import { Avatar } from "~/components/Avatar";
 
 export function AvatarListItemAvatar({
-  imageProps,
   imageConfig,
+  imageProps,
 }: {
-  imageProps: AvatarImageProps | undefined;
   imageConfig: {
     height: number;
     width: number;
   };
+  imageProps: AvatarImageProps | undefined;
 }): React.JSX.Element {
   const avatar = (
     <Avatar

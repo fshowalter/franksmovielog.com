@@ -1,0 +1,39 @@
+export function ListItemMediumAndVenue({
+  medium,
+  venue,
+}: {
+  medium?: string | undefined;
+  venue?: string | undefined;
+}): false | React.JSX.Element {
+  if (medium && venue) {
+    return (
+      <div
+        className={`font-sans text-xs font-light tracking-prose text-subtle`}
+      >
+        {medium} at {venue}
+      </div>
+    );
+  }
+
+  if (medium) {
+    return (
+      <div
+        className={`font-sans text-xs font-light tracking-prose text-subtle`}
+      >
+        {medium}
+      </div>
+    );
+  }
+
+  if (venue) {
+    return (
+      <div
+        className={`font-sans text-xs font-light tracking-prose text-subtle`}
+      >
+        {venue}
+      </div>
+    );
+  }
+
+  return false;
+}

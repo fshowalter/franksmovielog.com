@@ -1,12 +1,12 @@
-import { TextField } from "~/components/fields/TextField";
+import type { CollectionFiltersValues } from "~/reducers/collectionFiltersReducer";
 
-import type { CollectionFilterValues } from "./collectionsReducerUtils";
+import { TextField } from "~/components/fields/TextField";
 
 export function CollectionFilters({
   name,
 }: {
   name: {
-    initialValue: CollectionFilterValues["name"];
+    initialValue: CollectionFiltersValues["name"];
     onChange: (value: string) => void;
   };
 }): React.JSX.Element {
