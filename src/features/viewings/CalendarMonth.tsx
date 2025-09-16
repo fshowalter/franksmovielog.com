@@ -5,15 +5,15 @@ import { CalendarCell } from "./CalendarCell";
 import { useCalendar } from "./useCalendar";
 
 export function CalendarMonth({
-  currentMonth,
+  currentMonthDate,
   filteredValues,
   sort,
 }: {
-  currentMonth: { month: string; year: string };
+  currentMonthDate: string;
   filteredValues: ViewingsValue[];
   sort: ViewingsSort;
 }): React.JSX.Element {
-  const rows = useCalendar(currentMonth, filteredValues, sort);
+  const rows = useCalendar(currentMonthDate, filteredValues, sort);
 
   return (
     <div

@@ -151,13 +151,13 @@ export function Viewings({
             prevMonthDate={previousMonthDate}
           />
           <CalendarMonth
-            currentMonth={currentMonthDate}
+            currentMonthDate={currentMonthDate}
             filteredValues={filteredValues}
             sort={state.sort}
           />
         </div>
       ) : (
-        <div>No results.</div>
+        <div className="pt-10">No results.</div>
       )}
     </FilterAndSortContainer>
   );
