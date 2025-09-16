@@ -1,30 +1,32 @@
-import type { ActionType } from "./Viewings.reducer";
+import type { ViewingsValue } from "./Viewings";
+import type { ViewingsAction } from "./Viewings.reducer";
 
-import { Actions } from "./Viewings.reducer";
+import {
+  createNextMonthClickedAction,
+  createPreviousMonthClickedAction,
+} from "./Viewings.reducer";
 
 export function MonthNavigationHeader({
-  currentMonth,
   dispatch,
-  hasNextMonth,
-  hasPrevMonth,
+  firstValue,
   nextMonth,
   prevMonth,
 }: {
-  currentMonth: Date;
-  dispatch: React.Dispatch<ActionType>;
-  hasNextMonth: boolean;
-  hasPrevMonth: boolean;
-  nextMonth: Date | undefined;
-  prevMonth: Date | undefined;
+  dispatch: React.Dispatch<ViewingsAction>;
+  firstValue: ViewingsValue;
+  nextMonth: undefined | ViewingsValue;
+  prevMonth: undefined | ViewingsValue;
 }): React.JSX.Element {
-  const monthName = currentMonth.toLocaleString("en-US", {
+  const currentMonthAsDate = new Date(firstValue.viewingDate);
+
+  const monthName = currentMonthAsDate.toLocaleString("en-US", {
     month: "long",
     timeZone: "UTC",
     year: "numeric",
   });
 
   const prevMonthName = prevMonth
-    ? prevMonth.toLocaleString("en-US", {
+    ? new Date(prevMonth.viewingDate).toLocaleString("en-US", {
         month: "short",
         timeZone: "UTC",
         year: "numeric",
@@ -32,7 +34,7 @@ export function MonthNavigationHeader({
     : "";
 
   const nextMonthName = nextMonth
-    ? nextMonth.toLocaleString("en-US", {
+    ? new Date(nextMonth.viewingDate).toLocaleString("en-US", {
         month: "short",
         timeZone: "UTC",
         year: "numeric",
@@ -51,7 +53,7 @@ export function MonthNavigationHeader({
       `}
     >
       <div className="w-1/3">
-        {hasPrevMonth && (
+        {prevMonth && (
           <button
             aria-disabled={false}
             aria-label={`Navigate to previous month: ${prevMonthName}`}
@@ -64,7 +66,14 @@ export function MonthNavigationHeader({
               hover:after:scale-x-100
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
-            onClick={() => dispatch({ type: Actions.PREV_MONTH })}
+            onClick={() =>
+              dispatch(
+                createPreviousMonthClickedAction({
+                  month: prevMonth.viewingMonthShort,
+                  year: prevMonth.viewingYear,
+                }),
+              )
+            }
             type="button"
           >
             ← {prevMonthName}
@@ -81,7 +90,7 @@ export function MonthNavigationHeader({
         {monthName}
       </h2>
       <div className="w-1/3 text-right">
-        {hasNextMonth && (
+        {nextMonth && (
           <button
             aria-disabled={false}
             aria-label={`Navigate to next month: ${nextMonthName}`}
@@ -94,7 +103,14 @@ export function MonthNavigationHeader({
               hover:after:scale-x-100
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
-            onClick={() => dispatch({ type: Actions.NEXT_MONTH })}
+            onClick={() =>
+              dispatch(
+                createNextMonthClickedAction({
+                  month: nextMonth.viewingMonthShort,
+                  year: nextMonth.viewingYear,
+                }),
+              )
+            }
             type="button"
           >
             {nextMonthName} →

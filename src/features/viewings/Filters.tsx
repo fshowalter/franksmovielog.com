@@ -1,11 +1,19 @@
 import { SelectField } from "~/components/fields/SelectField";
 import { SelectOptions } from "~/components/fields/SelectOptions";
 import { YearField } from "~/components/fields/YearField";
-import { TitleFilters } from "~/components/ListWithFilters/TitleFilters";
+import { ReviewedStatusFilter } from "~/components/filter-and-sort/ReviewedStatusFilter";
+import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
 
-import type { ActionType, ViewingsFilterValues } from "./Viewings.reducer";
+import type { ViewingsAction, ViewingsFiltersValues } from "./Viewings.reducer";
 
-import { Actions } from "./Viewings.reducer";
+import {
+  createMediumFilterChangedAction,
+  createReleaseYearFilterChangedAction,
+  createReviewedStatusFilterChangedAction,
+  createTitleFilterChangedAction,
+  createVenueFilterChangedAction,
+  createViewingYearFilterChangedAction,
+} from "./Viewings.reducer";
 
 export function Filters({
   dispatch,
@@ -15,12 +23,12 @@ export function Filters({
   distinctViewingYears,
   filterValues,
 }: {
-  dispatch: React.Dispatch<ActionType>;
+  dispatch: React.Dispatch<ViewingsAction>;
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
-  filterValues: ViewingsFilterValues;
+  filterValues: ViewingsFiltersValues;
 }): React.JSX.Element {
   return (
     <>
@@ -28,52 +36,39 @@ export function Filters({
         releaseYear={{
           initialValue: filterValues.releaseYear,
           onChange: (values) =>
-            dispatch({ type: Actions.PENDING_FILTER_RELEASE_YEAR, values }),
+            dispatch(createReleaseYearFilterChangedAction(values)),
           values: distinctReleaseYears,
-        }}
-        reviewedStatus={{
-          initialValue: filterValues.reviewedStatus,
-          onChange: (value) =>
-            dispatch({
-              type: Actions.PENDING_FILTER_REVIEWED_STATUS,
-              value,
-            }),
         }}
         title={{
           initialValue: filterValues.title,
-          onChange: (value) =>
-            dispatch({ type: Actions.PENDING_FILTER_TITLE, value }),
+          onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
+      <ReviewedStatusFilter
+        initialValue={filterValues.reviewedStatus}
+        onChange={(value) =>
+          dispatch(createReviewedStatusFilterChangedAction(value))
+        }
+      />
       <YearField
-        initialValues={filterValues.viewingYears}
+        initialValues={filterValues.viewingYear}
         label="Viewing Year"
         onYearChange={(values) =>
-          dispatch({ type: Actions.PENDING_FILTER_VIEWING_YEAR, values })
+          dispatch(createViewingYearFilterChangedAction(values))
         }
         years={distinctViewingYears}
       />
       <SelectField
-        initialValue={filterValues.medium}
+        defaultValue={filterValues.medium}
         label="Medium"
-        onChange={(value) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_MEDIUM,
-            value,
-          })
-        }
+        onChange={(value) => dispatch(createMediumFilterChangedAction(value))}
       >
         <SelectOptions options={distinctMedia} />
       </SelectField>
       <SelectField
-        initialValue={filterValues.venue}
+        defaultValue={filterValues.venue}
         label="Venue"
-        onChange={(value) =>
-          dispatch({
-            type: Actions.PENDING_FILTER_VENUE,
-            value,
-          })
-        }
+        onChange={(value) => dispatch(createVenueFilterChangedAction(value))}
       >
         <SelectOptions options={distinctVenues} />
       </SelectField>

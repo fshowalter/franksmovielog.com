@@ -3,12 +3,14 @@ import type { BackdropImageProps } from "~/api/backdrops";
 import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allViewings } from "~/api/viewings";
-import { BackdropImageConfig } from "~/components/Backdrop";
-import { PosterListItemImageConfig } from "~/components/PosterList";
+import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
+import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 
-import type { ListItemValue, Props } from "./Viewings";
+import type { ViewingsProps, ViewingsValue } from "./Viewings";
 
-type PageProps = Props & {
+import { sortViewings } from "./sortViewings";
+
+type PageProps = ViewingsProps & {
   backdropImageProps: BackdropImageProps;
   deck: string;
   metaDescription: string;
@@ -26,7 +28,7 @@ export async function getProps(): Promise<PageProps> {
   const values = await Promise.all(
     viewings.map(async (viewing) => {
       const viewingDate = new Date(viewing.viewingDate);
-      const value: ListItemValue = {
+      const value: ViewingsValue = {
         medium: viewing.medium,
         posterImageProps: await getFluidWidthPosterImageProps(
           viewing.slug,
@@ -72,6 +74,6 @@ export async function getProps(): Promise<PageProps> {
     initialSort: "viewing-date-desc",
     metaDescription:
       "A list of every movie I've seen since 2012. Filter by title, release year, viewing year, venue, medium, or genre. Sort by oldest or newest.",
-    values,
+    values: sortViewings(values, "viewing-date-desc"),
   };
 }

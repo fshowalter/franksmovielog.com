@@ -1,25 +1,36 @@
-import { useEffect, useReducer, useRef, useState } from "react";
+import { useEffect, useReducer, useRef } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
-import {
-  ListHeaderButton,
-  ListWithFilters,
-} from "~/components/ListWithFilters/ListWithFilters";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { FilterAndSortHeaderLink } from "~/components/filter-and-sort/FilterAndSortHeaderLink";
+import { useFilteredValues } from "~/hooks/useFilteredValues";
+import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { ActionType, Sort } from "./Viewings.reducer";
+import type { ViewingsSort } from "./sortViewings";
 
 import { CalendarMonth } from "./CalendarMonth";
 import { Filters } from "./Filters";
+import { filterViewings } from "./filterViewings";
 import { MonthNavigationHeader } from "./MonthNavigationHeader";
-import { Actions, initState, reducer } from "./Viewings.reducer";
+import { sortViewings } from "./sortViewings";
+import { useMonthNavigation } from "./useMonthNavigation";
+import {
+  createApplyFiltersAction,
+  createClearFiltersAction,
+  createInitialState,
+  createResetFiltersAction,
+  createSortAction,
+  reducer,
+  selectHasPendingFilters,
+} from "./Viewings.reducer";
 
 export type ViewingsProps = {
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
-  initialSort: Sort;
+  initialSort: ViewingsSort;
   values: ViewingsValue[];
 };
 
@@ -40,16 +51,6 @@ export type ViewingsValue = {
   viewingYear: string;
 };
 
-type CalendarViewProps = {
-  currentMonth: Date;
-  dispatch: React.Dispatch<ActionType>;
-  groupedValues: Map<string, ListItemValue[]>;
-  hasNextMonth: boolean;
-  hasPrevMonth: boolean;
-  nextMonth: Date | undefined;
-  prevMonth: Date | undefined;
-};
-
 export function Viewings({
   distinctMedia,
   distinctReleaseYears,
@@ -64,14 +65,13 @@ export function Viewings({
       initialSort,
       values,
     },
-    initState,
+    createInitialState,
   );
-  const [filterKey, setFilterKey] = useState(0);
   const prevMonthRef = useRef(state.currentMonth);
 
   // Scroll to top of calendar when month changes
   useEffect(() => {
-    if (prevMonthRef.current.getTime() !== state.currentMonth.getTime()) {
+    if (prevMonthRef.current !== state.currentMonth) {
       prevMonthRef.current = state.currentMonth;
       if (typeof document !== "undefined") {
         document
@@ -81,8 +81,30 @@ export function Viewings({
     }
   }, [state.currentMonth]);
 
+  const filteredValues = useFilteredValues(
+    sortViewings,
+    filterViewings,
+    state.values,
+    state.sort,
+    state.activeFilterValues,
+  );
+
+  const pendingFilteredCount = usePendingFilterCount(
+    filterViewings,
+    state.values,
+    state.pendingFilterValues,
+  );
+
+  const hasPendingFilters = selectHasPendingFilters(state);
+
+  const [previousMonth, currentMonth, nextMonth] = useMonthNavigation(
+    state.currentMonth,
+    filteredValues,
+    state.sort,
+  );
+
   return (
-    <ListWithFilters
+    <FilterAndSortContainer
       filters={
         <Filters
           dispatch={dispatch}
@@ -91,43 +113,25 @@ export function Viewings({
           distinctVenues={distinctVenues}
           distinctViewingYears={distinctViewingYears}
           filterValues={state.pendingFilterValues}
-          key={filterKey}
         />
       }
-      hasActiveFilters={state.hasActiveFilters}
-      list={
-        <CalendarView
-          currentMonth={state.currentMonth}
-          dispatch={dispatch}
-          groupedValues={state.groupedValues}
-          hasNextMonth={state.hasNextMonth}
-          hasPrevMonth={state.hasPrevMonth}
-          nextMonth={state.nextMonth}
-          prevMonth={state.prevMonth}
-        />
+      hasPendingFilters={hasPendingFilters}
+      headerLinks={
+        <FilterAndSortHeaderLink href="/viewings/stats/" text="stats" />
       }
-      listHeaderButtons={
-        <ListHeaderButton href="/viewings/stats/" text="stats" />
-      }
-      onApplyFilters={() => dispatch({ type: Actions.APPLY_PENDING_FILTERS })}
+      onApplyFilters={() => dispatch(createApplyFiltersAction())}
       onClearFilters={() => {
-        dispatch({ type: Actions.CLEAR_PENDING_FILTERS });
-        setFilterKey((prev) => prev + 1);
+        dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => {
-        // Increment key to force remount of filter components
-        setFilterKey((prev) => prev + 1);
-        dispatch({ type: Actions.RESET_PENDING_FILTERS });
+        dispatch(createResetFiltersAction());
       }}
-      onResetFilters={() => dispatch({ type: Actions.RESET_PENDING_FILTERS })}
-      pendingFilteredCount={state.pendingFilteredCount}
+      onResetFilters={() => dispatch(createResetFiltersAction())}
+      pendingFilteredCount={pendingFilteredCount}
       sortProps={{
-        currentSortValue: state.sortValue,
+        currentSortValue: state.sort,
         onSortChange: (e) =>
-          dispatch({
-            type: Actions.SORT,
-            value: e.target.value as Sort,
-          }),
+          dispatch(createSortAction(e.target.value as ViewingsSort)),
         sortOptions: (
           <>
             <option value="viewing-date-desc">
@@ -139,34 +143,21 @@ export function Viewings({
           </>
         ),
       }}
-      totalCount={state.filteredValues.length}
-    />
-  );
-}
-
-function CalendarView({
-  currentMonth,
-  dispatch,
-  filteredValues,
-  hasNextMonth,
-  hasPrevMonth,
-  nextMonth,
-  prevMonth,
-}: CalendarViewProps): React.JSX.Element {
-  return (
-    <div className="mx-auto w-full max-w-(--breakpoint-desktop)">
-      <MonthNavigationHeader
-        currentMonth={currentMonth}
-        dispatch={dispatch}
-        hasNextMonth={hasNextMonth}
-        hasPrevMonth={hasPrevMonth}
-        nextMonth={nextMonth}
-        prevMonth={prevMonth}
-      />
-      <CalendarMonth
-        currentMonth={currentMonth}
-        filteredValues={filteredValues}
-      />
-    </div>
+      totalCount={filteredValues.length}
+    >
+      <div className="mx-auto w-full max-w-(--breakpoint-desktop)">
+        <MonthNavigationHeader
+          dispatch={dispatch}
+          firstValue={currentMonth!}
+          nextMonth={nextMonth}
+          prevMonth={previousMonth}
+        />
+        <CalendarMonth
+          currentMonth={state.currentMonth}
+          filteredValues={filteredValues}
+          sort={state.sort}
+        />
+      </div>
+    </FilterAndSortContainer>
   );
 }

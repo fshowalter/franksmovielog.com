@@ -8,6 +8,7 @@ export type FilterableMaybeReviewedTitle = FilterableTitle & {
 
 import type { FilterableTitle } from "./filterTitles";
 
+import { createReviewedStatusFilter } from "./createReviewedStatusFilter";
 import { filterTitles } from "./filterTitles";
 
 export function filterMaybeReviewedTitles<
@@ -39,23 +40,6 @@ function createGradeFilter<TValue extends FilterableMaybeReviewedTitle>(
     return (
       value.gradeValue >= filterValue[0] && value.gradeValue <= filterValue[1]
     );
-  };
-}
-
-function createReviewedStatusFilter<
-  TValue extends FilterableMaybeReviewedTitle,
->(filterValue?: string) {
-  if (!filterValue) return;
-  return (value: TValue): boolean => {
-    if (filterValue === "All") {
-      return true;
-    }
-
-    if (filterValue === "Reviewed") {
-      return !!value.slug;
-    }
-
-    return !value.slug;
   };
 }
 

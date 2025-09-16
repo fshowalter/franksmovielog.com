@@ -32,6 +32,8 @@ export {
  */
 export type ViewingsAction =
   | MediumFilterChangedAction
+  | NextMonthClickedAction
+  | PreviousMonthClickedAction
   | ReviewedStatusFilterChangedAction
   | SortAction<ViewingsSort>
   | TitleFiltersAction
@@ -44,7 +46,7 @@ import type { ViewingsValue } from "./Viewings";
 /**
  * Type definition for Reviews page filter values
  */
-export type ViewingsFiltersValues = TitleFiltersValues & {
+export type ViewingsFiltersValues = Omit<TitleFiltersValues, "genres"> & {
   medium?: string;
   reviewedStatus?: string;
   venue?: string;
@@ -54,6 +56,22 @@ export type ViewingsFiltersValues = TitleFiltersValues & {
 type MediumFilterChangedAction = {
   type: "viewings/mediumChanged";
   value: string;
+};
+
+type NextMonthClickedAction = {
+  type: "viewings/nextMonthClicked";
+  value: {
+    month: string;
+    year: string;
+  };
+};
+
+type PreviousMonthClickedAction = {
+  type: "viewings/previousMonthClicked";
+  value: {
+    month: string;
+    year: string;
+  };
 };
 
 type ReviewedStatusFilterChangedAction = {
@@ -75,7 +93,10 @@ type ViewingsState = Omit<
 > &
   SortState<ViewingsSort> & {
     activeFilterValues: ViewingsFiltersValues;
-    currentMonth: Date;
+    currentMonth: {
+      month: string;
+      year: string;
+    };
     pendingFilterValues: ViewingsFiltersValues;
   };
 
@@ -99,7 +120,10 @@ export function createInitialState({
   return {
     ...titleFilterState,
     ...sortState,
-    currentMonth: getInitialMonth(values, initialSort),
+    currentMonth: {
+      month: values[0].viewingMonthShort,
+      year: values[0].viewingYear,
+    },
   };
 }
 
@@ -107,6 +131,20 @@ export function createMediumFilterChangedAction(
   value: string,
 ): MediumFilterChangedAction {
   return { type: "viewings/mediumChanged", value };
+}
+
+export function createNextMonthClickedAction(value: {
+  month: string;
+  year: string;
+}): NextMonthClickedAction {
+  return { type: "viewings/nextMonthClicked", value };
+}
+
+export function createPreviousMonthClickedAction(value: {
+  month: string;
+  year: string;
+}): PreviousMonthClickedAction {
+  return { type: "viewings/previousMonthClicked", value };
 }
 
 export function createReviewedStatusFilterChangedAction(
@@ -134,10 +172,29 @@ export function createViewingYearFilterChangedAction(
 export function reducer(state: ViewingsState, action: ViewingsAction) {
   switch (action.type) {
     case "sort/sort": {
-      return sortReducer(state, action);
+      const newState = sortReducer(state, action);
+
+      const startingViewing =
+        action.value === "viewing-date-asc"
+          ? newState.values.at(-1)
+          : newState.values[0];
+
+      return {
+        ...newState,
+        currentMonth: {
+          month: startingViewing!.viewingMonthShort,
+          year: startingViewing!.viewingYear,
+        },
+      };
     }
     case "viewings/mediumChanged": {
       return handleMediumFilterChanged(state, action);
+    }
+    case "viewings/nextMonthClicked": {
+      return handleNextMonthClicked(state, action);
+    }
+    case "viewings/previousMonthClicked": {
+      return handlePreviousMonthClicked(state, action);
     }
     case "viewings/reviewedStatusChanged": {
       return handleReviewedStatusFilterChanged(state, action);
@@ -164,6 +221,26 @@ function handleMediumFilterChanged(
       ...state.pendingFilterValues,
       medium: action.value,
     },
+  };
+}
+
+function handleNextMonthClicked(
+  state: ViewingsState,
+  action: NextMonthClickedAction,
+) {
+  return {
+    ...state,
+    currentMonth: action.value,
+  };
+}
+
+function handlePreviousMonthClicked(
+  state: ViewingsState,
+  action: PreviousMonthClickedAction,
+) {
+  return {
+    ...state,
+    currentMonth: action.value,
   };
 }
 
@@ -207,32 +284,3 @@ function handleViewingYearFilterChanged(
 }
 
 export const createSortAction = createSortActionCreator<ViewingsSort>();
-
-// Determine initial month based on sort order
-function getInitialMonth(
-  values: ViewingsValue[],
-  sortValue: ViewingsSort,
-): Date {
-  if (values.length === 0) {
-    return new Date();
-  }
-
-  return sortValue === "viewing-date-asc"
-    ? getOldestMonth(values)
-    : getMostRecentMonth(values);
-}
-
-function getOldestMonth(values: ViewingsValue[]): Date {
-  if (values.length === 0) {
-    return new Date();
-  }
-
-  // Get the oldest viewing date
-  const sortedValues = [...values].sort(
-    (a, b) => a.viewingSequence - b.viewingSequence,
-  );
-  const oldestDate = new Date(sortedValues[0].viewingDate);
-
-  // Create a date for the first day of that month
-  return new Date(oldestDate.getUTCFullYear(), oldestDate.getUTCMonth(), 1);
-}

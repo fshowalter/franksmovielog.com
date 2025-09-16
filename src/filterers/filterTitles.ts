@@ -1,5 +1,7 @@
 import type { TitleFiltersValues } from "~/reducers/titleFiltersReducer";
 
+import { createReleaseYearFilter } from "./createReleaseYearFilter";
+import { createTitleFilter } from "./createTitleFilter";
 import { filterSortedValues } from "./filterSortedValues";
 
 export type FilterableTitle = {
@@ -33,29 +35,4 @@ function createGenresFilter<TValue extends FilterableTitle>(
   return (value: TValue) => {
     return filterValue.every((genre) => value.genres.includes(genre));
   };
-}
-
-/**
- * Create a Release Year filter function
- */
-function createReleaseYearFilter<TValue extends FilterableTitle>(
-  filterValue?: [string, string],
-) {
-  if (!filterValue) return;
-  return (value: TValue): boolean => {
-    return (
-      value.releaseYear >= filterValue[0] && value.releaseYear <= filterValue[1]
-    );
-  };
-}
-
-/**
- * Create a Title filter function
- */
-function createTitleFilter<TValue extends FilterableTitle>(
-  filterValue?: string,
-) {
-  if (!filterValue) return;
-  const regex = new RegExp(filterValue, "i");
-  return (value: TValue): boolean => regex.test(value.title);
 }

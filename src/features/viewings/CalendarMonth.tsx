@@ -1,3 +1,4 @@
+import type { ViewingsSort } from "./sortViewings";
 import type { ViewingsValue } from "./Viewings";
 
 import { CalendarCell } from "./CalendarCell";
@@ -6,11 +7,13 @@ import { useCalendar } from "./useCalendar";
 export function CalendarMonth({
   currentMonth,
   filteredValues,
+  sort,
 }: {
-  currentMonth: Date;
+  currentMonth: { month: string; year: string };
   filteredValues: ViewingsValue[];
+  sort: ViewingsSort;
 }): React.JSX.Element {
-  const rows = useCalendar(currentMonth, filteredValues);
+  const rows = useCalendar(currentMonth, filteredValues, sort);
 
   return (
     <div

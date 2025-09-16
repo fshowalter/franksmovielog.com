@@ -3,7 +3,7 @@ import { TextField } from "~/components/fields/TextField";
 import { YearField } from "~/components/fields/YearField";
 
 type TitleFiltersProps = {
-  genres: {
+  genres?: {
     initialValue?: readonly string[];
     onChange: (values: string[]) => void;
     values: readonly string[];
@@ -38,12 +38,14 @@ export function TitleFilters({
         onYearChange={releaseYear.onChange}
         years={releaseYear.values}
       />
-      <MultiSelectField
-        initialValues={genres.initialValue}
-        label="Genres"
-        onChange={genres.onChange}
-        options={genres.values}
-      />
+      {genres && (
+        <MultiSelectField
+          initialValues={genres.initialValue}
+          label="Genres"
+          onChange={genres.onChange}
+          options={genres.values}
+        />
+      )}
     </>
   );
 }
