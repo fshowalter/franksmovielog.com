@@ -60,18 +60,12 @@ type MediumFilterChangedAction = {
 
 type NextMonthClickedAction = {
   type: "viewings/nextMonthClicked";
-  value: {
-    month: string;
-    year: string;
-  };
+  value: string;
 };
 
 type PreviousMonthClickedAction = {
   type: "viewings/previousMonthClicked";
-  value: {
-    month: string;
-    year: string;
-  };
+  value: string;
 };
 
 type ReviewedStatusFilterChangedAction = {
@@ -93,11 +87,10 @@ type ViewingsState = Omit<
 > &
   SortState<ViewingsSort> & {
     activeFilterValues: ViewingsFiltersValues;
-    currentMonth: {
-      month: string;
-      year: string;
-    };
     pendingFilterValues: ViewingsFiltersValues;
+    // Value of the first viewing date in the selected month via a next/prev
+    // month action.
+    selectedMonthDate?: string;
   };
 
 type ViewingYearFilterChangedAction = {
@@ -120,10 +113,6 @@ export function createInitialState({
   return {
     ...titleFilterState,
     ...sortState,
-    currentMonth: {
-      month: values[0].viewingMonthShort,
-      year: values[0].viewingYear,
-    },
   };
 }
 
@@ -133,17 +122,15 @@ export function createMediumFilterChangedAction(
   return { type: "viewings/mediumChanged", value };
 }
 
-export function createNextMonthClickedAction(value: {
-  month: string;
-  year: string;
-}): NextMonthClickedAction {
+export function createNextMonthClickedAction(
+  value: string,
+): NextMonthClickedAction {
   return { type: "viewings/nextMonthClicked", value };
 }
 
-export function createPreviousMonthClickedAction(value: {
-  month: string;
-  year: string;
-}): PreviousMonthClickedAction {
+export function createPreviousMonthClickedAction(
+  value: string,
+): PreviousMonthClickedAction {
   return { type: "viewings/previousMonthClicked", value };
 }
 
@@ -171,20 +158,20 @@ export function createViewingYearFilterChangedAction(
  */
 export function reducer(state: ViewingsState, action: ViewingsAction) {
   switch (action.type) {
-    case "sort/sort": {
-      const newState = sortReducer(state, action);
-
-      const startingViewing =
-        action.value === "viewing-date-asc"
-          ? newState.values.at(-1)
-          : newState.values[0];
+    case "filters/applied": {
+      const newState = titleFiltersReducer(state, action);
 
       return {
         ...newState,
-        currentMonth: {
-          month: startingViewing!.viewingMonthShort,
-          year: startingViewing!.viewingYear,
-        },
+        selectedMonthDate: undefined,
+      };
+    }
+    case "sort/sort": {
+      const newState = sortReducer(state, action);
+
+      return {
+        ...newState,
+        selectedMonthDate: undefined,
       };
     }
     case "viewings/mediumChanged": {
@@ -230,7 +217,7 @@ function handleNextMonthClicked(
 ) {
   return {
     ...state,
-    currentMonth: action.value,
+    selectedMonthDate: action.value,
   };
 }
 
@@ -240,7 +227,7 @@ function handlePreviousMonthClicked(
 ) {
   return {
     ...state,
-    currentMonth: action.value,
+    selectedMonthDate: action.value,
   };
 }
 

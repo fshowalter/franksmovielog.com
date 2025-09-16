@@ -8,40 +8,33 @@ export type CalendarCellData = {
 };
 
 export function useCalendar(
-  currentMonth: {
-    month: string;
-    year: string;
-  },
-  filteredViewings: ViewingsValue[],
+  currentMonthDate: string,
+  filteredValues: ViewingsValue[],
   sort: ViewingsSort,
 ) {
-  const viewingsForMonth: Map<string, ViewingsValue[]> = new Map();
+  const viewingsForMonth: Map<number, ViewingsValue[]> = new Map();
+  const currentYearAndMonth = currentMonthDate.slice(0, 7);
 
-  for (const viewing of filteredViewings) {
-    if (
-      viewing.viewingMonthShort == currentMonth.month &&
-      viewing.viewingYear == currentMonth.year
-    ) {
-      viewingsForMonth.set(
-        viewing.viewingDate.slice(-2),
-        viewingsForMonth.get(viewing.viewingDate.slice(-2)) || [],
-      );
+  for (const value of filteredValues) {
+    if (value.viewingDate.startsWith(currentYearAndMonth)) {
+      const viewingDay = Number(value.viewingDate.slice(-2));
+      viewingsForMonth.set(viewingDay, viewingsForMonth.get(viewingDay) || []);
 
-      viewingsForMonth.get(viewing.viewingDate.slice(-2))?.push(viewing);
+      viewingsForMonth.get(viewingDay)?.push(value);
     }
+
+    const valueYearAndMonth = value.viewingDate.slice(0, 7);
 
     if (
       sort === "viewing-date-desc" &&
-      viewing.viewingMonthShort < currentMonth.month &&
-      viewing.viewingYear < currentMonth.year
+      valueYearAndMonth < currentYearAndMonth
     ) {
       break;
     }
 
     if (
       sort === "viewing-date-asc" &&
-      viewing.viewingMonthShort > currentMonth.month &&
-      viewing.viewingYear > currentMonth.year
+      valueYearAndMonth > currentYearAndMonth
     ) {
       break;
     }
@@ -58,7 +51,7 @@ export function useCalendar(
 }
 
 function getCalendarCells(
-  viewingsForMonth: Map<string, ViewingsValue[]>,
+  viewingsForMonth: Map<number, ViewingsValue[]>,
 ): CalendarCellData[] {
   const firstViewing = viewingsForMonth.values().next().value![0];
 
@@ -83,7 +76,7 @@ function getCalendarCells(
   for (let date = 1; date <= daysInMonth; date++) {
     const currentDate = new Date(year, monthIndex, date);
     const dayOfWeek = weekdays[currentDate.getDay()];
-    const viewings = viewingsForMonth.get(String(date).padStart(2, "0")) || [];
+    const viewings = viewingsForMonth.get(date) || [];
     // Viewings are already sorted
 
     cells.push({

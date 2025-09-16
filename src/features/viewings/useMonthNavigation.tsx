@@ -2,46 +2,44 @@ import type { ViewingsSort } from "./sortViewings";
 import type { ViewingsValue } from "./Viewings";
 
 export function useMonthNavigation(
-  currentMonth: {
-    month: string;
-    year: string;
-  },
   filteredValues: ViewingsValue[],
   sort: ViewingsSort,
-): [
-  undefined | ViewingsValue,
-  undefined | ViewingsValue,
-  undefined | ViewingsValue,
-] {
-  let nextMonthValue;
-  let previousMonthValue;
+  selectedMonthDate?: string,
+): [string | undefined, string | undefined, string | undefined] {
+  let nextMonthDate;
+  let previousMonthDate;
   let currentMonthValue;
 
+  if (filteredValues.length === 0) {
+    return [undefined, undefined, undefined];
+  }
+
+  selectedMonthDate = selectedMonthDate || filteredValues[0].viewingDate;
+
+  const selectedYearAndMonth = selectedMonthDate.slice(0, 7);
+
   for (const value of filteredValues) {
-    if (
-      value.viewingMonthShort === currentMonth.month &&
-      value.viewingYear == currentMonth.year
-    ) {
+    if (value.viewingDate.startsWith(selectedYearAndMonth)) {
       currentMonthValue = value;
     } else {
       if (sort === "viewing-date-desc") {
         if (currentMonthValue) {
-          previousMonthValue = value;
+          previousMonthDate = value.viewingDate;
           break;
         } else {
-          nextMonthValue = value;
+          nextMonthDate = value.viewingDate;
         }
       }
 
       if (sort === "viewing-date-asc")
         if (currentMonthValue) {
-          nextMonthValue = value;
+          nextMonthDate = value.viewingDate;
           break;
         } else {
-          previousMonthValue = value;
+          previousMonthDate = value.viewingDate;
         }
     }
   }
 
-  return [previousMonthValue, currentMonthValue, nextMonthValue];
+  return [previousMonthDate, currentMonthValue?.viewingDate, nextMonthDate];
 }

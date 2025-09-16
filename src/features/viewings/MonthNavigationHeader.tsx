@@ -1,4 +1,3 @@
-import type { ViewingsValue } from "./Viewings";
 import type { ViewingsAction } from "./Viewings.reducer";
 
 import {
@@ -7,34 +6,32 @@ import {
 } from "./Viewings.reducer";
 
 export function MonthNavigationHeader({
+  currentMonthDate,
   dispatch,
-  firstValue,
-  nextMonth,
-  prevMonth,
+  nextMonthDate,
+  prevMonthDate,
 }: {
+  currentMonthDate: string;
   dispatch: React.Dispatch<ViewingsAction>;
-  firstValue: ViewingsValue;
-  nextMonth: undefined | ViewingsValue;
-  prevMonth: undefined | ViewingsValue;
+  nextMonthDate: string | undefined;
+  prevMonthDate: string | undefined;
 }): React.JSX.Element {
-  const currentMonthAsDate = new Date(firstValue.viewingDate);
-
-  const monthName = currentMonthAsDate.toLocaleString("en-US", {
+  const monthName = new Date(currentMonthDate).toLocaleString("en-US", {
     month: "long",
     timeZone: "UTC",
     year: "numeric",
   });
 
-  const prevMonthName = prevMonth
-    ? new Date(prevMonth.viewingDate).toLocaleString("en-US", {
+  const prevMonthName = prevMonthDate
+    ? new Date(prevMonthDate).toLocaleString("en-US", {
         month: "short",
         timeZone: "UTC",
         year: "numeric",
       })
     : "";
 
-  const nextMonthName = nextMonth
-    ? new Date(nextMonth.viewingDate).toLocaleString("en-US", {
+  const nextMonthName = nextMonthDate
+    ? new Date(nextMonthDate).toLocaleString("en-US", {
         month: "short",
         timeZone: "UTC",
         year: "numeric",
@@ -53,7 +50,7 @@ export function MonthNavigationHeader({
       `}
     >
       <div className="w-1/3">
-        {prevMonth && (
+        {prevMonthDate && (
           <button
             aria-disabled={false}
             aria-label={`Navigate to previous month: ${prevMonthName}`}
@@ -67,12 +64,7 @@ export function MonthNavigationHeader({
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
             onClick={() =>
-              dispatch(
-                createPreviousMonthClickedAction({
-                  month: prevMonth.viewingMonthShort,
-                  year: prevMonth.viewingYear,
-                }),
-              )
+              dispatch(createPreviousMonthClickedAction(prevMonthDate))
             }
             type="button"
           >
@@ -90,7 +82,7 @@ export function MonthNavigationHeader({
         {monthName}
       </h2>
       <div className="w-1/3 text-right">
-        {nextMonth && (
+        {nextMonthDate && (
           <button
             aria-disabled={false}
             aria-label={`Navigate to next month: ${nextMonthName}`}
@@ -104,12 +96,7 @@ export function MonthNavigationHeader({
               tablet-landscape:tracking-wide tablet-landscape:uppercase
             `}
             onClick={() =>
-              dispatch(
-                createNextMonthClickedAction({
-                  month: nextMonth.viewingMonthShort,
-                  year: nextMonth.viewingYear,
-                }),
-              )
+              dispatch(createNextMonthClickedAction(nextMonthDate))
             }
             type="button"
           >

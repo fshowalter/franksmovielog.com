@@ -67,19 +67,19 @@ export function Viewings({
     },
     createInitialState,
   );
-  const prevMonthRef = useRef(state.currentMonth);
+  const prevMonthRef = useRef(state.selectedMonthDate);
 
   // Scroll to top of calendar when month changes
   useEffect(() => {
-    if (prevMonthRef.current !== state.currentMonth) {
-      prevMonthRef.current = state.currentMonth;
+    if (prevMonthRef.current !== state.selectedMonthDate) {
+      prevMonthRef.current = state.selectedMonthDate;
       if (typeof document !== "undefined") {
         document
           .querySelector("#calendar")
           ?.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, [state.currentMonth]);
+  }, [state.selectedMonthDate]);
 
   const filteredValues = useFilteredValues(
     sortViewings,
@@ -97,11 +97,8 @@ export function Viewings({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
-  const [previousMonth, currentMonth, nextMonth] = useMonthNavigation(
-    state.currentMonth,
-    filteredValues,
-    state.sort,
-  );
+  const [previousMonthDate, currentMonthDate, nextMonthDate] =
+    useMonthNavigation(filteredValues, state.sort, state.selectedMonthDate);
 
   return (
     <FilterAndSortContainer
@@ -145,19 +142,23 @@ export function Viewings({
       }}
       totalCount={filteredValues.length}
     >
-      <div className="mx-auto w-full max-w-(--breakpoint-desktop)">
-        <MonthNavigationHeader
-          dispatch={dispatch}
-          firstValue={currentMonth!}
-          nextMonth={nextMonth}
-          prevMonth={previousMonth}
-        />
-        <CalendarMonth
-          currentMonth={state.currentMonth}
-          filteredValues={filteredValues}
-          sort={state.sort}
-        />
-      </div>
+      {currentMonthDate ? (
+        <div className={`mx-auto w-full max-w-(--breakpoint-desktop)`}>
+          <MonthNavigationHeader
+            currentMonthDate={currentMonthDate}
+            dispatch={dispatch}
+            nextMonthDate={nextMonthDate}
+            prevMonthDate={previousMonthDate}
+          />
+          <CalendarMonth
+            currentMonth={currentMonthDate}
+            filteredValues={filteredValues}
+            sort={state.sort}
+          />
+        </div>
+      ) : (
+        <div>No results.</div>
+      )}
     </FilterAndSortContainer>
   );
 }
