@@ -1,4 +1,4 @@
-import { BarGradient } from "~/components/BarGradient";
+import { BarGradient } from "~/components/bar-gradient/BarGradient";
 
 type Value = {
   count: number;

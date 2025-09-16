@@ -1,7 +1,8 @@
 import type { PosterImageProps } from "~/api/posters";
 
-import { ListItemTitle } from "~/components/ListItemTitle";
-import { PosterList, PosterListItem } from "~/components/PosterList";
+import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
+import { PosterList } from "~/components/poster-list/PosterList";
+import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 export type MostWatchedMoviesListItemValue = {
   count: number;

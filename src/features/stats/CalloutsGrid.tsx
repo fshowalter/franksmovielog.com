@@ -1,10 +1,8 @@
 type Props = {
-  stats: StatItem[];
-};
-
-type StatItem = {
-  label: string;
-  value: number;
+  stats: {
+    label: string;
+    value: number;
+  }[];
 };
 
 export function CalloutsGrid({ stats }: Props): React.JSX.Element {

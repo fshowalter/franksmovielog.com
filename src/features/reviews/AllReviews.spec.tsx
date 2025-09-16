@@ -20,7 +20,7 @@ import {
   clickShowMore,
   getGroupedPosterList,
 } from "~/components/poster-list/PosterList.testHelper";
-import { getUserWithFakeTimers } from "~/components/utils/testUtils";
+import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { AllReviewsProps } from "./AllReviews";
 

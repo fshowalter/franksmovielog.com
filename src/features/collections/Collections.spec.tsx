@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { getAvatarList } from "~/components/AvatarList.testHelper";
+import { getAvatarList } from "~/components/avatar-list/AvatarList.testHelper";
 import {
   fillNameFilter,
   getNameFilter,
@@ -13,7 +13,7 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
-import { getUserWithFakeTimers } from "~/components/utils/testUtils";
+import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import { CollectionsStrictWrapper } from "./Collections";
 import { getProps } from "./getProps";

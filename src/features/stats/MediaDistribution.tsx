@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Distribution } from "./Distribution";
 
 export function MediaDistribution({

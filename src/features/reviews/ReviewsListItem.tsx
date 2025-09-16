@@ -1,11 +1,11 @@
 import type { PosterImageProps } from "~/api/posters";
 
-import { ListItemDetails } from "~/components/ListItemDetails";
-import { ListItemGenres } from "~/components/ListItemGenres";
-import { ListItemGrade } from "~/components/ListItemGrade";
-import { ListItemReviewDate } from "~/components/ListItemReviewDate";
-import { ListItemTitle } from "~/components/ListItemTitle";
-import { PosterListItem } from "~/components/PosterList";
+import { ListItemDetails } from "~/components/list-item-details/ListItemDetails";
+import { ListItemGenres } from "~/components/list-item-genres/ListItemGenres";
+import { ListItemGrade } from "~/components/list-item-grade/ListItemGrade";
+import { ListItemReviewDate } from "~/components/list-item-review-date/ListItemReviewDate";
+import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
+import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 export type ReviewsValue = {
   genres: string[];

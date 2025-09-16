@@ -1,6 +1,6 @@
 import type { AvatarImageProps } from "~/api/avatars";
 
-import { Avatar } from "~/components/Avatar";
+import { Avatar } from "~/components/avatar/Avatar";
 
 export function AvatarListItemAvatar({
   imageConfig,

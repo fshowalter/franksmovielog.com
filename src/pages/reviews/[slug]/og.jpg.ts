@@ -4,7 +4,7 @@ import path from "node:path";
 import sharp from "sharp";
 
 import { allReviews } from "~/api/reviews";
-import { fileForGrade } from "~/components/Grade";
+import { fileForGrade } from "~/components/grade/fileForGrade";
 import { OpenGraphImage } from "~/features/review/OpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
 

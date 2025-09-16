@@ -22,12 +22,12 @@ import {
   fillTitleFilter,
   getTitleFilter,
 } from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
-import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import {
   clickShowMore,
   getGroupedPosterList,
-} from "~/components/PosterList.testHelper";
-import { getUserWithFakeTimers } from "~/components/utils/testUtils";
+} from "~/components/poster-list/PosterList.testHelper";
+import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
+import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
 

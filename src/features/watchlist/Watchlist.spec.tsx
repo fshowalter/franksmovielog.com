@@ -18,7 +18,7 @@ import {
   clickShowMore,
   getGroupedPosterList,
 } from "~/components/poster-list/PosterList.testHelper";
-import { getUserWithFakeTimers } from "~/components/utils/testUtils";
+import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import { getProps } from "./getProps";
 import { Watchlist } from "./Watchlist";

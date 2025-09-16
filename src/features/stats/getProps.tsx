@@ -1,13 +1,13 @@
 import type { MostWatchedPerson } from "~/api/data/MostWatchedPersonSchema";
 import type { MostWatchedTitle } from "~/api/data/MostWatchedTitleSchema";
-import type { MostWatchedMoviesListItemValue } from "~/components/Stats/MostWatchedMovies";
-import type { MostWatchedPeopleListItemValue } from "~/components/Stats/MostWatchedPeople";
+import type { MostWatchedMoviesListItemValue } from "~/features/stats/MostWatchedMovies";
+import type { MostWatchedPeopleListItemValue } from "~/features/stats/MostWatchedPeople";
 
 import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allStatYears, alltimeStats, statsForYear } from "~/api/stats";
-import { BackdropImageConfig } from "~/components/Backdrop";
-import { PosterListItemImageConfig } from "~/components/PosterList";
+import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
+import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
 
 import type { AllTimeStatsProps } from "./AlltimeStats";

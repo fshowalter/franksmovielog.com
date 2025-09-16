@@ -1,7 +1,7 @@
 import type { BackdropImageProps } from "~/api/backdrops";
 import type { AlltimeStats } from "~/api/stats";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
+import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
 import { Layout } from "~/components/layout/Layout";
 
 import type { MostWatchedMoviesListItemValue } from "./MostWatchedMovies";

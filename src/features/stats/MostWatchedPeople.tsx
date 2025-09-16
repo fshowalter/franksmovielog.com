@@ -1,9 +1,10 @@
 import type { PosterImageProps } from "~/api/posters";
 
-import { ListItemMediumAndVenue } from "~/components/ListItemMediumAndVenue";
-import { ListItemReviewDate } from "~/components/ListItemReviewDate";
-import { ListItemTitle } from "~/components/ListItemTitle";
-import { PosterList, PosterListItem } from "~/components/PosterList";
+import { ListItemMediumAndVenue } from "~/components/list-item-medium-and-venue/ListItemMediumAndVenue";
+import { ListItemReviewDate } from "~/components/list-item-review-date/ListItemReviewDate";
+import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
+import { PosterList } from "~/components/poster-list/PosterList";
+import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 export type MostWatchedPeopleListItemValue = {
   count: number;
