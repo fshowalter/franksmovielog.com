@@ -7,10 +7,6 @@ export function createReviewedStatusFilter<
 >(filterValue?: string) {
   if (!filterValue) return;
   return (value: TValue): boolean => {
-    if (filterValue === "All") {
-      return true;
-    }
-
     if (filterValue === "Reviewed") {
       return !!value.slug;
     }

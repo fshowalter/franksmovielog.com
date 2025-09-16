@@ -141,7 +141,7 @@ function handleWatchlistFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      [action.filter]: action.value,
+      [action.filter]: action.value === "All" ? undefined : action.value,
     },
   };
 }

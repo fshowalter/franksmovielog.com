@@ -206,7 +206,7 @@ function handleMediumFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      medium: action.value,
+      medium: action.value === "All" ? undefined : action.value,
     },
   };
 }
@@ -239,7 +239,7 @@ function handleReviewedStatusFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      reviewedStatus: action.value,
+      reviewedStatus: action.value === "All" ? undefined : action.value,
     },
   };
 }
@@ -252,7 +252,7 @@ function handleVenueFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      venue: action.value,
+      venue: action.value === "All" ? undefined : action.value,
     },
   };
 }

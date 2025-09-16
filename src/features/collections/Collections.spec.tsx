@@ -5,14 +5,14 @@ import { getAvatarList } from "~/components/AvatarList.testHelper";
 import {
   fillNameFilter,
   getNameFilter,
-} from "~/components/ListWithFilters/CollectionFilters.testHelper";
+} from "~/components/filter-and-sort/CollectionFilters.testHelper";
 import {
   clickClearFilters,
   clickCloseFilters,
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import { getUserWithFakeTimers } from "~/components/utils/testUtils";
 
 import { CollectionsStrictWrapper } from "./Collections";

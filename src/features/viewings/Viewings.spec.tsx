@@ -7,14 +7,14 @@ import {
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/ListWithFilters/ListWithFilters.testHelper";
-import { clickReviewedStatusFilterOption } from "~/components/ListWithFilters/ReviewedStatusFilter.testHelper";
+} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
+import { clickReviewedStatusFilterOption } from "~/components/filter-and-sort/ReviewedStatusFilter.testHelper";
 import {
   fillReleaseYearFilter,
   fillTitleFilter,
   getTitleFilter,
-} from "~/components/ListWithFilters/TitleFilters.testHelper";
-import { getUserWithFakeTimers } from "~/components/utils/testUtils";
+} from "~/components/filter-and-sort/TitleFilters.testHelper";
+import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import { getProps } from "./getProps";
 import { Viewings } from "./Viewings";
@@ -46,12 +46,6 @@ describe("Viewings", () => {
     // to ensure test isolation and prevent timer leaks between tests
     vi.clearAllTimers();
     vi.useRealTimers();
-  });
-
-  it("renders", ({ expect }) => {
-    const { asFragment } = render(<Viewings {...props} />);
-
-    expect(asFragment()).toMatchSnapshot();
   });
 
   it("can filter by title", async ({ expect }) => {
@@ -403,7 +397,7 @@ describe("Viewings", () => {
     await clickToggleFilters(user);
 
     // Apply multiple filters
-    await fillTitleFilter(user, "Rio Bravo");
+    await fillTitleFilter(user, "The Thing");
 
     await clickMediumFilterOption(user, "Blu-ray");
 

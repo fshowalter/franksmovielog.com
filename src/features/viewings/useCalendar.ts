@@ -44,21 +44,20 @@ export function useCalendar(
     values.sort((a, b) => a.viewingSequence - b.viewingSequence);
   }
 
-  const cells = getCalendarCells(viewingsForMonth);
+  const cells = getCalendarCells(currentMonthDate, viewingsForMonth);
   const rows = getCalendarRows(cells);
 
   return rows;
 }
 
 function getCalendarCells(
+  currentMonthDate: string,
   viewingsForMonth: Map<number, ViewingsValue[]>,
 ): CalendarCellData[] {
-  const firstViewing = viewingsForMonth.values().next().value![0];
+  const firstViewingDate = new Date(currentMonthDate);
 
-  const firstViewingDate = new Date(firstViewing.viewingDate);
-
-  const year = firstViewingDate.getFullYear();
-  const monthIndex = firstViewingDate.getMonth();
+  const year = firstViewingDate.getUTCFullYear();
+  const monthIndex = firstViewingDate.getUTCMonth();
   const firstDay = new Date(year, monthIndex, 1);
   const lastDay = new Date(year, monthIndex + 1, 0);
   const startPadding = firstDay.getDay();

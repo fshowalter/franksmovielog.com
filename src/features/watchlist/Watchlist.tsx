@@ -4,7 +4,7 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { FilterAndSortHeaderLink } from "~/components/filter-and-sort/FilterAndSortHeaderLink";
-import { TitleSortOptions } from "~/components/ListWithFilters/TitleSortOptions";
+import { TitleSortOptions } from "~/components/filter-and-sort/TitleSortOptions";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
@@ -121,7 +121,7 @@ export function Watchlist({
         currentSortValue: state.sort,
         onSortChange: (e) =>
           dispatch(createSortAction(e.target.value as WatchlistSort)),
-        sortOptions: <TitleSortOptions options={["title", "release-date"]} />,
+        sortOptions: <TitleSortOptions />,
       }}
       totalCount={totalCount}
     >

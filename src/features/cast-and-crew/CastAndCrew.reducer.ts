@@ -112,7 +112,7 @@ function handleCreditedAsFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      creditedAs: action.value,
+      creditedAs: action.value === "All" ? undefined : action.value,
     },
   };
 }

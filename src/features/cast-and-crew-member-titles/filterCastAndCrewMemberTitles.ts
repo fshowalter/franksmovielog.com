@@ -7,5 +7,16 @@ export function filterCastAndCrewMemberTitles(
   sortedValues: CastAndCrewMemberTitlesValue[],
   filterValues: CastAndCrewMemberTitlesFiltersValues,
 ) {
-  return filterMaybeReviewedTitles(filterValues, sortedValues, []);
+  const extraFilters = [createCreditedAsFilter(filterValues.creditedAs)].filter(
+    (filterFn) => filterFn !== undefined,
+  );
+
+  return filterMaybeReviewedTitles(filterValues, sortedValues, extraFilters);
+}
+
+function createCreditedAsFilter(filterValue?: string) {
+  if (!filterValue) return;
+  return (value: CastAndCrewMemberTitlesValue) => {
+    return value.creditedAs.includes(filterValue);
+  };
 }
