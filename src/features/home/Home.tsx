@@ -2,7 +2,7 @@ import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
 
 import { Backdrop } from "~/components/backdrop/Backdrop";
-import { Layout } from "~/components/Layout/Layout";
+import { Layout } from "~/components/layout/Layout";
 import { ReviewCard } from "~/components/review-card/ReviewCard";
 import { SubHeading } from "~/components/sub-heading/SubHeading";
 

@@ -3,7 +3,7 @@ import type { Review, ReviewContent } from "~/api/reviews";
 import type { StillImageProps } from "~/api/stills";
 
 import { Grade } from "~/components/grade/Grade";
-import { Layout } from "~/components/Layout/Layout";
+import { Layout } from "~/components/layout/Layout";
 import { MoreReviews } from "~/components/more-reviews/MoreReviews";
 import { Still } from "~/components/still/Still";
 import { SubHeading } from "~/components/sub-heading/SubHeading";

@@ -3,7 +3,7 @@ import type { BackdropImageProps } from "~/api/backdrops";
 import type { WatchlistProgress } from "~/api/watchlist";
 
 import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
-import { Layout } from "~/components/Layout/Layout";
+import { Layout } from "~/components/layout/Layout";
 
 import { WatchlistProgressCallouts } from "./WatchlistProgressCallouts";
 import { WatchlistProgressForGroup } from "./WatchlistProgressForGroup";
