@@ -17,7 +17,7 @@ import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { CollectionsProps, CollectionsValue } from "./Collections";
 
-import { CollectionsStrictWrapper } from "./Collections";
+import { Collections } from "./Collections";
 
 // Inline minimal fixture data for testing
 const createCollection = (
@@ -57,20 +57,22 @@ describe("Collections", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionsStrictWrapper
-          props={{ ...baseProps, values: collections }}
-        />,
-      );
+      render(<Collections {...baseProps} values={collections} />);
 
       await clickToggleFilters(user);
       await fillNameFilter(user, "Friday");
       await clickViewResults(user);
 
       const avatarList = getAvatarList();
-      expect(within(avatarList).getByText("Friday the 13th")).toBeInTheDocument();
-      expect(within(avatarList).queryByText("Halloween")).not.toBeInTheDocument();
-      expect(within(avatarList).queryByText("Hammer Films")).not.toBeInTheDocument();
+      expect(
+        within(avatarList).getByText("Friday the 13th"),
+      ).toBeInTheDocument();
+      expect(
+        within(avatarList).queryByText("Halloween"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(avatarList).queryByText("Hammer Films"),
+      ).not.toBeInTheDocument();
     });
   });
 
@@ -83,11 +85,7 @@ describe("Collections", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionsStrictWrapper
-          props={{ ...baseProps, values: collections }}
-        />,
-      );
+      render(<Collections {...baseProps} values={collections} />);
 
       await clickSortOption(user, "Name (A → Z)");
 
@@ -109,11 +107,7 @@ describe("Collections", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionsStrictWrapper
-          props={{ ...baseProps, values: collections }}
-        />,
-      );
+      render(<Collections {...baseProps} values={collections} />);
 
       await clickSortOption(user, "Name (Z → A)");
 
@@ -135,11 +129,7 @@ describe("Collections", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionsStrictWrapper
-          props={{ ...baseProps, values: collections }}
-        />,
-      );
+      render(<Collections {...baseProps} values={collections} />);
 
       await clickSortOption(user, "Review Count (Most First)");
 
@@ -161,11 +151,7 @@ describe("Collections", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionsStrictWrapper
-          props={{ ...baseProps, values: collections }}
-        />,
-      );
+      render(<Collections {...baseProps} values={collections} />);
 
       await clickSortOption(user, "Review Count (Fewest First)");
 
@@ -188,11 +174,7 @@ describe("Collections", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionsStrictWrapper
-          props={{ ...baseProps, values: collections }}
-        />,
-      );
+      render(<Collections {...baseProps} values={collections} />);
 
       // Apply name filter
       await clickToggleFilters(user);
@@ -200,8 +182,12 @@ describe("Collections", () => {
       await clickViewResults(user);
 
       let avatarList = getAvatarList();
-      expect(within(avatarList).getByText("Universal Monsters")).toBeInTheDocument();
-      expect(within(avatarList).queryByText("Hammer Films")).not.toBeInTheDocument();
+      expect(
+        within(avatarList).getByText("Universal Monsters"),
+      ).toBeInTheDocument();
+      expect(
+        within(avatarList).queryByText("Hammer Films"),
+      ).not.toBeInTheDocument();
 
       // Clear filters
       await clickToggleFilters(user);
@@ -214,7 +200,9 @@ describe("Collections", () => {
 
       // All collections should be visible
       avatarList = getAvatarList();
-      expect(within(avatarList).getByText("Universal Monsters")).toBeInTheDocument();
+      expect(
+        within(avatarList).getByText("Universal Monsters"),
+      ).toBeInTheDocument();
       expect(within(avatarList).getByText("Hammer Films")).toBeInTheDocument();
     });
   });
@@ -227,11 +215,7 @@ describe("Collections", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionsStrictWrapper
-          props={{ ...baseProps, values: collections }}
-        />,
-      );
+      render(<Collections {...baseProps} values={collections} />);
 
       // Apply initial filter
       await clickToggleFilters(user);
@@ -239,8 +223,12 @@ describe("Collections", () => {
       await clickViewResults(user);
 
       let avatarList = getAvatarList();
-      expect(within(avatarList).getByText("Universal Monsters")).toBeInTheDocument();
-      expect(within(avatarList).queryByText("Hammer Films")).not.toBeInTheDocument();
+      expect(
+        within(avatarList).getByText("Universal Monsters"),
+      ).toBeInTheDocument();
+      expect(
+        within(avatarList).queryByText("Hammer Films"),
+      ).not.toBeInTheDocument();
 
       // Start typing new filter but close without applying
       await clickToggleFilters(user);
@@ -249,8 +237,12 @@ describe("Collections", () => {
 
       // Original filter should still be active
       avatarList = getAvatarList();
-      expect(within(avatarList).getByText("Universal Monsters")).toBeInTheDocument();
-      expect(within(avatarList).queryByText("Hammer Films")).not.toBeInTheDocument();
+      expect(
+        within(avatarList).getByText("Universal Monsters"),
+      ).toBeInTheDocument();
+      expect(
+        within(avatarList).queryByText("Hammer Films"),
+      ).not.toBeInTheDocument();
 
       // Verify original filter value is preserved
       await clickToggleFilters(user);

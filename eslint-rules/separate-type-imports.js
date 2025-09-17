@@ -54,24 +54,6 @@ export default {
               let valueImportStatement = "";
 
               if (valueSpecifiers.length > 0) {
-                for (const spec of valueSpecifiers) {
-                  if (spec.type === "ImportDefaultSpecifier") {
-                    spec.local.name;
-                    continue;
-                  }
-                  if (spec.type === "ImportNamespaceSpecifier") {
-                    `* as ${spec.local.name}`;
-                    continue;
-                  }
-                  // ImportSpecifier
-                  if (spec.imported.name === spec.local.name) {
-                    spec.imported.name;
-                    continue;
-                  }
-                  `${spec.imported.name} as ${spec.local.name}`;
-                  continue;
-                }
-
                 // Handle default imports separately
                 const defaultImports = valueSpecifiers.filter(
                   (s) => s.type === "ImportDefaultSpecifier",

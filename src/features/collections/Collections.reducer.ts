@@ -14,8 +14,6 @@ export {
   selectHasPendingFilters,
 } from "~/reducers/collectionFiltersReducer";
 
-export { createShowMoreAction } from "~/reducers/showMoreReducer";
-
 import type {
   CollectionFiltersAction,
   CollectionFiltersState,

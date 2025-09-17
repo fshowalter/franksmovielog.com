@@ -1,4 +1,4 @@
-import { StrictMode, useReducer } from "react";
+import { useReducer } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
 
@@ -100,17 +100,5 @@ export function Collections({
         })}
       </AvatarList>
     </FilterAndSortContainer>
-  );
-}
-
-export function CollectionsStrictWrapper({
-  props,
-}: {
-  props: CollectionsProps;
-}): React.JSX.Element {
-  return (
-    <StrictMode>
-      <Collections {...props} />
-    </StrictMode>
   );
 }
