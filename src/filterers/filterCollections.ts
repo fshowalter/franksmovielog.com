@@ -2,7 +2,7 @@ import type { CollectionFiltersValues } from "~/reducers/collectionFiltersReduce
 
 import { filterSortedValues } from "./filterSortedValues";
 
-export type FilterableCollection = {
+type FilterableCollection = {
   name: string;
 };
 

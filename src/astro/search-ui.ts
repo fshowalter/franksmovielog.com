@@ -1,29 +1,5 @@
 import { debounce } from "~/utils/debounce";
 
-// Types for Pagefind API
-export type PagefindAPI = {
-  debouncedSearch(
-    query: string,
-    options?: PagefindSearchOptions,
-    debounceTimeoutMs?: number,
-  ): Promise<PagefindSearchResults>;
-  destroy(): Promise<void>;
-  filters(): Promise<Record<string, Record<string, number>>>;
-  init(): Promise<void>;
-  preload(term: string, options?: PagefindSearchOptions): Promise<void>;
-  search(
-    query: string,
-    options?: PagefindSearchOptions,
-  ): Promise<PagefindSearchResults>;
-};
-
-export type PagefindResult = {
-  data(): Promise<PagefindDocument>;
-  id: string;
-  score: number;
-  words: number[];
-};
-
 export type PagefindSearchResults = {
   filters: Record<string, Record<string, number>>;
   results: PagefindResult[];
@@ -43,6 +19,23 @@ type PagefindAnchor = {
   text: string;
 };
 
+// Types for Pagefind API
+type PagefindAPI = {
+  debouncedSearch(
+    query: string,
+    options?: PagefindSearchOptions,
+    debounceTimeoutMs?: number,
+  ): Promise<PagefindSearchResults>;
+  destroy(): Promise<void>;
+  filters(): Promise<Record<string, Record<string, number>>>;
+  init(): Promise<void>;
+  preload(term: string, options?: PagefindSearchOptions): Promise<void>;
+  search(
+    query: string,
+    options?: PagefindSearchOptions,
+  ): Promise<PagefindSearchResults>;
+};
+
 type PagefindDocument = {
   anchors?: PagefindAnchor[];
   excerpt: string;
@@ -55,6 +48,13 @@ type PagefindDocument = {
   sub_results?: PagefindSubResult[];
   url: string;
   weighted_locations: WeightedLocation[];
+};
+
+type PagefindResult = {
+  data(): Promise<PagefindDocument>;
+  id: string;
+  score: number;
+  words: number[];
 };
 
 type PagefindSearchOptions = {

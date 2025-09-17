@@ -8,7 +8,7 @@ import { allWatchlistTitlesJson } from "./data/watchlist-titles-json";
 
 export type WatchlistProgress = WatchlistProgressJson & {};
 
-export type WatchlistTitle = WatchlistTitleJson & {};
+type WatchlistTitle = WatchlistTitleJson & {};
 
 type WatchlistTitles = {
   distinctCollections: string[];

@@ -2,7 +2,7 @@ import type { GroupFn } from "~/groupers/groupValues";
 
 import { getGroupLetter, groupValues } from "~/groupers/groupValues";
 
-export type GroupableCollection = {
+type GroupableCollection = {
   name: string;
   reviewCount: number;
 };

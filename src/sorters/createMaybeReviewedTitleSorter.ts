@@ -4,13 +4,9 @@ import type { SortableTitle } from "./createTitleSorter";
 import { sortNumber } from "./createSorter";
 import { createTitleSorter } from "./createTitleSorter";
 
-/**
- * Available sort options for titles.
- * Includes sorting by release date and title in both directions.
- */
 export type MaybeReviewedTitleSort = ReviewedTitleSort;
 
-export type SortableMaybeReviewedTitle = SortableTitle & {
+type SortableMaybeReviewedTitle = SortableTitle & {
   gradeValue?: number;
   reviewSequence?: number;
 };

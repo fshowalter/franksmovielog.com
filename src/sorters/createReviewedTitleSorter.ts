@@ -3,10 +3,6 @@ import type { SortableTitle, TitleSort } from "./createTitleSorter";
 import { sortNumber } from "./createSorter";
 import { createTitleSorter } from "./createTitleSorter";
 
-/**
- * Available sort options for titles.
- * Includes sorting by release date and title in both directions.
- */
 export type ReviewedTitleSort =
   | "grade-asc"
   | "grade-desc"
@@ -14,7 +10,7 @@ export type ReviewedTitleSort =
   | "review-date-desc"
   | TitleSort;
 
-export type SortableReviewedTitle = SortableTitle & {
+type SortableReviewedTitle = SortableTitle & {
   gradeValue: number;
   reviewSequence: number;
 };

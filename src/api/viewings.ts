@@ -4,7 +4,7 @@ import type { ViewingJson } from "./data/viewings-json";
 
 import { allViewingsJson } from "./data/viewings-json";
 
-export type Viewing = ViewingJson & {
+type Viewing = ViewingJson & {
   viewingYear: string;
 };
 

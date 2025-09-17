@@ -4,7 +4,7 @@ import type { FilterableTitle } from "./filterTitles";
 
 import { filterTitles } from "./filterTitles";
 
-export type FilterableReviewedTitle = FilterableTitle & {
+type FilterableReviewedTitle = FilterableTitle & {
   gradeValue: number;
   reviewYear: string;
 };

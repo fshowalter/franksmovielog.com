@@ -1,20 +1,12 @@
 import { createSorter, sortNumber, sortString } from "./createSorter";
 
-/**
- * Available sort options for titles.
- * Includes sorting by release date and title in both directions.
- */
 export type CollectionSort =
   | "name-asc"
   | "name-desc"
   | "review-count-asc"
   | "review-count-desc";
 
-/**
- * Interface for reviewed work items that can be sorted.
- * Contains all the fields necessary for sorting and grouping reviewed works.
- */
-export type SortableCollection = {
+type SortableCollection = {
   /** Year the work was published */
   name: string;
   /** Numeric sequence for release year sorting */

@@ -1,6 +1,6 @@
 import type { MaybeReviewedTitleFiltersValues } from "~/reducers/maybeReviewedTitleFiltersReducer";
 
-export type FilterableMaybeReviewedTitle = FilterableTitle & {
+type FilterableMaybeReviewedTitle = FilterableTitle & {
   gradeValue?: number;
   reviewYear?: string;
   slug?: string;
