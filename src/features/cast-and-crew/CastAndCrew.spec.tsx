@@ -21,7 +21,7 @@ import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { CastAndCrewProps, CastAndCrewValue } from "./CastAndCrew";
 
-import { CastAndCrewStrictWrapper } from "./CastAndCrew";
+import { CastAndCrew } from "./CastAndCrew";
 
 // Inline minimal fixture data for testing
 const createCastAndCrewMember = (
@@ -62,9 +62,7 @@ describe("CastAndCrew", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewStrictWrapper props={{ ...baseProps, values: members }} />,
-      );
+      render(<CastAndCrew {...baseProps} values={members} />);
 
       await clickToggleFilters(user);
       await fillNameFilter(user, "John");
@@ -101,9 +99,7 @@ describe("CastAndCrew", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewStrictWrapper props={{ ...baseProps, values: members }} />,
-      );
+      render(<CastAndCrew {...baseProps} values={members} />);
 
       await clickToggleFilters(user);
       await clickCreditedAsFilterOption(user, "Director");
@@ -136,9 +132,7 @@ describe("CastAndCrew", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewStrictWrapper props={{ ...baseProps, values: members }} />,
-      );
+      render(<CastAndCrew {...baseProps} values={members} />);
 
       await clickSortOption(user, "Name (A → Z)");
 
@@ -162,9 +156,7 @@ describe("CastAndCrew", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewStrictWrapper props={{ ...baseProps, values: members }} />,
-      );
+      render(<CastAndCrew {...baseProps} values={members} />);
 
       await clickSortOption(user, "Name (Z → A)");
 
@@ -188,9 +180,7 @@ describe("CastAndCrew", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewStrictWrapper props={{ ...baseProps, values: members }} />,
-      );
+      render(<CastAndCrew {...baseProps} values={members} />);
 
       await clickSortOption(user, "Review Count (Most First)");
 
@@ -214,9 +204,7 @@ describe("CastAndCrew", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewStrictWrapper props={{ ...baseProps, values: members }} />,
-      );
+      render(<CastAndCrew {...baseProps} values={members} />);
 
       await clickSortOption(user, "Review Count (Fewest First)");
 
@@ -251,9 +239,7 @@ describe("CastAndCrew", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewStrictWrapper props={{ ...baseProps, values: members }} />,
-      );
+      render(<CastAndCrew {...baseProps} values={members} />);
 
       // Apply multiple filters
       await clickToggleFilters(user);
@@ -296,9 +282,7 @@ describe("CastAndCrew", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewStrictWrapper props={{ ...baseProps, values: members }} />,
-      );
+      render(<CastAndCrew {...baseProps} values={members} />);
 
       // Apply initial filter
       await clickToggleFilters(user);

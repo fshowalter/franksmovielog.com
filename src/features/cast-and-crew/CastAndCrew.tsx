@@ -1,4 +1,4 @@
-import { StrictMode, useReducer } from "react";
+import { useReducer } from "react";
 
 import type { AvatarImageProps } from "~/api/avatars";
 
@@ -105,17 +105,5 @@ export function CastAndCrew({
         }}
       </GroupedAvatarList>
     </FilterAndSortContainer>
-  );
-}
-
-export function CastAndCrewStrictWrapper({
-  props,
-}: {
-  props: CastAndCrewProps;
-}): React.JSX.Element {
-  return (
-    <StrictMode>
-      <CastAndCrew {...props} />
-    </StrictMode>
   );
 }

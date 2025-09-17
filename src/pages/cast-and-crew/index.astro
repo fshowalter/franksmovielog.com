@@ -1,18 +1,27 @@
 ---
+import { getBackdropImageProps } from "~/api/backdrops";
 import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { BackdropImageConfig } from "~/components/layout/Backdrop";
 import { Layout } from "~/components/layout/Layout";
 import { CastAndCrew } from "~/features/cast-and-crew/CastAndCrew";
 import { getProps } from "~/features/cast-and-crew/getProps";
 
 const props = await getProps();
 
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
+const backdropImageProps = await getBackdropImageProps(
+  "cast-and-crew",
+  BackdropImageConfig,
+);
+const deck = '"Round up the usual suspects."';
+const metaDescription =
+  "A sortable index of directors, performers, and writers who contributed to the movies reviewed on this site. Sort by name or review count.";
 ---
 
 <AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{
+    description: metaDescription,
+  }}
   openGraph={{
     description: deck,
     type: "website",
@@ -27,6 +36,6 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
     }}
     className="bg-subtle"
   >
-    <CastAndCrew client:load {...interactiveProps} />
+    <CastAndCrew client:load {...props} />
   </Layout>
 </AstroPageShell>
