@@ -19,9 +19,7 @@ import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 let cachedCollectionsJson: CollectionJson[];
 // ENABLE_CACHE is now imported from utils/cache
 
-export type Collection = CollectionJson & {};
-
-export type CollectionWithDetails = Collection & {
+export type Collection = CollectionJson & {
   descriptionHtml: string;
 };
 
@@ -35,13 +33,19 @@ export async function allCollections(): Promise<{
     }
 
     return {
-      collections: collections,
+      collections: collections.map((collection) => {
+        return {
+          ...collection,
+          description: descriptionToString(collection.description),
+          descriptionHtml: descriptionToHtml(collection.description),
+        };
+      }),
     };
   });
 }
 
 export async function collectionDetails(slug: string): Promise<{
-  collection: CollectionWithDetails;
+  collection: Collection;
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];

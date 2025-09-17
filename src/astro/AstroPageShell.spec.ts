@@ -1,6 +1,6 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import type { DOMWindow, JSDOM as JSDOMType } from "jsdom";
-import type { SearchAPI } from "./search-ui";
+import type { Mocked } from "vitest";
 
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { waitFor, within } from "@testing-library/dom";
@@ -10,12 +10,15 @@ import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+import type { SearchAPI } from "./search-ui";
+import type { PagefindSearchResults } from "./search-ui";
+
 // Create mock search API that will be injected into SearchUI
 const mockSearchAPI = {
   destroy: vi.fn(() => Promise.resolve()),
   init: vi.fn(() => Promise.resolve()),
   search: vi.fn(),
-} satisfies Partial<SearchAPI>;
+} as unknown as Mocked<SearchAPI>;
 
 describe("AstroPageShell", () => {
   describe("navigation drawer", () => {
@@ -785,7 +788,8 @@ describe("AstroPageShell", () => {
 
       // Re-setup mocks after reset
       vi.mock("./search-ui", async () => {
-        const actual = await vi.importActual<typeof import("./search-ui")>("./search-ui");
+        const actual =
+          await vi.importActual<typeof import("./search-ui")>("./search-ui");
         return {
           ...actual,
           SearchUI: class extends actual.SearchUI {
@@ -1001,8 +1005,8 @@ describe("AstroPageShell", () => {
 
       it("shows loading state while searching", async ({ expect }) => {
         const queries = within(document.body);
-        let resolveSearch: (value: unknown) => void;
-        const searchPromise = new Promise((resolve) => {
+        let resolveSearch: (value: PagefindSearchResults) => void;
+        const searchPromise = new Promise<PagefindSearchResults>((resolve) => {
           resolveSearch = resolve;
         });
 
@@ -1067,7 +1071,7 @@ describe("AstroPageShell", () => {
         await openSearchAndWaitForInit(queries);
 
         // Type search query
-        const searchInput = queries.getByRole("searchbox");
+        const searchInput = queries.getByRole<HTMLInputElement>("searchbox");
         typeInSearchInput(queries, "test");
         await vi.advanceTimersByTimeAsync(150);
 
@@ -1100,7 +1104,7 @@ describe("AstroPageShell", () => {
         await openSearchAndWaitForInit(queries);
 
         const clearButton = queries.getByRole("button", { name: /clear/i });
-        const searchInput = queries.getByRole("searchbox");
+        const searchInput = queries.getByRole<HTMLInputElement>("searchbox");
 
         // Initially hidden
         expect(clearButton.classList.contains("hidden")).toBe(true);
@@ -1131,7 +1135,7 @@ describe("AstroPageShell", () => {
         await openSearchAndWaitForInit(queries);
 
         // Type search query
-        const searchInput = queries.getByRole("searchbox");
+        const searchInput = queries.getByRole<HTMLInputElement>("searchbox");
         typeInSearchInput(queries, "test");
 
         // Wait for debounce to show clear button
@@ -1223,9 +1227,9 @@ describe("AstroPageShell", () => {
 
         // Load more button should be hidden after loading all results
         await waitFor(() => {
-          expect(loadMoreButton.parentElement?.classList.contains("hidden")).toBe(
-            true,
-          );
+          expect(
+            loadMoreButton.parentElement?.classList.contains("hidden"),
+          ).toBe(true);
         });
       });
     });

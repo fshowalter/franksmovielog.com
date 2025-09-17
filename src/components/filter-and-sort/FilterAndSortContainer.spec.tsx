@@ -101,7 +101,9 @@ describe("FilterAndSortContainer", () => {
       document.body.classList.remove("overflow-hidden");
     });
 
-    it("opens filter drawer when toggle button is clicked", async ({ expect }) => {
+    it("opens filter drawer when toggle button is clicked", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps}>
@@ -123,7 +125,9 @@ describe("FilterAndSortContainer", () => {
       expect(mockProps.onFilterDrawerOpen).toHaveBeenCalled();
     });
 
-    it("closes filter drawer when toggle button is clicked again", async ({ expect }) => {
+    it("closes filter drawer when toggle button is clicked again", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps}>
@@ -146,7 +150,9 @@ describe("FilterAndSortContainer", () => {
       expect(document.body.classList.contains("overflow-hidden")).toBe(false);
     });
 
-    it("closes filter drawer when escape key is pressed", async ({ expect }) => {
+    it("closes filter drawer when escape key is pressed", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps}>
@@ -167,7 +173,9 @@ describe("FilterAndSortContainer", () => {
       expect(document.body.classList.contains("overflow-hidden")).toBe(false);
     });
 
-    it("closes filter drawer when clicking outside on backdrop", async ({ expect }) => {
+    it("closes filter drawer when clicking outside on backdrop", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       const { container } = render(
         <FilterAndSortContainer {...mockProps}>
@@ -202,7 +210,9 @@ describe("FilterAndSortContainer", () => {
       expect(document.body.classList.contains("overflow-hidden")).toBe(false);
     });
 
-    it("closes filter drawer when View Results button is clicked", async ({ expect }) => {
+    it("closes filter drawer when View Results button is clicked", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps}>
@@ -224,7 +234,9 @@ describe("FilterAndSortContainer", () => {
       expect(mockProps.onApplyFilters).toHaveBeenCalled();
     });
 
-    it("closes filter drawer when Close button is clicked", async ({ expect }) => {
+    it("closes filter drawer when Close button is clicked", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps}>
@@ -246,7 +258,9 @@ describe("FilterAndSortContainer", () => {
       expect(mockProps.onResetFilters).toHaveBeenCalled();
     });
 
-    it("disables Clear button when there are no pending filters", async ({ expect }) => {
+    it("disables Clear button when there are no pending filters", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps} hasPendingFilters={false}>
@@ -256,11 +270,15 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      const clearButton = screen.getByRole("button", { name: "Clear all filters" });
+      const clearButton = screen.getByRole("button", {
+        name: "Clear all filters",
+      });
       expect(clearButton).toBeDisabled();
     });
 
-    it("enables Clear button when there are pending filters", async ({ expect }) => {
+    it("enables Clear button when there are pending filters", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps} hasPendingFilters={true}>
@@ -270,11 +288,15 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      const clearButton = screen.getByRole("button", { name: "Clear all filters" });
+      const clearButton = screen.getByRole("button", {
+        name: "Clear all filters",
+      });
       expect(clearButton).not.toBeDisabled();
     });
 
-    it("disables View Results button when pending filtered count is zero", async ({ expect }) => {
+    it("disables View Results button when pending filtered count is zero", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps} pendingFilteredCount={0}>
@@ -290,7 +312,9 @@ describe("FilterAndSortContainer", () => {
       expect(viewResultsButton).toBeDisabled();
     });
 
-    it("enables View Results button when pending filtered count is greater than zero", async ({ expect }) => {
+    it("enables View Results button when pending filtered count is greater than zero", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps} pendingFilteredCount={10}>
@@ -308,7 +332,9 @@ describe("FilterAndSortContainer", () => {
   });
 
   describe("filter count display", () => {
-    it("displays pending filtered count in View Results button", async ({ expect }) => {
+    it("displays pending filtered count in View Results button", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps} pendingFilteredCount={42}>
@@ -360,11 +386,13 @@ describe("FilterAndSortContainer", () => {
         </FilterAndSortContainer>,
       );
 
-      const sortSelect = screen.getByLabelText("Sort");
+      const sortSelect = screen.getByLabelText<HTMLSelectElement>("Sort");
       expect(sortSelect.value).toBe("title-asc");
     });
 
-    it("calls onSortChange when sort option is selected", async ({ expect }) => {
+    it("calls onSortChange when sort option is selected", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       const onSortChange = vi.fn();
       const props = createMockProps({
@@ -393,7 +421,9 @@ describe("FilterAndSortContainer", () => {
       document.body.classList.remove("overflow-hidden");
     });
 
-    it("adds overflow-hidden class to body when drawer opens", async ({ expect }) => {
+    it("adds overflow-hidden class to body when drawer opens", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
 
       // Ensure clean state
@@ -412,7 +442,9 @@ describe("FilterAndSortContainer", () => {
       expect(document.body.classList.contains("overflow-hidden")).toBe(true);
     });
 
-    it("removes overflow-hidden class from body when drawer closes", async ({ expect }) => {
+    it("removes overflow-hidden class from body when drawer closes", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       render(
         <FilterAndSortContainer {...mockProps}>

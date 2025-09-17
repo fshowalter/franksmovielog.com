@@ -28,7 +28,7 @@ import type {
   CollectionTitlesValue,
 } from "./CollectionTitles";
 
-import { CollectionTitlesStrictWrapper } from "./CollectionTitles";
+import { CollectionTitles } from "./CollectionTitles";
 
 // Inline minimal fixture data for testing - using James Bond films
 let testIdCounter = 0;
@@ -97,11 +97,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Goldfinger");
@@ -132,11 +128,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await clickGenresFilterOption(user, "Thriller");
@@ -163,11 +155,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillReleaseYearFilter(user, "1962", "1965");
@@ -189,11 +177,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillReviewYearFilter(user, "2022", "2023");
@@ -223,11 +207,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillGradeFilter(user, "B-", "B+");
@@ -266,11 +246,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickReviewedStatusFilterOption(user, "Reviewed");
       await clickViewResults(user);
@@ -306,11 +282,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickReviewedStatusFilterOption(user, "Not Reviewed");
       await clickViewResults(user);
@@ -336,11 +308,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Title (A → Z)");
 
@@ -365,11 +333,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Title (Z → A)");
 
@@ -403,11 +367,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -441,11 +401,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Release Date (Newest First)");
 
@@ -475,11 +431,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Grade (Best First)");
 
@@ -509,11 +461,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Grade (Worst First)");
 
@@ -535,11 +483,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Review Date (Oldest First)");
 
@@ -561,11 +505,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Review Date (Newest First)");
 
@@ -588,11 +528,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Dr. No");
@@ -626,11 +562,7 @@ describe("CollectionTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Dr. No");
@@ -671,11 +603,7 @@ describe("CollectionTitles", () => {
       });
 
       const user = getUserWithFakeTimers();
-      render(
-        <CollectionTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CollectionTitles {...baseProps} values={titles} />);
 
       const posterList = getGroupedPosterList();
 

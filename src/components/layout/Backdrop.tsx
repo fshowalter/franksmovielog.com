@@ -45,30 +45,6 @@ export function Backdrop({
   );
 }
 
-export function BreadcrumbLink({
-  children,
-  href,
-}: {
-  children: React.ReactNode;
-  href: string;
-}): React.JSX.Element {
-  return (
-    <a
-      className={`
-        relative inline-block font-sans text-sm font-bold tracking-wide
-        text-[#fff]/85 uppercase
-        after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-        after:origin-center after:scale-x-0 after:bg-white/75
-        after:transition-transform after:duration-500
-        hover:after:scale-x-100
-      `}
-      href={href}
-    >
-      {children}
-    </a>
-  );
-}
-
 function Breadcrumb({
   value,
 }: {
@@ -80,7 +56,19 @@ function Breadcrumb({
 
   return (
     <p className="mb-4">
-      <BreadcrumbLink href={value.href}>{value.text}</BreadcrumbLink>
+      <a
+        className={`
+          relative inline-block font-sans text-sm font-bold tracking-wide
+          text-[#fff]/85 uppercase
+          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
+          after:origin-center after:scale-x-0 after:bg-white/75
+          after:transition-transform after:duration-500
+          hover:after:scale-x-100
+        `}
+        href={value.href}
+      >
+        {value.text}
+      </a>
     </p>
   );
 }

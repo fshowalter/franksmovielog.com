@@ -1,16 +1,16 @@
 ---
 import React from "react";
 
+import type { Collection } from "~/api/collections";
+
 import { allCollections } from "~/api/collections";
 import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
-import { Layout as ComponentLayout } from "~/components/layout/Layout";
-import { CollectionTitlesStrictWrapper } from "~/features/collection-titles/CollectionTitles";
-import { getProps } from "~/features/collection-titles/getProps";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { CollectionTitles } from "~/features/collection-titles/CollectionTitles";
+import { getCollectionTitlesProps } from "~/features/collection-titles/getCollectionTitlesProps";
 
-interface Props {
-  slug: string;
-}
+type Props = Collection;
 
 export async function getStaticPaths() {
   const { collections } = await allCollections();
@@ -20,30 +20,15 @@ export async function getStaticPaths() {
       params: {
         slug: collection.slug,
       },
-      props: {
-        slug: collection.slug,
-      },
+      props: collection,
     };
   });
 }
 
-const { slug } = Astro.props;
+const { description, descriptionHtml, name, slug } = Astro.props;
 
-const props = await getProps(slug);
-
-// Separate layout props from interactive props
-const {
-  backdropImageProps,
-  description,
-  descriptionHtml,
-  name,
-  ...interactiveProps
-} = props;
-
-const breadcrumb = React.createElement(BreadcrumbLink, {
-  children: "Collections",
-  href: "/collections/",
-});
+const collectionTitlesProps = await getCollectionTitlesProps(slug);
+const backdropImageProps = await getLayoutBackdropImageProps(slug);
 
 const deckElement = React.createElement("span", {
   dangerouslySetInnerHTML: { __html: descriptionHtml },
@@ -61,13 +46,18 @@ const deckElement = React.createElement("span", {
   }}
   title={`${name} movie reviews`}
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop
-      breadcrumb={breadcrumb}
-      deck={deckElement}
-      imageProps={backdropImageProps}
-      title={name}
-    />
-    <CollectionTitlesStrictWrapper client:load props={interactiveProps} />
-  </ComponentLayout>
+  <Layout
+    backdrop={{
+      breadcrumb: {
+        href: "/collections/",
+        text: "Collections",
+      },
+      deck: deckElement,
+      imageProps: backdropImageProps,
+      title: name,
+    }}
+    className="bg-subtle"
+  >
+    <CollectionTitles client:load {...collectionTitlesProps} />
+  </Layout>
 </AstroPageShell>

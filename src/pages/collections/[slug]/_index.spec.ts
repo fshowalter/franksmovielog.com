@@ -33,7 +33,7 @@ describe("/collections/:slug", () => {
         Review as AstroComponentFactory,
         {
           partial: false,
-          props: { slug: collection.slug },
+          props: collection,
           request: new Request(
             `https://www.franksmovielog.com/collections/${collection.slug}/`,
           ),
