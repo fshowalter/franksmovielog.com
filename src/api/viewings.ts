@@ -1,8 +1,8 @@
 import { collator } from "~/utils/collator";
 
-import type { ViewingJson } from "./data/viewingsJson";
+import type { ViewingJson } from "./data/viewings-json";
 
-import { allViewingsJson } from "./data/viewingsJson";
+import { allViewingsJson } from "./data/viewings-json";
 
 export type Viewing = ViewingJson & {
   viewingYear: string;

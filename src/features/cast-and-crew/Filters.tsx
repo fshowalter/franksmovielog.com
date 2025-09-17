@@ -27,7 +27,7 @@ export function Filters({
         }}
       />
       <CreditedAsFilter
-        initialValue={filterValues.creditedAs}
+        defaultValue={filterValues.creditedAs}
         onChange={(value) =>
           dispatch(createCreditedAsFilterChangedAction(value))
         }

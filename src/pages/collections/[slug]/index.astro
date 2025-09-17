@@ -3,9 +3,9 @@ import React from "react";
 
 import { allCollections } from "~/api/collections";
 import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
+import { Layout as ComponentLayout } from "~/components/layout/Layout";
 import { CollectionTitlesStrictWrapper } from "~/features/collection-titles/CollectionTitles";
 import { getProps } from "~/features/collection-titles/getProps";
-import { Layout as ComponentLayout } from "~/components/layout/Layout";
 import Layout from "~/layouts/Layout.astro";
 
 interface Props {
@@ -34,9 +34,9 @@ const props = await getProps(slug);
 // Separate layout props from interactive props
 const {
   backdropImageProps,
-  name,
   description,
   descriptionHtml,
+  name,
   ...interactiveProps
 } = props;
 

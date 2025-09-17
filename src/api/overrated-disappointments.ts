@@ -1,8 +1,8 @@
 import { collator } from "~/utils/collator";
 
-import type { OverratedJson } from "./data/overratedJson";
+import type { OverratedJson } from "./data/overrated-json";
 
-import { allOverratedJson } from "./data/overratedJson";
+import { allOverratedJson } from "./data/overrated-json";
 
 type OverratedDisappointment = OverratedJson & {};
 

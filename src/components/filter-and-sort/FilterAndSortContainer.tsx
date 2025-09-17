@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { FilterAndSortHeader } from "./FilterAndSortHeader";
 
-
 export type SortProps<T extends string> = {
   currentSortValue: T;
   onSortChange: React.ChangeEventHandler<HTMLSelectElement>;
@@ -258,14 +257,16 @@ export function FilterAndSortContainer<T extends string>({
                       flex items-center justify-center gap-x-4 rounded-sm
                       bg-canvas px-4 py-3 font-sans text-xs text-nowrap
                       uppercase transition-transform
-                      enabled:hover:scale-105 enabled:hover:drop-shadow-md
                       ${
                         hasPendingFilters
-                          ? "cursor-pointer text-default"
+                          ? `
+                            cursor-pointer text-default
+                            enabled:hover:scale-105 enabled:hover:drop-shadow-md
+                          `
                           : "cursor-not-allowed text-muted opacity-50"
                       }
                     `}
-                    disabled={hasPendingFilters ? undefined : false}
+                    disabled={hasPendingFilters ? false : true}
                     onClick={() => {
                       if (hasPendingFilters) {
                         onClearFilters?.();
@@ -277,12 +278,20 @@ export function FilterAndSortContainer<T extends string>({
                   </button>
                   <button
                     className={`
-                      flex flex-1 transform-gpu cursor-pointer items-center
-                      justify-center gap-x-4 rounded-sm bg-footer px-4 py-3
-                      font-sans text-xs font-bold tracking-wide text-nowrap
-                      text-white uppercase transition-transform
-                      hover:scale-105 hover:drop-shadow-md
+                      flex flex-1 transform-gpu items-center justify-center
+                      gap-x-4 rounded-sm bg-footer px-4 py-3 font-sans text-xs
+                      font-bold tracking-wide text-nowrap text-white uppercase
+                      transition-transform
+                      ${
+                        pendingFilteredCount === 0
+                          ? "cursor-not-allowed text-muted opacity-50"
+                          : `
+                            cursor-pointer
+                            hover:scale-105 hover:drop-shadow-md
+                          `
+                      }
                     `}
+                    disabled={pendingFilteredCount === 0 ? true : false}
                     onClick={() => {
                       // Apply pending filters
                       onApplyFilters();

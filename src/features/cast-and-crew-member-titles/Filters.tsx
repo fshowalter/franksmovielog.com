@@ -1,9 +1,20 @@
 import { CreditedAsFilter } from "~/components/filter-and-sort/CreditedAsFilter";
 import { MaybeReviewedTitleFilters } from "~/components/filter-and-sort/MaybeReviewedTitleFilters";
 
-import type { CastAndCrewMemberTitlesAction, CastAndCrewMemberTitlesFiltersValues } from "./CastAndCrewMemberTitles.reducer";
+import type {
+  CastAndCrewMemberTitlesAction,
+  CastAndCrewMemberTitlesFiltersValues,
+} from "./CastAndCrewMemberTitles.reducer";
 
-import { createCreditedAsFilterChangedAction, createGenresFilterChangedAction, createGradeFilterChangedAction, createReleaseYearFilterChangedAction, createReviewedStatusFilterChangedAction, createReviewYearFilterChangedAction, createTitleFilterChangedAction } from "./CastAndCrewMemberTitles.reducer";
+import {
+  createCreditedAsFilterChangedAction,
+  createGenresFilterChangedAction,
+  createGradeFilterChangedAction,
+  createReleaseYearFilterChangedAction,
+  createReviewedStatusFilterChangedAction,
+  createReviewYearFilterChangedAction,
+  createTitleFilterChangedAction,
+} from "./CastAndCrewMemberTitles.reducer";
 
 export function Filters({
   dispatch,
@@ -24,7 +35,7 @@ export function Filters({
     <>
       {distinctCreditKinds.length > 1 && (
         <CreditedAsFilter
-          initialValue={filterValues.creditedAs}
+          defaultValue={filterValues.creditedAs}
           onChange={(value) =>
             dispatch(createCreditedAsFilterChangedAction(value))
           }

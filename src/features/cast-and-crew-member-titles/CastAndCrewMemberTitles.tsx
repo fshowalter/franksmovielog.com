@@ -3,6 +3,7 @@ import { StrictMode, useReducer } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
@@ -24,7 +25,6 @@ import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 import { Filters } from "./Filters";
 import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
-import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
 export type CastAndCrewMemberTitlesProps = {
   distinctCreditKinds: readonly string[];

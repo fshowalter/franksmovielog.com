@@ -5,8 +5,8 @@ import strip from "strip-markdown";
 
 import { perfLogger } from "~/utils/performanceLogger";
 
-import { allPagesMarkdown } from "./data/pagesMarkdown";
-import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
+import { allPagesMarkdown } from "./data/pages-markdown";
+import { allReviewedTitlesJson } from "./data/reviewed-titles-json";
 import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 

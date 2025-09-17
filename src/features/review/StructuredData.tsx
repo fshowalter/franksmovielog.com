@@ -18,8 +18,8 @@ export function StructuredData({
   grade: string;
   imdbId: string;
   releaseYear: string;
-  title: string;
   seoImageSrc: string;
+  title: string;
 }): React.JSX.Element {
   const structuredData = {
     "@context": "http://schema.org",

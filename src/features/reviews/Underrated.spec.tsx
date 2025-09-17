@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
@@ -22,299 +22,328 @@ import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { UnderratedProps } from "./Underrated";
 
-import { getUnderratedProps } from "./getProps";
+import {
+  baseReviewProps,
+  createReviewValue,
+  resetTestIdCounter,
+} from "./Reviews.testHelper";
 import { UnderratedStrictWrapper } from "./Underrated";
 
-const props = await getUnderratedProps();
+const createProps = (
+  overrides: Partial<UnderratedProps> = {},
+): UnderratedProps => ({
+  ...baseReviewProps,
+  ...overrides,
+});
 
 describe("Underrated", () => {
   beforeEach(() => {
-    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
-    // when fake timers are active. This allows async userEvent operations to complete
-    // while still controlling timer advancement for debounced inputs.
-    // See https://github.com/testing-library/user-event/issues/833
+    resetTestIdCounter();
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
   afterEach(() => {
-    // AIDEV-NOTE: Clear all pending timers before restoring real timers
-    // to ensure test isolation and prevent timer leaks between tests
     vi.clearAllTimers();
     vi.useRealTimers();
   });
 
-  it("can filter by title", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("filtering", () => {
+    it("filters by title", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ releaseYear: "1959", title: "Rio Bravo" }),
+        createReviewValue({ releaseYear: "1982", title: "The Thing" }),
+        createReviewValue({ releaseYear: "1986", title: "Big Trouble in Little China" }),
+      ];
 
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
 
-    render(<UnderratedStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Rio Bravo");
+      await clickViewResults(user);
 
-    // Open filter drawer
-    await clickToggleFilters(user);
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+      expect(within(posterList).queryByText("Big Trouble in Little China")).not.toBeInTheDocument();
+    });
 
-    // Type the filter text
-    await fillTitleFilter(user, "Bad Seed");
+    it("filters by genres", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ genres: ["Western"], title: "Rio Bravo" }),
+        createReviewValue({ genres: ["Horror", "Sci-Fi"], title: "The Thing" }),
+        createReviewValue({ genres: ["Action", "Thriller"], title: "Assault on Precinct 13" }),
+      ];
 
-    // Apply the filter
-    await clickViewResults(user);
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({
+        distinctGenres: ["Western", "Horror", "Sci-Fi", "Action", "Thriller"],
+        values: reviews
+      })} />);
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await clickGenresFilterOption(user, "Western");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+      expect(within(posterList).queryByText("Assault on Precinct 13")).not.toBeInTheDocument();
+    });
+
+    it("filters by release year range", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ releaseYear: "1940", title: "His Girl Friday" }),
+        createReviewValue({ releaseYear: "1959", title: "Rio Bravo" }),
+        createReviewValue({ releaseYear: "1982", title: "The Thing" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({
+        distinctReleaseYears: ["1940", "1950", "1959", "1960", "1970", "1980", "1982", "1990"],
+        values: reviews
+      })} />);
+
+      await clickToggleFilters(user);
+      await fillReleaseYearFilter(user, "1950", "1970");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(posterList).queryByText("His Girl Friday")).not.toBeInTheDocument();
+      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+    });
   });
 
-  it("can show more titles", async ({ expect }) => {
-    expect.hasAssertions();
-    // Create props with more than 100 items to trigger pagination
-    const manyValues: UnderratedProps["values"] = Array.from(
-      { length: 150 },
-      (_, i) => ({
-        genres: ["Drama"],
-        grade: "B+" as const,
-        gradeValue: 8,
-        imdbId: `tt${String(i).padStart(7, "0")}`,
-        posterImageProps: {
-          src: "test.jpg",
-          srcSet: "test.jpg 1x",
-        },
-        releaseSequence: i + 1,
-        releaseYear: "1930",
-        reviewDisplayDate: "Jan 01, 2023",
-        reviewSequence: i + 1,
-        reviewYear: "2023",
-        slug: `test-movie-${i + 1}`,
-        sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-        title: `Test Movie ${i + 1}`,
-      }),
-    );
-    const propsWithManyValues = {
-      ...props,
-      values: manyValues,
-    };
+  describe("sorting", () => {
+    it("sorts by title A → Z", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ sortTitle: "Thing", title: "The Thing" }),
+        createReviewValue({ sortTitle: "Assault on Precinct 13", title: "Assault on Precinct 13" }),
+        createReviewValue({ sortTitle: "Rio Bravo", title: "Rio Bravo" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
 
-    render(<UnderratedStrictWrapper props={propsWithManyValues} />);
+      await clickSortOption(user, "Title (A → Z)");
 
-    await clickShowMore(user);
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const assaultIndex = allText.indexOf("Assault on Precinct 13");
+      const rioIndex = allText.indexOf("Rio Bravo");
+      const thingIndex = allText.indexOf("The Thing");
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      expect(assaultIndex).toBeLessThan(rioIndex);
+      expect(rioIndex).toBeLessThan(thingIndex);
+    });
+
+    it("sorts by title Z → A", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ sortTitle: "Assault on Precinct 13", title: "Assault on Precinct 13" }),
+        createReviewValue({ sortTitle: "Rio Bravo", title: "Rio Bravo" }),
+        createReviewValue({ sortTitle: "Thing", title: "The Thing" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Title (Z → A)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const thingIndex = allText.indexOf("The Thing");
+      const rioIndex = allText.indexOf("Rio Bravo");
+      const assaultIndex = allText.indexOf("Assault on Precinct 13");
+
+      expect(thingIndex).toBeLessThan(rioIndex);
+      expect(rioIndex).toBeLessThan(assaultIndex);
+    });
+
+    it("sorts by release date oldest first", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ releaseSequence: 3, releaseYear: "1982", title: "The Thing" }),
+        createReviewValue({ releaseSequence: 1, releaseYear: "1940", title: "His Girl Friday" }),
+        createReviewValue({ releaseSequence: 2, releaseYear: "1959", title: "Rio Bravo" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Release Date (Oldest First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const fridayIndex = allText.indexOf("His Girl Friday");
+      const rioIndex = allText.indexOf("Rio Bravo");
+      const thingIndex = allText.indexOf("The Thing");
+
+      expect(fridayIndex).toBeLessThan(rioIndex);
+      expect(rioIndex).toBeLessThan(thingIndex);
+    });
+
+    it("sorts by release date newest first", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ releaseSequence: 1, releaseYear: "1940", title: "His Girl Friday" }),
+        createReviewValue({ releaseSequence: 2, releaseYear: "1959", title: "Rio Bravo" }),
+        createReviewValue({ releaseSequence: 3, releaseYear: "1982", title: "The Thing" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Release Date (Newest First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const thingIndex = allText.indexOf("The Thing");
+      const rioIndex = allText.indexOf("Rio Bravo");
+      const fridayIndex = allText.indexOf("His Girl Friday");
+
+      expect(thingIndex).toBeLessThan(rioIndex);
+      expect(rioIndex).toBeLessThan(fridayIndex);
+    });
+
+    it("sorts by grade best first", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ grade: "A+", gradeValue: 13, title: "The Thing" }),
+        createReviewValue({ grade: "A", gradeValue: 12, title: "Rio Bravo" }),
+        createReviewValue({ grade: "B+", gradeValue: 10, title: "Assault" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Grade (Best First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const thingIndex = allText.indexOf("The Thing");
+      const rioIndex = allText.indexOf("Rio Bravo");
+      const assaultIndex = allText.indexOf("Assault");
+
+      expect(thingIndex).toBeLessThan(rioIndex);
+      expect(rioIndex).toBeLessThan(assaultIndex);
+    });
+
+    it("sorts by grade worst first", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ grade: "A+", gradeValue: 13, title: "The Thing" }),
+        createReviewValue({ grade: "B+", gradeValue: 10, title: "Assault" }),
+        createReviewValue({ grade: "A", gradeValue: 12, title: "Rio Bravo" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Grade (Worst First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const assaultIndex = allText.indexOf("Assault");
+      const rioIndex = allText.indexOf("Rio Bravo");
+      const thingIndex = allText.indexOf("The Thing");
+
+      expect(assaultIndex).toBeLessThan(rioIndex);
+      expect(rioIndex).toBeLessThan(thingIndex);
+    });
   });
 
-  it("can sort by title (A → Z)", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("when clearing filters", () => {
+    it("clears all filters with clear button", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ genres: ["Western"], title: "Rio Bravo" }),
+        createReviewValue({ genres: ["Horror"], title: "The Thing" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({
+        distinctGenres: ["Western", "Horror"],
+        values: reviews
+      })} />);
 
-    render(<UnderratedStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Rio Bravo");
+      await clickGenresFilterOption(user, "Western");
+      await clickViewResults(user);
 
-    await clickSortOption(user, "Title (A → Z)");
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await clickClearFilters(user);
+
+      expect(getTitleFilter()).toHaveValue("");
+
+      await clickViewResults(user);
+
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(posterList).getByText("The Thing")).toBeInTheDocument();
+    });
   });
 
-  it("can sort by title (Z → A)", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("when closing filter drawer without applying", () => {
+    it("resets pending filter changes", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ title: "Rio Bravo" }),
+        createReviewValue({ title: "The Thing" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
 
-    render(<UnderratedStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Rio Bravo");
+      await clickViewResults(user);
 
-    await clickSortOption(user, "Title (Z → A)");
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Different");
+      await clickCloseFilters(user);
+
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+
+      await clickToggleFilters(user);
+      expect(getTitleFilter()).toHaveValue("Rio Bravo");
+    });
   });
 
-  it("can sort by release date with oldest first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Release Date (Oldest First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by release date with newest first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Release Date (Newest First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by grade with best first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Grade (Best First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by grade with worst first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Grade (Worst First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by release year", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    await fillReleaseYearFilter(user, "1984", "2019");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    // List updates synchronously with fake timers
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by release year reversed", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    await fillReleaseYearFilter(user, "1984", "2019");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    await fillReleaseYearFilter(user, "2022", "1984");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    // List updates synchronously with fake timers
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by genres", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Click to open the dropdown
-    await clickGenresFilterOption(user, "Horror");
-    await clickGenresFilterOption(user, "Comedy");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    // List updates synchronously with fake timers
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can clear all filters", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Apply multiple filters
-    await fillTitleFilter(user, "Test");
-    await clickGenresFilterOption(user, "Horror");
-
-    await clickViewResults(user);
-
-    const listBeforeClear = getGroupedPosterList().innerHTML;
-
-    // Open filter drawer again
-    await clickToggleFilters(user);
-
-    // Clear all filters
-    await clickClearFilters(user);
-
-    // Check that filters are cleared
-    expect(getTitleFilter()).toHaveValue("");
-
-    await clickViewResults(user);
-
-    const listAfterClear = getGroupedPosterList().innerHTML;
-
-    expect(listBeforeClear).not.toEqual(listAfterClear);
-  });
-
-  it("can reset filters when closing drawer", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<UnderratedStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Apply initial filter
-    await fillTitleFilter(user, "Rio Bravo");
-
-    // Apply the filters
-    await clickViewResults(user);
-
-    const listBeforeReset = getGroupedPosterList().innerHTML;
-
-    // Open filter drawer again
-    await clickToggleFilters(user);
-
-    // Start typing a new filter but don't apply
-    await fillTitleFilter(user, "Completely Different");
-
-    // Close the drawer with the X button (should reset pending changes)
-    await clickCloseFilters(user);
-
-    // The list should still show the originally filtered results
-    const listAfterReset = getGroupedPosterList().innerHTML;
-
-    expect(listBeforeReset).toEqual(listAfterReset);
-
-    // Open filter drawer again to verify filters were reset to last applied state
-    await clickToggleFilters(user);
-
-    // Should show the originally applied filter, not the pending change
-    expect(getTitleFilter()).toHaveValue("Rio Bravo");
+  describe("pagination", () => {
+    it("shows more titles when clicking show more", async ({ expect }) => {
+      // Create 110 reviews to force pagination
+      const reviews = Array.from({ length: 110 }, (_, i) =>
+        createReviewValue({
+          releaseSequence: 3000 - i,
+          releaseYear: String(2020 - Math.floor(i / 10)),
+          reviewMonth: "January",
+          reviewSequence: 110 - i, // Highest sequence first for desc sort
+          reviewYear: "2020",
+          title: `Underrated ${i + 1}`,
+        }),
+      );
+
+      const user = getUserWithFakeTimers();
+      render(<UnderratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      const posterList = getGroupedPosterList();
+
+      // Should show first 100 movies
+      expect(within(posterList).getByText("Underrated 1")).toBeInTheDocument();
+      expect(within(posterList).getByText("Underrated 100")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Underrated 101")).not.toBeInTheDocument();
+
+      await clickShowMore(user);
+
+      // Should now show all movies
+      expect(within(posterList).getByText("Underrated 101")).toBeInTheDocument();
+      expect(within(posterList).getByText("Underrated 110")).toBeInTheDocument();
+    });
   });
 });

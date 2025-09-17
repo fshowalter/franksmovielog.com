@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import { getAvatarList } from "~/components/avatar-list/AvatarList.testHelper";
@@ -15,164 +15,246 @@ import {
 } from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-import { CollectionsStrictWrapper } from "./Collections";
-import { getProps } from "./getProps";
+import type { CollectionsProps, CollectionsValue } from "./Collections";
 
-const props = await getProps();
+import { CollectionsStrictWrapper } from "./Collections";
+
+// Inline minimal fixture data for testing
+const createCollection = (
+  overrides: Partial<CollectionsValue> = {},
+): CollectionsValue => {
+  const name = overrides.name || "Test Collection";
+  return {
+    avatarImageProps: undefined,
+    name,
+    reviewCount: overrides.reviewCount ?? 10,
+    slug: overrides.slug ?? name.toLowerCase().replaceAll(/[\s']/g, "-"),
+    ...overrides,
+  };
+};
+
+const baseProps: CollectionsProps = {
+  initialSort: "name-asc",
+  values: [],
+};
 
 describe("Collections", () => {
   beforeEach(() => {
-    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
-    // when fake timers are active. This allows async userEvent operations to complete
-    // while still controlling timer advancement for debounced inputs.
-    // See https://github.com/testing-library/user-event/issues/833
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
   afterEach(() => {
-    // AIDEV-NOTE: Clear all pending timers before restoring real timers
-    // to ensure test isolation and prevent timer leaks between tests
     vi.clearAllTimers();
     vi.useRealTimers();
   });
 
-  it("can filter by name", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("filtering", () => {
+    it("filters by name", async ({ expect }) => {
+      const collections = [
+        createCollection({ name: "Friday the 13th" }),
+        createCollection({ name: "Halloween" }),
+        createCollection({ name: "Hammer Films" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(
+        <CollectionsStrictWrapper
+          props={{ ...baseProps, values: collections }}
+        />,
+      );
 
-    render(<CollectionsStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillNameFilter(user, "Friday");
+      await clickViewResults(user);
 
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Type the filter text
-    await fillNameFilter(user, "Friday the 13th");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    // List updates synchronously with fake timers
-    expect(getAvatarList()).toMatchSnapshot();
+      const avatarList = getAvatarList();
+      expect(within(avatarList).getByText("Friday the 13th")).toBeInTheDocument();
+      expect(within(avatarList).queryByText("Halloween")).not.toBeInTheDocument();
+      expect(within(avatarList).queryByText("Hammer Films")).not.toBeInTheDocument();
+    });
   });
 
-  it("can sort by name desc", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("sorting", () => {
+    it("sorts by name A → Z", async ({ expect }) => {
+      const collections = [
+        createCollection({ name: "Universal Monsters" }),
+        createCollection({ name: "Friday the 13th" }),
+        createCollection({ name: "Hammer Films" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(
+        <CollectionsStrictWrapper
+          props={{ ...baseProps, values: collections }}
+        />,
+      );
 
-    render(<CollectionsStrictWrapper props={props} />);
+      await clickSortOption(user, "Name (A → Z)");
 
-    await clickSortOption(user, "Name (Z → A)");
+      const avatarList = getAvatarList();
+      const allText = avatarList.textContent || "";
+      const fridayIndex = allText.indexOf("Friday the 13th");
+      const hammerIndex = allText.indexOf("Hammer Films");
+      const universalIndex = allText.indexOf("Universal Monsters");
 
-    expect(getAvatarList()).toMatchSnapshot();
+      expect(fridayIndex).toBeLessThan(hammerIndex);
+      expect(hammerIndex).toBeLessThan(universalIndex);
+    });
+
+    it("sorts by name Z → A", async ({ expect }) => {
+      const collections = [
+        createCollection({ name: "Friday the 13th" }),
+        createCollection({ name: "Hammer Films" }),
+        createCollection({ name: "Universal Monsters" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CollectionsStrictWrapper
+          props={{ ...baseProps, values: collections }}
+        />,
+      );
+
+      await clickSortOption(user, "Name (Z → A)");
+
+      const avatarList = getAvatarList();
+      const allText = avatarList.textContent || "";
+      const universalIndex = allText.indexOf("Universal Monsters");
+      const hammerIndex = allText.indexOf("Hammer Films");
+      const fridayIndex = allText.indexOf("Friday the 13th");
+
+      expect(universalIndex).toBeLessThan(hammerIndex);
+      expect(hammerIndex).toBeLessThan(fridayIndex);
+    });
+
+    it("sorts by review count most first", async ({ expect }) => {
+      const collections = [
+        createCollection({ name: "Friday the 13th", reviewCount: 11 }),
+        createCollection({ name: "Halloween", reviewCount: 13 }),
+        createCollection({ name: "James Bond", reviewCount: 27 }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CollectionsStrictWrapper
+          props={{ ...baseProps, values: collections }}
+        />,
+      );
+
+      await clickSortOption(user, "Review Count (Most First)");
+
+      const avatarList = getAvatarList();
+      const allText = avatarList.textContent || "";
+      const bondIndex = allText.indexOf("James Bond");
+      const halloweenIndex = allText.indexOf("Halloween");
+      const fridayIndex = allText.indexOf("Friday the 13th");
+
+      expect(bondIndex).toBeLessThan(halloweenIndex);
+      expect(halloweenIndex).toBeLessThan(fridayIndex);
+    });
+
+    it("sorts by review count fewest first", async ({ expect }) => {
+      const collections = [
+        createCollection({ name: "Halloween", reviewCount: 13 }),
+        createCollection({ name: "Hatchet", reviewCount: 4 }),
+        createCollection({ name: "James Bond", reviewCount: 27 }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CollectionsStrictWrapper
+          props={{ ...baseProps, values: collections }}
+        />,
+      );
+
+      await clickSortOption(user, "Review Count (Fewest First)");
+
+      const avatarList = getAvatarList();
+      const allText = avatarList.textContent || "";
+      const hatchetIndex = allText.indexOf("Hatchet");
+      const halloweenIndex = allText.indexOf("Halloween");
+      const bondIndex = allText.indexOf("James Bond");
+
+      expect(hatchetIndex).toBeLessThan(halloweenIndex);
+      expect(halloweenIndex).toBeLessThan(bondIndex);
+    });
   });
 
-  it("can sort by name asc", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("when clearing filters", () => {
+    it("clears all filters with clear button", async ({ expect }) => {
+      const collections = [
+        createCollection({ name: "Universal Monsters" }),
+        createCollection({ name: "Hammer Films" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(
+        <CollectionsStrictWrapper
+          props={{ ...baseProps, values: collections }}
+        />,
+      );
 
-    render(<CollectionsStrictWrapper props={props} />);
+      // Apply name filter
+      await clickToggleFilters(user);
+      await fillNameFilter(user, "Universal");
+      await clickViewResults(user);
 
-    await clickSortOption(user, "Name (A → Z)");
+      let avatarList = getAvatarList();
+      expect(within(avatarList).getByText("Universal Monsters")).toBeInTheDocument();
+      expect(within(avatarList).queryByText("Hammer Films")).not.toBeInTheDocument();
 
-    expect(getAvatarList()).toMatchSnapshot();
+      // Clear filters
+      await clickToggleFilters(user);
+      await clickClearFilters(user);
+
+      // Check that filters are cleared
+      expect(getNameFilter()).toHaveValue("");
+
+      await clickViewResults(user);
+
+      // All collections should be visible
+      avatarList = getAvatarList();
+      expect(within(avatarList).getByText("Universal Monsters")).toBeInTheDocument();
+      expect(within(avatarList).getByText("Hammer Films")).toBeInTheDocument();
+    });
   });
 
-  it("can sort by review count desc", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("when closing filter drawer without applying", () => {
+    it("resets pending filter changes", async ({ expect }) => {
+      const collections = [
+        createCollection({ name: "Universal Monsters" }),
+        createCollection({ name: "Hammer Films" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(
+        <CollectionsStrictWrapper
+          props={{ ...baseProps, values: collections }}
+        />,
+      );
 
-    render(<CollectionsStrictWrapper props={props} />);
+      // Apply initial filter
+      await clickToggleFilters(user);
+      await fillNameFilter(user, "Universal");
+      await clickViewResults(user);
 
-    await clickSortOption(user, "Review Count (Most First)");
+      let avatarList = getAvatarList();
+      expect(within(avatarList).getByText("Universal Monsters")).toBeInTheDocument();
+      expect(within(avatarList).queryByText("Hammer Films")).not.toBeInTheDocument();
 
-    expect(getAvatarList()).toMatchSnapshot();
-  });
+      // Start typing new filter but close without applying
+      await clickToggleFilters(user);
+      await fillNameFilter(user, "Different");
+      await clickCloseFilters(user);
 
-  it("can sort by review count asc", async ({ expect }) => {
-    expect.hasAssertions();
+      // Original filter should still be active
+      avatarList = getAvatarList();
+      expect(within(avatarList).getByText("Universal Monsters")).toBeInTheDocument();
+      expect(within(avatarList).queryByText("Hammer Films")).not.toBeInTheDocument();
 
-    const user = getUserWithFakeTimers();
-
-    render(<CollectionsStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Review Count (Fewest First)");
-
-    expect(getAvatarList()).toMatchSnapshot();
-  });
-
-  it("can clear all filters", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<CollectionsStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Apply filter
-    await fillNameFilter(user, "Universal");
-
-    await clickViewResults(user);
-
-    const listBeforeClear = getAvatarList().innerHTML;
-
-    // Open filter drawer again
-    await clickToggleFilters(user);
-
-    // Clear all filters
-    await clickClearFilters(user);
-
-    // Check that filters are cleared
-    expect(getNameFilter()).toHaveValue("");
-
-    await clickViewResults(user);
-
-    const listAfterClear = getAvatarList().innerHTML;
-
-    expect(listBeforeClear).not.toEqual(listAfterClear);
-  });
-
-  it("can reset filters when closing drawer", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<CollectionsStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Apply filter
-    await fillNameFilter(user, "Universal");
-
-    await clickViewResults(user);
-
-    const listBeforeReset = getAvatarList().innerHTML;
-
-    // Open filter drawer again
-    await clickToggleFilters(user);
-
-    // Start typing a new filter but don't apply
-    await user.clear(getNameFilter());
-    await fillNameFilter(user, "Different");
-
-    // Close the drawer with the X button (should reset pending changes)
-    await clickCloseFilters(user);
-
-    // The list should still show the originally filtered results
-    const listAfterReset = getAvatarList().innerHTML;
-
-    expect(listBeforeReset).toEqual(listAfterReset);
-
-    // Open filter drawer again to verify filters were reset to last applied state
-    await clickToggleFilters(user);
-
-    // Should show the originally applied filter, not the pending change
-    expect(getNameFilter()).toHaveValue("Universal");
+      // Verify original filter value is preserved
+      await clickToggleFilters(user);
+      expect(getNameFilter()).toHaveValue("Universal");
+    });
   });
 });

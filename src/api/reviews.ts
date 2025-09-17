@@ -10,13 +10,13 @@ import { ENABLE_CACHE } from "~/utils/cache";
 import { collator } from "~/utils/collator";
 import { perfLogger } from "~/utils/performanceLogger";
 
-import type { ReviewedTitleJson } from "./data/reviewedTitlesJson";
-import type { MarkdownReview } from "./data/reviewsMarkdown";
-import type { MarkdownViewing } from "./data/viewingsMarkdown";
+import type { ReviewedTitleJson } from "./data/reviewed-titles-json";
+import type { MarkdownReview } from "./data/reviews-markdown";
+import type { MarkdownViewing } from "./data/viewings-markdown";
 
-import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
-import { allReviewsMarkdown } from "./data/reviewsMarkdown";
-import { allViewingsMarkdown } from "./data/viewingsMarkdown";
+import { allReviewedTitlesJson } from "./data/reviewed-titles-json";
+import { allReviewsMarkdown } from "./data/reviews-markdown";
+import { allViewingsMarkdown } from "./data/viewings-markdown";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";

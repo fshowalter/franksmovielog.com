@@ -45,7 +45,7 @@ export function Filters({
         }}
       />
       <ReviewedStatusFilter
-        initialValue={filterValues.reviewedStatus}
+        defaultValue={filterValues.reviewedStatus}
         onChange={(value) =>
           dispatch(createReviewedStatusFilterChangedAction(value))
         }

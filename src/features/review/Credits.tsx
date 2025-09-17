@@ -20,16 +20,16 @@ export function Credits({
   title,
   writerNames,
 }: {
+  className?: string;
   countries: string[];
   directorNames: string[];
   originalTitle?: string;
+  posterImageProps: PosterImageProps;
   principalCastNames: string[];
   releaseYear: string;
   runtimeMinutes: number;
   title: string;
   writerNames: string[];
-  className?: string;
-  posterImageProps: PosterImageProps;
 }): React.JSX.Element {
   return (
     <aside

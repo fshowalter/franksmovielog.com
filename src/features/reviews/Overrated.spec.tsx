@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
@@ -20,282 +20,321 @@ import {
 } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-import { getOverratedProps } from "./getProps";
-import { OverratedStrictWrapper } from "./Overrated";
+import type { OverratedProps } from "./Overrated";
 
-const props = await getOverratedProps();
+import { OverratedStrictWrapper } from "./Overrated";
+import {
+  baseReviewProps,
+  createReviewValue,
+  resetTestIdCounter,
+} from "./Reviews.testHelper";
+
+const createProps = (
+  overrides: Partial<OverratedProps> = {},
+): OverratedProps => ({
+  ...baseReviewProps,
+  ...overrides,
+});
 
 describe("Overrated", () => {
   beforeEach(() => {
-    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
-    // when fake timers are active. This allows async userEvent operations to complete
-    // while still controlling timer advancement for debounced inputs.
-    // See https://github.com/testing-library/user-event/issues/833
+    resetTestIdCounter();
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
   afterEach(() => {
-    // AIDEV-NOTE: Clear all pending timers before restoring real timers
-    // to ensure test isolation and prevent timer leaks between tests
     vi.clearAllTimers();
     vi.useRealTimers();
   });
 
-  it("can filter by title", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("filtering", () => {
+    it("filters by title", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ releaseYear: "1956", title: "The Bad Seed" }),
+        createReviewValue({ releaseYear: "1941", title: "Citizen Kane" }),
+        createReviewValue({ releaseYear: "1994", title: "The Shawshank Redemption" }),
+      ];
 
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
 
-    render(<OverratedStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Bad Seed");
+      await clickViewResults(user);
 
-    await clickToggleFilters(user);
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("The Bad Seed")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Citizen Kane")).not.toBeInTheDocument();
+      expect(within(posterList).queryByText("The Shawshank Redemption")).not.toBeInTheDocument();
+    });
 
-    // Type the filter text
-    await fillTitleFilter(user, "Bad Seed");
+    it("filters by genres", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ genres: ["Drama", "Crime"], title: "The Godfather" }),
+        createReviewValue({ genres: ["Action", "Sci-Fi"], title: "Avatar" }),
+        createReviewValue({ genres: ["Drama", "Romance"], title: "Titanic" }),
+      ];
 
-    await clickViewResults(user);
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await clickGenresFilterOption(user, "Drama");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("The Godfather")).toBeInTheDocument();
+      expect(within(posterList).getByText("Titanic")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Avatar")).not.toBeInTheDocument();
+    });
+
+    it("filters by release year range", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ releaseYear: "1940", title: "Old Movie" }),
+        createReviewValue({ releaseYear: "1970", title: "Mid Movie" }),
+        createReviewValue({ releaseYear: "2020", title: "New Movie" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickToggleFilters(user);
+      await fillReleaseYearFilter(user, "1960", "1980");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Mid Movie")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Old Movie")).not.toBeInTheDocument();
+      expect(within(posterList).queryByText("New Movie")).not.toBeInTheDocument();
+    });
   });
 
-  it("can show more titles", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("sorting", () => {
+    it("sorts by title A → Z", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ sortTitle: "Zorro", title: "Zorro" }),
+        createReviewValue({ sortTitle: "Avatar", title: "Avatar" }),
+        createReviewValue({ sortTitle: "Matrix", title: "The Matrix" }),
+      ];
 
-    // Create props with more than 100 items to trigger pagination
-    const manyValues = Array.from({ length: 150 }, (_, i) => ({
-      genres: ["Drama"],
-      grade: "B+" as const,
-      gradeValue: 8,
-      imdbId: `tt${String(i).padStart(7, "0")}`,
-      posterImageProps: {
-        src: "test.jpg",
-        srcSet: "test.jpg 1x",
-      },
-      releaseSequence: i + 1,
-      releaseYear: "1930",
-      reviewDisplayDate: "Jan 01, 2023",
-      reviewSequence: i + 1,
-      reviewYear: "2023",
-      slug: `test-movie-${i + 1}`,
-      sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-      title: `Test Movie ${i + 1}`,
-    }));
-    const propsWithManyValues = {
-      ...props,
-      values: manyValues,
-    };
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
 
-    const user = getUserWithFakeTimers();
+      await clickSortOption(user, "Title (A → Z)");
 
-    render(<OverratedStrictWrapper props={propsWithManyValues} />);
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const avatarIndex = allText.indexOf("Avatar");
+      const matrixIndex = allText.indexOf("The Matrix");
+      const zorroIndex = allText.indexOf("Zorro");
 
-    await clickShowMore(user);
+      expect(avatarIndex).toBeLessThan(matrixIndex);
+      expect(matrixIndex).toBeLessThan(zorroIndex);
+    });
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+    it("sorts by title Z → A", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ sortTitle: "Avatar", title: "Avatar" }),
+        createReviewValue({ sortTitle: "Matrix", title: "The Matrix" }),
+        createReviewValue({ sortTitle: "Zorro", title: "Zorro" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Title (Z → A)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const zorroIndex = allText.indexOf("Zorro");
+      const matrixIndex = allText.indexOf("The Matrix");
+      const avatarIndex = allText.indexOf("Avatar");
+
+      expect(zorroIndex).toBeLessThan(matrixIndex);
+      expect(matrixIndex).toBeLessThan(avatarIndex);
+    });
+
+    it("sorts by release date oldest first", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ releaseSequence: 3, releaseYear: "2000", title: "New" }),
+        createReviewValue({ releaseSequence: 1, releaseYear: "1950", title: "Old" }),
+        createReviewValue({ releaseSequence: 2, releaseYear: "1975", title: "Mid" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Release Date (Oldest First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const oldIndex = allText.indexOf("Old");
+      const midIndex = allText.indexOf("Mid");
+      const newIndex = allText.indexOf("New");
+
+      expect(oldIndex).toBeLessThan(midIndex);
+      expect(midIndex).toBeLessThan(newIndex);
+    });
+
+    it("sorts by release date newest first", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ releaseSequence: 1, releaseYear: "1950", title: "Old" }),
+        createReviewValue({ releaseSequence: 2, releaseYear: "1975", title: "Mid" }),
+        createReviewValue({ releaseSequence: 3, releaseYear: "2000", title: "New" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Release Date (Newest First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const newIndex = allText.indexOf("New");
+      const midIndex = allText.indexOf("Mid");
+      const oldIndex = allText.indexOf("Old");
+
+      expect(newIndex).toBeLessThan(midIndex);
+      expect(midIndex).toBeLessThan(oldIndex);
+    });
+
+    it("sorts by grade best first", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ grade: "A", gradeValue: 12, title: "Best" }),
+        createReviewValue({ grade: "F", gradeValue: 1, title: "Worst" }),
+        createReviewValue({ grade: "C", gradeValue: 6, title: "Mid" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Grade (Best First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const bestIndex = allText.indexOf("Best");
+      const midIndex = allText.indexOf("Mid");
+      const worstIndex = allText.indexOf("Worst");
+
+      expect(bestIndex).toBeLessThan(midIndex);
+      expect(midIndex).toBeLessThan(worstIndex);
+    });
+
+    it("sorts by grade worst first", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ grade: "A", gradeValue: 12, title: "Best" }),
+        createReviewValue({ grade: "C", gradeValue: 6, title: "Mid" }),
+        createReviewValue({ grade: "F", gradeValue: 1, title: "Worst" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      await clickSortOption(user, "Grade (Worst First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const worstIndex = allText.indexOf("Worst");
+      const midIndex = allText.indexOf("Mid");
+      const bestIndex = allText.indexOf("Best");
+
+      expect(worstIndex).toBeLessThan(midIndex);
+      expect(midIndex).toBeLessThan(bestIndex);
+    });
   });
 
-  it("can sort by title (A → Z)", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("when clearing filters", () => {
+    it("clears all filters with clear button", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ genres: ["Drama"], title: "Bad Seed" }),
+        createReviewValue({ genres: ["Drama"], title: "Citizen Kane" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
 
-    render(<OverratedStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Bad Seed");
+      await clickGenresFilterOption(user, "Drama");
+      await clickViewResults(user);
 
-    await clickSortOption(user, "Title (A → Z)");
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Bad Seed")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Citizen Kane")).not.toBeInTheDocument();
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await clickClearFilters(user);
+
+      expect(getTitleFilter()).toHaveValue("");
+
+      await clickViewResults(user);
+
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Bad Seed")).toBeInTheDocument();
+      expect(within(posterList).getByText("Citizen Kane")).toBeInTheDocument();
+    });
   });
 
-  it("can sort by title (Z → A)", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("when closing filter drawer without applying", () => {
+    it("resets pending filter changes", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({ title: "Bad Seed" }),
+        createReviewValue({ title: "Citizen Kane" }),
+      ];
 
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
 
-    render(<OverratedStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Bad Seed");
+      await clickViewResults(user);
 
-    await clickSortOption(user, "Title (Z → A)");
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Bad Seed")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Citizen Kane")).not.toBeInTheDocument();
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Different");
+      await clickCloseFilters(user);
+
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Bad Seed")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Citizen Kane")).not.toBeInTheDocument();
+
+      await clickToggleFilters(user);
+      expect(getTitleFilter()).toHaveValue("Bad Seed");
+    });
   });
 
-  it("can sort by release date with oldest first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Release Date (Oldest First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by release date with newest first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Release Date (Newest First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by grade with best first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Grade (Best First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by grade with worst first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Grade (Worst First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by release year", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await fillReleaseYearFilter(user, "1982", "2021");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by release year reversed", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await fillReleaseYearFilter(user, "1982", "2018");
-
-    await clickViewResults(user);
-
-    await clickToggleFilters(user);
-
-    await fillReleaseYearFilter(user, "2021", "1982");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by genres", async ({ expect }) => {
-    expect.hasAssertions();
-
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await clickGenresFilterOption(user, "Horror");
-    await clickGenresFilterOption(user, "Comedy");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    // List updates synchronously with fake timers
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can clear all filters", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    const listBeforeFilters = getGroupedPosterList().innerHTML;
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Apply multiple filters
-    await fillTitleFilter(user, "Test");
-
-    await clickGenresFilterOption(user, "Horror");
-
-    await clickViewResults(user);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Clear all filters
-    await clickClearFilters(user);
-
-    // The clear button doesn't immediately update the UI, we need to check the View Results count
-    await clickViewResults(user);
-
-    const listAfterClear = getGroupedPosterList().innerHTML;
-
-    expect(listBeforeFilters).toEqual(listAfterClear);
-  });
-
-  it("can reset filters when closing drawer", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<OverratedStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Apply initial filter
-    await fillTitleFilter(user, "Bad Seed");
-
-    // Apply the filters
-    await clickViewResults(user);
-
-    // Store the count of filtered results
-    const listBeforeReset = getGroupedPosterList().innerHTML;
-
-    // Open filter drawer again
-    await clickToggleFilters(user);
-
-    // Start typing a new filter but don't apply
-    await fillTitleFilter(user, "Completely Different");
-
-    // Close the drawer with the X button (should reset pending changes)
-    await clickCloseFilters(user);
-
-    // The list should still show the originally filtered results
-    const listAfterReset = getGroupedPosterList().innerHTML;
-
-    expect(listBeforeReset).toEqual(listAfterReset);
-
-    // Open filter drawer again to verify filters were reset to last applied state
-    await clickToggleFilters(user);
-
-    // Should show the originally applied filter, not the pending change
-    expect(getTitleFilter()).toHaveValue("Bad Seed");
+  describe("pagination", () => {
+    it("shows more titles when clicking show more", async ({ expect }) => {
+      // Create 110 reviews to force pagination
+      const reviews = Array.from({ length: 110 }, (_, i) =>
+        createReviewValue({
+          releaseSequence: 3000 - i,
+          releaseYear: String(2020 - Math.floor(i / 10)),
+          reviewMonth: "January",
+          reviewSequence: 110 - i, // Highest sequence first for desc sort
+          reviewYear: "2020",
+          title: `Overrated ${i + 1}`,
+        }),
+      );
+
+      const user = getUserWithFakeTimers();
+      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+
+      const posterList = getGroupedPosterList();
+
+      // Should show first 100 movies
+      expect(within(posterList).getByText("Overrated 1")).toBeInTheDocument();
+      expect(within(posterList).getByText("Overrated 100")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Overrated 101")).not.toBeInTheDocument();
+
+      await clickShowMore(user);
+
+      // Should now show all movies
+      expect(within(posterList).getByText("Overrated 101")).toBeInTheDocument();
+      expect(within(posterList).getByText("Overrated 110")).toBeInTheDocument();
+    });
   });
 });

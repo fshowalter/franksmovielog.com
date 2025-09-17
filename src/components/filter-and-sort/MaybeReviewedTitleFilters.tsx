@@ -28,7 +28,7 @@ export function MaybeReviewedTitleFilters({
         title={title}
       />
       <ReviewedStatusFilter
-        initialValue={reviewedStatus.initialValue}
+        defaultValue={reviewedStatus.initialValue}
         onChange={reviewedStatus.onChange}
       />
     </>

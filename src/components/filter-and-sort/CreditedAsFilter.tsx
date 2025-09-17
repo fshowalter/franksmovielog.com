@@ -2,17 +2,17 @@ import { SelectField } from "~/components/fields/SelectField";
 import { capitalize } from "~/utils/capitalize";
 
 export function CreditedAsFilter({
-  initialValue,
+  defaultValue,
   onChange,
   values,
 }: {
-  initialValue: string | undefined;
+  defaultValue: string | undefined;
   onChange: (value: string) => void;
   values: readonly string[];
 }): React.JSX.Element {
   return (
     <SelectField
-      initialValue={initialValue}
+      defaultValue={defaultValue}
       label="Credited As"
       onChange={onChange}
     >

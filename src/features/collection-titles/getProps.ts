@@ -11,9 +11,9 @@ import type { CollectionTitlesProps } from "./CollectionTitles";
 
 type PageProps = CollectionTitlesProps & {
   backdropImageProps: BackdropImageProps;
-  name: string;
   description: string;
   descriptionHtml: string;
+  name: string;
 };
 
 export async function getProps(slug: string): Promise<PageProps> {
@@ -29,13 +29,13 @@ export async function getProps(slug: string): Promise<PageProps> {
       collection.slug,
       BackdropImageConfig,
     ),
+    description: collection.description,
+    descriptionHtml: collection.descriptionHtml,
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "release-date-asc",
     name: collection.name,
-    description: collection.description,
-    descriptionHtml: collection.descriptionHtml,
     values: await Promise.all(
       collection.titles
         .sort((a, b) => b.releaseSequence - a.releaseSequence)

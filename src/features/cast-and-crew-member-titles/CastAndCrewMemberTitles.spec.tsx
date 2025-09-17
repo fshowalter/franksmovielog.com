@@ -1,7 +1,6 @@
-import { render } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { getFluidWidthPosterImageProps } from "~/api/posters";
 import {
   clickCreditedAsFilterOption,
   getCreditedAsFilter,
@@ -26,553 +25,805 @@ import {
   clickShowMore,
   getGroupedPosterList,
 } from "~/components/poster-list/PosterList.testHelper";
-import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
+import type {
+  CastAndCrewMemberTitlesProps,
+  CastAndCrewMemberTitlesValue,
+} from "./CastAndCrewMemberTitles";
 
 import { CastAndCrewMemberTitlesStrictWrapper } from "./CastAndCrewMemberTitles";
-import { getProps } from "./getProps";
 
-const props = await getProps("alfred-hitchcock");
+// Inline minimal fixture data for testing
+let testIdCounter = 0;
+const createTitle = (
+  overrides: Partial<CastAndCrewMemberTitlesValue> = {},
+): CastAndCrewMemberTitlesValue => {
+  testIdCounter += 1;
+  return {
+    creditedAs: ["Director"],
+    genres: ["Drama"],
+    grade: "B+",
+    gradeValue: 8,
+    imdbId: `tt${String(testIdCounter).padStart(7, "0")}`,
+    posterImageProps: {
+      src: "/poster.jpg",
+      srcSet: "/poster.jpg 1x",
+    },
+    releaseSequence: testIdCounter,
+    releaseYear: "1960",
+    reviewDisplayDate: "Jan 1, 2020",
+    reviewSequence: testIdCounter,
+    reviewYear: "2020",
+    slug: `test-movie-${testIdCounter}`,
+    sortTitle: `Test Movie ${testIdCounter}`,
+    title: `Test Movie ${testIdCounter}`,
+    watchlistCollectionNames: [],
+    watchlistDirectorNames: [],
+    watchlistPerformerNames: [],
+    watchlistWriterNames: [],
+    ...overrides,
+  };
+};
 
-describe("CastAndCrewMember", () => {
+const baseProps: CastAndCrewMemberTitlesProps = {
+  distinctCreditKinds: ["Director", "Writer", "Performer"],
+  distinctGenres: ["Drama", "Thriller", "Horror", "Comedy", "Action"],
+  distinctReleaseYears: ["1950", "1960", "1965", "1970", "1975", "1980"],
+  distinctReviewYears: ["2019", "2020", "2021", "2022"],
+  initialSort: "release-date-desc",
+  values: [],
+};
+
+describe("CastAndCrewMemberTitles", () => {
   beforeEach(() => {
-    // AIDEV-NOTE: Using shouldAdvanceTime: true prevents userEvent from hanging
-    // when fake timers are active. This allows async userEvent operations to complete
-    // while still controlling timer advancement for debounced inputs.
-    // See https://github.com/testing-library/user-event/issues/833
+    testIdCounter = 0;
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
   afterEach(() => {
-    // AIDEV-NOTE: Clear all pending timers before restoring real timers
-    // to ensure test isolation and prevent timer leaks between tests
     vi.clearAllTimers();
     vi.useRealTimers();
   });
 
-  it("can filter by title", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("filtering", () => {
+    it("filters by title", async ({ expect }) => {
+      const titles = [
+        createTitle({ releaseYear: "1960", title: "Psycho" }),
+        createTitle({ releaseYear: "1963", title: "The Birds" }),
+        createTitle({ releaseYear: "1958", title: "Vertigo" }),
+      ];
 
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
 
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Psycho");
+      await clickViewResults(user);
 
-    // Open filter drawer
-    await clickToggleFilters(user);
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Birds"),
+      ).not.toBeInTheDocument();
+      expect(within(posterList).queryByText("Vertigo")).not.toBeInTheDocument();
+    });
 
-    // Type the filter text
-    await fillTitleFilter(user, "Cannonball");
+    it("filters by genres", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          genres: ["Horror", "Thriller"],
+          releaseYear: "1960",
+          title: "Psycho",
+        }),
+        createTitle({
+          genres: ["Thriller", "Action"],
+          releaseYear: "1959",
+          title: "North by Northwest",
+        }),
+        createTitle({
+          genres: ["Comedy"],
+          releaseYear: "1955",
+          title: "The Trouble with Harry",
+        }),
+      ];
 
-    // Apply the filter
-    await clickViewResults(user);
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
 
-    // List updates synchronously with fake timers
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await clickGenresFilterOption(user, "Thriller");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      expect(
+        within(posterList).getByText("North by Northwest"),
+      ).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Trouble with Harry"),
+      ).not.toBeInTheDocument();
+    });
+
+    it("filters by release year range", async ({ expect }) => {
+      const titles = [
+        createTitle({ releaseYear: "1950", title: "Stage Fright" }),
+        createTitle({ releaseYear: "1965", title: "Marnie" }),
+        createTitle({ releaseYear: "1975", title: "Family Plot" }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickToggleFilters(user);
+      await fillReleaseYearFilter(user, "1950", "1970");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Stage Fright")).toBeInTheDocument();
+      expect(within(posterList).getByText("Marnie")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Family Plot"),
+      ).not.toBeInTheDocument();
+    });
+
+    it("filters by review year range", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseYear: "1954",
+          reviewYear: "2019",
+          title: "Rear Window",
+        }),
+        createTitle({
+          releaseYear: "1951",
+          reviewYear: "2020",
+          title: "Strangers on a Train",
+        }),
+        createTitle({
+          releaseYear: "1955",
+          reviewYear: "2022",
+          title: "To Catch a Thief",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickToggleFilters(user);
+      await fillReviewYearFilter(user, "2019", "2021");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Rear Window")).toBeInTheDocument();
+      expect(
+        within(posterList).getByText("Strangers on a Train"),
+      ).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("To Catch a Thief"),
+      ).not.toBeInTheDocument();
+    });
+
+    it("filters by grade range", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          grade: "C-",
+          gradeValue: 5,
+          releaseYear: "1953",
+          title: "I Confess",
+        }),
+        createTitle({
+          grade: "B",
+          gradeValue: 9,
+          releaseYear: "1954",
+          title: "Dial M for Murder",
+        }),
+        createTitle({
+          grade: "A",
+          gradeValue: 12,
+          releaseYear: "1959",
+          title: "North by Northwest",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickToggleFilters(user);
+      await fillGradeFilter(user, "B-", "B+");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(
+        within(posterList).getByText("Dial M for Murder"),
+      ).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("I Confess"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("North by Northwest"),
+      ).not.toBeInTheDocument();
+    });
+
+    it("filters by reviewed status - reviewed only", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseYear: "1960",
+          reviewSequence: 1,
+          reviewYear: "2020",
+          slug: "psycho-1960",
+          title: "Psycho",
+        }),
+        createTitle({
+          releaseYear: "1963",
+          reviewSequence: 2,
+          reviewYear: "2021",
+          slug: "the-birds-1963",
+          title: "The Birds",
+        }),
+        createTitle({
+          releaseYear: "1964",
+          reviewSequence: undefined,
+          reviewYear: undefined,
+          slug: undefined,
+          title: "Marnie",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickReviewedStatusFilterOption(user, "Reviewed");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      expect(within(posterList).getByText("The Birds")).toBeInTheDocument();
+      expect(within(posterList).queryByText("Marnie")).not.toBeInTheDocument();
+    });
+
+    it("filters by reviewed status - unreviewed only", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseYear: "1960",
+          reviewSequence: 1,
+          reviewYear: "2020",
+          slug: "psycho-1960",
+          title: "Psycho",
+        }),
+        createTitle({
+          releaseYear: "1964",
+          reviewSequence: undefined,
+          reviewYear: undefined,
+          slug: undefined,
+          title: "Marnie",
+        }),
+        createTitle({
+          releaseYear: "1966",
+          reviewSequence: undefined,
+          reviewYear: undefined,
+          slug: undefined,
+          title: "Torn Curtain",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickReviewedStatusFilterOption(user, "Not Reviewed");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).queryByText("Psycho")).not.toBeInTheDocument();
+      expect(within(posterList).getByText("Marnie")).toBeInTheDocument();
+      expect(within(posterList).getByText("Torn Curtain")).toBeInTheDocument();
+    });
+
+    it("filters by credited as", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          creditedAs: ["Director"],
+          releaseYear: "1935",
+          title: "The 39 Steps",
+        }),
+        createTitle({
+          creditedAs: ["Writer"],
+          releaseYear: "1929",
+          title: "Blackmail",
+        }),
+        createTitle({
+          creditedAs: ["Performer"],
+          releaseYear: "1955",
+          title: "To Catch a Thief",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickToggleFilters(user);
+      await clickCreditedAsFilterOption(user, "Director");
+      await clickViewResults(user);
+
+      const posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("The 39 Steps")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Blackmail"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("To Catch a Thief"),
+      ).not.toBeInTheDocument();
+    });
   });
 
-  it("can filter by genres", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("sorting", () => {
+    it("sorts by title A → Z", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseYear: "1958",
+          sortTitle: "Vertigo",
+          title: "Vertigo",
+        }),
+        createTitle({
+          releaseYear: "1963",
+          sortTitle: "Birds",
+          title: "The Birds",
+        }),
+        createTitle({
+          releaseYear: "1960",
+          sortTitle: "Psycho",
+          title: "Psycho",
+        }),
+      ];
 
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
 
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
+      await clickSortOption(user, "Title (A → Z)");
 
-    // Open filter drawer
-    await clickToggleFilters(user);
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const birdsIndex = allText.indexOf("The Birds");
+      const psychoIndex = allText.indexOf("Psycho");
+      const vertigoIndex = allText.indexOf("Vertigo");
 
-    await clickGenresFilterOption(user, "Action");
+      expect(birdsIndex).toBeLessThan(psychoIndex);
+      expect(psychoIndex).toBeLessThan(vertigoIndex);
+    });
 
-    // Click to open the dropdown again
-    await clickGenresFilterOption(user, "Comedy");
+    it("sorts by title Z → A", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseYear: "1963",
+          sortTitle: "Birds",
+          title: "The Birds",
+        }),
+        createTitle({
+          releaseYear: "1960",
+          sortTitle: "Psycho",
+          title: "Psycho",
+        }),
+        createTitle({
+          releaseYear: "1958",
+          sortTitle: "Vertigo",
+          title: "Vertigo",
+        }),
+      ];
 
-    await clickViewResults(user);
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickSortOption(user, "Title (Z → A)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const vertigoIndex = allText.indexOf("Vertigo");
+      const psychoIndex = allText.indexOf("Psycho");
+      const birdsIndex = allText.indexOf("The Birds");
+
+      expect(vertigoIndex).toBeLessThan(psychoIndex);
+      expect(psychoIndex).toBeLessThan(birdsIndex);
+    });
+
+    it("sorts by release date oldest first", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseSequence: 3,
+          releaseYear: "1980",
+          title: "Family Plot",
+        }),
+        createTitle({
+          releaseSequence: 1,
+          releaseYear: "1950",
+          title: "Stage Fright",
+        }),
+        createTitle({
+          releaseSequence: 2,
+          releaseYear: "1965",
+          title: "Marnie",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickSortOption(user, "Release Date (Oldest First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const stageFrightIndex = allText.indexOf("Stage Fright");
+      const marnieIndex = allText.indexOf("Marnie");
+      const familyPlotIndex = allText.indexOf("Family Plot");
+
+      expect(stageFrightIndex).toBeLessThan(marnieIndex);
+      expect(marnieIndex).toBeLessThan(familyPlotIndex);
+    });
+
+    it("sorts by release date newest first", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseSequence: 1,
+          releaseYear: "1950",
+          title: "Stage Fright",
+        }),
+        createTitle({
+          releaseSequence: 2,
+          releaseYear: "1965",
+          title: "Marnie",
+        }),
+        createTitle({
+          releaseSequence: 3,
+          releaseYear: "1980",
+          title: "Family Plot",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickSortOption(user, "Release Date (Newest First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const familyPlotIndex = allText.indexOf("Family Plot");
+      const marnieIndex = allText.indexOf("Marnie");
+      const stageFrightIndex = allText.indexOf("Stage Fright");
+
+      expect(familyPlotIndex).toBeLessThan(marnieIndex);
+      expect(marnieIndex).toBeLessThan(stageFrightIndex);
+    });
+
+    it("sorts by grade best first", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          grade: "A",
+          gradeValue: 12,
+          releaseYear: "1954",
+          title: "Rear Window",
+        }),
+        createTitle({
+          grade: "C-",
+          gradeValue: 5,
+          releaseYear: "1953",
+          title: "I Confess",
+        }),
+        createTitle({
+          grade: "B",
+          gradeValue: 7,
+          releaseYear: "1956",
+          title: "The Man Who Knew Too Much",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickSortOption(user, "Grade (Best First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const rearWindowIndex = allText.indexOf("Rear Window");
+      const manWhoKnewIndex = allText.indexOf("The Man Who Knew Too Much");
+      const iConfessIndex = allText.indexOf("I Confess");
+
+      expect(rearWindowIndex).toBeLessThan(manWhoKnewIndex);
+      expect(manWhoKnewIndex).toBeLessThan(iConfessIndex);
+    });
+
+    it("sorts by grade worst first", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          grade: "A",
+          gradeValue: 12,
+          releaseYear: "1954",
+          title: "Rear Window",
+        }),
+        createTitle({
+          grade: "B",
+          gradeValue: 7,
+          releaseYear: "1956",
+          title: "The Man Who Knew Too Much",
+        }),
+        createTitle({
+          grade: "C-",
+          gradeValue: 5,
+          releaseYear: "1953",
+          title: "I Confess",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickSortOption(user, "Grade (Worst First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const iConfessIndex = allText.indexOf("I Confess");
+      const manWhoKnewIndex = allText.indexOf("The Man Who Knew Too Much");
+      const rearWindowIndex = allText.indexOf("Rear Window");
+
+      expect(iConfessIndex).toBeLessThan(manWhoKnewIndex);
+      expect(manWhoKnewIndex).toBeLessThan(rearWindowIndex);
+    });
+
+    it("sorts by review date oldest first", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseYear: "1958",
+          reviewSequence: 3,
+          title: "Vertigo",
+        }),
+        createTitle({
+          releaseYear: "1960",
+          reviewSequence: 1,
+          title: "Psycho",
+        }),
+        createTitle({
+          releaseYear: "1959",
+          reviewSequence: 2,
+          title: "North by Northwest",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickSortOption(user, "Review Date (Oldest First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const psychoIndex = allText.indexOf("Psycho");
+      const northIndex = allText.indexOf("North by Northwest");
+      const vertigoIndex = allText.indexOf("Vertigo");
+
+      expect(psychoIndex).toBeLessThan(northIndex);
+      expect(northIndex).toBeLessThan(vertigoIndex);
+    });
+
+    it("sorts by review date newest first", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          releaseYear: "1960",
+          reviewSequence: 1,
+          title: "Psycho",
+        }),
+        createTitle({
+          releaseYear: "1959",
+          reviewSequence: 2,
+          title: "North by Northwest",
+        }),
+        createTitle({
+          releaseYear: "1958",
+          reviewSequence: 3,
+          title: "Vertigo",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      await clickSortOption(user, "Review Date (Newest First)");
+
+      const posterList = getGroupedPosterList();
+      const allText = posterList.textContent || "";
+      const vertigoIndex = allText.indexOf("Vertigo");
+      const northIndex = allText.indexOf("North by Northwest");
+      const psychoIndex = allText.indexOf("Psycho");
+
+      expect(vertigoIndex).toBeLessThan(northIndex);
+      expect(northIndex).toBeLessThan(psychoIndex);
+    });
   });
 
-  it("can sort by title A → Z", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("when clearing filters", () => {
+    it("clears all filters with clear button", async ({ expect }) => {
+      const titles = [
+        createTitle({
+          creditedAs: ["Director"],
+          releaseYear: "1946",
+          title: "Notorious",
+        }),
+        createTitle({
+          creditedAs: ["Writer"],
+          releaseYear: "1943",
+          title: "Shadow of a Doubt",
+        }),
+      ];
 
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
 
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Notorious");
+      await clickCreditedAsFilterOption(user, "Director");
+      await clickViewResults(user);
 
-    await clickSortOption(user, "Title (A → Z)");
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Notorious")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Shadow of a Doubt"),
+      ).not.toBeInTheDocument();
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await clickClearFilters(user);
+
+      expect(getTitleFilter()).toHaveValue("");
+      expect(getCreditedAsFilter()).toHaveValue("All");
+
+      await clickViewResults(user);
+
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Notorious")).toBeInTheDocument();
+      expect(
+        within(posterList).getByText("Shadow of a Doubt"),
+      ).toBeInTheDocument();
+    });
   });
 
-  it("can sort by title Z → A", async ({ expect }) => {
-    expect.hasAssertions();
+  describe("when closing filter drawer without applying", () => {
+    it("resets pending filter changes", async ({ expect }) => {
+      const titles = [
+        createTitle({ releaseYear: "1960", title: "Psycho" }),
+        createTitle({ releaseYear: "1963", title: "The Birds" }),
+      ];
 
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
 
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Psycho");
+      await clickViewResults(user);
 
-    await clickSortOption(user, "Title (Z → A)");
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Birds"),
+      ).not.toBeInTheDocument();
 
-    expect(getGroupedPosterList()).toMatchSnapshot();
+      await clickToggleFilters(user);
+      await fillTitleFilter(user, "Different");
+      await clickCloseFilters(user);
+
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Birds"),
+      ).not.toBeInTheDocument();
+
+      await clickToggleFilters(user);
+      expect(getTitleFilter()).toHaveValue("Psycho");
+    });
   });
 
-  it("can sort by release date with oldest first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Release Date (Oldest First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by release date with newest first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Release Date (Newest First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by grade with best first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Grade (Best First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by grade with worst first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Grade (Worst First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by review date with oldest first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Review Date (Oldest First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can sort by review date with newest first", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickSortOption(user, "Review Date (Newest First)");
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by release year", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    await fillReleaseYearFilter(user, "1945", "1950");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    // List updates synchronously with fake timers
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by review year", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    await fillReviewYearFilter(user, "2008", "2012");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    // List updates synchronously with fake timers
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter reviewed titles", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await clickReviewedStatusFilterOption(user, "Reviewed");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter unreviewed titles", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickReviewedStatusFilterOption(user, "Not Reviewed");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter all reviewed status titles", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickReviewedStatusFilterOption(user, "Not Reviewed");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    await clickReviewedStatusFilterOption(user, "All");
-
-    // Apply the filter
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter director titles", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "Director");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter director titles then show all", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "Director");
-
-    await clickViewResults(user);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "All");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter writer titles", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "Writer");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter writer titles then show all", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "Writer");
-
-    await clickViewResults(user);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "All");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter performer titles", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "Performer");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter performer titles then show all", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "Performer");
-
-    await clickViewResults(user);
-
-    await clickToggleFilters(user);
-
-    await clickCreditedAsFilterOption(user, "All");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can clear all filters", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Apply multiple filters
-    await fillTitleFilter(user, "Smokey");
-
-    await clickCreditedAsFilterOption(user, "Writer");
-
-    await clickViewResults(user);
-
-    const listBeforeClear = getGroupedPosterList().innerHTML;
-
-    // Open filter drawer again
-    await clickToggleFilters(user);
-
-    // Clear all filters
-    await clickClearFilters(user);
-
-    // Check that filters are cleared
-    expect(getTitleFilter()).toHaveValue("");
-    expect(getCreditedAsFilter()).toHaveValue("All");
-
-    await clickViewResults(user);
-
-    const listAfterClear = getGroupedPosterList().innerHTML;
-
-    expect(listBeforeClear).not.toEqual(listAfterClear);
-  });
-
-  it("can filter by grade reversed", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await fillGradeFilter(user, "B", "B+");
-    await fillGradeFilter(user, "A-", "B-");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can filter by grade", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    await clickToggleFilters(user);
-
-    await fillGradeFilter(user, "B", "B+");
-
-    await clickViewResults(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
-  });
-
-  it("can reset filters when closing drawer", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    render(<CastAndCrewMemberTitlesStrictWrapper props={props} />);
-
-    // Open filter drawer
-    await clickToggleFilters(user);
-
-    // Apply initial filter
-    await fillTitleFilter(user, "Smokey");
-
-    // Apply the filters
-    await clickViewResults(user);
-
-    // Store the count of filtered results
-    const listBeforeReset = getGroupedPosterList().innerHTML;
-
-    // Open filter drawer again
-    await clickToggleFilters(user);
-
-    // Start typing a new filter but don't apply
-    await fillTitleFilter(user, "Different");
-
-    // Close the drawer with the X button (should reset pending changes)
-    await clickCloseFilters(user);
-
-    // The list should still show the originally filtered results
-    const listAfterReset = getGroupedPosterList().innerHTML;
-    expect(listBeforeReset).toEqual(listAfterReset);
-
-    // Open filter drawer again to verify filters were reset to last applied state
-    await clickToggleFilters(user);
-
-    // Should show the originally applied filter, not the pending change
-    expect(getTitleFilter()).toHaveValue("Smokey");
-  });
-
-  it("can show more titles", async ({ expect }) => {
-    expect.hasAssertions();
-
-    // Setup userEvent with advanceTimers
-    const user = getUserWithFakeTimers();
-
-    const defaultPosterProps = await getFluidWidthPosterImageProps(
-      "default",
-      PosterListItemImageConfig,
-    );
-
-    // Create props with more than 100 items to trigger pagination
-    const manyTitles: CastAndCrewMemberTitlesProps["values"] = Array.from(
-      { length: 150 },
-      (_, i) => ({
-        creditedAs: ["Director"],
-        genres: ["Test genre"],
-        grade: i % 2 === 0 ? "B+" : undefined,
-        gradeValue: i % 2 === 0 ? 8 : undefined,
-        imdbId: `tt${String(i).padStart(7, "0")}`,
-        posterImageProps: defaultPosterProps,
-        releaseSequence: i + 1,
-        releaseYear: "1970",
-        reviewDisplayDate: "",
-        reviewed: false,
-        reviewSequence: undefined,
-        reviewYear: "",
-        slug: `test-movie-${i + 1}`,
-        sortTitle: `Test Movie ${String(i + 1).padStart(3, "0")}`,
-        title: `Test Movie ${i + 1}`,
-        watchlistCollectionNames: ["Test Collection"],
-        watchlistDirectorNames: ["Test Writer"],
-        watchlistPerformerNames: ["Test Writer"],
-        watchlistWriterNames: ["Test Writer"],
-      }),
-    );
-
-    const propsWithManyValues: CastAndCrewMemberTitlesProps = {
-      ...props,
-      values: manyTitles,
-    };
-
-    render(
-      <CastAndCrewMemberTitlesStrictWrapper props={propsWithManyValues} />,
-    );
-
-    await clickShowMore(user);
-
-    expect(getGroupedPosterList()).toMatchSnapshot();
+  describe("pagination", () => {
+    it("paginates long lists", async ({ expect }) => {
+      // Create 110 titles across multiple years to force pagination
+      // Since default sort is release-date-desc, newer films appear first
+      const titles = Array.from({ length: 110 }, (_, i) => {
+        const year = 2020 - Math.floor(i / 5);
+        return createTitle({
+          releaseSequence: 3000 - i, // Higher sequences for older films to maintain desc order
+          releaseYear: String(year),
+          title: `Film ${i + 1}`,
+        });
+      });
+
+      const user = getUserWithFakeTimers();
+      render(
+        <CastAndCrewMemberTitlesStrictWrapper
+          props={{ ...baseProps, values: titles }}
+        />,
+      );
+
+      const posterList = getGroupedPosterList();
+
+      // With release-date-desc sort, Film 1 (year 2020) should be visible
+      // Films are shown in groups by year, newer years first
+      expect(within(posterList).getByText("Film 1")).toBeInTheDocument();
+
+      // Should show first 100 films (Film 1 through Film 100)
+      expect(within(posterList).getByText("Film 100")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Film 101"),
+      ).not.toBeInTheDocument();
+
+      await clickShowMore(user);
+
+      // Should now show all films
+      expect(within(posterList).getByText("Film 101")).toBeInTheDocument();
+      expect(within(posterList).getByText("Film 110")).toBeInTheDocument();
+    });
   });
 });

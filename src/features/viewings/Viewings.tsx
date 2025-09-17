@@ -44,9 +44,6 @@ export type ViewingsValue = {
   title: string;
   venue?: string;
   viewingDate: string; // Full date string YYYY-MM-DD
-  viewingDay: string;
-  viewingMonth: string;
-  viewingMonthShort: string;
   viewingSequence: number;
   viewingYear: string;
 };

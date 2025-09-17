@@ -3,6 +3,7 @@ import { StrictMode, useReducer } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
@@ -19,12 +20,11 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./CollectionTitles.reducer";
+import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
 import { filterCollectionTitles } from "./filterCollectionTitles";
 import { Filters } from "./Filters";
 import { groupCollectionTitles } from "./groupCollectionTitles";
 import { sortCollectionTitles } from "./sortCollectionTitles";
-import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
-import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
 
 export type CollectionTitlesProps = {
   distinctGenres: readonly string[];

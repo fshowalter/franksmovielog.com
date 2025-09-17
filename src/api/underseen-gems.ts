@@ -1,8 +1,8 @@
 import { collator } from "~/utils/collator";
 
-import type { UnderseenJson } from "./data/underseenJson";
+import type { UnderseenJson } from "./data/underseen-json";
 
-import { allUnderseenJson } from "./data/underseenJson";
+import { allUnderseenJson } from "./data/underseen-json";
 
 type UnderseenGem = UnderseenJson & {};
 

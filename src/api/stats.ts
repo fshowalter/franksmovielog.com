@@ -1,8 +1,8 @@
-import type { AlltimeStatsJson } from "./data/alltimeStatsJson";
-import type { YearStatsJson } from "./data/yearStatsJson";
+import type { AlltimeStatsJson } from "./data/alltime-stats-json";
+import type { YearStatsJson } from "./data/year-stats-json";
 
-import { alltimeStatsJson } from "./data/alltimeStatsJson";
-import { allYearStatsJson } from "./data/yearStatsJson";
+import { alltimeStatsJson } from "./data/alltime-stats-json";
+import { allYearStatsJson } from "./data/year-stats-json";
 
 export type AlltimeStats = AlltimeStatsJson & {};
 export type YearStats = YearStatsJson & {};

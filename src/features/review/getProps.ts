@@ -1,3 +1,5 @@
+import { PosterListItemImageConfig } from "src/components/poster-list/PosterListItem";
+
 import {
   getFixedWidthPosterImageProps,
   getFluidWidthPosterImageProps,
@@ -5,7 +7,6 @@ import {
 import { allReviews, loadContent, loadExcerptHtml } from "~/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "~/api/stills";
 import { MoreReviewsImageConfig } from "~/components/more-reviews/MoreReviews";
-import { PosterListItemImageConfig } from "src/components/poster-list/PosterListItem";
 
 import type { Props } from "./Review";
 

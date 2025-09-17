@@ -27,7 +27,6 @@ export async function getProps(): Promise<PageProps> {
 
   const values = await Promise.all(
     viewings.map(async (viewing) => {
-      const viewingDate = new Date(viewing.viewingDate);
       const value: ViewingsValue = {
         medium: viewing.medium,
         posterImageProps: await getFluidWidthPosterImageProps(
@@ -40,19 +39,7 @@ export async function getProps(): Promise<PageProps> {
         sortTitle: viewing.sortTitle,
         title: viewing.title,
         venue: viewing.venue,
-        viewingDate: viewing.viewingDate, // Keep original date string for calendar
-        viewingDay: viewingDate.toLocaleString("en-US", {
-          timeZone: "UTC",
-          weekday: "short",
-        }),
-        viewingMonth: viewingDate.toLocaleString("en-US", {
-          month: "long",
-          timeZone: "UTC",
-        }),
-        viewingMonthShort: viewingDate.toLocaleString("en-US", {
-          month: "short",
-          timeZone: "UTC",
-        }),
+        viewingDate: viewing.viewingDate,
         viewingSequence: viewing.viewingSequence,
         viewingYear: viewing.viewingYear,
       };

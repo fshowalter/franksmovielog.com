@@ -1,15 +1,15 @@
 import { SelectField } from "~/components/fields/SelectField";
 
 export function ReviewedStatusFilter({
-  initialValue,
+  defaultValue,
   onChange,
 }: {
-  initialValue: string | undefined;
+  defaultValue: string | undefined;
   onChange: (value: string) => void;
 }): React.JSX.Element {
   return (
     <SelectField
-      initialValue={initialValue}
+      defaultValue={defaultValue}
       label="Reviewed Status"
       onChange={onChange}
     >
