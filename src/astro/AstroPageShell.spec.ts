@@ -2,14 +2,12 @@ import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import type { DOMWindow, JSDOM as JSDOMType } from "jsdom";
 
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
+import { waitFor, within } from "@testing-library/dom";
+import { userEvent } from "@testing-library/user-event";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { loadRenderers } from "astro:container";
-import { fireEvent, screen, waitFor, within } from "@testing-library/dom";
 import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
-
-import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
-import { userEvent } from "@testing-library/user-event";
 
 // Mock the Pagefind module
 const mockPagefindAPI = {
@@ -28,7 +26,7 @@ vi.mock("/pagefind/pagefind.js", () => mockPagefindAPI);
 vi.mock("./search-ui");
 
 describe("AstroPageShell", () => {
-  describe("navigation menu", () => {
+  describe("navigation drawer", () => {
     let dom: JSDOMType;
     let document: Document;
     let window: DOMWindow;
@@ -755,22 +753,32 @@ describe("AstroPageShell", () => {
     let user: ReturnType<typeof userEvent.setup>;
 
     // Helper function to open search and wait for initialization
-    const openSearchAndWaitForInit = async (queries: ReturnType<typeof within>) => {
+    const openSearchAndWaitForInit = async (queries: {
+      getByRole: (
+        role: string,
+        options?: { name: RegExp | string },
+      ) => HTMLElement;
+    }) => {
       const searchButton = queries.getByRole("button", { name: /search/i });
       await user.click(searchButton);
 
       // Wait for modal to open and SearchUI to initialize
       await vi.runOnlyPendingTimersAsync();
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise((resolve) => setTimeout(resolve, 100));
       await vi.runOnlyPendingTimersAsync();
 
       // Verify modal is open
       const dialog = document.querySelector("dialog");
-      expect(dialog?.open).toBe(true);
+      if (!dialog?.open) {
+        throw new Error("Search modal did not open");
+      }
     };
 
     // Helper to type in search input
-    const typeInSearchInput = (queries: ReturnType<typeof within>, value: string) => {
+    const typeInSearchInput = (
+      queries: { getByRole: (role: string) => HTMLElement },
+      value: string,
+    ) => {
       const searchInput = queries.getByRole("searchbox") as HTMLInputElement;
       searchInput.value = value;
       searchInput.dispatchEvent(new window.Event("input", { bubbles: true }));
@@ -880,8 +888,8 @@ describe("AstroPageShell", () => {
 
       // Initialize user with fake timers AFTER DOM is set up
       user = userEvent.setup({
-        document,
         advanceTimers: vi.advanceTimersByTime,
+        document,
       });
 
       cleanup = () => {
@@ -949,10 +957,11 @@ describe("AstroPageShell", () => {
         // Advance timers to trigger debounced search
         await vi.advanceTimersByTimeAsync(150);
 
-
         // Wait for results to render
         await waitFor(() => {
-          const results = queries.getByRole("region", { name: /search results/i });
+          const results = queries.getByRole("region", {
+            name: /search results/i,
+          });
           expect(results.textContent).toContain("Test Title 1");
           expect(results.textContent).toContain("Test excerpt 1");
         });
@@ -988,7 +997,9 @@ describe("AstroPageShell", () => {
           const counter = document.querySelector("#pagefind-results-counter");
           expect(counter?.textContent).toBe('No results for "notfound"');
 
-          const results = queries.getByRole("region", { name: /search results/i });
+          const results = queries.getByRole("region", {
+            name: /search results/i,
+          });
           expect(results.textContent).toContain(
             "No results found. Try adjusting your search terms.",
           );
@@ -1014,7 +1025,9 @@ describe("AstroPageShell", () => {
         await vi.advanceTimersByTimeAsync(150);
 
         // Check for loading state
-        const results = queries.getByRole("region", { name: /search results/i });
+        const results = queries.getByRole("region", {
+          name: /search results/i,
+        });
         expect(results.innerHTML).toContain("animate-pulse");
 
         // Resolve search
@@ -1061,13 +1074,15 @@ describe("AstroPageShell", () => {
         await openSearchAndWaitForInit(queries);
 
         // Type search query
-        const searchInput = queries.getByRole("searchbox") as HTMLInputElement;
+        const searchInput = queries.getByRole("searchbox");
         typeInSearchInput(queries, "test");
         await vi.advanceTimersByTimeAsync(150);
 
         // Verify results are shown
         await waitFor(() => {
-          const results = queries.getByRole("region", { name: /search results/i });
+          const results = queries.getByRole("region", {
+            name: /search results/i,
+          });
           expect(results.textContent).toContain("Test Title");
         });
 
@@ -1123,7 +1138,7 @@ describe("AstroPageShell", () => {
         await openSearchAndWaitForInit(queries);
 
         // Type search query
-        const searchInput = queries.getByRole("searchbox") as HTMLInputElement;
+        const searchInput = queries.getByRole("searchbox");
         typeInSearchInput(queries, "test");
 
         // Wait for debounce to show clear button
@@ -1183,7 +1198,9 @@ describe("AstroPageShell", () => {
 
         // Wait for initial results
         await waitFor(() => {
-          const results = queries.getByRole("region", { name: /search results/i });
+          const results = queries.getByRole("region", {
+            name: /search results/i,
+          });
           expect(results.textContent).toContain("Result 1");
           expect(results.textContent).toContain("Result 5");
           expect(results.textContent).not.toContain("Result 6");
@@ -1199,12 +1216,16 @@ describe("AstroPageShell", () => {
         await vi.advanceTimersByTimeAsync(50);
 
         // Check additional results loaded
-        const results = queries.getByRole("region", { name: /search results/i });
+        const results = queries.getByRole("region", {
+          name: /search results/i,
+        });
         expect(results.textContent).toContain("Result 6");
         expect(results.textContent).toContain("Result 10");
 
         // Load more button should be hidden
-        expect(loadMoreButton.parentElement?.classList.contains("hidden")).toBe(true);
+        expect(loadMoreButton.parentElement?.classList.contains("hidden")).toBe(
+          true,
+        );
       });
     });
   });

@@ -1,13 +1,13 @@
-export function initNavMenu(): void {
+export function initNavDrawer(): void {
   const body = document.body;
   const navToggle =
-    document.querySelector<HTMLButtonElement>("[data-nav-toggle]");
-  const navMenu = document.querySelector<HTMLElement>("[data-nav-menu]");
+    document.querySelector<HTMLButtonElement>("[data-nav-drawer-toggle]");
+  const navDrawer = document.querySelector<HTMLElement>("[data-nav-drawer]");
   const navBackdrop = document.querySelector<HTMLElement>(
-    "[data-nav-backdrop]",
+    "[data-nav-drawer-backdrop]",
   );
 
-  if (!navToggle || !navMenu) {
+  if (!navToggle || !navDrawer) {
     return;
   }
 
@@ -20,7 +20,7 @@ export function initNavMenu(): void {
     // Focus first link when opening
     if (isOpening) {
       requestAnimationFrame(() => {
-        const firstLink = navMenu.querySelector<HTMLAnchorElement>("a[href]");
+        const firstLink = navDrawer.querySelector<HTMLAnchorElement>("a[href]");
         firstLink?.focus();
       });
     }
@@ -36,7 +36,7 @@ export function initNavMenu(): void {
   };
 
   // Close menu when clicking on a navigation link
-  navMenu.addEventListener("click", (e: Event) => {
+  navDrawer.addEventListener("click", (e: Event) => {
     const target = e.target as HTMLElement;
     if (target.tagName === "A") {
       closeMenu();
@@ -53,7 +53,7 @@ export function initNavMenu(): void {
     const target = e.target as HTMLElement;
     if (
       body.classList.contains("nav-open") &&
-      !navMenu.contains(target) &&
+      !navDrawer.contains(target) &&
       !navToggle.contains(target)
     ) {
       closeMenu();
@@ -73,7 +73,7 @@ export function initNavMenu(): void {
       return;
     }
 
-    const focusableElements = navMenu.querySelectorAll<HTMLElement>(
+    const focusableElements = navDrawer.querySelectorAll<HTMLElement>(
       'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
     );
 
@@ -106,7 +106,7 @@ export function initNavMenu(): void {
 
 // Initialize when DOM is ready
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initNavMenu);
+  document.addEventListener("DOMContentLoaded", initNavDrawer);
 } else {
-  initNavMenu();
+  initNavDrawer();
 }

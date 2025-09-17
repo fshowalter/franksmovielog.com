@@ -1,14 +1,7 @@
 import { debounce } from "~/utils/debounce";
 
-type PagefindAnchor = {
-  element: string;
-  id: string;
-  location: number;
-  text: string;
-};
-
 // Types for Pagefind API
-type PagefindAPI = {
+export type PagefindAPI = {
   debouncedSearch(
     query: string,
     options?: PagefindSearchOptions,
@@ -22,6 +15,32 @@ type PagefindAPI = {
     query: string,
     options?: PagefindSearchOptions,
   ): Promise<PagefindSearchResults>;
+};
+
+export type PagefindResult = {
+  data(): Promise<PagefindDocument>;
+  id: string;
+  score: number;
+  words: number[];
+};
+
+export type PagefindSearchResults = {
+  filters: Record<string, Record<string, number>>;
+  results: PagefindResult[];
+  timings: {
+    preload: number;
+    search: number;
+    total: number;
+  };
+  totalFilters: Record<string, Record<string, number>>;
+  unfilteredResultCount: number;
+};
+
+type PagefindAnchor = {
+  element: string;
+  id: string;
+  location: number;
+  text: string;
 };
 
 type PagefindDocument = {
@@ -38,29 +57,10 @@ type PagefindDocument = {
   weighted_locations: WeightedLocation[];
 };
 
-type PagefindResult = {
-  data(): Promise<PagefindDocument>;
-  id: string;
-  score: number;
-  words: number[];
-};
-
 type PagefindSearchOptions = {
   filters?: Record<string, string | string[]>;
   sort?: Record<string, "asc" | "desc">;
   verbose?: boolean;
-};
-
-type PagefindSearchResults = {
-  filters: Record<string, Record<string, number>>;
-  results: PagefindResult[];
-  timings: {
-    preload: number;
-    search: number;
-    total: number;
-  };
-  totalFilters: Record<string, Record<string, number>>;
-  unfilteredResultCount: number;
 };
 
 type PagefindSubResult = {

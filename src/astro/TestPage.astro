@@ -1,10 +1,10 @@
 ---
 import { Layout as LayoutComponent } from "~/components/layout/Layout";
 
-import Layout from "./Layout.astro";
+import AstroPageShell from "./AstroPageShell.astro";
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{
     description: "Test page for navigation menu testing",
@@ -15,4 +15,4 @@ import Layout from "./Layout.astro";
   <LayoutComponent hasBackdrop={false}>
     <div>Test content for navigation menu testing</div>
   </LayoutComponent>
-</Layout>
+</AstroPageShell>

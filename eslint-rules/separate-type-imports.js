@@ -10,7 +10,7 @@ export default {
     return {
       ImportDeclaration(node) {
         // Skip if it's already a type-only import
-        if (node.importKind === 'type') {
+        if (node.importKind === "type") {
           return;
         }
 
@@ -19,8 +19,8 @@ export default {
         const valueSpecifiers = [];
 
         for (const specifier of node.specifiers) {
-          if (specifier.type === 'ImportSpecifier') {
-            if (specifier.importKind === 'type') {
+          if (specifier.type === "ImportSpecifier") {
+            if (specifier.importKind === "type") {
               typeSpecifiers.push(specifier);
             } else {
               valueSpecifiers.push(specifier);
@@ -39,37 +39,49 @@ export default {
               const source = node.source.raw;
 
               // Build the type import statement
-              const typeImports = typeSpecifiers.map(spec => {
-                if (spec.imported.name === spec.local.name) {
-                  return spec.imported.name;
-                }
-                return `${spec.imported.name} as ${spec.local.name}`;
-              }).join(', ');
-
-              const typeImportStatement = `import type { ${typeImports} } from ${source};`;
-
-              // Build the value import statement
-              let valueImportStatement = '';
-
-              if (valueSpecifiers.length > 0) {
-                valueSpecifiers.map(spec => {
-                  if (spec.type === 'ImportDefaultSpecifier') {
-                    return spec.local.name;
-                  }
-                  if (spec.type === 'ImportNamespaceSpecifier') {
-                    return `* as ${spec.local.name}`;
-                  }
-                  // ImportSpecifier
+              const typeImports = typeSpecifiers
+                .map((spec) => {
                   if (spec.imported.name === spec.local.name) {
                     return spec.imported.name;
                   }
                   return `${spec.imported.name} as ${spec.local.name}`;
-                });
+                })
+                .join(", ");
+
+              const typeImportStatement = `import type { ${typeImports} } from ${source};`;
+
+              // Build the value import statement
+              let valueImportStatement = "";
+
+              if (valueSpecifiers.length > 0) {
+                for (const spec of valueSpecifiers) {
+                  if (spec.type === "ImportDefaultSpecifier") {
+                    spec.local.name;
+                    continue;
+                  }
+                  if (spec.type === "ImportNamespaceSpecifier") {
+                    `* as ${spec.local.name}`;
+                    continue;
+                  }
+                  // ImportSpecifier
+                  if (spec.imported.name === spec.local.name) {
+                    spec.imported.name;
+                    continue;
+                  }
+                  `${spec.imported.name} as ${spec.local.name}`;
+                  continue;
+                }
 
                 // Handle default imports separately
-                const defaultImports = valueSpecifiers.filter(s => s.type === 'ImportDefaultSpecifier');
-                const namespaceImports = valueSpecifiers.filter(s => s.type === 'ImportNamespaceSpecifier');
-                const namedImports = valueSpecifiers.filter(s => s.type === 'ImportSpecifier');
+                const defaultImports = valueSpecifiers.filter(
+                  (s) => s.type === "ImportDefaultSpecifier",
+                );
+                const namespaceImports = valueSpecifiers.filter(
+                  (s) => s.type === "ImportNamespaceSpecifier",
+                );
+                const namedImports = valueSpecifiers.filter(
+                  (s) => s.type === "ImportSpecifier",
+                );
 
                 let importParts = [];
 
@@ -81,38 +93,46 @@ export default {
                   if (importParts.length === 0) {
                     importParts.push(`* as ${namespaceImports[0].local.name}`);
                   } else {
-                    importParts.push(`, * as ${namespaceImports[0].local.name}`);
+                    importParts.push(
+                      `, * as ${namespaceImports[0].local.name}`,
+                    );
                   }
                 }
 
                 if (namedImports.length > 0) {
-                  const namedImportStr = namedImports.map(spec => {
-                    if (spec.imported.name === spec.local.name) {
-                      return spec.imported.name;
-                    }
-                    return `${spec.imported.name} as ${spec.local.name}`;
-                  }).join(', ');
+                  const namedImportStr = namedImports
+                    .map((spec) => {
+                      if (spec.imported.name === spec.local.name) {
+                        return spec.imported.name;
+                      }
+                      return `${spec.imported.name} as ${spec.local.name}`;
+                    })
+                    .join(", ");
 
-                  if (defaultImports.length > 0 || namespaceImports.length > 0) {
+                  if (
+                    defaultImports.length > 0 ||
+                    namespaceImports.length > 0
+                  ) {
                     importParts.push(`, { ${namedImportStr} }`);
                   } else {
                     importParts.push(`{ ${namedImportStr} }`);
                   }
                 }
 
-                valueImportStatement = `import ${importParts.join('')} from ${source};`;
+                valueImportStatement = `import ${importParts.join("")} from ${source};`;
               }
 
               // Replace the original import with both statements
-              const replacement = valueSpecifiers.length > 0
-                ? `${typeImportStatement}\n${valueImportStatement}`
-                : typeImportStatement;
+              const replacement =
+                valueSpecifiers.length > 0
+                  ? `${typeImportStatement}\n${valueImportStatement}`
+                  : typeImportStatement;
 
               fixes.push(fixer.replaceText(node, replacement));
 
               return fixes;
             },
-            messageId: 'separateTypeImports',
+            messageId: "separateTypeImports",
             node,
           });
         }
@@ -122,15 +142,16 @@ export default {
 
   meta: {
     docs: {
-      category: 'Style',
-      description: 'Enforce separate type imports',
+      category: "Style",
+      description: "Enforce separate type imports",
       recommended: false,
     },
-    fixable: 'code',
+    fixable: "code",
     messages: {
-      separateTypeImports: 'Type imports should be in a separate import type declaration',
+      separateTypeImports:
+        "Type imports should be in a separate import type declaration",
     },
     schema: [],
-    type: 'suggestion',
+    type: "suggestion",
   },
 };

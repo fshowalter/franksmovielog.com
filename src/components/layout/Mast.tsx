@@ -74,7 +74,7 @@ function HamburgerMenu({
           [body.nav-open_&]:tablet:z-nav-backdrop
           [body.nav-open_&]:tablet:opacity-100
         `}
-        data-nav-backdrop
+        data-nav-drawer-backdrop
       />
       <button
         aria-controls="nav-menu"
@@ -85,7 +85,7 @@ function HamburgerMenu({
           items-center justify-center transition-transform
           hover:scale-110
         `}
-        data-nav-toggle
+        data-nav-drawer-toggle
         type="button"
       >
         <span
@@ -128,7 +128,7 @@ function HamburgerMenu({
             [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
             [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
           `}
-          data-nav-menu
+          data-nav-drawer
           id="nav-menu"
         >
           <TableOfContents />

@@ -2,8 +2,8 @@
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "entry": [
     "src/pages/**/*.astro",
-    "src/layouts/search.ts",
-    "src/layouts/navMenu.ts",
+    "src/astro/search.ts",
+    "src/astro/navDrawer.ts",
     "eslint.html.config.js",
     "src/pages/**/*.spec.ts"
   ],

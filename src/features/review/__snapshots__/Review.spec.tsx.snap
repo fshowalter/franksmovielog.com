@@ -211,7 +211,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           [body.nav-open_&]:tablet:z-nav-backdrop
           [body.nav-open_&]:tablet:opacity-100
         "
-            data-nav-backdrop="true"
+            data-nav-drawer-backdrop="true"
           />
           <button
             aria-controls="nav-menu"
@@ -222,7 +222,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
           items-center justify-center transition-transform
           hover:scale-110
         "
-            data-nav-toggle="true"
+            data-nav-drawer-toggle="true"
             type="button"
           >
             <span
@@ -265,7 +265,7 @@ exports[`Review > matches snapshot for slug 'the-bloody-judge-1970' 1`] = `
             [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
             [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
           "
-              data-nav-menu="true"
+              data-nav-drawer="true"
               id="nav-menu"
             >
               <ol
@@ -2300,7 +2300,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           [body.nav-open_&]:tablet:z-nav-backdrop
           [body.nav-open_&]:tablet:opacity-100
         "
-            data-nav-backdrop="true"
+            data-nav-drawer-backdrop="true"
           />
           <button
             aria-controls="nav-menu"
@@ -2311,7 +2311,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
           items-center justify-center transition-transform
           hover:scale-110
         "
-            data-nav-toggle="true"
+            data-nav-drawer-toggle="true"
             type="button"
           >
             <span
@@ -2354,7 +2354,7 @@ exports[`Review > matches snapshot for slug 'the-curse-of-frankenstein-1957' 1`]
             [body.nav-open_&]:drop-shadow-2xl [body.nav-open_&]:tablet:px-10
             [body.nav-open_&]:tablet:pt-40 [body.nav-open_&]:laptop:px-20
           "
-              data-nav-menu="true"
+              data-nav-drawer="true"
               id="nav-menu"
             >
               <ol

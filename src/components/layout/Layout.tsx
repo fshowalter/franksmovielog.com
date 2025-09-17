@@ -1,7 +1,11 @@
+import type { BackdropProps } from "./Backdrop";
+
+import { Backdrop } from "./Backdrop";
 import { Footer } from "./Footer";
 import { Mast } from "./Mast";
 
 export function Layout({
+  backdrop,
   children,
   className,
   hasBackdrop = true,
@@ -9,6 +13,7 @@ export function Layout({
   ...rest
 }: {
   [x: string]: unknown;
+  backdrop?: BackdropProps;
   children: React.ReactNode;
   className?: string;
   hasBackdrop?: boolean;
@@ -37,6 +42,7 @@ export function Layout({
           id="content"
           {...rest}
         >
+          {backdrop && <Backdrop {...backdrop} />}
           {children}
         </main>
         <Footer />
