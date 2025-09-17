@@ -1,18 +1,23 @@
 ---
-import { getContentPlainText } from "~/api/pages";
+import { getContentPlainText, getPage } from "~/api/pages";
 import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Article } from "~/components/article/Article";
-import { getProps } from "~/components/article/getProps";
+import { getProps } from "~/components/article/getArticleProps";
+import { Layout } from "~/components/layout/Layout";
+
+const { content, rawContent, title } = await getPage("how-i-grade");
 
 const slug = "how-i-grade";
 const deck = `"Should I watch this movie?"`;
 
 const props = await getProps({
+  content,
   deck,
   slug,
+  title,
 });
 
-const contextPlainText = getContentPlainText(props.rawContent);
+const contextPlainText = getContentPlainText(rawContent);
 
 //trim the string to the maximum length
 var description = contextPlainText
@@ -32,7 +37,7 @@ description = description.slice(
   openGraph={{ description: props.deck, type: "article" }}
   title={props.title}
 >
-  <div data-pagefind-body>
+  <Layout>
     <Article {...props} />
-  </div>
+  </Layout>
 </AstroPageShell>

@@ -5,6 +5,38 @@
  * - `import { bar }`
  */
 
+/**
+ * Build named imports part with proper comma placement
+ */
+function buildNamedImportsPart(namedImports, hasPrevious) {
+  if (namedImports.length === 0) {
+    return "";
+  }
+  const namedImportStr = namedImports.map((spec) => buildNamedSpecifier(spec)).join(", ");
+  return hasPrevious ? `, { ${namedImportStr} }` : `{ ${namedImportStr} }`;
+}
+
+/**
+ * Build import string for a named specifier
+ */
+function buildNamedSpecifier(spec) {
+  if (spec.imported.name === spec.local.name) {
+    return spec.imported.name;
+  }
+  return `${spec.imported.name} as ${spec.local.name}`;
+}
+
+/**
+ * Build namespace import part with proper comma placement
+ */
+function buildNamespaceImportPart(namespaceImports, hasDefault) {
+  if (namespaceImports.length === 0) {
+    return "";
+  }
+  const namespaceStr = `* as ${namespaceImports[0].local.name}`;
+  return hasDefault ? `, ${namespaceStr}` : namespaceStr;
+}
+
 export default {
   create(context) {
     return {
@@ -40,12 +72,7 @@ export default {
 
               // Build the type import statement
               const typeImports = typeSpecifiers
-                .map((spec) => {
-                  if (spec.imported.name === spec.local.name) {
-                    return spec.imported.name;
-                  }
-                  return `${spec.imported.name} as ${spec.local.name}`;
-                })
+                .map((spec) => buildNamedSpecifier(spec))
                 .join(", ");
 
               const typeImportStatement = `import type { ${typeImports} } from ${source};`;
@@ -65,40 +92,29 @@ export default {
                   (s) => s.type === "ImportSpecifier",
                 );
 
-                let importParts = [];
+                const importParts = [];
 
+                // Add default import
                 if (defaultImports.length > 0) {
                   importParts.push(defaultImports[0].local.name);
                 }
 
-                if (namespaceImports.length > 0) {
-                  if (importParts.length === 0) {
-                    importParts.push(`* as ${namespaceImports[0].local.name}`);
-                  } else {
-                    importParts.push(
-                      `, * as ${namespaceImports[0].local.name}`,
-                    );
-                  }
+                // Add namespace import with proper comma
+                const namespaceImportPart = buildNamespaceImportPart(
+                  namespaceImports,
+                  defaultImports.length > 0
+                );
+                if (namespaceImportPart) {
+                  importParts.push(namespaceImportPart);
                 }
 
-                if (namedImports.length > 0) {
-                  const namedImportStr = namedImports
-                    .map((spec) => {
-                      if (spec.imported.name === spec.local.name) {
-                        return spec.imported.name;
-                      }
-                      return `${spec.imported.name} as ${spec.local.name}`;
-                    })
-                    .join(", ");
-
-                  if (
-                    defaultImports.length > 0 ||
-                    namespaceImports.length > 0
-                  ) {
-                    importParts.push(`, { ${namedImportStr} }`);
-                  } else {
-                    importParts.push(`{ ${namedImportStr} }`);
-                  }
+                // Add named imports with proper comma
+                const namedImportsPart = buildNamedImportsPart(
+                  namedImports,
+                  defaultImports.length > 0 || namespaceImports.length > 0
+                );
+                if (namedImportsPart) {
+                  importParts.push(namedImportsPart);
                 }
 
                 valueImportStatement = `import ${importParts.join("")} from ${source};`;

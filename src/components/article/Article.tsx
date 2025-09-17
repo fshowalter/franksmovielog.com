@@ -2,12 +2,11 @@ import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
 
 import { Backdrop } from "~/components/backdrop/Backdrop";
-import { Layout } from "~/components/layout/Layout";
 import { LongFormText } from "~/components/long-form-text/LongFormText";
 import { MoreReviews } from "~/components/more-reviews/MoreReviews";
 import { MoreReviewsHeading } from "~/components/more-reviews/MoreReviewsHeading";
 
-export type Props = {
+export type ArticleProps = {
   backdropImageProps: BackdropImageProps;
   content: string | undefined;
   deck: string;
@@ -21,10 +20,10 @@ export function Article({
   deck,
   recentReviews,
   title,
-}: Props): React.JSX.Element {
+}: ArticleProps): React.JSX.Element {
   return (
-    <Layout>
-      <article>
+    <>
+      <article data-pagefind-body>
         <Backdrop
           centerText={true}
           deck={deck}
@@ -47,6 +46,6 @@ export function Article({
           />
         </MoreReviews>
       </div>
-    </Layout>
+    </>
   );
 }
