@@ -1,9 +1,9 @@
 ---
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Backdrop } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/layout/Layout";
 import { CastAndCrewStrictWrapper } from "~/features/cast-and-crew/CastAndCrew";
 import { getProps } from "~/features/cast-and-crew/getProps";
-import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
 
@@ -11,7 +11,7 @@ const props = await getProps();
 const { backdropImageProps, deck, ...interactiveProps } = props;
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{ description: props.metaDescription }}
   openGraph={{
@@ -24,4 +24,4 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
     <Backdrop deck={deck} imageProps={backdropImageProps} title="Cast & Crew" />
     <CastAndCrewStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
-</Layout>
+</AstroPageShell>

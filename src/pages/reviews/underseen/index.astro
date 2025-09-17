@@ -1,12 +1,12 @@
 ---
 import React from "react";
 
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/layout/Layout";
 import { getUnderseenProps } from "~/features/reviews/getProps";
 import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
 import { Underseen } from "~/features/reviews/Underseen";
-import Layout from "~/layouts/Layout.astro";
 
 const props = await getUnderseenProps();
 
@@ -19,7 +19,7 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
 });
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{ description: props.metaDescription }}
   openGraph={{ description: deck, type: "website" }}
@@ -35,4 +35,4 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
     <ReviewsSubNav active="underseen" />
     <Underseen client:load {...interactiveProps} />
   </ComponentLayout>
-</Layout>
+</AstroPageShell>

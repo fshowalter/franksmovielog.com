@@ -2,11 +2,11 @@
 import React from "react";
 
 import { allCollections } from "~/api/collections";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/layout/Layout";
 import { CollectionTitlesStrictWrapper } from "~/features/collection-titles/CollectionTitles";
 import { getProps } from "~/features/collection-titles/getProps";
-import Layout from "~/layouts/Layout.astro";
 
 interface Props {
   slug: string;
@@ -50,7 +50,7 @@ const deckElement = React.createElement("span", {
 });
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{
     description: `${name} movie reviews: ${description} Sort by oldest or newest, best or worst, or title.`,
@@ -70,4 +70,4 @@ const deckElement = React.createElement("span", {
     />
     <CollectionTitlesStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
-</Layout>
+</AstroPageShell>

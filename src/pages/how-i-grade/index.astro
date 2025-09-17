@@ -1,8 +1,8 @@
 ---
 import { getContentPlainText } from "~/api/pages";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Article } from "~/components/article/Article";
 import { getProps } from "~/components/article/getProps";
-import Layout from "~/layouts/Layout.astro";
 
 const slug = "how-i-grade";
 const deck = `"Should I watch this movie?"`;
@@ -26,7 +26,7 @@ description = description.slice(
 );
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{ description }}
   openGraph={{ description: props.deck, type: "article" }}
@@ -35,4 +35,4 @@ description = description.slice(
   <div data-pagefind-body>
     <Article {...props} />
   </div>
-</Layout>
+</AstroPageShell>

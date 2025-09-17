@@ -94,7 +94,7 @@ export default defineConfig(
     },
     settings: {
       "better-tailwindcss": {
-        entryPoint: "src/layouts/tailwind.css",
+        entryPoint: "src/css/tailwind.css",
       },
     },
   },
@@ -123,7 +123,7 @@ export default defineConfig(
       "better-tailwindcss": {
         attributes: [...getDefaultAttributes(), ".*Classes"],
         callees: [...getDefaultCallees(), "ccn"],
-        entryPoint: "src/layouts/tailwind.css",
+        entryPoint: "src/css/tailwind.css",
       },
       react: {
         version: "detect",

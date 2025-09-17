@@ -1,7 +1,7 @@
 ---
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Article } from "~/components/article/Article";
 import { getProps } from "~/components/article/getProps";
-import Layout from "~/layouts/Layout.astro";
 
 const slug = "not-found";
 
@@ -13,11 +13,11 @@ const props = await getProps({
 });
 ---
 
-<Layout
+<AstroPageShell
   canonical={false}
   meta={{ description: deck }}
   openGraph={false}
   title="404: Not Found"
 >
   <Article {...props} />
-</Layout>
+</AstroPageShell>

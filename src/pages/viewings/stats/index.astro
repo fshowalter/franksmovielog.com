@@ -1,12 +1,12 @@
 ---
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { AlltimeStats } from "~/features/stats/AlltimeStats";
 import { getAllTimeStatsProps } from "~/features/stats/getProps";
-import Layout from "~/layouts/Layout.astro";
 
 const props = await getAllTimeStatsProps();
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{
     description: props.metaDescription,
@@ -18,4 +18,4 @@ const props = await getAllTimeStatsProps();
   title="All-Time Stats"
 >
   <AlltimeStats {...props} />
-</Layout>
+</AstroPageShell>

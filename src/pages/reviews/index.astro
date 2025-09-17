@@ -1,10 +1,10 @@
 ---
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Backdrop } from "~/components/backdrop/Backdrop";
 import { Layout as ComponentLayout } from "~/components/layout/Layout";
 import { AllReviewsStrictWrapper } from "~/features/reviews/AllReviews";
 import { getAllReviewsProps } from "~/features/reviews/getProps";
 import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
-import Layout from "~/layouts/Layout.astro";
 
 const props = await getAllReviewsProps();
 
@@ -12,7 +12,7 @@ const props = await getAllReviewsProps();
 const { backdropImageProps, deck, ...interactiveProps } = props;
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{ description: props.metaDescription }}
   openGraph={{ description: deck, type: "website" }}
@@ -23,4 +23,4 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
     <ReviewsSubNav active="all" />
     <AllReviewsStrictWrapper client:load props={interactiveProps} />
   </ComponentLayout>
-</Layout>
+</AstroPageShell>

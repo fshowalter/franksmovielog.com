@@ -1,8 +1,8 @@
 ---
 import { allStatYears } from "~/api/stats";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { getYearStatsProps } from "~/features/stats/getProps";
 import { YearStats } from "~/features/stats/YearStats";
-import Layout from "~/layouts/Layout.astro";
 
 interface Props {
   year: string;
@@ -28,7 +28,7 @@ const { year } = Astro.props;
 const props = await getYearStatsProps(year);
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{ description: props.metaDescription }}
   openGraph={{
@@ -38,4 +38,4 @@ const props = await getYearStatsProps(year);
   title={`${props.year} Stats`}
 >
   <YearStats {...props} />
-</Layout>
+</AstroPageShell>

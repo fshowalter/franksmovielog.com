@@ -1,8 +1,8 @@
 ---
 import { allReviews, getContentPlainText } from "~/api/reviews";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { getProps } from "~/features/review/getProps";
 import { Review } from "~/features/review/Review";
-import Layout from "~/layouts/Layout.astro";
 
 interface Props {
   contentPlainText: string;
@@ -51,7 +51,7 @@ if (props.value.title.length <= 10) {
 title = `${title} (${props.value.releaseYear})`;
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{ description }}
   openGraph={{ description, type: "article" }}
@@ -70,4 +70,4 @@ title = `${title} (${props.value.releaseYear})`;
     />
   </Fragment>
   <Review {...props} />
-</Layout>
+</AstroPageShell>

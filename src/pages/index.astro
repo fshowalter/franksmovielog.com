@@ -1,12 +1,12 @@
 ---
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { getProps } from "~/features/home/getProps";
 import { Home } from "~/features/home/Home";
-import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{
     description:
@@ -16,4 +16,4 @@ const props = await getProps();
   title="Frank's Movie Log"
 >
   <Home {...props} />
-</Layout>
+</AstroPageShell>

@@ -1,16 +1,16 @@
 ---
+import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { getProps } from "~/features/watchlist-progress/getProps";
 import { WatchlistProgress } from "~/features/watchlist-progress/WatchlistProgress";
-import Layout from "~/layouts/Layout.astro";
 
 const props = await getProps();
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{ description: props.metaDescription }}
   openGraph={{ description: props.deck, type: "website" }}
   title="Watchlist Progress"
 >
   <WatchlistProgress {...props} />
-</Layout>
+</AstroPageShell>
