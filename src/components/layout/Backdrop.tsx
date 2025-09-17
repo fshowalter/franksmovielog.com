@@ -7,7 +7,7 @@ export const BackdropImageConfig = {
 };
 
 export type BackdropProps = {
-  breadcrumb?: React.ReactNode;
+  breadcrumb?: { href: string; text: string };
   centerText?: boolean;
   deck?: React.ReactNode;
   imageProps: BackdropImageProps;
@@ -72,13 +72,17 @@ export function BreadcrumbLink({
 function Breadcrumb({
   value,
 }: {
-  value?: React.ReactNode;
+  value?: { href: string; text: string };
 }): false | React.JSX.Element {
   if (!value) {
     return false;
   }
 
-  return <p className="mb-4">{value}</p>;
+  return (
+    <p className="mb-4">
+      <BreadcrumbLink href={value.href}>{value.text}</BreadcrumbLink>
+    </p>
+  );
 }
 
 function Deck({

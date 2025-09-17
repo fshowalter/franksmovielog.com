@@ -5,7 +5,7 @@ import { AvatarListItemImageConfig } from "~/components/avatar-list/AvatarListIt
 import type { CastAndCrewProps } from "./CastAndCrew";
 import type { CastAndCrewValue } from "./CastAndCrew";
 
-export async function getProps(): Promise<CastAndCrewProps> {
+export async function getCastAndCrewProps(): Promise<CastAndCrewProps> {
   const { castAndCrew } = await allCastAndCrew();
 
   const values = await Promise.all(

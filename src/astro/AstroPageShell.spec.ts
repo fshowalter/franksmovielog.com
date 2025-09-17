@@ -1,5 +1,6 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import type { DOMWindow, JSDOM as JSDOMType } from "jsdom";
+import type { SearchAPI } from "./search-ui";
 
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
 import { waitFor, within } from "@testing-library/dom";
@@ -9,21 +10,12 @@ import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-// Mock the Pagefind module
-const mockPagefindAPI = {
-  debouncedSearch: vi.fn(),
+// Create mock search API that will be injected into SearchUI
+const mockSearchAPI = {
   destroy: vi.fn(() => Promise.resolve()),
-  filters: vi.fn().mockResolvedValue({}),
   init: vi.fn(() => Promise.resolve()),
-  options: vi.fn(() => Promise.resolve()),
-  preload: vi.fn(() => Promise.resolve()),
   search: vi.fn(),
-};
-
-vi.mock("/pagefind/pagefind.js", () => mockPagefindAPI);
-
-// Use the mocked SearchUI
-vi.mock("./search-ui");
+} satisfies Partial<SearchAPI>;
 
 describe("AstroPageShell", () => {
   describe("navigation drawer", () => {
@@ -792,22 +784,23 @@ describe("AstroPageShell", () => {
       vi.resetModules();
 
       // Re-setup mocks after reset
-      vi.mock("/pagefind/pagefind.js", () => mockPagefindAPI);
-      vi.mock("./search-ui");
+      vi.mock("./search-ui", async () => {
+        const actual = await vi.importActual<typeof import("./search-ui")>("./search-ui");
+        return {
+          ...actual,
+          SearchUI: class extends actual.SearchUI {
+            constructor() {
+              super(mockSearchAPI as SearchAPI);
+            }
+          },
+        };
+      });
 
       // Reset mock functions
       vi.clearAllMocks();
 
-      // Set up default mock return values
-      mockPagefindAPI.search.mockResolvedValue({
-        filters: {},
-        results: [],
-        timings: { preload: 0, search: 0, total: 0 },
-        totalFilters: {},
-        unfilteredResultCount: 0,
-      });
-
-      mockPagefindAPI.debouncedSearch.mockResolvedValue({
+      // Set up default mock return values for search
+      mockSearchAPI.search.mockResolvedValue({
         filters: {},
         results: [],
         timings: { preload: 0, search: 0, total: 0 },
@@ -940,7 +933,7 @@ describe("AstroPageShell", () => {
           },
         ];
 
-        mockPagefindAPI.debouncedSearch.mockResolvedValueOnce({
+        mockSearchAPI.search.mockResolvedValueOnce({
           filters: {},
           results: mockResults,
           timings: { preload: 0, search: 0, total: 0 },
@@ -975,7 +968,7 @@ describe("AstroPageShell", () => {
         expect,
       }) => {
         const queries = within(document.body);
-        mockPagefindAPI.debouncedSearch.mockResolvedValueOnce({
+        mockSearchAPI.search.mockResolvedValueOnce({
           filters: {},
           results: [],
           timings: { preload: 0, search: 0, total: 0 },
@@ -1013,7 +1006,7 @@ describe("AstroPageShell", () => {
           resolveSearch = resolve;
         });
 
-        mockPagefindAPI.debouncedSearch.mockReturnValueOnce(searchPromise);
+        mockSearchAPI.search.mockReturnValueOnce(searchPromise);
 
         // Open search modal and wait for initialization
         await openSearchAndWaitForInit(queries);
@@ -1062,7 +1055,7 @@ describe("AstroPageShell", () => {
           },
         ];
 
-        mockPagefindAPI.debouncedSearch.mockResolvedValueOnce({
+        mockSearchAPI.search.mockResolvedValueOnce({
           filters: {},
           results: mockResults,
           timings: { preload: 0, search: 0, total: 0 },
@@ -1181,7 +1174,7 @@ describe("AstroPageShell", () => {
           createMockResult(`${i + 1}`),
         );
 
-        mockPagefindAPI.debouncedSearch.mockResolvedValueOnce({
+        mockSearchAPI.search.mockResolvedValueOnce({
           filters: {},
           results: mockResults,
           timings: { preload: 0, search: 0, total: 0 },
@@ -1213,19 +1206,27 @@ describe("AstroPageShell", () => {
         expect(loadMoreButton.textContent).toContain("Load 5 more");
 
         await user.click(loadMoreButton);
-        await vi.advanceTimersByTimeAsync(50);
 
-        // Check additional results loaded
-        const results = queries.getByRole("region", {
-          name: /search results/i,
+        // Wait for all async operations to complete
+        // The renderResults function has 5 await calls for result.data()
+        await vi.runOnlyPendingTimersAsync();
+        await new Promise((resolve) => setTimeout(resolve, 10));
+
+        // Wait for additional results to be rendered
+        await waitFor(() => {
+          const results = queries.getByRole("region", {
+            name: /search results/i,
+          });
+          expect(results.textContent).toContain("Result 6");
+          expect(results.textContent).toContain("Result 10");
         });
-        expect(results.textContent).toContain("Result 6");
-        expect(results.textContent).toContain("Result 10");
 
-        // Load more button should be hidden
-        expect(loadMoreButton.parentElement?.classList.contains("hidden")).toBe(
-          true,
-        );
+        // Load more button should be hidden after loading all results
+        await waitFor(() => {
+          expect(loadMoreButton.parentElement?.classList.contains("hidden")).toBe(
+            true,
+          );
+        });
       });
     });
   });

@@ -1,4 +1,4 @@
-import { StrictMode, useReducer } from "react";
+import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
@@ -136,17 +136,5 @@ export function CastAndCrewMemberTitles({
         }}
       </GroupedPosterList>
     </FilterAndSortContainer>
-  );
-}
-
-export function CastAndCrewMemberTitlesStrictWrapper({
-  props,
-}: {
-  props: CastAndCrewMemberTitlesProps;
-}): React.JSX.Element {
-  return (
-    <StrictMode>
-      <CastAndCrewMemberTitles {...props} />
-    </StrictMode>
   );
 }

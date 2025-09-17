@@ -1,17 +1,13 @@
 ---
-import { getBackdropImageProps } from "~/api/backdrops";
 import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { BackdropImageConfig } from "~/components/layout/Backdrop";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
 import { Layout } from "~/components/layout/Layout";
 import { CastAndCrew } from "~/features/cast-and-crew/CastAndCrew";
-import { getProps } from "~/features/cast-and-crew/getProps";
+import { getCastAndCrewProps } from "~/features/cast-and-crew/getCastAndCrewProps";
 
-const props = await getProps();
+const castAndCrewProps = await getCastAndCrewProps();
 
-const backdropImageProps = await getBackdropImageProps(
-  "cast-and-crew",
-  BackdropImageConfig,
-);
+const backdropImageProps = await getLayoutBackdropImageProps("cast-and-crew");
 const deck = '"Round up the usual suspects."';
 const metaDescription =
   "A sortable index of directors, performers, and writers who contributed to the movies reviewed on this site. Sort by name or review count.";
@@ -36,6 +32,6 @@ const metaDescription =
     }}
     className="bg-subtle"
   >
-    <CastAndCrew client:load {...props} />
+    <CastAndCrew client:load {...castAndCrewProps} />
   </Layout>
 </AstroPageShell>

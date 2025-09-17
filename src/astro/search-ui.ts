@@ -74,7 +74,6 @@ type PagefindSubResult = {
 type SearchElements = {
   clearButton: HTMLButtonElement;
   container: HTMLElement;
-  filtersContainer?: HTMLElement;
   input: HTMLInputElement;
   loadMoreButton: HTMLButtonElement;
   loadMoreWrapper: HTMLElement;
@@ -104,7 +103,7 @@ type WeightedLocation = {
 /**
  * Wrapper for the Pagefind search API
  */
-class SearchAPI {
+export class SearchAPI {
   private api: PagefindAPI | undefined = undefined;
   private isInitialized = false;
 
@@ -216,8 +215,8 @@ export class SearchUI {
 
   private state: SearchState;
 
-  constructor() {
-    this.api = new SearchAPI();
+  constructor(api?: SearchAPI) {
+    this.api = api || new SearchAPI();
     this.state = this.getInitialState();
 
     // Create debounced search function once during construction
@@ -564,53 +563,28 @@ export class SearchUI {
    * Set up DOM elements
    */
   private setupElements(): void {
-    const container = document.querySelector("#pagefind__search");
-    this.elements = container
-      ? {
-          clearButton: container.querySelector(
-            ".pagefind-ui__search-clear",
-          ) as HTMLButtonElement,
-          container: container as HTMLElement,
-          filtersContainer: container.querySelector(
-            ".pagefind-ui__filters",
-          ) as HTMLElement,
-          input: container.querySelector(
-            ".pagefind-ui__search-input",
-          ) as HTMLInputElement,
-          loadMoreButton: container.querySelector(
-            ".pagefind-ui__button",
-          ) as HTMLButtonElement,
-          loadMoreWrapper: container.querySelector(
-            ".pagefind-ui__results-footer",
-          ) as HTMLElement,
-          resultsContainer: container.querySelector(
-            ".pagefind-ui__results",
-          ) as HTMLElement,
-          resultsCounter: container.querySelector(
-            ".pagefind-ui__results-count",
-          ) as HTMLElement,
-        }
-      : {
-          clearButton: document.querySelector(
-            "#pagefind-clear-button",
-          ) as HTMLButtonElement,
-          container: document.body,
-          input: document.querySelector(
-            "#pagefind-search-input",
-          ) as HTMLInputElement,
-          loadMoreButton: document.querySelector(
-            "#pagefind-load-more",
-          ) as HTMLButtonElement,
-          loadMoreWrapper: document.querySelector(
-            "#pagefind-load-more-wrapper",
-          ) as HTMLElement,
-          resultsContainer: document.querySelector(
-            "#pagefind-results",
-          ) as HTMLElement,
-          resultsCounter: document.querySelector(
-            "#pagefind-results-counter",
-          ) as HTMLElement,
-        };
+    // AIDEV-NOTE: Using IDs from AstroPageShell.astro
+    this.elements = {
+      clearButton: document.querySelector(
+        "#pagefind-clear-button",
+      ) as HTMLButtonElement,
+      container: document.body,
+      input: document.querySelector(
+        "#pagefind-search-input",
+      ) as HTMLInputElement,
+      loadMoreButton: document.querySelector(
+        "#pagefind-load-more",
+      ) as HTMLButtonElement,
+      loadMoreWrapper: document.querySelector(
+        "#pagefind-load-more-wrapper",
+      ) as HTMLElement,
+      resultsContainer: document.querySelector(
+        "#pagefind-results",
+      ) as HTMLElement,
+      resultsCounter: document.querySelector(
+        "#pagefind-results-counter",
+      ) as HTMLElement,
+    };
 
     if (!this.elements.input || !this.elements.resultsContainer) {
       throw new Error("Required search elements not found");

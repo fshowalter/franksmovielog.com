@@ -34,7 +34,7 @@ describe("/cast-and-crew/:slug", () => {
         Review as AstroComponentFactory,
         {
           partial: false,
-          props: { slug: member.slug },
+          props: member,
           request: new Request(
             `https://www.franksmovielog.com/cast-and-crew/${member.slug}/`,
           ),

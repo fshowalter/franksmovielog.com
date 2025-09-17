@@ -32,7 +32,7 @@ import type {
   CastAndCrewMemberTitlesValue,
 } from "./CastAndCrewMemberTitles";
 
-import { CastAndCrewMemberTitlesStrictWrapper } from "./CastAndCrewMemberTitles";
+import { CastAndCrewMemberTitles } from "./CastAndCrewMemberTitles";
 
 // Inline minimal fixture data for testing
 let testIdCounter = 0;
@@ -95,11 +95,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Psycho");
@@ -133,11 +129,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await clickGenresFilterOption(user, "Thriller");
@@ -161,11 +153,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillReleaseYearFilter(user, "1950", "1970");
@@ -199,11 +187,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillReviewYearFilter(user, "2019", "2021");
@@ -242,11 +226,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillGradeFilter(user, "B-", "B+");
@@ -290,11 +270,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickReviewedStatusFilterOption(user, "Reviewed");
       await clickViewResults(user);
@@ -331,11 +307,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickReviewedStatusFilterOption(user, "Not Reviewed");
       await clickViewResults(user);
@@ -366,11 +338,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await clickCreditedAsFilterOption(user, "Director");
@@ -408,11 +376,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Title (A → Z)");
 
@@ -446,11 +410,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Title (Z → A)");
 
@@ -484,11 +444,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -522,11 +478,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Release Date (Newest First)");
 
@@ -563,11 +515,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Grade (Best First)");
 
@@ -604,11 +552,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Grade (Worst First)");
 
@@ -642,11 +586,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Review Date (Oldest First)");
 
@@ -680,11 +620,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickSortOption(user, "Review Date (Newest First)");
 
@@ -715,11 +651,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Notorious");
@@ -756,11 +688,7 @@ describe("CastAndCrewMemberTitles", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Psycho");
@@ -801,11 +729,7 @@ describe("CastAndCrewMemberTitles", () => {
       });
 
       const user = getUserWithFakeTimers();
-      render(
-        <CastAndCrewMemberTitlesStrictWrapper
-          props={{ ...baseProps, values: titles }}
-        />,
-      );
+      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       const posterList = getGroupedPosterList();
 
