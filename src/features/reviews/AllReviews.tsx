@@ -106,15 +106,3 @@ export function AllReviews({
     </FilterAndSortContainer>
   );
 }
-
-export function AllReviewsStrictWrapper({
-  props,
-}: {
-  props: AllReviewsProps;
-}): React.JSX.Element {
-  return (
-    <StrictMode>
-      <AllReviews {...props} />
-    </StrictMode>
-  );
-}

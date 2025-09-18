@@ -6,7 +6,7 @@ import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
-import { allReviews, getContentPlainText } from "~/api/reviews";
+import { allReviews } from "~/api/reviews";
 import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
 
 import Review from "./index.astro";
@@ -36,10 +36,7 @@ describe("/reviews/:slug", () => {
         Review as AstroComponentFactory,
         {
           partial: false,
-          props: {
-            contentPlainText: getContentPlainText(review.rawContent),
-            slug: review.slug,
-          },
+          props: review,
           request: new Request(
             `https://www.franksmovielog.com/reviews/${review.slug}/`,
           ),

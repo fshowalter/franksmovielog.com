@@ -32,7 +32,3 @@ export async function clickWriterFilterOption(user: UserEvent, value: string) {
 export function getDirectorFilter() {
   return screen.getByLabelText("Director");
 }
-
-export function getPerformerFilter() {
-  return screen.getByLabelText("Performer");
-}

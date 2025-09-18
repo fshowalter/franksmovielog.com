@@ -106,15 +106,3 @@ export function Underrated({
     </FilterAndSortContainer>
   );
 }
-
-export function UnderratedStrictWrapper({
-  props,
-}: {
-  props: UnderratedProps;
-}): React.JSX.Element {
-  return (
-    <StrictMode>
-      <Underrated {...props} />
-    </StrictMode>
-  );
-}

@@ -1,20 +1,10 @@
-import type { BackdropImageProps } from "~/api/backdrops";
-
-import { getBackdropImageProps } from "~/api/backdrops";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allWatchlistTitles } from "~/api/watchlist";
-import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 
 import type { WatchlistProps } from "./Watchlist";
 
-type Props = WatchlistProps & {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
-  metaDescription: string;
-};
-
-export async function getProps(): Promise<Props> {
+export async function getWatchlistProps(): Promise<WatchlistProps> {
   const {
     distinctCollections,
     distinctDirectors,
@@ -31,11 +21,6 @@ export async function getProps(): Promise<Props> {
   );
 
   return {
-    backdropImageProps: await getBackdropImageProps(
-      "watchlist",
-      BackdropImageConfig,
-    ),
-    deck: `"A man's got to know his limitations"`,
     defaultPosterImageProps,
     distinctCollections,
     distinctDirectors,
@@ -44,8 +29,6 @@ export async function getProps(): Promise<Props> {
     distinctReleaseYears,
     distinctWriters,
     initialSort: "title-asc",
-    metaDescription:
-      "My to-review bucket list. See what I've yet to review. Sort or filter titles by reason, release date, or title.",
     values: watchlistTitles,
   };
 }

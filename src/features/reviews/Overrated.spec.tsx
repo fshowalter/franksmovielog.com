@@ -20,21 +20,8 @@ import {
 } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-import type { OverratedProps } from "./Overrated";
-
-import { OverratedStrictWrapper } from "./Overrated";
-import {
-  baseReviewProps,
-  createReviewValue,
-  resetTestIdCounter,
-} from "./Reviews.testHelper";
-
-const createProps = (
-  overrides: Partial<OverratedProps> = {},
-): OverratedProps => ({
-  ...baseReviewProps,
-  ...overrides,
-});
+import { Overrated } from "./Overrated";
+import { baseProps, createReviewValue, resetTestIdCounter } from "./testHelper";
 
 describe("Overrated", () => {
   beforeEach(() => {
@@ -52,11 +39,14 @@ describe("Overrated", () => {
       const reviews = [
         createReviewValue({ releaseYear: "1956", title: "The Bad Seed" }),
         createReviewValue({ releaseYear: "1941", title: "Citizen Kane" }),
-        createReviewValue({ releaseYear: "1994", title: "The Shawshank Redemption" }),
+        createReviewValue({
+          releaseYear: "1994",
+          title: "The Shawshank Redemption",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Bad Seed");
@@ -64,19 +54,26 @@ describe("Overrated", () => {
 
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("The Bad Seed")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Citizen Kane")).not.toBeInTheDocument();
-      expect(within(posterList).queryByText("The Shawshank Redemption")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Citizen Kane"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Shawshank Redemption"),
+      ).not.toBeInTheDocument();
     });
 
     it("filters by genres", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ genres: ["Drama", "Crime"], title: "The Godfather" }),
+        createReviewValue({
+          genres: ["Drama", "Crime"],
+          title: "The Godfather",
+        }),
         createReviewValue({ genres: ["Action", "Sci-Fi"], title: "Avatar" }),
         createReviewValue({ genres: ["Drama", "Romance"], title: "Titanic" }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await clickGenresFilterOption(user, "Drama");
@@ -96,7 +93,7 @@ describe("Overrated", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillReleaseYearFilter(user, "1960", "1980");
@@ -104,8 +101,12 @@ describe("Overrated", () => {
 
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Mid Movie")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Old Movie")).not.toBeInTheDocument();
-      expect(within(posterList).queryByText("New Movie")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Old Movie"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("New Movie"),
+      ).not.toBeInTheDocument();
     });
   });
 
@@ -118,7 +119,7 @@ describe("Overrated", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Title (A → Z)");
 
@@ -140,7 +141,7 @@ describe("Overrated", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Title (Z → A)");
 
@@ -156,13 +157,25 @@ describe("Overrated", () => {
 
     it("sorts by release date oldest first", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ releaseSequence: 3, releaseYear: "2000", title: "New" }),
-        createReviewValue({ releaseSequence: 1, releaseYear: "1950", title: "Old" }),
-        createReviewValue({ releaseSequence: 2, releaseYear: "1975", title: "Mid" }),
+        createReviewValue({
+          releaseSequence: 3,
+          releaseYear: "2000",
+          title: "New",
+        }),
+        createReviewValue({
+          releaseSequence: 1,
+          releaseYear: "1950",
+          title: "Old",
+        }),
+        createReviewValue({
+          releaseSequence: 2,
+          releaseYear: "1975",
+          title: "Mid",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -178,13 +191,25 @@ describe("Overrated", () => {
 
     it("sorts by release date newest first", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ releaseSequence: 1, releaseYear: "1950", title: "Old" }),
-        createReviewValue({ releaseSequence: 2, releaseYear: "1975", title: "Mid" }),
-        createReviewValue({ releaseSequence: 3, releaseYear: "2000", title: "New" }),
+        createReviewValue({
+          releaseSequence: 1,
+          releaseYear: "1950",
+          title: "Old",
+        }),
+        createReviewValue({
+          releaseSequence: 2,
+          releaseYear: "1975",
+          title: "Mid",
+        }),
+        createReviewValue({
+          releaseSequence: 3,
+          releaseYear: "2000",
+          title: "New",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Release Date (Newest First)");
 
@@ -206,7 +231,7 @@ describe("Overrated", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Grade (Best First)");
 
@@ -228,7 +253,7 @@ describe("Overrated", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Grade (Worst First)");
 
@@ -251,7 +276,7 @@ describe("Overrated", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Bad Seed");
@@ -260,7 +285,9 @@ describe("Overrated", () => {
 
       let posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Bad Seed")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Citizen Kane")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Citizen Kane"),
+      ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       await clickClearFilters(user);
@@ -283,7 +310,7 @@ describe("Overrated", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Bad Seed");
@@ -291,7 +318,9 @@ describe("Overrated", () => {
 
       let posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Bad Seed")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Citizen Kane")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Citizen Kane"),
+      ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Different");
@@ -299,7 +328,9 @@ describe("Overrated", () => {
 
       posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Bad Seed")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Citizen Kane")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Citizen Kane"),
+      ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       expect(getTitleFilter()).toHaveValue("Bad Seed");
@@ -321,14 +352,16 @@ describe("Overrated", () => {
       );
 
       const user = getUserWithFakeTimers();
-      render(<OverratedStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Overrated {...baseProps} values={reviews} />);
 
       const posterList = getGroupedPosterList();
 
       // Should show first 100 movies
       expect(within(posterList).getByText("Overrated 1")).toBeInTheDocument();
       expect(within(posterList).getByText("Overrated 100")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Overrated 101")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Overrated 101"),
+      ).not.toBeInTheDocument();
 
       await clickShowMore(user);
 

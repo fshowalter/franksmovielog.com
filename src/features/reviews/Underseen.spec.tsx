@@ -20,21 +20,8 @@ import {
 } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-import type { UnderseenProps } from "./Underseen";
-
-import {
-  baseReviewProps,
-  createReviewValue,
-  resetTestIdCounter,
-} from "./Reviews.testHelper";
-import { UnderseenStrictWrapper } from "./Underseen";
-
-const createProps = (
-  overrides: Partial<UnderseenProps> = {},
-): UnderseenProps => ({
-  ...baseReviewProps,
-  ...overrides,
-});
+import { baseProps, createReviewValue, resetTestIdCounter } from "./testHelper";
+import { Underseen } from "./Underseen";
 
 describe("Underseen", () => {
   beforeEach(() => {
@@ -56,7 +43,7 @@ describe("Underseen", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Sorcerer");
@@ -64,19 +51,30 @@ describe("Underseen", () => {
 
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Sorcerer")).toBeInTheDocument();
-      expect(within(posterList).queryByText("The Wages of Fear")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Wages of Fear"),
+      ).not.toBeInTheDocument();
       expect(within(posterList).queryByText("Thief")).not.toBeInTheDocument();
     });
 
     it("filters by genres", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ genres: ["Thriller", "Adventure"], title: "Sorcerer" }),
-        createReviewValue({ genres: ["Crime", "Drama"], title: "The Friends of Eddie Coyle" }),
-        createReviewValue({ genres: ["Thriller", "Mystery"], title: "Blow Out" }),
+        createReviewValue({
+          genres: ["Thriller", "Adventure"],
+          title: "Sorcerer",
+        }),
+        createReviewValue({
+          genres: ["Crime", "Drama"],
+          title: "The Friends of Eddie Coyle",
+        }),
+        createReviewValue({
+          genres: ["Thriller", "Mystery"],
+          title: "Blow Out",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await clickGenresFilterOption(user, "Thriller");
@@ -85,18 +83,23 @@ describe("Underseen", () => {
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Sorcerer")).toBeInTheDocument();
       expect(within(posterList).getByText("Blow Out")).toBeInTheDocument();
-      expect(within(posterList).queryByText("The Friends of Eddie Coyle")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Friends of Eddie Coyle"),
+      ).not.toBeInTheDocument();
     });
 
     it("filters by release year range", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ releaseYear: "1955", title: "The Night of the Hunter" }),
+        createReviewValue({
+          releaseYear: "1955",
+          title: "The Night of the Hunter",
+        }),
         createReviewValue({ releaseYear: "1977", title: "Sorcerer" }),
         createReviewValue({ releaseYear: "1987", title: "Near Dark" }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillReleaseYearFilter(user, "1970", "1980");
@@ -104,8 +107,12 @@ describe("Underseen", () => {
 
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Sorcerer")).toBeInTheDocument();
-      expect(within(posterList).queryByText("The Night of the Hunter")).not.toBeInTheDocument();
-      expect(within(posterList).queryByText("Near Dark")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Night of the Hunter"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Near Dark"),
+      ).not.toBeInTheDocument();
     });
   });
 
@@ -118,7 +125,7 @@ describe("Underseen", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Title (A → Z)");
 
@@ -140,7 +147,7 @@ describe("Underseen", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Title (Z → A)");
 
@@ -156,13 +163,25 @@ describe("Underseen", () => {
 
     it("sorts by release date oldest first", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ releaseSequence: 3, releaseYear: "1987", title: "Near Dark" }),
-        createReviewValue({ releaseSequence: 1, releaseYear: "1951", title: "Ace in the Hole" }),
-        createReviewValue({ releaseSequence: 2, releaseYear: "1977", title: "Sorcerer" }),
+        createReviewValue({
+          releaseSequence: 3,
+          releaseYear: "1987",
+          title: "Near Dark",
+        }),
+        createReviewValue({
+          releaseSequence: 1,
+          releaseYear: "1951",
+          title: "Ace in the Hole",
+        }),
+        createReviewValue({
+          releaseSequence: 2,
+          releaseYear: "1977",
+          title: "Sorcerer",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -178,13 +197,25 @@ describe("Underseen", () => {
 
     it("sorts by release date newest first", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ releaseSequence: 1, releaseYear: "1951", title: "Ace in the Hole" }),
-        createReviewValue({ releaseSequence: 2, releaseYear: "1977", title: "Sorcerer" }),
-        createReviewValue({ releaseSequence: 3, releaseYear: "1987", title: "Near Dark" }),
+        createReviewValue({
+          releaseSequence: 1,
+          releaseYear: "1951",
+          title: "Ace in the Hole",
+        }),
+        createReviewValue({
+          releaseSequence: 2,
+          releaseYear: "1977",
+          title: "Sorcerer",
+        }),
+        createReviewValue({
+          releaseSequence: 3,
+          releaseYear: "1987",
+          title: "Near Dark",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Release Date (Newest First)");
 
@@ -206,7 +237,7 @@ describe("Underseen", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Grade (Best First)");
 
@@ -228,7 +259,7 @@ describe("Underseen", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Grade (Worst First)");
 
@@ -251,7 +282,7 @@ describe("Underseen", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Sorcerer");
@@ -283,7 +314,7 @@ describe("Underseen", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Sorcerer");
@@ -321,14 +352,16 @@ describe("Underseen", () => {
       );
 
       const user = getUserWithFakeTimers();
-      render(<UnderseenStrictWrapper props={createProps({ values: reviews })} />);
+      render(<Underseen {...baseProps} values={reviews} />);
 
       const posterList = getGroupedPosterList();
 
       // Should show first 100 movies
       expect(within(posterList).getByText("Underseen 1")).toBeInTheDocument();
       expect(within(posterList).getByText("Underseen 100")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Underseen 101")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Underseen 101"),
+      ).not.toBeInTheDocument();
 
       await clickShowMore(user);
 

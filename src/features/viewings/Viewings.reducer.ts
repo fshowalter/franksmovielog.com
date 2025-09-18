@@ -15,12 +15,9 @@ import {
   titleFiltersReducer,
 } from "~/reducers/titleFiltersReducer";
 
-export { createShowMoreAction } from "~/reducers/showMoreReducer";
-
 export {
   createApplyFiltersAction,
   createClearFiltersAction,
-  createGenresFilterChangedAction,
   createReleaseYearFilterChangedAction,
   createResetFiltersAction,
   createTitleFilterChangedAction,

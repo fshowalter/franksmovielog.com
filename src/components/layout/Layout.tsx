@@ -8,7 +8,6 @@ export function Layout({
   backdrop,
   children,
   className,
-  hasBackdrop = true,
   hideLogo = false,
   ...rest
 }: {
@@ -16,7 +15,6 @@ export function Layout({
   backdrop?: BackdropProps;
   children: React.ReactNode;
   className?: string;
-  hasBackdrop?: boolean;
   hideLogo?: boolean;
 }): React.JSX.Element {
   return (
@@ -33,7 +31,7 @@ export function Layout({
         Skip to content
       </a>
       <div className="flex min-h-full w-full flex-col bg-default">
-        <Mast hasBackdrop={hasBackdrop} hideLogo={hideLogo} />
+        <Mast hasBackdrop={backdrop ? true : false} hideLogo={hideLogo} />
         <main
           className={`
             grow

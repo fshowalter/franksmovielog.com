@@ -33,9 +33,17 @@ export function resetTestIdCounter(): void {
   testIdCounter = 0;
 }
 
-export const baseReviewProps = {
+export const baseProps = {
   distinctGenres: ["Drama", "Horror", "Thriller", "Action", "Comedy", "Sci-Fi"],
-  distinctReleaseYears: ["1960", "1970", "1980", "1990", "2000", "2010", "2020"],
+  distinctReleaseYears: [
+    "1960",
+    "1970",
+    "1980",
+    "1990",
+    "2000",
+    "2010",
+    "2020",
+  ],
   distinctReviewYears: ["2018", "2019", "2020", "2021", "2022", "2023", "2024"],
   initialSort: "review-date-desc" as const,
   values: [],

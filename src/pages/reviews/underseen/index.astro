@@ -1,38 +1,39 @@
 ---
-import React from "react";
-
 import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
-import { Layout as ComponentLayout } from "~/components/layout/Layout";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
 import { getUnderseenProps } from "~/features/reviews/getReviewsProps";
 import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
 import { Underseen } from "~/features/reviews/Underseen";
 
-const props = await getUnderseenProps();
+const underseenProps = await getUnderseenProps();
+const backdropImageProps = await getLayoutBackdropImageProps("underseen");
 
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
-
-const breadcrumb = React.createElement(BreadcrumbLink, {
-  children: "Reviews",
-  href: "/reviews/",
-});
+const deck =
+  "Four and five star movies with a below average number of IMDb votes.";
+const metaDescription =
+  "Looking for something new? Behold my four and five star reviews of movies with a below average number of IMDb votes.";
 ---
 
 <AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{ description: metaDescription }}
   openGraph={{ description: deck, type: "website" }}
   title="Underseen Gems"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop
-      breadcrumb={breadcrumb}
-      deck={deck}
-      imageProps={backdropImageProps}
-      title="Underseen Gems"
-    />
+  <Layout
+    className="bg-subtle"
+    backdrop={{
+      breadcrumb: {
+        href: "/reviews/",
+        text: "Reviews",
+      },
+      deck,
+      imageProps: backdropImageProps,
+      title: "Underseen",
+    }}
+  >
     <ReviewsSubNav active="underseen" />
-    <Underseen client:load {...interactiveProps} />
-  </ComponentLayout>
+    <Underseen client:load {...underseenProps} />
+  </Layout>
 </AstroPageShell>

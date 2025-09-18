@@ -5,6 +5,7 @@
     "src/astro/search.ts",
     "src/astro/navDrawer.ts",
     "eslint.html.config.js",
+    "eslint-rules/separate-type-imports.ts",
     "src/pages/**/*.spec.ts"
   ],
   "project": [

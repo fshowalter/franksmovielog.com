@@ -107,15 +107,3 @@ export function Overrated({
     </FilterAndSortContainer>
   );
 }
-
-export function OverratedStrictWrapper({
-  props,
-}: {
-  props: OverratedProps;
-}): React.JSX.Element {
-  return (
-    <StrictMode>
-      <Overrated {...props} />
-    </StrictMode>
-  );
-}

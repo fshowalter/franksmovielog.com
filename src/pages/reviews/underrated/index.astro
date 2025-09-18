@@ -1,38 +1,38 @@
 ---
-import React from "react";
-
 import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
-import { Layout as ComponentLayout } from "~/components/layout/Layout";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
 import { getUnderratedProps } from "~/features/reviews/getReviewsProps";
 import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
-import { UnderratedStrictWrapper } from "~/features/reviews/Underrated";
+import { Underrated } from "~/features/reviews/Underrated";
 
-const props = await getUnderratedProps();
+const underratedProps = await getUnderratedProps();
+const backdropImageProps = await getLayoutBackdropImageProps("underrated");
 
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
-
-const breadcrumb = React.createElement(BreadcrumbLink, {
-  children: "Reviews",
-  href: "/reviews/",
-});
+const deck = "Four and five star movies with a below-average IMDb rating.";
+const metaDescription =
+  "The masses are wrong. These are movies have a four or five star review despite a below-average IMDb rating.";
 ---
 
 <AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{ description: metaDescription }}
   openGraph={{ description: deck, type: "website" }}
   title="Underrated Surprises"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop
-      breadcrumb={breadcrumb}
-      deck={deck}
-      imageProps={backdropImageProps}
-      title="Underrated Surprises"
-    />
+  <Layout
+    backdrop={{
+      breadcrumb: {
+        href: "/reviews/",
+        text: "Reviews",
+      },
+      deck,
+      imageProps: backdropImageProps,
+      title: "Underrated",
+    }}
+    className="bg-subtle"
+  >
     <ReviewsSubNav active="underrated" />
-    <UnderratedStrictWrapper client:load props={interactiveProps} />
-  </ComponentLayout>
+    <Underrated client:load {...underratedProps} />
+  </Layout>
 </AstroPageShell>

@@ -1,13 +1,10 @@
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewsValue } from "~/features/reviews/ReviewsListItem";
 
-import { getBackdropImageProps } from "~/api/backdrops";
 import { allOverratedDisappointments } from "~/api/overrated-disappointments";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allReviews } from "~/api/reviews";
 import { allUnderratedSurprises } from "~/api/underrated-surprises";
 import { allUnderseenGems } from "~/api/underseen-gems";
-import { BackdropImageConfig } from "~/components/backdrop/Backdrop";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
 
@@ -15,12 +12,6 @@ import type { AllReviewsProps } from "./AllReviews";
 import type { OverratedProps } from "./Overrated";
 import type { UnderratedProps } from "./Underrated";
 import type { UnderseenProps } from "./Underseen";
-
-type PageProps<T> = T & {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
-  metaDescription: string;
-};
 
 export async function getAllReviewsProps(): Promise<AllReviewsProps> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
@@ -37,7 +28,7 @@ export async function getAllReviewsProps(): Promise<AllReviewsProps> {
   };
 }
 
-export async function getOverratedProps(): Promise<PageProps<OverratedProps>> {
+export async function getOverratedProps(): Promise<OverratedProps> {
   const {
     distinctGenres,
     distinctReleaseYears,
@@ -48,24 +39,15 @@ export async function getOverratedProps(): Promise<PageProps<OverratedProps>> {
   const values = await buildReviewValues(overratedDisappointments, false);
 
   return {
-    backdropImageProps: await getBackdropImageProps(
-      "overrated",
-      BackdropImageConfig,
-    ),
-    deck: "One and two star movies with an above-average IMDb rating.",
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "title-asc",
-    metaDescription:
-      "Feeling contrarian? Behold my one and two star reviews of movies that somehow received and above-average IMDb rating.",
     values,
   };
 }
 
-export async function getUnderratedProps(): Promise<
-  PageProps<UnderratedProps>
-> {
+export async function getUnderratedProps(): Promise<UnderratedProps> {
   const {
     distinctGenres,
     distinctReleaseYears,
@@ -76,22 +58,15 @@ export async function getUnderratedProps(): Promise<
   const values = await buildReviewValues(underratedSurprises, false);
 
   return {
-    backdropImageProps: await getBackdropImageProps(
-      "underrated",
-      BackdropImageConfig,
-    ),
-    deck: "Four and five star movies with a below-average IMDb rating.",
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "title-asc",
-    metaDescription:
-      "The masses are wrong. These are movies have a four or five star review despite a below-average IMDb rating.",
     values,
   };
 }
 
-export async function getUnderseenProps(): Promise<PageProps<UnderseenProps>> {
+export async function getUnderseenProps(): Promise<UnderseenProps> {
   const {
     distinctGenres,
     distinctReleaseYears,
@@ -102,17 +77,10 @@ export async function getUnderseenProps(): Promise<PageProps<UnderseenProps>> {
   const values = await buildReviewValues(underseenGems, false);
 
   return {
-    backdropImageProps: await getBackdropImageProps(
-      "underseen",
-      BackdropImageConfig,
-    ),
-    deck: "Four and five star movies with a below average number of IMDb votes.",
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "title-asc",
-    metaDescription:
-      "Looking for something new? Behold my four and five star reviews of movies with a below average number of IMDb votes.",
     values,
   };
 }

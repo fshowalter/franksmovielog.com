@@ -35,6 +35,25 @@ function buildNamespaceImportPart(namespaceImports, hasDefault) {
     const namespaceStr = `* as ${namespaceImports[0].local.name}`;
     return hasDefault ? `, ${namespaceStr}` : namespaceStr;
 }
+/**
+ * Safely format the import source string
+ */
+function formatImportSource(source) {
+    // If source.raw exists and is a string, use it directly
+    if (typeof source.raw === 'string') {
+        return source.raw;
+    }
+    // Otherwise, wrap source.value in quotes
+    if (typeof source.value === 'string') {
+        // Check if it already has quotes
+        if (source.value.startsWith('"') || source.value.startsWith("'")) {
+            return source.value;
+        }
+        return `"${source.value}"`;
+    }
+    // Fallback - shouldn't happen in practice
+    return `"${String(source.value)}"`;
+}
 const rule = {
     create(context) {
         return {
@@ -67,12 +86,11 @@ const rule = {
                     context.report({
                         fix(fixer) {
                             const fixes = [];
-                            const source = importNode.source.raw || importNode.source.value;
+                            const sourceStr = formatImportSource(importNode.source);
                             // Build the type import statement
                             const typeImports = typeSpecifiers
                                 .map((spec) => buildNamedSpecifier(spec))
                                 .join(", ");
-                            const sourceStr = typeof source === 'string' ? source : `"${source}"`;
                             const typeImportStatement = `import type { ${typeImports} } from ${sourceStr};`;
                             // Build the value import statement
                             let valueImportStatement = "";

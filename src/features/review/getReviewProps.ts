@@ -1,25 +1,14 @@
-import { PosterListItemImageConfig } from "src/components/poster-list/PosterListItem";
-
-import {
-  getFixedWidthPosterImageProps,
-  getFluidWidthPosterImageProps,
-} from "~/api/posters";
-import { allReviews, loadContent, loadExcerptHtml } from "~/api/reviews";
+import { getFixedWidthPosterImageProps } from "~/api/posters";
+import { loadContent, loadExcerptHtml, type Review } from "~/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "~/api/stills";
 import { MoreReviewsImageConfig } from "~/components/more-reviews/MoreReviews";
 
-import type { Props } from "./Review";
+import type { ReviewProps } from "./Review";
 
 import { PosterImageConfig } from "./Credits";
 import { StillImageConfig } from "./Review";
 
-export async function getProps(slug: string): Promise<Props> {
-  const { reviews } = await allReviews();
-
-  const review = reviews.find((review) => {
-    return review.slug === slug;
-  })!;
-
+export async function getReviewProps(review: Review): Promise<ReviewProps> {
   return {
     moreFromCastAndCrew: await Promise.all(
       review.moreCastAndCrew.map(async (value) => {
@@ -72,15 +61,11 @@ export async function getProps(slug: string): Promise<Props> {
       }),
     ),
     posterImageProps: await getFixedWidthPosterImageProps(
-      slug,
+      review.slug,
       PosterImageConfig,
     ),
-    searchPosterImageProps: await getFluidWidthPosterImageProps(
-      review.slug,
-      PosterListItemImageConfig,
-    ),
-    seoImageSrc: await getOpenGraphStillSrc(slug),
-    stillImageProps: await getStillImageProps(slug, StillImageConfig),
+    seoImageSrc: await getOpenGraphStillSrc(review.slug),
+    stillImageProps: await getStillImageProps(review.slug, StillImageConfig),
     value: await loadContent(review),
   };
 }

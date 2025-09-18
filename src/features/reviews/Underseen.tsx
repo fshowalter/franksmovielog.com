@@ -107,15 +107,3 @@ export function Underseen({
     </FilterAndSortContainer>
   );
 }
-
-export function UnderseenStrictWrapper({
-  props,
-}: {
-  props: UnderseenProps;
-}): React.JSX.Element {
-  return (
-    <StrictMode>
-      <Underseen {...props} />
-    </StrictMode>
-  );
-}

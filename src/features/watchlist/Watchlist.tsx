@@ -146,15 +146,3 @@ export function Watchlist({
     </FilterAndSortContainer>
   );
 }
-
-export function WatchlistStrictWrapper({
-  props,
-}: {
-  props: WatchlistProps;
-}): React.JSX.Element {
-  return (
-    <StrictMode>
-      <Watchlist {...props} />
-    </StrictMode>
-  );
-}

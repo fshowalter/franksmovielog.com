@@ -1,24 +1,32 @@
 ---
 import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { Backdrop } from "~/components/backdrop/Backdrop";
-import { Layout as ComponentLayout } from "~/components/layout/Layout";
-import { getProps } from "~/features/viewings/getProps";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { getViewingsProps } from "~/features/viewings/getViewingsProps";
 import { Viewings } from "~/features/viewings/Viewings";
 
-const props = await getProps();
+const viewingsProps = await getViewingsProps();
+const backdropImageProps = await getLayoutBackdropImageProps("viewings");
 
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
+const deck = '"We have such sights to show you!"';
+const metaDescription =
+  "A list of every movie I've seen since 2012. Filter by title, release year, viewing year, venue, medium, or genre. Sort by oldest or newest.";
 ---
 
 <AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{ description: metaDescription }}
   openGraph={{ description: deck, type: "website" }}
   title="Viewing Log"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop deck={deck} imageProps={backdropImageProps} title="Viewing Log" />
-    <Viewings client:load {...interactiveProps} />
-  </ComponentLayout>
+  <Layout
+    className="bg-subtle"
+    backdrop={{
+      deck,
+      imageProps: backdropImageProps,
+      title: "Viewing Log",
+    }}
+  >
+    <Viewings client:load {...viewingsProps} />
+  </Layout>
 </AstroPageShell>

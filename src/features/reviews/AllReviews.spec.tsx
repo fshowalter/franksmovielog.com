@@ -22,21 +22,8 @@ import {
 } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-import type { AllReviewsProps } from "./AllReviews";
-
-import { AllReviewsStrictWrapper } from "./AllReviews";
-import {
-  baseReviewProps,
-  createReviewValue,
-  resetTestIdCounter,
-} from "./Reviews.testHelper";
-
-const createProps = (
-  overrides: Partial<AllReviewsProps> = {},
-): AllReviewsProps => ({
-  ...baseReviewProps,
-  ...overrides,
-});
+import { AllReviews } from "./AllReviews";
+import { baseProps, createReviewValue, resetTestIdCounter } from "./testHelper";
 
 describe("AllReviews", () => {
   beforeEach(() => {
@@ -58,7 +45,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Apostle");
@@ -66,19 +53,26 @@ describe("AllReviews", () => {
 
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("The Apostle")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Halloween")).not.toBeInTheDocument();
-      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Halloween"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Thing"),
+      ).not.toBeInTheDocument();
     });
 
     it("filters by genres", async ({ expect }) => {
       const reviews = [
         createReviewValue({ genres: ["Horror"], title: "The Exorcist" }),
         createReviewValue({ genres: ["Horror", "Sci-Fi"], title: "Alien" }),
-        createReviewValue({ genres: ["Sci-Fi", "Adventure"], title: "Star Wars" }),
+        createReviewValue({
+          genres: ["Sci-Fi", "Adventure"],
+          title: "Star Wars",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await clickGenresFilterOption(user, "Horror");
@@ -87,7 +81,9 @@ describe("AllReviews", () => {
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("The Exorcist")).toBeInTheDocument();
       expect(within(posterList).getByText("Alien")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Star Wars")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Star Wars"),
+      ).not.toBeInTheDocument();
     });
 
     it("filters by release year range", async ({ expect }) => {
@@ -98,7 +94,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillReleaseYearFilter(user, "1970", "1980");
@@ -107,7 +103,9 @@ describe("AllReviews", () => {
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("The Godfather")).toBeInTheDocument();
       expect(within(posterList).getByText("Jaws")).toBeInTheDocument();
-      expect(within(posterList).queryByText("The Matrix")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Matrix"),
+      ).not.toBeInTheDocument();
     });
 
     it("filters by review year range", async ({ expect }) => {
@@ -118,7 +116,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillReviewYearFilter(user, "2019", "2021");
@@ -127,7 +125,9 @@ describe("AllReviews", () => {
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Review 2019")).toBeInTheDocument();
       expect(within(posterList).getByText("Review 2020")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Review 2022")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Review 2022"),
+      ).not.toBeInTheDocument();
     });
 
     it("filters by grade range", async ({ expect }) => {
@@ -138,7 +138,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillGradeFilter(user, "B-", "B+");
@@ -146,8 +146,12 @@ describe("AllReviews", () => {
 
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Good Movie")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Bad Movie")).not.toBeInTheDocument();
-      expect(within(posterList).queryByText("Great Movie")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Bad Movie"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Great Movie"),
+      ).not.toBeInTheDocument();
     });
   });
 
@@ -160,7 +164,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Title (A → Z)");
 
@@ -182,7 +186,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Title (Z → A)");
 
@@ -198,13 +202,25 @@ describe("AllReviews", () => {
 
     it("sorts by release date oldest first", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ releaseSequence: 2, releaseYear: "1990", title: "Movie 1990" }),
-        createReviewValue({ releaseSequence: 1, releaseYear: "1970", title: "Movie 1970" }),
-        createReviewValue({ releaseSequence: 3, releaseYear: "2010", title: "Movie 2010" }),
+        createReviewValue({
+          releaseSequence: 2,
+          releaseYear: "1990",
+          title: "Movie 1990",
+        }),
+        createReviewValue({
+          releaseSequence: 1,
+          releaseYear: "1970",
+          title: "Movie 1970",
+        }),
+        createReviewValue({
+          releaseSequence: 3,
+          releaseYear: "2010",
+          title: "Movie 2010",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -220,13 +236,25 @@ describe("AllReviews", () => {
 
     it("sorts by release date newest first", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ releaseSequence: 1, releaseYear: "1970", title: "Movie 1970" }),
-        createReviewValue({ releaseSequence: 2, releaseYear: "1990", title: "Movie 1990" }),
-        createReviewValue({ releaseSequence: 3, releaseYear: "2010", title: "Movie 2010" }),
+        createReviewValue({
+          releaseSequence: 1,
+          releaseYear: "1970",
+          title: "Movie 1970",
+        }),
+        createReviewValue({
+          releaseSequence: 2,
+          releaseYear: "1990",
+          title: "Movie 1990",
+        }),
+        createReviewValue({
+          releaseSequence: 3,
+          releaseYear: "2010",
+          title: "Movie 2010",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Release Date (Newest First)");
 
@@ -248,7 +276,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Grade (Best First)");
 
@@ -270,7 +298,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Grade (Worst First)");
 
@@ -292,7 +320,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Review Date (Oldest First)");
 
@@ -314,7 +342,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Review Date (Newest First)");
 
@@ -337,7 +365,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Halloween");
@@ -346,7 +374,9 @@ describe("AllReviews", () => {
 
       let posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Halloween")).toBeInTheDocument();
-      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Thing"),
+      ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       await clickClearFilters(user);
@@ -369,7 +399,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Halloween");
@@ -377,7 +407,9 @@ describe("AllReviews", () => {
 
       let posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Halloween")).toBeInTheDocument();
-      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Thing"),
+      ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Different");
@@ -385,7 +417,9 @@ describe("AllReviews", () => {
 
       posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Halloween")).toBeInTheDocument();
-      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Thing"),
+      ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       expect(getTitleFilter()).toHaveValue("Halloween");
@@ -404,14 +438,16 @@ describe("AllReviews", () => {
       );
 
       const user = getUserWithFakeTimers();
-      render(<AllReviewsStrictWrapper props={createProps({ values: reviews })} />);
+      render(<AllReviews {...baseProps} values={reviews} />);
 
       const posterList = getGroupedPosterList();
 
       // Should show first 100 movies
       expect(within(posterList).getByText("Movie 1")).toBeInTheDocument();
       expect(within(posterList).getByText("Movie 100")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Movie 101")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Movie 101"),
+      ).not.toBeInTheDocument();
 
       await clickShowMore(user);
 

@@ -3,7 +3,6 @@ import type { Review, ReviewContent } from "~/api/reviews";
 import type { StillImageProps } from "~/api/stills";
 
 import { Grade } from "~/components/grade/Grade";
-import { Layout } from "~/components/layout/Layout";
 import { MoreReviews } from "~/components/more-reviews/MoreReviews";
 import { Still } from "~/components/still/Still";
 import { SubHeading } from "~/components/sub-heading/SubHeading";
@@ -28,14 +27,13 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
 });
 
-export type Props = {
+export type ReviewProps = {
   moreFromCastAndCrew: React.ComponentProps<
     typeof MoreFromCastAndCrew
   >["values"];
   moreInCollections: React.ComponentProps<typeof MoreInCollections>["values"];
   moreReviews: React.ComponentProps<typeof MoreReviews>["values"];
   posterImageProps: PosterImageProps;
-  searchPosterImageProps: PosterImageProps;
   seoImageSrc: string;
   stillImageProps: StillImageProps;
   value: Review & ReviewContent;
@@ -46,18 +44,12 @@ export function Review({
   moreInCollections,
   moreReviews,
   posterImageProps,
-  searchPosterImageProps,
   seoImageSrc,
   stillImageProps,
   value,
-}: Props): React.JSX.Element {
+}: ReviewProps): React.JSX.Element {
   return (
-    <Layout
-      className="flex flex-col"
-      data-pagefind-body
-      data-pagefind-meta={`image:${searchPosterImageProps.src}`}
-      hasBackdrop={false}
-    >
+    <>
       <header
         className={`
           relative z-base mb-8 flex flex-col items-center px-[8%] pt-10
@@ -178,7 +170,7 @@ export function Review({
         seoImageSrc={seoImageSrc}
         title={value.title}
       />
-    </Layout>
+    </>
   );
 }
 
@@ -250,7 +242,9 @@ function OriginalTitle({
   return <div className={className}>({value})</div>;
 }
 
-function ViewingHistory({ value }: Pick<Props, "value">): React.JSX.Element {
+function ViewingHistory({
+  value,
+}: Pick<ReviewProps, "value">): React.JSX.Element {
   const viewings: ReviewContent["viewings"] = value.viewings;
   return (
     <aside className="w-full max-w-popout">
