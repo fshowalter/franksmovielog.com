@@ -14,6 +14,32 @@ This is Frank's Movie Log, a personal movie review and tracking website built wi
 - **Testing**: Vitest with React Testing Library
 - **Browser Support**: Same as Tailwind https://tailwindcss.com/docs/compatibility
 
+## Major Refactor (2025)
+
+The codebase underwent a significant architectural refactoring to improve maintainability, reduce duplication, and better separate concerns. Key changes include:
+
+1. **Component Architecture Overhaul**:
+   - Migrated from large, monolithic components (e.g., `CastAndCrew.tsx`, `Collections.tsx`) to smaller, composable units
+   - Introduced a new `filter-and-sort` component system with reusable filtering/sorting logic
+   - Split components into atomic units (e.g., `list-item-*` components for different list item aspects)
+
+2. **New Abstraction Layers**:
+   - **Filterers** (`src/filterers/`): Pure functions for filtering data
+   - **Sorters** (`src/sorters/`): Pure functions for sorting data
+   - **Groupers** (`src/groupers/`): Pure functions for grouping data
+   - **Reducers** (`src/reducers/`): State management for filters, sorts, and pagination
+   - **Hooks** (`src/hooks/`): Reusable React hooks for common patterns
+
+3. **Astro Integration**:
+   - Created `src/astro/` directory for Astro-specific components and utilities
+   - Introduced `AstroPageShell.astro` as a base template for all pages
+   - Separated search and navigation logic into dedicated modules
+
+4. **File Naming Convention**:
+   - API files now use kebab-case (e.g., `cast-and-crew.ts` instead of `castAndCrew.ts`)
+   - Maintained PascalCase for React components
+   - Consistent naming patterns throughout the codebase
+
 ## Key Architectural Decision: Hybrid Static/Interactive
 
 This site uses Astro's partial hydration strategy:
@@ -38,9 +64,15 @@ This site uses Astro's partial hydration strategy:
 ## Key Directories
 
 - `src/pages/` - Astro page routes
-- `src/components/` - React components
-- `src/layouts/` - Base layouts and scripts
-- `src/api/` - Data processing and API functions
+- `src/components/` - React components (now organized into feature-specific subdirectories)
+- `src/astro/` - Astro-specific components and utilities
+- `src/api/` - Data processing and API functions (now using kebab-case naming)
+- `src/filterers/` - Pure functions for filtering data
+- `src/sorters/` - Pure functions for sorting data
+- `src/groupers/` - Pure functions for grouping data
+- `src/reducers/` - State management reducers for filters and sorting
+- `src/hooks/` - Reusable React hooks
+- `src/layouts/` - Base layouts and scripts (deprecated, moved to astro/)
 - `content/` - Reviews, viewings, and data files
 - `public/` - Static assets
 
@@ -112,10 +144,14 @@ Add specially formatted comments throughout the codebase, where appropriate, for
 
 ## Common Patterns
 
-1. **Data Loading**: Use getProps functions to fetch data at build time
-2. **State Management**: Component-level state with useReducer for complex state
-3. **Filtering**: Use reducer pattern for list filtering/sorting
+1. **Data Loading**: Use getProps functions to fetch data at build time (now typically in page files directly)
+2. **State Management**: Dedicated reducers in `src/reducers/` for different data types
+3. **Filtering & Sorting**:
+   - Use pure functions in `src/filterers/` and `src/sorters/`
+   - Compose with hooks from `src/hooks/` for UI integration
+   - Unified `FilterAndSortContainer` component for consistent UI
 4. **Images**: Responsive images with Astro's Image component
+5. **Component Composition**: Small, focused components composed together rather than monolithic components
 
 ## Performance Considerations
 
@@ -148,18 +184,24 @@ Add specially formatted comments throughout the codebase, where appropriate, for
 
 ## Recent Updates
 
+- **Major refactor (2025)**: Complete component architecture overhaul (see above)
 - Migrated to Tailwind v4
 - Updated to Astro v5
 - Using Vite for bundling
 - React 19 with experimental compiler
+- Introduced ESLint rule for type-only imports
+- Reorganized test structure with better snapshot testing
 
 ## Important Notes
 
+- **Component Organization**: Components are now organized by feature/purpose in subdirectories
+- **Separation of Concerns**: Business logic (filtering, sorting, grouping) is separated from UI components
+- **Pure Functions**: Prefer pure functions in `filterers/`, `sorters/`, and `groupers/` for testability
 - **Before adding JavaScript**: Consider if the feature can be achieved with CSS only
 - **When creating new pages**: Default to static unless interactivity is required
 - Always check existing patterns before implementing new features
 - Use semantic HTML and proper ARIA attributes
-- Follow existing component structure and naming
+- Follow existing component structure and naming (subdirectories for related components)
 - Test on mobile viewports
 - Keep bundle size minimal
 - Avoid casts unless absolutely necessary
