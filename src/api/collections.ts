@@ -15,14 +15,19 @@ import { allCollectionsJson } from "./data/collections-json";
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
-// Cache at API level - lazy caching for better build performance
 let cachedCollectionsJson: CollectionJson[];
-// ENABLE_CACHE is now imported from utils/cache
 
+/**
+ * Collection with rendered HTML description.
+ */
 export type Collection = CollectionJson & {
   descriptionHtml: string;
 };
 
+/**
+ * Retrieves all collections with their descriptions rendered as HTML.
+ * @returns Object containing array of all collections
+ */
 export async function allCollections(): Promise<{
   collections: Collection[];
 }> {
@@ -44,6 +49,11 @@ export async function allCollections(): Promise<{
   });
 }
 
+/**
+ * Retrieves detailed information for a specific collection.
+ * @param slug - The collection slug identifier
+ * @returns Collection details with distinct genres and release years from its titles
+ */
 export async function collectionDetails(slug: string): Promise<{
   collection: Collection;
   distinctGenres: string[];

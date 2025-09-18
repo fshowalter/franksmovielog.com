@@ -105,6 +105,7 @@ function pagefind(): AstroIntegration {
     name: "pagefind",
   };
 }
+console.log(process.env);
 
 // https://astro.build/config
 export default defineConfig({
@@ -117,7 +118,9 @@ export default defineConfig({
   integrations: [
     react({
       babel: {
-        plugins: [["babel-plugin-react-compiler"]],
+        plugins: process.env.TEST_WITH_COVERAGE
+          ? []
+          : [["babel-plugin-react-compiler"]],
       },
     }),
     sitemap({

@@ -24,11 +24,17 @@ import { filterCollections } from "./filterCollections";
 import { Filters } from "./Filters";
 import { sortCollections } from "./sortCollections";
 
+/**
+ * Props for the Collections component.
+ */
 export type CollectionsProps = {
   initialSort: CollectionsSort;
   values: CollectionsValue[];
 };
 
+/**
+ * Value object for a collection item.
+ */
 export type CollectionsValue = {
   avatarImageProps: AvatarImageProps | undefined;
   name: string;
@@ -36,6 +42,13 @@ export type CollectionsValue = {
   slug: string;
 };
 
+/**
+ * Collections component for displaying and filtering collection items.
+ * @param props - Component props
+ * @param props.initialSort - Initial sort configuration
+ * @param props.values - Collection values to display
+ * @returns Collections component with filtering and sorting capabilities
+ */
 export function Collections({
   initialSort,
   values,

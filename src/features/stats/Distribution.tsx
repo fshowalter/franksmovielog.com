@@ -5,6 +5,13 @@ type Value = {
   name: string;
 };
 
+/**
+ * Displays a distribution chart with labeled bars.
+ * @param props - Component props
+ * @param props.title - The chart title
+ * @param props.values - Array of distribution values with name and count
+ * @returns Distribution chart with gradient bars
+ */
 export function Distribution({
   title,
   values,

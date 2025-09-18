@@ -47,8 +47,15 @@ const ViewingJsonSchema = z
     };
   });
 
+/**
+ * Type for viewing JSON data.
+ */
 export type ViewingJson = z.infer<typeof ViewingJsonSchema>;
 
+/**
+ * Reads and parses all viewing data from the JSON file.
+ * @returns Array of parsed viewing records
+ */
 export async function allViewingsJson(): Promise<ViewingJson[]> {
   return await perfLogger.measure("allViewingsJson", async () => {
     const json = await fs.readFile(viewingsJsonFile, "utf8");

@@ -9,6 +9,9 @@ import { getContentPath } from "./utils/getContentPath";
 
 const reviewsMarkdownDirectory = getContentPath("reviews");
 
+/**
+ * Type definition for parsed markdown review data.
+ */
 export type MarkdownReview = {
   date: Date;
   grade: string;
@@ -26,6 +29,10 @@ const DataSchema = z.object({
   synopsis: z.optional(z.string()),
 });
 
+/**
+ * Retrieves all review markdown files from the content directory.
+ * @returns Array of parsed review markdown with metadata
+ */
 export async function allReviewsMarkdown(): Promise<MarkdownReview[]> {
   return await perfLogger.measure("allReviewsMarkdown", async () => {
     return await parseAllReviewsMarkdown();

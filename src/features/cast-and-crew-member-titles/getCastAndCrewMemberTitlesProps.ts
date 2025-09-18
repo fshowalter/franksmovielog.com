@@ -5,6 +5,11 @@ import { displayDate } from "~/utils/displayDate";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
 
+/**
+ * Fetches data for a cast/crew member's titles page including their filmography with poster images.
+ * @param slug - The slug identifier for the cast/crew member
+ * @returns Props for the CastAndCrewMemberTitles component
+ */
 export async function getCastAndCrewMemberTitlesProps(
   slug: string,
 ): Promise<CastAndCrewMemberTitlesProps> {

@@ -4,6 +4,12 @@ import { ListItemName } from "~/components/list-item-name/ListItemName";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 
+/**
+ * List item component for displaying a cast or crew member.
+ * @param props - Component props
+ * @param props.value - Cast/crew member data to display
+ * @returns List item with avatar, name, credits, and review count
+ */
 export function CastAndCrewListItem({
   value,
 }: {

@@ -36,6 +36,13 @@ type ReactElementWithType = ReactElement & {
   type: string;
 };
 
+/**
+ * Converts a React component to a JPEG image for Open Graph meta tags.
+ * Uses Satori for SVG generation and Sharp for image conversion.
+ * Includes caching to avoid regenerating identical images.
+ * @param component - The React component to render as an image
+ * @returns JPEG image buffer
+ */
 export async function componentToImage(
   component: ReturnType<OpenGraphImageComponent>,
 ): Promise<Uint8Array<ArrayBuffer>> {

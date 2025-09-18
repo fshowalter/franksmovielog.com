@@ -3,11 +3,29 @@ import type { PosterImageProps } from "~/api/posters";
 import { Poster } from "~/components/poster/Poster";
 import { toSentence } from "~/utils/toSentence";
 
+/**
+ * Configuration for poster images in credits section.
+ */
 export const PosterImageConfig = {
   height: 372,
   width: 248,
 };
 
+/**
+ * Component for displaying movie credits information.
+ * @param props - Component props
+ * @param props.className - Optional CSS classes
+ * @param props.countries - Production countries
+ * @param props.directorNames - Director names
+ * @param props.originalTitle - Original movie title if different
+ * @param props.posterImageProps - Poster image configuration
+ * @param props.principalCastNames - Principal cast member names
+ * @param props.releaseYear - Year of release
+ * @param props.runtimeMinutes - Runtime in minutes
+ * @param props.title - Movie title
+ * @param props.writerNames - Writer names
+ * @returns Credits component with poster and movie details
+ */
 export function Credits({
   className,
   countries,

@@ -1,5 +1,13 @@
 import { gradeMap } from "./gradeMap";
 
+/**
+ * Displays a visual letter grade with star icons.
+ * @param props - Component props
+ * @param props.className - Additional CSS classes
+ * @param props.height - Height of the grade display in pixels
+ * @param props.value - Letter grade value (e.g., "A", "B+")
+ * @returns Grade display with star icons
+ */
 export function Grade({
   className,
   height,

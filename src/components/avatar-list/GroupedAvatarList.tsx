@@ -1,5 +1,14 @@
 import { GroupingListItem } from "~/components/grouping-list-item/GroupingListItem";
 
+/**
+ * List component that displays avatars grouped by categories.
+ * @param props - Component props
+ * @param props.children - Render function for individual items
+ * @param props.className - Optional CSS classes for the list
+ * @param props.groupedValues - Map of group names to items
+ * @param props.groupItemClassName - Optional CSS classes for group items
+ * @returns Grouped avatar list element
+ */
 export function GroupedAvatarList<T>({
   children,
   className,

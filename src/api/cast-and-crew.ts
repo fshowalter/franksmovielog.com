@@ -5,12 +5,17 @@ import type { CastAndCrewMemberJson } from "./data/cast-and-crew-json";
 
 import { allCastAndCrewJson } from "./data/cast-and-crew-json";
 
-// Cache at API level - lazy caching for better build performance
 let cachedCastAndCrewJson: CastAndCrewMemberJson[];
-// ENABLE_CACHE is now imported from utils/cache
 
+/**
+ * Cast or crew member with their titles and metadata.
+ */
 export type CastAndCrewMember = CastAndCrewMemberJson & {};
 
+/**
+ * Retrieves all cast and crew members.
+ * @returns Object containing array of all cast and crew members
+ */
 export async function allCastAndCrew(): Promise<{
   castAndCrew: CastAndCrewMember[];
 }> {
@@ -27,6 +32,11 @@ export async function allCastAndCrew(): Promise<{
   });
 }
 
+/**
+ * Retrieves details for a specific cast or crew member.
+ * @param slug - The unique identifier for the cast/crew member
+ * @returns Member details with distinct genres, release years, and review years from their titles
+ */
 export async function castAndCrewMember(slug: string): Promise<{
   distinctGenres: string[];
   distinctReleaseYears: string[];

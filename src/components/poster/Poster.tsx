@@ -9,6 +9,15 @@ type PosterProps = React.ImgHTMLAttributes<HTMLImageElement> & {
   width: number;
 };
 
+/**
+ * Renders a movie poster image.
+ * @param props - Component props
+ * @param props.className - Additional CSS classes
+ * @param props.decoding - Image decoding strategy
+ * @param props.imageProps - Poster image source and srcset
+ * @param props.loading - Loading strategy ("eager" or "lazy")
+ * @returns Poster image element with aspect ratio
+ */
 export function Poster({
   className,
   decoding,

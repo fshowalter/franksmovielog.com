@@ -9,6 +9,13 @@ type FilterableReviewedTitle = FilterableTitle & {
   reviewYear: string;
 };
 
+/**
+ * Filters an array of reviewed titles based on grade, review year, and other criteria.
+ * @param filterValues - Object containing filter values including grade and review year
+ * @param sortedValues - Array of reviewed titles to filter
+ * @param extraFilters - Additional custom filter functions to apply
+ * @returns Filtered array of reviewed titles matching all filter criteria
+ */
 export function filterReviewedTitles<TValue extends FilterableReviewedTitle>(
   filterValues: ReviewedTitleFiltersValues,
   sortedValues: TValue[],
@@ -23,9 +30,6 @@ export function filterReviewedTitles<TValue extends FilterableReviewedTitle>(
   return filterTitles(filterValues, sortedValues, filters);
 }
 
-/**
- * Create a Genre filter function
- */
 function createGradeFilter<TValue extends FilterableReviewedTitle>(
   filterValue?: [number, number],
 ) {

@@ -1,6 +1,10 @@
 import { Logo } from "./Logo";
 import { TableOfContents } from "./TableOfContents";
 
+/**
+ * Site footer with logo, navigation, and "to top" link.
+ * @returns Footer element with site information and navigation
+ */
 export function Footer(): React.JSX.Element {
   return (
     <footer className={"bg-footer text-white"}>

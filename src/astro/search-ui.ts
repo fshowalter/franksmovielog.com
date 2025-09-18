@@ -1,5 +1,8 @@
 import { debounce } from "~/utils/debounce";
 
+/**
+ * Search results returned by Pagefind API.
+ */
 export type PagefindSearchResults = {
   filters: Record<string, Record<string, number>>;
   results: PagefindResult[];

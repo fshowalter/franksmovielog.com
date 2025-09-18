@@ -2,6 +2,9 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { FilterAndSortHeader } from "./FilterAndSortHeader";
 
+/**
+ * Props for sort functionality.
+ */
 export type SortProps<T extends string> = {
   currentSortValue: T;
   onSortChange: React.ChangeEventHandler<HTMLSelectElement>;
@@ -24,6 +27,12 @@ type Props<T extends string> = {
   totalCount: number;
 };
 
+/**
+ * Reusable container component for lists with filtering and sorting capabilities.
+ * Provides a drawer-based filter UI and sort dropdown with responsive behavior.
+ * @param props - Component properties
+ * @returns Filter and sort container with drawer and header controls
+ */
 export function FilterAndSortContainer<T extends string>({
   children,
   className,

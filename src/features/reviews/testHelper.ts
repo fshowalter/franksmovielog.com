@@ -3,6 +3,11 @@ import type { ReviewsValue } from "./ReviewsListItem";
 // Shared test helper for all review feature specs
 let testIdCounter = 0;
 
+/**
+ * Creates a test review value with optional overrides.
+ * @param overrides - Partial review values to override defaults
+ * @returns Complete review value for testing
+ */
 export function createReviewValue(
   overrides: Partial<ReviewsValue> = {},
 ): ReviewsValue {
@@ -29,6 +34,10 @@ export function createReviewValue(
   };
 }
 
+/**
+ * Resets the test ID counter to 0 for isolated tests.
+ * @returns void
+ */
 export function resetTestIdCounter(): void {
   testIdCounter = 0;
 }

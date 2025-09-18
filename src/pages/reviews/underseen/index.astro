@@ -22,7 +22,6 @@ const metaDescription =
   title="Underseen Gems"
 >
   <Layout
-    className="bg-subtle"
     backdrop={{
       breadcrumb: {
         href: "/reviews/",
@@ -32,6 +31,7 @@ const metaDescription =
       imageProps: backdropImageProps,
       title: "Underseen",
     }}
+    className="bg-subtle"
   >
     <ReviewsSubNav active="underseen" />
     <Underseen client:load {...underseenProps} />

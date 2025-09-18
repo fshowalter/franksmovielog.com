@@ -11,6 +11,10 @@ import { displayDate } from "~/utils/displayDate";
 import type { AllTimeStatsProps } from "./AlltimeStats";
 import type { YearStatsProps } from "./YearStats";
 
+/**
+ * Fetches all-time statistics data including most watched movies, directors, performers, and writers.
+ * @returns Props for the AlltimeStats component
+ */
 export async function getAllTimeStatsProps(): Promise<AllTimeStatsProps> {
   const stats = await alltimeStats();
   const distinctStatYears = await allStatYears();
@@ -33,6 +37,11 @@ export async function getAllTimeStatsProps(): Promise<AllTimeStatsProps> {
   };
 }
 
+/**
+ * Fetches statistics data for a specific year including most watched movies and people.
+ * @param year - The year to fetch statistics for
+ * @returns Props for the YearStats component
+ */
 export async function getYearStatsProps(year: string): Promise<YearStatsProps> {
   const stats = await statsForYear(year);
   const distinctStatYears = await allStatYears();

@@ -1,8 +1,14 @@
+/**
+ * Union type for all filter-related actions.
+ */
 export type FiltersAction =
   | ApplyFiltersAction
   | ClearFiltersAction
   | ResetFiltersAction;
 
+/**
+ * State shape for filter functionality.
+ */
 export type FiltersState<TValue> = {
   activeFilterValues: Record<string, unknown>;
   pendingFilterValues: Record<string, unknown>;
@@ -24,14 +30,28 @@ type ResetFiltersAction = {
   type: "filters/reset";
 };
 
+/**
+ * Creates an action to apply pending filters to active state.
+ * @returns Apply filters action
+ */
 export function createApplyFiltersAction(): ApplyFiltersAction {
   return { type: "filters/applied" };
 }
 
+/**
+ * Creates an action to clear all pending filters.
+ * @returns Clear filters action
+ */
 export function createClearFiltersAction(): ClearFiltersAction {
   return { type: "filters/cleared" };
 }
 
+/**
+ * Creates the initial state for filter functionality.
+ * @param options - Configuration object
+ * @param options.values - Array of values to be filtered
+ * @returns Initial filters state with empty filter values
+ */
 export function createInitialFiltersState<TValue>({
   values,
 }: {
@@ -44,10 +64,20 @@ export function createInitialFiltersState<TValue>({
   };
 }
 
+/**
+ * Creates an action to reset filters to initial state.
+ * @returns Reset filters action
+ */
 export function createResetFiltersAction(): ResetFiltersAction {
   return { type: "filters/reset" };
 }
 
+/**
+ * Reducer function for handling filter state updates.
+ * @param state - Current filter state
+ * @param action - Filter action to process
+ * @returns Updated state with filter changes applied
+ */
 export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
   state: TState,
   action: FiltersAction,
@@ -67,6 +97,11 @@ export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
   }
 }
 
+/**
+ * Selector to determine if there are any pending filters.
+ * @param state - Current filter state
+ * @returns True if there are pending filters, false otherwise
+ */
 export function selectHasPendingFilters<
   TValue,
   TState extends FiltersState<TValue>,

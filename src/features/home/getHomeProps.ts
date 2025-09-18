@@ -5,6 +5,10 @@ import type { HomeProps } from "./Home";
 
 import { HomeStillImageConfig } from "./Home";
 
+/**
+ * Fetches data for the home page including recent reviews with excerpts and still images.
+ * @returns Props for the Home component with 12 most recent reviews
+ */
 export async function getHomeProps(): Promise<HomeProps> {
   const titles = await mostRecentReviews(12);
 

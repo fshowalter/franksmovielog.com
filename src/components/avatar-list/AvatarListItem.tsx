@@ -2,11 +2,22 @@ import type { AvatarImageProps } from "~/api/avatars";
 
 import { AvatarListItemAvatar } from "./AvatarListItemAvatar";
 
+/**
+ * Image configuration for avatar list items.
+ */
 export const AvatarListItemImageConfig = {
   height: 80,
   width: 80,
 };
 
+/**
+ * List item component for avatar-based content display.
+ * @param props - Component props
+ * @param props.avatarImageProps - Avatar image properties
+ * @param props.children - Content to display alongside the avatar
+ * @param props.className - Optional CSS classes
+ * @returns Avatar list item element
+ */
 export function AvatarListItem({
   avatarImageProps,
   children,

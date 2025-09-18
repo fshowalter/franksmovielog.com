@@ -6,6 +6,13 @@ type FilterableCollection = {
   name: string;
 };
 
+/**
+ * Filters an array of collections based on name and custom filter criteria.
+ * @param filterValues - Object containing filter values, primarily name filter
+ * @param sortedValues - Array of collections to filter
+ * @param extraFilters - Additional custom filter functions to apply
+ * @returns Filtered array of collections matching all filter criteria
+ */
 export function filterCollections<TValue extends FilterableCollection>(
   filterValues: CollectionFiltersValues,
   sortedValues: TValue[],

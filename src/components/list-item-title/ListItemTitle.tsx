@@ -1,3 +1,12 @@
+/**
+ * Renders a movie title with year, optionally as a link to the review.
+ * @param props - Component props
+ * @param props.className - Additional CSS classes
+ * @param props.slug - URL slug for linking to the review (if reviewed)
+ * @param props.title - The movie title
+ * @param props.year - The movie release year
+ * @returns Title with year, linked if slug is provided
+ */
 export function ListItemTitle({
   className = "",
   slug,

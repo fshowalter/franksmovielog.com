@@ -36,8 +36,15 @@ const WatchlistTitleJsonSchema = z
     };
   });
 
+/**
+ * Type definition for watchlist title data from JSON.
+ */
 export type WatchlistTitleJson = z.infer<typeof WatchlistTitleJsonSchema>;
 
+/**
+ * Retrieves all watchlist titles from JSON data.
+ * @returns Array of watchlist title entries
+ */
 export async function allWatchlistTitlesJson(): Promise<WatchlistTitleJson[]> {
   return await perfLogger.measure("allWatchlistTitlesJson", async () => {
     const json = await fs.readFile(watchlistTitlesJsonFile, "utf8");

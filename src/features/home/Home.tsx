@@ -4,10 +4,16 @@ import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
 import { ReviewCard } from "~/components/review-card/ReviewCard";
 import { SubHeading } from "~/components/sub-heading/SubHeading";
 
+/**
+ * Props for the Home component.
+ */
 export type HomeProps = {
   values: ReviewCardValue[];
 };
 
+/**
+ * Image configuration for home page still images.
+ */
 export const HomeStillImageConfig = {
   height: 360,
   sizes:
@@ -15,6 +21,12 @@ export const HomeStillImageConfig = {
   width: 640,
 };
 
+/**
+ * Home page component displaying latest reviews.
+ * @param props - Component props
+ * @param props.values - Review card values to display
+ * @returns Home page component with latest reviews
+ */
 export function Home({ values }: HomeProps): React.JSX.Element {
   return (
     <nav className="mx-auto max-w-(--breakpoint-desktop) bg-subtle pb-8">

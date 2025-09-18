@@ -24,8 +24,15 @@ const YearStatsJsonSchema = z.object({
   year: z.string(),
 });
 
+/**
+ * Type definition for year statistics data from JSON.
+ */
 export type YearStatsJson = z.infer<typeof YearStatsJsonSchema>;
 
+/**
+ * Retrieves all year statistics from JSON data files.
+ * @returns Array of year statistics entries
+ */
 export async function allYearStatsJson(): Promise<YearStatsJson[]> {
   return await perfLogger.measure("allYearStatsJson", async () => {
     return await parseAllYearStatsJson();

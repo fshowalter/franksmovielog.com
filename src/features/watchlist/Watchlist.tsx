@@ -1,4 +1,4 @@
-import { StrictMode, useReducer } from "react";
+import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
 
@@ -27,6 +27,9 @@ import {
 } from "./Watchlist.reducer";
 import { WatchlistListItem } from "./WatchlistListItem";
 
+/**
+ * Props for the Watchlist component.
+ */
 export type WatchlistProps = {
   defaultPosterImageProps: PosterImageProps;
   distinctCollections: string[];
@@ -39,6 +42,9 @@ export type WatchlistProps = {
   values: WatchlistValue[];
 };
 
+/**
+ * Value object for a watchlist item.
+ */
 export type WatchlistValue = {
   genres: string[];
   imdbId: string;
@@ -52,6 +58,20 @@ export type WatchlistValue = {
   watchlistWriterNames: string[];
 };
 
+/**
+ * Component for displaying the watchlist with filtering and sorting.
+ * @param props - Component props
+ * @param props.defaultPosterImageProps - Default poster image configuration
+ * @param props.distinctCollections - Available collections for filtering
+ * @param props.distinctDirectors - Available directors for filtering
+ * @param props.distinctGenres - Available genres for filtering
+ * @param props.distinctPerformers - Available performers for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctWriters - Available writers for filtering
+ * @param props.initialSort - Initial sort configuration
+ * @param props.values - Watchlist values to display
+ * @returns Watchlist component with filtering and sorting capabilities
+ */
 export function Watchlist({
   defaultPosterImageProps,
   distinctCollections,

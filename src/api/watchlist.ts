@@ -6,6 +6,9 @@ import type { WatchlistTitleJson } from "./data/watchlist-titles-json";
 import { watchlistProgressJson } from "./data/watchlist-progress-json";
 import { allWatchlistTitlesJson } from "./data/watchlist-titles-json";
 
+/**
+ * Watchlist progress statistics.
+ */
 export type WatchlistProgress = WatchlistProgressJson & {};
 
 type WatchlistTitle = WatchlistTitleJson & {};
@@ -20,6 +23,10 @@ type WatchlistTitles = {
   watchlistTitles: WatchlistTitle[];
 };
 
+/**
+ * Retrieves all watchlist titles with distinct metadata for filtering.
+ * @returns Object containing watchlist titles and distinct values for directors, genres, performers, etc.
+ */
 export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   const watchlistTitlesJson = await allWatchlistTitlesJson();
   const distinctDirectors = new Set<string>();
@@ -64,6 +71,10 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   };
 }
 
+/**
+ * Retrieves watchlist progress statistics.
+ * @returns Watchlist progress data including counts and completion metrics
+ */
 export async function watchlistProgress(): Promise<WatchlistProgress> {
   return await watchlistProgressJson();
 }

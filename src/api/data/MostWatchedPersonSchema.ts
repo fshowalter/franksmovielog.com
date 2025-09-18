@@ -41,6 +41,9 @@ const MostWatchedPersonViewingSchema = z
     };
   });
 
+/**
+ * Zod schema for most watched person data.
+ */
 export const MostWatchedPersonSchema = z
   .object({
     count: z.number(),
@@ -53,4 +56,7 @@ export const MostWatchedPersonSchema = z
     return { count, name, slug, viewings };
   });
 
+/**
+ * Type for most watched person data.
+ */
 export type MostWatchedPerson = z.infer<typeof MostWatchedPersonSchema>;

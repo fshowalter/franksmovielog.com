@@ -1,3 +1,10 @@
+/**
+ * Renders a linked name for use in list items.
+ * @param props - Component props
+ * @param props.href - Link destination URL
+ * @param props.name - The display name text
+ * @returns Styled anchor element with name
+ */
 export function ListItemName({
   href,
   name,

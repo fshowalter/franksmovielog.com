@@ -27,6 +27,9 @@ export type ReviewedTitleFiltersAction =
   | ReviewYearFilterChangedAction
   | TitleFiltersAction;
 
+/**
+ * State shape for reviewed title filters.
+ */
 export type ReviewedTitleFiltersState<TValue> = Omit<
   TitleFiltersState<TValue>,
   "activeFilterValues" | "pendingFilterValues"
@@ -35,6 +38,9 @@ export type ReviewedTitleFiltersState<TValue> = Omit<
   pendingFilterValues: ReviewedTitleFiltersValues;
 };
 
+/**
+ * Filter values for reviewed titles.
+ */
 export type ReviewedTitleFiltersValues = TitleFiltersValues & {
   gradeValue?: [number, number];
   reviewYear?: [string, string];
@@ -50,12 +56,23 @@ type ReviewYearFilterChangedAction = {
   values: [string, string];
 };
 
+/**
+ * Creates an action for changing the grade filter range.
+ * @param values - Tuple of [minGrade, maxGrade] values
+ * @returns Grade filter changed action
+ */
 export function createGradeFilterChangedAction(
   values: [number, number],
 ): GradeFilterChangedAction {
   return { type: "reviewedTitleFilters/gradeFilterChanged", values };
 }
 
+/**
+ * Creates initial state for reviewed title filters.
+ * @param options - Configuration object
+ * @param options.values - Array of values to filter
+ * @returns Initial state for reviewed title filters
+ */
 export function createInitialReviewedTitleFiltersState<TValue>({
   values,
 }: {
@@ -72,13 +89,23 @@ export function createInitialReviewedTitleFiltersState<TValue>({
   };
 }
 
+/**
+ * Creates an action for changing the review year filter range.
+ * @param values - Tuple of [minYear, maxYear] values
+ * @returns Review year filter changed action
+ */
 export function createReviewYearFilterChangedAction(
   values: [string, string],
 ): ReviewYearFilterChangedAction {
   return { type: "reviewedTitleFilters/reviewYearFilterChanged", values };
 }
 
-// Create reducer function
+/**
+ * Reducer function for reviewed title filter state management.
+ * @param state - Current filter state
+ * @param action - Action to process
+ * @returns Updated state
+ */
 export function reviewedTitleFiltersReducer<
   TValue,
   TState extends ReviewedTitleFiltersState<TValue>,

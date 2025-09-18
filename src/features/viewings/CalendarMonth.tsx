@@ -4,6 +4,14 @@ import type { ViewingsValue } from "./Viewings";
 import { CalendarCell } from "./CalendarCell";
 import { useCalendar } from "./useCalendar";
 
+/**
+ * Renders a monthly calendar view of movie viewings.
+ * @param props - Component props
+ * @param props.currentMonthDate - Date string for the month to display
+ * @param props.filteredValues - Array of filtered viewing values
+ * @param props.sort - Current sort order
+ * @returns Calendar table with viewing data
+ */
 export function CalendarMonth({
   currentMonthDate,
   filteredValues,

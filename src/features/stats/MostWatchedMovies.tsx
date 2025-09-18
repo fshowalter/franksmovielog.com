@@ -4,6 +4,9 @@ import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
+/**
+ * Value object for a most watched movie item.
+ */
 export type MostWatchedMoviesListItemValue = {
   count: number;
   imdbId: string;
@@ -13,6 +16,13 @@ export type MostWatchedMoviesListItemValue = {
   title: string;
 };
 
+/**
+ * Component for displaying most watched movies.
+ * @param props - Component props
+ * @param props.className - CSS classes for styling
+ * @param props.values - Array of most watched movies
+ * @returns Most watched movies list or false if no values
+ */
 export function MostWatchedMovies({
   className,
   values,

@@ -45,6 +45,14 @@ const gradeOptions = [
   </option>,
 ];
 
+/**
+ * Grade range selector with from/to letter grade dropdowns.
+ * @param props - Component props
+ * @param props.initialValues - Initial [min, max] grade values
+ * @param props.label - Field label text
+ * @param props.onGradeChange - Handler for grade range changes
+ * @returns Grade range selector with two dropdowns
+ */
 export function GradeField({
   initialValues,
   label,

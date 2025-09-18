@@ -4,6 +4,15 @@ import { Backdrop } from "./Backdrop";
 import { Footer } from "./Footer";
 import { Mast } from "./Mast";
 
+/**
+ * Main layout wrapper component with header, footer, and optional backdrop.
+ * @param props - Component props
+ * @param props.backdrop - Optional backdrop image configuration
+ * @param props.children - Page content to render
+ * @param props.className - Additional CSS classes for the main element
+ * @param props.hideLogo - Whether to hide the logo in the header
+ * @returns Layout container with skip link, header, main content, and footer
+ */
 export function Layout({
   backdrop,
   children,

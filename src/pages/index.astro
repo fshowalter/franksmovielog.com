@@ -1,9 +1,9 @@
 ---
 import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
 import { getHomeProps } from "~/features/home/getHomeProps";
 import { Home } from "~/features/home/Home";
-import { Layout } from "~/components/layout/Layout";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
 
 const homeProps = await getHomeProps();
 const backdropImageProps = await getLayoutBackdropImageProps("home");
@@ -22,12 +22,12 @@ const metaDescription =
   title="Frank's Movie Log"
 >
   <Layout
-    hideLogo={true}
     backdrop={{
       deck,
       imageProps: backdropImageProps,
       title: "Frank's Movie Log",
     }}
+    hideLogo={true}
   >
     <Home {...homeProps} />
   </Layout>

@@ -18,6 +18,12 @@ type Props = {
   values: CastAndCrewMember[];
 };
 
+/**
+ * Component displaying more reviews from cast and crew members.
+ * @param props - Component props
+ * @param props.values - Cast and crew members with their reviewed titles
+ * @returns Array of MoreReviews components for each cast/crew member
+ */
 export function MoreFromCastAndCrew({ values }: Props): React.JSX.Element[] {
   return values.map((value) => (
     <MoreReviews key={value.slug} values={value.titles}>

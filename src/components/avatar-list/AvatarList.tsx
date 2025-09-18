@@ -1,3 +1,10 @@
+/**
+ * Ordered list container for avatar items.
+ * @param props - Component props
+ * @param props.children - Avatar list items to render
+ * @param props.className - Optional CSS classes
+ * @returns Ordered list element for avatars
+ */
 export function AvatarList({
   children,
   className,

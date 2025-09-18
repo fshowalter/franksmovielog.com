@@ -1,3 +1,11 @@
+/**
+ * Renders styled label text for form fields.
+ * @param props - Component props
+ * @param props.as - The element type to render (defaults to "span")
+ * @param props.htmlFor - ID of the associated form control
+ * @param props.value - The label text to display
+ * @returns Styled label text element
+ */
 export function LabelText({
   as = "span",
   htmlFor,

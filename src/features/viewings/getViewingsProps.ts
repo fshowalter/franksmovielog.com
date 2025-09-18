@@ -6,6 +6,10 @@ import type { ViewingsProps, ViewingsValue } from "./Viewings";
 
 import { sortViewings } from "./sortViewings";
 
+/**
+ * Fetches data for the viewings page including poster images and metadata.
+ * @returns Props for the Viewings component with all viewings sorted by date
+ */
 export async function getViewingsProps(): Promise<ViewingsProps> {
   const {
     distinctMedia,

@@ -1,3 +1,10 @@
+/**
+ * Renders a gradient bar representing a value relative to a maximum.
+ * @param props - Component props
+ * @param props.maxValue - The maximum value for the bar
+ * @param props.value - The current value to display
+ * @returns Gradient bar element with width based on value/maxValue ratio
+ */
 export function BarGradient({
   maxValue,
   value,

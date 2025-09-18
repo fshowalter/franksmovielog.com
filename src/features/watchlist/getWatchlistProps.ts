@@ -4,6 +4,10 @@ import { PosterListItemImageConfig } from "~/components/poster-list/PosterListIt
 
 import type { WatchlistProps } from "./Watchlist";
 
+/**
+ * Fetches data for the watchlist page including titles and filter metadata.
+ * @returns Props for the Watchlist component with all watchlist titles
+ */
 export async function getWatchlistProps(): Promise<WatchlistProps> {
   const {
     distinctCollections,

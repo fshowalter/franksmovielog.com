@@ -1,3 +1,9 @@
+/**
+ * Displays a comma-separated list of genres.
+ * @param props - Component props
+ * @param props.values - Array of genre names to display
+ * @returns Formatted genre list with proper comma separation
+ */
 export function ListItemGenres({
   values,
 }: {

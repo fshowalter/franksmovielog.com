@@ -10,6 +10,15 @@ type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
   width: number;
 };
 
+/**
+ * Renders a movie still image with responsive loading.
+ * @param props - Component props
+ * @param props.className - Additional CSS classes
+ * @param props.decoding - Image decoding strategy
+ * @param props.imageProps - Still image source and srcset
+ * @param props.loading - Loading strategy ("eager" or "lazy")
+ * @returns Responsive still image element
+ */
 export function Still({
   className,
   decoding,

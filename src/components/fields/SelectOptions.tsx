@@ -1,3 +1,9 @@
+/**
+ * Renders option elements for select fields with an "All" option.
+ * @param props - Component props
+ * @param props.options - Array of option values to render
+ * @returns Option elements including "All" plus provided options
+ */
 export function SelectOptions({
   options,
 }: {

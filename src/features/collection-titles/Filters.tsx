@@ -14,6 +14,16 @@ import {
   createTitleFilterChangedAction,
 } from "./CollectionTitles.reducer";
 
+/**
+ * Filter controls for the collection titles page.
+ * @param props - Component props
+ * @param props.dispatch - Reducer dispatch function for filter actions
+ * @param props.distinctGenres - Available genres for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctReviewYears - Available review years for filtering
+ * @param props.filterValues - Current active filter values
+ * @returns Filter input components for collection titles
+ */
 export function Filters({
   dispatch,
   distinctGenres,

@@ -7,6 +7,13 @@ export type CalendarCellData = {
   viewings?: ViewingsValue[];
 };
 
+/**
+ * Hook to generate calendar grid data for displaying viewings in a monthly calendar.
+ * @param currentMonthDate - Date string for the current month to display
+ * @param filteredValues - Array of filtered viewing values
+ * @param sort - Current sort order for optimized iteration
+ * @returns Array of calendar rows with cells containing viewing data
+ */
 export function useCalendar(
   currentMonthDate: string,
   filteredValues: ViewingsValue[],

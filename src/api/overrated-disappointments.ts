@@ -13,6 +13,10 @@ type OverratedDisappointments = {
   overratedDisappointments: OverratedDisappointment[];
 };
 
+/**
+ * Retrieves all overrated disappointment movies with metadata for filtering.
+ * @returns Object containing overrated disappointments and distinct values for genres, release years, and review years
+ */
 export async function allOverratedDisappointments(): Promise<OverratedDisappointments> {
   const overratedJson = await allOverratedJson();
   const distinctReleaseYears = new Set<string>();

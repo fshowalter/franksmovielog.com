@@ -4,6 +4,9 @@ import type { WatchlistProgress } from "~/api/watchlist";
 import { WatchlistProgressCallouts } from "./WatchlistProgressCallouts";
 import { WatchlistProgressForGroup } from "./WatchlistProgressForGroup";
 
+/**
+ * Props for the WatchlistProgress component.
+ */
 export type WatchlistProgressProps = {
   progress: React.ComponentProps<typeof WatchlistProgressCallouts> & {
     collectionDetails: (WatchlistProgress["collectionDetails"][number] & {
@@ -21,6 +24,12 @@ export type WatchlistProgressProps = {
   };
 };
 
+/**
+ * Component displaying watchlist progress statistics and details.
+ * @param props - Component props
+ * @param props.progress - Progress data including totals and details by category
+ * @returns Watchlist progress component with callouts and grouped details
+ */
 export function WatchlistProgress({
   progress,
 }: WatchlistProgressProps): React.JSX.Element {

@@ -1,5 +1,9 @@
 import { TitleSortOptions } from "./TitleSortOptions";
 
+/**
+ * Component that renders sort options for reviewed title lists.
+ * @returns Sort option elements including title and review-specific options
+ */
 export function ReviewedTitleSortOptions(): React.JSX.Element {
   return (
     <>

@@ -8,6 +8,13 @@ type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
   width: number;
 };
 
+/**
+ * Avatar image component with fallback placeholder.
+ * @param props - Component props
+ * @param props.className - Additional CSS classes
+ * @param props.imageProps - Avatar image source and srcset
+ * @returns Avatar image or SVG placeholder
+ */
 export function Avatar({
   className,
   imageProps,

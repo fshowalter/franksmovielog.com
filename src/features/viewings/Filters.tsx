@@ -15,6 +15,17 @@ import {
   createViewingYearFilterChangedAction,
 } from "./Viewings.reducer";
 
+/**
+ * Filter controls for the viewings page.
+ * @param props - Component props
+ * @param props.dispatch - Reducer dispatch function for filter actions
+ * @param props.distinctMedia - Available media types for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctVenues - Available venues for filtering
+ * @param props.distinctViewingYears - Available viewing years for filtering
+ * @param props.filterValues - Current active filter values
+ * @returns Filter input components for viewings
+ */
 export function Filters({
   dispatch,
   distinctMedia,

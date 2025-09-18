@@ -2,6 +2,9 @@ import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
 
 import { ReviewCard } from "~/components/review-card/ReviewCard";
 
+/**
+ * Image configuration for review cards in the more reviews section.
+ */
 export const MoreReviewsImageConfig = {
   height: 360,
   sizes:
@@ -9,6 +12,13 @@ export const MoreReviewsImageConfig = {
   width: 640,
 };
 
+/**
+ * Grid component displaying related review cards.
+ * @param props - Component props
+ * @param props.children - Heading element to display above reviews
+ * @param props.values - Array of review data to display
+ * @returns Navigation section with review cards grid
+ */
 export function MoreReviews({
   children,
   values,

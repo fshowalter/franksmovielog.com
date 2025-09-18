@@ -38,8 +38,15 @@ const OverratedJsonSchema = z
     };
   });
 
+/**
+ * Type definition for overrated movie data from JSON.
+ */
 export type OverratedJson = z.infer<typeof OverratedJsonSchema>;
 
+/**
+ * Retrieves all overrated movies from JSON data.
+ * @returns Array of overrated movie entries
+ */
 export async function allOverratedJson(): Promise<OverratedJson[]> {
   return await perfLogger.measure("allOverratedJson", async () => {
     const json = await fs.readFile(overratedJsonFile, "utf8");

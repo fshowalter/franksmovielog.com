@@ -8,6 +8,11 @@ import type { ReviewProps } from "./Review";
 import { PosterImageConfig } from "./Credits";
 import { StillImageConfig } from "./Review";
 
+/**
+ * Fetches complete data for a review page including related content, images, and excerpts.
+ * @param review - The review to fetch data for
+ * @returns Props for the Review component with all related content
+ */
 export async function getReviewProps(review: Review): Promise<ReviewProps> {
   return {
     moreFromCastAndCrew: await Promise.all(

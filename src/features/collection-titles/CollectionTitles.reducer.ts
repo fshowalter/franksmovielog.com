@@ -39,13 +39,16 @@ export {
 export { createShowMoreAction } from "~/reducers/showMoreReducer";
 
 /**
- * Union type of all reviewed work-specific filter actions for Reviews page
+ * Union type of all actions for collection titles state management.
  */
 export type CollectionTitlesAction =
   | MaybeReviewedTitleFiltersAction
   | ShowMoreAction
   | SortAction<CollectionTitlesSort>;
 
+/**
+ * Filter values for collection titles.
+ */
 export type CollectionTitlesFiltersValues = MaybeReviewedTitleFiltersValues;
 
 type CollectionTitlesState = Omit<
@@ -58,6 +61,13 @@ type CollectionTitlesState = Omit<
     pendingFilterValues: CollectionTitlesFiltersValues;
   };
 
+/**
+ * Creates the initial state for collection titles.
+ * @param options - Configuration options
+ * @param options.initialSort - Initial sort configuration
+ * @param options.values - Collection title values
+ * @returns Initial state for collection titles reducer
+ */
 export function createInitialState({
   initialSort,
   values,
@@ -78,6 +88,12 @@ export function createInitialState({
   };
 }
 
+/**
+ * Reducer function for collection titles state management.
+ * @param state - Current state
+ * @param action - Action to process
+ * @returns Updated state
+ */
 export function reducer(
   state: CollectionTitlesState,
   action: CollectionTitlesAction,
@@ -95,4 +111,7 @@ export function reducer(
   }
 }
 
+/**
+ * Action creator for collection titles sort actions.
+ */
 export const createSortAction = createSortActionCreator<CollectionTitlesSort>();

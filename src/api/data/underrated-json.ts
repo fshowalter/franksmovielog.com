@@ -38,8 +38,15 @@ const UnderratedJsonSchema = z
     };
   });
 
+/**
+ * Type definition for underrated movie data from JSON.
+ */
 export type UnderratedJson = z.infer<typeof UnderratedJsonSchema>;
 
+/**
+ * Retrieves all underrated movies from JSON data.
+ * @returns Array of underrated movie entries
+ */
 export async function allUnderratedJson(): Promise<UnderratedJson[]> {
   return await perfLogger.measure("allUnderratedJson", async () => {
     const json = await fs.readFile(underratedJsonFile, "utf8");

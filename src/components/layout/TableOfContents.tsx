@@ -2,6 +2,10 @@ import type { NavItem } from "./navItems";
 
 import { navItems } from "./navItems";
 
+/**
+ * Navigation menu displaying site sections.
+ * @returns Ordered list of navigation menu items
+ */
 export function TableOfContents(): React.JSX.Element {
   return (
     <ol className={`flex flex-col gap-y-6`}>

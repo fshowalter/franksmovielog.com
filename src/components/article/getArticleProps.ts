@@ -4,6 +4,12 @@ import { MoreReviewsImageConfig } from "~/components/more-reviews/MoreReviews";
 
 import type { ArticleProps } from "./Article";
 
+/**
+ * Fetches props for the Article component including recent reviews with stills.
+ * @param options - Configuration object
+ * @param options.content - Optional markdown content for the article
+ * @returns Props for the Article component
+ */
 export async function getProps({
   content,
 }: {

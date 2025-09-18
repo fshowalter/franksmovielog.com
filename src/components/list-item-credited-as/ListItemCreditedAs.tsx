@@ -1,4 +1,11 @@
 import { capitalize } from "~/utils/capitalize";
+/**
+ * Displays credited roles (e.g., "Director, Writer") in a list item.
+ * @param props - Component props
+ * @param props.className - Additional CSS classes
+ * @param props.values - Array of credit roles to display
+ * @returns Comma-separated list of capitalized credit roles
+ */
 export function ListItemCreditedAs({
   className = "",
   values,

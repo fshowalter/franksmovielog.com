@@ -11,6 +11,13 @@ import type { FilterableTitle } from "./filterTitles";
 import { createReviewedStatusFilter } from "./createReviewedStatusFilter";
 import { filterTitles } from "./filterTitles";
 
+/**
+ * Filters titles that may or may not be reviewed based on various criteria.
+ * @param filterValues - Current filter configuration
+ * @param sortedValues - Array of sorted titles to filter
+ * @param extraFilters - Additional custom filter functions
+ * @returns Filtered array of titles
+ */
 export function filterMaybeReviewedTitles<
   TValue extends FilterableMaybeReviewedTitle,
 >(

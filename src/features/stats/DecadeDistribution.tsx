@@ -1,5 +1,11 @@
 import { Distribution } from "./Distribution";
 
+/**
+ * Distribution chart component for decade-based statistics.
+ * @param props - Component props
+ * @param props.values - Distribution data values
+ * @returns Distribution chart for decades
+ */
 export function DecadeDistribution({
   values,
 }: {

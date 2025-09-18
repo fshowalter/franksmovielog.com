@@ -1,3 +1,10 @@
+/**
+ * Link component for filter and sort header navigation.
+ * @param props - Component props
+ * @param props.href - Link destination URL
+ * @param props.text - Link text to display
+ * @returns Styled header link with hover effect
+ */
 export function FilterAndSortHeaderLink({
   href,
   text,

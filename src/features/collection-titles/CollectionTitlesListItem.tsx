@@ -7,6 +7,12 @@ import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 import type { CollectionTitlesValue } from "./CollectionTitles";
 
+/**
+ * List item for displaying a title within a collection.
+ * @param props - Component props
+ * @param props.value - Title data including review info if reviewed
+ * @returns List item with poster, title, grade, and details
+ */
 export function CollectionTitlesListItem({
   value,
 }: {

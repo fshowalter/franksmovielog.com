@@ -7,6 +7,13 @@ type GroupableCollection = {
   reviewCount: number;
 };
 
+/**
+ * Groups collections by name letter or custom grouping function.
+ * @param filteredValues - Array of collections to group
+ * @param sort - Current sort configuration
+ * @param extraGrouper - Optional custom grouping function
+ * @returns Map of grouped collections
+ */
 export function groupCollections<
   TValue extends GroupableCollection,
   TSort extends string,

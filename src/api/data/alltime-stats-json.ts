@@ -30,8 +30,15 @@ const AlltimeStatsJsonSchema = z.object({
   watchlistTitlesReviewedCount: z.number(),
 });
 
+/**
+ * Type for all-time statistics JSON data.
+ */
 export type AlltimeStatsJson = z.infer<typeof AlltimeStatsJsonSchema>;
 
+/**
+ * Loads and parses all-time statistics from JSON file.
+ * @returns Parsed all-time statistics data
+ */
 export async function alltimeStatsJson(): Promise<AlltimeStatsJson> {
   return await perfLogger.measure("alltimeStatsJson", async () => {
     const json = await fs.readFile(alltimeStatsFile, "utf8");

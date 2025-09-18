@@ -10,6 +10,12 @@ const items: Record<string, SubNavValue> = {
   underseen: { href: "/reviews/underseen/", text: "Underseen" },
 };
 
+/**
+ * Sub-navigation component for reviews section.
+ * @param props - Component props
+ * @param props.active - The currently active navigation item key
+ * @returns Navigation component with review category links
+ */
 export function ReviewsSubNav({
   active,
 }: {

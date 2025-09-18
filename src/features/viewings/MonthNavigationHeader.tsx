@@ -5,6 +5,15 @@ import {
   createPreviousMonthClickedAction,
 } from "./Viewings.reducer";
 
+/**
+ * Header component for calendar month navigation.
+ * @param props - Component props
+ * @param props.currentMonthDate - Date string for the currently displayed month
+ * @param props.dispatch - Reducer dispatch function for navigation actions
+ * @param props.nextMonthDate - Date string for the next available month
+ * @param props.prevMonthDate - Date string for the previous available month
+ * @returns Navigation header with month display and prev/next buttons
+ */
 export function MonthNavigationHeader({
   currentMonthDate,
   dispatch,

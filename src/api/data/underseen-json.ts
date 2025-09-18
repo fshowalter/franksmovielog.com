@@ -38,8 +38,15 @@ const UnderseenJsonSchema = z
     };
   });
 
+/**
+ * Type for underseen movie JSON data.
+ */
 export type UnderseenJson = z.infer<typeof UnderseenJsonSchema>;
 
+/**
+ * Reads and parses all underseen movies data from the JSON file.
+ * @returns Array of parsed underseen movie records
+ */
 export async function allUnderseenJson(): Promise<UnderseenJson[]> {
   return await perfLogger.measure("allUnderseenJson", async () => {
     const json = await fs.readFile(underseenJsonFile, "utf8");

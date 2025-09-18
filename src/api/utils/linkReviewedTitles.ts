@@ -1,3 +1,9 @@
+/**
+ * Converts IMDB ID spans to links for reviewed titles.
+ * @param text - HTML text containing IMDB ID spans
+ * @param reviewedTitles - Array of reviewed titles with IMDB IDs and slugs
+ * @returns HTML with reviewed titles converted to links
+ */
 export function linkReviewedTitles(
   text: string,
   reviewedTitles: { imdbId: string; slug: string }[],

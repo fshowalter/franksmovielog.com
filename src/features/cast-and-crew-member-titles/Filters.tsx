@@ -16,6 +16,17 @@ import {
   createTitleFilterChangedAction,
 } from "./CastAndCrewMemberTitles.reducer";
 
+/**
+ * Filter controls for cast and crew member titles page.
+ * @param props - Component props
+ * @param props.dispatch - Reducer dispatch function for filter actions
+ * @param props.distinctCreditKinds - Available credit types for filtering
+ * @param props.distinctGenres - Available genres for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctReviewYears - Available review years for filtering
+ * @param props.filterValues - Current active filter values
+ * @returns Filter input components for cast and crew member titles
+ */
 export function Filters({
   dispatch,
   distinctCreditKinds,

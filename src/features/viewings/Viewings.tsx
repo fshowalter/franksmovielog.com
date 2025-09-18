@@ -25,6 +25,9 @@ import {
   selectHasPendingFilters,
 } from "./Viewings.reducer";
 
+/**
+ * Props for the Viewings component.
+ */
 export type ViewingsProps = {
   distinctMedia: readonly string[];
   distinctReleaseYears: readonly string[];
@@ -34,6 +37,9 @@ export type ViewingsProps = {
   values: ViewingsValue[];
 };
 
+/**
+ * Value object for a viewing item.
+ */
 export type ViewingsValue = {
   medium?: string;
   posterImageProps: PosterImageProps;
@@ -48,6 +54,17 @@ export type ViewingsValue = {
   viewingYear: string;
 };
 
+/**
+ * Component for displaying viewing history with calendar view.
+ * @param props - Component props
+ * @param props.distinctMedia - Available media types for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctVenues - Available venues for filtering
+ * @param props.distinctViewingYears - Available viewing years for filtering
+ * @param props.initialSort - Initial sort configuration
+ * @param props.values - Viewing values to display
+ * @returns Viewings component with calendar view and filtering
+ */
 export function Viewings({
   distinctMedia,
   distinctReleaseYears,

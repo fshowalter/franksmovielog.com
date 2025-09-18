@@ -14,6 +14,9 @@ import { MostWatchedWriters } from "./MostWatchedWriters";
 import { StatsNavigation } from "./StatsNavigation";
 import { VenueDistribution } from "./VenueDistribution";
 
+/**
+ * Props for the AlltimeStats component.
+ */
 export type AllTimeStatsProps = {
   distinctStatYears: readonly string[];
   mostWatchedDirectors: MostWatchedPeopleListItemValue[];
@@ -33,6 +36,17 @@ export type AllTimeStatsProps = {
   >;
 };
 
+/**
+ * Component for displaying all-time statistics.
+ * @param props - Component props
+ * @param props.distinctStatYears - Available years for stats
+ * @param props.mostWatchedDirectors - Most watched directors data
+ * @param props.mostWatchedMovies - Most watched movies data
+ * @param props.mostWatchedPerformers - Most watched performers data
+ * @param props.mostWatchedWriters - Most watched writers data
+ * @param props.stats - Statistics data
+ * @returns All-time stats component with distributions and most watched lists
+ */
 export function AlltimeStats({
   distinctStatYears,
   mostWatchedDirectors,

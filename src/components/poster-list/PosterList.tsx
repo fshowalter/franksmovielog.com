@@ -1,3 +1,10 @@
+/**
+ * Container for displaying a responsive grid of poster items.
+ * @param props - Component props
+ * @param props.children - Poster list items to render
+ * @param props.className - Optional CSS classes
+ * @returns Responsive poster list container
+ */
 export function PosterList({
   children,
   className = "",

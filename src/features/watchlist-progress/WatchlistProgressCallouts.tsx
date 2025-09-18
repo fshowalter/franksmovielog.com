@@ -1,3 +1,18 @@
+/**
+ * Component displaying watchlist progress statistics callouts.
+ * @param props - Component props
+ * @param props.collectionReviewed - Number of reviewed collection items
+ * @param props.collectionTotal - Total number of collection items
+ * @param props.directorReviewed - Number of reviewed director items
+ * @param props.directorTotal - Total number of director items
+ * @param props.performerReviewed - Number of reviewed performer items
+ * @param props.performerTotal - Total number of performer items
+ * @param props.reviewed - Total number of reviewed items
+ * @param props.total - Total number of items
+ * @param props.writerReviewed - Number of reviewed writer items
+ * @param props.writerTotal - Total number of writer items
+ * @returns Progress statistics callout elements
+ */
 export function WatchlistProgressCallouts({
   collectionReviewed,
   collectionTotal,

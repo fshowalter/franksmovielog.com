@@ -33,7 +33,7 @@ export {
 } from "~/reducers/titleFiltersReducer";
 
 /**
- * Union type of all reviewed work-specific filter actions for Reviews page
+ * Union type of all actions for watchlist state management.
  */
 export type WatchlistAction =
   | ShowMoreAction
@@ -45,7 +45,7 @@ import type { WatchlistSort } from "./sortWatchlistValues";
 import type { WatchlistValue } from "./Watchlist";
 
 /**
- * Type definition for Reviews page filter values
+ * Filter values for watchlist.
  */
 export type WatchlistFiltersValues = ExtraWatchlistFiltersValues &
   TitleFiltersValues;
@@ -64,7 +64,7 @@ type WatchlistFilterChangedAction = {
 };
 
 /**
- * Internal state type for Reviews page reducer
+ * Internal state type for watchlist reducer.
  */
 type WatchlistState = Omit<
   TitleFiltersState<WatchlistValue>,
@@ -77,13 +77,11 @@ type WatchlistState = Omit<
   };
 
 /**
- * Initializes the state for the Reviews page reducer.
- * Sets up initial filtering state, sort order, and processes the review values.
- *
- * @param params - Initialization parameters
- * @param params.initialSort - Initial sort order for the reviews
- * @param params.values - Array of review data to initialize with
- * @returns Initial state for the Reviews page reducer
+ * Creates the initial state for watchlist.
+ * @param options - Configuration options
+ * @param options.initialSort - Initial sort configuration
+ * @param options.values - Watchlist values
+ * @returns Initial state for watchlist reducer
  */
 export function createInitialState({
   initialSort,
@@ -105,6 +103,12 @@ export function createInitialState({
   };
 }
 
+/**
+ * Creates an action for changing watchlist-specific filters.
+ * @param filter - The filter to change
+ * @param value - The new filter value
+ * @returns Watchlist filter changed action
+ */
 export function createWatchlistFilterChangedAction(
   filter: keyof ExtraWatchlistFiltersValues,
   value: string,
@@ -113,8 +117,10 @@ export function createWatchlistFilterChangedAction(
 }
 
 /**
- * Reducer function for managing Reviews page state.
- * Handles filtering, sorting, and pagination actions for the reviews list.
+ * Reducer function for watchlist state management.
+ * @param state - Current state
+ * @param action - Action to process
+ * @returns Updated state
  */
 export function reducer(state: WatchlistState, action: WatchlistAction) {
   switch (action.type) {
@@ -147,6 +153,6 @@ function handleWatchlistFilterChanged(
 }
 
 /**
- * Action creator for sort actions specific to the Watchlist page.
+ * Action creator for watchlist sort actions.
  */
 export const createSortAction = createSortActionCreator<WatchlistSort>();

@@ -13,6 +13,10 @@ import type { OverratedProps } from "./Overrated";
 import type { UnderratedProps } from "./Underrated";
 import type { UnderseenProps } from "./Underseen";
 
+/**
+ * Fetches data for the all reviews page including poster images and metadata.
+ * @returns Props for the AllReviews component with all reviewed titles
+ */
 export async function getAllReviewsProps(): Promise<AllReviewsProps> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
     await allReviews();
@@ -28,6 +32,10 @@ export async function getAllReviewsProps(): Promise<AllReviewsProps> {
   };
 }
 
+/**
+ * Fetches data for the overrated disappointments page.
+ * @returns Props for the Overrated component with overrated titles
+ */
 export async function getOverratedProps(): Promise<OverratedProps> {
   const {
     distinctGenres,
@@ -47,6 +55,10 @@ export async function getOverratedProps(): Promise<OverratedProps> {
   };
 }
 
+/**
+ * Fetches data for the underrated surprises page.
+ * @returns Props for the Underrated component with underrated titles
+ */
 export async function getUnderratedProps(): Promise<UnderratedProps> {
   const {
     distinctGenres,
@@ -66,6 +78,10 @@ export async function getUnderratedProps(): Promise<UnderratedProps> {
   };
 }
 
+/**
+ * Fetches data for the underseen gems page.
+ * @returns Props for the Underseen component with underseen titles
+ */
 export async function getUnderseenProps(): Promise<UnderseenProps> {
   const {
     distinctGenres,

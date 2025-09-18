@@ -1,5 +1,14 @@
 import { toSentence } from "~/utils/toSentence";
 
+/**
+ * Displays the reason a title is on the watchlist based on cast, crew, or collections.
+ * @param props - Component props
+ * @param props.collectionNames - Names of collections the title belongs to
+ * @param props.directorNames - Names of directors to watch
+ * @param props.performerNames - Names of performers to watch
+ * @param props.writerNames - Names of writers to watch
+ * @returns Formatted sentence explaining watchlist inclusion
+ */
 export function ListItemWatchlistReason({
   collectionNames,
   directorNames,

@@ -14,6 +14,19 @@ import {
   createWatchlistFilterChangedAction,
 } from "./Watchlist.reducer";
 
+/**
+ * Filter controls for the watchlist page.
+ * @param props - Component props
+ * @param props.dispatch - Reducer dispatch function for filter actions
+ * @param props.distinctCollections - Available collections for filtering
+ * @param props.distinctDirectors - Available directors for filtering
+ * @param props.distinctGenres - Available genres for filtering
+ * @param props.distinctPerformers - Available performers for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctWriters - Available writers for filtering
+ * @param props.filterValues - Current active filter values
+ * @returns Filter input components for watchlist
+ */
 export function Filters({
   dispatch,
   distinctCollections,

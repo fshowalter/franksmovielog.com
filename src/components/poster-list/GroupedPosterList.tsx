@@ -2,6 +2,17 @@ import { GroupingListItem } from "~/components/grouping-list-item/GroupingListIt
 
 import { PosterList } from "./PosterList";
 
+/**
+ * Displays a grouped list of poster items with show more functionality.
+ * @param props - Component props
+ * @param props.children - Render function for each item
+ * @param props.groupedValues - Map of grouped values
+ * @param props.groupItemClassName - Optional CSS class for group items
+ * @param props.onShowMore - Handler for show more button
+ * @param props.totalCount - Total number of items
+ * @param props.visibleCount - Number of visible items
+ * @returns Grouped poster list with optional show more button
+ */
 export function GroupedPosterList<T>({
   children,
   groupedValues,

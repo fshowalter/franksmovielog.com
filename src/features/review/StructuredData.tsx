@@ -6,6 +6,17 @@ const gradeMap: Record<string, number> = {
   F: 1,
 };
 
+/**
+ * Component that renders structured data for SEO and rich snippets.
+ * @param props - Component props
+ * @param props.directorNames - Array of director names
+ * @param props.grade - Review grade letter
+ * @param props.imdbId - IMDB identifier
+ * @param props.releaseYear - Movie release year
+ * @param props.seoImageSrc - SEO image source URL
+ * @param props.title - Movie title
+ * @returns Script element with JSON-LD structured data
+ */
 export function StructuredData({
   directorNames,
   grade,

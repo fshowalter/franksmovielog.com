@@ -13,6 +13,9 @@ import { MostWatchedWriters } from "./MostWatchedWriters";
 import { StatsNavigation } from "./StatsNavigation";
 import { VenueDistribution } from "./VenueDistribution";
 
+/**
+ * Props for the YearStats component.
+ */
 export type YearStatsProps = {
   distinctStatYears: readonly string[];
   mostWatchedDirectors: MostWatchedPeopleListItemValue[];
@@ -23,6 +26,18 @@ export type YearStatsProps = {
   year: string;
 };
 
+/**
+ * Component for displaying yearly statistics.
+ * @param props - Component props
+ * @param props.distinctStatYears - Available years for stats
+ * @param props.mostWatchedDirectors - Most watched directors data
+ * @param props.mostWatchedMovies - Most watched movies data
+ * @param props.mostWatchedPerformers - Most watched performers data
+ * @param props.mostWatchedWriters - Most watched writers data
+ * @param props.stats - Statistics data for the year
+ * @param props.year - The year being displayed
+ * @returns Year stats component with distributions and most watched lists
+ */
 export function YearStats({
   distinctStatYears,
   mostWatchedDirectors,

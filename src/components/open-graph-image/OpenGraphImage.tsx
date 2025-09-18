@@ -1,3 +1,6 @@
+/**
+ * Type for OpenGraph image component.
+ */
 export type OpenGraphImageComponentType = (
   props: OpenGraphImageProps,
 ) => React.JSX.Element;
@@ -8,6 +11,14 @@ type OpenGraphImageProps = {
   title: string;
 };
 
+/**
+ * Component for generating OpenGraph preview images.
+ * @param props - Component props
+ * @param props.backdrop - Background image URL
+ * @param props.sectionHead - Section heading text
+ * @param props.title - Main title text
+ * @returns OpenGraph image component
+ */
 export function OpenGraphImage({
   backdrop,
   sectionHead = "Frank's Movie Log",

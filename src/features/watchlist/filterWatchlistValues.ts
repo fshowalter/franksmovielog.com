@@ -3,6 +3,12 @@ import { filterTitles } from "~/filterers/filterTitles";
 import type { WatchlistValue } from "./Watchlist";
 import type { WatchlistFiltersValues } from "./Watchlist.reducer";
 
+/**
+ * Filters watchlist titles based on director, performer, writer, collection, and other criteria.
+ * @param sortedValues - Array of watchlist titles to filter
+ * @param filterValues - Object containing filter values
+ * @returns Filtered array of watchlist titles
+ */
 export function filterWatchlistValues(
   sortedValues: WatchlistValue[],
   filterValues: WatchlistFiltersValues,

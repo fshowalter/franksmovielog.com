@@ -13,6 +13,10 @@ type UnderratedSurprises = {
   underratedSurprises: UnderratedSurprise[];
 };
 
+/**
+ * Retrieves all underrated surprise movies with metadata for filtering.
+ * @returns Object containing underrated surprises and distinct values for genres, release years, and review years
+ */
 export async function allUnderratedSurprises(): Promise<UnderratedSurprises> {
   const underratedJson = await allUnderratedJson();
   const distinctReleaseYears = new Set<string>();

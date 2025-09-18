@@ -6,6 +6,9 @@ import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
+/**
+ * Value object for a most watched person item.
+ */
 export type MostWatchedPeopleListItemValue = {
   count: number;
   name: string;
@@ -24,6 +27,13 @@ type ViewingSubListItemValue = {
   viewingSequence: number;
 };
 
+/**
+ * Component for displaying most watched people.
+ * @param props - Component props
+ * @param props.header - Section header text
+ * @param props.values - Array of most watched people
+ * @returns Most watched people list or false if no values
+ */
 export function MostWatchedPeople({
   header,
   values,

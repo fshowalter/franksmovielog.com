@@ -2,6 +2,10 @@ import type { Node, Parent } from "mdast";
 
 import { CONTINUE, visit } from "unist-util-visit";
 
+/**
+ * Remark plugin to remove footnote references from markdown.
+ * @returns Transformer function for the syntax tree
+ */
 export function removeFootnotes() {
   return (tree: Node) => {
     // Collect indices to remove in reverse order to avoid index shifting issues

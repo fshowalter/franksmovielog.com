@@ -3,11 +3,21 @@ import { LongFormText } from "~/components/long-form-text/LongFormText";
 import { MoreReviews } from "~/components/more-reviews/MoreReviews";
 import { MoreReviewsHeading } from "~/components/more-reviews/MoreReviewsHeading";
 
+/**
+ * Props for the Article component.
+ */
 export type ArticleProps = {
   content: string | undefined;
   recentReviews: ReviewCardValue[];
 };
 
+/**
+ * Article page component with content and recent reviews.
+ * @param props - Component props
+ * @param props.content - Markdown content for the article
+ * @param props.recentReviews - Recent review data to display
+ * @returns Article layout with content and recent reviews section
+ */
 export function Article({
   content,
   recentReviews,

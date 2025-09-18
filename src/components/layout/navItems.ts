@@ -1,9 +1,15 @@
+/**
+ * Navigation item structure with optional sub-items.
+ */
 export type NavItem = {
   subItems: NavItem[];
   target: string;
   text: string;
 };
 
+/**
+ * Main navigation structure for the site.
+ */
 export const navItems: NavItem[] = [
   {
     subItems: [],

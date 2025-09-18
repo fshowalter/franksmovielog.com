@@ -7,12 +7,15 @@ export type CollectionSort =
   | "review-count-desc";
 
 type SortableCollection = {
-  /** Year the work was published */
   name: string;
-  /** Numeric sequence for release year sorting */
   reviewCount: number;
 };
 
+/**
+ * Creates a collection sorter function with support for name and review count sorting.
+ * @param sortMap - Optional additional sort functions to extend the default sorts
+ * @returns Sorter function that sorts collections by the specified criteria
+ */
 export function createCollectionSorter<
   TValue extends SortableCollection,
   TSort extends string,
@@ -35,12 +38,6 @@ function sortName<TValue extends SortableCollection>() {
   };
 }
 
-/**
- * Creates release year-based sort functions.
- *
- * @template TValue - Type extending SortableReviewedWork
- * @returns Object with work year sort functions
- */
 function sortReviewCount<TValue extends SortableCollection>() {
   return {
     "review-count-asc": (a: TValue, b: TValue) =>

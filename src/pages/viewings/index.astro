@@ -20,12 +20,12 @@ const metaDescription =
   title="Viewing Log"
 >
   <Layout
-    className="bg-subtle"
     backdrop={{
       deck,
       imageProps: backdropImageProps,
       title: "Viewing Log",
     }}
+    className="bg-subtle"
   >
     <Viewings client:load {...viewingsProps} />
   </Layout>

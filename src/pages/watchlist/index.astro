@@ -23,12 +23,12 @@ const metaDescription =
   title="Watchlist"
 >
   <Layout
-    className="bg-subtle"
     backdrop={{
       deck,
       imageProps: backdropImageProps,
       title: "Watchlist",
     }}
+    className="bg-subtle"
   >
     <Watchlist client:load {...watchlistProps} />
   </Layout>

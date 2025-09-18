@@ -1,3 +1,9 @@
+/**
+ * Container for list item detail components.
+ * @param props - Component props
+ * @param props.children - Detail components to display
+ * @returns Flexbox container for list item details
+ */
 export function ListItemDetails({
   children,
 }: {

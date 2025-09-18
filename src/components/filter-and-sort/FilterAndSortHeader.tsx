@@ -1,5 +1,16 @@
 import type { SortProps } from "./FilterAndSortContainer";
 
+/**
+ * Header component with filter toggle, sort options, and result count.
+ * @param props - Component props
+ * @param props.filterDrawerVisible - Whether filter drawer is visible
+ * @param props.headerLinks - Optional navigation links
+ * @param props.onFilterClick - Handler for filter toggle click
+ * @param props.sortProps - Sort configuration and handlers
+ * @param props.toggleButtonRef - Ref to filter toggle button
+ * @param props.totalCount - Total number of results
+ * @returns Header with filter/sort controls and result count
+ */
 export function FilterAndSortHeader<T extends string>({
   filterDrawerVisible,
   headerLinks,

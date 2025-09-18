@@ -3,6 +3,12 @@ import { ListItemName } from "~/components/list-item-name/ListItemName";
 
 import type { CollectionsValue } from "./Collections";
 
+/**
+ * List item component for displaying a single collection.
+ * @param props - Component props
+ * @param props.value - Collection data to display
+ * @returns Collection list item with avatar, name, and review count
+ */
 export function CollectionsListItem({
   value,
 }: {

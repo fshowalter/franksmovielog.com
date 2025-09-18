@@ -1,3 +1,6 @@
+/**
+ * Type for review OpenGraph image component.
+ */
 export type ReviewOpenGraphImageComponentType = (
   props: ReviewOpenGraphImageProps,
 ) => React.JSX.Element;
@@ -9,6 +12,15 @@ type ReviewOpenGraphImageProps = {
   title: string;
 };
 
+/**
+ * OpenGraph image component for review pages.
+ * @param props - Component props
+ * @param props.backdrop - Backdrop image URL
+ * @param props.grade - Review grade letter
+ * @param props.releaseYear - Movie release year
+ * @param props.title - Movie title
+ * @returns OpenGraph image element
+ */
 export function OpenGraphImage({
   backdrop,
   grade,

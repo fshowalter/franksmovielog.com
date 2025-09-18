@@ -15,6 +15,11 @@ type SortableReviewedTitle = SortableTitle & {
   reviewSequence: number;
 };
 
+/**
+ * Creates a sorter for reviewed titles with grade and review date sorting.
+ * @param sortMap - Optional additional sort functions
+ * @returns Function that sorts reviewed titles based on the provided sort parameter
+ */
 export function createReviewedTitleSorter<
   TValue extends SortableReviewedTitle,
   TSort extends string,

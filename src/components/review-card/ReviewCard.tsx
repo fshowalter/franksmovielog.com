@@ -4,6 +4,9 @@ import { Grade } from "~/components/grade/Grade";
 import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdown";
 import { Still } from "~/components/still/Still";
 
+/**
+ * Data structure for review card content.
+ */
 export type ReviewCardValue = {
   excerpt: string;
   genres: readonly string[];
@@ -16,6 +19,15 @@ export type ReviewCardValue = {
   title: string;
 };
 
+/**
+ * Card component displaying a movie review summary.
+ * @param props - Component props
+ * @param props.as - The element type to render (defaults to "div")
+ * @param props.imageConfig - Image sizing configuration
+ * @param props.value - Review data to display
+ * @param props.variant - Visual style variant ("primary" or "secondary")
+ * @returns Review card with still image, title, grade, and excerpt
+ */
 export function ReviewCard({
   as = "div",
   imageConfig,

@@ -10,6 +10,10 @@ import { componentToImage } from "~/utils/componentToImage";
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
+/**
+ * Generates static paths for all review OpenGraph images.
+ * @returns Array of paths with review data as props
+ */
 export async function getStaticPaths() {
   const { reviews } = await allReviews();
 
@@ -28,6 +32,11 @@ export async function getStaticPaths() {
   });
 }
 
+/**
+ * API route handler for generating review-specific OpenGraph images.
+ * @param context - Route context with props
+ * @returns JPEG image response for review OpenGraph preview
+ */
 export const GET: APIRoute = async function get({ props }) {
   const { grade, slug, title, year } = props as Props;
 

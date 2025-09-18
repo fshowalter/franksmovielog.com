@@ -1,3 +1,12 @@
+/**
+ * Navigation component for stats pages.
+ * @param props - Component props
+ * @param props.className - Optional CSS classes
+ * @param props.currentYear - Currently selected year
+ * @param props.linkFunc - Function to generate links for years
+ * @param props.years - Available years for navigation
+ * @returns Stats navigation with year links
+ */
 export function StatsNavigation({
   className,
   currentYear,

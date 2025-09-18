@@ -153,8 +153,15 @@ const ReviewedTitleJsonSchema = z
     };
   });
 
+/**
+ * Type for reviewed title JSON data.
+ */
 export type ReviewedTitleJson = z.infer<typeof ReviewedTitleJsonSchema>;
 
+/**
+ * Loads and parses all reviewed titles from JSON file.
+ * @returns Array of parsed reviewed title data
+ */
 export async function allReviewedTitlesJson(): Promise<ReviewedTitleJson[]> {
   return await perfLogger.measure("allReviewedTitlesJson", async () => {
     return await parseAllReviewedTitlesJson();

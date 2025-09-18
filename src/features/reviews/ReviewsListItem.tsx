@@ -24,6 +24,12 @@ export type ReviewsValue = {
   title: string;
 };
 
+/**
+ * List item component for displaying a single review.
+ * @param props - Component props
+ * @param props.value - Review data to display
+ * @returns Review list item with poster, title, grade, and details
+ */
 export function ReviewsListItem({
   value,
 }: {

@@ -1,3 +1,11 @@
+/**
+ * List item component for grouped content sections.
+ * @param props - Component props
+ * @param props.children - Content to display in the group
+ * @param props.className - Optional CSS classes
+ * @param props.groupText - Text label for the group
+ * @returns List item with group heading and content
+ */
 export function GroupingListItem({
   children,
   className,

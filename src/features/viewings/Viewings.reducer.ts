@@ -25,7 +25,7 @@ export {
 } from "~/reducers/titleFiltersReducer";
 
 /**
- * Union type of all reviewed work-specific filter actions for Reviews page
+ * Union type of all actions for viewings state management.
  */
 export type ViewingsAction =
   | MediumFilterChangedAction
@@ -41,7 +41,7 @@ import type { ViewingsSort } from "./sortViewings";
 import type { ViewingsValue } from "./Viewings";
 
 /**
- * Type definition for Reviews page filter values
+ * Filter values for viewings.
  */
 export type ViewingsFiltersValues = Omit<TitleFiltersValues, "genres"> & {
   medium?: string;
@@ -85,8 +85,7 @@ type ViewingsState = Omit<
   SortState<ViewingsSort> & {
     activeFilterValues: ViewingsFiltersValues;
     pendingFilterValues: ViewingsFiltersValues;
-    // Value of the first viewing date in the selected month via a next/prev
-    // month action.
+    /** Value of the first viewing date in the selected month via a next/prev month action */
     selectedMonthDate?: string;
   };
 
@@ -95,6 +94,13 @@ type ViewingYearFilterChangedAction = {
   values: [string, string];
 };
 
+/**
+ * Creates the initial state for viewings.
+ * @param options - Configuration options
+ * @param options.initialSort - Initial sort configuration
+ * @param options.values - Viewing values
+ * @returns Initial state for viewings reducer
+ */
 export function createInitialState({
   initialSort,
   values,
@@ -113,36 +119,66 @@ export function createInitialState({
   };
 }
 
+/**
+ * Creates an action for changing the medium filter.
+ * @param value - The medium value to filter by
+ * @returns Medium filter changed action
+ */
 export function createMediumFilterChangedAction(
   value: string,
 ): MediumFilterChangedAction {
   return { type: "viewings/mediumChanged", value };
 }
 
+/**
+ * Creates an action for navigating to the next month.
+ * @param value - The month value
+ * @returns Next month clicked action
+ */
 export function createNextMonthClickedAction(
   value: string,
 ): NextMonthClickedAction {
   return { type: "viewings/nextMonthClicked", value };
 }
 
+/**
+ * Creates an action for navigating to the previous month.
+ * @param value - The month value
+ * @returns Previous month clicked action
+ */
 export function createPreviousMonthClickedAction(
   value: string,
 ): PreviousMonthClickedAction {
   return { type: "viewings/previousMonthClicked", value };
 }
 
+/**
+ * Creates an action for changing the reviewed status filter.
+ * @param value - The reviewed status value
+ * @returns Reviewed status filter changed action
+ */
 export function createReviewedStatusFilterChangedAction(
   value: string,
 ): ReviewedStatusFilterChangedAction {
   return { type: "viewings/reviewedStatusChanged", value };
 }
 
+/**
+ * Creates an action for changing the venue filter.
+ * @param value - The venue value to filter by
+ * @returns Venue filter changed action
+ */
 export function createVenueFilterChangedAction(
   value: string,
 ): VenueFilterChangedAction {
   return { type: "viewings/venueChanged", value };
 }
 
+/**
+ * Creates an action for changing the viewing year filter.
+ * @param values - The year range values
+ * @returns Viewing year filter changed action
+ */
 export function createViewingYearFilterChangedAction(
   values: [string, string],
 ): ViewingYearFilterChangedAction {
@@ -150,8 +186,10 @@ export function createViewingYearFilterChangedAction(
 }
 
 /**
- * Reducer function for managing Reviews page state.
- * Handles filtering, sorting, and pagination actions for the reviews list.
+ * Reducer function for viewings state management.
+ * @param state - Current state
+ * @param action - Action to process
+ * @returns Updated state
  */
 export function reducer(state: ViewingsState, action: ViewingsAction) {
   switch (action.type) {
@@ -267,4 +305,7 @@ function handleViewingYearFilterChanged(
   };
 }
 
+/**
+ * Action creator for viewings sort actions.
+ */
 export const createSortAction = createSortActionCreator<ViewingsSort>();

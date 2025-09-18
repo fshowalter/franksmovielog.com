@@ -6,17 +6,11 @@ import path from "node:path";
  * Used internally by PerformanceLogger to track individual performance measurements.
  */
 type TimingEntry = {
-  /** The calculated duration in milliseconds (endTime - startTime) */
   duration?: number;
-  /** The end timestamp from performance.now() */
   endTime?: number;
-  /** Unique identifier for this timing entry */
   id: string;
-  /** Optional metadata associated with this measurement */
   metadata?: Record<string, unknown>;
-  /** Human-readable name for the operation being measured */
   name: string;
-  /** The start timestamp from performance.now() */
   startTime: number;
 };
 

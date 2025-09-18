@@ -4,7 +4,13 @@ import { useEffect, useRef, useState } from "react";
 
 import { LabelText } from "./LabelText";
 
+/**
+ * Delay before closing dropdown in milliseconds.
+ */
 export const DROPDOWN_CLOSE_DELAY_MS = 150;
+/**
+ * Delay before scrolling to item in milliseconds.
+ */
 export const SCROLL_DELAY_MS = 50;
 
 // Positioning constants
@@ -114,6 +120,15 @@ const determineDropdownLayout = (
   }
 };
 
+/**
+ * Multi-select dropdown field with keyboard navigation.
+ * @param props - Component props
+ * @param props.initialValues - Initially selected values
+ * @param props.label - Field label text
+ * @param props.onChange - Handler for selection changes
+ * @param props.options - Available options to select from
+ * @returns Multi-select field with dropdown and selected items
+ */
 export function MultiSelectField({
   initialValues,
   label,

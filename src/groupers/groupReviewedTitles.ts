@@ -10,6 +10,14 @@ type GroupableReviewedTitle = GroupableTitle & {
   reviewYear: string;
 };
 
+/**
+ * Groups reviewed titles by grade, review date, or custom grouping.
+ * @param filteredValues - Array of reviewed titles to group
+ * @param showCount - Number of items to show
+ * @param sort - Current sort configuration
+ * @param extraGrouper - Optional custom grouping function
+ * @returns Map of grouped reviewed titles
+ */
 export function groupReviewedTitles<
   TValue extends GroupableReviewedTitle,
   TSort extends string,

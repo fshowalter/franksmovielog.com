@@ -1,3 +1,8 @@
+/**
+ * Formats a date into a human-readable string in the format "Weekday, Month Day, Year".
+ * @param date - The date to format (Date object, string, or undefined)
+ * @returns Formatted date string or empty string if date is undefined
+ */
 export function displayDate(date: Date | string | undefined) {
   if (!date) {
     return "";

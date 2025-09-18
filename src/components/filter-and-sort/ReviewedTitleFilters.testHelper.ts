@@ -11,6 +11,12 @@ export {
   getTitleFilter,
 } from "./TitleFilters.testHelper";
 
+/**
+ * Test helper to fill the grade filter range.
+ * @param user - UserEvent instance for interactions
+ * @param value1 - From grade value
+ * @param value2 - To grade value
+ */
 export async function fillGradeFilter(
   user: UserEvent,
   value1: string,
@@ -24,6 +30,12 @@ export async function fillGradeFilter(
   await user.selectOptions(toInput, value2);
 }
 
+/**
+ * Test helper to fill the review year filter range.
+ * @param user - UserEvent instance for interactions
+ * @param value1 - From year value
+ * @param value2 - To year value
+ */
 export async function fillReviewYearFilter(
   user: UserEvent,
   value1: string,

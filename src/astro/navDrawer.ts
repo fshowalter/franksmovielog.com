@@ -1,3 +1,7 @@
+/**
+ * Initializes the navigation drawer with toggle, keyboard, and backdrop handlers.
+ * @returns void
+ */
 export function initNavDrawer(): void {
   const body = document.body;
   const navToggle = document.querySelector<HTMLButtonElement>(

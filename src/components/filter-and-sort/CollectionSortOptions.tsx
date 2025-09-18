@@ -1,3 +1,7 @@
+/**
+ * Component that renders sort options for collections.
+ * @returns Sort option elements for collection sorting
+ */
 export function CollectionSortOptions(): React.JSX.Element {
   return (
     <>

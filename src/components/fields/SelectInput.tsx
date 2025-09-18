@@ -1,3 +1,11 @@
+/**
+ * Base select input component without label.
+ * @param props - Component props
+ * @param props.children - Option elements to render
+ * @param props.defaultValue - Initially selected value
+ * @param props.onChange - Change event handler
+ * @returns Styled select element
+ */
 export function SelectInput({
   children,
   defaultValue,

@@ -14,6 +14,9 @@ import { MoreInCollections } from "./MoreInCollections";
 import { StructuredData } from "./StructuredData";
 import { ViewingHistoryListItem } from "./ViewingHistoryListItem";
 
+/**
+ * Configuration for still images in reviews.
+ */
 export const StillImageConfig = {
   height: 540,
   sizes: "(min-width: 1143px) 960px, calc(79.57vw + 13px)",
@@ -27,6 +30,9 @@ const dateFormat = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
 });
 
+/**
+ * Props for the Review component.
+ */
 export type ReviewProps = {
   moreFromCastAndCrew: React.ComponentProps<
     typeof MoreFromCastAndCrew
@@ -39,6 +45,18 @@ export type ReviewProps = {
   value: Review & ReviewContent;
 };
 
+/**
+ * Component for displaying a single review with related content.
+ * @param props - Component props
+ * @param props.moreFromCastAndCrew - Related reviews from cast and crew
+ * @param props.moreInCollections - Related reviews from collections
+ * @param props.moreReviews - More reviews to display
+ * @param props.posterImageProps - Poster image configuration
+ * @param props.seoImageSrc - SEO image source URL
+ * @param props.stillImageProps - Still image configuration
+ * @param props.value - Review data and content
+ * @returns Review component with structured data and related content
+ */
 export function Review({
   moreFromCastAndCrew,
   moreInCollections,

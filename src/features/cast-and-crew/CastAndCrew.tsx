@@ -26,11 +26,17 @@ import { Filters } from "./Filters";
 import { groupCastAndCrew } from "./groupCastAndCrew";
 import { sortCastAndCrew } from "./sortCastAndCrew";
 
+/**
+ * Props for the CastAndCrew component.
+ */
 export type CastAndCrewProps = {
   initialSort: CastAndCrewSort;
   values: CastAndCrewValue[];
 };
 
+/**
+ * Value object for a cast or crew member.
+ */
 export type CastAndCrewValue = {
   avatarImageProps: AvatarImageProps | undefined;
   creditedAs: string[];
@@ -39,6 +45,13 @@ export type CastAndCrewValue = {
   slug: string;
 };
 
+/**
+ * CastAndCrew component for displaying and filtering cast and crew members.
+ * @param props - Component props
+ * @param props.initialSort - Initial sort configuration
+ * @param props.values - Cast and crew values to display
+ * @returns CastAndCrew component with filtering and sorting capabilities
+ */
 export function CastAndCrew({
   initialSort,
   values,

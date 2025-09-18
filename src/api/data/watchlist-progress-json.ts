@@ -40,8 +40,15 @@ const WatchlistProgressJsonSchema = z.object({
   writerTotal: z.number(),
 });
 
+/**
+ * Type definition for watchlist progress data from JSON.
+ */
 export type WatchlistProgressJson = z.infer<typeof WatchlistProgressJsonSchema>;
 
+/**
+ * Retrieves watchlist progress statistics from JSON data.
+ * @returns Watchlist progress data including totals and details by category
+ */
 export async function watchlistProgressJson(): Promise<WatchlistProgressJson> {
   return await perfLogger.measure("watchlistProgressJson", async () => {
     const json = await fs.readFile(watchlistProgressJsonFile, "utf8");

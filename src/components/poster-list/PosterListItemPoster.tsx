@@ -1,5 +1,12 @@
 import type { PosterImageProps } from "~/api/posters";
 
+/**
+ * Poster image component for list items.
+ * @param props - Component props
+ * @param props.imageConfig - Image sizing configuration
+ * @param props.imageProps - Poster image properties
+ * @returns Poster element with hover effects
+ */
 export function PosterListItemPoster({
   imageConfig,
   imageProps,

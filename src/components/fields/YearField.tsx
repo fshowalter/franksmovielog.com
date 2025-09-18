@@ -3,6 +3,15 @@ import { useState } from "react";
 import { LabelText } from "./LabelText";
 import { SelectInput } from "./SelectInput";
 
+/**
+ * Year range selector with from/to dropdowns.
+ * @param props - Component props
+ * @param props.initialValues - Initial [min, max] year values
+ * @param props.label - Field label text
+ * @param props.onYearChange - Handler for year range changes
+ * @param props.years - Available years to select from
+ * @returns Year range selector with two dropdowns
+ */
 export function YearField({
   initialValues,
   label,

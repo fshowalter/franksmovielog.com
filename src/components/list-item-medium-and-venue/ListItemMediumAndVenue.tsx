@@ -1,3 +1,10 @@
+/**
+ * Displays viewing medium and/or venue information.
+ * @param props - Component props
+ * @param props.medium - The viewing medium (e.g., "4k UHD Blu-ray", "35mm")
+ * @param props.venue - The viewing venue (e.g., "Alamo Drafthouse")
+ * @returns Formatted medium and venue text, or false if neither provided
+ */
 export function ListItemMediumAndVenue({
   medium,
   venue,

@@ -23,6 +23,11 @@ export type TitleSort =
   | "title-asc"
   | "title-desc";
 
+/**
+ * Creates a title sorter function with default and custom sort options.
+ * @param sortMap - Optional additional sort functions
+ * @returns Function that sorts titles based on the provided sort parameter
+ */
 export function createTitleSorter<
   TValue extends SortableTitle,
   TSort extends string,

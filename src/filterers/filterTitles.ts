@@ -10,6 +10,13 @@ export type FilterableTitle = {
   title: string;
 };
 
+/**
+ * Filters an array of titles based on multiple filter criteria.
+ * @param filterValues - Object containing filter values for genres, release year, and title
+ * @param sortedValues - Array of titles to filter
+ * @param extraFilters - Additional custom filter functions to apply
+ * @returns Filtered array of titles matching all filter criteria
+ */
 export function filterTitles<TValue extends FilterableTitle>(
   filterValues: TitleFiltersValues,
   sortedValues: TValue[],

@@ -53,12 +53,23 @@ type TitleFilterChangedAction = {
   value: string;
 };
 
+/**
+ * Creates an action for changing the genres filter.
+ * @param values - Array of genre names to filter by
+ * @returns Genres filter changed action
+ */
 export function createGenresFilterChangedAction(
   values: readonly string[],
 ): GenresFilterChangedAction {
   return { type: "titleFilters/genresFilterChanged", values };
 }
 
+/**
+ * Creates the initial state for title filters.
+ * @param options - Configuration object
+ * @param options.values - Array of values to be filtered
+ * @returns Initial title filters state
+ */
 export function createInitialTitleFiltersState<TValue>({
   values,
 }: {
@@ -71,25 +82,39 @@ export function createInitialTitleFiltersState<TValue>({
   return filterState;
 }
 
+/**
+ * Creates an action for changing the release year range filter.
+ * @param values - Tuple of [startYear, endYear] as strings
+ * @returns Release year filter changed action
+ */
 export function createReleaseYearFilterChangedAction(
   values: [string, string],
 ): ReleaseYearFilterChangedAction {
   return { type: "titleFilters/releaseYearFilterChanged", values };
 }
 
+/**
+ * Creates an action for changing the title search filter.
+ * @param value - Search string to filter titles by
+ * @returns Title filter changed action
+ */
 export function createTitleFilterChangedAction(
   value: string,
 ): TitleFilterChangedAction {
   return { type: "titleFilters/titleFilterChanged", value };
 }
 
-// Create reducer function
+/**
+ * Reducer function for handling title filter state updates.
+ * @param state - Current title filters state
+ * @param action - Title filter action to process
+ * @returns Updated state with filter changes applied
+ */
 export function titleFiltersReducer<
   TValue,
   TState extends TitleFiltersState<TValue>,
 >(state: TState, action: TitleFiltersAction): TState {
   switch (action.type) {
-    // Field-specific shared filters
     case "titleFilters/genresFilterChanged": {
       return handleGenresFilterChanged<TValue, TState>(state, action);
     }

@@ -1,6 +1,7 @@
 ---
-import { getFluidWidthPosterImageProps } from "~/api/posters";
 import type { Review as AllReviewsResult } from "~/api/reviews";
+
+import { getFluidWidthPosterImageProps } from "~/api/posters";
 import { allReviews, getContentPlainText } from "~/api/reviews";
 import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Layout } from "~/components/layout/Layout";
@@ -25,7 +26,7 @@ export async function getStaticPaths() {
   );
 }
 
-const { rawContent, slug, title, releaseYear } = Astro.props;
+const { rawContent, releaseYear, slug, title } = Astro.props;
 
 const reviewProps = await getReviewProps(Astro.props);
 
@@ -58,7 +59,7 @@ metaTitle = `${title} (${releaseYear})`;
   canonical={true}
   meta={{ description }}
   openGraph={{ description, type: "article" }}
-  title={title}
+  title={metaTitle}
 >
   <Fragment slot="meta-theme-color">
     <meta

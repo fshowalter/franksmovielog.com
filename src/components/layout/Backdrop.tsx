@@ -1,11 +1,17 @@
 import type { BackdropImageProps } from "~/api/backdrops";
 
+/**
+ * Image configuration for backdrop images.
+ */
 export const BackdropImageConfig = {
   height: 1350,
   sizes: "100vw",
   width: 2400,
 };
 
+/**
+ * Props for the Backdrop component.
+ */
 export type BackdropProps = {
   breadcrumb?: { href: string; text: string };
   centerText?: boolean;
@@ -16,6 +22,18 @@ export type BackdropProps = {
   titleStyle?: string;
 };
 
+/**
+ * Hero backdrop component with image, title, and optional breadcrumb.
+ * @param props - Component props
+ * @param props.breadcrumb - Optional breadcrumb link and text
+ * @param props.centerText - Whether to center the text content
+ * @param props.deck - Optional subtitle or description content
+ * @param props.imageProps - Image properties for the backdrop
+ * @param props.size - Size variant ("default" or "large")
+ * @param props.title - Main title text
+ * @param props.titleStyle - Additional CSS classes for the title
+ * @returns Backdrop hero section with image and text overlay
+ */
 export function Backdrop({
   breadcrumb,
   centerText = false,

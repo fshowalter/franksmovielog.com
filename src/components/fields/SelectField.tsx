@@ -1,6 +1,15 @@
 import { LabelText } from "./LabelText";
 import { SelectInput } from "./SelectInput";
 
+/**
+ * Select field component with label.
+ * @param props - Component props
+ * @param props.children - Option elements to render inside select
+ * @param props.defaultValue - Initially selected value
+ * @param props.label - Field label text
+ * @param props.onChange - Handler for value changes
+ * @returns Labeled select field
+ */
 export function SelectField({
   children,
   defaultValue,

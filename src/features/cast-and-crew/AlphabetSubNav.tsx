@@ -1,6 +1,13 @@
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
+/**
+ * Alphabet navigation component for jumping to letter sections.
+ * @param props - Component props
+ * @param props.groupedValues - Map of grouped cast and crew values by letter
+ * @param props.sortValue - Current sort configuration
+ * @returns Alphabet navigation component or false if not sorting by name
+ */
 export function AlphabetSubNav({
   groupedValues,
   sortValue,

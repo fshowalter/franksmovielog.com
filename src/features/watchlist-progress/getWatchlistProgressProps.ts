@@ -5,6 +5,10 @@ import type { WatchlistProgressProps } from "./WatchlistProgress";
 
 import { WatchlistProgressForGroupAvatarImageConfig } from "./WatchlistProgressForGroup";
 
+/**
+ * Fetches watchlist progress data including details for collections, directors, performers, and writers.
+ * @returns Props for the WatchlistProgress component with progress statistics and avatar images
+ */
 export async function getWatchlistProgressProps(): Promise<WatchlistProgressProps> {
   const progress = await watchlistProgress();
 

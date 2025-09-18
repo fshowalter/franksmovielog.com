@@ -37,7 +37,12 @@ type NameFilterChangedAction = {
   value: string;
 };
 
-// Create reducer function
+/**
+ * Reducer function for collection filter state management.
+ * @param state - Current collection filter state
+ * @param action - Action to process
+ * @returns Updated state
+ */
 export function collectionFiltersReducer<
   TValue,
   TState extends CollectionFiltersState<TValue>,
@@ -54,6 +59,12 @@ export function collectionFiltersReducer<
   }
 }
 
+/**
+ * Creates initial state for collection filters.
+ * @param options - Configuration object
+ * @param options.values - Array of values to filter
+ * @returns Initial collection filters state
+ */
 export function createInitialCollectionFiltersState<TValue>({
   values,
 }: {
@@ -64,6 +75,11 @@ export function createInitialCollectionFiltersState<TValue>({
   });
 }
 
+/**
+ * Creates an action for changing the name filter.
+ * @param value - The name filter value
+ * @returns Name filter changed action
+ */
 export function createNameFilterChangedAction(
   value: string,
 ): NameFilterChangedAction {

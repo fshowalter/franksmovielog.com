@@ -17,6 +17,11 @@ type Props = ComponentProps<typeof TitleFilters> & {
   };
 };
 
+/**
+ * Filter controls for reviewed title lists.
+ * @param props - Component props including title filters plus grade and review year
+ * @returns Filter controls with grade and review year options
+ */
 export function ReviewedTitleFilters({
   genres,
   grade,

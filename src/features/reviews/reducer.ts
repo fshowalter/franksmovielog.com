@@ -63,6 +63,13 @@ type ReviewsState = Omit<
     pendingFilterValues: ReviewsFiltersValues;
   };
 
+/**
+ * Creates the initial state for reviews.
+ * @param options - Configuration options
+ * @param options.initialSort - Initial sort configuration
+ * @param options.values - Review values
+ * @returns Initial state for reviews reducer
+ */
 export function createInitialState({
   initialSort,
   values,
@@ -83,6 +90,12 @@ export function createInitialState({
   };
 }
 
+/**
+ * Reducer function for reviews state management.
+ * @param state - Current state
+ * @param action - Action to process
+ * @returns Updated state
+ */
 export function reducer(state: ReviewsState, action: ReviewsAction) {
   switch (action.type) {
     case "showMore/showMore": {
@@ -98,6 +111,6 @@ export function reducer(state: ReviewsState, action: ReviewsAction) {
 }
 
 /**
- * Action creator for sort actions specific to the Watchlist page.
+ * Action creator for reviews sort actions.
  */
 export const createSortAction = createSortActionCreator<ReviewsSort>();

@@ -5,6 +5,12 @@ import { vi } from "vitest";
 
 import { DROPDOWN_CLOSE_DELAY_MS } from "./MultiSelectField";
 
+/**
+ * Test helper to select an option in a multi-select field.
+ * @param user - UserEvent instance for interactions
+ * @param labelText - Label text to find the multi-select field
+ * @param optionText - Option text to select
+ */
 export async function clickMultiSelectFieldOption(
   user: UserEvent,
   labelText: string,

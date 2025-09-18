@@ -29,7 +29,7 @@ import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 /**
- * Union type of all reviewed work-specific filter actions for Reviews page
+ * Union type of all actions for cast and crew state management.
  */
 export type CastAndCrewAction =
   | CollectionFiltersAction
@@ -37,14 +37,14 @@ export type CastAndCrewAction =
   | SortAction<CastAndCrewSort>;
 
 /**
- * Type definition for Reviews page filter values
+ * Filter values for cast and crew.
  */
 export type CastAndCrewFiltersValues = CollectionFiltersValues & {
   creditedAs?: string;
 };
 
 /**
- * Internal state type for Reviews page reducer
+ * Internal state type for cast and crew reducer.
  */
 type CastAndCrewState = Omit<
   CollectionFiltersState<CastAndCrewValue>,
@@ -60,12 +60,24 @@ type CreditedAsFilterChangedAction = {
   value: string;
 };
 
+/**
+ * Creates an action for changing the credited-as filter.
+ * @param value - The credited role to filter by
+ * @returns Credited-as filter changed action
+ */
 export function createCreditedAsFilterChangedAction(
   value: string,
 ): CreditedAsFilterChangedAction {
   return { type: "castAndCrew/creditedAsFilterChanged", value };
 }
 
+/**
+ * Creates the initial state for cast and crew.
+ * @param options - Configuration options
+ * @param options.initialSort - Initial sort configuration
+ * @param options.values - Cast and crew values
+ * @returns Initial state for cast and crew reducer
+ */
 export function createInitialState({
   initialSort,
   values,
@@ -85,8 +97,10 @@ export function createInitialState({
 }
 
 /**
- * Reducer function for managing Reviews page state.
- * Handles filtering, sorting, and pagination actions for the reviews list.
+ * Reducer function for cast and crew state management.
+ * @param state - Current state
+ * @param action - Action to process
+ * @returns Updated state
  */
 export function reducer(state: CastAndCrewState, action: CastAndCrewAction) {
   switch (action.type) {
@@ -116,6 +130,6 @@ function handleCreditedAsFilterChanged(
 }
 
 /**
- * Action creator for sort actions specific to the Watchlist page.
+ * Action creator for cast and crew sort actions.
  */
 export const createSortAction = createSortActionCreator<CastAndCrewSort>();

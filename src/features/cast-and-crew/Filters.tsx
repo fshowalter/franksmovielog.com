@@ -11,6 +11,13 @@ import {
   createNameFilterChangedAction,
 } from "./CastAndCrew.reducer";
 
+/**
+ * Filter controls for the cast and crew page.
+ * @param props - Component props
+ * @param props.dispatch - Reducer dispatch function for filter actions
+ * @param props.filterValues - Current active filter values
+ * @returns Filter input components for cast and crew
+ */
 export function Filters({
   dispatch,
   filterValues,

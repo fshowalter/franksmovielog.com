@@ -2,6 +2,9 @@ import { getImage } from "astro:assets";
 
 import { normalizeSources } from "./utils/normalizeSources";
 
+/**
+ * Props for still images.
+ */
 export type StillImageProps = {
   src: string;
   srcSet: string;
@@ -11,6 +14,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/stills/*.png",
 );
 
+/**
+ * Generates OpenGraph still image source URL.
+ * @param slug - Identifier for the still image
+ * @returns Optimized JPEG image source URL
+ */
 export async function getOpenGraphStillSrc(slug: string) {
   const stillFilePath = Object.keys(images).find((path) => {
     return path.endsWith(`/${slug}.png`);
@@ -29,6 +37,14 @@ export async function getOpenGraphStillSrc(slug: string) {
   return normalizeSources(image.src);
 }
 
+/**
+ * Retrieves still image properties for a given slug.
+ * @param slug - Identifier for the still image
+ * @param options - Image dimensions
+ * @param options.height - Desired image height
+ * @param options.width - Desired image width
+ * @returns Still image properties with src and srcSet
+ */
 export async function getStillImageProps(
   slug: string,
   {

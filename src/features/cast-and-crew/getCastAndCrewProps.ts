@@ -5,6 +5,10 @@ import { AvatarListItemImageConfig } from "~/components/avatar-list/AvatarListIt
 import type { CastAndCrewProps } from "./CastAndCrew";
 import type { CastAndCrewValue } from "./CastAndCrew";
 
+/**
+ * Fetches data for the cast and crew list page including avatar images.
+ * @returns Props for the CastAndCrew component with all cast/crew members
+ */
 export async function getCastAndCrewProps(): Promise<CastAndCrewProps> {
   const { castAndCrew } = await allCastAndCrew();
 

@@ -26,6 +26,9 @@ import { Filters } from "./Filters";
 import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
 
+/**
+ * Props for the CastAndCrewMemberTitles component.
+ */
 export type CastAndCrewMemberTitlesProps = {
   distinctCreditKinds: readonly string[];
   distinctGenres: readonly string[];
@@ -35,6 +38,9 @@ export type CastAndCrewMemberTitlesProps = {
   values: CastAndCrewMemberTitlesValue[];
 };
 
+/**
+ * Data structure for cast and crew member title values.
+ */
 export type CastAndCrewMemberTitlesValue = {
   creditedAs: string[];
   genres: string[];
@@ -56,6 +62,11 @@ export type CastAndCrewMemberTitlesValue = {
   watchlistWriterNames: string[];
 };
 
+/**
+ * Component for displaying titles associated with a cast or crew member.
+ * @param props - Component props
+ * @returns Filtered and sorted list of member titles
+ */
 export function CastAndCrewMemberTitles({
   distinctCreditKinds,
   distinctGenres,

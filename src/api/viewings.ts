@@ -16,6 +16,10 @@ type Viewings = {
   viewings: Viewing[];
 };
 
+/**
+ * Retrieves all viewings with distinct metadata for filtering.
+ * @returns Object containing all viewings and distinct values for years, media, and venues
+ */
 export async function allViewings(): Promise<Viewings> {
   const viewingsJson = await allViewingsJson();
   const distinctViewingYears = new Set<string>();

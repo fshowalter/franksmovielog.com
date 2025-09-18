@@ -1,3 +1,11 @@
+/**
+ * Renders a styled subheading with consistent typography.
+ * @param props - Component props
+ * @param props.as - The heading level element to render
+ * @param props.children - The heading content
+ * @param props.className - Additional CSS classes to apply
+ * @returns Styled heading element
+ */
 export function SubHeading({
   as,
   children,

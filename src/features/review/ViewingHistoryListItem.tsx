@@ -24,6 +24,12 @@ const weekdayFormat = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
 });
 
+/**
+ * Component for displaying a single viewing history item.
+ * @param props - Component props
+ * @param props.value - Viewing data to display
+ * @returns Viewing history list item component
+ */
 export function ViewingHistoryListItem({
   value,
 }: {

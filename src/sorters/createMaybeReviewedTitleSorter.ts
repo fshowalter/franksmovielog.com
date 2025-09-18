@@ -11,6 +11,11 @@ type SortableMaybeReviewedTitle = SortableTitle & {
   reviewSequence?: number;
 };
 
+/**
+ * Creates a sorter for titles that may or may not be reviewed.
+ * @param sortMap - Optional additional sort functions
+ * @returns Function that sorts titles with optional review data
+ */
 export function createMaybeReviewedTitleSorter<
   TValue extends SortableMaybeReviewedTitle,
   TSort extends string,

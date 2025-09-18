@@ -11,6 +11,16 @@ import {
   createTitleFilterChangedAction,
 } from "./reducer";
 
+/**
+ * Filter controls for the reviews page.
+ * @param props - Component props
+ * @param props.dispatch - Reducer dispatch function for filter actions
+ * @param props.distinctGenres - Available genres for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctReviewYears - Available review years for filtering
+ * @param props.filterValues - Current active filter values
+ * @returns Filter input components for reviews
+ */
 export function Filters({
   dispatch,
   distinctGenres,
@@ -55,6 +65,10 @@ export function Filters({
   );
 }
 
+/**
+ * Sort options component for the reviews page.
+ * @returns Reviewed title sort options component
+ */
 export function SortOptions(): React.JSX.Element {
   return <ReviewedTitleSortOptions />;
 }

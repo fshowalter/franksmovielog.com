@@ -1,5 +1,14 @@
 import { SubHeading } from "~/components/sub-heading/SubHeading";
 
+/**
+ * Heading component for more reviews sections.
+ * @param props - Component props
+ * @param props.accentText - Text to display with accent color
+ * @param props.as - Heading level element to render
+ * @param props.href - Link destination for the heading
+ * @param props.text - Main heading text
+ * @returns Linked subheading with accent text
+ */
 export function MoreReviewsHeading({
   accentText,
   as = "h2",

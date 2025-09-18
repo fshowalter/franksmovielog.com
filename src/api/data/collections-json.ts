@@ -60,8 +60,15 @@ const CollectionJsonSchema = z
     };
   });
 
+/**
+ * Type for collection JSON data.
+ */
 export type CollectionJson = z.infer<typeof CollectionJsonSchema>;
 
+/**
+ * Loads and parses all collection data from JSON files.
+ * @returns Array of parsed collection data
+ */
 export async function allCollectionsJson(): Promise<CollectionJson[]> {
   return await perfLogger.measure("allCollectionsJson", async () => {
     return await parseAllCollectionsJson();

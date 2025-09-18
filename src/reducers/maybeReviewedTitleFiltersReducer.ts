@@ -28,6 +28,9 @@ export type MaybeReviewedTitleFiltersAction =
   | ReviewedStatusFilterChangedAction
   | ReviewedTitleFiltersAction;
 
+/**
+ * State shape for maybe-reviewed title filters.
+ */
 export type MaybeReviewedTitleFiltersState<TValue> = Omit<
   ReviewedTitleFiltersState<TValue>,
   "activeFilterValues" | "pendingFilterValues"
@@ -36,6 +39,9 @@ export type MaybeReviewedTitleFiltersState<TValue> = Omit<
   pendingFilterValues: MaybeReviewedTitleFiltersValues;
 };
 
+/**
+ * Filter values for maybe-reviewed titles.
+ */
 export type MaybeReviewedTitleFiltersValues = ReviewedTitleFiltersValues & {
   reviewedStatus?: string;
 };
@@ -45,6 +51,12 @@ type ReviewedStatusFilterChangedAction = {
   value: string;
 };
 
+/**
+ * Creates initial state for maybe-reviewed title filters.
+ * @param options - Configuration object
+ * @param options.values - Array of values to filter
+ * @returns Initial state for maybe-reviewed title filters
+ */
 export function createInitialMaybeReviewedTitleFiltersState<TValue>({
   values,
 }: {
@@ -55,6 +67,11 @@ export function createInitialMaybeReviewedTitleFiltersState<TValue>({
   });
 }
 
+/**
+ * Creates an action for changing the reviewed status filter.
+ * @param value - The reviewed status value ("All", "Reviewed", "Unreviewed")
+ * @returns Reviewed status filter changed action
+ */
 export function createReviewedStatusFilterChangedAction(
   value: string,
 ): ReviewedStatusFilterChangedAction {
@@ -64,7 +81,12 @@ export function createReviewedStatusFilterChangedAction(
   };
 }
 
-// Create reducer function
+/**
+ * Reducer function for maybe-reviewed title filter state management.
+ * @param state - Current filter state
+ * @param action - Action to process
+ * @returns Updated state
+ */
 export function maybeReviewedTitleFiltersReducer<
   TValue,
   TState extends MaybeReviewedTitleFiltersState<TValue>,

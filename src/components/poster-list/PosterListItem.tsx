@@ -2,6 +2,9 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { PosterListItemPoster } from "./PosterListItemPoster";
 
+/**
+ * Image configuration for poster list items.
+ */
 export const PosterListItemImageConfig = {
   height: 375,
   sizes:
@@ -9,6 +12,14 @@ export const PosterListItemImageConfig = {
   width: 250,
 };
 
+/**
+ * List item component for poster-based content display.
+ * @param props - Component props
+ * @param props.children - Content to display alongside the poster
+ * @param props.hasReview - Whether the item has a review
+ * @param props.posterImageProps - Poster image properties
+ * @returns Poster list item element
+ */
 export function PosterListItem({
   children,
   hasReview = true,

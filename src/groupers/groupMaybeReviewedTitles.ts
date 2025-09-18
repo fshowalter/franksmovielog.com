@@ -10,6 +10,14 @@ type GroupableMaybeReviewedTitle = GroupableTitle & {
   reviewYear?: string;
 };
 
+/**
+ * Groups titles that may or may not be reviewed by grade, date, or custom grouping.
+ * @param filteredValues - Array of titles to group
+ * @param showCount - Number of items to show
+ * @param sort - Current sort configuration
+ * @param extraGrouper - Optional custom grouping function
+ * @returns Map of grouped titles
+ */
 export function groupMaybeReviewedTitles<
   TValue extends GroupableMaybeReviewedTitle,
   TSort extends string,

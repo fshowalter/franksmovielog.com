@@ -10,6 +10,11 @@ type Props = ComponentProps<typeof ReviewedTitleFilters> & {
   };
 };
 
+/**
+ * Filter controls for title lists that may include unreviewed titles.
+ * @param props - Component props including all reviewed title filters plus reviewed status
+ * @returns Filter controls with reviewed status option
+ */
 export function MaybeReviewedTitleFilters({
   genres,
   grade,

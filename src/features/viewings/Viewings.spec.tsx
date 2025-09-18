@@ -311,11 +311,9 @@ describe("Viewings", () => {
       const calendar = getCalendar();
       expect(within(calendar).getByText("Movie 2012")).toBeInTheDocument();
 
-      // Navigate to 2013
       await clickNextMonthButton(user);
       expect(within(calendar).getByText("Movie 2013")).toBeInTheDocument();
 
-      // Verify 2014 movie is not accessible
       const nextButton = queryNextMonthButton();
       expect(nextButton).not.toBeInTheDocument();
     });
@@ -343,16 +341,13 @@ describe("Viewings", () => {
 
       render(<Viewings {...createProps({ values: viewings })} />);
 
-      // Default sort is newest first already
       const calendar = getCalendar();
 
-      // Get all movie titles in the calendar
       const movies = ["New Viewing", "Mid Viewing", "Old Viewing"];
       const foundMovies = movies.filter((movie) =>
         calendar.textContent?.includes(movie),
       );
 
-      // Should show all three in the same month
       expect(foundMovies).toHaveLength(3);
 
       // Verify they're in the right order by checking their position in the calendar
@@ -361,7 +356,6 @@ describe("Viewings", () => {
       const midIndex = allText.indexOf("2Mid Viewing"); // Day 2
       const oldIndex = allText.indexOf("1Old Viewing"); // Day 1
 
-      // In a calendar view, day 1 comes before day 2, which comes before day 3
       expect(oldIndex).toBeLessThan(midIndex);
       expect(midIndex).toBeLessThan(newIndex);
     });

@@ -5,6 +5,11 @@ import { displayDate } from "~/utils/displayDate";
 
 import type { CollectionTitlesProps } from "./CollectionTitles";
 
+/**
+ * Fetches data for a collection's titles page including poster images and metadata.
+ * @param slug - The collection slug identifier
+ * @returns Props for the CollectionTitles component
+ */
 export async function getCollectionTitlesProps(
   slug: string,
 ): Promise<CollectionTitlesProps> {

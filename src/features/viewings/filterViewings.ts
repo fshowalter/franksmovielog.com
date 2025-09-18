@@ -6,6 +6,12 @@ import { filterSortedValues } from "~/filterers/filterSortedValues";
 import type { ViewingsValue } from "./Viewings";
 import type { ViewingsFiltersValues } from "./Viewings.reducer";
 
+/**
+ * Filters viewings based on multiple criteria including venue, medium, and viewing year.
+ * @param sortedValues - Array of viewings to filter
+ * @param filterValues - Object containing filter values
+ * @returns Filtered array of viewings
+ */
 export function filterViewings(
   sortedValues: ViewingsValue[],
   filterValues: ViewingsFiltersValues,

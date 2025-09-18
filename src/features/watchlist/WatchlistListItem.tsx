@@ -8,6 +8,13 @@ import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 import type { WatchlistValue } from "./Watchlist";
 
+/**
+ * List item component for displaying a single watchlist entry.
+ * @param props - Component props
+ * @param props.defaultPosterImageProps - Default poster image to use
+ * @param props.value - Watchlist entry data to display
+ * @returns Watchlist item with poster, title, and reason for inclusion
+ */
 export function WatchlistListItem({
   defaultPosterImageProps,
   value,

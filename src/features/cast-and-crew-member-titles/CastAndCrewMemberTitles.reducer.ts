@@ -39,7 +39,7 @@ export {
 export { createShowMoreAction } from "~/reducers/showMoreReducer";
 
 /**
- * Union type of all reviewed work-specific filter actions for Reviews page
+ * Union type of all actions for cast and crew member titles state management.
  */
 export type CastAndCrewMemberTitlesAction =
   | CreditedAsFilterChangedAction
@@ -47,13 +47,16 @@ export type CastAndCrewMemberTitlesAction =
   | ShowMoreAction
   | SortAction<CastAndCrewMemberTitlesSort>;
 
+/**
+ * Filter values for cast and crew member titles.
+ */
 export type CastAndCrewMemberTitlesFiltersValues =
   MaybeReviewedTitleFiltersValues & {
     creditedAs?: string;
   };
 
 /**
- * Internal state type for Reviews page reducer
+ * Internal state type for cast and crew member titles reducer.
  */
 type CastAndCrewMemberTitlesState = Omit<
   MaybeReviewedTitleFiltersState<CastAndCrewMemberTitlesValue>,
@@ -70,12 +73,24 @@ type CreditedAsFilterChangedAction = {
   value: string;
 };
 
+/**
+ * Creates an action for changing the credited-as filter.
+ * @param value - The credited role to filter by
+ * @returns Credited-as filter changed action
+ */
 export function createCreditedAsFilterChangedAction(
   value: string,
 ): CreditedAsFilterChangedAction {
   return { type: "castAndCrewMemberTitles/creditedAsFilterChanged", value };
 }
 
+/**
+ * Creates the initial state for cast and crew member titles page.
+ * @param options - Configuration object
+ * @param options.initialSort - Initial sort order
+ * @param options.values - Array of cast/crew member titles
+ * @returns Initial state for the reducer
+ */
 export function createInitialState({
   initialSort,
   values,
@@ -96,6 +111,12 @@ export function createInitialState({
   };
 }
 
+/**
+ * Reducer function for cast and crew member titles page state management.
+ * @param state - Current state
+ * @param action - Action to process
+ * @returns Updated state
+ */
 export function reducer(
   state: CastAndCrewMemberTitlesState,
   action: CastAndCrewMemberTitlesAction,
@@ -129,5 +150,8 @@ function handleCreditedAsFilterChanged(
   };
 }
 
+/**
+ * Action creator for cast and crew member titles sort actions.
+ */
 export const createSortAction =
   createSortActionCreator<CastAndCrewMemberTitlesSort>();

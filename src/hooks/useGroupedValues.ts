@@ -1,5 +1,15 @@
 import { useState } from "react";
 
+/**
+ * Hook that filters, sorts, and groups values with memoization.
+ * @param sorter - Function to sort values
+ * @param filterer - Function to filter values
+ * @param grouper - Function to group values
+ * @param values - Array of values to process
+ * @param sort - Current sort configuration
+ * @param activeFilterValues - Current filter configuration
+ * @returns Tuple of grouped values map and total count
+ */
 export function useGroupedValues<TValue, TSort, TFilterValues>(
   sorter: (values: TValue[], sort: TSort) => TValue[],
   filterer: (values: TValue[], filterValues: TFilterValues) => TValue[],

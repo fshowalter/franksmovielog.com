@@ -1,5 +1,12 @@
 import { SelectField } from "~/components/fields/SelectField";
 
+/**
+ * Filter control for reviewed/unreviewed status.
+ * @param props - Component props
+ * @param props.defaultValue - Initial selected value
+ * @param props.onChange - Handler for filter changes
+ * @returns Reviewed status filter select field
+ */
 export function ReviewedStatusFilter({
   defaultValue,
   onChange,

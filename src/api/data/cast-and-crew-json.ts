@@ -72,8 +72,15 @@ const CastAndCrewJsonSchema = z
     };
   });
 
+/**
+ * Type for cast and crew member JSON data.
+ */
 export type CastAndCrewMemberJson = z.infer<typeof CastAndCrewJsonSchema>;
 
+/**
+ * Loads and parses all cast and crew data from JSON files.
+ * @returns Array of parsed cast and crew member data
+ */
 export async function allCastAndCrewJson(): Promise<CastAndCrewMemberJson[]> {
   return await perfLogger.measure("allCastAndCrewJson", async () => {
     return await parseAllCastAndCrewJson();

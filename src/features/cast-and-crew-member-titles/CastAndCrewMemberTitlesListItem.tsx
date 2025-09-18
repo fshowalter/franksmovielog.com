@@ -9,6 +9,12 @@ import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 
+/**
+ * List item for displaying a title associated with a cast/crew member.
+ * @param props - Component props
+ * @param props.value - Title data including credits and review info
+ * @returns List item with poster, title, credits, and review status
+ */
 export function CastAndCrewMemberTitleListItem({
   value,
 }: {

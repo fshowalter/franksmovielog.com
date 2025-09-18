@@ -5,6 +5,12 @@ type Props = {
   }[];
 };
 
+/**
+ * Component for displaying a grid of statistical callouts.
+ * @param props - Component props
+ * @param props.stats - Array of statistics with label and value
+ * @returns Grid of callout cards displaying stats
+ */
 export function CalloutsGrid({ stats }: Props): React.JSX.Element {
   return (
     <div

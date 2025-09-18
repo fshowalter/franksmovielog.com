@@ -1,6 +1,13 @@
 import type { ViewingsSort } from "./sortViewings";
 import type { ViewingsValue } from "./Viewings";
 
+/**
+ * Hook to determine previous, current, and next month dates for calendar navigation.
+ * @param filteredValues - Array of filtered viewing values
+ * @param sort - Current sort order
+ * @param selectedMonthDate - Currently selected month date
+ * @returns Tuple of [previousMonthDate, currentMonthDate, nextMonthDate]
+ */
 export function useMonthNavigation(
   filteredValues: ViewingsValue[],
   sort: ViewingsSort,

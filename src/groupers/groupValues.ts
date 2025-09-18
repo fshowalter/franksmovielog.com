@@ -3,10 +3,15 @@ export type GroupFn<TValue, TSort extends string> = (
   sort: TSort,
 ) => string;
 
+/**
+ * Extracts the grouping letter from a string for alphabetical grouping.
+ * Non-alphabetic characters are grouped under "#".
+ * @param str - The string to extract the grouping letter from
+ * @returns Uppercase letter or "#" for non-alphabetic characters
+ */
 export function getGroupLetter(str: string): string {
   const letter = str.slice(0, 1);
 
-  // Check if the character is non-alphabetic (same in upper and lower case)
   if (letter.toLowerCase() === letter.toUpperCase()) {
     return "#";
   }
@@ -14,6 +19,13 @@ export function getGroupLetter(str: string): string {
   return letter.toLocaleUpperCase();
 }
 
+/**
+ * Groups an array of values into a Map based on a grouping function.
+ * @param values - Array of values to group
+ * @param sort - Sort criteria passed to the grouper function
+ * @param grouper - Function that determines the group key for each value
+ * @returns Map with group keys and their corresponding values
+ */
 export function groupValues<TValue, TSort extends string>(
   values: TValue[],
   sort: TSort,

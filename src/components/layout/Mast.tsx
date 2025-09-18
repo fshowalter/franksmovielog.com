@@ -4,6 +4,13 @@ import { Logo } from "./Logo";
 import { navItems } from "./navItems";
 import { TableOfContents } from "./TableOfContents";
 
+/**
+ * Site header with logo and navigation menu.
+ * @param props - Component props
+ * @param props.hasBackdrop - Whether the page has a backdrop (affects styling)
+ * @param props.hideLogo - Whether to hide the site logo
+ * @returns Header element with logo and navigation
+ */
 export function Mast({
   hasBackdrop,
   hideLogo,

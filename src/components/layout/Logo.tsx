@@ -1,3 +1,9 @@
+/**
+ * Site logo component with title and author.
+ * @param props - Component props
+ * @param props.className - Additional CSS classes
+ * @returns Logo element with site title and author byline
+ */
 export function Logo({ className }: { className?: string }): React.JSX.Element {
   return (
     <div

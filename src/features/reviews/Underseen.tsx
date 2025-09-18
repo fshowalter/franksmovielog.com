@@ -24,6 +24,9 @@ import {
 import { ReviewsListItem } from "./ReviewsListItem";
 import { sortReviews } from "./sortReviews";
 
+/**
+ * Props for the Underseen component.
+ */
 export type UnderseenProps = {
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
@@ -32,6 +35,16 @@ export type UnderseenProps = {
   values: ReviewsValue[];
 };
 
+/**
+ * Component for displaying underseen reviews.
+ * @param props - Component props
+ * @param props.distinctGenres - Available genres for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctReviewYears - Available review years for filtering
+ * @param props.initialSort - Initial sort configuration
+ * @param props.values - Review values to display
+ * @returns Underseen reviews list with filtering and sorting capabilities
+ */
 export function Underseen({
   distinctGenres,
   distinctReleaseYears,

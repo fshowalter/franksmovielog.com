@@ -27,6 +27,9 @@ const DataSchema = z
     },
   );
 
+/**
+ * Type definition for parsed markdown viewing data.
+ */
 export type MarkdownViewing = {
   date: Date;
   imdbId: string;
@@ -40,6 +43,10 @@ export type MarkdownViewing = {
 
 const limit = pLimit(10);
 
+/**
+ * Retrieves all viewing markdown files from the content directory.
+ * @returns Array of parsed viewing markdown with metadata
+ */
 export async function allViewingsMarkdown(): Promise<MarkdownViewing[]> {
   return await perfLogger.measure("allViewingsMarkdown", async () => {
     return await parseAllViewingsMarkdown();

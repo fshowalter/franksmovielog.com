@@ -1,3 +1,6 @@
+/**
+ * Mapping of letter grades to star SVG files and accessibility labels.
+ */
 export const gradeMap: Record<string, [string, string]> = {
   A: ["/svg/5-stars.svg", "5 stars (out of 5)"],
   "A+": ["/svg/5-stars.svg", "5 stars (out of 5)"],

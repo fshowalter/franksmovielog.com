@@ -5,6 +5,10 @@ import { AvatarListItemImageConfig } from "~/components/avatar-list/AvatarListIt
 import type { CollectionsProps } from "./Collections";
 import type { CollectionsValue } from "./Collections";
 
+/**
+ * Fetches data for the collections list page including avatar images.
+ * @returns Props for the Collections component with all collections
+ */
 export async function getCollectionsProps(): Promise<CollectionsProps> {
   const { collections } = await allCollections();
 

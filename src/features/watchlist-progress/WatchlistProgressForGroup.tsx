@@ -13,6 +13,15 @@ type Value = {
 
 type ValueType = "collection" | "director" | "performer" | "writer";
 
+/**
+ * Progress tracking component for a group of watchlist items.
+ * @param props - Component props
+ * @param props.className - Optional CSS classes
+ * @param props.label - Display label for the progress group
+ * @param props.values - Array of watchlist progress values
+ * @param props.valueType - Type of watchlist value being tracked
+ * @returns Progress bar visualization for the watchlist group
+ */
 export function WatchlistProgressForGroup({
   className,
   label,
@@ -143,6 +152,9 @@ function Name({
   );
 }
 
+/**
+ * Image configuration for watchlist progress group avatars.
+ */
 export const WatchlistProgressForGroupAvatarImageConfig = {
   height: 48,
   width: 48,

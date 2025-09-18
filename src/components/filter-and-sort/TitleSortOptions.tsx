@@ -1,3 +1,7 @@
+/**
+ * Component that renders sort options for title lists.
+ * @returns Sort option elements for title sorting
+ */
 export function TitleSortOptions(): React.JSX.Element {
   return (
     <>

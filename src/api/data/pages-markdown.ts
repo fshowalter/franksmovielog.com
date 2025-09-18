@@ -19,6 +19,10 @@ const DataSchema = z.object({
   title: z.string(),
 });
 
+/**
+ * Retrieves all markdown pages from the content directory.
+ * @returns Array of parsed markdown pages with metadata
+ */
 export async function allPagesMarkdown(): Promise<MarkdownPage[]> {
   return await perfLogger.measure("allPagesMarkdown", async () => {
     return await parseAllPagesMarkdown();

@@ -1,5 +1,12 @@
 import { LongFormText } from "~/components/long-form-text/LongFormText";
 
+/**
+ * Component for rendering review content with special formatting.
+ * @param props - Component props
+ * @param props.className - Optional CSS classes
+ * @param props.content - Review content text to display
+ * @returns Formatted review content component
+ */
 export function Content({
   className,
   content,

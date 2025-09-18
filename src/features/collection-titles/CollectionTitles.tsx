@@ -26,6 +26,9 @@ import { Filters } from "./Filters";
 import { groupCollectionTitles } from "./groupCollectionTitles";
 import { sortCollectionTitles } from "./sortCollectionTitles";
 
+/**
+ * Props for the CollectionTitles component.
+ */
 export type CollectionTitlesProps = {
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
@@ -34,6 +37,9 @@ export type CollectionTitlesProps = {
   values: CollectionTitlesValue[];
 };
 
+/**
+ * Value object for a title in a collection.
+ */
 export type CollectionTitlesValue = {
   genres: string[];
   grade?: string;
@@ -50,6 +56,16 @@ export type CollectionTitlesValue = {
   title: string;
 };
 
+/**
+ * CollectionTitles component for displaying titles in a collection.
+ * @param props - Component props
+ * @param props.distinctGenres - Available genres for filtering
+ * @param props.distinctReleaseYears - Available release years for filtering
+ * @param props.distinctReviewYears - Available review years for filtering
+ * @param props.initialSort - Initial sort configuration
+ * @param props.values - Title values to display
+ * @returns CollectionTitles component with filtering and sorting capabilities
+ */
 export function CollectionTitles({
   distinctGenres,
   distinctReleaseYears,
