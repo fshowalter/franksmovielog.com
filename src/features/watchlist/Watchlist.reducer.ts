@@ -128,7 +128,12 @@ export function reducer(state: WatchlistState, action: WatchlistAction) {
       return showMoreReducer(state, action);
     }
     case "sort/sort": {
-      return sortReducer(state, action);
+      const newState = sortReducer(state, action);
+      // Reset pagination when sort changes
+      return {
+        ...newState,
+        ...createInitialShowMoreState(),
+      };
     }
     case "watchlist/filterChanged": {
       return handleWatchlistFilterChanged(state, action);

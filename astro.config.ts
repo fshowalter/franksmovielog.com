@@ -105,7 +105,6 @@ function pagefind(): AstroIntegration {
     name: "pagefind",
   };
 }
-console.log(process.env);
 
 // https://astro.build/config
 export default defineConfig({

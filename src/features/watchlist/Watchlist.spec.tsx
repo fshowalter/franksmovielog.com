@@ -1,4 +1,4 @@
-import { render, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
@@ -657,6 +657,193 @@ describe("Watchlist", () => {
       // Verify original filter value is preserved
       await clickToggleFilters(user);
       expect(getTitleFilter()).toHaveValue("Rio");
+    });
+  });
+
+  describe("pagination", () => {
+    it("shows first 100 items by default", ({ expect }) => {
+      // Create 150 test titles
+      const testTitles = Array.from({ length: 150 }, (_, i) =>
+        createWatchlistTitle({
+          imdbId: `tt${String(i + 1).padStart(7, "0")}`,
+          sortTitle: `Movie ${String(i + 1).padStart(3, "0")}`,
+          title: `Movie ${String(i + 1).padStart(3, "0")}`,
+        }),
+      );
+
+      render(<Watchlist {...baseProps} values={testTitles} />);
+
+      const posterList = getGroupedPosterList();
+
+      // Check that first 100 are visible
+      expect(within(posterList).getByText("Movie 001")).toBeInTheDocument();
+      expect(within(posterList).getByText("Movie 100")).toBeInTheDocument();
+
+      // Check that 101st is not visible
+      expect(
+        within(posterList).queryByText("Movie 101"),
+      ).not.toBeInTheDocument();
+
+      // Show More button should be visible
+      expect(screen.getByText("Show More")).toBeInTheDocument();
+    });
+
+    it("shows next batch of items when clicking Show More", async ({ expect }) => {
+      // Create 150 test titles
+      const testTitles = Array.from({ length: 150 }, (_, i) =>
+        createWatchlistTitle({
+          imdbId: `tt${String(i + 1).padStart(7, "0")}`,
+          sortTitle: `Movie ${String(i + 1).padStart(3, "0")}`,
+          title: `Movie ${String(i + 1).padStart(3, "0")}`,
+        }),
+      );
+
+      const user = getUserWithFakeTimers();
+      render(<Watchlist {...baseProps} values={testTitles} />);
+
+      // Click Show More
+      await user.click(screen.getByText("Show More"));
+
+      const posterList = getGroupedPosterList();
+
+      // Check that items 101-150 are now visible
+      expect(within(posterList).getByText("Movie 101")).toBeInTheDocument();
+      expect(within(posterList).getByText("Movie 150")).toBeInTheDocument();
+
+      // Show More button should no longer be visible (all items shown)
+      expect(screen.queryByText("Show More")).not.toBeInTheDocument();
+    });
+
+    it("hides Show More button when all items are visible", ({ expect }) => {
+      // Create only 50 test titles (less than the default 100)
+      const testTitles = Array.from({ length: 50 }, (_, i) =>
+        createWatchlistTitle({
+          imdbId: `tt${String(i + 1).padStart(7, "0")}`,
+          sortTitle: `Movie ${String(i + 1).padStart(3, "0")}`,
+          title: `Movie ${String(i + 1).padStart(3, "0")}`,
+        }),
+      );
+
+      render(<Watchlist {...baseProps} values={testTitles} />);
+
+      // Show More button should not be visible when all items fit on first page
+      expect(screen.queryByText("Show More")).not.toBeInTheDocument();
+    });
+
+    it("maintains pagination state when applying filters", async ({ expect }) => {
+      // Create 150 test titles with varying genres
+      const testTitles = Array.from({ length: 150 }, (_, i) =>
+        createWatchlistTitle({
+          genres: i < 80 ? ["Action"] : ["Horror"],
+          imdbId: `tt${String(i + 1).padStart(7, "0")}`,
+          sortTitle: `Movie ${String(i + 1).padStart(3, "0")}`,
+          title: `Movie ${String(i + 1).padStart(3, "0")}`,
+        }),
+      );
+
+      const user = getUserWithFakeTimers();
+      render(<Watchlist {...baseProps} values={testTitles} />);
+
+      // Click Show More to show all 150 items
+      await user.click(screen.getByText("Show More"));
+
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Movie 150")).toBeInTheDocument();
+
+      // Apply genre filter for "Action" (first 80 movies)
+      await clickToggleFilters(user);
+      await clickGenresFilterOption(user, "Action");
+      await clickViewResults(user);
+
+      posterList = getGroupedPosterList();
+
+      // All 80 Action movies should be visible (less than pagination limit)
+      expect(within(posterList).getByText("Movie 001")).toBeInTheDocument();
+      expect(within(posterList).getByText("Movie 080")).toBeInTheDocument();
+
+      // Horror movies should not be visible
+      expect(
+        within(posterList).queryByText("Movie 081"),
+      ).not.toBeInTheDocument();
+
+      // Show More button should not be visible (all filtered items fit)
+      expect(screen.queryByText("Show More")).not.toBeInTheDocument();
+    });
+
+    it("resets pagination when changing sort order", async ({ expect }) => {
+      // Create 150 test titles
+      const testTitles = Array.from({ length: 150 }, (_, i) =>
+        createWatchlistTitle({
+          imdbId: `tt${String(i + 1).padStart(7, "0")}`,
+          releaseSequence: i + 1,
+          releaseYear: String(1950 + Math.floor(i / 3)),
+          sortTitle: `Movie ${String(i + 1).padStart(3, "0")}`,
+          title: `Movie ${String(i + 1).padStart(3, "0")}`,
+        }),
+      );
+
+      const user = getUserWithFakeTimers();
+      render(<Watchlist {...baseProps} values={testTitles} />);
+
+      // Click Show More to show all items
+      await user.click(screen.getByText("Show More"));
+
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Movie 150")).toBeInTheDocument();
+
+      // Change sort order
+      await clickSortOption(user, "Release Date (Oldest First)");
+
+      posterList = getGroupedPosterList();
+
+      // Should reset to showing first 100 items in new sort order
+      expect(within(posterList).getByText("Movie 001")).toBeInTheDocument();
+
+      // Later movies should not be visible (pagination reset)
+      expect(
+        within(posterList).queryByText("Movie 150"),
+      ).not.toBeInTheDocument();
+
+      // Show More button should be visible again
+      expect(screen.getByText("Show More")).toBeInTheDocument();
+    });
+
+    it("shows correct count of items after multiple Show More clicks", async ({ expect }) => {
+      // Create 250 test titles (requires multiple clicks)
+      const testTitles = Array.from({ length: 250 }, (_, i) =>
+        createWatchlistTitle({
+          imdbId: `tt${String(i + 1).padStart(7, "0")}`,
+          sortTitle: `Movie ${String(i + 1).padStart(3, "0")}`,
+          title: `Movie ${String(i + 1).padStart(3, "0")}`,
+        }),
+      );
+
+      const user = getUserWithFakeTimers();
+      render(<Watchlist {...baseProps} values={testTitles} />);
+
+      let posterList = getGroupedPosterList();
+
+      // Initially shows first 100
+      expect(within(posterList).getByText("Movie 100")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Movie 101"),
+      ).not.toBeInTheDocument();
+
+      // First click - shows 200
+      await user.click(screen.getByText("Show More"));
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Movie 200")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Movie 201"),
+      ).not.toBeInTheDocument();
+
+      // Second click - shows all 250
+      await user.click(screen.getByText("Show More"));
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("Movie 250")).toBeInTheDocument();
+
+      // No more Show More button
+      expect(screen.queryByText("Show More")).not.toBeInTheDocument();
     });
   });
 });
