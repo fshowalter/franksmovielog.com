@@ -75,7 +75,15 @@ const baseProps: WatchlistProps = {
     "Walter Brennan",
     "Eric Stoltz",
   ],
-  distinctReleaseYears: ["1959", "1960", "1961", "1970", "1980", "1982", "1986"],
+  distinctReleaseYears: [
+    "1959",
+    "1960",
+    "1961",
+    "1970",
+    "1980",
+    "1982",
+    "1986",
+  ],
   distinctWriters: [
     "Leigh Brackett",
     "Jules Furthman",
@@ -316,8 +324,12 @@ describe("Watchlist", () => {
 
       const posterList = getGroupedPosterList();
       expect(within(posterList).getByText("Alien")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Rio Bravo")).not.toBeInTheDocument();
-      expect(within(posterList).queryByText("The Thing")).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Rio Bravo"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("The Thing"),
+      ).not.toBeInTheDocument();
     });
 
     it("combines multiple filter types", async ({ expect }) => {
@@ -411,9 +423,21 @@ describe("Watchlist", () => {
 
     it("sorts by release date oldest first", async ({ expect }) => {
       const titles = [
-        createWatchlistTitle({ releaseSequence: 3, releaseYear: "1982", title: "The Thing" }),
-        createWatchlistTitle({ releaseSequence: 1, releaseYear: "1959", title: "Rio Bravo" }),
-        createWatchlistTitle({ releaseSequence: 2, releaseYear: "1979", title: "Alien" }),
+        createWatchlistTitle({
+          releaseSequence: 3,
+          releaseYear: "1982",
+          title: "The Thing",
+        }),
+        createWatchlistTitle({
+          releaseSequence: 1,
+          releaseYear: "1959",
+          title: "Rio Bravo",
+        }),
+        createWatchlistTitle({
+          releaseSequence: 2,
+          releaseYear: "1979",
+          title: "Alien",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
@@ -433,9 +457,21 @@ describe("Watchlist", () => {
 
     it("sorts by release date newest first", async ({ expect }) => {
       const titles = [
-        createWatchlistTitle({ releaseSequence: 1, releaseYear: "1959", title: "Rio Bravo" }),
-        createWatchlistTitle({ releaseSequence: 2, releaseYear: "1979", title: "Alien" }),
-        createWatchlistTitle({ releaseSequence: 3, releaseYear: "1982", title: "The Thing" }),
+        createWatchlistTitle({
+          releaseSequence: 1,
+          releaseYear: "1959",
+          title: "Rio Bravo",
+        }),
+        createWatchlistTitle({
+          releaseSequence: 2,
+          releaseYear: "1979",
+          title: "Alien",
+        }),
+        createWatchlistTitle({
+          releaseSequence: 3,
+          releaseYear: "1982",
+          title: "The Thing",
+        }),
       ];
 
       const user = getUserWithFakeTimers();

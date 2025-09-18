@@ -3,7 +3,13 @@ import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedT
 
 import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
 
-import { createGenresFilterChangedAction, createGradeFilterChangedAction, createReleaseYearFilterChangedAction, createReviewYearFilterChangedAction, createTitleFilterChangedAction } from "./reducer";
+import {
+  createGenresFilterChangedAction,
+  createGradeFilterChangedAction,
+  createReleaseYearFilterChangedAction,
+  createReviewYearFilterChangedAction,
+  createTitleFilterChangedAction,
+} from "./reducer";
 
 export function Filters({
   dispatch,

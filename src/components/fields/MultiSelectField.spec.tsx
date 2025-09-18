@@ -9,27 +9,29 @@ if (!Element.prototype.scrollIntoView) {
   Element.prototype.scrollIntoView = vi.fn();
 }
 
-const createDefaultProps = (overrides = {}): {
+const createDefaultProps = (
+  overrides = {},
+): {
   initialValues: string[];
   label: string;
   onChange: (values: string[]) => void;
   options: string[];
 } => ({
-    initialValues: [],
-    label: "Test Label",
-    onChange: vi.fn(),
-    options: [
-      "Option 1",
-      "Option 2",
-      "Option 3",
-      "Option 4",
-      "Option 5",
-      "Option 6",
-      "Option 7",
-      "Option 8",
-    ],
-    ...overrides,
-  });
+  initialValues: [],
+  label: "Test Label",
+  onChange: vi.fn(),
+  options: [
+    "Option 1",
+    "Option 2",
+    "Option 3",
+    "Option 4",
+    "Option 5",
+    "Option 6",
+    "Option 7",
+    "Option 8",
+  ],
+  ...overrides,
+});
 
 describe("MultiSelectField", () => {
   describe("rendering", () => {

@@ -1,7 +1,8 @@
 export function initNavDrawer(): void {
   const body = document.body;
-  const navToggle =
-    document.querySelector<HTMLButtonElement>("[data-nav-drawer-toggle]");
+  const navToggle = document.querySelector<HTMLButtonElement>(
+    "[data-nav-drawer-toggle]",
+  );
   const navDrawer = document.querySelector<HTMLElement>("[data-nav-drawer]");
   const navBackdrop = document.querySelector<HTMLElement>(
     "[data-nav-drawer-backdrop]",

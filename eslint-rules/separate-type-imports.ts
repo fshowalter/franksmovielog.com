@@ -10,23 +10,25 @@ import type * as ESTree from "estree";
 
 type ImportDeclarationWithKind = ESTree.ImportDeclaration & {
   importKind?: "type" | "value";
-}
+};
 
 type ImportSpecifierWithKind = ESTree.ImportSpecifier & {
   importKind?: "type" | "value";
-}
+};
 
 /**
  * Build named imports part with proper comma placement
  */
 function buildNamedImportsPart(
   namedImports: ImportSpecifierWithKind[],
-  hasPrevious: boolean
+  hasPrevious: boolean,
 ): string {
   if (namedImports.length === 0) {
     return "";
   }
-  const namedImportStr = namedImports.map((spec) => buildNamedSpecifier(spec)).join(", ");
+  const namedImportStr = namedImports
+    .map((spec) => buildNamedSpecifier(spec))
+    .join(", ");
   return hasPrevious ? `, { ${namedImportStr} }` : `{ ${namedImportStr} }`;
 }
 
@@ -47,7 +49,7 @@ function buildNamedSpecifier(spec: ImportSpecifierWithKind): string {
  */
 function buildNamespaceImportPart(
   namespaceImports: ESTree.ImportNamespaceSpecifier[],
-  hasDefault: boolean
+  hasDefault: boolean,
 ): string {
   if (namespaceImports.length === 0) {
     return "";
@@ -61,12 +63,12 @@ function buildNamespaceImportPart(
  */
 function formatImportSource(source: ESTree.Literal): string {
   // If source.raw exists and is a string, use it directly
-  if (typeof source.raw === 'string') {
+  if (typeof source.raw === "string") {
     return source.raw;
   }
 
   // Otherwise, wrap source.value in quotes
-  if (typeof source.value === 'string') {
+  if (typeof source.value === "string") {
     // Check if it already has quotes
     if (source.value.startsWith('"') || source.value.startsWith("'")) {
       return source.value;
@@ -90,7 +92,11 @@ const rule: Rule.RuleModule = {
 
         // Check if there are mixed type and value specifiers
         const typeSpecifiers: ImportSpecifierWithKind[] = [];
-        const valueSpecifiers: (ESTree.ImportDefaultSpecifier | ESTree.ImportNamespaceSpecifier | ImportSpecifierWithKind)[] = [];
+        const valueSpecifiers: (
+          | ESTree.ImportDefaultSpecifier
+          | ESTree.ImportNamespaceSpecifier
+          | ImportSpecifierWithKind
+        )[] = [];
 
         for (const specifier of importNode.specifiers) {
           if (specifier.type === "ImportSpecifier") {
@@ -126,13 +132,16 @@ const rule: Rule.RuleModule = {
               if (valueSpecifiers.length > 0) {
                 // Handle default imports separately
                 const defaultImports = valueSpecifiers.filter(
-                  (s): s is ESTree.ImportDefaultSpecifier => s.type === "ImportDefaultSpecifier",
+                  (s): s is ESTree.ImportDefaultSpecifier =>
+                    s.type === "ImportDefaultSpecifier",
                 );
                 const namespaceImports = valueSpecifiers.filter(
-                  (s): s is ESTree.ImportNamespaceSpecifier => s.type === "ImportNamespaceSpecifier",
+                  (s): s is ESTree.ImportNamespaceSpecifier =>
+                    s.type === "ImportNamespaceSpecifier",
                 );
                 const namedImports = valueSpecifiers.filter(
-                  (s): s is ImportSpecifierWithKind => s.type === "ImportSpecifier",
+                  (s): s is ImportSpecifierWithKind =>
+                    s.type === "ImportSpecifier",
                 );
 
                 const importParts: string[] = [];
@@ -145,7 +154,7 @@ const rule: Rule.RuleModule = {
                 // Add namespace import with proper comma
                 const namespaceImportPart = buildNamespaceImportPart(
                   namespaceImports,
-                  defaultImports.length > 0
+                  defaultImports.length > 0,
                 );
                 if (namespaceImportPart) {
                   importParts.push(namespaceImportPart);
@@ -154,7 +163,7 @@ const rule: Rule.RuleModule = {
                 // Add named imports with proper comma
                 const namedImportsPart = buildNamedImportsPart(
                   namedImports,
-                  defaultImports.length > 0 || namespaceImports.length > 0
+                  defaultImports.length > 0 || namespaceImports.length > 0,
                 );
                 if (namedImportsPart) {
                   importParts.push(namedImportsPart);
