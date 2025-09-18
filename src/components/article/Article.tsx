@@ -7,36 +7,21 @@ import { MoreReviews } from "~/components/more-reviews/MoreReviews";
 import { MoreReviewsHeading } from "~/components/more-reviews/MoreReviewsHeading";
 
 export type ArticleProps = {
-  backdropImageProps: BackdropImageProps;
   content: string | undefined;
-  deck: string;
   recentReviews: ReviewCardValue[];
-  title: string;
 };
 
 export function Article({
-  backdropImageProps,
   content,
-  deck,
   recentReviews,
-  title,
 }: ArticleProps): React.JSX.Element {
   return (
     <>
-      <article data-pagefind-body>
-        <Backdrop
-          centerText={true}
-          deck={deck}
-          imageProps={backdropImageProps}
-          size="large"
-          title={title}
-        />
-        <section className="flex flex-col items-center pt-16 pb-32">
-          <div className="px-container">
-            <LongFormText className="max-w-prose" text={content} />
-          </div>
-        </section>
-      </article>
+      <section className="flex flex-col items-center pt-16 pb-32">
+        <div className="px-container">
+          <LongFormText className="max-w-prose" text={content} />
+        </div>
+      </section>
       <div className="bg-subtle pt-6 pb-16">
         <MoreReviews values={recentReviews}>
           <MoreReviewsHeading

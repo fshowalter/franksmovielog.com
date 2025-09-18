@@ -3,21 +3,19 @@ import { getContentPlainText, getPage } from "~/api/pages";
 import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { Article } from "~/components/article/Article";
 import { getProps } from "~/components/article/getArticleProps";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
 import { Layout } from "~/components/layout/Layout";
 
 const { content, rawContent, title } = await getPage("how-i-grade");
 
-const slug = "how-i-grade";
 const deck = `"Should I watch this movie?"`;
 
 const props = await getProps({
   content,
-  deck,
-  slug,
-  title,
 });
 
 const contextPlainText = getContentPlainText(rawContent);
+const backdropImageProps = await getLayoutBackdropImageProps("how-i-grade");
 
 //trim the string to the maximum length
 var description = contextPlainText
@@ -34,10 +32,19 @@ description = description.slice(
 <AstroPageShell
   canonical={true}
   meta={{ description }}
-  openGraph={{ description: props.deck, type: "article" }}
-  title={props.title}
+  openGraph={{ description: deck, type: "article" }}
+  title={title}
 >
-  <Layout>
+  <Layout
+    data-pagefind-body
+    backdrop={{
+      centerText: true,
+      deck,
+      imageProps: backdropImageProps,
+      size: "large",
+      title,
+    }}
+  >
     <Article {...props} />
   </Layout>
 </AstroPageShell>

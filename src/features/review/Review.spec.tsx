@@ -3,7 +3,7 @@ import { describe, it } from "vitest";
 
 import { allReviews } from "~/api/reviews";
 
-import { getProps } from "./getProps";
+import { getProps } from "./getReviewProps";
 import { Review } from "./Review";
 
 const { reviews } = await allReviews();

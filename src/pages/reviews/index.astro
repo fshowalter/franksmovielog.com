@@ -1,26 +1,33 @@
 ---
 import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { Backdrop } from "~/components/backdrop/Backdrop";
-import { Layout as ComponentLayout } from "~/components/layout/Layout";
-import { AllReviewsStrictWrapper } from "~/features/reviews/AllReviews";
-import { getAllReviewsProps } from "~/features/reviews/getProps";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { AllReviews } from "~/features/reviews/AllReviews";
+import { getAllReviewsProps } from "~/features/reviews/getReviewsProps";
 import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
 
-const props = await getAllReviewsProps();
-
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
+const allReviewsProps = await getAllReviewsProps();
+const backdropImageProps = await getLayoutBackdropImageProps("reviews");
+const deck = `"'Sorry' don't get it done, Dude."`;
+const metaDescription =
+  "All my movie reviews, from 2003 to present day. Filter by title, genre, review date, release date, or grade. Sort by best or worst, oldest or newest, or title.";
 ---
 
 <AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{ description: metaDescription }}
   openGraph={{ description: deck, type: "website" }}
   title="All Reviews"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop deck={deck} imageProps={backdropImageProps} title="Reviews" />
+  <Layout
+    backdrop={{
+      deck,
+      imageProps: backdropImageProps,
+      title: "Reviews",
+    }}
+    className="bg-subtle"
+  >
     <ReviewsSubNav active="all" />
-    <AllReviewsStrictWrapper client:load props={interactiveProps} />
-  </ComponentLayout>
+    <AllReviews client:load {...allReviewsProps} />
+  </Layout>
 </AstroPageShell>

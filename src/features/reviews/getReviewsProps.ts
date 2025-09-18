@@ -22,26 +22,17 @@ type PageProps<T> = T & {
   metaDescription: string;
 };
 
-export async function getAllReviewsProps(): Promise<
-  PageProps<AllReviewsProps>
-> {
+export async function getAllReviewsProps(): Promise<AllReviewsProps> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
     await allReviews();
 
   const values = await buildReviewValues(reviews, true);
 
   return {
-    backdropImageProps: await getBackdropImageProps(
-      "reviews",
-      BackdropImageConfig,
-    ),
-    deck: `"'Sorry' don't get it done, Dude."`,
     distinctGenres,
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "title-asc",
-    metaDescription:
-      "All my movie reviews, from 2003 to present day. Filter by title, genre, review date, release date, or grade. Sort by best or worst, oldest or newest, or title.",
     values,
   };
 }
