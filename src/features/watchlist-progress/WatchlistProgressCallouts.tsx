@@ -149,7 +149,7 @@ function ProgressRing({
         strokeWidth={1.8}
       />
       <text
-        fill="var(--fg-default)"
+        fill="var(--color-default)"
         fontSize=".5em"
         textAnchor="middle"
         x="18"
@@ -159,7 +159,7 @@ function ProgressRing({
       </text>
       <text
         className="font-sans"
-        fill="var(--fg-default)"
+        fill="var(--color-default)"
         fontSize=".2em"
         textAnchor="middle"
         x="18"
@@ -169,7 +169,7 @@ function ProgressRing({
       </text>
       <text
         className="font-sans"
-        fill="var(--fg-subtle)"
+        fill="var(--color-subtle)"
         fontSize=".2em"
         textAnchor="middle"
         x="18"

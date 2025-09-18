@@ -1,8 +1,4 @@
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { YearStats } from "~/api/stats";
-
-import { Backdrop, BreadcrumbLink } from "~/components/backdrop/Backdrop";
-import { Layout } from "~/components/layout/Layout";
 
 import type { MostWatchedMoviesListItemValue } from "./MostWatchedMovies";
 import type { MostWatchedPeopleListItemValue } from "./MostWatchedPeople";
@@ -18,8 +14,6 @@ import { StatsNavigation } from "./StatsNavigation";
 import { VenueDistribution } from "./VenueDistribution";
 
 export type YearStatsProps = {
-  backdropImageProps: BackdropImageProps;
-  deck: string;
   distinctStatYears: readonly string[];
   mostWatchedDirectors: MostWatchedPeopleListItemValue[];
   mostWatchedMovies: MostWatchedMoviesListItemValue[];
@@ -30,8 +24,6 @@ export type YearStatsProps = {
 };
 
 export function YearStats({
-  backdropImageProps,
-  deck,
   distinctStatYears,
   mostWatchedDirectors,
   mostWatchedMovies,
@@ -41,15 +33,7 @@ export function YearStats({
   year,
 }: YearStatsProps): React.JSX.Element {
   return (
-    <Layout className="flex flex-col items-center bg-subtle">
-      <Backdrop
-        breadcrumb={
-          <BreadcrumbLink href="/viewings/">Viewing Log</BreadcrumbLink>
-        }
-        deck={deck}
-        imageProps={backdropImageProps}
-        title={`${year} Stats`}
-      />
+    <div className="flex flex-col items-center bg-subtle">
       <StatsNavigation
         className="mb-12 w-full"
         currentYear={year}
@@ -99,6 +83,6 @@ export function YearStats({
           <MostWatchedWriters values={mostWatchedWriters} />
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }

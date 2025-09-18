@@ -1,21 +1,42 @@
 ---
+import { allStatYears } from "~/api/stats";
 import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
 import { AlltimeStats } from "~/features/stats/AlltimeStats";
-import { getAllTimeStatsProps } from "~/features/stats/getProps";
+import { getAllTimeStatsProps } from "~/features/stats/getStatsProps";
 
-const props = await getAllTimeStatsProps();
+const allTimeStatsProps = await getAllTimeStatsProps();
+const backdropImageProps = await getLayoutBackdropImageProps("stats");
+const distinctStatYears = await allStatYears();
+
+const deck = `${(distinctStatYears.length - 1).toString()} Years in Review`;
+const metaDescription =
+  "My all-time viewing stats. Includes my most-watched movies, directors, performers, and writers, as well as grade, venue, release year, and media distributions.";
 ---
 
 <AstroPageShell
   canonical={true}
   meta={{
-    description: props.metaDescription,
+    description: metaDescription,
   }}
   openGraph={{
-    description: props.deck,
+    description: deck,
     type: "website",
   }}
   title="All-Time Stats"
 >
-  <AlltimeStats {...props} />
+  <Layout
+    backdrop={{
+      deck,
+      breadcrumb: {
+        href: "/viewings/",
+        text: "Viewing Log",
+      },
+      imageProps: backdropImageProps,
+      title: "All-Time Stats",
+    }}
+  >
+    <AlltimeStats {...allTimeStatsProps} />
+  </Layout>
 </AstroPageShell>
