@@ -16,7 +16,7 @@ type Props<T extends string> = {
   className?: string;
   filters: React.ReactNode;
   hasPendingFilters: boolean;
-  headerLinks?: React.ReactNode;
+  headerLink?: { href: string; text: string };
   onApplyFilters: () => void;
   onClearFilters: () => void;
   onFilterDrawerOpen: () => void;
@@ -38,7 +38,7 @@ export function FilterAndSortContainer<T extends string>({
   className,
   filters,
   hasPendingFilters,
-  headerLinks,
+  headerLink,
   onApplyFilters,
   onClearFilters,
   onFilterDrawerOpen,
@@ -133,7 +133,7 @@ export function FilterAndSortContainer<T extends string>({
         >
           <FilterAndSortHeader
             filterDrawerVisible={filterDrawerVisible}
-            headerLinks={headerLinks}
+            headerLink={headerLink}
             onFilterClick={onFilterClick}
             sortProps={sortProps}
             toggleButtonRef={toggleButtonRef}

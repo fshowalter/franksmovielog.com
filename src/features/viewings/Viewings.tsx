@@ -3,7 +3,6 @@ import { useEffect, useReducer, useRef } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { FilterAndSortHeaderLink } from "~/components/filter-and-sort/FilterAndSortHeaderLink";
 import { useFilteredValues } from "~/hooks/useFilteredValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
@@ -127,9 +126,7 @@ export function Viewings({
         />
       }
       hasPendingFilters={hasPendingFilters}
-      headerLinks={
-        <FilterAndSortHeaderLink href="/viewings/stats/" text="stats" />
-      }
+      headerLink={{ href: "/viewings/stats/", text: "stats" }}
       onApplyFilters={() => dispatch(createApplyFiltersAction())}
       onClearFilters={() => {
         dispatch(createClearFiltersAction());

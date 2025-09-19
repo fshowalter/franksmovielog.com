@@ -3,7 +3,6 @@ import { useReducer } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { FilterAndSortHeaderLink } from "~/components/filter-and-sort/FilterAndSortHeaderLink";
 import { TitleSortOptions } from "~/components/filter-and-sort/TitleSortOptions";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
@@ -125,9 +124,7 @@ export function Watchlist({
         />
       }
       hasPendingFilters={hasPendingFilters}
-      headerLinks={
-        <FilterAndSortHeaderLink href="/watchlist/progress/" text="progress" />
-      }
+      headerLink={{ href: "/watchlist/progress/", text: "progress" }}
       onApplyFilters={() => dispatch(createApplyFiltersAction())}
       onClearFilters={() => {
         dispatch(createClearFiltersAction());
