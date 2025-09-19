@@ -117,7 +117,7 @@ export default defineConfig({
   integrations: [
     react({
       babel: {
-        plugins: process.env.TEST_WITH_COVERAGE
+        plugins: process.env.TEST_COVERAGE
           ? []
           : [["babel-plugin-react-compiler"]],
       },
