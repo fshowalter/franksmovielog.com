@@ -53,18 +53,20 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   });
 
   return {
-    distinctCollections: [...distinctCollections].sort((a, b) =>
+    distinctCollections: [...distinctCollections].toSorted((a, b) =>
       collator.compare(a, b),
     ),
-    distinctDirectors: [...distinctDirectors].sort((a, b) =>
+    distinctDirectors: [...distinctDirectors].toSorted((a, b) =>
       collator.compare(a, b),
     ),
-    distinctGenres: [...distinctGenres].sort((a, b) => collator.compare(a, b)),
-    distinctPerformers: [...distinctPerformers].sort((a, b) =>
+    distinctGenres: [...distinctGenres].toSorted((a, b) =>
+      collator.compare(a, b),
+    ),
+    distinctPerformers: [...distinctPerformers].toSorted((a, b) =>
       collator.compare(a, b),
     ),
     distinctReleaseYears: [...distinctReleaseYears].toSorted(),
-    distinctWriters: [...distinctWriters].sort((a, b) =>
+    distinctWriters: [...distinctWriters].toSorted((a, b) =>
       collator.compare(a, b),
     ),
     watchlistTitles,

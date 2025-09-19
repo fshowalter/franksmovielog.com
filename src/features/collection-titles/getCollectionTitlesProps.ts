@@ -27,7 +27,7 @@ export async function getCollectionTitlesProps(
     initialSort: "release-date-asc",
     values: await Promise.all(
       collection.titles
-        .sort((a, b) => b.releaseSequence - a.releaseSequence)
+        .toSorted((a, b) => b.releaseSequence - a.releaseSequence)
         .map(async (title) => {
           return {
             ...title,

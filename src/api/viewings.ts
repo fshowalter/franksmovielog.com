@@ -45,9 +45,13 @@ export async function allViewings(): Promise<Viewings> {
   });
 
   return {
-    distinctMedia: [...distinctMedia].sort((a, b) => collator.compare(a, b)),
+    distinctMedia: [...distinctMedia].toSorted((a, b) =>
+      collator.compare(a, b),
+    ),
     distinctReleaseYears: [...distinctReleaseYears].toSorted(),
-    distinctVenues: [...distinctVenues].sort((a, b) => collator.compare(a, b)),
+    distinctVenues: [...distinctVenues].toSorted((a, b) =>
+      collator.compare(a, b),
+    ),
     distinctViewingYears: [...distinctViewingYears].toSorted(),
     viewings: viewings,
   };
