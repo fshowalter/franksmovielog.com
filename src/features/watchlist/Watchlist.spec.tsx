@@ -688,7 +688,9 @@ describe("Watchlist", () => {
       expect(screen.getByText("Show More")).toBeInTheDocument();
     });
 
-    it("shows next batch of items when clicking Show More", async ({ expect }) => {
+    it("shows next batch of items when clicking Show More", async ({
+      expect,
+    }) => {
       // Create 150 test titles
       const testTitles = Array.from({ length: 150 }, (_, i) =>
         createWatchlistTitle({
@@ -730,7 +732,9 @@ describe("Watchlist", () => {
       expect(screen.queryByText("Show More")).not.toBeInTheDocument();
     });
 
-    it("maintains pagination state when applying filters", async ({ expect }) => {
+    it("maintains pagination state when applying filters", async ({
+      expect,
+    }) => {
       // Create 150 test titles with varying genres
       const testTitles = Array.from({ length: 150 }, (_, i) =>
         createWatchlistTitle({
@@ -808,7 +812,9 @@ describe("Watchlist", () => {
       expect(screen.getByText("Show More")).toBeInTheDocument();
     });
 
-    it("shows correct count of items after multiple Show More clicks", async ({ expect }) => {
+    it("shows correct count of items after multiple Show More clicks", async ({
+      expect,
+    }) => {
       // Create 250 test titles (requires multiple clicks)
       const testTitles = Array.from({ length: 250 }, (_, i) =>
         createWatchlistTitle({
