@@ -37,7 +37,7 @@ export function CalendarCell({
         tablet:border tablet:px-2
         tablet-landscape:mb-0 tablet-landscape:table-cell
         tablet-landscape:w-[14.28%] tablet-landscape:py-2
-        ${hasViewings ? `hidden` : "block"}
+        ${hasViewings ? `block` : `hidden`}
       `}
       data-day-of-week={dayOfWeek}
     >
