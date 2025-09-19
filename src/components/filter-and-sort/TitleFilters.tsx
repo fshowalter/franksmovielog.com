@@ -4,17 +4,17 @@ import { YearField } from "~/components/fields/YearField";
 
 type TitleFiltersProps = {
   genres?: {
-    initialValue?: readonly string[];
+    defaultValues?: readonly string[];
     onChange: (values: string[]) => void;
     values: readonly string[];
   };
   releaseYear: {
-    initialValue?: [string, string];
+    defaultValues?: [string, string];
     onChange: (values: [string, string]) => void;
     values: readonly string[];
   };
   title: {
-    initialValue?: string;
+    defaultValue?: string;
     onChange: (value: string) => void;
   };
 };
@@ -35,20 +35,20 @@ export function TitleFilters({
   return (
     <>
       <TextField
-        initialValue={title.initialValue}
+        defaultValue={title.defaultValue}
         label="Title"
         onInputChange={title.onChange}
         placeholder="Enter all or part of a title"
       />
       <YearField
-        initialValues={releaseYear.initialValue}
+        defaultValues={releaseYear.defaultValues}
         label="Release Year"
         onYearChange={releaseYear.onChange}
         years={releaseYear.values}
       />
       {genres && (
         <MultiSelectField
-          initialValues={genres.initialValue}
+          defaultValues={genres.defaultValues}
           label="Genres"
           onChange={genres.onChange}
           options={genres.values}

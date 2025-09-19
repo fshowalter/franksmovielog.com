@@ -29,7 +29,7 @@ export function Filters({
     <>
       <CollectionFilters
         name={{
-          initialValue: filterValues.name,
+          defaultValue: filterValues.name,
           onChange: (value) => dispatch(createNameFilterChangedAction(value)),
         }}
       />

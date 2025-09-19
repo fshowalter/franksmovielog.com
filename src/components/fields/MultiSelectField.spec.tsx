@@ -12,12 +12,12 @@ if (!Element.prototype.scrollIntoView) {
 const createDefaultProps = (
   overrides = {},
 ): {
-  initialValues: string[];
+  defaultValues: string[];
   label: string;
   onChange: (values: string[]) => void;
   options: string[];
 } => ({
-  initialValues: [],
+  defaultValues: [],
   label: "Test Label",
   onChange: vi.fn(),
   options: [
@@ -45,7 +45,7 @@ describe("MultiSelectField", () => {
 
     it("displays initial selected values", ({ expect }) => {
       const props = createDefaultProps({
-        initialValues: ["Option 1", "Option 3"],
+        defaultValues: ["Option 1", "Option 3"],
       });
       render(<MultiSelectField {...props} />);
 
@@ -1138,12 +1138,12 @@ describe("MultiSelectField", () => {
   // Edge cases for keyboard navigation have been moved to the "keyboard navigation" describe block
 
   describe("form reset behavior", () => {
-    it("resets to initial values when form is reset", async ({ expect }) => {
+    it("resets to default values when form is reset", async ({ expect }) => {
       const onChange = vi.fn();
       const user = userEvent.setup();
 
       const props = createDefaultProps({
-        initialValues: ["Option 1", "Option 2"],
+        defaultValues: ["Option 1", "Option 2"],
         onChange,
       });
       const { container } = render(
@@ -1175,7 +1175,7 @@ describe("MultiSelectField", () => {
         form?.reset();
       });
 
-      // Should reset to initial values
+      // Should reset to default values
       await waitFor(() => {
         expect(screen.getByText("Option 1")).toBeInTheDocument();
         expect(screen.getByText("Option 2")).toBeInTheDocument();
@@ -1183,7 +1183,7 @@ describe("MultiSelectField", () => {
       });
     });
 
-    it("clears all selections when form is reset with no initial values", async ({
+    it("clears all selections when form is reset with no default values", async ({
       expect,
     }) => {
       const onChange = vi.fn();

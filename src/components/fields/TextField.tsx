@@ -12,19 +12,19 @@ type onChangeHandler = (value: string) => void;
 /**
  * Text input field with label and debounced change handler.
  * @param props - Component props
- * @param props.initialValue - Initial input value
+ * @param props.defaultValue - Default input value
  * @param props.label - Field label text
  * @param props.onInputChange - Debounced handler for input changes
  * @param props.placeholder - Placeholder text
  * @returns Labeled text input field
  */
 export function TextField({
-  initialValue,
+  defaultValue,
   label,
   onInputChange,
   placeholder,
 }: {
-  initialValue: string | undefined;
+  defaultValue: string | undefined;
   label: string;
   onInputChange: onChangeHandler;
   placeholder: string;
@@ -48,7 +48,7 @@ export function TextField({
           outline-accent
           placeholder:text-default placeholder:opacity-50
         `}
-        defaultValue={initialValue}
+        defaultValue={defaultValue}
         onChange={handleChange}
         placeholder={placeholder}
         type="text"
