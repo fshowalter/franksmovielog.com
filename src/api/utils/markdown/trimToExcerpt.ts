@@ -1,5 +1,9 @@
 import type { Root } from "mdast";
 
+/**
+ * Remark plugin to trim content to just the first paragraph.
+ * @returns Transformer function for the syntax tree
+ */
 export function trimToExcerpt() {
   return (tree: Root) => {
     // Find first paragraph more efficiently

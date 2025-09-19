@@ -260,6 +260,13 @@
         }
       })();
     </script>
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="/_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fhatchet.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=720&amp;h=405&amp;q=80&amp;f=avif 720w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fhatchet.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;h=675&amp;q=80&amp;f=avif 1200w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fhatchet.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1920&amp;h=1080&amp;q=80&amp;f=avif 1920w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fhatchet.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
     <div class="group">
       <a
         class="absolute top-0.5 left-1/2 z-skip-link mx-auto [transform:translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2 text-center text-accent focus:[transform:translate(-50%,0%)]"
@@ -366,14 +373,14 @@
             </div>
             <div
               class="invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0 transition-opacity duration-200 [body.nav-open_&amp;]:tablet:visible [body.nav-open_&amp;]:tablet:z-nav-backdrop [body.nav-open_&amp;]:tablet:opacity-100"
-              data-nav-backdrop="true"
+              data-nav-drawer-backdrop="true"
             ></div>
             <button
               aria-controls="nav-menu"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
               class="relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-transform hover:scale-110"
-              data-nav-toggle="true"
+              data-nav-drawer-toggle="true"
               type="button"
             >
               <span
@@ -385,7 +392,7 @@
             <nav aria-label="Main navigation">
               <div
                 class="invisible fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-white opacity-0 duration-200 ease-in-out tablet:max-w-[35vw] tablet:gap-y-10 laptop:max-w-[25vw] [body.nav-open_&amp;]:visible [body.nav-open_&amp;]:bottom-0 [body.nav-open_&amp;]:z-nav-menu [body.nav-open_&amp;]:h-full [body.nav-open_&amp;]:w-full [body.nav-open_&amp;]:transform-[translateX(0)] [body.nav-open_&amp;]:overflow-y-auto [body.nav-open_&amp;]:pt-20 [body.nav-open_&amp;]:pr-[16%] [body.nav-open_&amp;]:pb-5 [body.nav-open_&amp;]:pl-[12%] [body.nav-open_&amp;]:opacity-100 [body.nav-open_&amp;]:drop-shadow-2xl [body.nav-open_&amp;]:tablet:px-10 [body.nav-open_&amp;]:tablet:pt-40 [body.nav-open_&amp;]:laptop:px-20"
-                data-nav-menu="true"
+                data-nav-drawer="true"
                 id="nav-menu"
               >
                 <ol class="flex flex-col gap-y-6">
@@ -509,13 +516,6 @@
           </div>
         </header>
         <main class="grow bg-subtle" id="content">
-          <link
-            rel="preload"
-            as="image"
-            imagesrcset="/_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fhatchet.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=720&amp;h=405&amp;q=80&amp;f=avif 720w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fhatchet.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1200&amp;h=675&amp;q=80&amp;f=avif 1200w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fhatchet.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=1920&amp;h=1080&amp;q=80&amp;f=avif 1920w, /_image/?href=%2Fcontent%2Fassets%2Fbackdrops%2Fhatchet.png%3ForigWidth%3D2400%26origHeight%3D1350%26origFormat%3Dpng&amp;w=2400&amp;h=1350&amp;q=80&amp;f=avif 2400w"
-            imagesizes="100vw"
-            fetchpriority="high"
-          />
           <header
             class="min-h-[400px] tablet:min-h-[640px] laptop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-white tablet:pt-40 tablet:pb-10 laptop:pt-40 laptop:pb-16"
           >
@@ -561,16 +561,16 @@
             </div>
           </header>
           <astro-island
-            uid="D2I9V"
-            prefix="r3"
-            component-url="~/components/Collection/Collection"
-            component-export="Collection"
+            uid="Z2fiOee"
+            prefix="r1"
+            component-url="~/features/collection-titles/CollectionTitles"
+            component-export="CollectionTitles"
             renderer-url="@astrojs/react/client.js"
-            props='{"avatarImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=80&amp;h=80&amp;q=80&amp;f=avif 1x, /_image/?href=%2Fcontent%2Fassets%2Favatars%2Fhatchet.png%3ForigWidth%3D500%26origHeight%3D500%26origFormat%3Dpng&amp;w=160&amp;h=160&amp;q=80&amp;f=avif 2x"]}],"distinctGenres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"distinctReleaseYears":[1,[[0,"2006"],[0,"2010"],[0,"2013"],[0,"2017"]]],"distinctReviewYears":[1,[[0,"2020"],[0,"2021"]]],"initialSort":[0,"release-date-asc"],"titles":[1,[[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"D+"],"gradeValue":[0,4],"imdbId":[0,"tt5534434"],"releaseSequence":[0,3631],"releaseYear":[0,"2017"],"reviewDate":[0,"2021-01-16"],"reviewSequence":[0,1197],"slug":[0,"victor-crowley-2017"],"sortTitle":[0,"victor-crowley-2017"],"title":[0,"Victor Crowley"],"posterImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w"]}],"reviewDisplayDate":[0,"Sat, Jan 16, 2021"],"reviewYear":[0,"2021"]}],[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C+"],"gradeValue":[0,7],"imdbId":[0,"tt1870419"],"releaseSequence":[0,3518],"releaseYear":[0,"2013"],"reviewDate":[0,"2020-11-19"],"reviewSequence":[0,1133],"slug":[0,"hatchet-iii-2013"],"sortTitle":[0,"hatchet-iii-2013"],"title":[0,"Hatchet III"],"posterImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w"]}],"reviewDisplayDate":[0,"Thu, Nov 19, 2020"],"reviewYear":[0,"2020"]}],[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C-"],"gradeValue":[0,5],"imdbId":[0,"tt1270835"],"releaseSequence":[0,3415],"releaseYear":[0,"2010"],"reviewDate":[0,"2020-10-15"],"reviewSequence":[0,1105],"slug":[0,"hatchet-ii-2010"],"sortTitle":[0,"hatchet-ii-2010"],"title":[0,"Hatchet II"],"posterImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w"]}],"reviewDisplayDate":[0,"Thu, Oct 15, 2020"],"reviewYear":[0,"2020"]}],[0,{"genres":[1,[[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C"],"gradeValue":[0,6],"imdbId":[0,"tt0422401"],"releaseSequence":[0,3224],"releaseYear":[0,"2006"],"reviewDate":[0,"2020-09-19"],"reviewSequence":[0,1088],"slug":[0,"hatchet-2006"],"sortTitle":[0,"hatchet-2006"],"title":[0,"Hatchet"],"posterImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w"]}],"reviewDisplayDate":[0,"Sat, Sep 19, 2020"],"reviewYear":[0,"2020"]}]]],"value":[0,{"description":[0,"The \"Hachet\" franchise.\n"],"name":[0,"Hatchet"],"reviewCount":[0,4],"slug":[0,"hatchet"],"titleCount":[0,4],"titles":[1,[[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"D+"],"gradeValue":[0,4],"imdbId":[0,"tt5534434"],"releaseSequence":[0,3631],"releaseYear":[0,"2017"],"reviewDate":[0,"2021-01-16"],"reviewSequence":[0,1197],"slug":[0,"victor-crowley-2017"],"sortTitle":[0,"victor-crowley-2017"],"title":[0,"Victor Crowley"]}],[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C+"],"gradeValue":[0,7],"imdbId":[0,"tt1870419"],"releaseSequence":[0,3518],"releaseYear":[0,"2013"],"reviewDate":[0,"2020-11-19"],"reviewSequence":[0,1133],"slug":[0,"hatchet-iii-2013"],"sortTitle":[0,"hatchet-iii-2013"],"title":[0,"Hatchet III"]}],[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C-"],"gradeValue":[0,5],"imdbId":[0,"tt1270835"],"releaseSequence":[0,3415],"releaseYear":[0,"2010"],"reviewDate":[0,"2020-10-15"],"reviewSequence":[0,1105],"slug":[0,"hatchet-ii-2010"],"sortTitle":[0,"hatchet-ii-2010"],"title":[0,"Hatchet II"]}],[0,{"genres":[1,[[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C"],"gradeValue":[0,6],"imdbId":[0,"tt0422401"],"releaseSequence":[0,3224],"releaseYear":[0,"2006"],"reviewDate":[0,"2020-09-19"],"reviewSequence":[0,1088],"slug":[0,"hatchet-2006"],"sortTitle":[0,"hatchet-2006"],"title":[0,"Hatchet"]}]]],"descriptionHtml":[0,"&lt;span&gt;The &lt;em&gt;Hachet&lt;/em&gt; franchise.&lt;/span&gt;"]}]}'
+            props='{"distinctGenres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"distinctReleaseYears":[1,[[0,"2006"],[0,"2010"],[0,"2013"],[0,"2017"]]],"distinctReviewYears":[1,[[0,"2020"],[0,"2021"]]],"initialSort":[0,"release-date-asc"],"values":[1,[[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"D+"],"gradeValue":[0,4],"imdbId":[0,"tt5534434"],"releaseSequence":[0,3631],"releaseYear":[0,"2017"],"reviewDate":[0,"2021-01-16"],"reviewSequence":[0,1197],"slug":[0,"victor-crowley-2017"],"sortTitle":[0,"victor-crowley-2017"],"title":[0,"Victor Crowley"],"posterImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w"]}],"reviewDisplayDate":[0,"Sat, Jan 16, 2021"],"reviewYear":[0,"2021"]}],[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C+"],"gradeValue":[0,7],"imdbId":[0,"tt1870419"],"releaseSequence":[0,3518],"releaseYear":[0,"2013"],"reviewDate":[0,"2020-11-19"],"reviewSequence":[0,1133],"slug":[0,"hatchet-iii-2013"],"sortTitle":[0,"hatchet-iii-2013"],"title":[0,"Hatchet III"],"posterImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w"]}],"reviewDisplayDate":[0,"Thu, Nov 19, 2020"],"reviewYear":[0,"2020"]}],[0,{"genres":[1,[[0,"Action"],[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C-"],"gradeValue":[0,5],"imdbId":[0,"tt1270835"],"releaseSequence":[0,3415],"releaseYear":[0,"2010"],"reviewDate":[0,"2020-10-15"],"reviewSequence":[0,1105],"slug":[0,"hatchet-ii-2010"],"sortTitle":[0,"hatchet-ii-2010"],"title":[0,"Hatchet II"],"posterImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w"]}],"reviewDisplayDate":[0,"Thu, Oct 15, 2020"],"reviewYear":[0,"2020"]}],[0,{"genres":[1,[[0,"Comedy"],[0,"Horror"],[0,"Thriller"]]],"grade":[0,"C"],"gradeValue":[0,6],"imdbId":[0,"tt0422401"],"releaseSequence":[0,3224],"releaseYear":[0,"2006"],"reviewDate":[0,"2020-09-19"],"reviewSequence":[0,1088],"slug":[0,"hatchet-2006"],"sortTitle":[0,"hatchet-2006"],"title":[0,"Hatchet"],"posterImageProps":[0,{"src":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"],"srcSet":[0,"/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif 63w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w, /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w"]}],"reviewDisplayDate":[0,"Sat, Sep 19, 2020"],"reviewYear":[0,"2020"]}]]]}'
             ssr
             client="load"
             before-hydration-url="astro:scripts/before-hydration.js"
-            opts='{"name":"Collection","value":true}'
+            opts='{"name":"CollectionTitles","value":true}'
             await-children
             ><div
               class="
@@ -604,14 +604,14 @@
                         >
                           <option value="title-asc">Title (A → Z)</option>
                           <option value="title-desc">Title (Z → A)</option>
-                          <option value="grade-desc">Grade (Best First)</option>
-                          <option value="grade-asc">Grade (Worst First)</option>
                           <option value="release-date-desc">
                             Release Date (Newest First)
                           </option>
                           <option value="release-date-asc" selected="">
                             Release Date (Oldest First)
                           </option>
+                          <option value="grade-desc">Grade (Best First)</option>
+                          <option value="grade-asc">Grade (Worst First)</option>
                           <option value="review-date-desc">
                             Review Date (Newest First)
                           </option>
@@ -1013,7 +1013,7 @@
                     class="fixed top-0 right-0 z-filter-drawer flex h-full max-w-[380px] flex-col items-start gap-y-5 bg-default text-left duration-200 ease-in-out w-0 transform-[translateX(100%)] overflow-y-hidden tablet:gap-y-10"
                     id="filters"
                   >
-                    <div
+                    <form
                       class="flex h-full w-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
                     >
                       <button
@@ -1052,19 +1052,7 @@
                             class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
                             placeholder="Enter all or part of a title"
                             type="text"
-                            value="" /></label
-                        ><label class="flex flex-col"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Reviewed Status</span
-                          ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                          >
-                            <option value="All">All</option>
-                            <option value="Reviewed">Reviewed</option>
-                            <option value="Not Reviewed">Not Reviewed</option>
-                          </select></label
-                        >
+                        /></label>
                         <fieldset class="text-subtle">
                           <legend
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
@@ -1099,36 +1087,45 @@
                             >
                           </div>
                         </fieldset>
-                        <fieldset class="text-subtle">
-                          <legend
+                        <div class="flex flex-col text-left text-subtle">
+                          <label
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                            for="button-genres"
+                            >Genres</label
                           >
-                            Review Year
-                          </legend>
-                          <div class="flex items-baseline">
-                            <label class="flex flex-1 items-center gap-x-[.5ch]"
-                              ><span
-                                class="min-w-10 text-left text-sm tracking-serif-wide"
-                                >From</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="2020" selected="">2020</option>
-                                <option value="2021">2021</option>
-                              </select></label
-                            ><label class="flex flex-1 items-center"
-                              ><span
-                                class="min-w-10 text-center text-sm tracking-serif-wide"
-                                >to</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="2021" selected="">2021</option>
-                                <option value="2020">2020</option>
-                              </select></label
+                          <div class="relative">
+                            <button
+                              aria-expanded="false"
+                              aria-haspopup="listbox"
+                              aria-label="Genres"
+                              class="relative w-full cursor-default scroll-mt-[var(--control-scroll-offset,0)] rounded border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
+                              id="button-genres"
+                              type="button"
                             >
+                              <div
+                                class="flex min-h-[36px] flex-wrap items-center gap-1 py-2 pr-10"
+                              >
+                                <span class="text-subtle">Select...</span>
+                              </div>
+                              <span
+                                class="absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2"
+                                ><svg
+                                  aria-hidden="true"
+                                  class="pointer-events-none h-5 w-5 text-subtle"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    d="M19 9l-7 7-7-7"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                  ></path></svg
+                              ></span>
+                            </button>
                           </div>
-                        </fieldset>
+                        </div>
                         <fieldset class="text-subtle">
                           <legend
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
@@ -1181,45 +1178,48 @@
                             >
                           </div>
                         </fieldset>
-                        <div class="flex flex-col text-left text-subtle">
-                          <label
+                        <fieldset class="text-subtle">
+                          <legend
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            for="button-genres"
-                            >Genres</label
                           >
-                          <div class="relative">
-                            <button
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
-                              aria-label="Genres"
-                              class="relative w-full cursor-default scroll-mt-[var(--control-scroll-offset,0)] rounded border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
-                              id="button-genres"
-                              type="button"
-                            >
-                              <div
-                                class="flex min-h-[36px] flex-wrap items-center gap-1 py-2 pr-10"
+                            Review Year
+                          </legend>
+                          <div class="flex items-baseline">
+                            <label class="flex flex-1 items-center gap-x-[.5ch]"
+                              ><span
+                                class="min-w-10 text-left text-sm tracking-serif-wide"
+                                >From</span
+                              ><select
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
                               >
-                                <span class="text-subtle">Select...</span>
-                              </div>
-                              <span
-                                class="absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2"
-                                ><svg
-                                  aria-hidden="true"
-                                  class="pointer-events-none h-5 w-5 text-subtle"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M19 9l-7 7-7-7"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  ></path></svg
-                              ></span>
-                            </button>
+                                <option value="2020" selected="">2020</option>
+                                <option value="2021">2021</option>
+                              </select></label
+                            ><label class="flex flex-1 items-center"
+                              ><span
+                                class="min-w-10 text-center text-sm tracking-serif-wide"
+                                >to</span
+                              ><select
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                              >
+                                <option value="2021" selected="">2021</option>
+                                <option value="2020">2020</option>
+                              </select></label
+                            >
                           </div>
-                        </div>
+                        </fieldset>
+                        <label class="flex flex-col"
+                          ><span
+                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                            >Reviewed Status</span
+                          ><select
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                          >
+                            <option value="All">All</option>
+                            <option value="Reviewed">Reviewed</option>
+                            <option value="Not Reviewed">Not Reviewed</option>
+                          </select></label
+                        >
                       </fieldset>
                       <div
                         class="sticky bottom-0 z-filter-footer mt-auto w-full border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"
@@ -1227,21 +1227,22 @@
                         <div class="flex gap-x-4">
                           <button
                             aria-label="Clear all filters"
-                            class="flex items-center justify-center gap-x-4 rounded-sm bg-canvas px-4 py-3 font-sans text-xs text-nowrap uppercase transition-transform enabled:hover:scale-105 enabled:hover:drop-shadow-md cursor-not-allowed text-muted opacity-50"
-                            type="button"
+                            class="flex items-center justify-center gap-x-4 rounded-sm bg-canvas px-4 py-3 font-sans text-xs text-nowrap uppercase transition-transform cursor-not-allowed text-muted opacity-50"
+                            disabled=""
+                            type="reset"
                           >
                             Clear</button
                           ><button
-                            class="flex flex-1 transform-gpu cursor-pointer items-center justify-center gap-x-4 rounded-sm bg-footer px-4 py-3 font-sans text-xs font-bold tracking-wide text-nowrap text-white uppercase transition-transform hover:scale-105 hover:drop-shadow-md"
+                            class="flex flex-1 transform-gpu items-center justify-center gap-x-4 rounded-sm bg-footer px-4 py-3 font-sans text-xs font-bold tracking-wide text-nowrap text-white uppercase transition-transform cursor-pointer hover:scale-105 hover:drop-shadow-md"
                             type="button"
                           >
-                            View<!-- -->
+                            View
                             <!-- -->4<!-- -->
-                            <!-- -->Results
+                            Results
                           </button>
                         </div>
                       </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -1618,7 +1619,7 @@
     </dialog>
     <script
       type="module"
-      src="/src/layouts/Layout.astro?astro&type=script&index=1&lang.ts"
+      src="/src/astro/AstroPageShell.astro?astro&type=script&index=1&lang.ts"
     ></script>
   </body>
 </html>

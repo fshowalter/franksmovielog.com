@@ -1,27 +1,35 @@
 ---
-import { Backdrop } from "~/components/Backdrop";
-import { Layout as ComponentLayout } from "~/components/Layout/Layout";
-import { getProps } from "~/components/Watchlist/getProps";
-import { Watchlist } from "~/components/Watchlist/Watchlist";
-import Layout from "~/layouts/Layout.astro";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { getWatchlistProps } from "~/features/watchlist/getWatchlistProps";
+import { Watchlist } from "~/features/watchlist/Watchlist";
 
-const props = await getProps();
+const watchlistProps = await getWatchlistProps();
+const backdropImageProps = await getLayoutBackdropImageProps("watchlist");
 
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
+const deck = `"A man's got to know his limitations"`;
+const metaDescription =
+  "My to-review bucket list. See what I've yet to review. Sort or filter titles by reason, release date, or title.";
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{ description: metaDescription }}
   openGraph={{
     description: deck,
     type: "website",
   }}
   title="Watchlist"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop deck={deck} imageProps={backdropImageProps} title="Watchlist" />
-    <Watchlist client:load {...interactiveProps} />
-  </ComponentLayout>
-</Layout>
+  <Layout
+    backdrop={{
+      deck,
+      imageProps: backdropImageProps,
+      title: "Watchlist",
+    }}
+    className="bg-subtle"
+  >
+    <Watchlist client:load {...watchlistProps} />
+  </Layout>
+</AstroPageShell>

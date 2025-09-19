@@ -1,17 +1,17 @@
 ---
-import { Backdrop } from "~/components/Backdrop";
-import { Collections } from "~/components/Collections/Collections";
-import { getProps } from "~/components/Collections/getProps";
-import { Layout as ComponentLayout } from "~/components/Layout/Layout";
-import Layout from "~/layouts/Layout.astro";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { Collections } from "~/features/collections/Collections";
+import { getCollectionsProps } from "~/features/collections/getCollectionsProps";
 
-const props = await getProps();
+const collectionsProps = await getCollectionsProps();
+const backdropImageProps = await getLayoutBackdropImageProps("collections");
 
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
+const deck = `"Okay ramblers, let's get rambling."`;
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{
     description:
@@ -20,8 +20,14 @@ const { backdropImageProps, deck, ...interactiveProps } = props;
   openGraph={{ description: deck, type: "website" }}
   title="Collections"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop deck={deck} imageProps={backdropImageProps} title="Collections" />
-    <Collections client:load {...interactiveProps} />
-  </ComponentLayout>
-</Layout>
+  <Layout
+    backdrop={{
+      deck,
+      imageProps: backdropImageProps,
+      title: "Collections",
+    }}
+    className="bg-subtle"
+  >
+    <Collections client:load {...collectionsProps} />
+  </Layout>
+</AstroPageShell>

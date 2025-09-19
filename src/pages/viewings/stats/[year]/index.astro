@@ -1,8 +1,10 @@
 ---
 import { allStatYears } from "~/api/stats";
-import { getYearStatsProps } from "~/components/Stats/getProps";
-import { YearStats } from "~/components/Stats/YearStats";
-import Layout from "~/layouts/Layout.astro";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { getYearStatsProps } from "~/features/stats/getStatsProps";
+import { YearStats } from "~/features/stats/YearStats";
 
 interface Props {
   year: string;
@@ -25,17 +27,37 @@ export async function getStaticPaths() {
 
 const { year } = Astro.props;
 
-const props = await getYearStatsProps(year);
+const yearStatsProps = await getYearStatsProps(year);
+const backdropImageProps = await getLayoutBackdropImageProps(year);
+const distinctStatYears = await allStatYears();
+
+const deck =
+  [...distinctStatYears].reverse()[0] === year
+    ? "A Year in Progress..."
+    : "A Year in Review";
+const metaDescription = `My ${year} viewing stats. Includes my most-watched movies, directors, performers, and writers; as well as venue, release year, and media distributions.`;
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{ description: metaDescription }}
   openGraph={{
-    description: props.deck,
+    description: deck,
     type: "website",
   }}
-  title={`${props.year} Stats`}
+  title={`${year} Stats`}
 >
-  <YearStats {...props} />
-</Layout>
+  <Layout
+    backdrop={{
+      breadcrumb: {
+        href: "/viewings/",
+        text: "Viewing Log",
+      },
+      deck,
+      imageProps: backdropImageProps,
+      title: `${year} Stats`,
+    }}
+  >
+    <YearStats {...yearStatsProps} />
+  </Layout>
+</AstroPageShell>

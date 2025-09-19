@@ -1,10 +1,10 @@
 import { collator } from "~/utils/collator";
 
-import type { ViewingJson } from "./data/viewingsJson";
+import type { ViewingJson } from "./data/viewings-json";
 
-import { allViewingsJson } from "./data/viewingsJson";
+import { allViewingsJson } from "./data/viewings-json";
 
-export type Viewing = ViewingJson & {
+type Viewing = ViewingJson & {
   viewingYear: string;
 };
 
@@ -16,6 +16,10 @@ type Viewings = {
   viewings: Viewing[];
 };
 
+/**
+ * Retrieves all viewings with distinct metadata for filtering.
+ * @returns Object containing all viewings and distinct values for years, media, and venues
+ */
 export async function allViewings(): Promise<Viewings> {
   const viewingsJson = await allViewingsJson();
   const distinctViewingYears = new Set<string>();

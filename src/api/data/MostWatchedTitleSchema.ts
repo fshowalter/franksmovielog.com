@@ -2,6 +2,9 @@ import { z } from "zod";
 
 import { nullableNumber, nullableString } from "./utils/nullable";
 
+/**
+ * Zod schema for most watched title data.
+ */
 export const MostWatchedTitleSchema = z
   .object({
     count: z.number(),
@@ -35,4 +38,7 @@ export const MostWatchedTitleSchema = z
     };
   });
 
+/**
+ * Type for most watched title data.
+ */
 export type MostWatchedTitle = z.infer<typeof MostWatchedTitleSchema>;

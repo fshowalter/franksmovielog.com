@@ -3,7 +3,7 @@ import type { APIRoute } from "astro";
 import path from "node:path";
 import sharp from "sharp";
 
-import { OpenGraphImage } from "~/components/OpenGraphImage";
+import { OpenGraphImage } from "~/components/open-graph-image/OpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
 
 export const GET: APIRoute = async function get() {

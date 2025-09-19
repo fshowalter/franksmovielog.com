@@ -48,7 +48,23 @@ export default getViteConfig({
         extends: true,
         test: {
           environment: "node",
-          include: ["src/layouts/**/*.spec.ts"],
+          include: ["src/features/**/*.spec.ts"],
+          name: "features-node",
+        },
+      },
+      {
+        extends: true,
+        test: {
+          environment: "jsdom",
+          include: ["src/features/**/*.spec.tsx"],
+          name: "features-jsdom",
+        },
+      },
+      {
+        extends: true,
+        test: {
+          environment: "node",
+          include: ["src/astro/**/*.spec.ts"],
           name: "layouts-node",
         },
       },

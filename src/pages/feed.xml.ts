@@ -19,6 +19,10 @@ const gradeMap: Record<string, string> = {
   F: "&#9733;",
 };
 
+/**
+ * Astro endpoint handler for generating the RSS feed.
+ * @returns RSS feed response with recent movie reviews
+ */
 export async function GET() {
   const reviews = await mostRecentReviews(10);
 

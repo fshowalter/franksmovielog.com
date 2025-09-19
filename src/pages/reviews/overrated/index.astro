@@ -1,28 +1,23 @@
 ---
-import React from "react";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { getOverratedProps } from "~/features/reviews/getReviewsProps";
+import { Overrated } from "~/features/reviews/Overrated";
+import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { Layout as ComponentLayout } from "~/components/Layout/Layout";
-import { getPropsForOverrated as getProps } from "~/components/Reviews/getProps";
-import { Overrated } from "~/components/Reviews/Overrated";
-import { ReviewsSubNav } from "~/components/Reviews/ReviewsSubNav";
-import Layout from "~/layouts/Layout.astro";
+const overratedProps = await getOverratedProps();
+const backdropImageProps = await getLayoutBackdropImageProps("overrated");
 
-const props = await getProps();
-
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
-
-const breadcrumb = React.createElement(BreadcrumbLink, {
-  children: "Reviews",
-  href: "/reviews/",
-});
+const deck = "One and two star movies with an above-average IMDb rating.";
+const metaDescription =
+  "Feeling contrarian? Behold my one and two star reviews of movies that somehow received and above-average IMDb rating.";
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{
-    description: props.metaDescription,
+    description: metaDescription,
   }}
   openGraph={{
     description: deck,
@@ -30,14 +25,19 @@ const breadcrumb = React.createElement(BreadcrumbLink, {
   }}
   title="Overrated Disappointments"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop
-      breadcrumb={breadcrumb}
-      deck={deck}
-      imageProps={backdropImageProps}
-      title="Overrated"
-    />
+  <Layout
+    backdrop={{
+      breadcrumb: {
+        href: "/reviews/",
+        text: "Reviews",
+      },
+      deck,
+      imageProps: backdropImageProps,
+      title: "Overrated",
+    }}
+    className="bg-subtle"
+  >
     <ReviewsSubNav active="overrated" />
-    <Overrated client:load {...interactiveProps} />
-  </ComponentLayout>
-</Layout>
+    <Overrated client:load {...overratedProps} />
+  </Layout>
+</AstroPageShell>

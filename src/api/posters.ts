@@ -2,6 +2,9 @@ import { getImage } from "astro:assets";
 
 import { normalizeSources } from "./utils/normalizeSources";
 
+/**
+ * Props for poster images.
+ */
 export type PosterImageProps = {
   src: string;
   srcSet: string;
@@ -11,6 +14,14 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/posters/*.png",
 );
 
+/**
+ * Generates optimized poster image properties with fixed dimensions.
+ * @param slug - The identifier for the poster image file
+ * @param options - Image dimensions configuration
+ * @param options.height - Fixed height for the poster image
+ * @param options.width - Fixed width for the poster image
+ * @returns Poster image properties with src and srcSet
+ */
 export async function getFixedWidthPosterImageProps(
   slug: string,
   {
@@ -42,6 +53,14 @@ export async function getFixedWidthPosterImageProps(
   };
 }
 
+/**
+ * Generates responsive poster image properties with multiple width variants.
+ * @param slug - The identifier for the poster image file (defaults to "default")
+ * @param options - Image dimensions configuration
+ * @param options.height - Target height for the poster image
+ * @param options.width - Base width for generating responsive variants
+ * @returns Poster image properties with src and responsive srcSet
+ */
 export async function getFluidWidthPosterImageProps(
   slug: string | undefined = "default",
   {
@@ -77,6 +96,12 @@ export async function getFluidWidthPosterImageProps(
   };
 }
 
+/**
+ * Generates high-quality poster properties for update/social media purposes.
+ * Uses PNG format at 500x750 dimensions with maximum quality.
+ * @param slug - The identifier for the poster image file
+ * @returns High-quality poster image properties
+ */
 export async function getUpdatePosterProps(
   slug: string,
 ): Promise<PosterImageProps> {

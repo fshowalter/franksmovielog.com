@@ -1,38 +1,39 @@
 ---
-import React from "react";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { getUnderseenProps } from "~/features/reviews/getReviewsProps";
+import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
+import { Underseen } from "~/features/reviews/Underseen";
 
-import { Backdrop, BreadcrumbLink } from "~/components/Backdrop";
-import { Layout as ComponentLayout } from "~/components/Layout/Layout";
-import { getPropsForUnderseen as getProps } from "~/components/Reviews/getProps";
-import { ReviewsSubNav } from "~/components/Reviews/ReviewsSubNav";
-import { Underseen } from "~/components/Reviews/Underseen";
-import Layout from "~/layouts/Layout.astro";
+const underseenProps = await getUnderseenProps();
+const backdropImageProps = await getLayoutBackdropImageProps("underseen");
 
-const props = await getProps();
-
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
-
-const breadcrumb = React.createElement(BreadcrumbLink, {
-  children: "Reviews",
-  href: "/reviews/",
-});
+const deck =
+  "Four and five star movies with a below average number of IMDb votes.";
+const metaDescription =
+  "Looking for something new? Behold my four and five star reviews of movies with a below average number of IMDb votes.";
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{ description: metaDescription }}
   openGraph={{ description: deck, type: "website" }}
   title="Underseen Gems"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop
-      breadcrumb={breadcrumb}
-      deck={deck}
-      imageProps={backdropImageProps}
-      title="Underseen Gems"
-    />
+  <Layout
+    backdrop={{
+      breadcrumb: {
+        href: "/reviews/",
+        text: "Reviews",
+      },
+      deck,
+      imageProps: backdropImageProps,
+      title: "Underseen",
+    }}
+    className="bg-subtle"
+  >
     <ReviewsSubNav active="underseen" />
-    <Underseen client:load {...interactiveProps} />
-  </ComponentLayout>
-</Layout>
+    <Underseen client:load {...underseenProps} />
+  </Layout>
+</AstroPageShell>

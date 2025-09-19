@@ -6,7 +6,7 @@ import { loadRenderers } from "astro:container";
 import * as prettier from "prettier";
 import { describe, it } from "vitest";
 
-import { allCastAndCrew } from "~/api/castAndCrew";
+import { allCastAndCrew } from "~/api/cast-and-crew";
 import { normalizeScriptSrc } from "~/utils/normalizeScriptSrc";
 
 import Review from "./index.astro";
@@ -34,7 +34,7 @@ describe("/cast-and-crew/:slug", () => {
         Review as AstroComponentFactory,
         {
           partial: false,
-          props: { slug: member.slug },
+          props: member,
           request: new Request(
             `https://www.franksmovielog.com/cast-and-crew/${member.slug}/`,
           ),

@@ -5,9 +5,9 @@ import fs from "node:fs/promises";
 import satori from "satori";
 import sharp from "sharp";
 
-import type { HomeOpenGraphImageComponentType } from "~/components/Home/OpenGraphImage";
-import type { OpenGraphImageComponentType } from "~/components/OpenGraphImage";
-import type { ReviewOpenGraphImageComponentType } from "~/components/Review/OpenGraphImage";
+import type { OpenGraphImageComponentType } from "~/components/open-graph-image/OpenGraphImage";
+import type { HomeOpenGraphImageComponentType } from "~/features/home/OpenGraphImage";
+import type { ReviewOpenGraphImageComponentType } from "~/features/review/OpenGraphImage";
 
 import {
   createCacheConfig,
@@ -36,6 +36,13 @@ type ReactElementWithType = ReactElement & {
   type: string;
 };
 
+/**
+ * Converts a React component to a JPEG image for Open Graph meta tags.
+ * Uses Satori for SVG generation and Sharp for image conversion.
+ * Includes caching to avoid regenerating identical images.
+ * @param component - The React component to render as an image
+ * @returns JPEG image buffer
+ */
 export async function componentToImage(
   component: ReturnType<OpenGraphImageComponent>,
 ): Promise<Uint8Array<ArrayBuffer>> {

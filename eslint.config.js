@@ -10,10 +10,13 @@ import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactCompiler from "eslint-plugin-react-compiler";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import { defineConfig } from "eslint/config";
 import globals from "globals";
-import tsEslint from "typescript-eslint";
+import tseslint from "typescript-eslint";
 
-export default tsEslint.config(
+import separateTypeImports from "./eslint-rules/separate-type-imports.js";
+
+export default defineConfig(
   {
     ignores: [
       "dist/",
@@ -45,7 +48,7 @@ export default tsEslint.config(
     },
   },
   {
-    extends: [...tsEslint.configs.recommendedTypeChecked],
+    extends: [tseslint.configs.recommendedTypeChecked],
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
@@ -54,11 +57,19 @@ export default tsEslint.config(
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
+    plugins: {
+      local: {
+        rules: {
+          "separate-type-imports": separateTypeImports,
+        },
+      },
+    },
     rules: {
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/consistent-type-imports": "off", // Turned off in favor of our custom rule
       "@typescript-eslint/no-import-type-side-effects": "error",
+      "local/separate-type-imports": "error",
       "no-restricted-imports": [
         "error",
         {
@@ -83,7 +94,7 @@ export default tsEslint.config(
     },
     settings: {
       "better-tailwindcss": {
-        entryPoint: "src/layouts/tailwind.css",
+        entryPoint: "src/css/tailwind.css",
       },
     },
   },
@@ -112,7 +123,7 @@ export default tsEslint.config(
       "better-tailwindcss": {
         attributes: [...getDefaultAttributes(), ".*Classes"],
         callees: [...getDefaultCallees(), "ccn"],
-        entryPoint: "src/layouts/tailwind.css",
+        entryPoint: "src/css/tailwind.css",
       },
       react: {
         version: "detect",

@@ -169,14 +169,14 @@
             </div>
             <div
               class="invisible fixed inset-0 bg-[rgba(0,0,0,.4)] opacity-0 transition-opacity duration-200 [body.nav-open_&amp;]:tablet:visible [body.nav-open_&amp;]:tablet:z-nav-backdrop [body.nav-open_&amp;]:tablet:opacity-100"
-              data-nav-backdrop="true"
+              data-nav-drawer-backdrop="true"
             ></div>
             <button
               aria-controls="nav-menu"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
               class="relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-transform hover:scale-110"
-              data-nav-toggle="true"
+              data-nav-drawer-toggle="true"
               type="button"
             >
               <span
@@ -188,7 +188,7 @@
             <nav aria-label="Main navigation">
               <div
                 class="invisible fixed top-0 right-0 flex h-full w-0 transform-[translateX(100%)] flex-col items-start gap-y-5 overflow-hidden bg-footer text-left text-white opacity-0 duration-200 ease-in-out tablet:max-w-[35vw] tablet:gap-y-10 laptop:max-w-[25vw] [body.nav-open_&amp;]:visible [body.nav-open_&amp;]:bottom-0 [body.nav-open_&amp;]:z-nav-menu [body.nav-open_&amp;]:h-full [body.nav-open_&amp;]:w-full [body.nav-open_&amp;]:transform-[translateX(0)] [body.nav-open_&amp;]:overflow-y-auto [body.nav-open_&amp;]:pt-20 [body.nav-open_&amp;]:pr-[16%] [body.nav-open_&amp;]:pb-5 [body.nav-open_&amp;]:pl-[12%] [body.nav-open_&amp;]:opacity-100 [body.nav-open_&amp;]:drop-shadow-2xl [body.nav-open_&amp;]:tablet:px-10 [body.nav-open_&amp;]:tablet:pt-40 [body.nav-open_&amp;]:laptop:px-20"
-                data-nav-menu="true"
+                data-nav-drawer="true"
                 id="nav-menu"
               >
                 <ol class="flex flex-col gap-y-6">
@@ -311,7 +311,7 @@
             </nav>
           </div>
         </header>
-        <main class="grow bg-subtle" id="content">
+        <main class="grow" id="content">
           <header
             class="min-h-[400px] tablet:min-h-[640px] laptop:min-h-[clamp(640px,70vh,1350px)] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-white tablet:pt-40 tablet:pb-10 laptop:pt-40 laptop:pb-16"
           >
@@ -354,7 +354,7 @@
               </p>
             </div>
           </header>
-          <div class="flex flex-col items-center">
+          <div class="flex flex-col items-center bg-subtle">
             <div
               class="mx-auto w-full max-w-(--breakpoint-desktop) tablet:mt-12 tablet:px-container"
             >
@@ -389,7 +389,7 @@
                       stroke-width="1.8"
                     ></path>
                     <text
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".5em"
                       text-anchor="middle"
                       x="18"
@@ -399,7 +399,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -409,7 +409,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-subtle)"
+                      fill="var(--color-subtle)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -457,7 +457,7 @@
                       stroke-width="1.8"
                     ></path>
                     <text
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".5em"
                       text-anchor="middle"
                       x="18"
@@ -467,7 +467,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -477,7 +477,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-subtle)"
+                      fill="var(--color-subtle)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -527,7 +527,7 @@
                       stroke-width="1.8"
                     ></path>
                     <text
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".5em"
                       text-anchor="middle"
                       x="18"
@@ -537,7 +537,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -547,7 +547,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-subtle)"
+                      fill="var(--color-subtle)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -597,7 +597,7 @@
                       stroke-width="1.8"
                     ></path>
                     <text
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".5em"
                       text-anchor="middle"
                       x="18"
@@ -607,7 +607,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -617,7 +617,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-subtle)"
+                      fill="var(--color-subtle)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -667,7 +667,7 @@
                       stroke-width="1.8"
                     ></path>
                     <text
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".5em"
                       text-anchor="middle"
                       x="18"
@@ -677,7 +677,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-default)"
+                      fill="var(--color-default)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -687,7 +687,7 @@
                     </text>
                     <text
                       class="font-sans"
-                      fill="var(--fg-subtle)"
+                      fill="var(--color-subtle)"
                       font-size=".2em"
                       text-anchor="middle"
                       x="18"
@@ -5359,7 +5359,7 @@
     </dialog>
     <script
       type="module"
-      src="/src/layouts/Layout.astro?astro&type=script&index=1&lang.ts"
+      src="/src/astro/AstroPageShell.astro?astro&type=script&index=1&lang.ts"
     ></script>
   </body>
 </html>

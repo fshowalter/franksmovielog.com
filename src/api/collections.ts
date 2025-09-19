@@ -9,23 +9,25 @@ import strip from "strip-markdown";
 import { ENABLE_CACHE } from "~/utils/cache";
 import { perfLogger } from "~/utils/performanceLogger";
 
-import {
-  allCollectionsJson,
-  type CollectionJson,
-} from "./data/collectionsJson";
+import type { CollectionJson } from "./data/collections-json";
+
+import { allCollectionsJson } from "./data/collections-json";
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
-// Cache at API level - lazy caching for better build performance
 let cachedCollectionsJson: CollectionJson[];
-// ENABLE_CACHE is now imported from utils/cache
 
-export type Collection = CollectionJson & {};
-
-export type CollectionWithDetails = Collection & {
+/**
+ * Collection with rendered HTML description.
+ */
+export type Collection = CollectionJson & {
   descriptionHtml: string;
 };
 
+/**
+ * Retrieves all collections with their descriptions rendered as HTML.
+ * @returns Object containing array of all collections
+ */
 export async function allCollections(): Promise<{
   collections: Collection[];
 }> {
@@ -36,13 +38,24 @@ export async function allCollections(): Promise<{
     }
 
     return {
-      collections: collections,
+      collections: collections.map((collection) => {
+        return {
+          ...collection,
+          description: descriptionToString(collection.description),
+          descriptionHtml: descriptionToHtml(collection.description),
+        };
+      }),
     };
   });
 }
 
+/**
+ * Retrieves detailed information for a specific collection.
+ * @param slug - The collection slug identifier
+ * @returns Collection details with distinct genres and release years from its titles
+ */
 export async function collectionDetails(slug: string): Promise<{
-  collection: CollectionWithDetails;
+  collection: Collection;
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];

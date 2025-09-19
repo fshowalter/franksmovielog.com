@@ -2,6 +2,10 @@ import type { Literal, Node, Parent } from "unist";
 
 import { CONTINUE, visit } from "unist-util-visit";
 
+/**
+ * Remark plugin to convert emphasis (em) tags to quoted text.
+ * @returns Transformer function for the syntax tree
+ */
 export function emToQuotes() {
   return (tree: Node) => {
     visit(

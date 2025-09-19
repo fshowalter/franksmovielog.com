@@ -19,6 +19,10 @@ const gradeToStars: Record<string, number> = {
   "F-": 0.5,
 };
 
+/**
+ * Astro endpoint handler for generating the updates JSON feed.
+ * @returns JSON response with recent review updates
+ */
 export async function GET() {
   const reviews = await mostRecentReviews(6);
 

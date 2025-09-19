@@ -23,6 +23,11 @@ export const ENABLE_CACHE = (() => {
   return !import.meta.env.DEV;
 })();
 
+/**
+ * Creates a cache configuration object for a named cache.
+ * @param name - The name of the cache (used as subdirectory in .cache)
+ * @returns Cache configuration with directory, debug settings, and enabled state
+ */
 export function createCacheConfig(name: string): CacheConfig {
   return {
     cacheDir: path.join(process.cwd(), ".cache", name),
@@ -31,14 +36,33 @@ export function createCacheConfig(name: string): CacheConfig {
   };
 }
 
+/**
+ * Generates a SHA256 hash key from the provided data string.
+ * @param data - The data to hash for cache key generation
+ * @returns Hex-encoded SHA256 hash to use as cache key
+ */
 export function createCacheKey(data: string): string {
   return createHash("sha256").update(data).digest("hex");
 }
 
+/**
+ * Ensures the cache directory exists, creating it recursively if needed.
+ * @param cacheDir - The cache directory path to ensure exists
+ */
 export async function ensureCacheDir(cacheDir: string): Promise<void> {
   await fs.mkdir(cacheDir, { recursive: true });
 }
 
+/**
+ * Retrieves a cached item from disk if it exists.
+ * @param cacheDir - The cache directory path
+ * @param cacheKey - The cache key (typically a hash)
+ * @param extension - File extension for the cached file
+ * @param binary - Whether to read as binary data (default: false)
+ * @param debugCache - Whether to log cache hit/miss messages
+ * @param debugMessage - Custom message to include in debug logs
+ * @returns The cached content or undefined if not found
+ */
 export async function getCachedItem<T = string>(
   cacheDir: string,
   cacheKey: string,
@@ -67,6 +91,13 @@ export async function getCachedItem<T = string>(
   }
 }
 
+/**
+ * Saves content to the cache on disk.
+ * @param cacheDir - The cache directory path
+ * @param cacheKey - The cache key (typically a hash)
+ * @param extension - File extension for the cached file
+ * @param content - The content to cache (string or binary data)
+ */
 export async function saveCachedItem(
   cacheDir: string,
   cacheKey: string,

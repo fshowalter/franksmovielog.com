@@ -10,30 +10,33 @@ import { ENABLE_CACHE } from "~/utils/cache";
 import { collator } from "~/utils/collator";
 import { perfLogger } from "~/utils/performanceLogger";
 
-import type { ReviewedTitleJson } from "./data/reviewedTitlesJson";
-import type { MarkdownReview } from "./data/reviewsMarkdown";
-import type { MarkdownViewing } from "./data/viewingsMarkdown";
+import type { ReviewedTitleJson } from "./data/reviewed-titles-json";
+import type { MarkdownReview } from "./data/reviews-markdown";
+import type { MarkdownViewing } from "./data/viewings-markdown";
 
-import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
-import { allReviewsMarkdown } from "./data/reviewsMarkdown";
-import { allViewingsMarkdown } from "./data/viewingsMarkdown";
+import { allReviewedTitlesJson } from "./data/reviewed-titles-json";
+import { allReviewsMarkdown } from "./data/reviews-markdown";
+import { allViewingsMarkdown } from "./data/viewings-markdown";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 import { trimToExcerpt } from "./utils/markdown/trimToExcerpt";
 
-// Cache at API level - lazy caching for better build performance
 let cachedViewingsMarkdown: MarkdownViewing[];
 let cachedMarkdownReviews: MarkdownReview[];
 let cachedReviewedTitlesJson: ReviewedTitleJson[];
 let cachedReviews: Reviews;
 const cachedExcerptHtml: Map<string, string> = new Map();
 
-// ENABLE_CACHE is now imported from utils/cache
-
+/**
+ * Review combining markdown content with title metadata.
+ */
 export type Review = Omit<MarkdownReview, "date"> & ReviewedTitleJson;
 
+/**
+ * Review content with excerpt and viewing history.
+ */
 export type ReviewContent = {
   content: string | undefined;
   excerptPlainText: string;
@@ -57,6 +60,10 @@ type ReviewViewing = MarkdownViewing & {
   viewingNotes: string | undefined;
 };
 
+/**
+ * Retrieves all reviews with distinct metadata for filtering.
+ * @returns Object containing all reviews and distinct values for genres, release years, and review years
+ */
 export async function allReviews(): Promise<Reviews> {
   return await perfLogger.measure("allReviews", async () => {
     if (cachedReviews) {
@@ -78,6 +85,11 @@ export async function allReviews(): Promise<Reviews> {
   });
 }
 
+/**
+ * Converts raw markdown content to plain text, removing formatting and footnotes.
+ * @param rawContent - Raw markdown content string
+ * @returns Plain text version of the content
+ */
 export function getContentPlainText(rawContent: string): string {
   return getMastProcessor()
     .use(removeFootnotes)
@@ -86,6 +98,11 @@ export function getContentPlainText(rawContent: string): string {
     .toString();
 }
 
+/**
+ * Loads and processes full review content including HTML conversion and viewing details.
+ * @param review - Review object with IMDB ID, raw content, and title
+ * @returns Review with processed content, excerpt, and viewing information
+ */
 export async function loadContent<
   T extends { imdbId: string; rawContent: string; title: string },
 >(review: T): Promise<ReviewContent & T> {
@@ -135,6 +152,11 @@ export async function loadContent<
   });
 }
 
+/**
+ * Loads and converts review excerpt or synopsis to HTML format.
+ * @param review - Review object with slug identifier
+ * @returns Review with HTML-formatted excerpt
+ */
 export async function loadExcerptHtml<T extends { slug: string }>(
   review: T,
 ): Promise<ReviewExcerpt & T> {
@@ -180,6 +202,11 @@ export async function loadExcerptHtml<T extends { slug: string }>(
   });
 }
 
+/**
+ * Retrieves the most recent reviews up to the specified limit.
+ * @param limit - Maximum number of recent reviews to return
+ * @returns Array of most recent reviews sorted by review sequence
+ */
 export async function mostRecentReviews(limit: number) {
   return await perfLogger.measure("mostRecentReviews", async () => {
     const reviewedTitlesJson =

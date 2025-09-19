@@ -1,27 +1,37 @@
 ---
-import { Backdrop } from "~/components/Backdrop";
-import { CastAndCrew } from "~/components/CastAndCrew/CastAndCrew";
-import { getProps } from "~/components/CastAndCrew/getProps";
-import { Layout as ComponentLayout } from "~/components/Layout/Layout";
-import Layout from "~/layouts/Layout.astro";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { CastAndCrew } from "~/features/cast-and-crew/CastAndCrew";
+import { getCastAndCrewProps } from "~/features/cast-and-crew/getCastAndCrewProps";
 
-const props = await getProps();
+const castAndCrewProps = await getCastAndCrewProps();
 
-// Separate layout props from interactive props
-const { backdropImageProps, deck, ...interactiveProps } = props;
+const backdropImageProps = await getLayoutBackdropImageProps("cast-and-crew");
+const deck = '"Round up the usual suspects."';
+const metaDescription =
+  "A sortable index of directors, performers, and writers who contributed to the movies reviewed on this site. Sort by name or review count.";
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
-  meta={{ description: props.metaDescription }}
+  meta={{
+    description: metaDescription,
+  }}
   openGraph={{
     description: deck,
     type: "website",
   }}
   title="Cast and Crew"
 >
-  <ComponentLayout className="bg-subtle">
-    <Backdrop deck={deck} imageProps={backdropImageProps} title="Cast & Crew" />
-    <CastAndCrew client:load {...interactiveProps} />
-  </ComponentLayout>
-</Layout>
+  <Layout
+    backdrop={{
+      deck,
+      imageProps: backdropImageProps,
+      title: "Cast & Crew",
+    }}
+    className="bg-subtle"
+  >
+    <CastAndCrew client:load {...castAndCrewProps} />
+  </Layout>
+</AstroPageShell>

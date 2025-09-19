@@ -5,8 +5,8 @@ import strip from "strip-markdown";
 
 import { perfLogger } from "~/utils/performanceLogger";
 
-import { allPagesMarkdown } from "./data/pagesMarkdown";
-import { allReviewedTitlesJson } from "./data/reviewedTitlesJson";
+import { allPagesMarkdown } from "./data/pages-markdown";
+import { allReviewedTitlesJson } from "./data/reviewed-titles-json";
 import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
 
@@ -16,6 +16,11 @@ type MarkdownPage = {
   title: string;
 };
 
+/**
+ * Converts markdown content to plain text.
+ * @param rawContent - Raw markdown content
+ * @returns Plain text with footnotes and markdown syntax removed
+ */
 export function getContentPlainText(rawContent: string): string {
   return getMastProcessor()
     .use(removeFootnotes)
@@ -24,6 +29,11 @@ export function getContentPlainText(rawContent: string): string {
     .toString();
 }
 
+/**
+ * Retrieves a page by slug with rendered HTML content.
+ * @param slug - Page identifier
+ * @returns Page with title, content, and raw markdown
+ */
 export async function getPage(slug: string): Promise<MarkdownPage> {
   return await perfLogger.measure("getPage", async () => {
     const pages = await allPagesMarkdown();

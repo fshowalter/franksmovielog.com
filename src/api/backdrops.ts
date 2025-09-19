@@ -12,6 +12,9 @@ import {
 
 import { normalizeSources } from "./utils/normalizeSources";
 
+/**
+ * Props for backdrop images.
+ */
 export type BackdropImageProps = {
   src: string;
   srcSet: string;
@@ -23,6 +26,14 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 const cacheConfig = createCacheConfig("backdrop-base64");
 
+/**
+ * Retrieves backdrop image properties for a given slug.
+ * @param slug - Identifier for the backdrop image
+ * @param options - Image dimensions
+ * @param options.height - Desired image height
+ * @param options.width - Desired image width
+ * @returns Backdrop image properties with src and srcSet
+ */
 export async function getBackdropImageProps(
   slug: string,
   {
@@ -50,6 +61,11 @@ export async function getBackdropImageProps(
   };
 }
 
+/**
+ * Generates a base64-encoded backdrop image for OpenGraph.
+ * @param slug - Identifier for the backdrop image
+ * @returns Base64-encoded PNG image string
+ */
 export async function getOpenGraphBackdropAsBase64String(slug: string) {
   const width = 1200;
   const format = "png";
