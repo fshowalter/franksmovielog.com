@@ -7,11 +7,11 @@ import { TitleFilters } from "./TitleFilters";
 
 type Props = ComponentProps<typeof TitleFilters> & {
   grade: {
-    initialValue?: [number, number];
+    defaultValues?: [number, number];
     onChange: (values: [number, number]) => void;
   };
   reviewYear: {
-    initialValue?: [string, string];
+    defaultValues?: [string, string];
     onChange: (values: [string, string]) => void;
     values: readonly string[];
   };
@@ -33,12 +33,12 @@ export function ReviewedTitleFilters({
     <>
       <TitleFilters genres={genres} releaseYear={releaseYear} title={title} />
       <GradeField
-        initialValues={grade.initialValue}
+        defaultValues={grade.defaultValues}
         label="Grade"
         onGradeChange={grade.onChange}
       />
       <YearField
-        initialValues={reviewYear.initialValue}
+        defaultValues={reviewYear.defaultValues}
         label="Review Year"
         onYearChange={reviewYear.onChange}
         years={reviewYear.values}

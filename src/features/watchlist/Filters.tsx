@@ -50,19 +50,19 @@ export function Filters({
     <>
       <TitleFilters
         genres={{
-          initialValue: filterValues.genres,
+          defaultValues: filterValues.genres,
           onChange: (values) =>
             dispatch(createGenresFilterChangedAction(values)),
           values: distinctGenres,
         }}
         releaseYear={{
-          initialValue: filterValues.releaseYear,
+          defaultValues: filterValues.releaseYear,
           onChange: (values) =>
             dispatch(createReleaseYearFilterChangedAction(values)),
           values: distinctReleaseYears,
         }}
         title={{
-          initialValue: filterValues.title,
+          defaultValue: filterValues.title,
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />

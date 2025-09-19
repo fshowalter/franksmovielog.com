@@ -45,13 +45,13 @@ export function Filters({
     <>
       <TitleFilters
         releaseYear={{
-          initialValue: filterValues.releaseYear,
+          defaultValues: filterValues.releaseYear,
           onChange: (values) =>
             dispatch(createReleaseYearFilterChangedAction(values)),
           values: distinctReleaseYears,
         }}
         title={{
-          initialValue: filterValues.title,
+          defaultValue: filterValues.title,
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
@@ -62,7 +62,7 @@ export function Filters({
         }
       />
       <YearField
-        initialValues={filterValues.viewingYear}
+        defaultValues={filterValues.viewingYear}
         label="Viewing Year"
         onYearChange={(values) =>
           dispatch(createViewingYearFilterChangedAction(values))

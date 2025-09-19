@@ -5,7 +5,7 @@ import { ReviewedTitleFilters } from "./ReviewedTitleFilters";
 
 type Props = ComponentProps<typeof ReviewedTitleFilters> & {
   reviewedStatus: {
-    initialValue?: string;
+    defaultValue?: string;
     onChange: (value: string) => void;
   };
 };
@@ -33,7 +33,7 @@ export function MaybeReviewedTitleFilters({
         title={title}
       />
       <ReviewedStatusFilter
-        defaultValue={reviewedStatus.initialValue}
+        defaultValue={reviewedStatus.defaultValue}
         onChange={reviewedStatus.onChange}
       />
     </>

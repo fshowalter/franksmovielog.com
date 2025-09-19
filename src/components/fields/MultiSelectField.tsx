@@ -123,25 +123,25 @@ const determineDropdownLayout = (
 /**
  * Multi-select dropdown field with keyboard navigation.
  * @param props - Component props
- * @param props.initialValues - Initially selected values
+ * @param props.defaultValues - Default selected values
  * @param props.label - Field label text
  * @param props.onChange - Handler for selection changes
  * @param props.options - Available options to select from
  * @returns Multi-select field with dropdown and selected items
  */
 export function MultiSelectField({
-  initialValues,
+  defaultValues,
   label,
   onChange,
   options,
 }: {
-  initialValues: readonly string[] | undefined;
+  defaultValues: readonly string[] | undefined;
   label: string;
   onChange: (values: string[]) => void;
   options: readonly string[];
 }): React.JSX.Element {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
-    initialValues ? [...initialValues] : [],
+    defaultValues ? [...defaultValues] : [],
   );
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem");
@@ -435,7 +435,7 @@ export function MultiSelectField({
 
     const handleFormReset = (): void => {
       // Reset to initial values when form is reset
-      setSelectedOptions(initialValues ? [...initialValues] : []);
+      setSelectedOptions(defaultValues ? [...defaultValues] : []);
       setIsOpen(false);
       setHighlightedIndex(-1);
     };
@@ -445,7 +445,7 @@ export function MultiSelectField({
     return (): void => {
       form.removeEventListener("reset", handleFormReset);
     };
-  }, [initialValues]);
+  }, [defaultValues]);
 
   // Cleanup timeouts on unmount
   useEffect(() => {

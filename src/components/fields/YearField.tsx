@@ -6,25 +6,25 @@ import { SelectInput } from "./SelectInput";
 /**
  * Year range selector with from/to dropdowns.
  * @param props - Component props
- * @param props.initialValues - Initial [min, max] year values
+ * @param props.defaultValues - Default [min, max] year values
  * @param props.label - Field label text
  * @param props.onYearChange - Handler for year range changes
  * @param props.years - Available years to select from
  * @returns Year range selector with two dropdowns
  */
 export function YearField({
-  initialValues,
+  defaultValues,
   label,
   onYearChange,
   years,
 }: {
-  initialValues: [string, string] | undefined;
+  defaultValues: [string, string] | undefined;
   label: string;
   onYearChange: (values: [string, string]) => void;
   years: readonly string[];
 }): React.JSX.Element {
-  const [minYear, setMinYear] = useState(initialMinYear(years, initialValues));
-  const [maxYear, setMaxYear] = useState(initialMaxYear(years, initialValues));
+  const [minYear, setMinYear] = useState(defaultMinYear(years, defaultValues));
+  const [maxYear, setMaxYear] = useState(defaultMaxYear(years, defaultValues));
 
   const handleMinChange = (value: string): void => {
     const newMin = value;
@@ -57,7 +57,7 @@ export function YearField({
             From
           </span>
           <SelectInput
-            defaultValue={initialMinYear(years, initialValues)}
+            defaultValue={defaultMinYear(years, defaultValues)}
             onChange={(e) => handleMinChange(e.target.value)}
           >
             {years.map((year) => {
@@ -74,7 +74,7 @@ export function YearField({
             to
           </span>
           <SelectInput
-            defaultValue={initialMaxYear(years, initialValues)}
+            defaultValue={defaultMaxYear(years, defaultValues)}
             onChange={(e) => handleMaxChange(e.target.value)}
           >
             {[...years].reverse().map((year) => {
@@ -91,14 +91,14 @@ export function YearField({
   );
 }
 
-function initialMaxYear(
+function defaultMaxYear(
   allValues: readonly string[],
   selectedValues?: [string, string],
 ): string {
   return selectedValues ? selectedValues[1] : (allValues.at(-1) as string);
 }
 
-function initialMinYear(
+function defaultMinYear(
   allValues: readonly string[],
   selectedValues?: [string, string],
 ): string {

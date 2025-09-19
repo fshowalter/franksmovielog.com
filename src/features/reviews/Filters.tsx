@@ -37,28 +37,28 @@ export function Filters({
   return (
     <ReviewedTitleFilters
       genres={{
-        initialValue: filterValues.genres,
+        defaultValues: filterValues.genres,
         onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
         values: distinctGenres,
       }}
       grade={{
-        initialValue: filterValues.gradeValue,
+        defaultValues: filterValues.gradeValue,
         onChange: (values) => dispatch(createGradeFilterChangedAction(values)),
       }}
       releaseYear={{
-        initialValue: filterValues.releaseYear,
+        defaultValues: filterValues.releaseYear,
         onChange: (values) =>
           dispatch(createReleaseYearFilterChangedAction(values)),
         values: distinctReleaseYears,
       }}
       reviewYear={{
-        initialValue: filterValues.reviewYear,
+        defaultValues: filterValues.reviewYear,
         onChange: (values) =>
           dispatch(createReviewYearFilterChangedAction(values)),
         values: distinctReviewYears,
       }}
       title={{
-        initialValue: filterValues.title,
+        defaultValue: filterValues.title,
         onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
       }}
     />

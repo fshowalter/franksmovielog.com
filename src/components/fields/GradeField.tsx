@@ -48,22 +48,22 @@ const gradeOptions = [
 /**
  * Grade range selector with from/to letter grade dropdowns.
  * @param props - Component props
- * @param props.initialValues - Initial [min, max] grade values
+ * @param props.defaultValues - Default [min, max] grade values
  * @param props.label - Field label text
  * @param props.onGradeChange - Handler for grade range changes
  * @returns Grade range selector with two dropdowns
  */
 export function GradeField({
-  initialValues,
+  defaultValues,
   label,
   onGradeChange,
 }: {
-  initialValues: [number, number] | undefined;
+  defaultValues: [number, number] | undefined;
   label: string;
   onGradeChange: (values: [number, number]) => void;
 }): React.JSX.Element {
-  const [minValue, setMinValue] = useState(initialMinGradeValue(initialValues));
-  const [maxValue, setMaxValue] = useState(initialMaxGradeValue(initialValues));
+  const [minValue, setMinValue] = useState(defaultMinValue(defaultValues));
+  const [maxValue, setMaxValue] = useState(defaultMaxValue(defaultValues));
 
   const handleMinChange = (value: string): void => {
     const newMin = Number.parseInt(value, 10);
@@ -96,7 +96,7 @@ export function GradeField({
             From
           </span>
           <SelectInput
-            defaultValue={initialMinGradeValue(initialValues)}
+            defaultValue={defaultMinValue(defaultValues)}
             onChange={(e) => handleMinChange(e.target.value)}
           >
             {[...gradeOptions].reverse()}
@@ -107,7 +107,7 @@ export function GradeField({
             to
           </span>
           <SelectInput
-            defaultValue={initialMaxGradeValue(initialValues)}
+            defaultValue={defaultMaxValue(defaultValues)}
             onChange={(e) => handleMaxChange(e.target.value)}
           >
             {[...gradeOptions]}
@@ -118,10 +118,10 @@ export function GradeField({
   );
 }
 
-function initialMaxGradeValue(selectedValues?: [number, number]): number {
+function defaultMaxValue(selectedValues?: [number, number]): number {
   return selectedValues ? selectedValues[1] : 13;
 }
 
-function initialMinGradeValue(selectedValues?: [number, number]): number {
+function defaultMinValue(selectedValues?: [number, number]): number {
   return selectedValues ? selectedValues[0] : 1;
 }
