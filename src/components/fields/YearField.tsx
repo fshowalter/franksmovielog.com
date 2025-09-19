@@ -23,8 +23,8 @@ export function YearField({
   onYearChange: (values: [string, string]) => void;
   years: readonly string[];
 }): React.JSX.Element {
-  const [minYear, setMinYear] = useState(defaultMinYear(years, defaultValues));
-  const [maxYear, setMaxYear] = useState(defaultMaxYear(years, defaultValues));
+  const [minYear, setMinYear] = useState(defaultMinValue(years, defaultValues));
+  const [maxYear, setMaxYear] = useState(defaultMaxValue(years, defaultValues));
 
   const handleMinChange = (value: string): void => {
     const newMin = value;
@@ -57,7 +57,7 @@ export function YearField({
             From
           </span>
           <SelectInput
-            defaultValue={defaultMinYear(years, defaultValues)}
+            defaultValue={defaultMinValue(years, defaultValues)}
             onChange={(e) => handleMinChange(e.target.value)}
           >
             {years.map((year) => {
@@ -74,7 +74,7 @@ export function YearField({
             to
           </span>
           <SelectInput
-            defaultValue={defaultMaxYear(years, defaultValues)}
+            defaultValue={defaultMaxValue(years, defaultValues)}
             onChange={(e) => handleMaxChange(e.target.value)}
           >
             {[...years].reverse().map((year) => {
@@ -91,14 +91,14 @@ export function YearField({
   );
 }
 
-function defaultMaxYear(
+function defaultMaxValue(
   allValues: readonly string[],
   selectedValues?: [string, string],
 ): string {
   return selectedValues ? selectedValues[1] : (allValues.at(-1) as string);
 }
 
-function defaultMinYear(
+function defaultMinValue(
   allValues: readonly string[],
   selectedValues?: [string, string],
 ): string {
