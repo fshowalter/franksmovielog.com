@@ -16,49 +16,17 @@ import rule from "./separate-type-imports.js";
 const ruleTester = new RuleTester({
   languageOptions: {
     ecmaVersion: "latest",
-    sourceType: "module",
     parser: tseslint.parser,
     parserOptions: {
       ecmaFeatures: {
         jsx: true,
       },
     },
+    sourceType: "module",
   },
 });
 
 ruleTester.run("separate-type-imports", rule, {
-  valid: [
-    // Already separated type imports
-    {
-      code: `import type { Foo } from "module";
-import { bar } from "module";`,
-    },
-    // Type-only imports
-    {
-      code: `import type { Foo, Bar } from "module";`,
-    },
-    // Value-only imports
-    {
-      code: `import { foo, bar } from "module";`,
-    },
-    // Default imports
-    {
-      code: `import React from "react";`,
-    },
-    // Namespace imports
-    {
-      code: `import * as Utils from "utils";`,
-    },
-    // Mixed default and named imports (no types)
-    {
-      code: `import React, { useState, useEffect } from "react";`,
-    },
-    // Empty import (side effects only)
-    {
-      code: `import "styles.css";`,
-    },
-  ],
-
   invalid: [
     // Basic mixed import - type and value
     {
@@ -115,6 +83,38 @@ import { setup } from "@company/package";`,
       errors: [{ messageId: "separateTypeImports" }],
       output: `import type { Props } from "./components/MyComponent";
 import { Component } from "./components/MyComponent";`,
+    },
+  ],
+
+  valid: [
+    // Already separated type imports
+    {
+      code: `import type { Foo } from "module";
+import { bar } from "module";`,
+    },
+    // Type-only imports
+    {
+      code: `import type { Foo, Bar } from "module";`,
+    },
+    // Value-only imports
+    {
+      code: `import { foo, bar } from "module";`,
+    },
+    // Default imports
+    {
+      code: `import React from "react";`,
+    },
+    // Namespace imports
+    {
+      code: `import * as Utils from "utils";`,
+    },
+    // Mixed default and named imports (no types)
+    {
+      code: `import React, { useState, useEffect } from "react";`,
+    },
+    // Empty import (side effects only)
+    {
+      code: `import "styles.css";`,
     },
   ],
 });

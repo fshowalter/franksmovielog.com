@@ -49,11 +49,11 @@ export function WatchlistProgress({
       />
       <div
         className={`
-            mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col gap-x-8
-            gap-y-20 py-16
-            tablet:px-container
-            laptop:grid laptop:grid-cols-2
-          `}
+          mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col gap-x-8
+          gap-y-20 py-16
+          tablet:px-container
+          laptop:grid laptop:grid-cols-2
+        `}
       >
         <WatchlistProgressForGroup
           className="col-start-1 row-span-3"

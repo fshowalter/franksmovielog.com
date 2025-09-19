@@ -5,7 +5,7 @@
     "src/astro/search.ts",
     "src/astro/navDrawer.ts",
     "eslint.html.config.js",
-    "eslint-rules/separate-type-imports.ts",
+    "eslint-rules/separate-type-imports.js",
     "src/pages/**/*.spec.ts"
   ],
   "project": [
@@ -21,6 +21,7 @@
   "ignoreDependencies": [
     "@anthropic-ai/claude-code",
     "@prettier/plugin-xml",
-    "babel-plugin-react-compiler"
+    "babel-plugin-react-compiler",
+    "@vitest/coverage-v8"
   ]
 }

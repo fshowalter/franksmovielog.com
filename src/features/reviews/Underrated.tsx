@@ -1,4 +1,4 @@
-import { StrictMode, useReducer } from "react";
+import { useReducer } from "react";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";

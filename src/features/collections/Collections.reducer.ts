@@ -29,19 +29,19 @@ import type { CollectionsValue } from "./Collections";
 import type { CollectionsSort } from "./sortCollections";
 
 /**
- * Union type of all reviewed work-specific filter actions for Reviews page
+ * Union type of all collection-specific filter and sort actions
  */
 export type CollectionsAction =
   | CollectionFiltersAction
   | SortAction<CollectionsSort>;
 
 /**
- * Type definition for Reviews page filter values
+ * Type definition for Collections filter values
  */
 export type CollectionsFiltersValues = CollectionFiltersValues;
 
 /**
- * Internal state type for Reviews page reducer
+ * Internal state type for Collections reducer
  */
 type CollectionsState = Omit<
   CollectionFiltersState<CollectionsValue>,
@@ -71,8 +71,8 @@ export function createInitialState({
 }
 
 /**
- * Reducer function for managing Reviews page state.
- * Handles filtering, sorting, and pagination actions for the reviews list.
+ * Reducer function for managing Collections state.
+ * Handles filtering and sorting actions for the collections list.
  */
 export function reducer(state: CollectionsState, action: CollectionsAction) {
   switch (action.type) {
@@ -86,6 +86,6 @@ export function reducer(state: CollectionsState, action: CollectionsAction) {
 }
 
 /**
- * Action creator for sort actions specific to the Watchlist page.
+ * Action creator for sort actions specific to Collections.
  */
 export const createSortAction = createSortActionCreator<CollectionsSort>();

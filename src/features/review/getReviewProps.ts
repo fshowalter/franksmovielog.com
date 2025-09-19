@@ -1,5 +1,7 @@
+import type { Review } from "~/api/reviews";
+
 import { getFixedWidthPosterImageProps } from "~/api/posters";
-import { loadContent, loadExcerptHtml, type Review } from "~/api/reviews";
+import { loadContent, loadExcerptHtml } from "~/api/reviews";
 import { getOpenGraphStillSrc, getStillImageProps } from "~/api/stills";
 import { MoreReviewsImageConfig } from "~/components/more-reviews/MoreReviews";
 

@@ -20,8 +20,6 @@ import {
 } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-import type { UnderratedProps } from "./Underrated";
-
 import { baseProps, createReviewValue, resetTestIdCounter } from "./testHelper";
 import { Underrated } from "./Underrated";
 

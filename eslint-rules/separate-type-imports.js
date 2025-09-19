@@ -15,7 +15,6 @@
  * - `import type { Foo }`
  * - `import { bar }`
  *
- * @typedef {import('eslint').Rule} Rule
  * @typedef {import('estree').ImportDeclaration} ImportDeclaration
  * @typedef {import('estree').ImportSpecifier} ImportSpecifier
  * @typedef {import('estree').ImportDefaultSpecifier} ImportDefaultSpecifier
@@ -97,7 +96,7 @@ function formatImportSource(source) {
   return `"${String(source.value)}"`;
 }
 
-/** @type {Rule.RuleModule} */
+/** @type {import('eslint').Rule.RuleModule} */
 const rule = {
   create(context) {
     return {
@@ -133,7 +132,7 @@ const rule = {
         if (typeSpecifiers.length > 0 && valueSpecifiers.length > 0) {
           context.report({
             fix(fixer) {
-              /** @type {Rule.Fix[]} */
+              /** @type {import('eslint').Rule.Fix[]} */
               const fixes = [];
               const sourceStr = formatImportSource(importNode.source);
 

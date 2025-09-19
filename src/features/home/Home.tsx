@@ -1,4 +1,3 @@
-import type { BackdropImageProps } from "~/api/backdrops";
 import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
 
 import { ReviewCard } from "~/components/review-card/ReviewCard";
@@ -35,12 +34,12 @@ export function Home({ values }: HomeProps): React.JSX.Element {
       </SubHeading>
       <ul
         className={`
-            flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8
-            tablet:flex-row tablet:justify-between tablet:gap-y-[6vw]
-            tablet:px-container tablet:[--review-card-width:47%]
-            laptop:gap-y-[3vw] laptop:[--review-card-width:31.33%]
-            desktop:gap-y-14
-          `}
+          flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8
+          tablet:flex-row tablet:justify-between tablet:gap-y-[6vw]
+          tablet:px-container tablet:[--review-card-width:47%]
+          laptop:gap-y-[3vw] laptop:[--review-card-width:31.33%]
+          desktop:gap-y-14
+        `}
       >
         {values.map((value) => {
           return (
@@ -55,28 +54,28 @@ export function Home({ values }: HomeProps): React.JSX.Element {
       </ul>
       <div
         className={`
-            flex px-container py-10
-            has-[a:hover]:drop-shadow-lg
-          `}
+          flex px-container py-10
+          has-[a:hover]:drop-shadow-lg
+        `}
       >
         <a
           className={`
-              group/all-reviews mx-auto w-full max-w-button transform-gpu
-              rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
-              font-bold tracking-wide text-accent uppercase transition-all
-              hover:scale-105 hover:bg-accent hover:text-white
-            `}
+            group/all-reviews mx-auto w-full max-w-button transform-gpu
+            rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
+            font-bold tracking-wide text-accent uppercase transition-all
+            hover:scale-105 hover:bg-accent hover:text-white
+          `}
           href="/reviews/"
         >
           <span
             className={`
-                relative inline-block pb-1
-                after:absolute after:bottom-0 after:left-0 after:h-0.5
-                after:w-full after:origin-center after:scale-x-0
-                after:transform-gpu after:bg-white after:transition-transform
-                after:duration-500
-                group-hover/all-reviews:after:scale-x-100
-              `}
+              relative inline-block pb-1
+              after:absolute after:bottom-0 after:left-0 after:h-0.5
+              after:w-full after:origin-center after:scale-x-0
+              after:transform-gpu after:bg-white after:transition-transform
+              after:duration-500
+              group-hover/all-reviews:after:scale-x-100
+            `}
           >
             All Reviews
           </span>
