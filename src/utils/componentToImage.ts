@@ -187,7 +187,7 @@ function serializeJsx(element: JSX.Element): string {
   }
 
   // Sort props for deterministic output
-  const sortedPropsStr = JSON.stringify(props, Object.keys(props).sort());
+  const sortedPropsStr = JSON.stringify(props, Object.keys(props).toSorted());
 
   // Serialize children
   const children = reactElement.props?.children;

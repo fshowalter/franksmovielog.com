@@ -57,7 +57,7 @@ export class PerformanceLogger {
         name,
         totalTime: stats.totalTime,
       }))
-      .sort((a, b) => b.duration - a.duration);
+      .toSorted((a, b) => b.duration - a.duration);
 
     let report = "\n=== Performance Report ===\n\n";
     report += "Top 50 Slowest Operations (by max duration):\n";

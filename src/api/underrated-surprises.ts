@@ -39,7 +39,9 @@ export async function allUnderratedSurprises(): Promise<UnderratedSurprises> {
   });
 
   return {
-    distinctGenres: [...distinctGenres].sort((a, b) => collator.compare(a, b)),
+    distinctGenres: [...distinctGenres].toSorted((a, b) =>
+      collator.compare(a, b),
+    ),
     distinctReleaseYears: [...distinctReleaseYears].toSorted(),
     distinctReviewYears: [...distinctReviewYears].toSorted(),
     underratedSurprises,
