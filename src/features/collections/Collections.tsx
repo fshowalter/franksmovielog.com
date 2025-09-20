@@ -19,9 +19,9 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./Collections.reducer";
+import { CollectionsFilters } from "./CollectionsFilters";
 import { CollectionsListItem } from "./CollectionsListItem";
 import { filterCollections } from "./filterCollections";
-import { Filters } from "./Filters";
 import { sortCollections } from "./sortCollections";
 
 /**
@@ -82,7 +82,10 @@ export function Collections({
     <FilterAndSortContainer
       className={state.sort.startsWith("name-") ? `[--scroll-offset:52px]` : ""}
       filters={
-        <Filters dispatch={dispatch} filterValues={state.pendingFilterValues} />
+        <CollectionsFilters
+          dispatch={dispatch}
+          filterValues={state.pendingFilterValues}
+        />
       }
       hasPendingFilters={hasPendingFilters}
       onApplyFilters={() => dispatch(createApplyFiltersAction())}

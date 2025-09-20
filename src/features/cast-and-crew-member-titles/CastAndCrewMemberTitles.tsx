@@ -20,9 +20,9 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./CastAndCrewMemberTitles.reducer";
+import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
 import { CastAndCrewMemberTitleListItem } from "./CastAndCrewMemberTitlesListItem";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
-import { Filters } from "./Filters";
 import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
 
@@ -105,7 +105,7 @@ export function CastAndCrewMemberTitles({
   return (
     <FilterAndSortContainer
       filters={
-        <Filters
+        <CastAndCrewMemberTitlesFilters
           dispatch={dispatch}
           distinctCreditKinds={distinctCreditKinds}
           distinctGenres={distinctGenres}

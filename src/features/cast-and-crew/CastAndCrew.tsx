@@ -20,9 +20,9 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./CastAndCrew.reducer";
+import { CastAndCrewFilters } from "./CastAndCrewFilters";
 import { CastAndCrewListItem } from "./CastAndCrewListItem";
 import { filterCastAndCrew } from "./filterCastAndCrew";
-import { Filters } from "./Filters";
 import { groupCastAndCrew } from "./groupCastAndCrew";
 import { sortCastAndCrew } from "./sortCastAndCrew";
 
@@ -86,7 +86,10 @@ export function CastAndCrew({
     <FilterAndSortContainer
       className={state.sort.startsWith("name-") ? `[--scroll-offset:52px]` : ""}
       filters={
-        <Filters dispatch={dispatch} filterValues={state.pendingFilterValues} />
+        <CastAndCrewFilters
+          dispatch={dispatch}
+          filterValues={state.pendingFilterValues}
+        />
       }
       hasPendingFilters={hasPendingFilters}
       onApplyFilters={() => dispatch(createApplyFiltersAction())}

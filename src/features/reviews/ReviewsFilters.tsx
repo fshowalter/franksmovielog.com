@@ -1,47 +1,43 @@
-import { MaybeReviewedTitleFilters } from "~/components/filter-and-sort/MaybeReviewedTitleFilters";
+import { ReviewedTitleFilters } from "~/components/filter-and-sort/ReviewedTitleFilters";
+import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
-import type {
-  CollectionTitlesAction,
-  CollectionTitlesFiltersValues,
-} from "./CollectionTitles.reducer";
+import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
 
 import {
   createGenresFilterChangedAction,
   createGradeFilterChangedAction,
   createReleaseYearFilterChangedAction,
-  createReviewedStatusFilterChangedAction,
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,
-} from "./CollectionTitles.reducer";
+} from "./reducer";
 
 /**
- * Filter controls for the collection titles page.
+ * Filter controls for the reviews page.
  * @param props - Component props
  * @param props.dispatch - Reducer dispatch function for filter actions
  * @param props.distinctGenres - Available genres for filtering
  * @param props.distinctReleaseYears - Available release years for filtering
  * @param props.distinctReviewYears - Available review years for filtering
  * @param props.filterValues - Current active filter values
- * @returns Filter input components for collection titles
+ * @returns Filter input components for reviews
  */
-export function Filters({
+export function ReviewsFilters({
   dispatch,
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   filterValues,
 }: {
-  dispatch: React.Dispatch<CollectionTitlesAction>;
+  dispatch: React.Dispatch<ReviewsAction>;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
-  filterValues: CollectionTitlesFiltersValues;
+  filterValues: ReviewsFiltersValues;
 }): React.JSX.Element {
   return (
-    <MaybeReviewedTitleFilters
+    <ReviewedTitleFilters
       genres={{
         defaultValues: filterValues.genres,
-
         onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
         values: distinctGenres,
       }}
@@ -55,11 +51,6 @@ export function Filters({
           dispatch(createReleaseYearFilterChangedAction(values)),
         values: distinctReleaseYears,
       }}
-      reviewedStatus={{
-        defaultValue: filterValues.reviewedStatus,
-        onChange: (value) =>
-          dispatch(createReviewedStatusFilterChangedAction(value)),
-      }}
       reviewYear={{
         defaultValues: filterValues.reviewYear,
         onChange: (values) =>
@@ -72,4 +63,12 @@ export function Filters({
       }}
     />
   );
+}
+
+/**
+ * Sort options component for the reviews page.
+ * @returns Reviewed title sort options component
+ */
+export function SortOptions(): React.JSX.Element {
+  return <ReviewedTitleSortOptions />;
 }

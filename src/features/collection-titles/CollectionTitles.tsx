@@ -10,6 +10,7 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionTitlesSort } from "./sortCollectionTitles";
 
+import { CollectionTitlesFilters } from "./CollectionTitesFilters";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -22,7 +23,6 @@ import {
 } from "./CollectionTitles.reducer";
 import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
 import { filterCollectionTitles } from "./filterCollectionTitles";
-import { Filters } from "./Filters";
 import { groupCollectionTitles } from "./groupCollectionTitles";
 import { sortCollectionTitles } from "./sortCollectionTitles";
 
@@ -103,7 +103,7 @@ export function CollectionTitles({
   return (
     <FilterAndSortContainer
       filters={
-        <Filters
+        <CollectionTitlesFilters
           dispatch={dispatch}
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}

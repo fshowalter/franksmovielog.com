@@ -18,7 +18,7 @@ import {
  * @param props.filterValues - Current active filter values
  * @returns Filter input components for cast and crew
  */
-export function Filters({
+export function CastAndCrewFilters({
   dispatch,
   filterValues,
 }: {

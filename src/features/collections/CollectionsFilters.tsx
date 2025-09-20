@@ -14,7 +14,7 @@ import { createNameFilterChangedAction } from "./Collections.reducer";
  * @param props.filterValues - Current active filter values
  * @returns Filter input components for collections
  */
-export function Filters({
+export function CollectionsFilters({
   dispatch,
   filterValues,
 }: {
