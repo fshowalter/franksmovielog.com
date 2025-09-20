@@ -1,9 +1,13 @@
 import path from "node:path";
 
 export function getContentPath(
-  kind: "data" | "reviews" | "viewings",
+  kind: "data" | "pages" | "reviews" | "viewings",
   subPath?: string,
 ) {
+  if (kind == "reviews" || kind == "pages") {
+    return path.join(process.cwd(), "content", kind);
+  }
+
   if (subPath) {
     return path.join(
       process.cwd(),
