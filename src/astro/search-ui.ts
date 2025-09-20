@@ -461,7 +461,7 @@ export class SearchUI {
     const { image, image_alt, title } = result.meta;
 
     return `
-        <li class="gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] hover:bg-subtle border-t border-default last-of-type:border-b grid grid-cols-[min(25%,80px)_1fr] focus-within:bg-subtle focus-within:outline-[rgb(38,132,255)] focus-within:outline-1 focus-within:-outline-offset-2">
+        <li class="relative transition-all gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] hover:bg-subtle border-t border-default last-of-type:border-b grid grid-cols-[min(25%,80px)_1fr] focus-within:bg-subtle focus-within:outline-[rgb(38,132,255)] focus-within:outline-1 focus-within:-outline-offset-2">
           ${
             this.config.showImages && image
               ? `
@@ -477,8 +477,8 @@ export class SearchUI {
               : ""
           }
           <div class="min-w-0 flex-1">
-            <h3 class="font-sans text-base font-semibold text-accent">
-              <a href="${result.url}" class="block">
+            <h3 class="font-serif text-base font-semibold text-default">
+              <a href="${result.url}" class="block hover:text-accent after:absolute after:opacity-0 after:size-full">
                 ${title}
               </a>
             </h3>
