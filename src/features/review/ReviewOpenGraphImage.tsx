@@ -21,13 +21,13 @@ type ReviewOpenGraphImageProps = {
  * @param props.title - Movie title
  * @returns OpenGraph image element
  */
-export function OpenGraphImage({
+export function ReviewOpenGraphImage({
   backdrop,
   grade,
   releaseYear,
   title,
 }: ReviewOpenGraphImageProps): React.JSX.Element {
-  // eslint-disable-next-line react-compiler/react-compiler
+  // eslint-disable-next-line react-hooks/no-unused-directives
   "use no memo";
 
   return (

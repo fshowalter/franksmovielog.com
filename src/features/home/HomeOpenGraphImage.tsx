@@ -15,10 +15,10 @@ type HomeOpenGraphImageProps = {
  * @param props.backdrop - URL of the backdrop image
  * @returns OpenGraph image element
  */
-export function OpenGraphImage({
+export function HomeOpenGraphImage({
   backdrop,
 }: HomeOpenGraphImageProps): React.JSX.Element {
-  // eslint-disable-next-line react-compiler/react-compiler
+  // eslint-disable-next-line react-hooks/no-unused-directives
   "use no memo";
 
   return (

@@ -8,7 +8,7 @@ import {
 } from "eslint-plugin-better-tailwindcss/api/defaults";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
-import reactCompiler from "eslint-plugin-react-compiler";
+import reactHooks from "eslint-plugin-react-hooks";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
@@ -48,7 +48,10 @@ export default defineConfig(
     },
   },
   {
-    extends: [tseslint.configs.recommendedTypeChecked],
+    extends: [
+      tseslint.configs.recommendedTypeChecked,
+      "react-hooks/recommended-latest",
+    ],
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
@@ -63,6 +66,7 @@ export default defineConfig(
           "separate-type-imports": separateTypeImports,
         },
       },
+      "react-hooks": reactHooks,
     },
     rules: {
       "@typescript-eslint/array-type": "error",
@@ -103,11 +107,9 @@ export default defineConfig(
     plugins: {
       "better-tailwindcss": eslintPluginBetterTailwindcss,
       react,
-      "react-compiler": reactCompiler,
     },
     rules: {
       ...react.configs.recommended.rules,
-      "react-compiler/react-compiler": "error",
       "react/boolean-prop-naming": "error",
       "react/button-has-type": "error",
       "react/react-in-jsx-scope": "off",
