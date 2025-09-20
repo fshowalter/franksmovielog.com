@@ -1,44 +1,20 @@
 {
-  "total": 3554,
-  "reviewed": 390,
-  "directorTotal": 1205,
-  "directorReviewed": 138,
+  "total": 2633,
+  "reviewed": 990,
+  "directorTotal": 868,
+  "directorReviewed": 343,
   "directorDetails": [
-    {
-      "name": "Abel Ferrara",
-      "titleCount": 24,
-      "slug": "abel-ferrara",
-      "reviewCount": 1
-    },
-    {
-      "name": "Akira Kurosawa",
-      "titleCount": 31,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
-    },
     {
       "name": "Alfred Hitchcock",
       "titleCount": 46,
       "slug": "alfred-hitchcock",
-      "reviewCount": 5
+      "reviewCount": 40
     },
     {
       "name": "Billy Wilder",
       "titleCount": 26,
       "slug": "billy-wilder",
-      "reviewCount": 2
+      "reviewCount": 20
     },
     {
       "name": "Brian De Palma",
@@ -50,37 +26,19 @@
       "name": "Dario Argento",
       "titleCount": 21,
       "slug": "dario-argento",
-      "reviewCount": 5
+      "reviewCount": 7
     },
     {
       "name": "David Cronenberg",
-      "titleCount": 24,
+      "titleCount": 25,
       "slug": "david-cronenberg",
-      "reviewCount": 7
+      "reviewCount": 11
     },
     {
       "name": "David Lean",
       "titleCount": 16,
       "slug": "david-lean",
-      "reviewCount": 1
-    },
-    {
-      "name": "François Truffaut",
-      "titleCount": 23,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "reviewCount": 3
     },
     {
       "name": "Fritz Lang",
@@ -92,199 +50,85 @@
       "name": "George A. Romero",
       "titleCount": 17,
       "slug": "george-a-romero",
-      "reviewCount": 1
+      "reviewCount": 4
     },
     {
       "name": "Howard Hawks",
       "titleCount": 33,
       "slug": "howard-hawks",
-      "reviewCount": 5
+      "reviewCount": 23
     },
     {
       "name": "Ingmar Bergman",
-      "titleCount": 57,
+      "titleCount": 56,
       "slug": "ingmar-bergman",
-      "reviewCount": 21
+      "reviewCount": 22
     },
     {
       "name": "John Boorman",
       "titleCount": 17,
       "slug": "john-boorman",
-      "reviewCount": 1
+      "reviewCount": 3
     },
     {
       "name": "John Carpenter",
       "titleCount": 21,
       "slug": "john-carpenter",
-      "reviewCount": 3
+      "reviewCount": 9
     },
     {
       "name": "John Ford",
-      "titleCount": 63,
+      "titleCount": 58,
       "slug": "john-ford",
-      "reviewCount": 13
+      "reviewCount": 50
     },
     {
       "name": "John Frankenheimer",
       "titleCount": 32,
       "slug": "john-frankenheimer",
-      "reviewCount": 2
+      "reviewCount": 3
     },
     {
       "name": "John Huston",
-      "titleCount": 41,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "titleCount": 37,
+      "slug": "john-huston",
+      "reviewCount": 22
     },
     {
       "name": "John Sturges",
-      "titleCount": 44,
+      "titleCount": 42,
       "slug": "john-sturges",
-      "reviewCount": 3
+      "reviewCount": 18
     },
     {
       "name": "Ken Russell",
-      "titleCount": 34,
+      "titleCount": 33,
       "slug": "ken-russell",
-      "reviewCount": 1
+      "reviewCount": 4
     },
     {
       "name": "Lucio Fulci",
-      "titleCount": 33,
+      "titleCount": 32,
       "slug": "lucio-fulci",
-      "reviewCount": 11
-    },
-    {
-      "name": "Luis Buñuel",
-      "titleCount": 31,
-      "slug": "luis-bunuel",
-      "reviewCount": 1
+      "reviewCount": 16
     },
     {
       "name": "Mario Bava",
-      "titleCount": 31,
+      "titleCount": 25,
       "slug": "mario-bava",
-      "reviewCount": 3
-    },
-    {
-      "name": "Martin Scorsese",
-      "titleCount": 28,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "reviewCount": 2
     },
     {
       "name": "Michael Haneke",
-      "titleCount": 20,
+      "titleCount": 19,
       "slug": "michael-haneke",
       "reviewCount": 5
     },
     {
-      "name": "Michele Soavi",
-      "titleCount": 18,
-      "slug": "michele-soavi",
-      "reviewCount": 1
-    },
-    {
-      "name": "Mike Nichols",
-      "titleCount": 20,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
-    },
-    {
-      "name": "Paul Thomas Anderson",
-      "titleCount": 9,
-      "slug": "paul-thomas-anderson",
-      "reviewCount": 1
-    },
-    {
-      "name": "Paul Verhoeven",
-      "titleCount": 18,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
-    },
-    {
       "name": "Quentin Tarantino",
-      "titleCount": 14,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
-    },
-    {
-      "name": "Ridley Scott",
-      "titleCount": 29,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "titleCount": 15,
+      "slug": "quentin-tarantino",
+      "reviewCount": 4
     },
     {
       "name": "Robert Altman",
@@ -293,80 +137,44 @@
       "reviewCount": 2
     },
     {
-      "name": "Roger Corman",
-      "titleCount": 56,
-      "slug": "roger-corman",
-      "reviewCount": 1
-    },
-    {
       "name": "Roman Polanski",
-      "titleCount": 24,
+      "titleCount": 25,
       "slug": "roman-polanski",
-      "reviewCount": 1
+      "reviewCount": 5
     },
     {
       "name": "Sam Peckinpah",
-      "titleCount": 15,
+      "titleCount": 14,
       "slug": "sam-peckinpah",
-      "reviewCount": 3
+      "reviewCount": 8
     },
     {
       "name": "Sergio Leone",
-      "titleCount": 8,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "titleCount": 7,
+      "slug": "sergio-leone",
+      "reviewCount": 2
     },
     {
       "name": "Sidney Lumet",
       "titleCount": 49,
       "slug": "sidney-lumet",
-      "reviewCount": 1
+      "reviewCount": 7
     },
     {
       "name": "Stanley Kubrick",
       "titleCount": 13,
       "slug": "stanley-kubrick",
-      "reviewCount": 1
-    },
-    {
-      "name": "The Coen Brothers",
-      "titleCount": 19,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "reviewCount": 7
     },
     {
       "name": "Tobe Hooper",
-      "titleCount": 18,
+      "titleCount": 19,
       "slug": "tobe-hooper",
-      "reviewCount": 1
+      "reviewCount": 3
     },
     {
       "name": "Tod Browning",
-      "titleCount": 9,
+      "titleCount": 7,
       "slug": "tod-browning",
       "reviewCount": 6
     },
@@ -374,313 +182,169 @@
       "name": "Tony Scott",
       "titleCount": 17,
       "slug": "tony-scott",
-      "reviewCount": 1
-    },
-    {
-      "name": "Wes Anderson",
-      "titleCount": 11,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "reviewCount": 4
     },
     {
       "name": "Wes Craven",
       "titleCount": 25,
       "slug": "wes-craven",
-      "reviewCount": 7
+      "reviewCount": 9
     },
     {
       "name": "William Friedkin",
-      "titleCount": 24,
+      "titleCount": 23,
       "slug": "william-friedkin",
-      "reviewCount": 3
+      "reviewCount": 6
     }
   ],
-  "performerTotal": 2024,
-  "performerReviewed": 201,
+  "performerTotal": 1507,
+  "performerReviewed": 626,
   "performerDetails": [
     {
       "name": "Bela Lugosi",
-      "titleCount": 65,
+      "titleCount": 64,
       "slug": "bela-lugosi",
-      "reviewCount": 11
-    },
-    {
-      "name": "Bette Davis",
-      "titleCount": 101,
-      "slug": "bette-davis",
-      "reviewCount": 13
+      "reviewCount": 30
     },
     {
       "name": "Boris Karloff",
-      "titleCount": 97,
+      "titleCount": 98,
       "slug": "boris-karloff",
-      "reviewCount": 20
-    },
-    {
-      "name": "Burt Reynolds",
-      "titleCount": 112,
-      "slug": "burt-reynolds",
-      "reviewCount": 2
+      "reviewCount": 44
     },
     {
       "name": "Cary Grant",
       "titleCount": 72,
       "slug": "cary-grant",
-      "reviewCount": 7
+      "reviewCount": 54
     },
     {
       "name": "Christopher Lee",
-      "titleCount": 195,
+      "titleCount": 193,
       "slug": "christopher-lee",
-      "reviewCount": 16
+      "reviewCount": 41
     },
     {
       "name": "Dean Martin",
       "titleCount": 38,
       "slug": "dean-martin",
-      "reviewCount": 1
+      "reviewCount": 16
     },
     {
       "name": "Errol Flynn",
       "titleCount": 54,
       "slug": "errol-flynn",
-      "reviewCount": 2
+      "reviewCount": 8
     },
     {
       "name": "Frank Sinatra",
       "titleCount": 53,
       "slug": "frank-sinatra",
-      "reviewCount": 2
-    },
-    {
-      "name": "Gene Hackman",
-      "titleCount": 79,
-      "slug": "gene-hackman",
-      "reviewCount": 2
+      "reviewCount": 37
     },
     {
       "name": "Humphrey Bogart",
-      "titleCount": 75,
+      "titleCount": 73,
       "slug": "humphrey-bogart",
-      "reviewCount": 28
-    },
-    {
-      "name": "Jack Lemmon",
-      "titleCount": 64,
-      "slug": "jack-lemmon",
-      "reviewCount": 3
-    },
-    {
-      "name": "Jack Nicholson",
-      "titleCount": 61,
-      "slug": "jack-nicholson",
-      "reviewCount": 4
+      "reviewCount": 66
     },
     {
       "name": "James Coburn",
       "titleCount": 84,
       "slug": "james-coburn",
-      "reviewCount": 7
-    },
-    {
-      "name": "James Garner",
-      "titleCount": 68,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "reviewCount": 18
     },
     {
       "name": "James Stewart",
-      "titleCount": 81,
+      "titleCount": 80,
       "slug": "james-stewart",
-      "reviewCount": 2
+      "reviewCount": 20
     },
     {
       "name": "John Wayne",
       "titleCount": 146,
       "slug": "john-wayne",
-      "reviewCount": 23
+      "reviewCount": 89
     },
     {
       "name": "Lee Marvin",
       "titleCount": 53,
       "slug": "lee-marvin",
-      "reviewCount": 2
-    },
-    {
-      "name": "Marilyn Monroe",
-      "titleCount": 26,
-      "slug": "marilyn-monroe",
-      "reviewCount": 1
-    },
-    {
-      "name": "Paul Newman",
-      "titleCount": 57,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "reviewCount": 11
     },
     {
       "name": "Peter Cushing",
-      "titleCount": 94,
+      "titleCount": 101,
       "slug": "peter-cushing",
-      "reviewCount": 13
+      "reviewCount": 33
     },
     {
       "name": "Robert Mitchum",
-      "titleCount": 113,
+      "titleCount": 112,
       "slug": "robert-mitchum",
-      "reviewCount": 12
+      "reviewCount": 49
     },
     {
       "name": "Sean Connery",
-      "titleCount": 69,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
+      "titleCount": 70,
+      "slug": "sean-connery",
+      "reviewCount": 13
     },
     {
       "name": "Steve McQueen",
-      "titleCount": 27,
+      "titleCount": 26,
       "slug": "steve-mcqueen",
-      "reviewCount": 3
+      "reviewCount": 17
     },
     {
       "name": "Vincent Price",
-      "titleCount": 108,
+      "titleCount": 103,
       "slug": "vincent-price",
-      "reviewCount": 5
+      "reviewCount": 41
     },
     {
       "name": "Warren Oates",
       "titleCount": 49,
       "slug": "warren-oates",
-      "reviewCount": 5
+      "reviewCount": 8
     },
     {
       "name": "William Holden",
       "titleCount": 69,
       "slug": "william-holden",
-      "reviewCount": 6
+      "reviewCount": 40
     },
     {
       "name": "William Powell",
-      "titleCount": 59,
+      "titleCount": 60,
       "slug": "william-powell",
-      "reviewCount": 28
+      "reviewCount": 48
     }
   ],
-  "writerTotal": 2024,
-  "writerReviewed": 201,
+  "writerTotal": 18,
+  "writerReviewed": 8,
   "writerDetails": [
     {
       "name": "Anthony Shaffer",
-      "titleCount": 11,
-      "slug": null,
-      "reviewCount": 0,
-      "releaseSequence": 3635,
-      "reviewSequence": null,
-      "genres": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null
-    },
-    {
-      "name": "Clive Barker",
-      "titleCount": 15,
-      "slug": "clive-barker",
+      "titleCount": 8,
+      "slug": "anthony-shaffer",
       "reviewCount": 4
     },
     {
-      "name": "David Mamet",
-      "titleCount": 29,
-      "slug": "david-mamet",
-      "reviewCount": 1
-    },
-    {
       "name": "Leigh Brackett",
-      "titleCount": 12,
+      "titleCount": 10,
       "slug": "leigh-brackett",
-      "reviewCount": 1
-    },
-    {
-      "name": "Neil LaBute",
-      "titleCount": 15,
-      "slug": "neil-labute",
-      "reviewCount": 1
-    },
-    {
-      "name": "Raymond Chandler",
-      "titleCount": 18,
-      "slug": "raymond-chandler",
-      "reviewCount": 2
-    },
-    {
-      "name": "Stephen King",
-      "titleCount": 78,
-      "slug": "stephen-king",
-      "reviewCount": 1
+      "reviewCount": 4
     }
   ],
-  "collectionTotal": 391,
-  "collectionReviewed": 49,
+  "collectionTotal": 393,
+  "collectionReviewed": 110,
   "collectionDetails": [
     {
       "name": "Friday the 13th",
       "titleCount": 12,
       "slug": "friday-the-13th",
-      "reviewCount": 10
+      "reviewCount": 11
     },
     {
       "name": "Halloween",
@@ -692,13 +356,13 @@
       "name": "Hammer Films",
       "titleCount": 94,
       "slug": "hammer-films",
-      "reviewCount": 10
+      "reviewCount": 41
     },
     {
       "name": "James Bond",
       "titleCount": 27,
       "slug": "james-bond",
-      "reviewCount": 6
+      "reviewCount": 24
     },
     {
       "name": "Saw",
@@ -708,15 +372,15 @@
     },
     {
       "name": "Shaw Brothers",
-      "titleCount": 208,
+      "titleCount": 210,
       "slug": "shaw-brothers",
-      "reviewCount": 7
+      "reviewCount": 14
     },
     {
       "name": "Universal Monsters",
       "titleCount": 29,
       "slug": "universal-monsters",
-      "reviewCount": 3
+      "reviewCount": 8
     }
   ]
 }
