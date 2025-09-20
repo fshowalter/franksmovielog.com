@@ -38,22 +38,6 @@ const findFieldsetParent = (
   return undefined;
 };
 
-// Helper to find the nearest scrollable container
-const findScrollableContainer = (
-  element: HTMLElement | null,
-): HTMLElement | undefined => {
-  if (!element) return undefined;
-
-  let parent = element.parentElement;
-  while (parent && parent !== document.body) {
-    const style = globalThis.getComputedStyle(parent);
-    if (style.overflowY === "auto" || style.overflowY === "scroll") {
-      return parent;
-    }
-    parent = parent.parentElement;
-  }
-  return undefined;
-};
 
 // Calculate available space above and below the button
 const calculateAvailableSpace = (
@@ -120,6 +104,28 @@ const determineDropdownLayout = (
   }
 };
 
+// Calculate dropdown position and height based on button element and available options
+// AIDEV-NOTE: Dropdown positioning logic - opens upward when there's more space above
+// and the space below is insufficient for the minimum number of items
+const calculateDropdownPosition = (
+  buttonElement: HTMLButtonElement,
+  availableOptionsCount: number,
+): { height: string; position: "above" | "below" } => {
+  const buttonRect = buttonElement.getBoundingClientRect();
+  const fieldsetParent = findFieldsetParent(buttonElement);
+
+  const { effectiveSpaceAbove, effectiveSpaceBelow } = calculateAvailableSpace(
+    buttonRect,
+    fieldsetParent,
+  );
+
+  return determineDropdownLayout(
+    effectiveSpaceAbove,
+    effectiveSpaceBelow,
+    availableOptionsCount,
+  );
+};
+
 /**
  * Multi-select dropdown field with keyboard navigation.
  * @param props - Component props
@@ -144,10 +150,6 @@ export function MultiSelectField({
     defaultValues ? [...defaultValues] : [],
   );
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownMaxHeight, setDropdownMaxHeight] = useState("15rem");
-  const [dropdownPosition, setDropdownPosition] = useState<"above" | "below">(
-    "below",
-  );
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -160,37 +162,22 @@ export function MultiSelectField({
     (option) => !selectedOptions.includes(option),
   );
 
-  // Calculate dropdown position and height when dropdown is open
-  // AIDEV-NOTE: Dropdown positioning logic - opens upward when there's more space above
-  // and the space below is insufficient for the minimum number of items
-  useEffect(() => {
-    if (!isOpen || !buttonRef.current) return;
-
-    const calculatePosition = (): void => {
-      if (!buttonRef.current) return;
-
-      const buttonRect = buttonRef.current.getBoundingClientRect();
-      const fieldsetParent = findFieldsetParent(buttonRef.current);
-
-      const { effectiveSpaceAbove, effectiveSpaceBelow } =
-        calculateAvailableSpace(buttonRect, fieldsetParent);
-
-      const { height, position } = determineDropdownLayout(
-        effectiveSpaceAbove,
-        effectiveSpaceBelow,
-        availableOptions.length,
-      );
-
-      setDropdownPosition(position);
-      setDropdownMaxHeight(height);
-    };
-
-    // Calculate immediately when opening
-    calculatePosition();
-  }, [availableOptions.length, isOpen]);
+  // Store dropdown position and height
+  const [dropdownStyle, setDropdownStyle] = useState<{
+    maxHeight: string;
+    position: "above" | "below";
+  }>({ maxHeight: "15rem", position: "below" });
 
   const handleToggle = (): void => {
     if (!isOpen) {
+      // Calculate position before opening to prevent flash
+      if (buttonRef.current) {
+        const { height, position } = calculateDropdownPosition(
+          buttonRef.current,
+          availableOptions.length,
+        );
+        setDropdownStyle({ maxHeight: height, position });
+      }
       // Reset highlighted index when opening
       setHighlightedIndex(0);
     }
@@ -202,16 +189,14 @@ export function MultiSelectField({
     setSelectedOptions(newValues);
     onChange(newValues);
 
-    // Reset highlighted index for remaining options
+    // Close dropdown immediately after selection
+    setIsOpen(false);
+
+    // Reset highlighted index
     setHighlightedIndex(0);
 
-    // Close dropdown after selection
-    const timeoutId = setTimeout(() => {
-      setIsOpen(false);
-      buttonRef.current?.focus();
-      timeoutRefs.current.delete(timeoutId);
-    }, DROPDOWN_CLOSE_DELAY_MS);
-    timeoutRefs.current.add(timeoutId);
+    // Return focus to button
+    buttonRef.current?.focus();
   };
 
   const removeOption = (optionToRemove: string, focusButton = true): void => {
@@ -375,70 +360,6 @@ export function MultiSelectField({
     };
   }, [isOpen]);
 
-  // Add resize and scroll listeners with debouncing
-  useEffect(() => {
-    if (!isOpen || !buttonRef.current) return;
-
-    let debounceTimer: NodeJS.Timeout | undefined;
-
-    const recalculatePosition = (): void => {
-      if (!buttonRef.current) return;
-
-      const buttonRect = buttonRef.current.getBoundingClientRect();
-      const fieldsetParent = findFieldsetParent(buttonRef.current);
-
-      const { effectiveSpaceAbove, effectiveSpaceBelow } =
-        calculateAvailableSpace(buttonRect, fieldsetParent);
-
-      const { height, position } = determineDropdownLayout(
-        effectiveSpaceAbove,
-        effectiveSpaceBelow,
-        availableOptions.length,
-      );
-
-      setDropdownPosition(position);
-      setDropdownMaxHeight(height);
-    };
-
-    const debouncedCalculate = (): void => {
-      if (debounceTimer) {
-        clearTimeout(debounceTimer);
-      }
-      debounceTimer = setTimeout(() => {
-        recalculatePosition();
-        debounceTimer = undefined;
-      }, 16); // ~60fps
-    };
-
-    const handleResize = (): void => {
-      debouncedCalculate();
-    };
-
-    const handleScroll = (): void => {
-      debouncedCalculate();
-    };
-
-    if (globalThis.window !== undefined) {
-      window.addEventListener("resize", handleResize);
-
-      // Find and listen to scrollable container
-      const scrollableContainer = findScrollableContainer(buttonRef.current);
-
-      if (scrollableContainer) {
-        scrollableContainer.addEventListener("scroll", handleScroll);
-      }
-
-      return (): void => {
-        if (debounceTimer) {
-          clearTimeout(debounceTimer);
-        }
-        window.removeEventListener("resize", handleResize);
-        if (scrollableContainer) {
-          scrollableContainer.removeEventListener("scroll", handleScroll);
-        }
-      };
-    }
-  }, [availableOptions.length, isOpen]);
 
   // AIDEV-NOTE: Listen for form reset events and clear selections when form is reset
   // This ensures the component responds properly to form.reset() calls from any source
@@ -642,14 +563,14 @@ export function MultiSelectField({
               shadow-[0px_0px_0px_1px_rgba(0,0,0,0.1),0px_4px_11px_rgba(0,0,0,0.1)]
               focus:outline-none
               ${
-                dropdownPosition === "above"
+                dropdownStyle.position === "above"
                   ? "bottom-full mb-1"
                   : "top-full mt-1"
               }
             `}
             onKeyDown={handleListboxKeyDown}
             ref={dropdownRef}
-            style={{ maxHeight: dropdownMaxHeight }}
+            style={{ maxHeight: dropdownStyle.maxHeight }}
           >
             <ul
               aria-labelledby={`label-${buttonId}`}
