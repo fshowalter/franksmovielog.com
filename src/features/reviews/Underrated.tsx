@@ -9,7 +9,6 @@ import type { ReviewsValue } from "./ReviewsListItem";
 import type { ReviewsSort } from "./sortReviews";
 
 import { filterReviews } from "./filteredReviews";
-import { Filters, SortOptions } from "./Filters";
 import { groupReviews } from "./groupReviews";
 import {
   createApplyFiltersAction,
@@ -21,6 +20,7 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./reducer";
+import { ReviewsFilters, SortOptions } from "./ReviewsFilters";
 import { ReviewsListItem } from "./ReviewsListItem";
 import { sortReviews } from "./sortReviews";
 
@@ -82,7 +82,7 @@ export function Underrated({
   return (
     <FilterAndSortContainer
       filters={
-        <Filters
+        <ReviewsFilters
           dispatch={dispatch}
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}

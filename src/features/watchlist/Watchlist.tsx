@@ -10,7 +10,6 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
 
-import { Filters } from "./Filters";
 import { filterWatchlistValues } from "./filterWatchlistValues";
 import { groupWatchlistValues } from "./groupWatchlistValues";
 import { sortWatchlistValues } from "./sortWatchlistValues";
@@ -24,6 +23,7 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./Watchlist.reducer";
+import { WatchlistFilters } from "./WatchlistFilters";
 import { WatchlistListItem } from "./WatchlistListItem";
 
 /**
@@ -112,7 +112,7 @@ export function Watchlist({
   return (
     <FilterAndSortContainer
       filters={
-        <Filters
+        <WatchlistFilters
           dispatch={dispatch}
           distinctCollections={distinctCollections}
           distinctDirectors={distinctDirectors}

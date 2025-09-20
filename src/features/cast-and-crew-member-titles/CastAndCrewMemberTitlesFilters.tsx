@@ -27,7 +27,7 @@ import {
  * @param props.filterValues - Current active filter values
  * @returns Filter input components for cast and crew member titles
  */
-export function Filters({
+export function CastAndCrewMemberTitlesFilters({
   dispatch,
   distinctCreditKinds,
   distinctGenres,

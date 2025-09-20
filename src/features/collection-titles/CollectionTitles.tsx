@@ -20,9 +20,9 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./CollectionTitles.reducer";
+import { CollectionTitlesFilters } from "./CollectionTitlesFilters";
 import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
 import { filterCollectionTitles } from "./filterCollectionTitles";
-import { Filters } from "./Filters";
 import { groupCollectionTitles } from "./groupCollectionTitles";
 import { sortCollectionTitles } from "./sortCollectionTitles";
 
@@ -103,7 +103,7 @@ export function CollectionTitles({
   return (
     <FilterAndSortContainer
       filters={
-        <Filters
+        <CollectionTitlesFilters
           dispatch={dispatch}
           distinctGenres={distinctGenres}
           distinctReleaseYears={distinctReleaseYears}

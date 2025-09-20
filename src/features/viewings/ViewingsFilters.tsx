@@ -26,7 +26,7 @@ import {
  * @param props.filterValues - Current active filter values
  * @returns Filter input components for viewings
  */
-export function Filters({
+export function ViewingsFilters({
   dispatch,
   distinctMedia,
   distinctReleaseYears,

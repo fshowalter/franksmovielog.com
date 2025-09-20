@@ -27,7 +27,7 @@ import {
  * @param props.filterValues - Current active filter values
  * @returns Filter input components for watchlist
  */
-export function Filters({
+export function WatchlistFilters({
   dispatch,
   distinctCollections,
   distinctDirectors,

@@ -9,7 +9,6 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 import type { ViewingsSort } from "./sortViewings";
 
 import { CalendarMonth } from "./CalendarMonth";
-import { Filters } from "./Filters";
 import { filterViewings } from "./filterViewings";
 import { MonthNavigationHeader } from "./MonthNavigationHeader";
 import { sortViewings } from "./sortViewings";
@@ -23,6 +22,7 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./Viewings.reducer";
+import { ViewingsFilters } from "./ViewingsFilters";
 
 /**
  * Props for the Viewings component.
@@ -116,7 +116,7 @@ export function Viewings({
   return (
     <FilterAndSortContainer
       filters={
-        <Filters
+        <ViewingsFilters
           dispatch={dispatch}
           distinctMedia={distinctMedia}
           distinctReleaseYears={distinctReleaseYears}
