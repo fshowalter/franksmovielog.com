@@ -5,7 +5,7 @@ import sharp from "sharp";
 
 import { allReviews } from "~/api/reviews";
 import { fileForGrade } from "~/components/grade/fileForGrade";
-import { OpenGraphImage } from "~/features/review/OpenGraphImage";
+import { ReviewOpenGraphImage } from "~/features/review/ReviewOpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
@@ -55,7 +55,7 @@ export const GET: APIRoute = async function get({ props }) {
     .toBuffer();
 
   const jpeg = await componentToImage(
-    OpenGraphImage({
+    ReviewOpenGraphImage({
       backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
       grade: `data:${"image/png"};base64,${gradeBuffer.toString("base64")}`,
       releaseYear: year,

@@ -6,8 +6,8 @@ import satori from "satori";
 import sharp from "sharp";
 
 import type { OpenGraphImageComponentType } from "~/components/open-graph-image/OpenGraphImage";
-import type { HomeOpenGraphImageComponentType } from "~/features/home/OpenGraphImage";
-import type { ReviewOpenGraphImageComponentType } from "~/features/review/OpenGraphImage";
+import type { HomeOpenGraphImageComponentType } from "~/features/home/HomeOpenGraphImage";
+import type { ReviewOpenGraphImageComponentType } from "~/features/review/ReviewOpenGraphImage";
 
 import {
   createCacheConfig,

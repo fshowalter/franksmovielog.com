@@ -160,10 +160,37 @@ export function MultiSelectField({
     (option) => !selectedOptions.includes(option),
   );
 
+  // Calculate dropdown position and height when dropdown is open
+  // AIDEV-NOTE: Dropdown positioning logic - opens upward when there's more space above
+  // and the space below is insufficient for the minimum number of items
+  useEffect(() => {
+    if (!isOpen || !buttonRef.current) return;
+
+    const calculatePosition = (): void => {
+      if (!buttonRef.current) return;
+
+      const buttonRect = buttonRef.current.getBoundingClientRect();
+      const fieldsetParent = findFieldsetParent(buttonRef.current);
+
+      const { effectiveSpaceAbove, effectiveSpaceBelow } =
+        calculateAvailableSpace(buttonRect, fieldsetParent);
+
+      const { height, position } = determineDropdownLayout(
+        effectiveSpaceAbove,
+        effectiveSpaceBelow,
+        availableOptions.length,
+      );
+
+      setDropdownPosition(position);
+      setDropdownMaxHeight(height);
+    };
+
+    // Calculate immediately when opening
+    calculatePosition();
+  }, [availableOptions.length, isOpen]);
+
   const handleToggle = (): void => {
     if (!isOpen) {
-      // Calculate position BEFORE opening to prevent flash
-      calculateDropdownPositionAndHeight();
       // Reset highlighted index when opening
       setHighlightedIndex(0);
     }
@@ -301,28 +328,6 @@ export function MultiSelectField({
     }
   };
 
-  // Calculate available space and position when dropdown opens
-  // AIDEV-NOTE: Dropdown positioning logic - opens upward when there's more space above
-  // and the space below is insufficient for the minimum number of items
-  const calculateDropdownPositionAndHeight = (): void => {
-    if (!buttonRef.current) return;
-
-    const buttonRect = buttonRef.current.getBoundingClientRect();
-    const fieldsetParent = findFieldsetParent(buttonRef.current);
-
-    const { effectiveSpaceAbove, effectiveSpaceBelow } =
-      calculateAvailableSpace(buttonRect, fieldsetParent);
-
-    const { height, position } = determineDropdownLayout(
-      effectiveSpaceAbove,
-      effectiveSpaceBelow,
-      availableOptions.length,
-    );
-
-    setDropdownPosition(position);
-    setDropdownMaxHeight(height);
-  };
-
   // Scroll highlighted option into view
   useEffect(() => {
     if (
@@ -363,32 +368,44 @@ export function MultiSelectField({
 
     return (): void => {
       clearTimeout(timer);
-      timeoutRefs.current.delete(timer);
+      // Use timer directly, not through ref in cleanup
       if (typeof document !== "undefined") {
         document.removeEventListener("mousedown", handleClickOutside);
       }
     };
   }, [isOpen]);
 
-  // Recalculate position when available options change
-  useEffect(() => {
-    if (isOpen) {
-      calculateDropdownPositionAndHeight();
-    }
-  }, [availableOptions.length]);
-
   // Add resize and scroll listeners with debouncing
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || !buttonRef.current) return;
 
     let debounceTimer: NodeJS.Timeout | undefined;
+
+    const recalculatePosition = (): void => {
+      if (!buttonRef.current) return;
+
+      const buttonRect = buttonRef.current.getBoundingClientRect();
+      const fieldsetParent = findFieldsetParent(buttonRef.current);
+
+      const { effectiveSpaceAbove, effectiveSpaceBelow } =
+        calculateAvailableSpace(buttonRect, fieldsetParent);
+
+      const { height, position } = determineDropdownLayout(
+        effectiveSpaceAbove,
+        effectiveSpaceBelow,
+        availableOptions.length,
+      );
+
+      setDropdownPosition(position);
+      setDropdownMaxHeight(height);
+    };
 
     const debouncedCalculate = (): void => {
       if (debounceTimer) {
         clearTimeout(debounceTimer);
       }
       debounceTimer = setTimeout(() => {
-        calculateDropdownPositionAndHeight();
+        recalculatePosition();
         debounceTimer = undefined;
       }, 16); // ~60fps
     };
@@ -421,7 +438,7 @@ export function MultiSelectField({
         }
       };
     }
-  }, [isOpen]);
+  }, [availableOptions.length, isOpen]);
 
   // AIDEV-NOTE: Listen for form reset events and clear selections when form is reset
   // This ensures the component responds properly to form.reset() calls from any source
@@ -449,9 +466,13 @@ export function MultiSelectField({
 
   // Cleanup timeouts on unmount
   useEffect(() => {
+    // Capture the current ref value in the effect scope
+    const currentTimeouts = timeoutRefs.current;
+
     return (): void => {
-      for (const timeoutId of timeoutRefs.current) clearTimeout(timeoutId);
-      timeoutRefs.current.clear();
+      // Use the captured value in cleanup
+      for (const timeoutId of currentTimeouts) clearTimeout(timeoutId);
+      currentTimeouts.clear();
     };
   }, []);
 
