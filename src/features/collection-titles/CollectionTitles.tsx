@@ -10,7 +10,6 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionTitlesSort } from "./sortCollectionTitles";
 
-import { CollectionTitlesFilters } from "./CollectionTitesFilters";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -21,6 +20,7 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./CollectionTitles.reducer";
+import { CollectionTitlesFilters } from "./CollectionTitlesFilters";
 import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
 import { filterCollectionTitles } from "./filterCollectionTitles";
 import { groupCollectionTitles } from "./groupCollectionTitles";
