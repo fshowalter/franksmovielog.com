@@ -111,7 +111,7 @@ export function CastAndCrew({
     >
       <GroupedAvatarList
         groupedValues={groupedValues}
-        groupItemClassName={`scroll-mt-[calc(52px_+_var(--list-scroll-offset))]`}
+        groupItemClassName={`scroll-mt-[calc(52px_+_var(--filter-and-sort-container-scroll-offset))]`}
       >
         {(value) => {
           return <CastAndCrewListItem key={value.name} value={value} />;
