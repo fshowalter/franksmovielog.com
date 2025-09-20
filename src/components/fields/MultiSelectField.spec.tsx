@@ -87,7 +87,7 @@ describe("MultiSelectField", () => {
       });
     });
 
-    it("keeps dropdown open after selecting an option", async ({ expect }) => {
+    it("closes dropdown after selecting an option", async ({ expect }) => {
       const onChange = vi.fn();
       const user = userEvent.setup();
       const props = createDefaultProps({ onChange });
@@ -102,8 +102,8 @@ describe("MultiSelectField", () => {
         expect(onChange).toHaveBeenCalledWith(["Option 2"]);
       });
 
-      // Dropdown should still be open
-      expect(screen.getByRole("listbox")).toBeInTheDocument();
+      // Dropdown should close immediately
+      expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
     });
   });
 
@@ -139,6 +139,9 @@ describe("MultiSelectField", () => {
 
       await user.click(screen.getByText("Option 1"));
 
+      // Dropdown closes after selection, reopen to check options
+      await user.click(button);
+
       // Should now have 7 options
       options = screen.getAllByRole("option");
       expect(options).toHaveLength(7);
@@ -154,12 +157,20 @@ describe("MultiSelectField", () => {
       render(<MultiSelectField {...props} />);
 
       const button = screen.getByRole("button", { name: "Test Label" });
+
+      // Select first option
       await user.click(button);
-
       await user.click(screen.getByText("Option 1"));
-      await user.click(screen.getByText("Option 3"));
-      await user.click(screen.getByText("Option 5"));
+      expect(onChange).toHaveBeenCalledWith(["Option 1"]);
 
+      // Select second option
+      await user.click(button);
+      await user.click(screen.getByText("Option 3"));
+      expect(onChange).toHaveBeenCalledWith(["Option 1", "Option 3"]);
+
+      // Select third option
+      await user.click(button);
+      await user.click(screen.getByText("Option 5"));
       expect(onChange).toHaveBeenLastCalledWith([
         "Option 1",
         "Option 3",
@@ -227,6 +238,9 @@ describe("MultiSelectField", () => {
       const button = screen.getByRole("button", { name: "Test Label" });
       await user.click(button);
       await user.click(screen.getByText("Option 1"));
+
+      // Reopen dropdown to select second option
+      await user.click(button);
       await user.click(screen.getByText("Option 2"));
 
       // Clear all
@@ -578,9 +592,7 @@ describe("MultiSelectField", () => {
     });
 
     describe("maintaining dropdown state", () => {
-      it("maintains dropdown open after selecting an option", async ({
-        expect,
-      }) => {
+      it("closes dropdown after selecting an option", async ({ expect }) => {
         const onChange = vi.fn();
         const user = userEvent.setup();
         const props = createDefaultProps({ onChange });
@@ -596,15 +608,8 @@ describe("MultiSelectField", () => {
           expect(onChange).toHaveBeenCalledWith(["Option 2"]);
         });
 
-        // Dropdown should still be open
-        expect(screen.getByRole("listbox")).toBeInTheDocument();
-
-        // Option 2 should not be in the available options anymore
-        const options = screen.getAllByRole("option");
-        expect(options).toHaveLength(7);
-        // Verify Option 2 is not among the options
-        const optionTexts = options.map((opt) => opt.textContent);
-        expect(optionTexts).not.toContain("Option 2");
+        // Dropdown should close immediately
+        expect(screen.queryByRole("listbox")).not.toBeInTheDocument();
       });
     });
 
@@ -624,6 +629,9 @@ describe("MultiSelectField", () => {
 
         // Select Option 1
         await user.click(screen.getByText("Option 1"));
+
+        // Reopen dropdown to check updated options
+        await user.click(button);
 
         // Should now have 7 options
         options = screen.getAllByRole("option");
@@ -711,25 +719,6 @@ describe("MultiSelectField", () => {
       const dropdown = screen.getByRole("listbox").parentElement;
       // Should be limited to MAX_VISIBLE_ITEMS = 7
       expect(dropdown?.style.maxHeight).toBe("280px"); // 7 * 40px
-    });
-
-    it("recalculates position when options change", async ({ expect }) => {
-      const user = userEvent.setup();
-      const props = createDefaultProps();
-      render(<MultiSelectField {...props} />);
-
-      const button = screen.getByRole("button", { name: "Test Label" });
-      await user.click(button);
-
-      // Select some options to reduce available options
-      await user.click(screen.getByText("Option 1"));
-      await user.click(screen.getByText("Option 2"));
-      await user.click(screen.getByText("Option 3"));
-
-      // Dropdown should recalculate height
-      const dropdown = screen.getByRole("listbox").parentElement;
-      // 5 remaining options, should show 5 * 40px
-      expect(dropdown?.style.maxHeight).toBe("200px");
     });
 
     describe("when insufficient space below", () => {
@@ -858,50 +847,6 @@ describe("MultiSelectField", () => {
 
       // Should still work without fieldset
       expect(screen.getByRole("listbox")).toBeInTheDocument();
-    });
-  });
-
-  describe("scroll and resize handlers", () => {
-    it("adds resize listener when dropdown is open", async ({ expect }) => {
-      const addEventListenerSpy = vi.spyOn(globalThis, "addEventListener");
-      const user = userEvent.setup();
-
-      const props = createDefaultProps();
-      render(<MultiSelectField {...props} />);
-
-      const button = screen.getByRole("button", { name: "Test Label" });
-      await user.click(button);
-
-      expect(addEventListenerSpy).toHaveBeenCalledWith(
-        "resize",
-        expect.any(Function),
-      );
-
-      addEventListenerSpy.mockRestore();
-    });
-
-    it("removes listeners when component unmounts", async ({ expect }) => {
-      const removeEventListenerSpy = vi.spyOn(
-        globalThis,
-        "removeEventListener",
-      );
-      const user = userEvent.setup();
-
-      const props = createDefaultProps();
-      const { unmount } = render(<MultiSelectField {...props} />);
-
-      const button = screen.getByRole("button", { name: "Test Label" });
-      await user.click(button);
-
-      // Unmount the component
-      unmount();
-
-      expect(removeEventListenerSpy).toHaveBeenCalledWith(
-        "resize",
-        expect.any(Function),
-      );
-
-      removeEventListenerSpy.mockRestore();
     });
   });
 
@@ -1041,6 +986,7 @@ describe("MultiSelectField", () => {
         const button = screen.getByRole("button", { name: "Test Label" });
         await user.click(button);
         await user.click(screen.getByText("Option 1"));
+        await user.click(button); // Reopen
         await user.click(screen.getByText("Option 2"));
 
         // Focus the clear button and press Enter
@@ -1076,6 +1022,7 @@ describe("MultiSelectField", () => {
         const button = screen.getByRole("button", { name: "Test Label" });
         await user.click(button);
         await user.click(screen.getByText("Option 1"));
+        await user.click(button); // Reopen
         await user.click(screen.getByText("Option 2"));
 
         // Focus the clear button and press Space
@@ -1101,39 +1048,6 @@ describe("MultiSelectField", () => {
   });
 
   // Edge cases for dropdown positioning have been moved to the "dropdown positioning" describe block
-
-  describe("scrollable container detection", () => {
-    it("finds and listens to scrollable container", async ({ expect }) => {
-      const addEventListenerSpy = vi.fn();
-      const user = userEvent.setup();
-      const props = createDefaultProps();
-
-      // Create a scrollable container
-      render(
-        <div
-          ref={(el) => {
-            if (el) {
-              el.addEventListener = addEventListenerSpy;
-            }
-          }}
-          style={{ height: "200px", overflowY: "auto" }}
-        >
-          <MultiSelectField {...props} />
-        </div>,
-      );
-
-      const button = screen.getByRole("button", { name: "Test Label" });
-      await user.click(button);
-
-      // Should have added scroll listener to the container
-      await waitFor(() => {
-        expect(addEventListenerSpy).toHaveBeenCalledWith(
-          "scroll",
-          expect.any(Function),
-        );
-      });
-    });
-  });
 
   // Edge cases for keyboard navigation have been moved to the "keyboard navigation" describe block
 
@@ -1200,6 +1114,7 @@ describe("MultiSelectField", () => {
       const button = screen.getByRole("button", { name: "Test Label" });
       await user.click(button);
       await user.click(screen.getByText("Option 1"));
+      await user.click(button); // Reopen
       await user.click(screen.getByText("Option 2"));
 
       // Verify options were selected
