@@ -592,9 +592,7 @@ describe("MultiSelectField", () => {
     });
 
     describe("maintaining dropdown state", () => {
-      it("closes dropdown after selecting an option", async ({
-        expect,
-      }) => {
+      it("closes dropdown after selecting an option", async ({ expect }) => {
         const onChange = vi.fn();
         const user = userEvent.setup();
         const props = createDefaultProps({ onChange });
@@ -851,7 +849,6 @@ describe("MultiSelectField", () => {
       expect(screen.getByRole("listbox")).toBeInTheDocument();
     });
   });
-
 
   describe("accessibility", () => {
     it("has proper ARIA attributes", async ({ expect }) => {

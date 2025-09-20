@@ -38,7 +38,6 @@ const findFieldsetParent = (
   return undefined;
 };
 
-
 // Calculate available space above and below the button
 const calculateAvailableSpace = (
   buttonRect: DOMRect,
@@ -359,7 +358,6 @@ export function MultiSelectField({
       }
     };
   }, [isOpen]);
-
 
   // AIDEV-NOTE: Listen for form reset events and clear selections when form is reset
   // This ensures the component responds properly to form.reset() calls from any source
