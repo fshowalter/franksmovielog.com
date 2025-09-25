@@ -28,7 +28,7 @@ export const HomeStillImageConfig = {
  */
 export function Home({ values }: HomeProps): React.JSX.Element {
   return (
-    <nav className="mx-auto max-w-(--breakpoint-desktop) bg-subtle pb-8">
+    <nav className="mx-auto max-w-(--breakpoint-desktop) pb-8">
       <SubHeading as="h2" className="px-container">
         Latest Reviews
       </SubHeading>
