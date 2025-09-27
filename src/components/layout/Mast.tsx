@@ -33,7 +33,7 @@ export function Mast({
             `
             : `
               static
-              [--mast-color:var(--fg-default)]
+              [--mast-color:var(--color-default)]
             `
         }
         text-(--mast-color)
