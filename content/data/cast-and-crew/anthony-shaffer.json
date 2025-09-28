@@ -9,7 +9,7 @@
       "title": "Cry of the Penguins",
       "sortTitle": "cry-of-the-penguins-1971",
       "releaseYear": "1971",
-      "releaseDate": "1971-12-30",
+      "releaseSequence": 1760,
       "genres": [
         "Adventure",
         "Drama"
@@ -34,7 +34,7 @@
       "title": "Frenzy",
       "sortTitle": "frenzy-1972",
       "releaseYear": "1972",
-      "releaseDate": "1972-05-19",
+      "releaseSequence": 1781,
       "genres": [
         "Drama",
         "Thriller"
@@ -43,7 +43,7 @@
       "grade": "A-",
       "gradeValue": 11,
       "reviewDate": "2008-07-27",
-      "reviewSequence": 802,
+      "reviewSequence": 624,
       "creditedAs": [
         "writer"
       ],
@@ -57,7 +57,7 @@
       "title": "Sleuth",
       "sortTitle": "sleuth-1972",
       "releaseYear": "1972",
-      "releaseDate": "1972-12-10",
+      "releaseSequence": 1819,
       "genres": [
         "Mystery",
         "Thriller"
@@ -66,7 +66,7 @@
       "grade": "A-",
       "gradeValue": 11,
       "reviewDate": "2007-12-02",
-      "reviewSequence": 473,
+      "reviewSequence": 342,
       "creditedAs": [
         "writer"
       ],
@@ -80,7 +80,7 @@
       "title": "The Wicker Man",
       "sortTitle": "wicker-man-1973",
       "releaseYear": "1973",
-      "releaseDate": "1973-12-06",
+      "releaseSequence": 1885,
       "genres": [
         "Horror",
         "Mystery",
@@ -90,31 +90,7 @@
       "grade": "A-",
       "gradeValue": 11,
       "reviewDate": "2007-10-28",
-      "reviewSequence": 437,
-      "creditedAs": [
-        "writer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0077413",
-      "title": "Death on the Nile",
-      "sortTitle": "death-on-the-nile-1978",
-      "releaseYear": "1978",
-      "releaseDate": "1978-??-??",
-      "genres": [
-        "Crime",
-        "Drama",
-        "Mystery"
-      ],
-      "slug": "death-on-the-nile-1978",
-      "grade": "B",
-      "gradeValue": 9,
-      "reviewDate": "2008-09-19",
-      "reviewSequence": 846,
+      "reviewSequence": 310,
       "creditedAs": [
         "writer"
       ],
@@ -128,7 +104,7 @@
       "title": "Absolution",
       "sortTitle": "absolution-1978",
       "releaseYear": "1978",
-      "releaseDate": "1978-12-01",
+      "releaseSequence": 2165,
       "genres": [
         "Drama",
         "Mystery",
@@ -150,11 +126,35 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0077413",
+      "title": "Death on the Nile",
+      "sortTitle": "death-on-the-nile-1978",
+      "releaseYear": "1978",
+      "releaseSequence": 2172,
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "slug": "death-on-the-nile-1978",
+      "grade": "B",
+      "gradeValue": 9,
+      "reviewDate": "2008-09-19",
+      "reviewSequence": 660,
+      "creditedAs": [
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0083908",
       "title": "Evil Under the Sun",
       "sortTitle": "evil-under-the-sun-1982",
       "releaseYear": "1982",
-      "releaseDate": "1982-01-25",
+      "releaseSequence": 2366,
       "genres": [
         "Crime",
         "Drama",
@@ -180,7 +180,7 @@
       "title": "Appointment with Death",
       "sortTitle": "appointment-with-death-1988",
       "releaseYear": "1988",
-      "releaseDate": "1988-04-15",
+      "releaseSequence": 2656,
       "genres": [
         "Crime",
         "Drama",

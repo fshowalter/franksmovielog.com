@@ -27,7 +27,7 @@ export async function getViewingsProps(): Promise<ViewingsProps> {
           viewing.slug,
           PosterListItemImageConfig,
         ),
-        releaseDate: viewing.releaseDate,
+        releaseSequence: viewing.releaseSequence,
         releaseYear: viewing.releaseYear,
         slug: viewing.slug,
         sortTitle: viewing.sortTitle,

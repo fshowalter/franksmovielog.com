@@ -47,7 +47,7 @@ export type WatchlistProps = {
 export type WatchlistValue = {
   genres: string[];
   imdbId: string;
-  releaseDate: string;
+  releaseSequence: number;
   releaseYear: string;
   sortTitle: string;
   title: string;

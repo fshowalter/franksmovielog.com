@@ -9,7 +9,7 @@
       "title": "In Which We Serve",
       "sortTitle": "in-which-we-serve-1942",
       "releaseYear": "1942",
-      "releaseDate": "1942-09-17",
+      "releaseSequence": 475,
       "genres": [
         "Drama",
         "War"
@@ -18,7 +18,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2021-02-26",
-      "reviewSequence": 2157,
+      "reviewSequence": 1240,
       "creditedAs": [
         "director"
       ],
@@ -32,10 +32,36 @@
       "title": "This Happy Breed",
       "sortTitle": "this-happy-breed-1944",
       "releaseYear": "1944",
-      "releaseDate": "1944-05-28",
+      "releaseSequence": 540,
       "genres": [
         "Comedy",
         "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "David Lean"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0038363",
+      "title": "Blithe Spirit",
+      "sortTitle": "blithe-spirit-1945",
+      "releaseYear": "1945",
+      "releaseSequence": 569,
+      "genres": [
+        "Comedy",
+        "Fantasy"
       ],
       "slug": null,
       "grade": null,
@@ -58,7 +84,7 @@
       "title": "Brief Encounter",
       "sortTitle": "brief-encounter-1945",
       "releaseYear": "1945",
-      "releaseDate": "1945-11-19",
+      "releaseSequence": 583,
       "genres": [
         "Drama",
         "Romance"
@@ -79,37 +105,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0038363",
-      "title": "Blithe Spirit",
-      "sortTitle": "blithe-spirit-1945",
-      "releaseYear": "1945",
-      "releaseDate": "1945-04-05",
-      "genres": [
-        "Comedy",
-        "Fantasy"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [
-        "David Lean"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0038574",
       "title": "Great Expectations",
       "sortTitle": "great-expectations-1946",
       "releaseYear": "1946",
-      "releaseDate": "1946-12-16",
+      "releaseSequence": 609,
       "genres": [
         "Adventure",
         "Drama",
@@ -137,7 +137,7 @@
       "title": "Oliver Twist",
       "sortTitle": "oliver-twist-1948",
       "releaseYear": "1948",
-      "releaseDate": "1948-06-28",
+      "releaseSequence": 667,
       "genres": [
         "Drama"
       ],
@@ -162,7 +162,7 @@
       "title": "The Passionate Friends",
       "sortTitle": "passionate-friends-1949",
       "releaseYear": "1949",
-      "releaseDate": "1949-01-26",
+      "releaseSequence": 691,
       "genres": [
         "Drama",
         "Romance"
@@ -188,7 +188,7 @@
       "title": "Madeleine",
       "sortTitle": "madeleine-1950",
       "releaseYear": "1950",
-      "releaseDate": "1950-02-16",
+      "releaseSequence": 723,
       "genres": [
         "Crime",
         "Drama",
@@ -214,7 +214,7 @@
       "title": "The Sound Barrier",
       "sortTitle": "sound-barrier-1952",
       "releaseYear": "1952",
-      "releaseDate": "1952-07-22",
+      "releaseSequence": 800,
       "genres": [
         "Adventure",
         "Drama",
@@ -241,7 +241,7 @@
       "title": "Hobson's Choice",
       "sortTitle": "hobsons-choice-1954",
       "releaseYear": "1954",
-      "releaseDate": "1954-02-19",
+      "releaseSequence": 871,
       "genres": [
         "Comedy",
         "Drama",
@@ -268,7 +268,7 @@
       "title": "Summertime",
       "sortTitle": "summertime-1955",
       "releaseYear": "1955",
-      "releaseDate": "1955-05-29",
+      "releaseSequence": 914,
       "genres": [
         "Comedy",
         "Drama",
@@ -295,7 +295,7 @@
       "title": "The Bridge on the River Kwai",
       "sortTitle": "bridge-on-the-river-kwai-1957",
       "releaseYear": "1957",
-      "releaseDate": "1957-10-02",
+      "releaseSequence": 1032,
       "genres": [
         "Adventure",
         "Drama",
@@ -305,7 +305,7 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2008-08-02",
-      "reviewSequence": 806,
+      "reviewSequence": 628,
       "creditedAs": [
         "director"
       ],
@@ -319,7 +319,7 @@
       "title": "Lawrence of Arabia",
       "sortTitle": "lawrence-of-arabia-1962",
       "releaseYear": "1962",
-      "releaseDate": "1962-12-10",
+      "releaseSequence": 1265,
       "genres": [
         "Adventure",
         "Biography",
@@ -330,7 +330,7 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2007-09-12",
-      "reviewSequence": 354,
+      "reviewSequence": 240,
       "creditedAs": [
         "director"
       ],
@@ -344,7 +344,7 @@
       "title": "Doctor Zhivago",
       "sortTitle": "doctor-zhivago-1965",
       "releaseYear": "1965",
-      "releaseDate": "1965-12-22",
+      "releaseSequence": 1405,
       "genres": [
         "Drama",
         "Romance",
@@ -370,7 +370,7 @@
       "title": "Ryan's Daughter",
       "sortTitle": "ryans-daughter-1970",
       "releaseYear": "1970",
-      "releaseDate": "1970-11-09",
+      "releaseSequence": 1674,
       "genres": [
         "Drama",
         "Romance"
@@ -397,7 +397,7 @@
       "title": "A Passage to India",
       "sortTitle": "passage-to-india-1984",
       "releaseYear": "1984",
-      "releaseDate": "1984-12-14",
+      "releaseSequence": 2501,
       "genres": [
         "Adventure",
         "Drama",

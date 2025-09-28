@@ -45,7 +45,7 @@ const createCollectionTitle = (
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
     },
-    releaseDate: `1962-01-${String(testIdCounter).padStart(2, "0")}`,
+    releaseSequence: testIdCounter,
     releaseYear: "1962",
     reviewDisplayDate: "Aug 22, 2024",
     reviewSequence: testIdCounter,
@@ -350,17 +350,17 @@ describe("CollectionTitles", () => {
     it("sorts by release date oldest first", async ({ expect }) => {
       const titles = [
         createCollectionTitle({
-          releaseDate: "1995-11-17",
+          releaseSequence: 3,
           releaseYear: "1995",
           title: "GoldenEye",
         }),
         createCollectionTitle({
-          releaseDate: "1962-10-05",
+          releaseSequence: 1,
           releaseYear: "1962",
           title: "Dr. No",
         }),
         createCollectionTitle({
-          releaseDate: "1987-06-29",
+          releaseSequence: 2,
           releaseYear: "1987",
           title: "The Living Daylights",
         }),
@@ -384,17 +384,17 @@ describe("CollectionTitles", () => {
     it("sorts by release date newest first", async ({ expect }) => {
       const titles = [
         createCollectionTitle({
-          releaseDate: "1962-10-05",
+          releaseSequence: 1,
           releaseYear: "1962",
           title: "Dr. No",
         }),
         createCollectionTitle({
-          releaseDate: "1987-06-29",
+          releaseSequence: 2,
           releaseYear: "1987",
           title: "The Living Daylights",
         }),
         createCollectionTitle({
-          releaseDate: "1995-11-17",
+          releaseSequence: 3,
           releaseYear: "1995",
           title: "GoldenEye",
         }),
@@ -596,7 +596,7 @@ describe("CollectionTitles", () => {
       const titles = Array.from({ length: 110 }, (_, i) => {
         const year = 2020 - Math.floor(i / 5);
         return createCollectionTitle({
-          releaseDate: `${year}-${String(Math.floor(Math.random() * 12) + 1).padStart(2, "0")}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, "0")}`,
+          releaseSequence: 3000 - i, // Higher sequences for older films to maintain desc order
           releaseYear: String(year),
           title: `Bond Film ${i + 1}`,
         });

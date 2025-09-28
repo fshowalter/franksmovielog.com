@@ -9,7 +9,7 @@
       "title": "Dracula",
       "sortTitle": "dracula-1931",
       "releaseYear": "1931",
-      "releaseDate": "1931-02-09",
+      "releaseSequence": 40,
       "genres": [
         "Drama",
         "Fantasy",
@@ -19,14 +19,14 @@
       "grade": "A-",
       "gradeValue": 11,
       "reviewDate": "2020-10-04",
-      "reviewSequence": 2005
+      "reviewSequence": 1095
     },
     {
       "imdbId": "tt0021815",
       "title": "Dr\u00e1cula",
       "sortTitle": "dracula-1931",
       "releaseYear": "1931",
-      "releaseDate": "1931-03-11",
+      "releaseSequence": 44,
       "genres": [
         "Drama",
         "Fantasy",
@@ -36,14 +36,14 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2021-03-28",
-      "reviewSequence": 2191
+      "reviewSequence": 1274
     },
     {
       "imdbId": "tt0021884",
       "title": "Frankenstein",
       "sortTitle": "frankenstein-1931",
       "releaseYear": "1931",
-      "releaseDate": "1931-11-19",
+      "releaseSequence": 69,
       "genres": [
         "Drama",
         "Horror",
@@ -54,14 +54,14 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2021-04-20",
-      "reviewSequence": 2212
+      "reviewSequence": 1295
     },
     {
       "imdbId": "tt0023245",
       "title": "The Mummy",
       "sortTitle": "mummy-1932",
       "releaseYear": "1932",
-      "releaseDate": "1932-12-22",
+      "releaseSequence": 121,
       "genres": [
         "Fantasy",
         "Horror"
@@ -77,7 +77,7 @@
       "title": "The Invisible Man",
       "sortTitle": "invisible-man-1933",
       "releaseYear": "1933",
-      "releaseDate": "1933-10-31",
+      "releaseSequence": 150,
       "genres": [
         "Horror",
         "Sci-Fi"
@@ -86,14 +86,14 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2024-11-13",
-      "reviewSequence": 2807
+      "reviewSequence": 1714
     },
     {
       "imdbId": "tt0026138",
       "title": "Bride of Frankenstein",
       "sortTitle": "bride-of-frankenstein-1935",
       "releaseYear": "1935",
-      "releaseDate": "1935-04-19",
+      "releaseSequence": 199,
       "genres": [
         "Drama",
         "Horror",
@@ -110,7 +110,7 @@
       "title": "Dracula's Daughter",
       "sortTitle": "draculas-daughter-1936",
       "releaseYear": "1936",
-      "releaseDate": "1936-05-11",
+      "releaseSequence": 243,
       "genres": [
         "Drama",
         "Fantasy",
@@ -120,14 +120,14 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2007-12-26",
-      "reviewSequence": 520
+      "reviewSequence": 384
     },
     {
       "imdbId": "tt0031951",
       "title": "Son of Frankenstein",
       "sortTitle": "son-of-frankenstein-1939",
       "releaseYear": "1939",
-      "releaseDate": "1939-01-10",
+      "releaseSequence": 338,
       "genres": [
         "Drama",
         "Horror",
@@ -144,7 +144,7 @@
       "title": "The Invisible Man Returns",
       "sortTitle": "invisible-man-returns-1940",
       "releaseYear": "1940",
-      "releaseDate": "1940-01-12",
+      "releaseSequence": 380,
       "genres": [
         "Drama",
         "Horror",
@@ -159,11 +159,28 @@
       "reviewSequence": null
     },
     {
+      "imdbId": "tt0032818",
+      "title": "The Mummy's Hand",
+      "sortTitle": "mummys-hand-1940",
+      "releaseYear": "1940",
+      "releaseSequence": 409,
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Horror"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
+    },
+    {
       "imdbId": "tt0032637",
       "title": "The Invisible Woman",
       "sortTitle": "invisible-woman-1940",
       "releaseYear": "1940",
-      "releaseDate": "1940-12-27",
+      "releaseSequence": 421,
       "genres": [
         "Comedy",
         "Horror",
@@ -177,28 +194,11 @@
       "reviewSequence": null
     },
     {
-      "imdbId": "tt0032818",
-      "title": "The Mummy's Hand",
-      "sortTitle": "mummys-hand-1940",
-      "releaseYear": "1940",
-      "releaseDate": "1940-09-20",
-      "genres": [
-        "Adventure",
-        "Fantasy",
-        "Horror"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
-    },
-    {
       "imdbId": "tt0034398",
       "title": "The Wolf Man",
       "sortTitle": "wolf-man-1941",
       "releaseYear": "1941",
-      "releaseDate": "1941-12-09",
+      "releaseSequence": 452,
       "genres": [
         "Horror",
         "Mystery",
@@ -208,14 +208,14 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2007-07-23",
-      "reviewSequence": 271
+      "reviewSequence": 171
     },
     {
       "imdbId": "tt0034786",
       "title": "The Ghost of Frankenstein",
       "sortTitle": "ghost-of-frankenstein-1942",
       "releaseYear": "1942",
-      "releaseDate": "1942-03-13",
+      "releaseSequence": 460,
       "genres": [
         "Drama",
         "Horror",
@@ -232,7 +232,7 @@
       "title": "Invisible Agent",
       "sortTitle": "invisible-agent-1942",
       "releaseYear": "1942",
-      "releaseDate": "1942-07-31",
+      "releaseSequence": 471,
       "genres": [
         "Adventure",
         "Horror",
@@ -250,7 +250,7 @@
       "title": "The Mummy's Tomb",
       "sortTitle": "mummys-tomb-1942",
       "releaseYear": "1942",
-      "releaseDate": "1942-10-23",
+      "releaseSequence": 482,
       "genres": [
         "Drama",
         "Fantasy",
@@ -269,7 +269,7 @@
       "title": "Frankenstein Meets the Wolf Man",
       "sortTitle": "frankenstein-meets-the-wolf-man-1943",
       "releaseYear": "1943",
-      "releaseDate": "1943-03-05",
+      "releaseSequence": 497,
       "genres": [
         "Fantasy",
         "Horror",
@@ -286,7 +286,7 @@
       "title": "Phantom of the Opera",
       "sortTitle": "phantom-of-the-opera-1943",
       "releaseYear": "1943",
-      "releaseDate": "1943-08-12",
+      "releaseSequence": 509,
       "genres": [
         "Drama",
         "Horror",
@@ -305,7 +305,7 @@
       "title": "Son of Dracula",
       "sortTitle": "son-of-dracula-1943",
       "releaseYear": "1943",
-      "releaseDate": "1943-10-20",
+      "releaseSequence": 516,
       "genres": [
         "Drama",
         "Fantasy",
@@ -319,28 +319,11 @@
       "reviewSequence": null
     },
     {
-      "imdbId": "tt0036931",
-      "title": "House of Frankenstein",
-      "sortTitle": "house-of-frankenstein-1944",
-      "releaseYear": "1944",
-      "releaseDate": "1944-12-01",
-      "genres": [
-        "Fantasy",
-        "Horror",
-        "Sci-Fi"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
-    },
-    {
       "imdbId": "tt0036959",
       "title": "The Invisible Man's Revenge",
       "sortTitle": "invisible-mans-revenge-1944",
       "releaseYear": "1944",
-      "releaseDate": "1944-06-09",
+      "releaseSequence": 541,
       "genres": [
         "Crime",
         "Horror",
@@ -355,11 +338,44 @@
       "reviewSequence": null
     },
     {
+      "imdbId": "tt0037099",
+      "title": "The Mummy's Ghost",
+      "sortTitle": "mummys-ghost-1944",
+      "releaseYear": "1944",
+      "releaseSequence": 542,
+      "genres": [
+        "Fantasy",
+        "Horror"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
+    },
+    {
+      "imdbId": "tt0036931",
+      "title": "House of Frankenstein",
+      "sortTitle": "house-of-frankenstein-1944",
+      "releaseYear": "1944",
+      "releaseSequence": 559,
+      "genres": [
+        "Fantasy",
+        "Horror",
+        "Sci-Fi"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
+    },
+    {
       "imdbId": "tt0037098",
       "title": "The Mummy's Curse",
       "sortTitle": "mummys-curse-1944",
       "releaseYear": "1944",
-      "releaseDate": "1944-12-22",
+      "releaseSequence": 562,
       "genres": [
         "Action",
         "Drama",
@@ -375,27 +391,11 @@
       "reviewSequence": null
     },
     {
-      "imdbId": "tt0037099",
-      "title": "The Mummy's Ghost",
-      "sortTitle": "mummys-ghost-1944",
-      "releaseYear": "1944",
-      "releaseDate": "1944-07-01",
-      "genres": [
-        "Fantasy",
-        "Horror"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
-    },
-    {
       "imdbId": "tt0037793",
       "title": "House of Dracula",
       "sortTitle": "house-of-dracula-1945",
       "releaseYear": "1945",
-      "releaseDate": "1945-12-07",
+      "releaseSequence": 584,
       "genres": [
         "Fantasy",
         "Horror",
@@ -405,14 +405,14 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2025-05-17",
-      "reviewSequence": 2878
+      "reviewSequence": 1767
     },
     {
       "imdbId": "tt0040068",
       "title": "Abbott and Costello Meet Frankenstein",
       "sortTitle": "abbott-and-costello-meet-frankenstein-1948",
       "releaseYear": "1948",
-      "releaseDate": "1948-06-15",
+      "releaseSequence": 665,
       "genres": [
         "Comedy",
         "Family",
@@ -423,14 +423,14 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2007-11-11",
-      "reviewSequence": 445
+      "reviewSequence": 317
     },
     {
       "imdbId": "tt0043255",
       "title": "Bud Abbott and Lou Costello Meet the Invisible Man",
       "sortTitle": "bud-abbott-and-lou-costello-meet-the-invisible-man-1951",
       "releaseYear": "1951",
-      "releaseDate": "1951-03-07",
+      "releaseSequence": 759,
       "genres": [
         "Comedy",
         "Family",
@@ -449,7 +449,23 @@
       "title": "Creature from the Black Lagoon",
       "sortTitle": "creature-from-the-black-lagoon-1954",
       "releaseYear": "1954",
-      "releaseDate": "1954-01-07",
+      "releaseSequence": 867,
+      "genres": [
+        "Horror",
+        "Sci-Fi"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null
+    },
+    {
+      "imdbId": "tt0048554",
+      "title": "Revenge of the Creature",
+      "sortTitle": "revenge-of-the-creature-1955",
+      "releaseYear": "1955",
+      "releaseSequence": 908,
       "genres": [
         "Horror",
         "Sci-Fi"
@@ -465,7 +481,7 @@
       "title": "Abbott and Costello Meet the Mummy",
       "sortTitle": "abbott-and-costello-meet-the-mummy-1955",
       "releaseYear": "1955",
-      "releaseDate": "1955-06-23",
+      "releaseSequence": 918,
       "genres": [
         "Action",
         "Adventure",
@@ -481,27 +497,11 @@
       "reviewSequence": null
     },
     {
-      "imdbId": "tt0048554",
-      "title": "Revenge of the Creature",
-      "sortTitle": "revenge-of-the-creature-1955",
-      "releaseYear": "1955",
-      "releaseDate": "1955-03-28",
-      "genres": [
-        "Horror",
-        "Sci-Fi"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
-    },
-    {
       "imdbId": "tt0049103",
       "title": "The Creature Walks Among Us",
       "sortTitle": "creature-walks-among-us-1956",
       "releaseYear": "1956",
-      "releaseDate": "1956-04-26",
+      "releaseSequence": 961,
       "genres": [
         "Horror",
         "Sci-Fi"

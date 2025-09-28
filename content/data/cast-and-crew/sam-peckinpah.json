@@ -9,7 +9,7 @@
       "title": "The Deadly Companions",
       "sortTitle": "deadly-companions-1961",
       "releaseYear": "1961",
-      "releaseDate": "1961-06-06",
+      "releaseSequence": 1198,
       "genres": [
         "Adventure",
         "Western"
@@ -18,7 +18,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2021-01-25",
-      "reviewSequence": 2122,
+      "reviewSequence": 1207,
       "creditedAs": [
         "director"
       ],
@@ -32,7 +32,7 @@
       "title": "Ride the High Country",
       "sortTitle": "ride-the-high-country-1962",
       "releaseYear": "1962",
-      "releaseDate": "1962-05-09",
+      "releaseSequence": 1242,
       "genres": [
         "Drama",
         "Western"
@@ -41,7 +41,7 @@
       "grade": "A",
       "gradeValue": 12,
       "reviewDate": "2007-12-01",
-      "reviewSequence": 469,
+      "reviewSequence": 341,
       "creditedAs": [
         "director"
       ],
@@ -55,7 +55,7 @@
       "title": "Major Dundee",
       "sortTitle": "major-dundee-1965",
       "releaseYear": "1965",
-      "releaseDate": "1965-03-15",
+      "releaseSequence": 1366,
       "genres": [
         "Adventure",
         "Drama",
@@ -66,7 +66,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2008-05-27",
-      "reviewSequence": 732,
+      "reviewSequence": 566,
       "creditedAs": [
         "director",
         "writer"
@@ -81,7 +81,7 @@
       "title": "Villa Rides",
       "sortTitle": "villa-rides-1968",
       "releaseYear": "1968",
-      "releaseDate": "1968-05-29",
+      "releaseSequence": 1532,
       "genres": [
         "Drama",
         "War",
@@ -107,7 +107,7 @@
       "title": "The Wild Bunch",
       "sortTitle": "wild-bunch-1969",
       "releaseYear": "1969",
-      "releaseDate": "1969-05-01",
+      "releaseSequence": 1591,
       "genres": [
         "Action",
         "Adventure",
@@ -118,7 +118,7 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2008-11-30",
-      "reviewSequence": 937,
+      "reviewSequence": 743,
       "creditedAs": [
         "director",
         "writer"
@@ -133,7 +133,7 @@
       "title": "The Ballad of Cable Hogue",
       "sortTitle": "ballad-of-cable-hogue-1970",
       "releaseYear": "1970",
-      "releaseDate": "1970-03-18",
+      "releaseSequence": 1645,
       "genres": [
         "Comedy",
         "Drama",
@@ -160,7 +160,7 @@
       "title": "Straw Dogs",
       "sortTitle": "straw-dogs-1971",
       "releaseYear": "1971",
-      "releaseDate": "1971-11-25",
+      "releaseSequence": 1747,
       "genres": [
         "Crime",
         "Drama",
@@ -170,34 +170,10 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2016-12-02",
-      "reviewSequence": 1698,
+      "reviewSequence": 1044,
       "creditedAs": [
         "director",
         "writer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0068638",
-      "title": "The Getaway",
-      "sortTitle": "getaway-1972",
-      "releaseYear": "1972",
-      "releaseDate": "1972-12-13",
-      "genres": [
-        "Action",
-        "Crime",
-        "Thriller"
-      ],
-      "slug": "the-getaway-1972",
-      "grade": "B+",
-      "gradeValue": 10,
-      "reviewDate": "2016-11-27",
-      "reviewSequence": 1696,
-      "creditedAs": [
-        "director"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -209,7 +185,7 @@
       "title": "Junior Bonner",
       "sortTitle": "junior-bonner-1972",
       "releaseYear": "1972",
-      "releaseDate": "1972-06-20",
+      "releaseSequence": 1785,
       "genres": [
         "Drama",
         "Western"
@@ -232,11 +208,35 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0068638",
+      "title": "The Getaway",
+      "sortTitle": "getaway-1972",
+      "releaseYear": "1972",
+      "releaseSequence": 1822,
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "slug": "the-getaway-1972",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2016-11-27",
+      "reviewSequence": 1042,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0070518",
       "title": "Pat Garrett & Billy the Kid",
       "sortTitle": "pat-garrett-and-billy-the-kid-1973",
       "releaseYear": "1973",
-      "releaseDate": "1973-05-23",
+      "releaseSequence": 1856,
       "genres": [
         "Biography",
         "Drama",
@@ -264,7 +264,7 @@
       "title": "Bring Me the Head of Alfredo Garcia",
       "sortTitle": "bring-me-the-head-of-alfredo-garcia-1974",
       "releaseYear": "1974",
-      "releaseDate": "1974-08-01",
+      "releaseSequence": 1934,
       "genres": [
         "Action",
         "Crime",
@@ -295,7 +295,7 @@
       "title": "The Killer Elite",
       "sortTitle": "killer-elite-1975",
       "releaseYear": "1975",
-      "releaseDate": "1975-12-17",
+      "releaseSequence": 2014,
       "genres": [
         "Action",
         "Crime",
@@ -305,7 +305,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2008-01-10",
-      "reviewSequence": 535,
+      "reviewSequence": 398,
       "creditedAs": [
         "director"
       ],
@@ -319,7 +319,7 @@
       "title": "Cross of Iron",
       "sortTitle": "cross-of-iron-1977",
       "releaseYear": "1977",
-      "releaseDate": "1977-01-28",
+      "releaseSequence": 2077,
       "genres": [
         "Drama",
         "War"
@@ -342,11 +342,36 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0077369",
+      "title": "Convoy",
+      "sortTitle": "convoy-1978",
+      "releaseYear": "1978",
+      "releaseSequence": 2140,
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Sam Peckinpah"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0077327",
       "title": "China 9, Liberty 37",
       "sortTitle": "china-9-liberty-37-1978",
       "releaseYear": "1978",
-      "releaseDate": "1978-08-04",
+      "releaseSequence": 2146,
       "genres": [
         "Drama",
         "Romance",
@@ -368,36 +393,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0077369",
-      "title": "Convoy",
-      "sortTitle": "convoy-1978",
-      "releaseYear": "1978",
-      "releaseDate": "1978-06-10",
-      "genres": [
-        "Action",
-        "Drama"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Sam Peckinpah"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0080100",
       "title": "The Visitor",
       "sortTitle": "visitor-1979",
       "releaseYear": "1979",
-      "releaseDate": "1979-03-22",
+      "releaseSequence": 2187,
       "genres": [
         "Horror",
         "Sci-Fi"
@@ -406,7 +406,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2015-03-07",
-      "reviewSequence": 1610,
+      "reviewSequence": 1020,
       "creditedAs": [
         "performer"
       ],
@@ -420,7 +420,7 @@
       "title": "The Osterman Weekend",
       "sortTitle": "osterman-weekend-1983",
       "releaseYear": "1983",
-      "releaseDate": "1983-09-30",
+      "releaseSequence": 2439,
       "genres": [
         "Action",
         "Drama",
@@ -430,7 +430,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2007-11-14",
-      "reviewSequence": 453,
+      "reviewSequence": 325,
       "creditedAs": [
         "director"
       ],

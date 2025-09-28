@@ -164,17 +164,17 @@ describe("Underseen", () => {
     it("sorts by release date oldest first", async ({ expect }) => {
       const reviews = [
         createReviewValue({
-          releaseDate: "1987-10-02",
+          releaseSequence: 3,
           releaseYear: "1987",
           title: "Near Dark",
         }),
         createReviewValue({
-          releaseDate: "1951-06-29",
+          releaseSequence: 1,
           releaseYear: "1951",
           title: "Ace in the Hole",
         }),
         createReviewValue({
-          releaseDate: "1977-06-24",
+          releaseSequence: 2,
           releaseYear: "1977",
           title: "Sorcerer",
         }),
@@ -198,17 +198,17 @@ describe("Underseen", () => {
     it("sorts by release date newest first", async ({ expect }) => {
       const reviews = [
         createReviewValue({
-          releaseDate: "1951-06-29",
+          releaseSequence: 1,
           releaseYear: "1951",
           title: "Ace in the Hole",
         }),
         createReviewValue({
-          releaseDate: "1977-06-24",
+          releaseSequence: 2,
           releaseYear: "1977",
           title: "Sorcerer",
         }),
         createReviewValue({
-          releaseDate: "1987-10-02",
+          releaseSequence: 3,
           releaseYear: "1987",
           title: "Near Dark",
         }),
@@ -342,7 +342,7 @@ describe("Underseen", () => {
       // Create 110 reviews to force pagination
       const reviews = Array.from({ length: 110 }, (_, i) =>
         createReviewValue({
-          releaseDate: `${2020 - Math.floor(i / 10)}-01-${String((i % 30) + 1).padStart(2, "0")}`,
+          releaseSequence: 3000 - i,
           releaseYear: String(2020 - Math.floor(i / 10)),
           reviewMonth: "January",
           reviewSequence: 110 - i, // Highest sequence first for desc sort

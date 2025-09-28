@@ -9,7 +9,7 @@
       "title": "Saw",
       "sortTitle": "saw-2004",
       "releaseYear": "2004",
-      "releaseDate": "2004-01-19",
+      "releaseSequence": 3161,
       "genres": [
         "Horror",
         "Mystery",
@@ -19,14 +19,14 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2022-07-08",
-      "reviewSequence": 2426
+      "reviewSequence": 1493
     },
     {
       "imdbId": "tt0432348",
       "title": "Saw II",
       "sortTitle": "saw-ii-2005",
       "releaseYear": "2005",
-      "releaseDate": "2005-10-28",
+      "releaseSequence": 3216,
       "genres": [
         "Horror",
         "Mystery"
@@ -35,14 +35,14 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2022-07-22",
-      "reviewSequence": 2430
+      "reviewSequence": 1497
     },
     {
       "imdbId": "tt0489270",
       "title": "Saw III",
       "sortTitle": "saw-iii-2006",
       "releaseYear": "2006",
-      "releaseDate": "2006-10-26",
+      "releaseSequence": 3244,
       "genres": [
         "Horror",
         "Mystery",
@@ -52,14 +52,14 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2022-07-28",
-      "reviewSequence": 2432
+      "reviewSequence": 1499
     },
     {
       "imdbId": "tt0890870",
       "title": "Saw IV",
       "sortTitle": "saw-iv-2007",
       "releaseYear": "2007",
-      "releaseDate": "2007-10-25",
+      "releaseSequence": 3298,
       "genres": [
         "Horror",
         "Mystery",
@@ -69,14 +69,64 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2022-08-10",
-      "reviewSequence": 2440
+      "reviewSequence": 1507
     },
     {
-      "imdbId": "tt10342730",
-      "title": "Spiral",
-      "sortTitle": "spiral-2021",
-      "releaseYear": "2021",
-      "releaseDate": "2021-05-12",
+      "imdbId": "tt1132626",
+      "title": "Saw V",
+      "sortTitle": "saw-v-2008",
+      "releaseYear": "2008",
+      "releaseSequence": 3355,
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "slug": "saw-v-2008",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2022-08-12",
+      "reviewSequence": 1511
+    },
+    {
+      "imdbId": "tt1233227",
+      "title": "Saw VI",
+      "sortTitle": "saw-vi-2009",
+      "releaseYear": "2009",
+      "releaseSequence": 3402,
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "saw-vi-2009",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2022-09-10",
+      "reviewSequence": 1537
+    },
+    {
+      "imdbId": "tt1477076",
+      "title": "Saw 3D",
+      "sortTitle": "saw-3d-2010",
+      "releaseYear": "2010",
+      "releaseSequence": 3424,
+      "genres": [
+        "Crime",
+        "Horror",
+        "Mystery"
+      ],
+      "slug": "saw-3d-2010",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2023-01-14",
+      "reviewSequence": 1566
+    },
+    {
+      "imdbId": "tt3348730",
+      "title": "Jigsaw",
+      "sortTitle": "jigsaw-2017",
+      "releaseYear": "2017",
+      "releaseSequence": 3641,
       "genres": [
         "Horror",
         "Mystery",
@@ -89,61 +139,11 @@
       "reviewSequence": null
     },
     {
-      "imdbId": "tt1132626",
-      "title": "Saw V",
-      "sortTitle": "saw-v-2008",
-      "releaseYear": "2008",
-      "releaseDate": "2008-10-23",
-      "genres": [
-        "Horror",
-        "Thriller"
-      ],
-      "slug": "saw-v-2008",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2022-08-12",
-      "reviewSequence": 2444
-    },
-    {
-      "imdbId": "tt1233227",
-      "title": "Saw VI",
-      "sortTitle": "saw-vi-2009",
-      "releaseYear": "2009",
-      "releaseDate": "2009-10-22",
-      "genres": [
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
-      "slug": "saw-vi-2009",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2022-09-10",
-      "reviewSequence": 2471
-    },
-    {
-      "imdbId": "tt1477076",
-      "title": "Saw 3D",
-      "sortTitle": "saw-3d-2010",
-      "releaseYear": "2010",
-      "releaseDate": "2010-10-22",
-      "genres": [
-        "Crime",
-        "Horror",
-        "Mystery"
-      ],
-      "slug": "saw-3d-2010",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2023-01-14",
-      "reviewSequence": 2559
-    },
-    {
-      "imdbId": "tt3348730",
-      "title": "Jigsaw",
-      "sortTitle": "jigsaw-2017",
-      "releaseYear": "2017",
-      "releaseDate": "2017-10-25",
+      "imdbId": "tt10342730",
+      "title": "Spiral",
+      "sortTitle": "spiral-2021",
+      "releaseYear": "2021",
+      "releaseSequence": 3718,
       "genres": [
         "Horror",
         "Mystery",

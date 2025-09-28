@@ -5,35 +5,11 @@
   "reviewCount": 3,
   "titles": [
     {
-      "imdbId": "tt0758774",
-      "title": "Body of Lies",
-      "sortTitle": "body-of-lies-2008",
-      "releaseYear": "2008",
-      "releaseDate": "2008-10-05",
-      "genres": [
-        "Action",
-        "Drama",
-        "Thriller"
-      ],
-      "slug": "body-of-lies-2008",
-      "grade": "B",
-      "gradeValue": 9,
-      "reviewDate": "2008-10-16",
-      "reviewSequence": 877,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0765429",
       "title": "American Gangster",
       "sortTitle": "american-gangster-2007",
       "releaseYear": "2007",
-      "releaseDate": "2007-10-19",
+      "releaseSequence": 3296,
       "genres": [
         "Biography",
         "Crime",
@@ -43,7 +19,31 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2007-12-06",
-      "reviewSequence": 483,
+      "reviewSequence": 352,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0758774",
+      "title": "Body of Lies",
+      "sortTitle": "body-of-lies-2008",
+      "releaseYear": "2008",
+      "releaseSequence": 3353,
+      "genres": [
+        "Action",
+        "Drama",
+        "Thriller"
+      ],
+      "slug": "body-of-lies-2008",
+      "grade": "B",
+      "gradeValue": 9,
+      "reviewDate": "2008-10-16",
+      "reviewSequence": 687,
       "creditedAs": [
         "director"
       ],
@@ -57,7 +57,7 @@
       "title": "Prometheus",
       "sortTitle": "prometheus-2012",
       "releaseYear": "2012",
-      "releaseDate": "2012-04-11",
+      "releaseSequence": 3471,
       "genres": [
         "Adventure",
         "Mystery",
@@ -67,7 +67,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2012-06-21",
-      "reviewSequence": 1317,
+      "reviewSequence": 995,
       "creditedAs": [
         "director"
       ],

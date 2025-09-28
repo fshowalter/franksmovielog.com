@@ -9,7 +9,7 @@
       "title": "The Dawn Patrol",
       "sortTitle": "dawn-patrol-1930",
       "releaseYear": "1930",
-      "releaseDate": "1930-07-10",
+      "releaseSequence": 24,
       "genres": [
         "Action",
         "Drama",
@@ -19,7 +19,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2020-09-13",
-      "reviewSequence": 1994,
+      "reviewSequence": 1086,
       "creditedAs": [
         "director",
         "writer"
@@ -34,7 +34,7 @@
       "title": "The Criminal Code",
       "sortTitle": "criminal-code-1931",
       "releaseYear": "1931",
-      "releaseDate": "1931-01-01",
+      "releaseSequence": 36,
       "genres": [
         "Crime",
         "Drama",
@@ -44,7 +44,33 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2020-11-18",
-      "reviewSequence": 2044,
+      "reviewSequence": 1132,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0023427",
+      "title": "Scarface",
+      "sortTitle": "scarface-1932",
+      "releaseYear": "1932",
+      "releaseSequence": 87,
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Thriller"
+      ],
+      "slug": "scarface-1932",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2021-12-20",
+      "reviewSequence": 1415,
       "creditedAs": [
         "director"
       ],
@@ -58,7 +84,7 @@
       "title": "The Crowd Roars",
       "sortTitle": "crowd-roars-1932",
       "releaseYear": "1932",
-      "releaseDate": "1932-04-13",
+      "releaseSequence": 90,
       "genres": [
         "Action",
         "Drama",
@@ -68,36 +94,10 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2021-12-22",
-      "reviewSequence": 2344,
+      "reviewSequence": 1417,
       "creditedAs": [
         "director",
         "writer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0023427",
-      "title": "Scarface",
-      "sortTitle": "scarface-1932",
-      "releaseYear": "1932",
-      "releaseDate": "1932-03-31",
-      "genres": [
-        "Action",
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Thriller"
-      ],
-      "slug": "scarface-1932",
-      "grade": "B-",
-      "gradeValue": 8,
-      "reviewDate": "2021-12-20",
-      "reviewSequence": 2342,
-      "creditedAs": [
-        "director"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -109,7 +109,7 @@
       "title": "Tiger Shark",
       "sortTitle": "tiger-shark-1932",
       "releaseYear": "1932",
-      "releaseDate": "1932-09-22",
+      "releaseSequence": 108,
       "genres": [
         "Drama",
         "Romance"
@@ -135,7 +135,7 @@
       "title": "Today We Live",
       "sortTitle": "today-we-live-1933",
       "releaseYear": "1933",
-      "releaseDate": "1933-03-03",
+      "releaseSequence": 127,
       "genres": [
         "Drama",
         "Romance",
@@ -145,7 +145,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2009-03-25",
-      "reviewSequence": 1089,
+      "reviewSequence": 872,
       "creditedAs": [
         "director"
       ],
@@ -159,7 +159,7 @@
       "title": "Twentieth Century",
       "sortTitle": "twentieth-century-1934",
       "releaseYear": "1934",
-      "releaseDate": "1934-05-03",
+      "releaseSequence": 164,
       "genres": [
         "Comedy",
         "Romance"
@@ -168,7 +168,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2008-12-27",
-      "reviewSequence": 981,
+      "reviewSequence": 780,
       "creditedAs": [
         "director"
       ],
@@ -182,7 +182,7 @@
       "title": "Barbary Coast",
       "sortTitle": "barbary-coast-1935",
       "releaseYear": "1935",
-      "releaseDate": "1935-10-13",
+      "releaseSequence": 216,
       "genres": [
         "Adventure",
         "Drama",
@@ -209,11 +209,36 @@
       "title": "Ceiling Zero",
       "sortTitle": "ceiling-zero-1936",
       "releaseYear": "1936",
-      "releaseDate": "1936-01-16",
+      "releaseSequence": 228,
       "genres": [
         "Adventure",
         "Drama",
         "Romance"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Howard Hawks"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0028191",
+      "title": "The Road to Glory",
+      "sortTitle": "road-to-glory-1936",
+      "releaseYear": "1936",
+      "releaseSequence": 246,
+      "genres": [
+        "Drama",
+        "War"
       ],
       "slug": null,
       "grade": null,
@@ -235,7 +260,7 @@
       "title": "Come and Get It",
       "sortTitle": "come-and-get-it-1936",
       "releaseYear": "1936",
-      "releaseDate": "1936-11-06",
+      "releaseSequence": 263,
       "genres": [
         "Drama",
         "Romance"
@@ -244,7 +269,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2009-01-17",
-      "reviewSequence": 1017,
+      "reviewSequence": 809,
       "creditedAs": [
         "director"
       ],
@@ -254,36 +279,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0028191",
-      "title": "The Road to Glory",
-      "sortTitle": "road-to-glory-1936",
-      "releaseYear": "1936",
-      "releaseDate": "1936-06-02",
-      "genres": [
-        "Drama",
-        "War"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Howard Hawks"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0029947",
       "title": "Bringing Up Baby",
       "sortTitle": "bringing-up-baby-1938",
       "releaseYear": "1938",
-      "releaseDate": "1938-??-??",
+      "releaseSequence": 335,
       "genres": [
         "Comedy"
       ],
@@ -291,7 +291,7 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2008-02-27",
-      "reviewSequence": 612,
+      "reviewSequence": 461,
       "creditedAs": [
         "director"
       ],
@@ -305,7 +305,7 @@
       "title": "Only Angels Have Wings",
       "sortTitle": "only-angels-have-wings-1939",
       "releaseYear": "1939",
-      "releaseDate": "1939-05-12",
+      "releaseSequence": 350,
       "genres": [
         "Adventure",
         "Drama",
@@ -315,7 +315,7 @@
       "grade": "A-",
       "gradeValue": 11,
       "reviewDate": "2025-06-15",
-      "reviewSequence": 2900,
+      "reviewSequence": 1789,
       "creditedAs": [
         "director"
       ],
@@ -329,7 +329,7 @@
       "title": "His Girl Friday",
       "sortTitle": "his-girl-friday-1940",
       "releaseYear": "1940",
-      "releaseDate": "1940-01-11",
+      "releaseSequence": 379,
       "genres": [
         "Comedy",
         "Drama",
@@ -339,7 +339,33 @@
       "grade": "A",
       "gradeValue": 12,
       "reviewDate": "2007-07-09",
-      "reviewSequence": 252,
+      "reviewSequence": 155,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0034167",
+      "title": "Sergeant York",
+      "sortTitle": "sergeant-york-1941",
+      "releaseYear": "1941",
+      "releaseSequence": 441,
+      "genres": [
+        "Biography",
+        "Drama",
+        "History",
+        "Romance",
+        "War"
+      ],
+      "slug": "sergeant-york-1941",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2008-04-21",
+      "reviewSequence": 527,
       "creditedAs": [
         "director"
       ],
@@ -353,7 +379,7 @@
       "title": "Ball of Fire",
       "sortTitle": "ball-of-fire-1941",
       "releaseYear": "1941",
-      "releaseDate": "1941-12-30",
+      "releaseSequence": 453,
       "genres": [
         "Comedy",
         "Romance"
@@ -374,37 +400,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0034167",
-      "title": "Sergeant York",
-      "sortTitle": "sergeant-york-1941",
-      "releaseYear": "1941",
-      "releaseDate": "1941-07-02",
-      "genres": [
-        "Biography",
-        "Drama",
-        "History",
-        "Romance",
-        "War"
-      ],
-      "slug": "sergeant-york-1941",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2008-04-21",
-      "reviewSequence": 689,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0035616",
       "title": "Air Force",
       "sortTitle": "air-force-1943",
       "releaseYear": "1943",
-      "releaseDate": "1943-02-03",
+      "releaseSequence": 491,
       "genres": [
         "Action",
         "Drama",
@@ -415,7 +415,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2007-09-30",
-      "reviewSequence": 387,
+      "reviewSequence": 266,
       "creditedAs": [
         "director"
       ],
@@ -429,7 +429,7 @@
       "title": "To Have and Have Not",
       "sortTitle": "to-have-and-have-not-1944",
       "releaseYear": "1944",
-      "releaseDate": "1944-10-11",
+      "releaseSequence": 552,
       "genres": [
         "Adventure",
         "Comedy",
@@ -443,7 +443,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2007-12-06",
-      "reviewSequence": 482,
+      "reviewSequence": 351,
       "creditedAs": [
         "director"
       ],
@@ -457,7 +457,7 @@
       "title": "The Big Sleep",
       "sortTitle": "big-sleep-1946",
       "releaseYear": "1946",
-      "releaseDate": "1946-08-22",
+      "releaseSequence": 600,
       "genres": [
         "Crime",
         "Drama",
@@ -469,7 +469,7 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2012-04-28",
-      "reviewSequence": 1297,
+      "reviewSequence": 979,
       "creditedAs": [
         "director"
       ],
@@ -483,7 +483,7 @@
       "title": "Red River",
       "sortTitle": "red-river-1948",
       "releaseYear": "1948",
-      "releaseDate": "1948-08-25",
+      "releaseSequence": 673,
       "genres": [
         "Drama",
         "Western"
@@ -492,7 +492,7 @@
       "grade": "A-",
       "gradeValue": 11,
       "reviewDate": "2025-06-15",
-      "reviewSequence": 2901,
+      "reviewSequence": 1790,
       "creditedAs": [
         "director"
       ],
@@ -506,7 +506,7 @@
       "title": "A Song Is Born",
       "sortTitle": "song-is-born-1948",
       "releaseYear": "1948",
-      "releaseDate": "1948-10-19",
+      "releaseSequence": 678,
       "genres": [
         "Comedy",
         "Music",
@@ -517,7 +517,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2008-04-18",
-      "reviewSequence": 678,
+      "reviewSequence": 516,
       "creditedAs": [
         "director"
       ],
@@ -531,7 +531,7 @@
       "title": "I Was a Male War Bride",
       "sortTitle": "i-was-a-male-war-bride-1949",
       "releaseYear": "1949",
-      "releaseDate": "1949-08-19",
+      "releaseSequence": 705,
       "genres": [
         "Comedy",
         "Romance",
@@ -541,7 +541,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2008-08-16",
-      "reviewSequence": 819,
+      "reviewSequence": 638,
       "creditedAs": [
         "director"
       ],
@@ -555,7 +555,7 @@
       "title": "The Big Sky",
       "sortTitle": "big-sky-1952",
       "releaseYear": "1952",
-      "releaseDate": "1952-07-29",
+      "releaseSequence": 802,
       "genres": [
         "Adventure",
         "Drama",
@@ -565,30 +565,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2008-10-20",
-      "reviewSequence": 881,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0044916",
-      "title": "Monkey Business",
-      "sortTitle": "monkey-business-1952",
-      "releaseYear": "1952",
-      "releaseDate": "1952-08-29",
-      "genres": [
-        "Comedy",
-        "Sci-Fi"
-      ],
-      "slug": "monkey-business-1952",
-      "grade": "C-",
-      "gradeValue": 5,
-      "reviewDate": "2008-07-11",
-      "reviewSequence": 779,
+      "reviewSequence": 691,
       "creditedAs": [
         "director"
       ],
@@ -602,7 +579,7 @@
       "title": "O. Henry's Full House",
       "sortTitle": "o-henrys-full-house-1952",
       "releaseYear": "1952",
-      "releaseDate": "1952-08-07",
+      "releaseSequence": 805,
       "genres": [
         "Comedy",
         "Drama"
@@ -623,11 +600,34 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0044916",
+      "title": "Monkey Business",
+      "sortTitle": "monkey-business-1952",
+      "releaseYear": "1952",
+      "releaseSequence": 808,
+      "genres": [
+        "Comedy",
+        "Sci-Fi"
+      ],
+      "slug": "monkey-business-1952",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2008-07-11",
+      "reviewSequence": 604,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0045810",
       "title": "Gentlemen Prefer Blondes",
       "sortTitle": "gentlemen-prefer-blondes-1953",
       "releaseYear": "1953",
-      "releaseDate": "1953-07-01",
+      "releaseSequence": 846,
       "genres": [
         "Comedy",
         "Musical",
@@ -637,7 +637,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2008-09-05",
-      "reviewSequence": 829,
+      "reviewSequence": 645,
       "creditedAs": [
         "director"
       ],
@@ -651,7 +651,7 @@
       "title": "Land of the Pharaohs",
       "sortTitle": "land-of-the-pharaohs-1955",
       "releaseYear": "1955",
-      "releaseDate": "1955-06-24",
+      "releaseSequence": 919,
       "genres": [
         "Adventure",
         "Drama",
@@ -677,7 +677,7 @@
       "title": "Rio Bravo",
       "sortTitle": "rio-bravo-1959",
       "releaseYear": "1959",
-      "releaseDate": "1959-03-08",
+      "releaseSequence": 1098,
       "genres": [
         "Western"
       ],
@@ -685,7 +685,7 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2025-03-22",
-      "reviewSequence": 2861,
+      "reviewSequence": 1754,
       "creditedAs": [
         "director"
       ],
@@ -699,7 +699,7 @@
       "title": "Hatari!",
       "sortTitle": "hatari-1962",
       "releaseYear": "1962",
-      "releaseDate": "1962-06-19",
+      "releaseSequence": 1247,
       "genres": [
         "Action",
         "Adventure",
@@ -731,7 +731,7 @@
       "title": "Man's Favorite Sport?",
       "sortTitle": "mans-favorite-sport-1964",
       "releaseYear": "1964",
-      "releaseDate": "1964-01-30",
+      "releaseSequence": 1318,
       "genres": [
         "Comedy",
         "Romance"
@@ -756,7 +756,7 @@
       "title": "Red Line 7000",
       "sortTitle": "red-line-7000-1965",
       "releaseYear": "1965",
-      "releaseDate": "1965-11-09",
+      "releaseSequence": 1400,
       "genres": [
         "Action",
         "Drama",
@@ -783,7 +783,7 @@
       "title": "El Dorado",
       "sortTitle": "el-dorado-1966",
       "releaseYear": "1966",
-      "releaseDate": "1966-12-17",
+      "releaseSequence": 1454,
       "genres": [
         "Drama",
         "Romance",
@@ -793,7 +793,7 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2008-07-16",
-      "reviewSequence": 787,
+      "reviewSequence": 611,
       "creditedAs": [
         "director"
       ],
@@ -807,7 +807,7 @@
       "title": "Rio Lobo",
       "sortTitle": "rio-lobo-1970",
       "releaseYear": "1970",
-      "releaseDate": "1970-12-16",
+      "releaseSequence": 1680,
       "genres": [
         "Drama",
         "War",
@@ -817,7 +817,7 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2007-07-25",
-      "reviewSequence": 278,
+      "reviewSequence": 177,
       "creditedAs": [
         "director"
       ],

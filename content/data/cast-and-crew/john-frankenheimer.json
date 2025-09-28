@@ -9,7 +9,7 @@
       "title": "The Young Stranger",
       "sortTitle": "young-stranger-1957",
       "releaseYear": "1957",
-      "releaseDate": "1957-02-01",
+      "releaseSequence": 993,
       "genres": [
         "Drama"
       ],
@@ -17,7 +17,7 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2021-03-05",
-      "reviewSequence": 2164,
+      "reviewSequence": 1247,
       "creditedAs": [
         "director"
       ],
@@ -31,7 +31,7 @@
       "title": "The Young Savages",
       "sortTitle": "young-savages-1961",
       "releaseYear": "1961",
-      "releaseDate": "1961-05-23",
+      "releaseSequence": 1195,
       "genres": [
         "Action",
         "Crime",
@@ -42,7 +42,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2023-03-21",
-      "reviewSequence": 2578,
+      "reviewSequence": 1581,
       "creditedAs": [
         "director"
       ],
@@ -56,7 +56,7 @@
       "title": "All Fall Down",
       "sortTitle": "all-fall-down-1962",
       "releaseYear": "1962",
-      "releaseDate": "1962-03-28",
+      "releaseSequence": 1235,
       "genres": [
         "Drama"
       ],
@@ -80,7 +80,7 @@
       "title": "Birdman of Alcatraz",
       "sortTitle": "birdman-of-alcatraz-1962",
       "releaseYear": "1962",
-      "releaseDate": "1962-07-03",
+      "releaseSequence": 1249,
       "genres": [
         "Biography",
         "Crime",
@@ -106,7 +106,7 @@
       "title": "The Manchurian Candidate",
       "sortTitle": "manchurian-candidate-1962",
       "releaseYear": "1962",
-      "releaseDate": "1962-10-24",
+      "releaseSequence": 1257,
       "genres": [
         "Drama",
         "Thriller"
@@ -115,7 +115,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2008-10-27",
-      "reviewSequence": 890,
+      "reviewSequence": 700,
       "creditedAs": [
         "director"
       ],
@@ -129,7 +129,7 @@
       "title": "Seven Days in May",
       "sortTitle": "seven-days-in-may-1964",
       "releaseYear": "1964",
-      "releaseDate": "1964-02-12",
+      "releaseSequence": 1319,
       "genres": [
         "Drama",
         "Thriller"
@@ -154,35 +154,10 @@
       "title": "The Train",
       "sortTitle": "train-1964",
       "releaseYear": "1964",
-      "releaseDate": "1964-09-23",
+      "releaseSequence": 1350,
       "genres": [
         "Thriller",
         "War"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "John Frankenheimer"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0060472",
-      "title": "Grand Prix",
-      "sortTitle": "grand-prix-1966",
-      "releaseYear": "1966",
-      "releaseDate": "1966-12-21",
-      "genres": [
-        "Drama",
-        "Sport"
       ],
       "slug": null,
       "grade": null,
@@ -204,10 +179,35 @@
       "title": "Seconds",
       "sortTitle": "seconds-1966",
       "releaseYear": "1966",
-      "releaseDate": "1966-05-16",
+      "releaseSequence": 1420,
       "genres": [
         "Sci-Fi",
         "Thriller"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "John Frankenheimer"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0060472",
+      "title": "Grand Prix",
+      "sortTitle": "grand-prix-1966",
+      "releaseYear": "1966",
+      "releaseSequence": 1458,
+      "genres": [
+        "Drama",
+        "Sport"
       ],
       "slug": null,
       "grade": null,
@@ -229,7 +229,7 @@
       "title": "The Fixer",
       "sortTitle": "fixer-1968",
       "releaseYear": "1968",
-      "releaseDate": "1968-12-08",
+      "releaseSequence": 1560,
       "genres": [
         "Drama"
       ],
@@ -253,7 +253,7 @@
       "title": "The Extraordinary Seaman",
       "sortTitle": "extraordinary-seaman-1969",
       "releaseYear": "1969",
-      "releaseDate": "1969-01-01",
+      "releaseSequence": 1575,
       "genres": [
         "Adventure",
         "Comedy",
@@ -279,7 +279,7 @@
       "title": "The Gypsy Moths",
       "sortTitle": "gypsy-moths-1969",
       "releaseYear": "1969",
-      "releaseDate": "1969-08-28",
+      "releaseSequence": 1606,
       "genres": [
         "Action",
         "Drama",
@@ -305,7 +305,7 @@
       "title": "I Walk the Line",
       "sortTitle": "i-walk-the-line-1970",
       "releaseYear": "1970",
-      "releaseDate": "1970-10-12",
+      "releaseSequence": 1670,
       "genres": [
         "Drama"
       ],
@@ -329,7 +329,7 @@
       "title": "The Horsemen",
       "sortTitle": "horsemen-1971",
       "releaseYear": "1971",
-      "releaseDate": "1971-07-22",
+      "releaseSequence": 1726,
       "genres": [
         "Action",
         "Adventure",
@@ -351,37 +351,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0070212",
-      "title": "The Iceman Cometh",
-      "sortTitle": "iceman-cometh-1973",
-      "releaseYear": "1973",
-      "releaseDate": "1973-10-29",
-      "genres": [
-        "Drama"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "John Frankenheimer"
-      ],
-      "watchlistPerformerNames": [
-        "Lee Marvin"
-      ],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0070739",
       "title": "Story of a Love Story",
       "sortTitle": "story-of-a-love-story-1973",
       "releaseYear": "1973",
-      "releaseDate": "1973-05-01",
+      "releaseSequence": 1850,
       "genres": [
         "Drama",
         "Fantasy",
@@ -403,11 +377,37 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0070212",
+      "title": "The Iceman Cometh",
+      "sortTitle": "iceman-cometh-1973",
+      "releaseYear": "1973",
+      "releaseSequence": 1875,
+      "genres": [
+        "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "John Frankenheimer"
+      ],
+      "watchlistPerformerNames": [
+        "Lee Marvin"
+      ],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0071089",
       "title": "99 and 44/100% Dead!",
       "sortTitle": "99-and-44-100-dead-1974",
       "releaseYear": "1974",
-      "releaseDate": "1974-08-29",
+      "releaseSequence": 1940,
       "genres": [
         "Action",
         "Adventure",
@@ -434,7 +434,7 @@
       "title": "French Connection II",
       "sortTitle": "french-connection-ii-1975",
       "releaseYear": "1975",
-      "releaseDate": "1975-05-18",
+      "releaseSequence": 1987,
       "genres": [
         "Action",
         "Crime",
@@ -461,7 +461,7 @@
       "title": "Black Sunday",
       "sortTitle": "black-sunday-1977",
       "releaseYear": "1977",
-      "releaseDate": "1977-??-??",
+      "releaseSequence": 2119,
       "genres": [
         "Adventure",
         "Crime",
@@ -488,7 +488,7 @@
       "title": "Prophecy",
       "sortTitle": "prophecy-1979",
       "releaseYear": "1979",
-      "releaseDate": "1979-06-15",
+      "releaseSequence": 2202,
       "genres": [
         "Horror",
         "Sci-Fi",
@@ -514,7 +514,7 @@
       "title": "The Challenge",
       "sortTitle": "challenge-1982",
       "releaseYear": "1982",
-      "releaseDate": "1982-01-25",
+      "releaseSequence": 2365,
       "genres": [
         "Action",
         "Drama"
@@ -539,7 +539,7 @@
       "title": "The Holcroft Covenant",
       "sortTitle": "holcroft-covenant-1985",
       "releaseYear": "1985",
-      "releaseDate": "1985-07-06",
+      "releaseSequence": 2535,
       "genres": [
         "Action",
         "Crime",
@@ -566,7 +566,7 @@
       "title": "52 Pick-Up",
       "sortTitle": "52-pick-up-1986",
       "releaseYear": "1986",
-      "releaseDate": "1986-11-07",
+      "releaseSequence": 2599,
       "genres": [
         "Crime",
         "Drama",
@@ -592,7 +592,7 @@
       "title": "Dead Bang",
       "sortTitle": "dead-bang-1989",
       "releaseYear": "1989",
-      "releaseDate": "1989-03-24",
+      "releaseSequence": 2700,
       "genres": [
         "Action",
         "Crime",
@@ -619,7 +619,7 @@
       "title": "The Fourth War",
       "sortTitle": "fourth-war-1990",
       "releaseYear": "1990",
-      "releaseDate": "1990-01-12",
+      "releaseSequence": 2735,
       "genres": [
         "Drama",
         "Thriller"
@@ -644,7 +644,7 @@
       "title": "Year of the Gun",
       "sortTitle": "year-of-the-gun-1991",
       "releaseYear": "1991",
-      "releaseDate": "1991-09-10",
+      "releaseSequence": 2792,
       "genres": [
         "Action",
         "Romance",
@@ -670,7 +670,7 @@
       "title": "Against the Wall",
       "sortTitle": "against-the-wall-1994",
       "releaseYear": "1994",
-      "releaseDate": "1994-03-26",
+      "releaseSequence": 2867,
       "genres": [
         "Action",
         "Drama",
@@ -697,7 +697,7 @@
       "title": "The Burning Season: The Chico Mendes Story",
       "sortTitle": "burning-season-the-chico-mendes-story-1994",
       "releaseYear": "1994",
-      "releaseDate": "1994-09-16",
+      "releaseSequence": 2881,
       "genres": [
         "Biography",
         "Drama"
@@ -722,7 +722,7 @@
       "title": "The Island of Dr. Moreau",
       "sortTitle": "island-of-dr-moreau-1996",
       "releaseYear": "1996",
-      "releaseDate": "1996-08-23",
+      "releaseSequence": 2935,
       "genres": [
         "Horror",
         "Sci-Fi",
@@ -748,7 +748,7 @@
       "title": "Ronin",
       "sortTitle": "ronin-1998",
       "releaseYear": "1998",
-      "releaseDate": "1998-??-??",
+      "releaseSequence": 3005,
       "genres": [
         "Action",
         "Crime",
@@ -774,7 +774,7 @@
       "title": "Reindeer Games",
       "sortTitle": "reindeer-games-2000",
       "releaseYear": "2000",
-      "releaseDate": "2000-??-??",
+      "releaseSequence": 3054,
       "genres": [
         "Action",
         "Crime",
@@ -800,7 +800,7 @@
       "title": "Path to War",
       "sortTitle": "path-to-war-2002",
       "releaseYear": "2002",
-      "releaseDate": "2002-05-18",
+      "releaseSequence": 3099,
       "genres": [
         "Biography",
         "Drama",
