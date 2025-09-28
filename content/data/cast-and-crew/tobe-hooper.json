@@ -5,35 +5,11 @@
   "reviewCount": 3,
   "titles": [
     {
-      "imdbId": "tt0404011",
-      "title": "Eggshells",
-      "sortTitle": "eggshells-1969",
-      "releaseYear": "1969",
-      "releaseSequence": 1627,
-      "genres": [
-        "Drama",
-        "Fantasy"
-      ],
-      "slug": "eggshells-1969",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2023-10-10",
-      "reviewSequence": 1658,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0072271",
       "title": "The Texas Chain Saw Massacre",
       "sortTitle": "texas-chain-saw-massacre-1974",
       "releaseYear": "1974",
-      "releaseSequence": 1945,
+      "releaseDate": "1974-10-01",
       "genres": [
         "Horror"
       ],
@@ -41,7 +17,7 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2007-10-28",
-      "reviewSequence": 309,
+      "reviewSequence": 438,
       "creditedAs": [
         "director",
         "writer"
@@ -56,7 +32,7 @@
       "title": "Eaten Alive",
       "sortTitle": "eaten-alive-1976",
       "releaseYear": "1976",
-      "releaseSequence": 2050,
+      "releaseDate": "1976-10-01",
       "genres": [
         "Horror",
         "Thriller"
@@ -65,7 +41,7 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2008-04-19",
-      "reviewSequence": 522,
+      "reviewSequence": 684,
       "creditedAs": [
         "director"
       ],
@@ -79,7 +55,7 @@
       "title": "The Funhouse",
       "sortTitle": "funhouse-1981",
       "releaseYear": "1981",
-      "releaseSequence": 2305,
+      "releaseDate": "1981-03-13",
       "genres": [
         "Horror"
       ],
@@ -103,7 +79,7 @@
       "title": "Poltergeist",
       "sortTitle": "poltergeist-1982",
       "releaseYear": "1982",
-      "releaseSequence": 2386,
+      "releaseDate": "1982-05-21",
       "genres": [
         "Horror",
         "Thriller"
@@ -128,7 +104,7 @@
       "title": "Lifeforce",
       "sortTitle": "lifeforce-1985",
       "releaseYear": "1985",
-      "releaseSequence": 2532,
+      "releaseDate": "1985-06-21",
       "genres": [
         "Action",
         "Horror",
@@ -157,7 +133,7 @@
       "title": "Invaders from Mars",
       "sortTitle": "invaders-from-mars-1986",
       "releaseYear": "1986",
-      "releaseSequence": 2577,
+      "releaseDate": "1986-06-06",
       "genres": [
         "Horror",
         "Sci-Fi"
@@ -182,7 +158,7 @@
       "title": "The Texas Chainsaw Massacre 2",
       "sortTitle": "texas-chainsaw-massacre-2-1986",
       "releaseYear": "1986",
-      "releaseSequence": 2591,
+      "releaseDate": "1986-08-22",
       "genres": [
         "Comedy",
         "Horror"
@@ -208,7 +184,7 @@
       "title": "Spontaneous Combustion",
       "sortTitle": "spontaneous-combustion-1989",
       "releaseYear": "1989",
-      "releaseSequence": 2704,
+      "releaseDate": "1989-05-01",
       "genres": [
         "Horror",
         "Sci-Fi",
@@ -236,34 +212,10 @@
       "title": "I'm Dangerous Tonight",
       "sortTitle": "im-dangerous-tonight-1990",
       "releaseYear": "1990",
-      "releaseSequence": 2762,
+      "releaseDate": "1990-08-08",
       "genres": [
         "Horror",
         "Thriller"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Tobe Hooper"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0108350",
-      "title": "Night Terrors",
-      "sortTitle": "night-terrors-1993",
-      "releaseYear": "1993",
-      "releaseSequence": 2842,
-      "genres": [
-        "Horror"
       ],
       "slug": null,
       "grade": null,
@@ -285,7 +237,7 @@
       "title": "Body Bags",
       "sortTitle": "body-bags-1993",
       "releaseYear": "1993",
-      "releaseSequence": 2848,
+      "releaseDate": "1993-08-08",
       "genres": [
         "Comedy",
         "Horror",
@@ -309,11 +261,35 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0108350",
+      "title": "Night Terrors",
+      "sortTitle": "night-terrors-1993",
+      "releaseYear": "1993",
+      "releaseDate": "1993-05-30",
+      "genres": [
+        "Horror"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Tobe Hooper"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0113762",
       "title": "The Mangler",
       "sortTitle": "mangler-1995",
       "releaseYear": "1995",
-      "releaseSequence": 2915,
+      "releaseDate": "1995-??-??",
       "genres": [
         "Drama",
         "Horror",
@@ -340,7 +316,7 @@
       "title": "The Apartment Complex",
       "sortTitle": "apartment-complex-1999",
       "releaseYear": "1999",
-      "releaseSequence": 3022,
+      "releaseDate": "1999-10-31",
       "genres": [
         "Comedy",
         "Mystery",
@@ -366,7 +342,7 @@
       "title": "Crocodile",
       "sortTitle": "crocodile-2000",
       "releaseYear": "2000",
-      "releaseSequence": 3040,
+      "releaseDate": "2000-07-05",
       "genres": [
         "Action",
         "Adventure",
@@ -394,7 +370,7 @@
       "title": "Shadow Realm",
       "sortTitle": "shadow-realm-2002",
       "releaseYear": "2002",
-      "releaseSequence": 3107,
+      "releaseDate": "2002-07-27",
       "genres": [
         "Crime",
         "Drama",
@@ -423,7 +399,7 @@
       "title": "Toolbox Murders",
       "sortTitle": "toolbox-murders-2004",
       "releaseYear": "2004",
-      "releaseSequence": 3168,
+      "releaseDate": "2004-03-19",
       "genres": [
         "Drama",
         "Horror",
@@ -446,11 +422,35 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0404011",
+      "title": "Eggshells",
+      "sortTitle": "eggshells-1969",
+      "releaseYear": "1969",
+      "releaseDate": "1969-??-??",
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "slug": "eggshells-1969",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2023-10-10",
+      "reviewSequence": 2660,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0415167",
       "title": "Mortuary",
       "sortTitle": "mortuary-2005",
       "releaseYear": "2005",
-      "releaseSequence": 3218,
+      "releaseDate": "2005-??-??",
       "genres": [
         "Horror",
         "Mystery",
@@ -476,7 +476,7 @@
       "title": "Djinn",
       "sortTitle": "djinn-2013",
       "releaseYear": "2013",
-      "releaseSequence": 3538,
+      "releaseDate": "2013-10-30",
       "genres": [
         "Horror",
         "Thriller"

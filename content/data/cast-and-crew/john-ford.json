@@ -9,7 +9,7 @@
       "title": "The Black Watch",
       "sortTitle": "black-watch-1929",
       "releaseYear": "1929",
-      "releaseSequence": 2,
+      "releaseDate": "1929-05-08",
       "genres": [
         "Adventure",
         "Drama"
@@ -18,7 +18,31 @@
       "grade": "F",
       "gradeValue": 1,
       "reviewDate": "2020-07-12",
-      "reviewSequence": 1057,
+      "reviewSequence": 1965,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0020702",
+      "title": "Born Reckless",
+      "sortTitle": "born-reckless-1930",
+      "releaseYear": "1930",
+      "releaseDate": "1930-05-11",
+      "genres": [
+        "Crime",
+        "Drama",
+        "War"
+      ],
+      "slug": "born-reckless-1930",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2020-09-11",
+      "reviewSequence": 1992,
       "creditedAs": [
         "director"
       ],
@@ -32,7 +56,7 @@
       "title": "Men Without Women",
       "sortTitle": "men-without-women-1930",
       "releaseYear": "1930",
-      "releaseSequence": 15,
+      "releaseDate": "1930-01-31",
       "genres": [
         "Action",
         "Drama"
@@ -41,34 +65,10 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2020-09-11",
-      "reviewSequence": 1085,
+      "reviewSequence": 1993,
       "creditedAs": [
         "director",
         "writer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0020702",
-      "title": "Born Reckless",
-      "sortTitle": "born-reckless-1930",
-      "releaseYear": "1930",
-      "releaseSequence": 20,
-      "genres": [
-        "Crime",
-        "Drama",
-        "War"
-      ],
-      "slug": "born-reckless-1930",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2020-09-11",
-      "reviewSequence": 1084,
-      "creditedAs": [
-        "director"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -80,7 +80,7 @@
       "title": "Up the River",
       "sortTitle": "up-the-river-1930",
       "releaseYear": "1930",
-      "releaseSequence": 29,
+      "releaseDate": "1930-10-10",
       "genres": [
         "Comedy",
         "Crime",
@@ -90,53 +90,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2020-11-06",
-      "reviewSequence": 1125,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0022353",
-      "title": "The Seas Beneath",
-      "sortTitle": "seas-beneath-1931",
-      "releaseYear": "1931",
-      "releaseSequence": 37,
-      "genres": [
-        "Action",
-        "Drama",
-        "War"
-      ],
-      "slug": "the-seas-beneath-1931",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2021-01-07",
-      "reviewSequence": 1185,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0021695",
-      "title": "The Brat",
-      "sortTitle": "brat-1931",
-      "releaseYear": "1931",
-      "releaseSequence": 59,
-      "genres": [
-        "Comedy"
-      ],
-      "slug": "the-brat-1931",
-      "grade": "D-",
-      "gradeValue": 2,
-      "reviewDate": "2022-07-29",
-      "reviewSequence": 1500,
+      "reviewSequence": 2037,
       "creditedAs": [
         "director"
       ],
@@ -150,7 +104,7 @@
       "title": "Arrowsmith",
       "sortTitle": "arrowsmith-1931",
       "releaseYear": "1931",
-      "releaseSequence": 72,
+      "releaseDate": "1931-12-07",
       "genres": [
         "Drama"
       ],
@@ -158,7 +112,53 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2021-04-21",
-      "reviewSequence": 1296,
+      "reviewSequence": 2213,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0021695",
+      "title": "The Brat",
+      "sortTitle": "brat-1931",
+      "releaseYear": "1931",
+      "releaseDate": "1931-08-23",
+      "genres": [
+        "Comedy"
+      ],
+      "slug": "the-brat-1931",
+      "grade": "D-",
+      "gradeValue": 2,
+      "reviewDate": "2022-07-29",
+      "reviewSequence": 2433,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0022353",
+      "title": "The Seas Beneath",
+      "sortTitle": "seas-beneath-1931",
+      "releaseYear": "1931",
+      "releaseDate": "1931-01-30",
+      "genres": [
+        "Action",
+        "Drama",
+        "War"
+      ],
+      "slug": "the-seas-beneath-1931",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2021-01-07",
+      "reviewSequence": 2100,
       "creditedAs": [
         "director"
       ],
@@ -172,7 +172,7 @@
       "title": "Air Mail",
       "sortTitle": "air-mail-1932",
       "releaseYear": "1932",
-      "releaseSequence": 115,
+      "releaseDate": "1932-11-03",
       "genres": [
         "Adventure",
         "Drama"
@@ -193,33 +193,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0024453",
-      "title": "Pilgrimage",
-      "sortTitle": "pilgrimage-1933",
-      "releaseYear": "1933",
-      "releaseSequence": 141,
-      "genres": [
-        "Drama"
-      ],
-      "slug": "pilgrimage-1933",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2022-06-21",
-      "reviewSequence": 1484,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0023955",
       "title": "Doctor Bull",
       "sortTitle": "doctor-bull-1933",
       "releaseYear": "1933",
-      "releaseSequence": 146,
+      "releaseDate": "1933-09-01",
       "genres": [
         "Comedy",
         "Drama",
@@ -229,7 +207,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2022-06-29",
-      "reviewSequence": 1487,
+      "reviewSequence": 2420,
       "creditedAs": [
         "director"
       ],
@@ -239,47 +217,19 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0025423",
-      "title": "The Lost Patrol",
-      "sortTitle": "lost-patrol-1934",
-      "releaseYear": "1934",
-      "releaseSequence": 158,
+      "imdbId": "tt0024453",
+      "title": "Pilgrimage",
+      "sortTitle": "pilgrimage-1933",
+      "releaseYear": "1933",
+      "releaseDate": "1933-07-12",
       "genres": [
-        "Action",
-        "Adventure",
-        "Drama",
-        "War"
+        "Drama"
       ],
-      "slug": "the-lost-patrol-1934",
-      "grade": "B-",
-      "gradeValue": 8,
-      "reviewDate": "2008-10-23",
-      "reviewSequence": 692,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0026008",
-      "title": "The World Moves On",
-      "sortTitle": "world-moves-on-1934",
-      "releaseYear": "1934",
-      "releaseSequence": 174,
-      "genres": [
-        "Drama",
-        "History",
-        "Romance",
-        "War"
-      ],
-      "slug": "the-world-moves-on-1934",
-      "grade": "D-",
-      "gradeValue": 2,
-      "reviewDate": "2012-01-25",
-      "reviewSequence": 916,
+      "slug": "pilgrimage-1933",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2022-06-21",
+      "reviewSequence": 2417,
       "creditedAs": [
         "director"
       ],
@@ -293,7 +243,7 @@
       "title": "Judge Priest",
       "sortTitle": "judge-priest-1934",
       "releaseYear": "1934",
-      "releaseSequence": 182,
+      "releaseDate": "1934-09-15",
       "genres": [
         "Comedy",
         "Drama",
@@ -303,7 +253,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2008-04-19",
-      "reviewSequence": 520,
+      "reviewSequence": 682,
       "creditedAs": [
         "director"
       ],
@@ -313,21 +263,47 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0027214",
-      "title": "The Whole Town's Talking",
-      "sortTitle": "whole-towns-talking-1935",
-      "releaseYear": "1935",
-      "releaseSequence": 196,
+      "imdbId": "tt0025423",
+      "title": "The Lost Patrol",
+      "sortTitle": "lost-patrol-1934",
+      "releaseYear": "1934",
+      "releaseDate": "1934-02-16",
       "genres": [
-        "Comedy",
-        "Crime",
-        "Drama"
+        "Action",
+        "Adventure",
+        "Drama",
+        "War"
       ],
-      "slug": "the-whole-towns-talking-1935",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2009-02-19",
-      "reviewSequence": 846,
+      "slug": "the-lost-patrol-1934",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2008-10-23",
+      "reviewSequence": 882,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0026008",
+      "title": "The World Moves On",
+      "sortTitle": "world-moves-on-1934",
+      "releaseYear": "1934",
+      "releaseDate": "1934-06-27",
+      "genres": [
+        "Drama",
+        "History",
+        "Romance",
+        "War"
+      ],
+      "slug": "the-world-moves-on-1934",
+      "grade": "D-",
+      "gradeValue": 2,
+      "reviewDate": "2012-01-25",
+      "reviewSequence": 1153,
       "creditedAs": [
         "director"
       ],
@@ -341,7 +317,7 @@
       "title": "The Informer",
       "sortTitle": "informer-1935",
       "releaseYear": "1935",
-      "releaseSequence": 203,
+      "releaseDate": "1935-05-08",
       "genres": [
         "Crime",
         "Drama"
@@ -350,7 +326,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2008-05-17",
-      "reviewSequence": 552,
+      "reviewSequence": 715,
       "creditedAs": [
         "director"
       ],
@@ -364,7 +340,7 @@
       "title": "Steamboat Round the Bend",
       "sortTitle": "steamboat-round-the-bend-1935",
       "releaseYear": "1935",
-      "releaseSequence": 214,
+      "releaseDate": "1935-09-06",
       "genres": [
         "Comedy",
         "Drama",
@@ -374,7 +350,31 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2022-06-22",
-      "reviewSequence": 1485,
+      "reviewSequence": 2418,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0027214",
+      "title": "The Whole Town's Talking",
+      "sortTitle": "whole-towns-talking-1935",
+      "releaseYear": "1935",
+      "releaseDate": "1935-02-21",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "slug": "the-whole-towns-talking-1935",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2009-02-19",
+      "reviewSequence": 1058,
       "creditedAs": [
         "director"
       ],
@@ -388,7 +388,7 @@
       "title": "Mary of Scotland",
       "sortTitle": "mary-of-scotland-1936",
       "releaseYear": "1936",
-      "releaseSequence": 251,
+      "releaseDate": "1936-07-28",
       "genres": [
         "Biography",
         "Drama",
@@ -399,7 +399,7 @@
       "grade": "D-",
       "gradeValue": 2,
       "reviewDate": "2008-12-13",
-      "reviewSequence": 759,
+      "reviewSequence": 956,
       "creditedAs": [
         "director"
       ],
@@ -413,7 +413,7 @@
       "title": "The Plough and the Stars",
       "sortTitle": "plough-and-the-stars-1936",
       "releaseYear": "1936",
-      "releaseSequence": 269,
+      "releaseDate": "1936-12-26",
       "genres": [
         "Drama"
       ],
@@ -421,7 +421,7 @@
       "grade": "F",
       "gradeValue": 1,
       "reviewDate": "2022-06-27",
-      "reviewSequence": 1486,
+      "reviewSequence": 2419,
       "creditedAs": [
         "director"
       ],
@@ -435,7 +435,7 @@
       "title": "The Prisoner of Shark Island",
       "sortTitle": "prisoner-of-shark-island-1936",
       "releaseYear": "1936",
-      "releaseSequence": 271,
+      "releaseDate": "1936-??-??",
       "genres": [
         "Biography",
         "Drama",
@@ -445,30 +445,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2008-03-05",
-      "reviewSequence": 470,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0029751",
-      "title": "Wee Willie Winkie",
-      "sortTitle": "wee-willie-winkie-1937",
-      "releaseYear": "1937",
-      "releaseSequence": 286,
-      "genres": [
-        "Adventure",
-        "Family"
-      ],
-      "slug": "wee-willie-winkie-1937",
-      "grade": "D",
-      "gradeValue": 3,
-      "reviewDate": "2008-11-22",
-      "reviewSequence": 727,
+      "reviewSequence": 623,
       "creditedAs": [
         "director"
       ],
@@ -482,7 +459,7 @@
       "title": "The Hurricane",
       "sortTitle": "hurricane-1937",
       "releaseYear": "1937",
-      "releaseSequence": 300,
+      "releaseDate": "1937-11-05",
       "genres": [
         "Action",
         "Adventure",
@@ -493,7 +470,30 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2008-11-22",
-      "reviewSequence": 726,
+      "reviewSequence": 916,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0029751",
+      "title": "Wee Willie Winkie",
+      "sortTitle": "wee-willie-winkie-1937",
+      "releaseYear": "1937",
+      "releaseDate": "1937-06-25",
+      "genres": [
+        "Adventure",
+        "Family"
+      ],
+      "slug": "wee-willie-winkie-1937",
+      "grade": "D",
+      "gradeValue": 3,
+      "reviewDate": "2008-11-22",
+      "reviewSequence": 918,
       "creditedAs": [
         "director"
       ],
@@ -507,7 +507,7 @@
       "title": "Four Men and a Prayer",
       "sortTitle": "four-men-and-a-prayer-1938",
       "releaseYear": "1938",
-      "releaseSequence": 311,
+      "releaseDate": "1938-04-29",
       "genres": [
         "Adventure",
         "Mystery"
@@ -516,7 +516,7 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2008-03-05",
-      "reviewSequence": 472,
+      "reviewSequence": 626,
       "creditedAs": [
         "director"
       ],
@@ -530,7 +530,7 @@
       "title": "Submarine Patrol",
       "sortTitle": "submarine-patrol-1938",
       "releaseYear": "1938",
-      "releaseSequence": 329,
+      "releaseDate": "1938-11-09",
       "genres": [
         "Action",
         "Adventure",
@@ -554,34 +554,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0032155",
-      "title": "Young Mr. Lincoln",
-      "sortTitle": "young-mr-lincoln-1939",
-      "releaseYear": "1939",
-      "releaseSequence": 353,
-      "genres": [
-        "Biography",
-        "Drama"
-      ],
-      "slug": "young-mr-lincoln-1939",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2008-03-13",
-      "reviewSequence": 478,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0031252",
       "title": "Drums Along the Mohawk",
       "sortTitle": "drums-along-the-mohawk-1939",
       "releaseYear": "1939",
-      "releaseSequence": 367,
+      "releaseDate": "1939-11-02",
       "genres": [
         "Drama",
         "Romance",
@@ -592,7 +569,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2008-03-05",
-      "reviewSequence": 471,
+      "reviewSequence": 624,
       "creditedAs": [
         "director"
       ],
@@ -606,7 +583,7 @@
       "title": "Stagecoach",
       "sortTitle": "stagecoach-1939",
       "releaseYear": "1939",
-      "releaseSequence": 376,
+      "releaseDate": "1939-??-??",
       "genres": [
         "Adventure",
         "Drama",
@@ -616,7 +593,30 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2008-01-22",
-      "reviewSequence": 411,
+      "reviewSequence": 554,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0032155",
+      "title": "Young Mr. Lincoln",
+      "sortTitle": "young-mr-lincoln-1939",
+      "releaseYear": "1939",
+      "releaseDate": "1939-05-30",
+      "genres": [
+        "Biography",
+        "Drama"
+      ],
+      "slug": "young-mr-lincoln-1939",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2008-03-13",
+      "reviewSequence": 632,
       "creditedAs": [
         "director"
       ],
@@ -630,7 +630,7 @@
       "title": "The Grapes of Wrath",
       "sortTitle": "grapes-of-wrath-1940",
       "releaseYear": "1940",
-      "releaseSequence": 381,
+      "releaseDate": "1940-01-24",
       "genres": [
         "Drama"
       ],
@@ -638,7 +638,7 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2009-01-17",
-      "reviewSequence": 810,
+      "reviewSequence": 1018,
       "creditedAs": [
         "director"
       ],
@@ -652,7 +652,7 @@
       "title": "The Long Voyage Home",
       "sortTitle": "long-voyage-home-1940",
       "releaseYear": "1940",
-      "releaseSequence": 411,
+      "releaseDate": "1940-10-08",
       "genres": [
         "Drama",
         "War"
@@ -661,7 +661,30 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2008-05-18",
-      "reviewSequence": 553,
+      "reviewSequence": 719,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0033729",
+      "title": "How Green Was My Valley",
+      "sortTitle": "how-green-was-my-valley-1941",
+      "releaseYear": "1941",
+      "releaseDate": "1941-10-28",
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "slug": "how-green-was-my-valley-1941",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2008-03-13",
+      "reviewSequence": 631,
       "creditedAs": [
         "director"
       ],
@@ -675,7 +698,7 @@
       "title": "Tobacco Road",
       "sortTitle": "tobacco-road-1941",
       "releaseYear": "1941",
-      "releaseSequence": 428,
+      "releaseDate": "1941-02-20",
       "genres": [
         "Comedy",
         "Drama"
@@ -696,34 +719,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0033729",
-      "title": "How Green Was My Valley",
-      "sortTitle": "how-green-was-my-valley-1941",
-      "releaseYear": "1941",
-      "releaseSequence": 448,
-      "genres": [
-        "Drama",
-        "Family"
-      ],
-      "slug": "how-green-was-my-valley-1941",
-      "grade": "B-",
-      "gradeValue": 8,
-      "reviewDate": "2008-03-13",
-      "reviewSequence": 477,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0038160",
       "title": "They Were Expendable",
       "sortTitle": "they-were-expendable-1945",
       "releaseYear": "1945",
-      "releaseSequence": 585,
+      "releaseDate": "1945-12-07",
       "genres": [
         "Drama",
         "War"
@@ -732,7 +732,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2008-06-13",
-      "reviewSequence": 585,
+      "reviewSequence": 753,
       "creditedAs": [
         "director"
       ],
@@ -746,7 +746,7 @@
       "title": "My Darling Clementine",
       "sortTitle": "my-darling-clementine-1946",
       "releaseYear": "1946",
-      "releaseSequence": 603,
+      "releaseDate": "1946-10-16",
       "genres": [
         "Drama",
         "Romance",
@@ -756,7 +756,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2008-03-15",
-      "reviewSequence": 479,
+      "reviewSequence": 634,
       "creditedAs": [
         "director"
       ],
@@ -770,7 +770,7 @@
       "title": "The Fugitive",
       "sortTitle": "fugitive-1947",
       "releaseYear": "1947",
-      "releaseSequence": 641,
+      "releaseDate": "1947-11-11",
       "genres": [
         "Drama",
         "History"
@@ -791,20 +791,20 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0040369",
-      "title": "Fort Apache",
-      "sortTitle": "fort-apache-1948",
+      "imdbId": "tt0040064",
+      "title": "3 Godfathers",
+      "sortTitle": "3-godfathers-1948",
       "releaseYear": "1948",
-      "releaseSequence": 657,
+      "releaseDate": "1948-11-25",
       "genres": [
         "Drama",
         "Western"
       ],
-      "slug": "fort-apache-1948",
-      "grade": "B",
-      "gradeValue": 9,
-      "reviewDate": "2008-10-06",
-      "reviewSequence": 680,
+      "slug": "3-godfathers-1948",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2008-03-23",
+      "reviewSequence": 643,
       "creditedAs": [
         "director"
       ],
@@ -814,20 +814,20 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0040064",
-      "title": "3 Godfathers",
-      "sortTitle": "3-godfathers-1948",
+      "imdbId": "tt0040369",
+      "title": "Fort Apache",
+      "sortTitle": "fort-apache-1948",
       "releaseYear": "1948",
-      "releaseSequence": 683,
+      "releaseDate": "1948-03-27",
       "genres": [
         "Drama",
         "Western"
       ],
-      "slug": "3-godfathers-1948",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2008-03-23",
-      "reviewSequence": 488,
+      "slug": "fort-apache-1948",
+      "grade": "B",
+      "gradeValue": 9,
+      "reviewDate": "2008-10-06",
+      "reviewSequence": 869,
       "creditedAs": [
         "director"
       ],
@@ -841,7 +841,7 @@
       "title": "She Wore a Yellow Ribbon",
       "sortTitle": "she-wore-a-yellow-ribbon-1949",
       "releaseYear": "1949",
-      "releaseSequence": 703,
+      "releaseDate": "1949-07-26",
       "genres": [
         "Western"
       ],
@@ -849,53 +849,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2008-06-10",
-      "reviewSequence": 582,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0043129",
-      "title": "When Willie Comes Marching Home",
-      "sortTitle": "when-willie-comes-marching-home-1950",
-      "releaseYear": "1950",
-      "releaseSequence": 721,
-      "genres": [
-        "Comedy",
-        "War"
-      ],
-      "slug": "when-willie-comes-marching-home-1950",
-      "grade": "C-",
-      "gradeValue": 5,
-      "reviewDate": "2008-03-17",
-      "reviewSequence": 480,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0043117",
-      "title": "Wagon Master",
-      "sortTitle": "wagon-master-1950",
-      "releaseYear": "1950",
-      "releaseSequence": 732,
-      "genres": [
-        "Drama",
-        "Western"
-      ],
-      "slug": "wagon-master-1950",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2009-02-16",
-      "reviewSequence": 842,
+      "reviewSequence": 750,
       "creditedAs": [
         "director"
       ],
@@ -909,7 +863,7 @@
       "title": "Rio Grande",
       "sortTitle": "rio-grande-1950",
       "releaseYear": "1950",
-      "releaseSequence": 749,
+      "releaseDate": "1950-11-01",
       "genres": [
         "Drama",
         "Romance",
@@ -919,7 +873,53 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2008-05-19",
-      "reviewSequence": 554,
+      "reviewSequence": 720,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0043117",
+      "title": "Wagon Master",
+      "sortTitle": "wagon-master-1950",
+      "releaseYear": "1950",
+      "releaseDate": "1950-04-19",
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "slug": "wagon-master-1950",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2009-02-16",
+      "reviewSequence": 1054,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0043129",
+      "title": "When Willie Comes Marching Home",
+      "sortTitle": "when-willie-comes-marching-home-1950",
+      "releaseYear": "1950",
+      "releaseDate": "1950-02-01",
+      "genres": [
+        "Comedy",
+        "War"
+      ],
+      "slug": "when-willie-comes-marching-home-1950",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2008-03-17",
+      "reviewSequence": 636,
       "creditedAs": [
         "director"
       ],
@@ -933,7 +933,7 @@
       "title": "The Quiet Man",
       "sortTitle": "quiet-man-1952",
       "releaseYear": "1952",
-      "releaseSequence": 799,
+      "releaseDate": "1952-06-06",
       "genres": [
         "Comedy",
         "Drama",
@@ -943,7 +943,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2008-05-27",
-      "reviewSequence": 567,
+      "reviewSequence": 733,
       "creditedAs": [
         "director"
       ],
@@ -957,7 +957,7 @@
       "title": "What Price Glory",
       "sortTitle": "what-price-glory-1952",
       "releaseYear": "1952",
-      "releaseSequence": 801,
+      "releaseDate": "1952-07-25",
       "genres": [
         "Comedy",
         "Drama",
@@ -968,7 +968,31 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2009-02-20",
-      "reviewSequence": 847,
+      "reviewSequence": 1059,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0046085",
+      "title": "Mogambo",
+      "sortTitle": "mogambo-1953",
+      "releaseYear": "1953",
+      "releaseDate": "1953-09-23",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Romance"
+      ],
+      "slug": "mogambo-1953",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2008-05-23",
+      "reviewSequence": 723,
       "creditedAs": [
         "director"
       ],
@@ -982,7 +1006,7 @@
       "title": "The Sun Shines Bright",
       "sortTitle": "sun-shines-bright-1953",
       "releaseYear": "1953",
-      "releaseSequence": 832,
+      "releaseDate": "1953-03-13",
       "genres": [
         "Comedy",
         "Drama",
@@ -1004,35 +1028,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0046085",
-      "title": "Mogambo",
-      "sortTitle": "mogambo-1953",
-      "releaseYear": "1953",
-      "releaseSequence": 854,
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Romance"
-      ],
-      "slug": "mogambo-1953",
-      "grade": "C-",
-      "gradeValue": 5,
-      "reviewDate": "2008-05-23",
-      "reviewSequence": 557,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0048312",
       "title": "The Long Gray Line",
       "sortTitle": "long-gray-line-1955",
       "releaseYear": "1955",
-      "releaseSequence": 900,
+      "releaseDate": "1955-01-04",
       "genres": [
         "Biography",
         "Comedy",
@@ -1043,7 +1043,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2008-11-22",
-      "reviewSequence": 725,
+      "reviewSequence": 917,
       "creditedAs": [
         "director"
       ],
@@ -1057,7 +1057,7 @@
       "title": "Mister Roberts",
       "sortTitle": "mister-roberts-1955",
       "releaseYear": "1955",
-      "releaseSequence": 922,
+      "releaseDate": "1955-06-29",
       "genres": [
         "Comedy",
         "Drama",
@@ -1067,7 +1067,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2009-02-05",
-      "reviewSequence": 834,
+      "reviewSequence": 1045,
       "creditedAs": [
         "director"
       ],
@@ -1081,7 +1081,7 @@
       "title": "The Searchers",
       "sortTitle": "searchers-1956",
       "releaseYear": "1956",
-      "releaseSequence": 964,
+      "releaseDate": "1956-05-16",
       "genres": [
         "Adventure",
         "Drama",
@@ -1091,31 +1091,7 @@
       "grade": "A-",
       "gradeValue": 11,
       "reviewDate": "2015-06-10",
-      "reviewSequence": 1023,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0051198",
-      "title": "The Wings of Eagles",
-      "sortTitle": "wings-of-eagles-1957",
-      "releaseYear": "1957",
-      "releaseSequence": 991,
-      "genres": [
-        "Biography",
-        "Drama",
-        "War"
-      ],
-      "slug": "the-wings-of-eagles-1957",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2007-09-11",
-      "reviewSequence": 239,
+      "reviewSequence": 1625,
       "creditedAs": [
         "director"
       ],
@@ -1129,7 +1105,7 @@
       "title": "The Rising of the Moon",
       "sortTitle": "rising-of-the-moon-1957",
       "releaseYear": "1957",
-      "releaseSequence": 1013,
+      "releaseDate": "1957-05-17",
       "genres": [
         "Comedy",
         "Drama"
@@ -1138,7 +1114,31 @@
       "grade": "D-",
       "gradeValue": 2,
       "reviewDate": "2012-03-31",
-      "reviewSequence": 961,
+      "reviewSequence": 1263,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0051198",
+      "title": "The Wings of Eagles",
+      "sortTitle": "wings-of-eagles-1957",
+      "releaseYear": "1957",
+      "releaseDate": "1957-01-31",
+      "genres": [
+        "Biography",
+        "Drama",
+        "War"
+      ],
+      "slug": "the-wings-of-eagles-1957",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2007-09-11",
+      "reviewSequence": 352,
       "creditedAs": [
         "director"
       ],
@@ -1152,7 +1152,7 @@
       "title": "Gideon of Scotland Yard",
       "sortTitle": "gideon-of-scotland-yard-1958",
       "releaseYear": "1958",
-      "releaseSequence": 1052,
+      "releaseDate": "1958-03-21",
       "genres": [
         "Comedy",
         "Crime",
@@ -1179,7 +1179,7 @@
       "title": "The Last Hurrah",
       "sortTitle": "last-hurrah-1958",
       "releaseYear": "1958",
-      "releaseSequence": 1087,
+      "releaseDate": "1958-10-22",
       "genres": [
         "Drama"
       ],
@@ -1187,7 +1187,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2008-07-26",
-      "reviewSequence": 621,
+      "reviewSequence": 799,
       "creditedAs": [
         "director"
       ],
@@ -1201,7 +1201,7 @@
       "title": "The Horse Soldiers",
       "sortTitle": "horse-soldiers-1959",
       "releaseYear": "1959",
-      "releaseSequence": 1105,
+      "releaseDate": "1959-06-17",
       "genres": [
         "Adventure",
         "Drama",
@@ -1213,7 +1213,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2009-05-05",
-      "reviewSequence": 899,
+      "reviewSequence": 1119,
       "creditedAs": [
         "director"
       ],
@@ -1227,7 +1227,7 @@
       "title": "Sergeant Rutledge",
       "sortTitle": "sergeant-rutledge-1960",
       "releaseYear": "1960",
-      "releaseSequence": 1148,
+      "releaseDate": "1960-05-25",
       "genres": [
         "Crime",
         "Drama",
@@ -1237,7 +1237,7 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2012-01-28",
-      "reviewSequence": 927,
+      "reviewSequence": 1170,
       "creditedAs": [
         "director"
       ],
@@ -1251,7 +1251,7 @@
       "title": "Two Rode Together",
       "sortTitle": "two-rode-together-1961",
       "releaseYear": "1961",
-      "releaseSequence": 1196,
+      "releaseDate": "1961-05-24",
       "genres": [
         "Drama",
         "Western"
@@ -1260,30 +1260,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2008-03-02",
-      "reviewSequence": 466,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0056217",
-      "title": "The Man Who Shot Liberty Valance",
-      "sortTitle": "man-who-shot-liberty-valance-1962",
-      "releaseYear": "1962",
-      "releaseSequence": 1239,
-      "genres": [
-        "Drama",
-        "Western"
-      ],
-      "slug": "the-man-who-shot-liberty-valance-1962",
-      "grade": "A",
-      "gradeValue": 12,
-      "reviewDate": "2007-06-29",
-      "reviewSequence": 148,
+      "reviewSequence": 617,
       "creditedAs": [
         "director"
       ],
@@ -1297,7 +1274,7 @@
       "title": "How the West Was Won",
       "sortTitle": "how-the-west-was-won-1962",
       "releaseYear": "1962",
-      "releaseSequence": 1261,
+      "releaseDate": "1962-11-01",
       "genres": [
         "Adventure",
         "War",
@@ -1307,7 +1284,30 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2008-07-11",
-      "reviewSequence": 605,
+      "reviewSequence": 780,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0056217",
+      "title": "The Man Who Shot Liberty Valance",
+      "sortTitle": "man-who-shot-liberty-valance-1962",
+      "releaseYear": "1962",
+      "releaseDate": "1962-04-13",
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "slug": "the-man-who-shot-liberty-valance-1962",
+      "grade": "A",
+      "gradeValue": 12,
+      "reviewDate": "2007-06-29",
+      "reviewSequence": 243,
       "creditedAs": [
         "director"
       ],
@@ -1321,7 +1321,7 @@
       "title": "Donovan's Reef",
       "sortTitle": "donovans-reef-1963",
       "releaseYear": "1963",
-      "releaseSequence": 1286,
+      "releaseDate": "1963-06-12",
       "genres": [
         "Adventure",
         "Comedy",
@@ -1350,7 +1350,7 @@
       "title": "Cheyenne Autumn",
       "sortTitle": "cheyenne-autumn-1964",
       "releaseYear": "1964",
-      "releaseSequence": 1351,
+      "releaseDate": "1964-10-03",
       "genres": [
         "Drama",
         "History",
@@ -1378,7 +1378,7 @@
       "title": "7 Women",
       "sortTitle": "7-women-1965",
       "releaseYear": "1965",
-      "releaseSequence": 1402,
+      "releaseDate": "1965-12-11",
       "genres": [
         "Drama"
       ],
@@ -1386,7 +1386,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2008-12-06",
-      "reviewSequence": 749,
+      "reviewSequence": 944,
       "creditedAs": [
         "director"
       ],

@@ -9,7 +9,7 @@
       "title": "Stereo (Tile 3B of a CAEE Educational Mosaic)",
       "sortTitle": "stereo-tile-3b-of-a-caee-educational-mosaic-1969",
       "releaseYear": "1969",
-      "releaseSequence": 1602,
+      "releaseDate": "1969-06-20",
       "genres": [
         "Sci-Fi"
       ],
@@ -17,7 +17,7 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2020-12-26",
-      "reviewSequence": 1174,
+      "reviewSequence": 2089,
       "creditedAs": [
         "director",
         "writer"
@@ -32,7 +32,7 @@
       "title": "Crimes of the Future",
       "sortTitle": "crimes-of-the-future-1970",
       "releaseYear": "1970",
-      "releaseSequence": 1652,
+      "releaseDate": "1970-06-01",
       "genres": [
         "Comedy",
         "Sci-Fi"
@@ -41,7 +41,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2021-01-03",
-      "reviewSequence": 1182,
+      "reviewSequence": 2097,
       "creditedAs": [
         "director",
         "writer"
@@ -56,7 +56,7 @@
       "title": "Shivers",
       "sortTitle": "shivers-1975",
       "releaseYear": "1975",
-      "releaseSequence": 1986,
+      "releaseDate": "1975-05-16",
       "genres": [
         "Horror",
         "Sci-Fi"
@@ -65,7 +65,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2021-01-28",
-      "reviewSequence": 1210,
+      "reviewSequence": 2125,
       "creditedAs": [
         "director",
         "performer",
@@ -81,7 +81,7 @@
       "title": "Rabid",
       "sortTitle": "rabid-1977",
       "releaseYear": "1977",
-      "releaseSequence": 2084,
+      "releaseDate": "1977-04-08",
       "genres": [
         "Horror",
         "Sci-Fi"
@@ -90,31 +90,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2021-02-04",
-      "reviewSequence": 1216,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0079138",
-      "title": "Fast Company",
-      "sortTitle": "fast-company-1979",
-      "releaseYear": "1979",
-      "releaseSequence": 2186,
-      "genres": [
-        "Drama",
-        "Sport"
-      ],
-      "slug": "fast-company-1979",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2022-02-08",
-      "reviewSequence": 1441,
+      "reviewSequence": 2132,
       "creditedAs": [
         "director",
         "writer"
@@ -129,7 +105,7 @@
       "title": "The Brood",
       "sortTitle": "brood-1979",
       "releaseYear": "1979",
-      "releaseSequence": 2198,
+      "releaseDate": "1979-05-25",
       "genres": [
         "Horror",
         "Sci-Fi"
@@ -138,7 +114,31 @@
       "grade": "D-",
       "gradeValue": 2,
       "reviewDate": "2022-06-18",
-      "reviewSequence": 1478,
+      "reviewSequence": 2411,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0079138",
+      "title": "Fast Company",
+      "sortTitle": "fast-company-1979",
+      "releaseYear": "1979",
+      "releaseDate": "1979-03-18",
+      "genres": [
+        "Drama",
+        "Sport"
+      ],
+      "slug": "fast-company-1979",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2022-02-08",
+      "reviewSequence": 2371,
       "creditedAs": [
         "director",
         "writer"
@@ -153,7 +153,7 @@
       "title": "Scanners",
       "sortTitle": "scanners-1981",
       "releaseYear": "1981",
-      "releaseSequence": 2299,
+      "releaseDate": "1981-01-14",
       "genres": [
         "Horror",
         "Sci-Fi",
@@ -163,33 +163,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2008-09-19",
-      "reviewSequence": 661,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0086541",
-      "title": "Videodrome",
-      "sortTitle": "videodrome-1983",
-      "releaseYear": "1983",
-      "releaseSequence": 2419,
-      "genres": [
-        "Drama",
-        "Horror",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "slug": "videodrome-1983",
-      "grade": "A-",
-      "gradeValue": 11,
-      "reviewDate": "2012-01-30",
-      "reviewSequence": 931,
+      "reviewSequence": 847,
       "creditedAs": [
         "director",
         "writer"
@@ -204,7 +178,7 @@
       "title": "The Dead Zone",
       "sortTitle": "dead-zone-1983",
       "releaseYear": "1983",
-      "releaseSequence": 2443,
+      "releaseDate": "1983-10-21",
       "genres": [
         "Drama",
         "Horror",
@@ -227,11 +201,37 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0086541",
+      "title": "Videodrome",
+      "sortTitle": "videodrome-1983",
+      "releaseYear": "1983",
+      "releaseDate": "1983-02-04",
+      "genres": [
+        "Drama",
+        "Horror",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "slug": "videodrome-1983",
+      "grade": "A-",
+      "gradeValue": 11,
+      "reviewDate": "2012-01-30",
+      "reviewSequence": 1179,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0091064",
       "title": "The Fly",
       "sortTitle": "fly-1986",
       "releaseYear": "1986",
-      "releaseSequence": 2587,
+      "releaseDate": "1986-08-15",
       "genres": [
         "Drama",
         "Horror",
@@ -259,7 +259,7 @@
       "title": "Dead Ringers",
       "sortTitle": "dead-ringers-1988",
       "releaseYear": "1988",
-      "releaseSequence": 2678,
+      "releaseDate": "1988-09-08",
       "genres": [
         "Drama",
         "Horror",
@@ -286,7 +286,7 @@
       "title": "Naked Lunch",
       "sortTitle": "naked-lunch-1991",
       "releaseYear": "1991",
-      "releaseSequence": 2802,
+      "releaseDate": "1991-12-12",
       "genres": [
         "Drama",
         "Mystery"
@@ -312,7 +312,7 @@
       "title": "M. Butterfly",
       "sortTitle": "m-butterfly-1993",
       "releaseYear": "1993",
-      "releaseSequence": 2850,
+      "releaseDate": "1993-09-01",
       "genres": [
         "Drama",
         "Romance"
@@ -337,7 +337,7 @@
       "title": "Crash",
       "sortTitle": "crash-1996",
       "releaseYear": "1996",
-      "releaseSequence": 2925,
+      "releaseDate": "1996-05-17",
       "genres": [
         "Drama"
       ],
@@ -345,7 +345,7 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2009-01-09",
-      "reviewSequence": 802,
+      "reviewSequence": 1008,
       "creditedAs": [
         "director",
         "writer"
@@ -360,7 +360,7 @@
       "title": "The Stupids",
       "sortTitle": "stupids-1996",
       "releaseYear": "1996",
-      "releaseSequence": 2933,
+      "releaseDate": "1996-08-08",
       "genres": [
         "Adventure",
         "Comedy"
@@ -385,7 +385,7 @@
       "title": "eXistenZ",
       "sortTitle": "existenz-1999",
       "releaseYear": "1999",
-      "releaseSequence": 3008,
+      "releaseDate": "1999-02-16",
       "genres": [
         "Horror",
         "Mystery",
@@ -413,7 +413,7 @@
       "title": "Jason X",
       "sortTitle": "jason-x-2001",
       "releaseYear": "2001",
-      "releaseSequence": 3069,
+      "releaseDate": "2001-07-24",
       "genres": [
         "Action",
         "Horror",
@@ -424,7 +424,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2025-06-13",
-      "reviewSequence": 1787,
+      "reviewSequence": 2898,
       "creditedAs": [
         "performer"
       ],
@@ -434,40 +434,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt1612776",
-      "title": "Short6",
-      "sortTitle": "short6-2001",
-      "releaseYear": "2001",
-      "releaseSequence": 3078,
-      "genres": [
-        "Animation",
-        "Action",
-        "Comedy",
-        "Drama",
-        "Fantasy"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [
-        "David Cronenberg"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0278731",
       "title": "Spider",
       "sortTitle": "spider-2002",
       "releaseYear": "2002",
-      "releaseSequence": 3100,
+      "releaseDate": "2002-05-21",
       "genres": [
         "Drama",
         "Mystery",
@@ -493,7 +464,7 @@
       "title": "A History of Violence",
       "sortTitle": "history-of-violence-2005",
       "releaseYear": "2005",
-      "releaseSequence": 3198,
+      "releaseDate": "2005-05-16",
       "genres": [
         "Action",
         "Crime",
@@ -516,11 +487,35 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0765443",
+      "title": "Eastern Promises",
+      "sortTitle": "eastern-promises-2007",
+      "releaseYear": "2007",
+      "releaseDate": "2007-09-08",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "slug": "eastern-promises-2007",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2007-10-15",
+      "reviewSequence": 410,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0973844",
       "title": "To Each His Own Cinema",
       "sortTitle": "to-each-his-own-cinema-2007",
       "releaseYear": "2007",
-      "releaseSequence": 3264,
+      "releaseDate": "2007-05-20",
       "genres": [
         "Comedy",
         "Drama"
@@ -543,51 +538,26 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0765443",
-      "title": "Eastern Promises",
-      "sortTitle": "eastern-promises-2007",
-      "releaseYear": "2007",
-      "releaseSequence": 3291,
+      "imdbId": "tt14549466",
+      "title": "Crimes of the Future",
+      "sortTitle": "crimes-of-the-future-2022",
+      "releaseYear": "2022",
+      "releaseDate": "2022-05-23",
       "genres": [
-        "Crime",
         "Drama",
-        "Thriller"
+        "Horror",
+        "Sci-Fi"
       ],
-      "slug": "eastern-promises-2007",
-      "grade": "B+",
-      "gradeValue": 10,
-      "reviewDate": "2007-10-15",
-      "reviewSequence": 284,
+      "slug": "crimes-of-the-future-2022",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2025-01-09",
+      "reviewSequence": 2829,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt1571222",
-      "title": "A Dangerous Method",
-      "sortTitle": "dangerous-method-2011",
-      "releaseYear": "2011",
-      "releaseSequence": 3448,
-      "genres": [
-        "Biography",
-        "Drama",
-        "Romance"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "David Cronenberg"
-      ],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
@@ -597,7 +567,7 @@
       "title": "Cosmopolis",
       "sortTitle": "cosmopolis-2012",
       "releaseYear": "2012",
-      "releaseSequence": 3481,
+      "releaseDate": "2012-05-25",
       "genres": [
         "Crime",
         "Drama",
@@ -621,15 +591,15 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt2172584",
-      "title": "Maps to the Stars",
-      "sortTitle": "maps-to-the-stars-2014",
-      "releaseYear": "2014",
-      "releaseSequence": 3557,
+      "imdbId": "tt1571222",
+      "title": "A Dangerous Method",
+      "sortTitle": "dangerous-method-2011",
+      "releaseYear": "2011",
+      "releaseDate": "2011-09-02",
       "genres": [
-        "Comedy",
+        "Biography",
         "Drama",
-        "Mystery"
+        "Romance"
       ],
       "slug": null,
       "grade": null,
@@ -647,26 +617,30 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt14549466",
-      "title": "Crimes of the Future",
-      "sortTitle": "crimes-of-the-future-2022",
-      "releaseYear": "2022",
-      "releaseSequence": 3740,
+      "imdbId": "tt1612776",
+      "title": "Short6",
+      "sortTitle": "short6-2001",
+      "releaseYear": "2001",
+      "releaseDate": "2001-09-17",
       "genres": [
+        "Animation",
+        "Action",
+        "Comedy",
         "Drama",
-        "Horror",
-        "Sci-Fi"
+        "Fantasy"
       ],
-      "slug": "crimes-of-the-future-2022",
-      "grade": "B-",
-      "gradeValue": 8,
-      "reviewDate": "2025-01-09",
-      "reviewSequence": 1729,
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "director",
         "writer"
       ],
-      "watchlistDirectorNames": [],
+      "watchlistDirectorNames": [
+        "David Cronenberg"
+      ],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
@@ -676,7 +650,7 @@
       "title": "The Shrouds",
       "sortTitle": "shrouds-2024",
       "releaseYear": "2024",
-      "releaseSequence": 3769,
+      "releaseDate": "2024-05-20",
       "genres": [
         "Drama",
         "Horror",
@@ -691,6 +665,32 @@
       "creditedAs": [
         "director",
         "writer"
+      ],
+      "watchlistDirectorNames": [
+        "David Cronenberg"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt2172584",
+      "title": "Maps to the Stars",
+      "sortTitle": "maps-to-the-stars-2014",
+      "releaseYear": "2014",
+      "releaseDate": "2014-05-19",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Mystery"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
       ],
       "watchlistDirectorNames": [
         "David Cronenberg"

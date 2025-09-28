@@ -9,7 +9,7 @@
       "title": "The Rack",
       "sortTitle": "rack-1956",
       "releaseYear": "1956",
-      "releaseSequence": 966,
+      "releaseDate": "1956-05-24",
       "genres": [
         "Drama",
         "War"
@@ -34,7 +34,7 @@
       "title": "The Long, Hot Summer",
       "sortTitle": "long-hot-summer-1958",
       "releaseYear": "1958",
-      "releaseSequence": 1050,
+      "releaseDate": "1958-03-12",
       "genres": [
         "Drama"
       ],
@@ -42,7 +42,7 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2008-02-24",
-      "reviewSequence": 459,
+      "reviewSequence": 610,
       "creditedAs": [
         "performer"
       ],
@@ -56,7 +56,7 @@
       "title": "The Hustler",
       "sortTitle": "hustler-1961",
       "releaseYear": "1961",
-      "releaseSequence": 1210,
+      "releaseDate": "1961-09-24",
       "genres": [
         "Drama",
         "Sport"
@@ -65,7 +65,7 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2008-04-14",
-      "reviewSequence": 511,
+      "reviewSequence": 673,
       "creditedAs": [
         "performer"
       ],
@@ -79,7 +79,7 @@
       "title": "Hud",
       "sortTitle": "hud-1963",
       "releaseYear": "1963",
-      "releaseSequence": 1280,
+      "releaseDate": "1963-05-24",
       "genres": [
         "Drama",
         "Western"
@@ -88,7 +88,7 @@
       "grade": "A",
       "gradeValue": 12,
       "reviewDate": "2007-12-09",
-      "reviewSequence": 357,
+      "reviewSequence": 488,
       "creditedAs": [
         "performer"
       ],
@@ -102,7 +102,7 @@
       "title": "What a Way to Go!",
       "sortTitle": "what-a-way-to-go-1964",
       "releaseYear": "1964",
-      "releaseSequence": 1331,
+      "releaseDate": "1964-05-13",
       "genres": [
         "Comedy",
         "Romance"
@@ -128,7 +128,7 @@
       "title": "Torn Curtain",
       "sortTitle": "torn-curtain-1966",
       "releaseYear": "1966",
-      "releaseSequence": 1430,
+      "releaseDate": "1966-07-14",
       "genres": [
         "Drama",
         "Romance",
@@ -138,7 +138,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2008-08-03",
-      "reviewSequence": 630,
+      "reviewSequence": 809,
       "creditedAs": [
         "performer"
       ],
@@ -152,7 +152,7 @@
       "title": "Cool Hand Luke",
       "sortTitle": "cool-hand-luke-1967",
       "releaseYear": "1967",
-      "releaseSequence": 1499,
+      "releaseDate": "1967-11-01",
       "genres": [
         "Crime",
         "Drama"
@@ -161,7 +161,7 @@
       "grade": "A-",
       "gradeValue": 11,
       "reviewDate": "2008-12-29",
-      "reviewSequence": 786,
+      "reviewSequence": 987,
       "creditedAs": [
         "performer"
       ],
@@ -171,37 +171,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0069103",
-      "title": "Pocket Money",
-      "sortTitle": "pocket-money-1972",
-      "releaseYear": "1972",
-      "releaseSequence": 1765,
-      "genres": [
-        "Comedy",
-        "Drama",
-        "Western"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [
-        "Lee Marvin"
-      ],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0068853",
       "title": "The Life and Times of Judge Roy Bean",
       "sortTitle": "life-and-times-of-judge-roy-bean-1972",
       "releaseYear": "1972",
-      "releaseSequence": 1816,
+      "releaseDate": "1972-12-01",
       "genres": [
         "Comedy",
         "Drama",
@@ -224,11 +198,37 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0069103",
+      "title": "Pocket Money",
+      "sortTitle": "pocket-money-1972",
+      "releaseYear": "1972",
+      "releaseDate": "1972-02-09",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [
+        "Lee Marvin"
+      ],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0070351",
       "title": "The MacKintosh Man",
       "sortTitle": "mackintosh-man-1973",
       "releaseYear": "1973",
-      "releaseSequence": 1867,
+      "releaseDate": "1973-07-25",
       "genres": [
         "Thriller"
       ],
@@ -252,7 +252,7 @@
       "title": "The Towering Inferno",
       "sortTitle": "towering-inferno-1974",
       "releaseYear": "1974",
-      "releaseSequence": 1958,
+      "releaseDate": "1974-12-14",
       "genres": [
         "Action",
         "Drama",
@@ -279,7 +279,7 @@
       "title": "Buffalo Bill and the Indians, or Sitting Bull's History Lesson",
       "sortTitle": "buffalo-bill-and-the-indians-or-sitting-bulls-history-lesson-1976",
       "releaseYear": "1976",
-      "releaseSequence": 2036,
+      "releaseDate": "1976-06-01",
       "genres": [
         "Comedy",
         "Drama",
@@ -305,7 +305,7 @@
       "title": "Quintet",
       "sortTitle": "quintet-1979",
       "releaseYear": "1979",
-      "releaseSequence": 2180,
+      "releaseDate": "1979-02-09",
       "genres": [
         "Drama",
         "Mystery",
@@ -331,7 +331,7 @@
       "title": "When Time Ran Out...",
       "sortTitle": "when-time-ran-out-1980",
       "releaseYear": "1980",
-      "releaseSequence": 2250,
+      "releaseDate": "1980-03-28",
       "genres": [
         "Action",
         "Adventure",
@@ -358,7 +358,7 @@
       "title": "The Verdict",
       "sortTitle": "verdict-1982",
       "releaseYear": "1982",
-      "releaseSequence": 2408,
+      "releaseDate": "1982-12-07",
       "genres": [
         "Drama"
       ],

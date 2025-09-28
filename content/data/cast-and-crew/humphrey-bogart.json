@@ -5,35 +5,11 @@
   "reviewCount": 66,
   "titles": [
     {
-      "imdbId": "tt0021508",
-      "title": "Up the River",
-      "sortTitle": "up-the-river-1930",
-      "releaseYear": "1930",
-      "releaseSequence": 29,
-      "genres": [
-        "Comedy",
-        "Crime",
-        "Drama"
-      ],
-      "slug": "up-the-river-1930",
-      "grade": "B-",
-      "gradeValue": 8,
-      "reviewDate": "2020-11-06",
-      "reviewSequence": 1125,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0020822",
       "title": "A Devil with Women",
       "sortTitle": "devil-with-women-1930",
       "releaseYear": "1930",
-      "releaseSequence": 30,
+      "releaseDate": "1930-10-18",
       "genres": [
         "Adventure"
       ],
@@ -53,11 +29,57 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0021508",
+      "title": "Up the River",
+      "sortTitle": "up-the-river-1930",
+      "releaseYear": "1930",
+      "releaseDate": "1930-10-10",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "slug": "up-the-river-1930",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2020-11-06",
+      "reviewSequence": 2037,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0021636",
+      "title": "Bad Sister",
+      "sortTitle": "bad-sister-1931",
+      "releaseYear": "1931",
+      "releaseDate": "1931-03-29",
+      "genres": [
+        "Drama"
+      ],
+      "slug": "bad-sister-1931",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2020-11-25",
+      "reviewSequence": 2049,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0021680",
       "title": "Body and Soul",
       "sortTitle": "body-and-soul-1931",
       "releaseYear": "1931",
-      "releaseSequence": 41,
+      "releaseDate": "1931-02-22",
       "genres": [
         "Drama"
       ],
@@ -77,33 +99,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0021636",
-      "title": "Bad Sister",
-      "sortTitle": "bad-sister-1931",
-      "releaseYear": "1931",
-      "releaseSequence": 46,
-      "genres": [
-        "Drama"
-      ],
-      "slug": "bad-sister-1931",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2020-11-25",
-      "reviewSequence": 1137,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0021966",
       "title": "A Holy Terror",
       "sortTitle": "holy-terror-1931",
       "releaseYear": "1931",
-      "releaseSequence": 56,
+      "releaseDate": "1931-07-19",
       "genres": [
         "Action",
         "Adventure",
@@ -113,7 +113,7 @@
       "grade": "F",
       "gradeValue": 1,
       "reviewDate": "2020-11-27",
-      "reviewSequence": 1140,
+      "reviewSequence": 2053,
       "creditedAs": [
         "performer"
       ],
@@ -127,7 +127,7 @@
       "title": "Love Affair",
       "sortTitle": "love-affair-1932",
       "releaseYear": "1932",
-      "releaseSequence": 85,
+      "releaseDate": "1932-03-17",
       "genres": [
         "Drama",
         "Romance"
@@ -136,7 +136,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2021-12-10",
-      "reviewSequence": 1404,
+      "reviewSequence": 2329,
       "creditedAs": [
         "performer"
       ],
@@ -150,7 +150,7 @@
       "title": "Three on a Match",
       "sortTitle": "three-on-a-match-1932",
       "releaseYear": "1932",
-      "releaseSequence": 114,
+      "releaseDate": "1932-10-28",
       "genres": [
         "Crime",
         "Drama",
@@ -160,7 +160,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2022-09-30",
-      "reviewSequence": 1554,
+      "reviewSequence": 2493,
       "creditedAs": [
         "performer"
       ],
@@ -174,7 +174,7 @@
       "title": "Midnight",
       "sortTitle": "midnight-1934",
       "releaseYear": "1934",
-      "releaseSequence": 160,
+      "releaseDate": "1934-03-07",
       "genres": [
         "Crime",
         "Drama",
@@ -185,125 +185,7 @@
       "grade": "F",
       "gradeValue": 1,
       "reviewDate": "2023-04-08",
-      "reviewSequence": 1595,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0028426",
-      "title": "Two Against the World",
-      "sortTitle": "two-against-the-world-1936",
-      "releaseYear": "1936",
-      "releaseSequence": 227,
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "slug": "two-against-the-world-1936",
-      "grade": "D-",
-      "gradeValue": 2,
-      "reviewDate": "2022-10-04",
-      "reviewSequence": 1557,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0028096",
-      "title": "The Petrified Forest",
-      "sortTitle": "petrified-forest-1936",
-      "releaseYear": "1936",
-      "releaseSequence": 232,
-      "genres": [
-        "Drama",
-        "Thriller"
-      ],
-      "slug": "the-petrified-forest-1936",
-      "grade": "B+",
-      "gradeValue": 10,
-      "reviewDate": "2008-04-13",
-      "reviewSequence": 508,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0027407",
-      "title": "Bullets or Ballots",
-      "sortTitle": "bullets-or-ballots-1936",
-      "releaseYear": "1936",
-      "releaseSequence": 245,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Thriller"
-      ],
-      "slug": "bullets-or-ballots-1936",
-      "grade": "C-",
-      "gradeValue": 5,
-      "reviewDate": "2023-04-06",
-      "reviewSequence": 1593,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0027445",
-      "title": "China Clipper",
-      "sortTitle": "china-clipper-1936",
-      "releaseYear": "1936",
-      "releaseSequence": 252,
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Romance"
-      ],
-      "slug": "china-clipper-1936",
-      "grade": "D",
-      "gradeValue": 3,
-      "reviewDate": "2022-10-01",
-      "reviewSequence": 1555,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0027805",
-      "title": "Isle of Fury",
-      "sortTitle": "isle-of-fury-1936",
-      "releaseYear": "1936",
-      "releaseSequence": 261,
-      "genres": [
-        "Adventure",
-        "Romance"
-      ],
-      "slug": "isle-of-fury-1936",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2021-01-31",
-      "reviewSequence": 1212,
+      "reviewSequence": 2593,
       "creditedAs": [
         "performer"
       ],
@@ -317,7 +199,7 @@
       "title": "Black Legion",
       "sortTitle": "black-legion-1937",
       "releaseYear": "1937",
-      "releaseSequence": 272,
+      "releaseDate": "1937-01-16",
       "genres": [
         "Crime",
         "Drama",
@@ -327,7 +209,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2023-02-13",
-      "reviewSequence": 1573,
+      "reviewSequence": 2568,
       "creditedAs": [
         "performer"
       ],
@@ -337,44 +219,22 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0028955",
-      "title": "The Great O'Malley",
-      "sortTitle": "great-omalley-1937",
-      "releaseYear": "1937",
-      "releaseSequence": 274,
-      "genres": [
-        "Drama"
-      ],
-      "slug": "the-great-omalley-1937",
-      "grade": "D-",
-      "gradeValue": 2,
-      "reviewDate": "2023-04-06",
-      "reviewSequence": 1592,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0029217",
-      "title": "Marked Woman",
-      "sortTitle": "marked-woman-1937",
-      "releaseYear": "1937",
-      "releaseSequence": 279,
+      "imdbId": "tt0027407",
+      "title": "Bullets or Ballots",
+      "sortTitle": "bullets-or-ballots-1936",
+      "releaseYear": "1936",
+      "releaseDate": "1936-05-26",
       "genres": [
         "Crime",
         "Drama",
         "Film-Noir",
         "Thriller"
       ],
-      "slug": "marked-woman-1937",
+      "slug": "bullets-or-ballots-1936",
       "grade": "C-",
       "gradeValue": 5,
-      "reviewDate": "2023-06-04",
-      "reviewSequence": 1618,
+      "reviewDate": "2023-04-06",
+      "reviewSequence": 2591,
       "creditedAs": [
         "performer"
       ],
@@ -384,21 +244,21 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0029511",
-      "title": "San Quentin",
-      "sortTitle": "san-quentin-1937",
-      "releaseYear": "1937",
-      "releaseSequence": 283,
+      "imdbId": "tt0027445",
+      "title": "China Clipper",
+      "sortTitle": "china-clipper-1936",
+      "releaseYear": "1936",
+      "releaseDate": "1936-08-11",
       "genres": [
-        "Crime",
+        "Adventure",
         "Drama",
-        "Film-Noir"
+        "Romance"
       ],
-      "slug": "san-quentin-1937",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2008-01-14",
-      "reviewSequence": 401,
+      "slug": "china-clipper-1936",
+      "grade": "D",
+      "gradeValue": 3,
+      "reviewDate": "2022-10-01",
+      "reviewSequence": 2494,
       "creditedAs": [
         "performer"
       ],
@@ -408,23 +268,66 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0029080",
-      "title": "Kid Galahad",
-      "sortTitle": "kid-galahad-1937",
-      "releaseYear": "1937",
-      "releaseSequence": 284,
+      "imdbId": "tt0027805",
+      "title": "Isle of Fury",
+      "sortTitle": "isle-of-fury-1936",
+      "releaseYear": "1936",
+      "releaseDate": "1936-10-10",
       "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Romance",
-        "Sport"
+        "Adventure",
+        "Romance"
       ],
-      "slug": "kid-galahad-1937",
+      "slug": "isle-of-fury-1936",
       "grade": "D+",
       "gradeValue": 4,
-      "reviewDate": "2008-12-12",
-      "reviewSequence": 755,
+      "reviewDate": "2021-01-31",
+      "reviewSequence": 2128,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0028096",
+      "title": "The Petrified Forest",
+      "sortTitle": "petrified-forest-1936",
+      "releaseYear": "1936",
+      "releaseDate": "1936-01-30",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "slug": "the-petrified-forest-1936",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2008-04-13",
+      "reviewSequence": 670,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0028426",
+      "title": "Two Against the World",
+      "sortTitle": "two-against-the-world-1936",
+      "releaseYear": "1936",
+      "releaseDate": "1936-01-01",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "slug": "two-against-the-world-1936",
+      "grade": "D-",
+      "gradeValue": 2,
+      "reviewDate": "2022-10-04",
+      "reviewSequence": 2496,
       "creditedAs": [
         "performer"
       ],
@@ -438,7 +341,7 @@
       "title": "Dead End",
       "sortTitle": "dead-end-1937",
       "releaseYear": "1937",
-      "releaseSequence": 291,
+      "releaseDate": "1937-08-24",
       "genres": [
         "Crime",
         "Drama",
@@ -461,11 +364,108 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0028955",
+      "title": "The Great O'Malley",
+      "sortTitle": "great-omalley-1937",
+      "releaseYear": "1937",
+      "releaseDate": "1937-02-05",
+      "genres": [
+        "Drama"
+      ],
+      "slug": "the-great-omalley-1937",
+      "grade": "D-",
+      "gradeValue": 2,
+      "reviewDate": "2023-04-06",
+      "reviewSequence": 2590,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0029080",
+      "title": "Kid Galahad",
+      "sortTitle": "kid-galahad-1937",
+      "releaseYear": "1937",
+      "releaseDate": "1937-05-26",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Romance",
+        "Sport"
+      ],
+      "slug": "kid-galahad-1937",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2008-12-12",
+      "reviewSequence": 950,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0029217",
+      "title": "Marked Woman",
+      "sortTitle": "marked-woman-1937",
+      "releaseYear": "1937",
+      "releaseDate": "1937-04-03",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Thriller"
+      ],
+      "slug": "marked-woman-1937",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2023-06-04",
+      "reviewSequence": 2617,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0029511",
+      "title": "San Quentin",
+      "sortTitle": "san-quentin-1937",
+      "releaseYear": "1937",
+      "releaseDate": "1937-05-24",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir"
+      ],
+      "slug": "san-quentin-1937",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2008-01-14",
+      "reviewSequence": 539,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0029605",
       "title": "Stand-In",
       "sortTitle": "stand-in-1937",
       "releaseYear": "1937",
-      "releaseSequence": 298,
+      "releaseDate": "1937-10-28",
       "genres": [
         "Comedy",
         "Romance"
@@ -486,107 +486,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0030820",
-      "title": "Swing Your Lady",
-      "sortTitle": "swing-your-lady-1938",
-      "releaseYear": "1938",
-      "releaseSequence": 306,
-      "genres": [
-        "Comedy",
-        "Music",
-        "Romance",
-        "Sport"
-      ],
-      "slug": "swing-your-lady-1938",
-      "grade": "F",
-      "gradeValue": 1,
-      "reviewDate": "2022-10-03",
-      "reviewSequence": 1556,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0030026",
-      "title": "Crime School",
-      "sortTitle": "crime-school-1938",
-      "releaseYear": "1938",
-      "releaseSequence": 312,
-      "genres": [
-        "Crime",
-        "Drama"
-      ],
-      "slug": "crime-school-1938",
-      "grade": "C-",
-      "gradeValue": 5,
-      "reviewDate": "2008-04-06",
-      "reviewSequence": 501,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0030433",
-      "title": "Men Are Such Fools",
-      "sortTitle": "men-are-such-fools-1938",
-      "releaseYear": "1938",
-      "releaseSequence": 317,
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "slug": "men-are-such-fools-1938",
-      "grade": "F",
-      "gradeValue": 1,
-      "reviewDate": "2022-09-24",
-      "reviewSequence": 1552,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0030650",
-      "title": "Racket Busters",
-      "sortTitle": "racket-busters-1938",
-      "releaseYear": "1938",
-      "releaseSequence": 319,
-      "genres": [
-        "Action",
-        "Adventure",
-        "Crime",
-        "Drama"
-      ],
-      "slug": "racket-busters-1938",
-      "grade": "D-",
-      "gradeValue": 2,
-      "reviewDate": "2012-03-18",
-      "reviewSequence": 952,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0029864",
       "title": "The Amazing Dr. Clitterhouse",
       "sortTitle": "amazing-dr-clitterhouse-1938",
       "releaseYear": "1938",
-      "releaseSequence": 320,
+      "releaseDate": "1938-07-20",
       "genres": [
         "Crime",
         "Drama"
@@ -595,7 +499,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2008-04-22",
-      "reviewSequence": 528,
+      "reviewSequence": 691,
       "creditedAs": [
         "performer"
       ],
@@ -609,7 +513,7 @@
       "title": "Angels with Dirty Faces",
       "sortTitle": "angels-with-dirty-faces-1938",
       "releaseYear": "1938",
-      "releaseSequence": 330,
+      "releaseDate": "1938-11-26",
       "genres": [
         "Crime",
         "Drama",
@@ -620,7 +524,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2007-09-26",
-      "reviewSequence": 262,
+      "reviewSequence": 380,
       "creditedAs": [
         "performer"
       ],
@@ -630,21 +534,43 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0031536",
-      "title": "King of the Underworld",
-      "sortTitle": "king-of-the-underworld-1939",
-      "releaseYear": "1939",
-      "releaseSequence": 336,
+      "imdbId": "tt0030026",
+      "title": "Crime School",
+      "sortTitle": "crime-school-1938",
+      "releaseYear": "1938",
+      "releaseDate": "1938-05-10",
       "genres": [
         "Crime",
+        "Drama"
+      ],
+      "slug": "crime-school-1938",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2008-04-06",
+      "reviewSequence": 661,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0030433",
+      "title": "Men Are Such Fools",
+      "sortTitle": "men-are-such-fools-1938",
+      "releaseYear": "1938",
+      "releaseDate": "1938-06-15",
+      "genres": [
         "Drama",
         "Romance"
       ],
-      "slug": "king-of-the-underworld-1939",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2022-09-09",
-      "reviewSequence": 1535,
+      "slug": "men-are-such-fools-1938",
+      "grade": "F",
+      "gradeValue": 1,
+      "reviewDate": "2022-09-24",
+      "reviewSequence": 2487,
       "creditedAs": [
         "performer"
       ],
@@ -654,20 +580,22 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0031747",
-      "title": "The Oklahoma Kid",
-      "sortTitle": "oklahoma-kid-1939",
-      "releaseYear": "1939",
-      "releaseSequence": 341,
+      "imdbId": "tt0030650",
+      "title": "Racket Busters",
+      "sortTitle": "racket-busters-1938",
+      "releaseYear": "1938",
+      "releaseDate": "1938-07-16",
       "genres": [
         "Action",
-        "Western"
+        "Adventure",
+        "Crime",
+        "Drama"
       ],
-      "slug": "the-oklahoma-kid-1939",
-      "grade": "C-",
-      "gradeValue": 5,
-      "reviewDate": "2022-10-06",
-      "reviewSequence": 1560,
+      "slug": "racket-busters-1938",
+      "grade": "D-",
+      "gradeValue": 2,
+      "reviewDate": "2012-03-18",
+      "reviewSequence": 1244,
       "creditedAs": [
         "performer"
       ],
@@ -677,21 +605,22 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0032153",
-      "title": "You Can't Get Away with Murder",
-      "sortTitle": "you-cant-get-away-with-murder-1939",
-      "releaseYear": "1939",
-      "releaseSequence": 344,
+      "imdbId": "tt0030820",
+      "title": "Swing Your Lady",
+      "sortTitle": "swing-your-lady-1938",
+      "releaseYear": "1938",
+      "releaseDate": "1938-01-08",
       "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir"
+        "Comedy",
+        "Music",
+        "Romance",
+        "Sport"
       ],
-      "slug": "you-cant-get-away-with-murder-1939",
-      "grade": "D-",
-      "gradeValue": 2,
-      "reviewDate": "2008-11-28",
-      "reviewSequence": 738,
+      "slug": "swing-your-lady-1938",
+      "grade": "F",
+      "gradeValue": 1,
+      "reviewDate": "2022-10-03",
+      "reviewSequence": 2495,
       "creditedAs": [
         "performer"
       ],
@@ -705,7 +634,7 @@
       "title": "Dark Victory",
       "sortTitle": "dark-victory-1939",
       "releaseYear": "1939",
-      "releaseSequence": 347,
+      "releaseDate": "1939-04-19",
       "genres": [
         "Drama",
         "Romance"
@@ -714,7 +643,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2007-12-23",
-      "reviewSequence": 381,
+      "reviewSequence": 516,
       "creditedAs": [
         "performer"
       ],
@@ -724,21 +653,44 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0031867",
-      "title": "The Roaring Twenties",
-      "sortTitle": "roaring-twenties-1939",
+      "imdbId": "tt0031536",
+      "title": "King of the Underworld",
+      "sortTitle": "king-of-the-underworld-1939",
       "releaseYear": "1939",
-      "releaseSequence": 366,
+      "releaseDate": "1939-01-07",
       "genres": [
         "Crime",
         "Drama",
-        "Thriller"
+        "Romance"
       ],
-      "slug": "the-roaring-twenties-1939",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2008-04-18",
-      "reviewSequence": 517,
+      "slug": "king-of-the-underworld-1939",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2022-09-09",
+      "reviewSequence": 2469,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0031747",
+      "title": "The Oklahoma Kid",
+      "sortTitle": "oklahoma-kid-1939",
+      "releaseYear": "1939",
+      "releaseDate": "1939-03-03",
+      "genres": [
+        "Action",
+        "Western"
+      ],
+      "slug": "the-oklahoma-kid-1939",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2022-10-06",
+      "reviewSequence": 2500,
       "creditedAs": [
         "performer"
       ],
@@ -752,7 +704,7 @@
       "title": "The Return of Doctor X",
       "sortTitle": "return-of-doctor-x-1939",
       "releaseYear": "1939",
-      "releaseSequence": 373,
+      "releaseDate": "1939-11-23",
       "genres": [
         "Drama",
         "Horror",
@@ -764,7 +716,7 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2008-10-23",
-      "reviewSequence": 693,
+      "reviewSequence": 883,
       "creditedAs": [
         "performer"
       ],
@@ -774,70 +726,45 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0032636",
-      "title": "Invisible Stripes",
-      "sortTitle": "invisible-stripes-1939",
+      "imdbId": "tt0031867",
+      "title": "The Roaring Twenties",
+      "sortTitle": "roaring-twenties-1939",
       "releaseYear": "1939",
-      "releaseSequence": 375,
+      "releaseDate": "1939-10-25",
       "genres": [
-        "Action",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "slug": "the-roaring-twenties-1939",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2008-04-18",
+      "reviewSequence": 680,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0032153",
+      "title": "You Can't Get Away with Murder",
+      "sortTitle": "you-cant-get-away-with-murder-1939",
+      "releaseYear": "1939",
+      "releaseDate": "1939-03-23",
+      "genres": [
         "Crime",
         "Drama",
         "Film-Noir"
       ],
-      "slug": "invisible-stripes-1939",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2022-09-07",
-      "reviewSequence": 1532,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0033226",
-      "title": "Virginia City",
-      "sortTitle": "virginia-city-1940",
-      "releaseYear": "1940",
-      "releaseSequence": 388,
-      "genres": [
-        "Western"
-      ],
-      "slug": "virginia-city-1940",
-      "grade": "C-",
-      "gradeValue": 5,
-      "reviewDate": "2022-08-20",
-      "reviewSequence": 1515,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0032643",
-      "title": "It All Came True",
-      "sortTitle": "it-all-came-true-1940",
-      "releaseYear": "1940",
-      "releaseSequence": 390,
-      "genres": [
-        "Comedy",
-        "Crime",
-        "Drama",
-        "Music",
-        "Romance"
-      ],
-      "slug": "it-all-came-true-1940",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2009-01-27",
-      "reviewSequence": 827,
+      "slug": "you-cant-get-away-with-murder-1939",
+      "grade": "D-",
+      "gradeValue": 2,
+      "reviewDate": "2008-11-28",
+      "reviewSequence": 931,
       "creditedAs": [
         "performer"
       ],
@@ -851,7 +778,7 @@
       "title": "Brother Orchid",
       "sortTitle": "brother-orchid-1940",
       "releaseYear": "1940",
-      "releaseSequence": 396,
+      "releaseDate": "1940-05-29",
       "genres": [
         "Comedy",
         "Crime",
@@ -862,7 +789,58 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2008-12-12",
-      "reviewSequence": 756,
+      "reviewSequence": 951,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0032636",
+      "title": "Invisible Stripes",
+      "sortTitle": "invisible-stripes-1939",
+      "releaseYear": "1939",
+      "releaseDate": "1939-12-30",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Film-Noir"
+      ],
+      "slug": "invisible-stripes-1939",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2022-09-07",
+      "reviewSequence": 2466,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0032643",
+      "title": "It All Came True",
+      "sortTitle": "it-all-came-true-1940",
+      "releaseYear": "1940",
+      "releaseDate": "1940-04-05",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama",
+        "Music",
+        "Romance"
+      ],
+      "slug": "it-all-came-true-1940",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2009-01-27",
+      "reviewSequence": 1036,
       "creditedAs": [
         "performer"
       ],
@@ -876,7 +854,7 @@
       "title": "They Drive by Night",
       "sortTitle": "they-drive-by-night-1940",
       "releaseYear": "1940",
-      "releaseSequence": 399,
+      "releaseDate": "1940-07-26",
       "genres": [
         "Crime",
         "Drama",
@@ -887,7 +865,29 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2022-10-04",
-      "reviewSequence": 1558,
+      "reviewSequence": 2497,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0033226",
+      "title": "Virginia City",
+      "sortTitle": "virginia-city-1940",
+      "releaseYear": "1940",
+      "releaseDate": "1940-03-16",
+      "genres": [
+        "Western"
+      ],
+      "slug": "virginia-city-1940",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2022-08-20",
+      "reviewSequence": 2449,
       "creditedAs": [
         "performer"
       ],
@@ -901,7 +901,7 @@
       "title": "High Sierra",
       "sortTitle": "high-sierra-1941",
       "releaseYear": "1941",
-      "releaseSequence": 423,
+      "releaseDate": "1941-01-22",
       "genres": [
         "Action",
         "Adventure",
@@ -913,30 +913,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2022-09-13",
-      "reviewSequence": 1540,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0034370",
-      "title": "The Wagons Roll at Night",
-      "sortTitle": "wagons-roll-at-night-1941",
-      "releaseYear": "1941",
-      "releaseSequence": 437,
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "slug": "the-wagons-roll-at-night-1941",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2012-06-13",
-      "reviewSequence": 992,
+      "reviewSequence": 2474,
       "creditedAs": [
         "performer"
       ],
@@ -950,7 +927,7 @@
       "title": "The Maltese Falcon",
       "sortTitle": "maltese-falcon-1941",
       "releaseYear": "1941",
-      "releaseSequence": 445,
+      "releaseDate": "1941-10-03",
       "genres": [
         "Crime",
         "Drama",
@@ -962,7 +939,7 @@
       "grade": "A",
       "gradeValue": 12,
       "reviewDate": "2007-07-06",
-      "reviewSequence": 153,
+      "reviewSequence": 250,
       "creditedAs": [
         "performer"
       ],
@@ -972,50 +949,20 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0034449",
-      "title": "All Through the Night",
-      "sortTitle": "all-through-the-night-1942",
-      "releaseYear": "1942",
-      "releaseSequence": 456,
+      "imdbId": "tt0034370",
+      "title": "The Wagons Roll at Night",
+      "sortTitle": "wagons-roll-at-night-1941",
+      "releaseYear": "1941",
+      "releaseDate": "1941-04-25",
       "genres": [
-        "Action",
-        "Comedy",
-        "Crime",
         "Drama",
-        "Film-Noir",
-        "Thriller",
-        "War"
-      ],
-      "slug": "all-through-the-night-1942",
-      "grade": "B+",
-      "gradeValue": 10,
-      "reviewDate": "2007-11-21",
-      "reviewSequence": 334,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0034513",
-      "title": "The Big Shot",
-      "sortTitle": "big-shot-1942",
-      "releaseYear": "1942",
-      "releaseSequence": 469,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
         "Romance"
       ],
-      "slug": "the-big-shot-1942",
+      "slug": "the-wagons-roll-at-night-1941",
       "grade": "C",
       "gradeValue": 6,
-      "reviewDate": "2022-09-11",
-      "reviewSequence": 1538,
+      "reviewDate": "2012-06-13",
+      "reviewSequence": 1311,
       "creditedAs": [
         "performer"
       ],
@@ -1029,7 +976,7 @@
       "title": "Across the Pacific",
       "sortTitle": "across-the-pacific-1942",
       "releaseYear": "1942",
-      "releaseSequence": 473,
+      "releaseDate": "1942-09-04",
       "genres": [
         "Action",
         "Adventure",
@@ -1041,7 +988,60 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2007-09-24",
-      "reviewSequence": 259,
+      "reviewSequence": 376,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0034449",
+      "title": "All Through the Night",
+      "sortTitle": "all-through-the-night-1942",
+      "releaseYear": "1942",
+      "releaseDate": "1942-01-10",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Thriller",
+        "War"
+      ],
+      "slug": "all-through-the-night-1942",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2007-11-21",
+      "reviewSequence": 463,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0034513",
+      "title": "The Big Shot",
+      "sortTitle": "big-shot-1942",
+      "releaseYear": "1942",
+      "releaseDate": "1942-06-13",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Romance"
+      ],
+      "slug": "the-big-shot-1942",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2022-09-11",
+      "reviewSequence": 2472,
       "creditedAs": [
         "performer"
       ],
@@ -1055,7 +1055,7 @@
       "title": "Casablanca",
       "sortTitle": "casablanca-1942",
       "releaseYear": "1942",
-      "releaseSequence": 486,
+      "releaseDate": "1942-11-26",
       "genres": [
         "Drama",
         "Romance",
@@ -1065,7 +1065,7 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2025-03-22",
-      "reviewSequence": 1753,
+      "reviewSequence": 2860,
       "creditedAs": [
         "performer"
       ],
@@ -1079,7 +1079,7 @@
       "title": "Action in the North Atlantic",
       "sortTitle": "action-in-the-north-atlantic-1943",
       "releaseYear": "1943",
-      "releaseSequence": 503,
+      "releaseDate": "1943-05-21",
       "genres": [
         "Drama",
         "War"
@@ -1088,7 +1088,31 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2008-05-16",
-      "reviewSequence": 548,
+      "reviewSequence": 712,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0036323",
+      "title": "Sahara",
+      "sortTitle": "sahara-1943",
+      "releaseYear": "1943",
+      "releaseDate": "1943-??-??",
+      "genres": [
+        "Action",
+        "Drama",
+        "War"
+      ],
+      "slug": "sahara-1943",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2007-08-19",
+      "reviewSequence": 330,
       "creditedAs": [
         "performer"
       ],
@@ -1102,7 +1126,7 @@
       "title": "Thank Your Lucky Stars",
       "sortTitle": "thank-your-lucky-stars-1943",
       "releaseYear": "1943",
-      "releaseSequence": 512,
+      "releaseDate": "1943-09-15",
       "genres": [
         "Comedy",
         "Musical"
@@ -1124,35 +1148,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0036323",
-      "title": "Sahara",
-      "sortTitle": "sahara-1943",
-      "releaseYear": "1943",
-      "releaseSequence": 528,
-      "genres": [
-        "Action",
-        "Drama",
-        "War"
-      ],
-      "slug": "sahara-1943",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2007-08-19",
-      "reviewSequence": 218,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0037166",
       "title": "Passage to Marseille",
       "sortTitle": "passage-to-marseille-1944",
       "releaseYear": "1944",
-      "releaseSequence": 531,
+      "releaseDate": "1944-02-16",
       "genres": [
         "Adventure",
         "Drama",
@@ -1163,7 +1163,7 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2012-01-28",
-      "reviewSequence": 925,
+      "reviewSequence": 1169,
       "creditedAs": [
         "performer"
       ],
@@ -1177,7 +1177,7 @@
       "title": "To Have and Have Not",
       "sortTitle": "to-have-and-have-not-1944",
       "releaseYear": "1944",
-      "releaseSequence": 552,
+      "releaseDate": "1944-10-11",
       "genres": [
         "Adventure",
         "Comedy",
@@ -1191,7 +1191,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2007-12-06",
-      "reviewSequence": 351,
+      "reviewSequence": 482,
       "creditedAs": [
         "performer"
       ],
@@ -1205,7 +1205,7 @@
       "title": "Conflict",
       "sortTitle": "conflict-1945",
       "releaseYear": "1945",
-      "releaseSequence": 571,
+      "releaseDate": "1945-05-13",
       "genres": [
         "Drama",
         "Film-Noir",
@@ -1216,7 +1216,7 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2022-10-05",
-      "reviewSequence": 1559,
+      "reviewSequence": 2498,
       "creditedAs": [
         "performer"
       ],
@@ -1230,7 +1230,7 @@
       "title": "The Big Sleep",
       "sortTitle": "big-sleep-1946",
       "releaseYear": "1946",
-      "releaseSequence": 600,
+      "releaseDate": "1946-08-22",
       "genres": [
         "Crime",
         "Drama",
@@ -1242,58 +1242,7 @@
       "grade": "A+",
       "gradeValue": 13,
       "reviewDate": "2012-04-28",
-      "reviewSequence": 979,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0039305",
-      "title": "Dead Reckoning",
-      "sortTitle": "dead-reckoning-1946",
-      "releaseYear": "1946",
-      "releaseSequence": 614,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Mystery",
-        "Thriller"
-      ],
-      "slug": "dead-reckoning-1946",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2022-09-14",
-      "reviewSequence": 1541,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0039926",
-      "title": "The Two Mrs. Carrolls",
-      "sortTitle": "two-mrs-carrolls-1947",
-      "releaseYear": "1947",
-      "releaseSequence": 617,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Thriller"
-      ],
-      "slug": "the-two-mrs-carrolls-1947",
-      "grade": "D+",
-      "gradeValue": 4,
-      "reviewDate": "2007-10-02",
-      "reviewSequence": 270,
+      "reviewSequence": 1297,
       "creditedAs": [
         "performer"
       ],
@@ -1307,7 +1256,7 @@
       "title": "Dark Passage",
       "sortTitle": "dark-passage-1947",
       "releaseYear": "1947",
-      "releaseSequence": 635,
+      "releaseDate": "1947-09-05",
       "genres": [
         "Drama",
         "Film-Noir",
@@ -1317,7 +1266,7 @@
       "grade": "C",
       "gradeValue": 6,
       "reviewDate": "2007-10-01",
-      "reviewSequence": 268,
+      "reviewSequence": 389,
       "creditedAs": [
         "performer"
       ],
@@ -1327,21 +1276,48 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0040897",
-      "title": "The Treasure of the Sierra Madre",
-      "sortTitle": "treasure-of-the-sierra-madre-1948",
-      "releaseYear": "1948",
-      "releaseSequence": 649,
+      "imdbId": "tt0039305",
+      "title": "Dead Reckoning",
+      "sortTitle": "dead-reckoning-1946",
+      "releaseYear": "1946",
+      "releaseDate": "1946-12-31",
       "genres": [
-        "Adventure",
+        "Crime",
         "Drama",
-        "Western"
+        "Film-Noir",
+        "Mystery",
+        "Thriller"
       ],
-      "slug": "the-treasure-of-the-sierra-madre-1948",
-      "grade": "A",
-      "gradeValue": 12,
-      "reviewDate": "2007-07-06",
-      "reviewSequence": 154,
+      "slug": "dead-reckoning-1946",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2022-09-14",
+      "reviewSequence": 2475,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0039926",
+      "title": "The Two Mrs. Carrolls",
+      "sortTitle": "two-mrs-carrolls-1947",
+      "releaseYear": "1947",
+      "releaseDate": "1947-03-04",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Thriller"
+      ],
+      "slug": "the-two-mrs-carrolls-1947",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2007-10-02",
+      "reviewSequence": 391,
       "creditedAs": [
         "performer"
       ],
@@ -1355,7 +1331,7 @@
       "title": "Key Largo",
       "sortTitle": "key-largo-1948",
       "releaseYear": "1948",
-      "releaseSequence": 670,
+      "releaseDate": "1948-07-16",
       "genres": [
         "Action",
         "Crime",
@@ -1367,7 +1343,31 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2007-07-15",
-      "reviewSequence": 161,
+      "reviewSequence": 261,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0040897",
+      "title": "The Treasure of the Sierra Madre",
+      "sortTitle": "treasure-of-the-sierra-madre-1948",
+      "releaseYear": "1948",
+      "releaseDate": "1948-01-07",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Western"
+      ],
+      "slug": "the-treasure-of-the-sierra-madre-1948",
+      "grade": "A",
+      "gradeValue": 12,
+      "reviewDate": "2007-07-06",
+      "reviewSequence": 251,
       "creditedAs": [
         "performer"
       ],
@@ -1381,7 +1381,7 @@
       "title": "Knock on Any Door",
       "sortTitle": "knock-on-any-door-1949",
       "releaseYear": "1949",
-      "releaseSequence": 693,
+      "releaseDate": "1949-02-22",
       "genres": [
         "Crime",
         "Drama",
@@ -1391,7 +1391,7 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2008-03-04",
-      "reviewSequence": 469,
+      "reviewSequence": 621,
       "creditedAs": [
         "performer"
       ],
@@ -1405,7 +1405,7 @@
       "title": "Tokyo Joe",
       "sortTitle": "tokyo-joe-1949",
       "releaseYear": "1949",
-      "releaseSequence": 711,
+      "releaseDate": "1949-10-26",
       "genres": [
         "Crime",
         "Drama",
@@ -1416,7 +1416,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2004-07-09",
-      "reviewSequence": 110,
+      "reviewSequence": 191,
       "creditedAs": [
         "performer"
       ],
@@ -1430,7 +1430,7 @@
       "title": "Chain Lightning",
       "sortTitle": "chain-lightning-1950",
       "releaseYear": "1950",
-      "releaseSequence": 724,
+      "releaseDate": "1950-02-18",
       "genres": [
         "Action",
         "Adventure",
@@ -1440,7 +1440,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2022-09-24",
-      "reviewSequence": 1551,
+      "reviewSequence": 2486,
       "creditedAs": [
         "performer"
       ],
@@ -1454,7 +1454,7 @@
       "title": "In a Lonely Place",
       "sortTitle": "in-a-lonely-place-1950",
       "releaseYear": "1950",
-      "releaseSequence": 736,
+      "releaseDate": "1950-05-17",
       "genres": [
         "Drama",
         "Film-Noir",
@@ -1466,7 +1466,32 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2007-08-20",
-      "reviewSequence": 221,
+      "reviewSequence": 333,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0043265",
+      "title": "The African Queen",
+      "sortTitle": "african-queen-1951",
+      "releaseYear": "1951",
+      "releaseDate": "1951-12-26",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "slug": "the-african-queen-1951",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2007-10-24",
+      "reviewSequence": 431,
       "creditedAs": [
         "performer"
       ],
@@ -1480,7 +1505,7 @@
       "title": "The Enforcer",
       "sortTitle": "enforcer-1951",
       "releaseYear": "1951",
-      "releaseSequence": 757,
+      "releaseDate": "1951-01-25",
       "genres": [
         "Crime",
         "Film-Noir",
@@ -1490,7 +1515,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2004-05-26",
-      "reviewSequence": 90,
+      "reviewSequence": 155,
       "creditedAs": [
         "performer"
       ],
@@ -1504,7 +1529,7 @@
       "title": "Sirocco",
       "sortTitle": "sirocco-1951",
       "releaseYear": "1951",
-      "releaseSequence": 764,
+      "releaseDate": "1951-06-01",
       "genres": [
         "Action",
         "Drama",
@@ -1528,36 +1553,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0043265",
-      "title": "The African Queen",
-      "sortTitle": "african-queen-1951",
-      "releaseYear": "1951",
-      "releaseSequence": 783,
-      "genres": [
-        "Adventure",
-        "Drama",
-        "Romance",
-        "War"
-      ],
-      "slug": "the-african-queen-1951",
-      "grade": "B+",
-      "gradeValue": 10,
-      "reviewDate": "2007-10-24",
-      "reviewSequence": 304,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0044533",
       "title": "Deadline - U.S.A.",
       "sortTitle": "deadline-u-s-a-1952",
       "releaseYear": "1952",
-      "releaseSequence": 793,
+      "releaseDate": "1952-03-14",
       "genres": [
         "Crime",
         "Drama",
@@ -1567,7 +1567,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2024-08-02",
-      "reviewSequence": 1681,
+      "reviewSequence": 2742,
       "creditedAs": [
         "performer"
       ],
@@ -1581,7 +1581,7 @@
       "title": "Battle Circus",
       "sortTitle": "battle-circus-1953",
       "releaseYear": "1953",
-      "releaseSequence": 831,
+      "releaseDate": "1953-03-06",
       "genres": [
         "Drama",
         "Romance",
@@ -1591,7 +1591,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2007-10-27",
-      "reviewSequence": 308,
+      "reviewSequence": 435,
       "creditedAs": [
         "performer"
       ],
@@ -1605,7 +1605,7 @@
       "title": "Beat the Devil",
       "sortTitle": "beat-the-devil-1953",
       "releaseYear": "1953",
-      "releaseSequence": 859,
+      "releaseDate": "1953-11-24",
       "genres": [
         "Action",
         "Adventure",
@@ -1632,11 +1632,36 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0046754",
+      "title": "The Barefoot Contessa",
+      "sortTitle": "barefoot-contessa-1954",
+      "releaseYear": "1954",
+      "releaseDate": "1954-09-29",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Romance"
+      ],
+      "slug": "the-barefoot-contessa-1954",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2007-07-17",
+      "reviewSequence": 265,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0046816",
       "title": "The Caine Mutiny",
       "sortTitle": "caine-mutiny-1954",
       "releaseYear": "1954",
-      "releaseSequence": 876,
+      "releaseDate": "1954-06-24",
       "genres": [
         "Drama",
         "War"
@@ -1645,7 +1670,7 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2008-04-20",
-      "reviewSequence": 523,
+      "reviewSequence": 687,
       "creditedAs": [
         "performer"
       ],
@@ -1659,7 +1684,7 @@
       "title": "Sabrina",
       "sortTitle": "sabrina-1954",
       "releaseYear": "1954",
-      "releaseSequence": 883,
+      "releaseDate": "1954-09-01",
       "genres": [
         "Comedy",
         "Drama",
@@ -1669,78 +1694,7 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2008-05-02",
-      "reviewSequence": 533,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0046754",
-      "title": "The Barefoot Contessa",
-      "sortTitle": "barefoot-contessa-1954",
-      "releaseYear": "1954",
-      "releaseSequence": 885,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Romance"
-      ],
-      "slug": "the-barefoot-contessa-1954",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2007-07-17",
-      "reviewSequence": 165,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0048801",
-      "title": "We're No Angels",
-      "sortTitle": "were-no-angels-1955",
-      "releaseYear": "1955",
-      "releaseSequence": 924,
-      "genres": [
-        "Comedy",
-        "Crime",
-        "Romance"
-      ],
-      "slug": "were-no-angels-1955",
-      "grade": "C+",
-      "gradeValue": 7,
-      "reviewDate": "2007-09-03",
-      "reviewSequence": 228,
-      "creditedAs": [
-        "performer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0048291",
-      "title": "The Left Hand of God",
-      "sortTitle": "left-hand-of-god-1955",
-      "releaseYear": "1955",
-      "releaseSequence": 934,
-      "genres": [
-        "Drama"
-      ],
-      "slug": "the-left-hand-of-god-1955",
-      "grade": "C-",
-      "gradeValue": 5,
-      "reviewDate": "2013-01-20",
-      "reviewSequence": 998,
+      "reviewSequence": 696,
       "creditedAs": [
         "performer"
       ],
@@ -1754,7 +1708,7 @@
       "title": "The Desperate Hours",
       "sortTitle": "desperate-hours-1955",
       "releaseYear": "1955",
-      "releaseSequence": 939,
+      "releaseDate": "1955-10-05",
       "genres": [
         "Crime",
         "Drama",
@@ -1765,7 +1719,53 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2007-09-11",
-      "reviewSequence": 238,
+      "reviewSequence": 351,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0048291",
+      "title": "The Left Hand of God",
+      "sortTitle": "left-hand-of-god-1955",
+      "releaseYear": "1955",
+      "releaseDate": "1955-09-02",
+      "genres": [
+        "Drama"
+      ],
+      "slug": "the-left-hand-of-god-1955",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2013-01-20",
+      "reviewSequence": 1392,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0048801",
+      "title": "We're No Angels",
+      "sortTitle": "were-no-angels-1955",
+      "releaseYear": "1955",
+      "releaseDate": "1955-07-07",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Romance"
+      ],
+      "slug": "were-no-angels-1955",
+      "grade": "C+",
+      "gradeValue": 7,
+      "reviewDate": "2007-09-03",
+      "reviewSequence": 341,
       "creditedAs": [
         "performer"
       ],
@@ -1779,7 +1779,7 @@
       "title": "The Harder They Fall",
       "sortTitle": "harder-they-fall-1956",
       "releaseYear": "1956",
-      "releaseSequence": 958,
+      "releaseDate": "1956-03-30",
       "genres": [
         "Drama",
         "Film-Noir",
@@ -1790,7 +1790,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2007-10-21",
-      "reviewSequence": 295,
+      "reviewSequence": 421,
       "creditedAs": [
         "performer"
       ],
