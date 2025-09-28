@@ -287,8 +287,8 @@
     }
 
     a:hover {
-      color: var(--fg-accent);
-      transition: all 80ms ease-in;
+      color: var(--color-accent);
+      transition: all 250ms ease-in-out;
     }
 
     sup a:hover {
