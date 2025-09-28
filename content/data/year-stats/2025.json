@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 58,
-  "viewingCount": 97,
-  "titleCount": 94,
+  "newTitleCount": 59,
+  "viewingCount": 98,
+  "titleCount": 95,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 57
+      "count": 58
     },
     {
       "name": "4k UHD Blu-ray",
@@ -70,7 +70,7 @@
     },
     {
       "name": "1990s",
-      "count": 10
+      "count": 11
     },
     {
       "name": "2000s",
@@ -109,7 +109,7 @@
       "title": "The Collector",
       "releaseYear": "2009",
       "sortTitle": "collector-2009",
-      "releaseSequence": 3388,
+      "releaseSequence": 3389,
       "genres": [
         "Horror",
         "Thriller"
@@ -126,7 +126,7 @@
       "title": "Superman",
       "releaseYear": "2025",
       "sortTitle": "superman-2025",
-      "releaseSequence": 3781,
+      "releaseSequence": 3782,
       "genres": [
         "Action",
         "Adventure",
@@ -267,7 +267,7 @@
           "title": "The Collector",
           "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseSequence": 3388,
+          "releaseSequence": 3389,
           "genres": [
             "Horror",
             "Thriller"
@@ -287,7 +287,7 @@
           "title": "The Collector",
           "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseSequence": 3388,
+          "releaseSequence": 3389,
           "genres": [
             "Horror",
             "Thriller"
@@ -334,7 +334,7 @@
           "title": "Scream",
           "sortTitle": "scream-1996",
           "releaseYear": "1996",
-          "releaseSequence": 2942,
+          "releaseSequence": 2943,
           "genres": [
             "Horror",
             "Mystery"
@@ -546,6 +546,56 @@
       ]
     },
     {
+      "name": "Herman Yau",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0116163",
+          "title": "Ebola Syndrome",
+          "sortTitle": "ebola-syndrome-1996",
+          "releaseYear": "1996",
+          "releaseSequence": 2928,
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Horror"
+          ],
+          "slug": "ebola-syndrome-1996",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-06-12",
+          "reviewSequence": 1786,
+          "viewingDate": "2025-06-12",
+          "viewingSequence": 2897,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0103743",
+          "title": "The Untold Story",
+          "sortTitle": "untold-story-1993",
+          "releaseYear": "1993",
+          "releaseSequence": 2840,
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "the-untold-story-1993",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-09-27",
+          "reviewSequence": 1804,
+          "viewingDate": "2025-09-27",
+          "viewingSequence": 2925,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "James Gunn",
       "count": 2,
       "slug": null,
@@ -555,7 +605,7 @@
           "title": "Superman",
           "sortTitle": "superman-2025",
           "releaseYear": "2025",
-          "releaseSequence": 3781,
+          "releaseSequence": 3782,
           "genres": [
             "Action",
             "Adventure",
@@ -576,7 +626,7 @@
           "title": "Superman",
           "sortTitle": "superman-2025",
           "releaseYear": "2025",
-          "releaseSequence": 3781,
+          "releaseSequence": 3782,
           "genres": [
             "Action",
             "Adventure",
@@ -988,7 +1038,7 @@
           "title": "Nosferatu",
           "sortTitle": "nosferatu-2024",
           "releaseYear": "2024",
-          "releaseSequence": 3777,
+          "releaseSequence": 3778,
           "genres": [
             "Fantasy",
             "Horror",
@@ -1009,7 +1059,7 @@
           "title": "Superman",
           "sortTitle": "superman-2025",
           "releaseYear": "2025",
-          "releaseSequence": 3781,
+          "releaseSequence": 3782,
           "genres": [
             "Action",
             "Adventure",
@@ -1030,7 +1080,7 @@
           "title": "Superman",
           "sortTitle": "superman-2025",
           "releaseYear": "2025",
-          "releaseSequence": 3781,
+          "releaseSequence": 3782,
           "genres": [
             "Action",
             "Adventure",
@@ -1480,7 +1530,7 @@
           "title": "Nosferatu",
           "sortTitle": "nosferatu-2024",
           "releaseYear": "2024",
-          "releaseSequence": 3777,
+          "releaseSequence": 3778,
           "genres": [
             "Fantasy",
             "Horror",
@@ -1626,7 +1676,7 @@
           "title": "The Collector",
           "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseSequence": 3388,
+          "releaseSequence": 3389,
           "genres": [
             "Horror",
             "Thriller"
@@ -1646,7 +1696,7 @@
           "title": "The Collector",
           "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseSequence": 3388,
+          "releaseSequence": 3389,
           "genres": [
             "Horror",
             "Thriller"
@@ -1673,7 +1723,7 @@
           "title": "The Collector",
           "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseSequence": 3388,
+          "releaseSequence": 3389,
           "genres": [
             "Horror",
             "Thriller"
@@ -1693,7 +1743,7 @@
           "title": "The Collector",
           "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseSequence": 3388,
+          "releaseSequence": 3389,
           "genres": [
             "Horror",
             "Thriller"
