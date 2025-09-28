@@ -21,7 +21,7 @@ export function createReviewValue(
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
     },
-    releaseSequence: testIdCounter,
+    releaseDate: `1970-01-${String(testIdCounter).padStart(2, "0")}`,
     releaseYear: "1970",
     reviewDisplayDate: "Jan 1, 2020",
     reviewMonth: "January",

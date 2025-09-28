@@ -203,17 +203,17 @@ describe("AllReviews", () => {
     it("sorts by release date oldest first", async ({ expect }) => {
       const reviews = [
         createReviewValue({
-          releaseSequence: 2,
+          releaseDate: "1990-06-15",
           releaseYear: "1990",
           title: "Movie 1990",
         }),
         createReviewValue({
-          releaseSequence: 1,
+          releaseDate: "1970-03-10",
           releaseYear: "1970",
           title: "Movie 1970",
         }),
         createReviewValue({
-          releaseSequence: 3,
+          releaseDate: "2010-12-25",
           releaseYear: "2010",
           title: "Movie 2010",
         }),
@@ -237,17 +237,17 @@ describe("AllReviews", () => {
     it("sorts by release date newest first", async ({ expect }) => {
       const reviews = [
         createReviewValue({
-          releaseSequence: 1,
+          releaseDate: "1970-03-10",
           releaseYear: "1970",
           title: "Movie 1970",
         }),
         createReviewValue({
-          releaseSequence: 2,
+          releaseDate: "1990-06-15",
           releaseYear: "1990",
           title: "Movie 1990",
         }),
         createReviewValue({
-          releaseSequence: 3,
+          releaseDate: "2010-12-25",
           releaseYear: "2010",
           title: "Movie 2010",
         }),

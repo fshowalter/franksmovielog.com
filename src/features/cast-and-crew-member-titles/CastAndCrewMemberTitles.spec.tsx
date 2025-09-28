@@ -50,7 +50,7 @@ const createTitle = (
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
     },
-    releaseSequence: testIdCounter,
+    releaseDate: `1960-01-${String(testIdCounter).padStart(2, "0")}`,
     releaseYear: "1960",
     reviewDisplayDate: "Jan 1, 2020",
     reviewSequence: testIdCounter,
@@ -427,17 +427,17 @@ describe("CastAndCrewMemberTitles", () => {
     it("sorts by release date oldest first", async ({ expect }) => {
       const titles = [
         createTitle({
-          releaseSequence: 3,
+          releaseDate: "1980-12-25",
           releaseYear: "1980",
           title: "Family Plot",
         }),
         createTitle({
-          releaseSequence: 1,
+          releaseDate: "1950-03-15",
           releaseYear: "1950",
           title: "Stage Fright",
         }),
         createTitle({
-          releaseSequence: 2,
+          releaseDate: "1965-06-20",
           releaseYear: "1965",
           title: "Marnie",
         }),
@@ -461,17 +461,17 @@ describe("CastAndCrewMemberTitles", () => {
     it("sorts by release date newest first", async ({ expect }) => {
       const titles = [
         createTitle({
-          releaseSequence: 1,
+          releaseDate: "1950-03-15",
           releaseYear: "1950",
           title: "Stage Fright",
         }),
         createTitle({
-          releaseSequence: 2,
+          releaseDate: "1965-06-20",
           releaseYear: "1965",
           title: "Marnie",
         }),
         createTitle({
-          releaseSequence: 3,
+          releaseDate: "1980-12-25",
           releaseYear: "1980",
           title: "Family Plot",
         }),
@@ -722,7 +722,7 @@ describe("CastAndCrewMemberTitles", () => {
       const titles = Array.from({ length: 110 }, (_, i) => {
         const year = 2020 - Math.floor(i / 5);
         return createTitle({
-          releaseSequence: 3000 - i, // Higher sequences for older films to maintain desc order
+          releaseDate: `${year}-${String(Math.floor(Math.random() * 12) + 1).padStart(2, "0")}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, "0")}`,
           releaseYear: String(year),
           title: `Film ${i + 1}`,
         });
