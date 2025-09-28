@@ -9,7 +9,7 @@
       "title": "French Dressing",
       "sortTitle": "french-dressing-1964",
       "releaseYear": "1964",
-      "releaseSequence": 1326,
+      "releaseDate": "1964-04-10",
       "genres": [
         "Comedy",
         "Drama"
@@ -18,7 +18,7 @@
       "grade": "C-",
       "gradeValue": 5,
       "reviewDate": "2022-02-07",
-      "reviewSequence": 1440,
+      "reviewSequence": 2370,
       "creditedAs": [
         "director"
       ],
@@ -32,7 +32,7 @@
       "title": "Isadora",
       "sortTitle": "isadora-1966",
       "releaseYear": "1966",
-      "releaseSequence": 1440,
+      "releaseDate": "1966-09-22",
       "genres": [
         "Biography"
       ],
@@ -57,7 +57,7 @@
       "title": "Billion Dollar Brain",
       "sortTitle": "billion-dollar-brain-1967",
       "releaseYear": "1967",
-      "releaseSequence": 1505,
+      "releaseDate": "1967-11-16",
       "genres": [
         "Crime",
         "Drama",
@@ -67,7 +67,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2008-11-29",
-      "reviewSequence": 741,
+      "reviewSequence": 936,
       "creditedAs": [
         "director"
       ],
@@ -77,36 +77,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0066579",
-      "title": "Women in Love",
-      "sortTitle": "women-in-love-1969",
-      "releaseYear": "1969",
-      "releaseSequence": 1618,
-      "genres": [
-        "Drama",
-        "Romance"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Ken Russell"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0066109",
       "title": "The Music Lovers",
       "sortTitle": "music-lovers-1971",
       "releaseYear": "1971",
-      "releaseSequence": 1689,
+      "releaseDate": "1971-01-24",
       "genres": [
         "Biography",
         "Comedy",
@@ -129,15 +104,14 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0066993",
-      "title": "The Devils",
-      "sortTitle": "devils-1971",
-      "releaseYear": "1971",
-      "releaseSequence": 1723,
+      "imdbId": "tt0066579",
+      "title": "Women in Love",
+      "sortTitle": "women-in-love-1969",
+      "releaseYear": "1969",
+      "releaseDate": "1969-11-13",
       "genres": [
-        "Biography",
         "Drama",
-        "History"
+        "Romance"
       ],
       "slug": null,
       "grade": null,
@@ -145,8 +119,7 @@
       "reviewDate": null,
       "reviewSequence": null,
       "creditedAs": [
-        "director",
-        "writer"
+        "director"
       ],
       "watchlistDirectorNames": [
         "Ken Russell"
@@ -160,7 +133,7 @@
       "title": "The Boy Friend",
       "sortTitle": "boy-friend-1971",
       "releaseYear": "1971",
-      "releaseSequence": 1753,
+      "releaseDate": "1971-12-16",
       "genres": [
         "Comedy",
         "Musical",
@@ -183,11 +156,38 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0066993",
+      "title": "The Devils",
+      "sortTitle": "devils-1971",
+      "releaseYear": "1971",
+      "releaseDate": "1971-07-16",
+      "genres": [
+        "Biography",
+        "Drama",
+        "History"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "Ken Russell"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0069225",
       "title": "Savage Messiah",
       "sortTitle": "savage-messiah-1972",
       "releaseYear": "1972",
-      "releaseSequence": 1787,
+      "releaseDate": "1972-06-28",
       "genres": [
         "Biography",
         "Drama"
@@ -212,7 +212,7 @@
       "title": "Mahler",
       "sortTitle": "mahler-1974",
       "releaseYear": "1974",
-      "releaseSequence": 1913,
+      "releaseDate": "1974-04-04",
       "genres": [
         "Biography",
         "Drama",
@@ -235,37 +235,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0073812",
-      "title": "Tommy",
-      "sortTitle": "tommy-1975",
-      "releaseYear": "1975",
-      "releaseSequence": 1972,
-      "genres": [
-        "Drama",
-        "Musical"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [
-        "Ken Russell"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0073298",
       "title": "Lisztomania",
       "sortTitle": "lisztomania-1975",
       "releaseYear": "1975",
-      "releaseSequence": 2008,
+      "releaseDate": "1975-10-10",
       "genres": [
         "Biography",
         "Comedy",
@@ -289,11 +263,37 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0073812",
+      "title": "Tommy",
+      "sortTitle": "tommy-1975",
+      "releaseYear": "1975",
+      "releaseDate": "1975-03-19",
+      "genres": [
+        "Drama",
+        "Musical"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "Ken Russell"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0076868",
       "title": "Valentino",
       "sortTitle": "valentino-1977",
       "releaseYear": "1977",
-      "releaseSequence": 2107,
+      "releaseDate": "1977-09-07",
       "genres": [
         "Biography",
         "Drama"
@@ -319,7 +319,7 @@
       "title": "Altered States",
       "sortTitle": "altered-states-1980",
       "releaseYear": "1980",
-      "releaseSequence": 2295,
+      "releaseDate": "1980-12-25",
       "genres": [
         "Horror",
         "Sci-Fi",
@@ -345,7 +345,7 @@
       "title": "Crimes of Passion",
       "sortTitle": "crimes-of-passion-1984",
       "releaseYear": "1984",
-      "releaseSequence": 2497,
+      "releaseDate": "1984-10-19",
       "genres": [
         "Drama",
         "Romance",
@@ -367,36 +367,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt2087757",
-      "title": "Faust",
-      "sortTitle": "faust-1985",
-      "releaseYear": "1985",
-      "releaseSequence": 2556,
-      "genres": [
-        "Drama",
-        "Musical"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Ken Russell"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0091142",
       "title": "Gothic",
       "sortTitle": "gothic-1986",
       "releaseYear": "1986",
-      "releaseSequence": 2602,
+      "releaseDate": "1986-11-30",
       "genres": [
         "Drama",
         "Fantasy",
@@ -407,7 +382,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2004-01-09",
-      "reviewSequence": 67,
+      "reviewSequence": 112,
       "creditedAs": [
         "director"
       ],
@@ -421,7 +396,7 @@
       "title": "Aria",
       "sortTitle": "aria-1987",
       "releaseYear": "1987",
-      "releaseSequence": 2619,
+      "releaseDate": "1987-05-19",
       "genres": [
         "Comedy",
         "Drama",
@@ -445,11 +420,35 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0095488",
+      "title": "The Lair of the White Worm",
+      "sortTitle": "lair-of-the-white-worm-1988",
+      "releaseYear": "1988",
+      "releaseDate": "1988-09-14",
+      "genres": [
+        "Comedy",
+        "Horror"
+      ],
+      "slug": "the-lair-of-the-white-worm-1988",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2007-12-14",
+      "reviewSequence": 498,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0096029",
       "title": "Salome's Last Dance",
       "sortTitle": "salomes-last-dance-1988",
       "releaseYear": "1988",
-      "releaseSequence": 2663,
+      "releaseDate": "1988-05-06",
       "genres": [
         "Biography",
         "Comedy",
@@ -473,25 +472,27 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0095488",
-      "title": "The Lair of the White Worm",
-      "sortTitle": "lair-of-the-white-worm-1988",
-      "releaseYear": "1988",
-      "releaseSequence": 2680,
+      "imdbId": "tt0097859",
+      "title": "Il Mefistofele",
+      "sortTitle": "il-mefistofele-1989",
+      "releaseYear": "1989",
+      "releaseDate": "1989-??-??",
       "genres": [
-        "Comedy",
-        "Horror"
+        "Drama",
+        "Fantasy",
+        "Musical"
       ],
-      "slug": "the-lair-of-the-white-worm-1988",
-      "grade": "B-",
-      "gradeValue": 8,
-      "reviewDate": "2007-12-14",
-      "reviewSequence": 365,
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
-        "director",
-        "writer"
+        "director"
       ],
-      "watchlistDirectorNames": [],
+      "watchlistDirectorNames": [
+        "Ken Russell"
+      ],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
@@ -501,7 +502,7 @@
       "title": "The Rainbow",
       "sortTitle": "rainbow-1989",
       "releaseYear": "1989",
-      "releaseSequence": 2706,
+      "releaseDate": "1989-05-05",
       "genres": [
         "Action",
         "Drama",
@@ -524,62 +525,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0097859",
-      "title": "Il Mefistofele",
-      "sortTitle": "il-mefistofele-1989",
-      "releaseYear": "1989",
-      "releaseSequence": 2733,
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Musical"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Ken Russell"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0100949",
-      "title": "Women and Men: Stories of Seduction",
-      "sortTitle": "women-and-men-stories-of-seduction-1990",
-      "releaseYear": "1990",
-      "releaseSequence": 2763,
-      "genres": [
-        "Romance",
-        "Drama"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Ken Russell"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0100530",
       "title": "The Russia House",
       "sortTitle": "russia-house-1990",
       "releaseYear": "1990",
-      "releaseSequence": 2776,
+      "releaseDate": "1990-12-21",
       "genres": [
         "Drama",
         "Romance",
@@ -605,7 +555,7 @@
       "title": "The Strange Affliction of Anton Bruckner",
       "sortTitle": "strange-affliction-of-anton-bruckner-1990",
       "releaseYear": "1990",
-      "releaseSequence": 2778,
+      "releaseDate": "1990-??-??",
       "genres": [
         "Biography"
       ],
@@ -626,12 +576,13 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0103253",
-      "title": "Whore",
-      "sortTitle": "whore-1991",
-      "releaseYear": "1991",
-      "releaseSequence": 2787,
+      "imdbId": "tt0100949",
+      "title": "Women and Men: Stories of Seduction",
+      "sortTitle": "women-and-men-stories-of-seduction-1990",
+      "releaseYear": "1990",
+      "releaseDate": "1990-08-19",
       "genres": [
+        "Romance",
         "Drama"
       ],
       "slug": null,
@@ -640,8 +591,7 @@
       "reviewDate": null,
       "reviewSequence": null,
       "creditedAs": [
-        "director",
-        "writer"
+        "director"
       ],
       "watchlistDirectorNames": [
         "Ken Russell"
@@ -655,7 +605,7 @@
       "title": "Prisoner of Honor",
       "sortTitle": "prisoner-of-honor-1991",
       "releaseYear": "1991",
-      "releaseSequence": 2797,
+      "releaseDate": "1991-11-02",
       "genres": [
         "Biography",
         "Drama"
@@ -676,11 +626,36 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0103253",
+      "title": "Whore",
+      "sortTitle": "whore-1991",
+      "releaseYear": "1991",
+      "releaseDate": "1991-06-21",
+      "genres": [
+        "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "Ken Russell"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0105339",
       "title": "The Secret Life of Arnold Bax",
       "sortTitle": "secret-life-of-arnold-bax-1992",
       "releaseYear": "1992",
-      "releaseSequence": 2827,
+      "releaseDate": "1992-11-22",
       "genres": [
         "Drama"
       ],
@@ -702,64 +677,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0213101",
-      "title": "The Mystery of Dr Martinu",
-      "sortTitle": "mystery-of-dr-martinu-1993",
-      "releaseYear": "1993",
-      "releaseSequence": 2862,
-      "genres": [
-        "Drama",
-        "Music",
-        "Musical"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Ken Russell"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0756354",
-      "title": "Treasure Island",
-      "sortTitle": "treasure-island-1995",
-      "releaseYear": "1995",
-      "releaseSequence": 2914,
-      "genres": [
-        "Adventure",
-        "Comedy",
-        "Musical"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [
-        "Ken Russell"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0113826",
       "title": "Mindbender",
       "sortTitle": "mindbender-1996",
       "releaseYear": "1996",
-      "releaseSequence": 2932,
+      "releaseDate": "1996-08-02",
       "genres": [
         "Biography",
         "Drama",
@@ -786,7 +708,7 @@
       "title": "Tales of Erotica",
       "sortTitle": "tales-of-erotica-1996",
       "releaseYear": "1996",
-      "releaseSequence": 2947,
+      "releaseDate": "1996-??-??",
       "genres": [
         "Drama",
         "Comedy"
@@ -813,10 +735,36 @@
       "title": "Dogboys",
       "sortTitle": "dogboys-1998",
       "releaseYear": "1998",
-      "releaseSequence": 2981,
+      "releaseDate": "1998-04-04",
       "genres": [
         "Action",
         "Thriller"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Ken Russell"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0213101",
+      "title": "The Mystery of Dr Martinu",
+      "sortTitle": "mystery-of-dr-martinu-1993",
+      "releaseYear": "1993",
+      "releaseDate": "1993-??-??",
+      "genres": [
+        "Drama",
+        "Music",
+        "Musical"
       ],
       "slug": null,
       "grade": null,
@@ -838,7 +786,7 @@
       "title": "The Fall of the Louse of Usher: A Gothic Tale for the 21st Century",
       "sortTitle": "fall-of-the-louse-of-usher-a-gothic-tale-for-the-21st-century-2002",
       "releaseYear": "2002",
-      "releaseSequence": 3091,
+      "releaseDate": "2002-02-03",
       "genres": [
         "Comedy",
         "Fantasy",
@@ -868,7 +816,7 @@
       "title": "Trapped Ashes",
       "sortTitle": "trapped-ashes-2006",
       "releaseYear": "2006",
-      "releaseSequence": 3240,
+      "releaseDate": "2006-09-12",
       "genres": [
         "Horror"
       ],
@@ -880,6 +828,58 @@
       "creditedAs": [
         "director",
         "performer"
+      ],
+      "watchlistDirectorNames": [
+        "Ken Russell"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0756354",
+      "title": "Treasure Island",
+      "sortTitle": "treasure-island-1995",
+      "releaseYear": "1995",
+      "releaseDate": "1995-12-24",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Musical"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "Ken Russell"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt2087757",
+      "title": "Faust",
+      "sortTitle": "faust-1985",
+      "releaseYear": "1985",
+      "releaseDate": "1985-??-??",
+      "genres": [
+        "Drama",
+        "Musical"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
       ],
       "watchlistDirectorNames": [
         "Ken Russell"

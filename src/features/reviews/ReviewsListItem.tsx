@@ -13,7 +13,7 @@ export type ReviewsValue = {
   gradeValue: number;
   imdbId: string;
   posterImageProps: PosterImageProps;
-  releaseSequence: number;
+  releaseDate: string;
   releaseYear: string;
   reviewDisplayDate: string;
   reviewMonth?: string;

@@ -1,12 +1,13 @@
-import { createSorter, sortNumber, sortString } from "./createSorter";
+import { createSorter, sortString } from "./createSorter";
 
 /**
  * Interface for reviewed work items that can be sorted.
  * Contains all the fields necessary for sorting and grouping reviewed works.
  */
 export type SortableTitle = {
+  imdbId: string;
   /** Numeric sequence for release year sorting */
-  releaseSequence: number;
+  releaseDate: string;
   /** Year the work was published */
   releaseYear: string;
   /** Normalized title for sorting (typically lowercase) */
@@ -43,6 +44,10 @@ export function createTitleSorter<
   };
 }
 
+function createReleaseSequence<TValue extends SortableTitle>(value: TValue) {
+  return `${value.releaseDate}${value.imdbId}`;
+}
+
 /**
  * Creates release year-based sort functions.
  *
@@ -52,9 +57,9 @@ export function createTitleSorter<
 function sortReleaseDate<TValue extends SortableTitle>() {
   return {
     "release-date-asc": (a: TValue, b: TValue) =>
-      sortNumber(a.releaseSequence, b.releaseSequence),
+      sortString(createReleaseSequence(a), createReleaseSequence(b)),
     "release-date-desc": (a: TValue, b: TValue) =>
-      sortNumber(a.releaseSequence, b.releaseSequence) * -1,
+      sortString(createReleaseSequence(a), createReleaseSequence(b)) * -1,
   };
 }
 

@@ -37,7 +37,7 @@ const createWatchlistTitle = (
   return {
     genres: [],
     imdbId: overrides.imdbId ?? `tt${String(testIdCounter).padStart(7, "0")}`,
-    releaseSequence: testIdCounter,
+    releaseDate: `1959-03-${String(testIdCounter).padStart(2, "0")}`,
     releaseYear: "1959",
     sortTitle: "Rio Bravo",
     title: "Rio Bravo",
@@ -424,17 +424,17 @@ describe("Watchlist", () => {
     it("sorts by release date oldest first", async ({ expect }) => {
       const titles = [
         createWatchlistTitle({
-          releaseSequence: 3,
+          releaseDate: "1982-06-25",
           releaseYear: "1982",
           title: "The Thing",
         }),
         createWatchlistTitle({
-          releaseSequence: 1,
+          releaseDate: "1959-03-18",
           releaseYear: "1959",
           title: "Rio Bravo",
         }),
         createWatchlistTitle({
-          releaseSequence: 2,
+          releaseDate: "1979-06-08",
           releaseYear: "1979",
           title: "Alien",
         }),
@@ -458,17 +458,17 @@ describe("Watchlist", () => {
     it("sorts by release date newest first", async ({ expect }) => {
       const titles = [
         createWatchlistTitle({
-          releaseSequence: 1,
+          releaseDate: "1959-03-18",
           releaseYear: "1959",
           title: "Rio Bravo",
         }),
         createWatchlistTitle({
-          releaseSequence: 2,
+          releaseDate: "1979-06-08",
           releaseYear: "1979",
           title: "Alien",
         }),
         createWatchlistTitle({
-          releaseSequence: 3,
+          releaseDate: "1982-06-25",
           releaseYear: "1982",
           title: "The Thing",
         }),
@@ -779,7 +779,7 @@ describe("Watchlist", () => {
       const testTitles = Array.from({ length: 150 }, (_, i) =>
         createWatchlistTitle({
           imdbId: `tt${String(i + 1).padStart(7, "0")}`,
-          releaseSequence: i + 1,
+          releaseDate: `${1950 + Math.floor(i / 3)}-01-${String((i % 30) + 1).padStart(2, "0")}`,
           releaseYear: String(1950 + Math.floor(i / 3)),
           sortTitle: `Movie ${String(i + 1).padStart(3, "0")}`,
           title: `Movie ${String(i + 1).padStart(3, "0")}`,

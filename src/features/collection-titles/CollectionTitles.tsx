@@ -46,7 +46,7 @@ export type CollectionTitlesValue = {
   gradeValue?: number;
   imdbId: string;
   posterImageProps: PosterImageProps;
-  releaseSequence: number;
+  releaseDate: string;
   releaseYear: string;
   reviewDisplayDate: string;
   reviewSequence?: number;

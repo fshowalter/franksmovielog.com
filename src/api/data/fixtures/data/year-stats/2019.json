@@ -103,7 +103,6 @@
       "title": "Avengers: Endgame",
       "releaseYear": "2019",
       "sortTitle": "avengers-endgame-2019",
-      "releaseSequence": 3674,
       "genres": [
         "Action",
         "Adventure",
@@ -115,14 +114,14 @@
       "gradeSequence": 68,
       "reviewDate": "2020-11-14",
       "reviewSequence": 1131,
-      "count": 3
+      "count": 3,
+      "releaseDate": "2019-01-25"
     },
     {
       "imdbId": "tt0085636",
       "title": "Halloween III: Season of the Witch",
       "releaseYear": "1982",
       "sortTitle": "halloween-iii-season-of-the-witch-1982",
-      "releaseSequence": 2402,
       "genres": [
         "Horror",
         "Mystery",
@@ -135,14 +134,14 @@
       "gradeSequence": null,
       "reviewDate": null,
       "reviewSequence": null,
-      "count": 2
+      "count": 2,
+      "releaseDate": "1982-08-01"
     },
     {
       "imdbId": "tt0211443",
       "title": "Jason X",
       "releaseYear": "2001",
       "sortTitle": "jason-x-2001",
-      "releaseSequence": 3067,
       "genres": [
         "Action",
         "Horror",
@@ -155,14 +154,14 @@
       "gradeSequence": 389,
       "reviewDate": "2025-06-13",
       "reviewSequence": 1787,
-      "count": 2
+      "count": 2,
+      "releaseDate": "2001-05-28"
     },
     {
       "imdbId": "tt7131622",
       "title": "Once Upon a Time... in Hollywood",
       "releaseYear": "2019",
       "sortTitle": "once-upon-a-time-in-hollywood-2019",
-      "releaseSequence": 3679,
       "genres": [
         "Comedy",
         "Drama"
@@ -173,7 +172,8 @@
       "gradeSequence": null,
       "reviewDate": null,
       "reviewSequence": null,
-      "count": 2
+      "count": 2,
+      "releaseDate": "2019-01-30"
     }
   ],
   "mostWatchedDirectors": [
@@ -187,7 +187,6 @@
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -202,14 +201,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -224,14 +223,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -246,7 +245,8 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         }
       ]
     },
@@ -260,7 +260,6 @@
           "title": "Halloween II",
           "sortTitle": "halloween-ii-1981",
           "releaseYear": "1981",
-          "releaseSequence": 2349,
           "genres": [
             "Horror"
           ],
@@ -273,14 +272,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1854,
           "medium": "Amazon",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1981-06-09"
         },
         {
           "imdbId": "tt0220506",
           "title": "Halloween: Resurrection",
           "sortTitle": "halloween-resurrection-2002",
           "releaseYear": "2002",
-          "releaseSequence": 3103,
           "genres": [
             "Horror",
             "Thriller"
@@ -294,7 +293,8 @@
           "viewingDate": "2019-02-15",
           "viewingSequence": 1862,
           "medium": "Hulu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2002-07-03"
         }
       ]
     },
@@ -308,7 +308,6 @@
           "title": "Halloween III: Season of the Witch",
           "sortTitle": "halloween-iii-season-of-the-witch-1982",
           "releaseYear": "1982",
-          "releaseSequence": 2402,
           "genres": [
             "Horror",
             "Mystery",
@@ -324,14 +323,14 @@
           "viewingDate": "2019-02-01",
           "viewingSequence": 1855,
           "medium": "Vudu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1982-08-01"
         },
         {
           "imdbId": "tt0085636",
           "title": "Halloween III: Season of the Witch",
           "sortTitle": "halloween-iii-season-of-the-witch-1982",
           "releaseYear": "1982",
-          "releaseSequence": 2402,
           "genres": [
             "Horror",
             "Mystery",
@@ -347,7 +346,8 @@
           "viewingDate": "2019-10-22",
           "viewingSequence": 1915,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1982-08-01"
         }
       ]
     },
@@ -361,7 +361,6 @@
           "title": "Halloween H20: 20 Years Later",
           "sortTitle": "halloween-h20-20-years-later-1998",
           "releaseYear": "1998",
-          "releaseSequence": 2986,
           "genres": [
             "Horror",
             "Thriller"
@@ -375,14 +374,14 @@
           "viewingDate": "2019-02-09",
           "viewingSequence": 1860,
           "medium": "Vudu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1998-03-08"
         },
         {
           "imdbId": "tt0082418",
           "title": "Friday the 13th Part 2",
           "sortTitle": "friday-the-13th-part-2-1981",
           "releaseYear": "1981",
-          "releaseSequence": 2316,
           "genres": [
             "Horror",
             "Mystery",
@@ -397,7 +396,8 @@
           "viewingDate": "2019-09-13",
           "viewingSequence": 1907,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1981-05-07"
         }
       ]
     },
@@ -411,7 +411,6 @@
           "title": "Jason X",
           "sortTitle": "jason-x-2001",
           "releaseYear": "2001",
-          "releaseSequence": 3067,
           "genres": [
             "Action",
             "Horror",
@@ -427,14 +426,14 @@
           "viewingDate": "2019-02-16",
           "viewingSequence": 1864,
           "medium": "Netflix",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2001-05-28"
         },
         {
           "imdbId": "tt0211443",
           "title": "Jason X",
           "sortTitle": "jason-x-2001",
           "releaseYear": "2001",
-          "releaseSequence": 3067,
           "genres": [
             "Action",
             "Horror",
@@ -450,7 +449,8 @@
           "viewingDate": "2019-12-13",
           "viewingSequence": 1926,
           "medium": "Vudu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2001-05-28"
         }
       ]
     },
@@ -464,7 +464,6 @@
           "title": "Pusher",
           "sortTitle": "pusher-1996",
           "releaseYear": "1996",
-          "releaseSequence": 2934,
           "genres": [
             "Crime",
             "Thriller"
@@ -478,14 +477,14 @@
           "viewingDate": "2019-05-25",
           "viewingSequence": 1880,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1996-01-15"
         },
         {
           "imdbId": "tt0780504",
           "title": "Drive",
           "sortTitle": "drive-2011",
           "releaseYear": "2011",
-          "releaseSequence": 3438,
           "genres": [
             "Action",
             "Drama"
@@ -499,7 +498,8 @@
           "viewingDate": "2019-08-05",
           "viewingSequence": 1892,
           "medium": null,
-          "venue": "Prince Charles Cinema"
+          "venue": "Prince Charles Cinema",
+          "releaseDate": "2011-06-03"
         }
       ]
     },
@@ -513,7 +513,6 @@
           "title": "The Resurrected",
           "sortTitle": "resurrected-1991",
           "releaseYear": "1991",
-          "releaseSequence": 2794,
           "genres": [
             "Horror"
           ],
@@ -526,14 +525,14 @@
           "viewingDate": "2019-07-20",
           "viewingSequence": 1888,
           "medium": "Blu-ray",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1991-08-28"
         },
         {
           "imdbId": "tt0089907",
           "title": "The Return of the Living Dead",
           "sortTitle": "return-of-the-living-dead-1985",
           "releaseYear": "1985",
-          "releaseSequence": 2520,
           "genres": [
             "Comedy",
             "Horror",
@@ -548,7 +547,8 @@
           "viewingDate": "2019-07-23",
           "viewingSequence": 1889,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1985-11-27"
         }
       ]
     },
@@ -562,7 +562,6 @@
           "title": "Once Upon a Time... in Hollywood",
           "sortTitle": "once-upon-a-time-in-hollywood-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3679,
           "genres": [
             "Comedy",
             "Drama"
@@ -576,14 +575,14 @@
           "viewingDate": "2019-08-22",
           "viewingSequence": 1898,
           "medium": "35mm",
-          "venue": "AFI Silver"
+          "venue": "AFI Silver",
+          "releaseDate": "2019-01-30"
         },
         {
           "imdbId": "tt7131622",
           "title": "Once Upon a Time... in Hollywood",
           "sortTitle": "once-upon-a-time-in-hollywood-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3679,
           "genres": [
             "Comedy",
             "Drama"
@@ -597,7 +596,8 @@
           "viewingDate": "2019-09-09",
           "viewingSequence": 1905,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-30"
         }
       ]
     },
@@ -611,7 +611,6 @@
           "title": "The Texas Chain Saw Massacre",
           "sortTitle": "texas-chain-saw-massacre-1974",
           "releaseYear": "1974",
-          "releaseSequence": 1945,
           "genres": [
             "Horror"
           ],
@@ -624,14 +623,14 @@
           "viewingDate": "2019-08-27",
           "viewingSequence": 1901,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1974-05-01"
         },
         {
           "imdbId": "tt0092076",
           "title": "The Texas Chainsaw Massacre 2",
           "sortTitle": "texas-chainsaw-massacre-2-1986",
           "releaseYear": "1986",
-          "releaseSequence": 2590,
           "genres": [
             "Comedy",
             "Horror"
@@ -645,7 +644,8 @@
           "viewingDate": "2019-08-27",
           "viewingSequence": 1902,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1986-02-05"
         }
       ]
     }
@@ -661,7 +661,6 @@
           "title": "Halloween",
           "sortTitle": "halloween-1978",
           "releaseYear": "1978",
-          "releaseSequence": 2159,
           "genres": [
             "Horror",
             "Thriller"
@@ -675,14 +674,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1853,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1978-12-01"
         },
         {
           "imdbId": "tt0082495",
           "title": "Halloween II",
           "sortTitle": "halloween-ii-1981",
           "releaseYear": "1981",
-          "releaseSequence": 2349,
           "genres": [
             "Horror"
           ],
@@ -695,14 +694,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1854,
           "medium": "Amazon",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1981-06-09"
         },
         {
           "imdbId": "tt0085636",
           "title": "Halloween III: Season of the Witch",
           "sortTitle": "halloween-iii-season-of-the-witch-1982",
           "releaseYear": "1982",
-          "releaseSequence": 2402,
           "genres": [
             "Horror",
             "Mystery",
@@ -718,14 +717,14 @@
           "viewingDate": "2019-02-01",
           "viewingSequence": 1855,
           "medium": "Vudu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1982-08-01"
         },
         {
           "imdbId": "tt0120694",
           "title": "Halloween H20: 20 Years Later",
           "sortTitle": "halloween-h20-20-years-later-1998",
           "releaseYear": "1998",
-          "releaseSequence": 2986,
           "genres": [
             "Horror",
             "Thriller"
@@ -739,14 +738,14 @@
           "viewingDate": "2019-02-09",
           "viewingSequence": 1860,
           "medium": "Vudu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1998-03-08"
         },
         {
           "imdbId": "tt0220506",
           "title": "Halloween: Resurrection",
           "sortTitle": "halloween-resurrection-2002",
           "releaseYear": "2002",
-          "releaseSequence": 3103,
           "genres": [
             "Horror",
             "Thriller"
@@ -760,14 +759,14 @@
           "viewingDate": "2019-02-15",
           "viewingSequence": 1862,
           "medium": "Hulu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2002-07-03"
         },
         {
           "imdbId": "tt0085636",
           "title": "Halloween III: Season of the Witch",
           "sortTitle": "halloween-iii-season-of-the-witch-1982",
           "releaseYear": "1982",
-          "releaseSequence": 2402,
           "genres": [
             "Horror",
             "Mystery",
@@ -783,14 +782,14 @@
           "viewingDate": "2019-10-22",
           "viewingSequence": 1915,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1982-08-01"
         },
         {
           "imdbId": "tt8946378",
           "title": "Knives Out",
           "sortTitle": "knives-out-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3690,
           "genres": [
             "Comedy",
             "Crime",
@@ -807,7 +806,8 @@
           "viewingDate": "2019-12-18",
           "viewingSequence": 1928,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-02-10"
         }
       ]
     },
@@ -821,7 +821,6 @@
           "title": "Halloween",
           "sortTitle": "halloween-1978",
           "releaseYear": "1978",
-          "releaseSequence": 2159,
           "genres": [
             "Horror",
             "Thriller"
@@ -835,14 +834,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1853,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1978-12-01"
         },
         {
           "imdbId": "tt0082495",
           "title": "Halloween II",
           "sortTitle": "halloween-ii-1981",
           "releaseYear": "1981",
-          "releaseSequence": 2349,
           "genres": [
             "Horror"
           ],
@@ -855,14 +854,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1854,
           "medium": "Amazon",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1981-06-09"
         },
         {
           "imdbId": "tt0095271",
           "title": "Halloween 4: The Return of Michael Myers",
           "sortTitle": "halloween-4-the-return-of-michael-myers-1988",
           "releaseYear": "1988",
-          "releaseSequence": 2681,
           "genres": [
             "Horror",
             "Thriller"
@@ -876,14 +875,14 @@
           "viewingDate": "2019-02-01",
           "viewingSequence": 1856,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1988-05-06"
         },
         {
           "imdbId": "tt0097474",
           "title": "Halloween 5: The Revenge of Michael Myers",
           "sortTitle": "halloween-5-the-revenge-of-michael-myers-1989",
           "releaseYear": "1989",
-          "releaseSequence": 2720,
           "genres": [
             "Horror",
             "Thriller"
@@ -897,14 +896,14 @@
           "viewingDate": "2019-02-02",
           "viewingSequence": 1857,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1989-06-15"
         },
         {
           "imdbId": "tt0113253",
           "title": "Halloween: The Curse of Michael Myers",
           "sortTitle": "halloween-the-curse-of-michael-myers-1995",
           "releaseYear": "1995",
-          "releaseSequence": 2905,
           "genres": [
             "Horror",
             "Thriller"
@@ -918,7 +917,8 @@
           "viewingDate": "2019-02-02",
           "viewingSequence": 1858,
           "medium": "Amazon",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1995-12-17"
         }
       ]
     },
@@ -932,7 +932,6 @@
           "title": "Captain Marvel",
           "sortTitle": "captain-marvel-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3669,
           "genres": [
             "Action",
             "Adventure",
@@ -947,14 +946,14 @@
           "viewingDate": "2019-03-16",
           "viewingSequence": 1866,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-20"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -969,14 +968,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -991,14 +990,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1013,14 +1012,14 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt1959563",
           "title": "The Hitman's Bodyguard",
           "sortTitle": "hitmans-bodyguard-2017",
           "releaseYear": "2017",
-          "releaseSequence": 3631,
           "genres": [
             "Action",
             "Comedy",
@@ -1036,7 +1035,8 @@
           "viewingDate": "2019-06-23",
           "viewingSequence": 1885,
           "medium": "iTunes",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2017-12-13"
         }
       ]
     },
@@ -1050,7 +1050,6 @@
           "title": "Halloween",
           "sortTitle": "halloween-1978",
           "releaseYear": "1978",
-          "releaseSequence": 2159,
           "genres": [
             "Horror",
             "Thriller"
@@ -1064,14 +1063,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1853,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1978-12-01"
         },
         {
           "imdbId": "tt0082495",
           "title": "Halloween II",
           "sortTitle": "halloween-ii-1981",
           "releaseYear": "1981",
-          "releaseSequence": 2349,
           "genres": [
             "Horror"
           ],
@@ -1084,14 +1083,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1854,
           "medium": "Amazon",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1981-06-09"
         },
         {
           "imdbId": "tt0085636",
           "title": "Halloween III: Season of the Witch",
           "sortTitle": "halloween-iii-season-of-the-witch-1982",
           "releaseYear": "1982",
-          "releaseSequence": 2402,
           "genres": [
             "Horror",
             "Mystery",
@@ -1107,14 +1106,14 @@
           "viewingDate": "2019-02-01",
           "viewingSequence": 1855,
           "medium": "Vudu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1982-08-01"
         },
         {
           "imdbId": "tt0085636",
           "title": "Halloween III: Season of the Witch",
           "sortTitle": "halloween-iii-season-of-the-witch-1982",
           "releaseYear": "1982",
-          "releaseSequence": 2402,
           "genres": [
             "Horror",
             "Mystery",
@@ -1130,7 +1129,8 @@
           "viewingDate": "2019-10-22",
           "viewingSequence": 1915,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1982-08-01"
         }
       ]
     },
@@ -1144,7 +1144,6 @@
           "title": "Halloween 4: The Return of Michael Myers",
           "sortTitle": "halloween-4-the-return-of-michael-myers-1988",
           "releaseYear": "1988",
-          "releaseSequence": 2681,
           "genres": [
             "Horror",
             "Thriller"
@@ -1158,14 +1157,14 @@
           "viewingDate": "2019-02-01",
           "viewingSequence": 1856,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1988-05-06"
         },
         {
           "imdbId": "tt0097474",
           "title": "Halloween 5: The Revenge of Michael Myers",
           "sortTitle": "halloween-5-the-revenge-of-michael-myers-1989",
           "releaseYear": "1989",
-          "releaseSequence": 2720,
           "genres": [
             "Horror",
             "Thriller"
@@ -1179,14 +1178,14 @@
           "viewingDate": "2019-02-02",
           "viewingSequence": 1857,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1989-06-15"
         },
         {
           "imdbId": "tt7131622",
           "title": "Once Upon a Time... in Hollywood",
           "sortTitle": "once-upon-a-time-in-hollywood-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3679,
           "genres": [
             "Comedy",
             "Drama"
@@ -1200,14 +1199,14 @@
           "viewingDate": "2019-08-22",
           "viewingSequence": 1898,
           "medium": "35mm",
-          "venue": "AFI Silver"
+          "venue": "AFI Silver",
+          "releaseDate": "2019-01-30"
         },
         {
           "imdbId": "tt7131622",
           "title": "Once Upon a Time... in Hollywood",
           "sortTitle": "once-upon-a-time-in-hollywood-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3679,
           "genres": [
             "Comedy",
             "Drama"
@@ -1221,7 +1220,8 @@
           "viewingDate": "2019-09-09",
           "viewingSequence": 1905,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-30"
         }
       ]
     },
@@ -1235,7 +1235,6 @@
           "title": "Halloween: The Curse of Michael Myers",
           "sortTitle": "halloween-the-curse-of-michael-myers-1995",
           "releaseYear": "1995",
-          "releaseSequence": 2905,
           "genres": [
             "Horror",
             "Thriller"
@@ -1249,14 +1248,14 @@
           "viewingDate": "2019-02-02",
           "viewingSequence": 1858,
           "medium": "Amazon",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1995-12-17"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1271,14 +1270,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1293,14 +1292,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1315,7 +1314,8 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         }
       ]
     },
@@ -1329,7 +1329,6 @@
           "title": "Captain Marvel",
           "sortTitle": "captain-marvel-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3669,
           "genres": [
             "Action",
             "Adventure",
@@ -1344,14 +1343,14 @@
           "viewingDate": "2019-03-16",
           "viewingSequence": 1866,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-20"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1366,14 +1365,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1388,14 +1387,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1410,7 +1409,8 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         }
       ]
     },
@@ -1424,7 +1424,6 @@
           "title": "Captain Marvel",
           "sortTitle": "captain-marvel-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3669,
           "genres": [
             "Action",
             "Adventure",
@@ -1439,14 +1438,14 @@
           "viewingDate": "2019-03-16",
           "viewingSequence": 1866,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-20"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1461,14 +1460,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1483,14 +1482,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1505,7 +1504,8 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         }
       ]
     },
@@ -1519,7 +1519,6 @@
           "title": "Us",
           "sortTitle": "us-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3670,
           "genres": [
             "Horror",
             "Mystery",
@@ -1534,14 +1533,14 @@
           "viewingDate": "2019-04-01",
           "viewingSequence": 1868,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-21"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1556,14 +1555,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1578,14 +1577,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1600,7 +1599,8 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         }
       ]
     },
@@ -1614,7 +1614,6 @@
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1629,14 +1628,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1651,14 +1650,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1673,14 +1672,14 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt8946378",
           "title": "Knives Out",
           "sortTitle": "knives-out-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3690,
           "genres": [
             "Comedy",
             "Crime",
@@ -1697,7 +1696,8 @@
           "viewingDate": "2019-12-18",
           "viewingSequence": 1928,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-02-10"
         }
       ]
     }
@@ -1713,7 +1713,6 @@
           "title": "My Bloody Valentine",
           "sortTitle": "my-bloody-valentine-2009",
           "releaseYear": "2009",
-          "releaseSequence": 3364,
           "genres": [
             "Horror",
             "Mystery",
@@ -1728,14 +1727,14 @@
           "viewingDate": "2019-02-12",
           "viewingSequence": 1861,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2009-03-21"
         },
         {
           "imdbId": "tt0211443",
           "title": "Jason X",
           "sortTitle": "jason-x-2001",
           "releaseYear": "2001",
-          "releaseSequence": 3067,
           "genres": [
             "Action",
             "Horror",
@@ -1751,14 +1750,14 @@
           "viewingDate": "2019-02-16",
           "viewingSequence": 1864,
           "medium": "Netflix",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2001-05-28"
         },
         {
           "imdbId": "tt0211443",
           "title": "Jason X",
           "sortTitle": "jason-x-2001",
           "releaseYear": "2001",
-          "releaseSequence": 3067,
           "genres": [
             "Action",
             "Horror",
@@ -1774,7 +1773,8 @@
           "viewingDate": "2019-12-13",
           "viewingSequence": 1926,
           "medium": "Vudu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2001-05-28"
         }
       ]
     },
@@ -1788,7 +1788,6 @@
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1803,14 +1802,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1825,14 +1824,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1847,7 +1846,8 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         }
       ]
     },
@@ -1861,7 +1861,6 @@
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1876,14 +1875,14 @@
           "viewingDate": "2019-05-13",
           "viewingSequence": 1875,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1898,14 +1897,14 @@
           "viewingDate": "2019-05-16",
           "viewingSequence": 1876,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         },
         {
           "imdbId": "tt4154796",
           "title": "Avengers: Endgame",
           "sortTitle": "avengers-endgame-2019",
           "releaseYear": "2019",
-          "releaseSequence": 3674,
           "genres": [
             "Action",
             "Adventure",
@@ -1920,7 +1919,8 @@
           "viewingDate": "2019-06-03",
           "viewingSequence": 1881,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "2019-01-25"
         }
       ]
     },
@@ -1934,7 +1934,6 @@
           "title": "Skyfall",
           "sortTitle": "skyfall-2012",
           "releaseYear": "2012",
-          "releaseSequence": 3496,
           "genres": [
             "Action",
             "Adventure",
@@ -1949,14 +1948,14 @@
           "viewingDate": "2019-12-28",
           "viewingSequence": 1932,
           "medium": "iTunes",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2012-07-30"
         },
         {
           "imdbId": "tt0381061",
           "title": "Casino Royale",
           "sortTitle": "casino-royale-2006",
           "releaseYear": "2006",
-          "releaseSequence": 3246,
           "genres": [
             "Action",
             "Adventure",
@@ -1971,14 +1970,14 @@
           "viewingDate": "2019-12-29",
           "viewingSequence": 1933,
           "medium": "iTunes",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2006-11-23"
         },
         {
           "imdbId": "tt0830515",
           "title": "Quantum of Solace",
           "sortTitle": "quantum-of-solace-2008",
           "releaseYear": "2008",
-          "releaseSequence": 3354,
           "genres": [
             "Action",
             "Adventure",
@@ -1994,7 +1993,8 @@
           "viewingDate": "2019-12-30",
           "viewingSequence": 1934,
           "medium": "iTunes",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2008-03-10"
         }
       ]
     },
@@ -2008,7 +2008,6 @@
           "title": "Skyfall",
           "sortTitle": "skyfall-2012",
           "releaseYear": "2012",
-          "releaseSequence": 3496,
           "genres": [
             "Action",
             "Adventure",
@@ -2023,14 +2022,14 @@
           "viewingDate": "2019-12-28",
           "viewingSequence": 1932,
           "medium": "iTunes",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2012-07-30"
         },
         {
           "imdbId": "tt0381061",
           "title": "Casino Royale",
           "sortTitle": "casino-royale-2006",
           "releaseYear": "2006",
-          "releaseSequence": 3246,
           "genres": [
             "Action",
             "Adventure",
@@ -2045,14 +2044,14 @@
           "viewingDate": "2019-12-29",
           "viewingSequence": 1933,
           "medium": "iTunes",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2006-11-23"
         },
         {
           "imdbId": "tt0830515",
           "title": "Quantum of Solace",
           "sortTitle": "quantum-of-solace-2008",
           "releaseYear": "2008",
-          "releaseSequence": 3354,
           "genres": [
             "Action",
             "Adventure",
@@ -2068,7 +2067,8 @@
           "viewingDate": "2019-12-30",
           "viewingSequence": 1934,
           "medium": "iTunes",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2008-03-10"
         }
       ]
     },
@@ -2082,7 +2082,6 @@
           "title": "Halloween",
           "sortTitle": "halloween-1978",
           "releaseYear": "1978",
-          "releaseSequence": 2159,
           "genres": [
             "Horror",
             "Thriller"
@@ -2096,14 +2095,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1853,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1978-12-01"
         },
         {
           "imdbId": "tt0082495",
           "title": "Halloween II",
           "sortTitle": "halloween-ii-1981",
           "releaseYear": "1981",
-          "releaseSequence": 2349,
           "genres": [
             "Horror"
           ],
@@ -2116,7 +2115,8 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1854,
           "medium": "Amazon",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1981-06-09"
         }
       ]
     },
@@ -2130,7 +2130,6 @@
           "title": "Halloween",
           "sortTitle": "halloween-1978",
           "releaseYear": "1978",
-          "releaseSequence": 2159,
           "genres": [
             "Horror",
             "Thriller"
@@ -2144,14 +2143,14 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1853,
           "medium": "Shudder",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1978-12-01"
         },
         {
           "imdbId": "tt0082495",
           "title": "Halloween II",
           "sortTitle": "halloween-ii-1981",
           "releaseYear": "1981",
-          "releaseSequence": 2349,
           "genres": [
             "Horror"
           ],
@@ -2164,7 +2163,8 @@
           "viewingDate": "2019-01-31",
           "viewingSequence": 1854,
           "medium": "Amazon",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1981-06-09"
         }
       ]
     },
@@ -2178,7 +2178,6 @@
           "title": "Halloween III: Season of the Witch",
           "sortTitle": "halloween-iii-season-of-the-witch-1982",
           "releaseYear": "1982",
-          "releaseSequence": 2402,
           "genres": [
             "Horror",
             "Mystery",
@@ -2194,14 +2193,14 @@
           "viewingDate": "2019-02-01",
           "viewingSequence": 1855,
           "medium": "Vudu",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1982-08-01"
         },
         {
           "imdbId": "tt0085636",
           "title": "Halloween III: Season of the Witch",
           "sortTitle": "halloween-iii-season-of-the-witch-1982",
           "releaseYear": "1982",
-          "releaseSequence": 2402,
           "genres": [
             "Horror",
             "Mystery",
@@ -2217,7 +2216,8 @@
           "viewingDate": "2019-10-22",
           "viewingSequence": 1915,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1982-08-01"
         }
       ]
     },
@@ -2231,7 +2231,6 @@
           "title": "Bride of Re-Animator",
           "sortTitle": "bride-of-re-animator-1990",
           "releaseYear": "1990",
-          "releaseSequence": 2733,
           "genres": [
             "Comedy",
             "Horror",
@@ -2246,14 +2245,14 @@
           "viewingDate": "2019-02-05",
           "viewingSequence": 1859,
           "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+          "venue": "Alamo Drafthouse Cinema - One Loudoun",
+          "releaseDate": "1990-06-28"
         },
         {
           "imdbId": "tt0105242",
           "title": "The Resurrected",
           "sortTitle": "resurrected-1991",
           "releaseYear": "1991",
-          "releaseSequence": 2794,
           "genres": [
             "Horror"
           ],
@@ -2266,7 +2265,8 @@
           "viewingDate": "2019-07-20",
           "viewingSequence": 1888,
           "medium": "Blu-ray",
-          "venue": null
+          "venue": null,
+          "releaseDate": "1991-08-28"
         }
       ]
     },
@@ -2280,7 +2280,6 @@
           "title": "Freddy vs. Jason",
           "sortTitle": "freddy-vs-jason-2003",
           "releaseYear": "2003",
-          "releaseSequence": 3139,
           "genres": [
             "Action",
             "Horror"
@@ -2294,14 +2293,14 @@
           "viewingDate": "2019-04-13",
           "viewingSequence": 1871,
           "medium": "Netflix",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2003-08-08"
         },
         {
           "imdbId": "tt0758746",
           "title": "Friday the 13th",
           "sortTitle": "friday-the-13th-2009",
           "releaseYear": "2009",
-          "releaseSequence": 3371,
           "genres": [
             "Horror",
             "Mystery",
@@ -2316,7 +2315,8 @@
           "viewingDate": "2019-04-27",
           "viewingSequence": 1873,
           "medium": "Netflix",
-          "venue": null
+          "venue": null,
+          "releaseDate": "2009-03-28"
         }
       ]
     }
