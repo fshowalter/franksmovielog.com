@@ -9,7 +9,7 @@
       "title": "M",
       "sortTitle": "m-1931",
       "releaseYear": "1931",
-      "releaseSequence": 51,
+      "releaseDate": "1931-05-11",
       "genres": [
         "Crime",
         "Mystery",
@@ -19,7 +19,7 @@
       "grade": "C+",
       "gradeValue": 7,
       "reviewDate": "2021-01-19",
-      "reviewSequence": 1200,
+      "reviewSequence": 2115,
       "creditedAs": [
         "director",
         "writer"
@@ -34,7 +34,7 @@
       "title": "The Testament of Dr. Mabuse",
       "sortTitle": "testament-of-dr-mabuse-1933",
       "releaseYear": "1933",
-      "releaseSequence": 132,
+      "releaseDate": "1933-04-21",
       "genres": [
         "Crime",
         "Mystery",
@@ -61,7 +61,7 @@
       "title": "Liliom",
       "sortTitle": "liliom-1934",
       "releaseYear": "1934",
-      "releaseSequence": 162,
+      "releaseDate": "1934-04-27",
       "genres": [
         "Drama",
         "Fantasy"
@@ -86,7 +86,7 @@
       "title": "Fury",
       "sortTitle": "fury-1936",
       "releaseYear": "1936",
-      "releaseSequence": 247,
+      "releaseDate": "1936-06-05",
       "genres": [
         "Crime",
         "Drama",
@@ -97,7 +97,7 @@
       "grade": "D+",
       "gradeValue": 4,
       "reviewDate": "2022-09-10",
-      "reviewSequence": 1536,
+      "reviewSequence": 2470,
       "creditedAs": [
         "director",
         "writer"
@@ -112,7 +112,7 @@
       "title": "You Only Live Once",
       "sortTitle": "you-only-live-once-1937",
       "releaseYear": "1937",
-      "releaseSequence": 273,
+      "releaseDate": "1937-01-23",
       "genres": [
         "Crime",
         "Drama",
@@ -138,7 +138,7 @@
       "title": "You and Me",
       "sortTitle": "you-and-me-1938",
       "releaseYear": "1938",
-      "releaseSequence": 316,
+      "releaseDate": "1938-05-29",
       "genres": [
         "Crime",
         "Film-Noir"
@@ -163,34 +163,9 @@
       "title": "The Return of Frank James",
       "sortTitle": "return-of-frank-james-1940",
       "releaseYear": "1940",
-      "releaseSequence": 401,
+      "releaseDate": "1940-08-10",
       "genres": [
         "Drama",
-        "Western"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Fritz Lang"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0034384",
-      "title": "Western Union",
-      "sortTitle": "western-union-1941",
-      "releaseYear": "1941",
-      "releaseSequence": 426,
-      "genres": [
-        "History",
         "Western"
       ],
       "slug": null,
@@ -213,7 +188,7 @@
       "title": "Man Hunt",
       "sortTitle": "man-hunt-1941",
       "releaseYear": "1941",
-      "releaseSequence": 440,
+      "releaseDate": "1941-06-13",
       "genres": [
         "Crime",
         "Drama",
@@ -237,11 +212,36 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0034384",
+      "title": "Western Union",
+      "sortTitle": "western-union-1941",
+      "releaseYear": "1941",
+      "releaseDate": "1941-01-31",
+      "genres": [
+        "History",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Fritz Lang"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0035966",
       "title": "Hangmen Also Die!",
       "sortTitle": "hangmen-also-die-1943",
       "releaseYear": "1943",
-      "releaseSequence": 499,
+      "releaseDate": "1943-03-27",
       "genres": [
         "Drama",
         "Film-Noir",
@@ -269,7 +269,7 @@
       "title": "Ministry of Fear",
       "sortTitle": "ministry-of-fear-1944",
       "releaseYear": "1944",
-      "releaseSequence": 538,
+      "releaseDate": "1944-05-19",
       "genres": [
         "Crime",
         "Drama",
@@ -297,7 +297,7 @@
       "title": "The Woman in the Window",
       "sortTitle": "woman-in-the-window-1944",
       "releaseYear": "1944",
-      "releaseSequence": 555,
+      "releaseDate": "1944-10-25",
       "genres": [
         "Crime",
         "Drama",
@@ -325,7 +325,7 @@
       "title": "Scarlet Street",
       "sortTitle": "scarlet-street-1945",
       "releaseYear": "1945",
-      "releaseSequence": 587,
+      "releaseDate": "1945-12-25",
       "genres": [
         "Crime",
         "Drama",
@@ -352,7 +352,7 @@
       "title": "Cloak and Dagger",
       "sortTitle": "cloak-and-dagger-1946",
       "releaseYear": "1946",
-      "releaseSequence": 601,
+      "releaseDate": "1946-09-05",
       "genres": [
         "Adventure",
         "Film-Noir",
@@ -380,7 +380,7 @@
       "title": "Secret Beyond the Door...",
       "sortTitle": "secret-beyond-the-door-1947",
       "releaseYear": "1947",
-      "releaseSequence": 644,
+      "releaseDate": "1947-12-24",
       "genres": [
         "Drama",
         "Film-Noir",
@@ -404,38 +404,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0042579",
-      "title": "House by the River",
-      "sortTitle": "house-by-the-river-1950",
-      "releaseYear": "1950",
-      "releaseSequence": 729,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Thriller"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Fritz Lang"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0042195",
       "title": "American Guerrilla in the Philippines",
       "sortTitle": "american-guerrilla-in-the-philippines-1950",
       "releaseYear": "1950",
-      "releaseSequence": 750,
+      "releaseDate": "1950-11-07",
       "genres": [
         "Drama",
         "War"
@@ -456,13 +429,16 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0045070",
-      "title": "Rancho Notorious",
-      "sortTitle": "rancho-notorious-1952",
-      "releaseYear": "1952",
-      "releaseSequence": 792,
+      "imdbId": "tt0042579",
+      "title": "House by the River",
+      "sortTitle": "house-by-the-river-1950",
+      "releaseYear": "1950",
+      "releaseDate": "1950-03-23",
       "genres": [
-        "Western"
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Thriller"
       ],
       "slug": null,
       "grade": null,
@@ -484,7 +460,7 @@
       "title": "Clash by Night",
       "sortTitle": "clash-by-night-1952",
       "releaseYear": "1952",
-      "releaseSequence": 798,
+      "releaseDate": "1952-05-28",
       "genres": [
         "Drama",
         "Film-Noir",
@@ -506,27 +482,25 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0045564",
-      "title": "The Blue Gardenia",
-      "sortTitle": "blue-gardenia-1953",
-      "releaseYear": "1953",
-      "releaseSequence": 833,
+      "imdbId": "tt0045070",
+      "title": "Rancho Notorious",
+      "sortTitle": "rancho-notorious-1952",
+      "releaseYear": "1952",
+      "releaseDate": "1952-03-06",
       "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Mystery",
-        "Thriller"
+        "Western"
       ],
-      "slug": "the-blue-gardenia-1953",
-      "grade": "D-",
-      "gradeValue": 2,
-      "reviewDate": "2022-09-22",
-      "reviewSequence": 1550,
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
       "creditedAs": [
         "director"
       ],
-      "watchlistDirectorNames": [],
+      "watchlistDirectorNames": [
+        "Fritz Lang"
+      ],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
@@ -536,7 +510,7 @@
       "title": "The Big Heat",
       "sortTitle": "big-heat-1953",
       "releaseYear": "1953",
-      "releaseSequence": 855,
+      "releaseDate": "1953-09-25",
       "genres": [
         "Crime",
         "Drama",
@@ -561,11 +535,37 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0045564",
+      "title": "The Blue Gardenia",
+      "sortTitle": "blue-gardenia-1953",
+      "releaseYear": "1953",
+      "releaseDate": "1953-03-20",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "the-blue-gardenia-1953",
+      "grade": "D-",
+      "gradeValue": 2,
+      "reviewDate": "2022-09-22",
+      "reviewSequence": 2484,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0047101",
       "title": "Human Desire",
       "sortTitle": "human-desire-1954",
       "releaseYear": "1954",
-      "releaseSequence": 881,
+      "releaseDate": "1954-08-06",
       "genres": [
         "Drama",
         "Film-Noir",
@@ -591,10 +591,36 @@
       "title": "Moonfleet",
       "sortTitle": "moonfleet-1955",
       "releaseYear": "1955",
-      "releaseSequence": 920,
+      "releaseDate": "1955-06-24",
       "genres": [
         "Adventure",
         "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Fritz Lang"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0049006",
+      "title": "Beyond a Reasonable Doubt",
+      "sortTitle": "beyond-a-reasonable-doubt-1956",
+      "releaseYear": "1956",
+      "releaseDate": "1956-09-13",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Film-Noir"
       ],
       "slug": null,
       "grade": null,
@@ -616,7 +642,7 @@
       "title": "While the City Sleeps",
       "sortTitle": "while-the-city-sleeps-1956",
       "releaseYear": "1956",
-      "releaseSequence": 959,
+      "releaseDate": "1956-04-15",
       "genres": [
         "Crime",
         "Drama",
@@ -641,37 +667,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0049006",
-      "title": "Beyond a Reasonable Doubt",
-      "sortTitle": "beyond-a-reasonable-doubt-1956",
-      "releaseYear": "1956",
-      "releaseSequence": 979,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Film-Noir"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Fritz Lang"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0052295",
       "title": "The Tiger of Eschnapur",
       "sortTitle": "tiger-of-eschnapur-1959",
       "releaseYear": "1959",
-      "releaseSequence": 1094,
+      "releaseDate": "1959-01-22",
       "genres": [
         "Adventure",
         "Drama",
@@ -698,7 +698,7 @@
       "title": "The Indian Tomb",
       "sortTitle": "indian-tomb-1959",
       "releaseYear": "1959",
-      "releaseSequence": 1097,
+      "releaseDate": "1959-03-05",
       "genres": [
         "Adventure",
         "Drama",
@@ -720,15 +720,13 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0054371",
-      "title": "The 1,000 Eyes of Dr. Mabuse",
-      "sortTitle": "1000-eyes-of-dr-mabuse-1960",
+      "imdbId": "tt0052949",
+      "title": "Journey to the Lost City",
+      "sortTitle": "journey-to-the-lost-city-1960",
       "releaseYear": "1960",
-      "releaseSequence": 1163,
+      "releaseDate": "1960-10-01",
       "genres": [
-        "Crime",
-        "Mystery",
-        "Thriller"
+        "Adventure"
       ],
       "slug": null,
       "grade": null,
@@ -747,13 +745,15 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0052949",
-      "title": "Journey to the Lost City",
-      "sortTitle": "journey-to-the-lost-city-1960",
+      "imdbId": "tt0054371",
+      "title": "The 1,000 Eyes of Dr. Mabuse",
+      "sortTitle": "1000-eyes-of-dr-mabuse-1960",
       "releaseYear": "1960",
-      "releaseSequence": 1164,
+      "releaseDate": "1960-09-14",
       "genres": [
-        "Adventure"
+        "Crime",
+        "Mystery",
+        "Thriller"
       ],
       "slug": null,
       "grade": null,

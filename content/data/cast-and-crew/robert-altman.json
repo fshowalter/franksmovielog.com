@@ -9,7 +9,7 @@
       "title": "The Delinquents",
       "sortTitle": "delinquents-1957",
       "releaseYear": "1957",
-      "releaseSequence": 996,
+      "releaseDate": "1957-02-20",
       "genres": [
         "Drama"
       ],
@@ -34,7 +34,7 @@
       "title": "Nightmare in Chicago",
       "sortTitle": "nightmare-in-chicago-1964",
       "releaseYear": "1964",
-      "releaseSequence": 1325,
+      "releaseDate": "1964-04-02",
       "genres": [
         "Crime",
         "Drama"
@@ -59,7 +59,7 @@
       "title": "Countdown",
       "sortTitle": "countdown-1967",
       "releaseYear": "1967",
-      "releaseSequence": 1488,
+      "releaseDate": "1967-08-20",
       "genres": [
         "Sci-Fi",
         "Thriller"
@@ -84,36 +84,10 @@
       "title": "That Cold Day in the Park",
       "sortTitle": "that-cold-day-in-the-park-1969",
       "releaseYear": "1969",
-      "releaseSequence": 1594,
+      "releaseDate": "1969-05-21",
       "genres": [
         "Drama",
         "Thriller"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Robert Altman"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0066026",
-      "title": "M*A*S*H",
-      "sortTitle": "m-a-s-h-1970",
-      "releaseYear": "1970",
-      "releaseSequence": 1633,
-      "genres": [
-        "Comedy",
-        "Drama",
-        "War"
       ],
       "slug": null,
       "grade": null,
@@ -135,7 +109,7 @@
       "title": "Brewster McCloud",
       "sortTitle": "brewster-mccloud-1970",
       "releaseYear": "1970",
-      "releaseSequence": 1679,
+      "releaseDate": "1970-12-05",
       "genres": [
         "Comedy",
         "Crime",
@@ -157,11 +131,37 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0066026",
+      "title": "M*A*S*H",
+      "sortTitle": "m-a-s-h-1970",
+      "releaseYear": "1970",
+      "releaseDate": "1970-01-25",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "War"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Robert Altman"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0067411",
       "title": "McCabe & Mrs. Miller",
       "sortTitle": "mccabe-and-mrs-miller-1971",
       "releaseYear": "1971",
-      "releaseSequence": 1718,
+      "releaseDate": "1971-06-24",
       "genres": [
         "Drama",
         "Western"
@@ -187,7 +187,7 @@
       "title": "Images",
       "sortTitle": "images-1972",
       "releaseYear": "1972",
-      "releaseSequence": 1778,
+      "releaseDate": "1972-05-09",
       "genres": [
         "Drama",
         "Horror",
@@ -214,7 +214,7 @@
       "title": "The Long Goodbye",
       "sortTitle": "long-goodbye-1973",
       "releaseYear": "1973",
-      "releaseSequence": 1840,
+      "releaseDate": "1973-03-07",
       "genres": [
         "Comedy",
         "Crime",
@@ -240,11 +240,34 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0071269",
+      "title": "California Split",
+      "sortTitle": "california-split-1974",
+      "releaseYear": "1974",
+      "releaseDate": "1974-08-01",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "slug": "california-split-1974",
+      "grade": "A",
+      "gradeValue": 12,
+      "reviewDate": "2021-04-19",
+      "reviewSequence": 2211,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0072274",
       "title": "Thieves Like Us",
       "sortTitle": "thieves-like-us-1974",
       "releaseYear": "1974",
-      "releaseSequence": 1903,
+      "releaseDate": "1974-02-11",
       "genres": [
         "Crime",
         "Drama",
@@ -267,34 +290,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0071269",
-      "title": "California Split",
-      "sortTitle": "california-split-1974",
-      "releaseYear": "1974",
-      "releaseSequence": 1935,
-      "genres": [
-        "Comedy",
-        "Drama"
-      ],
-      "slug": "california-split-1974",
-      "grade": "A",
-      "gradeValue": 12,
-      "reviewDate": "2021-04-19",
-      "reviewSequence": 1294,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0073440",
       "title": "Nashville",
       "sortTitle": "nashville-1975",
       "releaseYear": "1975",
-      "releaseSequence": 1993,
+      "releaseDate": "1975-06-11",
       "genres": [
         "Comedy",
         "Drama",
@@ -320,7 +320,7 @@
       "title": "Buffalo Bill and the Indians, or Sitting Bull's History Lesson",
       "sortTitle": "buffalo-bill-and-the-indians-or-sitting-bulls-history-lesson-1976",
       "releaseYear": "1976",
-      "releaseSequence": 2036,
+      "releaseDate": "1976-06-01",
       "genres": [
         "Comedy",
         "Drama",
@@ -347,7 +347,7 @@
       "title": "3 Women",
       "sortTitle": "3-women-1977",
       "releaseYear": "1977",
-      "releaseSequence": 2085,
+      "releaseDate": "1977-04-10",
       "genres": [
         "Drama",
         "Mystery",
@@ -374,64 +374,10 @@
       "title": "A Wedding",
       "sortTitle": "wedding-1978",
       "releaseYear": "1978",
-      "releaseSequence": 2153,
+      "releaseDate": "1978-09-12",
       "genres": [
         "Comedy",
         "Drama"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [
-        "Robert Altman"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0079770",
-      "title": "Quintet",
-      "sortTitle": "quintet-1979",
-      "releaseYear": "1979",
-      "releaseSequence": 2180,
-      "genres": [
-        "Drama",
-        "Mystery",
-        "Sci-Fi"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [
-        "Robert Altman"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0079710",
-      "title": "A Perfect Couple",
-      "sortTitle": "perfect-couple-1979",
-      "releaseYear": "1979",
-      "releaseSequence": 2190,
-      "genres": [
-        "Comedy",
-        "Musical",
-        "Romance"
       ],
       "slug": null,
       "grade": null,
@@ -454,9 +400,63 @@
       "title": "HealtH",
       "sortTitle": "health-1980",
       "releaseYear": "1980",
-      "releaseSequence": 2274,
+      "releaseDate": "1980-08-23",
       "genres": [
         "Comedy"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "Robert Altman"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0079710",
+      "title": "A Perfect Couple",
+      "sortTitle": "perfect-couple-1979",
+      "releaseYear": "1979",
+      "releaseDate": "1979-04-02",
+      "genres": [
+        "Comedy",
+        "Musical",
+        "Romance"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "Robert Altman"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0079770",
+      "title": "Quintet",
+      "sortTitle": "quintet-1979",
+      "releaseYear": "1979",
+      "releaseDate": "1979-02-09",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Sci-Fi"
       ],
       "slug": null,
       "grade": null,
@@ -479,7 +479,7 @@
       "title": "Popeye",
       "sortTitle": "popeye-1980",
       "releaseYear": "1980",
-      "releaseSequence": 2291,
+      "releaseDate": "1980-12-06",
       "genres": [
         "Adventure",
         "Comedy",
@@ -504,12 +504,13 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0311701",
-      "title": "Rattlesnake in a Cooler",
-      "sortTitle": "rattlesnake-in-a-cooler-1982",
+      "imdbId": "tt0083745",
+      "title": "Come Back to the 5 & Dime Jimmy Dean, Jimmy Dean",
+      "sortTitle": "come-back-to-the-5-and-dime-jimmy-dean-jimmy-dean-1982",
       "releaseYear": "1982",
-      "releaseSequence": 2371,
+      "releaseDate": "1982-08-25",
       "genres": [
+        "Comedy",
         "Drama"
       ],
       "slug": null,
@@ -532,33 +533,8 @@
       "title": "Precious Blood",
       "sortTitle": "precious-blood-1982",
       "releaseYear": "1982",
-      "releaseSequence": 2376,
+      "releaseDate": "1982-04-06",
       "genres": [
-        "Drama"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Robert Altman"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0083745",
-      "title": "Come Back to the 5 & Dime Jimmy Dean, Jimmy Dean",
-      "sortTitle": "come-back-to-the-5-and-dime-jimmy-dean-jimmy-dean-1982",
-      "releaseYear": "1982",
-      "releaseSequence": 2395,
-      "genres": [
-        "Comedy",
         "Drama"
       ],
       "slug": null,
@@ -581,7 +557,7 @@
       "title": "Streamers",
       "sortTitle": "streamers-1983",
       "releaseYear": "1983",
-      "releaseSequence": 2436,
+      "releaseDate": "1983-09-05",
       "genres": [
         "Crime",
         "Drama",
@@ -607,34 +583,10 @@
       "title": "Secret Honor",
       "sortTitle": "secret-honor-1984",
       "releaseYear": "1984",
-      "releaseSequence": 2491,
+      "releaseDate": "1984-07-06",
       "genres": [
         "Biography",
         "Comedy",
-        "Drama"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Robert Altman"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0089464",
-      "title": "The Laundromat",
-      "sortTitle": "laundromat-1985",
-      "releaseYear": "1985",
-      "releaseSequence": 2519,
-      "genres": [
         "Drama"
       ],
       "slug": null,
@@ -657,7 +609,31 @@
       "title": "Fool for Love",
       "sortTitle": "fool-for-love-1985",
       "releaseYear": "1985",
-      "releaseSequence": 2550,
+      "releaseDate": "1985-12-06",
+      "genres": [
+        "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Robert Altman"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0089464",
+      "title": "The Laundromat",
+      "sortTitle": "laundromat-1985",
+      "releaseYear": "1985",
+      "releaseDate": "1985-04-01",
       "genres": [
         "Drama"
       ],
@@ -681,61 +657,10 @@
       "title": "O.C. and Stiggs",
       "sortTitle": "o-c-and-stiggs-1985",
       "releaseYear": "1985",
-      "releaseSequence": 2554,
+      "releaseDate": "1985-??-??",
       "genres": [
         "Comedy",
         "Romance"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Robert Altman"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0092646",
-      "title": "Beyond Therapy",
-      "sortTitle": "beyond-therapy-1987",
-      "releaseYear": "1987",
-      "releaseSequence": 2608,
-      "genres": [
-        "Comedy"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [
-        "Robert Altman"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
-      "imdbId": "tt0092620",
-      "title": "Basements",
-      "sortTitle": "basements-1987",
-      "releaseYear": "1987",
-      "releaseSequence": 2617,
-      "genres": [
-        "Crime",
-        "Drama",
-        "Mystery"
       ],
       "slug": null,
       "grade": null,
@@ -757,7 +682,7 @@
       "title": "Aria",
       "sortTitle": "aria-1987",
       "releaseYear": "1987",
-      "releaseSequence": 2619,
+      "releaseDate": "1987-05-19",
       "genres": [
         "Comedy",
         "Drama",
@@ -781,11 +706,62 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0092620",
+      "title": "Basements",
+      "sortTitle": "basements-1987",
+      "releaseYear": "1987",
+      "releaseDate": "1987-05-12",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Robert Altman"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0092646",
+      "title": "Beyond Therapy",
+      "sortTitle": "beyond-therapy-1987",
+      "releaseYear": "1987",
+      "releaseDate": "1987-02-06",
+      "genres": [
+        "Comedy"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "Robert Altman"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0094826",
       "title": "The Caine Mutiny Court-Martial",
       "sortTitle": "caine-mutiny-court-martial-1988",
       "releaseYear": "1988",
-      "releaseSequence": 2664,
+      "releaseDate": "1988-05-08",
       "genres": [
         "Drama",
         "War"
@@ -810,7 +786,7 @@
       "title": "Vincent & Theo",
       "sortTitle": "vincent-and-theo-1990",
       "releaseYear": "1990",
-      "releaseSequence": 2751,
+      "releaseDate": "1990-04-27",
       "genres": [
         "Biography",
         "Drama"
@@ -835,7 +811,7 @@
       "title": "The Player",
       "sortTitle": "player-1992",
       "releaseYear": "1992",
-      "releaseSequence": 2810,
+      "releaseDate": "1992-04-03",
       "genres": [
         "Comedy",
         "Crime",
@@ -864,7 +840,7 @@
       "title": "Short Cuts",
       "sortTitle": "short-cuts-1993",
       "releaseYear": "1993",
-      "releaseSequence": 2851,
+      "releaseDate": "1993-09-04",
       "genres": [
         "Comedy",
         "Drama"
@@ -890,7 +866,7 @@
       "title": "Ready to Wear",
       "sortTitle": "ready-to-wear-1994",
       "releaseYear": "1994",
-      "releaseSequence": 2886,
+      "releaseDate": "1994-12-23",
       "genres": [
         "Comedy",
         "Drama"
@@ -916,7 +892,7 @@
       "title": "Kansas City",
       "sortTitle": "kansas-city-1996",
       "releaseYear": "1996",
-      "releaseSequence": 2924,
+      "releaseDate": "1996-05-01",
       "genres": [
         "Crime",
         "Drama",
@@ -944,7 +920,7 @@
       "title": "The Gingerbread Man",
       "sortTitle": "gingerbread-man-1998",
       "releaseYear": "1998",
-      "releaseSequence": 2979,
+      "releaseDate": "1998-01-23",
       "genres": [
         "Crime",
         "Mystery",
@@ -970,7 +946,7 @@
       "title": "Cookie's Fortune",
       "sortTitle": "cookies-fortune-1999",
       "releaseYear": "1999",
-      "releaseSequence": 3007,
+      "releaseDate": "1999-01-22",
       "genres": [
         "Comedy",
         "Drama"
@@ -995,7 +971,7 @@
       "title": "Dr. T & the Women",
       "sortTitle": "dr-t-and-the-women-2000",
       "releaseYear": "2000",
-      "releaseSequence": 3043,
+      "releaseDate": "2000-09-01",
       "genres": [
         "Comedy",
         "Drama",
@@ -1021,7 +997,7 @@
       "title": "Gosford Park",
       "sortTitle": "gosford-park-2001",
       "releaseYear": "2001",
-      "releaseSequence": 3082,
+      "releaseDate": "2001-11-07",
       "genres": [
         "Comedy",
         "Drama",
@@ -1031,7 +1007,7 @@
       "grade": "B-",
       "gradeValue": 8,
       "reviewDate": "2023-05-25",
-      "reviewSequence": 1615,
+      "reviewSequence": 2614,
       "creditedAs": [
         "director",
         "writer"
@@ -1042,11 +1018,35 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0311701",
+      "title": "Rattlesnake in a Cooler",
+      "sortTitle": "rattlesnake-in-a-cooler-1982",
+      "releaseYear": "1982",
+      "releaseDate": "1982-03-14",
+      "genres": [
+        "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Robert Altman"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0335013",
       "title": "The Company",
       "sortTitle": "company-2003",
       "releaseYear": "2003",
-      "releaseSequence": 3148,
+      "releaseDate": "2003-09-08",
       "genres": [
         "Drama",
         "Music",
@@ -1072,7 +1072,7 @@
       "title": "A Prairie Home Companion",
       "sortTitle": "prairie-home-companion-2006",
       "releaseYear": "2006",
-      "releaseSequence": 3221,
+      "releaseDate": "2006-02-12",
       "genres": [
         "Comedy",
         "Drama",
@@ -1100,7 +1100,7 @@
       "title": "Killer App",
       "sortTitle": "killer-app-1998",
       "releaseYear": "1998",
-      "releaseSequence": 3586,
+      "releaseDate": "2015-04-13",
       "genres": [
         "Comedy"
       ],

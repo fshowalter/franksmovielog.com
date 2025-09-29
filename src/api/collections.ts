@@ -12,6 +12,7 @@ import { perfLogger } from "~/utils/performanceLogger";
 import type { CollectionJson } from "./data/collections-json";
 
 import { allCollectionsJson } from "./data/collections-json";
+import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
 import { emToQuotes } from "./utils/markdown/emToQuotes";
 import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 
@@ -55,7 +56,9 @@ export async function allCollections(): Promise<{
  * @returns Collection details with distinct genres and release years from its titles
  */
 export async function collectionDetails(slug: string): Promise<{
-  collection: Collection;
+  collection: Omit<Collection, "titles"> & {
+    titles: (Collection["titles"][number] & { releaseSequence: number })[];
+  };
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
@@ -70,6 +73,8 @@ export async function collectionDetails(slug: string): Promise<{
     const distinctReleaseYears = new Set<string>();
     const distinctReviewYears = new Set<string>();
     const distinctGenres = new Set<string>();
+
+    const releaseSequenceMap = createReleaseSequenceMap(collection.titles);
 
     for (const title of collection.titles) {
       distinctReleaseYears.add(title.releaseYear);
@@ -93,6 +98,12 @@ export async function collectionDetails(slug: string): Promise<{
         ...collection,
         description: descriptionToString(collection.description),
         descriptionHtml: descriptionToHtml(collection.description),
+        titles: collection.titles.map((title) => {
+          return {
+            ...title,
+            releaseSequence: releaseSequenceMap.get(title.imdbId)!,
+          };
+        }),
       },
       distinctGenres: [...distinctGenres].toSorted(),
       distinctReleaseYears: [...distinctReleaseYears].toSorted(),

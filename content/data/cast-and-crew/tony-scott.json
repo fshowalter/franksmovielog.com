@@ -5,34 +5,11 @@
   "reviewCount": 4,
   "titles": [
     {
-      "imdbId": "tt0241687",
-      "title": "Loving Memory",
-      "sortTitle": "loving-memory-1970",
-      "releaseYear": "1970",
-      "releaseSequence": 1667,
-      "genres": [
-        "Drama"
-      ],
-      "slug": "loving-memory-1970",
-      "grade": "C",
-      "gradeValue": 6,
-      "reviewDate": "2022-06-14",
-      "reviewSequence": 1474,
-      "creditedAs": [
-        "director",
-        "writer"
-      ],
-      "watchlistDirectorNames": [],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0085701",
       "title": "The Hunger",
       "sortTitle": "hunger-1983",
       "releaseYear": "1983",
-      "releaseSequence": 2426,
+      "releaseDate": "1983-04-29",
       "genres": [
         "Drama",
         "Horror"
@@ -41,7 +18,7 @@
       "grade": "D",
       "gradeValue": 3,
       "reviewDate": "2007-11-10",
-      "reviewSequence": 315,
+      "reviewSequence": 443,
       "creditedAs": [
         "director"
       ],
@@ -55,7 +32,7 @@
       "title": "Top Gun",
       "sortTitle": "top-gun-1986",
       "releaseYear": "1986",
-      "releaseSequence": 2572,
+      "releaseDate": "1986-05-12",
       "genres": [
         "Action",
         "Drama"
@@ -80,7 +57,7 @@
       "title": "Beverly Hills Cop II",
       "sortTitle": "beverly-hills-cop-ii-1987",
       "releaseYear": "1987",
-      "releaseSequence": 2620,
+      "releaseDate": "1987-05-19",
       "genres": [
         "Action",
         "Comedy",
@@ -103,11 +80,37 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0099371",
+      "title": "Days of Thunder",
+      "sortTitle": "days-of-thunder-1990",
+      "releaseYear": "1990",
+      "releaseDate": "1990-??-??",
+      "genres": [
+        "Action",
+        "Drama",
+        "Sport"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Tony Scott"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0100485",
       "title": "Revenge",
       "sortTitle": "revenge-1990",
       "releaseYear": "1990",
-      "releaseSequence": 2741,
+      "releaseDate": "1990-02-16",
       "genres": [
         "Action",
         "Crime",
@@ -131,37 +134,11 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0099371",
-      "title": "Days of Thunder",
-      "sortTitle": "days-of-thunder-1990",
-      "releaseYear": "1990",
-      "releaseSequence": 2777,
-      "genres": [
-        "Action",
-        "Drama",
-        "Sport"
-      ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
-      "creditedAs": [
-        "director"
-      ],
-      "watchlistDirectorNames": [
-        "Tony Scott"
-      ],
-      "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
-      "watchlistCollectionNames": []
-    },
-    {
       "imdbId": "tt0102266",
       "title": "The Last Boy Scout",
       "sortTitle": "last-boy-scout-1991",
       "releaseYear": "1991",
-      "releaseSequence": 2801,
+      "releaseDate": "1991-12-12",
       "genres": [
         "Action",
         "Comedy",
@@ -188,7 +165,7 @@
       "title": "True Romance",
       "sortTitle": "true-romance-1993",
       "releaseYear": "1993",
-      "releaseSequence": 2852,
+      "releaseDate": "1993-09-08",
       "genres": [
         "Crime",
         "Drama",
@@ -215,7 +192,7 @@
       "title": "Crimson Tide",
       "sortTitle": "crimson-tide-1995",
       "releaseYear": "1995",
-      "releaseSequence": 2896,
+      "releaseDate": "1995-04-01",
       "genres": [
         "Action",
         "Drama",
@@ -226,7 +203,7 @@
       "grade": "B+",
       "gradeValue": 10,
       "reviewDate": "2008-12-23",
-      "reviewSequence": 771,
+      "reviewSequence": 972,
       "creditedAs": [
         "director"
       ],
@@ -240,7 +217,7 @@
       "title": "The Fan",
       "sortTitle": "fan-1996",
       "releaseYear": "1996",
-      "releaseSequence": 2931,
+      "releaseDate": "1996-08-01",
       "genres": [
         "Action",
         "Drama",
@@ -267,7 +244,7 @@
       "title": "Enemy of the State",
       "sortTitle": "enemy-of-the-state-1998",
       "releaseYear": "1998",
-      "releaseSequence": 3004,
+      "releaseDate": "1998-??-??",
       "genres": [
         "Action",
         "Thriller"
@@ -288,11 +265,34 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0241687",
+      "title": "Loving Memory",
+      "sortTitle": "loving-memory-1970",
+      "releaseYear": "1970",
+      "releaseDate": "1970-09-21",
+      "genres": [
+        "Drama"
+      ],
+      "slug": "loving-memory-1970",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2022-06-14",
+      "reviewSequence": 2407,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0266987",
       "title": "Spy Game",
       "sortTitle": "spy-game-2001",
       "releaseYear": "2001",
-      "releaseSequence": 3083,
+      "releaseDate": "2001-11-19",
       "genres": [
         "Action",
         "Crime",
@@ -318,7 +318,7 @@
       "title": "Man on Fire",
       "sortTitle": "man-on-fire-2004",
       "releaseYear": "2004",
-      "releaseSequence": 3173,
+      "releaseDate": "2004-04-18",
       "genres": [
         "Action",
         "Crime",
@@ -329,7 +329,7 @@
       "grade": "B",
       "gradeValue": 9,
       "reviewDate": "2004-05-28",
-      "reviewSequence": 91,
+      "reviewSequence": 156,
       "creditedAs": [
         "director"
       ],
@@ -343,7 +343,7 @@
       "title": "Domino",
       "sortTitle": "domino-2005",
       "releaseYear": "2005",
-      "releaseSequence": 3213,
+      "releaseDate": "2005-09-25",
       "genres": [
         "Action",
         "Biography",
@@ -371,7 +371,7 @@
       "title": "Deja Vu",
       "sortTitle": "deja-vu-2006",
       "releaseYear": "2006",
-      "releaseSequence": 3249,
+      "releaseDate": "2006-11-20",
       "genres": [
         "Action",
         "Crime",
@@ -394,14 +394,13 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt1111422",
-      "title": "The Taking of Pelham 123",
-      "sortTitle": "taking-of-pelham-123-2009",
-      "releaseYear": "2009",
-      "releaseSequence": 3386,
+      "imdbId": "tt0477080",
+      "title": "Unstoppable",
+      "sortTitle": "unstoppable-2010",
+      "releaseYear": "2010",
+      "releaseDate": "2010-10-26",
       "genres": [
         "Action",
-        "Crime",
         "Thriller"
       ],
       "slug": null,
@@ -420,13 +419,14 @@
       "watchlistCollectionNames": []
     },
     {
-      "imdbId": "tt0477080",
-      "title": "Unstoppable",
-      "sortTitle": "unstoppable-2010",
-      "releaseYear": "2010",
-      "releaseSequence": 3425,
+      "imdbId": "tt1111422",
+      "title": "The Taking of Pelham 123",
+      "sortTitle": "taking-of-pelham-123-2009",
+      "releaseYear": "2009",
+      "releaseDate": "2009-06-04",
       "genres": [
         "Action",
+        "Crime",
         "Thriller"
       ],
       "slug": null,

@@ -45,7 +45,6 @@ function createViewingValue(
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
     },
-    releaseSequence: testIdCounter,
     releaseYear: "1970",
     slug: `test-movie-${testIdCounter}`,
     sortTitle: `Test Movie ${testIdCounter}`,

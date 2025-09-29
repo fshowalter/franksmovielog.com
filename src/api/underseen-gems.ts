@@ -3,8 +3,9 @@ import { collator } from "~/utils/collator";
 import type { UnderseenJson } from "./data/underseen-json";
 
 import { allUnderseenJson } from "./data/underseen-json";
+import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
 
-type UnderseenGem = UnderseenJson & {};
+type UnderseenGem = UnderseenJson & { releaseSequence: number };
 
 type UnderseenGems = {
   distinctGenres: string[];
@@ -23,6 +24,8 @@ export async function allUnderseenGems(): Promise<UnderseenGems> {
   const distinctGenres = new Set<string>();
   const distinctReviewYears = new Set<string>();
 
+  const releaseSequenceMap = createReleaseSequenceMap(underseenGemsJson);
+
   const underseenGems = underseenGemsJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
@@ -35,6 +38,7 @@ export async function allUnderseenGems(): Promise<UnderseenGems> {
 
     return {
       ...title,
+      releaseSequence: releaseSequenceMap.get(title.imdbId)!,
     };
   });
 

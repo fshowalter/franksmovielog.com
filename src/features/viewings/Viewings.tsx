@@ -42,7 +42,6 @@ export type ViewingsProps = {
 export type ViewingsValue = {
   medium?: string;
   posterImageProps: PosterImageProps;
-  releaseSequence: number;
   releaseYear: string;
   slug?: string;
   sortTitle: string;

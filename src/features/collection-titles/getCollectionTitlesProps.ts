@@ -26,25 +26,23 @@ export async function getCollectionTitlesProps(
     distinctReviewYears,
     initialSort: "release-date-asc",
     values: await Promise.all(
-      collection.titles
-        .toSorted((a, b) => b.releaseSequence - a.releaseSequence)
-        .map(async (title) => {
-          return {
-            ...title,
-            posterImageProps: await getFluidWidthPosterImageProps(
-              title.slug,
-              PosterListItemImageConfig,
-            ),
-            reviewDisplayDate: displayDate(title.reviewDate),
-            reviewSequence: title.reviewSequence,
-            reviewYear: title.reviewDate
-              ? new Date(title.reviewDate).toLocaleDateString("en-US", {
-                  timeZone: "UTC",
-                  year: "numeric",
-                })
-              : "",
-          };
-        }),
+      collection.titles.map(async (title) => {
+        return {
+          ...title,
+          posterImageProps: await getFluidWidthPosterImageProps(
+            title.slug,
+            PosterListItemImageConfig,
+          ),
+          reviewDisplayDate: displayDate(title.reviewDate),
+          reviewSequence: title.reviewSequence,
+          reviewYear: title.reviewDate
+            ? new Date(title.reviewDate).toLocaleDateString("en-US", {
+                timeZone: "UTC",
+                year: "numeric",
+              })
+            : "",
+        };
+      }),
     ),
   };
 }

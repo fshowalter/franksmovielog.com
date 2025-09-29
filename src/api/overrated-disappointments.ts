@@ -3,8 +3,9 @@ import { collator } from "~/utils/collator";
 import type { OverratedJson } from "./data/overrated-json";
 
 import { allOverratedJson } from "./data/overrated-json";
+import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
 
-type OverratedDisappointment = OverratedJson & {};
+type OverratedDisappointment = OverratedJson & { releaseSequence: number };
 
 type OverratedDisappointments = {
   distinctGenres: string[];
@@ -23,6 +24,8 @@ export async function allOverratedDisappointments(): Promise<OverratedDisappoint
   const distinctGenres = new Set<string>();
   const distinctReviewYears = new Set<string>();
 
+  const releaseSequenceMap = createReleaseSequenceMap(overratedJson);
+
   const overratedDisappointments = overratedJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
@@ -35,6 +38,7 @@ export async function allOverratedDisappointments(): Promise<OverratedDisappoint
 
     return {
       ...title,
+      releaseSequence: releaseSequenceMap.get(title.imdbId)!,
     };
   });
 
