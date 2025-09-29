@@ -21,7 +21,7 @@ type WatchlistTitles = {
   distinctPerformers: string[];
   distinctReleaseYears: string[];
   distinctWriters: string[];
-  watchlistTitles: WatchlistTitle[];
+  watchlistTitles: (WatchlistTitle & { releaseSequence: number })[];
 };
 
 /**
