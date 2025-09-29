@@ -3,8 +3,9 @@ import { collator } from "~/utils/collator";
 import type { UnderratedJson } from "./data/underrated-json";
 
 import { allUnderratedJson } from "./data/underrated-json";
+import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
 
-type UnderratedSurprise = UnderratedJson & {};
+type UnderratedSurprise = UnderratedJson & { releaseSequence: number };
 
 type UnderratedSurprises = {
   distinctGenres: string[];
@@ -23,6 +24,8 @@ export async function allUnderratedSurprises(): Promise<UnderratedSurprises> {
   const distinctGenres = new Set<string>();
   const distinctReviewYears = new Set<string>();
 
+  const releaseSequenceMap = createReleaseSequenceMap(underratedJson);
+
   const underratedSurprises = underratedJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
@@ -35,6 +38,7 @@ export async function allUnderratedSurprises(): Promise<UnderratedSurprises> {
 
     return {
       ...title,
+      releaseSequence: releaseSequenceMap.get(title.imdbId)!,
     };
   });
 

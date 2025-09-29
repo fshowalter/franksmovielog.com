@@ -50,7 +50,7 @@ const createTitle = (
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
     },
-    releaseDate: `1960-01-${String(testIdCounter).padStart(2, "0")}`,
+    releaseSequence: testIdCounter,
     releaseYear: "1960",
     reviewDisplayDate: "Jan 1, 2020",
     reviewSequence: testIdCounter,
@@ -427,17 +427,17 @@ describe("CastAndCrewMemberTitles", () => {
     it("sorts by release date oldest first", async ({ expect }) => {
       const titles = [
         createTitle({
-          releaseDate: "1980-12-25",
+          releaseSequence: 3,
           releaseYear: "1980",
           title: "Family Plot",
         }),
         createTitle({
-          releaseDate: "1950-03-15",
+          releaseSequence: 1,
           releaseYear: "1950",
           title: "Stage Fright",
         }),
         createTitle({
-          releaseDate: "1965-06-20",
+          releaseSequence: 2,
           releaseYear: "1965",
           title: "Marnie",
         }),
@@ -461,17 +461,17 @@ describe("CastAndCrewMemberTitles", () => {
     it("sorts by release date newest first", async ({ expect }) => {
       const titles = [
         createTitle({
-          releaseDate: "1950-03-15",
+          releaseSequence: 1,
           releaseYear: "1950",
           title: "Stage Fright",
         }),
         createTitle({
-          releaseDate: "1965-06-20",
+          releaseSequence: 2,
           releaseYear: "1965",
           title: "Marnie",
         }),
         createTitle({
-          releaseDate: "1980-12-25",
+          releaseSequence: 3,
           releaseYear: "1980",
           title: "Family Plot",
         }),
@@ -722,7 +722,7 @@ describe("CastAndCrewMemberTitles", () => {
       const titles = Array.from({ length: 110 }, (_, i) => {
         const year = 2020 - Math.floor(i / 5);
         return createTitle({
-          releaseDate: `${year}-${String(Math.floor(Math.random() * 12) + 1).padStart(2, "0")}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, "0")}`,
+          releaseSequence: 3000 - i, // Higher sequences for older films to maintain desc order
           releaseYear: String(year),
           title: `Film ${i + 1}`,
         });

@@ -107,7 +107,7 @@ async function buildReviewValues(
     grade: string;
     gradeValue: number;
     imdbId: string;
-    releaseDate: string;
+    releaseSequence: number;
     releaseYear: string;
     reviewDate: Date;
     reviewSequence: number;
@@ -130,7 +130,7 @@ async function buildReviewValues(
           review.slug,
           PosterListItemImageConfig,
         ),
-        releaseDate: review.releaseDate,
+        releaseSequence: review.releaseSequence,
         releaseYear: review.releaseYear,
         reviewDisplayDate: displayDate(review.reviewDate),
         ...(includeReviewMonth && {

@@ -17,6 +17,7 @@ import type { MarkdownViewing } from "./data/viewings-markdown";
 import { allReviewedTitlesJson } from "./data/reviewed-titles-json";
 import { allReviewsMarkdown } from "./data/reviews-markdown";
 import { allViewingsMarkdown } from "./data/viewings-markdown";
+import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
 import { linkReviewedTitles } from "./utils/linkReviewedTitles";
 import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
@@ -51,7 +52,7 @@ type Reviews = {
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
-  reviews: Review[];
+  reviews: (Review & { releaseSequence: number })[];
 };
 
 type ReviewViewing = MarkdownViewing & {
@@ -258,6 +259,8 @@ async function parseReviewedTitlesJson(
     cachedMarkdownReviews = reviewsMarkdown;
   }
 
+  const releaseSequenceMap = createReleaseSequenceMap(reviewedTitlesJson);
+
   const reviews = reviewedTitlesJson.map((title) => {
     for (const genre of title.genres) distinctGenres.add(genre);
     distinctReleaseYears.add(title.releaseYear);
@@ -279,6 +282,7 @@ async function parseReviewedTitlesJson(
       ...title,
       grade,
       rawContent,
+      releaseSequence: releaseSequenceMap.get(title.imdbId)!,
       synopsis,
     };
   });

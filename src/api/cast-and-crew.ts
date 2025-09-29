@@ -4,6 +4,7 @@ import { perfLogger } from "~/utils/performanceLogger";
 import type { CastAndCrewMemberJson } from "./data/cast-and-crew-json";
 
 import { allCastAndCrewJson } from "./data/cast-and-crew-json";
+import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
 
 let cachedCastAndCrewJson: CastAndCrewMemberJson[];
 
@@ -41,7 +42,11 @@ export async function castAndCrewMember(slug: string): Promise<{
   distinctGenres: string[];
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
-  member: CastAndCrewMember;
+  member: Omit<CastAndCrewMember, "titles"> & {
+    titles: (CastAndCrewMember["titles"][number] & {
+      releaseSequence: number;
+    })[];
+  };
 }> {
   return await perfLogger.measure("castAndCrewMember", async () => {
     const castAndCrewJson =
@@ -55,8 +60,11 @@ export async function castAndCrewMember(slug: string): Promise<{
     const releaseYears = new Set<string>();
     const distinctReviewYears = new Set<string>();
 
-    for (const title of member.titles) {
+    const releaseSequenceMap = createReleaseSequenceMap(member.titles);
+
+    const titles = member.titles.map((title) => {
       releaseYears.add(title.releaseYear);
+
       for (const genre of title.genres) {
         distinctGenres.add(genre);
       }
@@ -69,13 +77,21 @@ export async function castAndCrewMember(slug: string): Promise<{
           }),
         );
       }
-    }
+
+      return {
+        ...title,
+        releaseSequence: releaseSequenceMap.get(title.imdbId)!,
+      };
+    });
 
     return {
       distinctGenres: [...distinctGenres].toSorted(),
       distinctReleaseYears: [...releaseYears].toSorted(),
       distinctReviewYears: [...distinctReviewYears].toSorted(),
-      member,
+      member: {
+        ...member,
+        titles,
+      },
     };
   });
 }

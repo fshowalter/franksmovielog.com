@@ -5,6 +5,7 @@ import type { WatchlistTitleJson } from "./data/watchlist-titles-json";
 
 import { watchlistProgressJson } from "./data/watchlist-progress-json";
 import { allWatchlistTitlesJson } from "./data/watchlist-titles-json";
+import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
 
 /**
  * Watchlist progress statistics.
@@ -20,7 +21,7 @@ type WatchlistTitles = {
   distinctPerformers: string[];
   distinctReleaseYears: string[];
   distinctWriters: string[];
-  watchlistTitles: WatchlistTitle[];
+  watchlistTitles: (WatchlistTitle & { releaseSequence: number })[];
 };
 
 /**
@@ -36,6 +37,8 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
   const distinctCollections = new Set<string>();
   const distinctReleaseYears = new Set<string>();
 
+  const releaseSequenceMap = createReleaseSequenceMap(watchlistTitlesJson);
+
   const watchlistTitles = watchlistTitlesJson.map((title) => {
     for (const name of title.watchlistDirectorNames)
       distinctDirectors.add(name);
@@ -49,6 +52,7 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
 
     return {
       ...title,
+      releaseSequence: releaseSequenceMap.get(title.imdbId)!,
     };
   });
 
