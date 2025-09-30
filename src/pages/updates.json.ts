@@ -35,6 +35,7 @@ export async function GET() {
       return {
         date: review.reviewDate,
         excerpt: reviewWithExcerptHtml.excerpt,
+        genres: review.genres,
         image: stillProps.src,
         slug: review.slug,
         stars: gradeToStars[review.grade],
