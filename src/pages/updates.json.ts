@@ -1,5 +1,5 @@
-import { getUpdatePosterProps } from "~/api/posters";
-import { mostRecentReviews } from "~/api/reviews";
+import { loadExcerptHtml, mostRecentReviews } from "~/api/reviews";
+import { getUpdateStillProps } from "~/api/stills";
 
 const gradeToStars: Record<string, number> = {
   A: 5,
@@ -24,15 +24,18 @@ const gradeToStars: Record<string, number> = {
  * @returns JSON response with recent review updates
  */
 export async function GET() {
-  const reviews = await mostRecentReviews(6);
+  const reviews = await mostRecentReviews(5);
 
   const updateItems = await Promise.all(
     reviews.map(async (review) => {
-      const posterProps = await getUpdatePosterProps(review.slug);
+      const stillProps = await getUpdateStillProps(review.slug);
+
+      const reviewWithExcerptHtml = await loadExcerptHtml(review);
 
       return {
         date: review.reviewDate,
-        image: posterProps.src,
+        excerpt: reviewWithExcerptHtml.excerpt,
+        image: stillProps.src,
         slug: review.slug,
         stars: gradeToStars[review.grade],
         title: review.title,

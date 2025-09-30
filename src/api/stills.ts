@@ -75,3 +75,26 @@ export async function getStillImageProps(
     srcSet: normalizeSources(optimizedImage.srcSet.attribute),
   };
 }
+
+export async function getUpdateStillProps(
+  slug: string,
+): Promise<StillImageProps> {
+  const stillFilePath = Object.keys(images).find((path) => {
+    return path.endsWith(`/${slug}.png`);
+  })!;
+
+  const posterFile = await images[stillFilePath]();
+
+  const optimizedImage = await getImage({
+    format: "png",
+    height: 1080,
+    quality: 100,
+    src: posterFile.default,
+    width: 1920,
+  });
+
+  return {
+    src: normalizeSources(optimizedImage.src),
+    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+  };
+}
