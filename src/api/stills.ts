@@ -83,13 +83,13 @@ export async function getUpdateStillProps(
     return path.endsWith(`/${slug}.png`);
   })!;
 
-  const posterFile = await images[stillFilePath]();
+  const stillFile = await images[stillFilePath]();
 
   const optimizedImage = await getImage({
     format: "png",
     height: 1080,
     quality: 100,
-    src: posterFile.default,
+    src: stillFile.default,
     width: 1920,
   });
 
