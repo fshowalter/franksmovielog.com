@@ -77,11 +77,11 @@ function Breadcrumb({
       <a
         className={`
           relative inline-block font-sans text-sm font-bold tracking-wide
-          text-[#fff]/85 uppercase
+          text-white/85 uppercase transition-all duration-500
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
-          after:origin-center after:scale-x-0 after:bg-white/75
+          after:origin-center after:scale-x-0 after:bg-accent
           after:transition-transform after:duration-500
-          hover:after:scale-x-100
+          hover:text-accent hover:after:scale-x-100
         `}
         href={value.href}
       >
@@ -102,6 +102,7 @@ function Deck({
     <p
       className={`
         mt-1 font-sans text-base font-semibold text-white/90
+        mix-blend-hard-light
         [text-shadow:1px_1px_2px_black]
         laptop:my-4 laptop:text-xl
         ${center ? `text-center` : ""}
