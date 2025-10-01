@@ -53,7 +53,7 @@
           class="group z-30 flex w-full items-center justify-between px-container py-4 tablet:py-6 laptop:inset-x-0 laptop:z-40 laptop:flex-row laptop:flex-wrap laptop:px-16 laptop:py-8 laptop:text-left absolute [--mast-color:#fff] text-(--mast-color)"
         >
           <div
-            class="flex transform-gpu flex-col transition-transform duration-500 has-[a:hover]:scale-105"
+            class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent mix-blend-hard-light"
           >
             <div
               class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
@@ -71,9 +71,8 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
+                    class="relative block text-inherit transition-colors duration-500 after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100 mix-blend-hard-light"
                     href="/"
-                    style="text-shadow: 1px 1px 2px black"
                     >Home</a
                   >
                 </li>
@@ -81,9 +80,8 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
+                    class="relative block text-inherit transition-colors duration-500 after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100 mix-blend-hard-light"
                     href="/how-i-grade/"
-                    style="text-shadow: 1px 1px 2px black"
                     >How I Grade</a
                   >
                 </li>
@@ -91,9 +89,8 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
+                    class="relative block text-inherit transition-colors duration-500 after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100 mix-blend-hard-light"
                     href="/reviews/"
-                    style="text-shadow: 1px 1px 2px black"
                     >Reviews</a
                   >
                 </li>
@@ -101,9 +98,8 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
+                    class="relative block text-inherit transition-colors duration-500 after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100 mix-blend-hard-light"
                     href="/viewings/"
-                    style="text-shadow: 1px 1px 2px black"
                     >Viewing Log</a
                   >
                 </li>
@@ -111,9 +107,8 @@
                   class="block leading-10 tracking-serif-wide whitespace-nowrap [body.nav-open_&amp;]:opacity-0"
                 >
                   <a
-                    class="relative block text-inherit after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-(--mast-color)/75 after:transition-transform after:duration-500 hover:after:scale-x-100"
+                    class="relative block text-inherit transition-colors duration-500 after:absolute after:bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100 mix-blend-hard-light"
                     href="/watchlist/"
-                    style="text-shadow: 1px 1px 2px black"
                     >Watchlist</a
                   >
                 </li>
@@ -123,7 +118,7 @@
               <button
                 aria-keyshortcuts="Control+K"
                 aria-label="Search"
-                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm leading-6 ring-default transition-transform hover:scale-105 laptop:ml-6"
+                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm leading-6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
                 data-open-modal="true"
                 disabled=""
                 title="Search: Control+K"
@@ -154,14 +149,13 @@
               aria-controls="nav-menu"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
-              class="relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-transform hover:scale-110"
+              class="group/button relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
               data-nav-drawer-toggle="true"
               type="button"
             >
               <span
                 aria-hidden="true"
-                class="relative flex h-0.5 w-6 origin-center transform-gpu transition-[top,bottom,transform] duration-200 ease-in-out before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out [body.nav-open_&amp;]:transform-[rotate(45deg)] [body.nav-open_&amp;]:!bg-[#fff] [body.nav-open_&amp;]:before:top-0 [body.nav-open_&amp;]:before:transform-[rotate(90deg)] [body.nav-open_&amp;]:after:bottom-0 [body.nav-open_&amp;]:after:transform-[rotate(90deg)]"
-                style="background-color: #fff"
+                class="relative flex h-0.5 w-6 origin-center transform-gpu transition-all duration-200 ease-in-out group-hover/button:bg-accent before:absolute before:-top-2 before:block before:h-0.5 before:w-6 before:bg-inherit before:transition before:duration-200 before:ease-in-out after:absolute after:-bottom-2 after:block after:h-0.5 after:w-6 after:bg-inherit after:transition after:duration-200 after:ease-in-out [body.nav-open_&amp;]:transform-[rotate(45deg)] [body.nav-open_&amp;]:bg-white [body.nav-open_&amp;]:group-hover/button:bg-accent [body.nav-open_&amp;]:before:top-0 [body.nav-open_&amp;]:before:transform-[rotate(90deg)] [body.nav-open_&amp;]:after:bottom-0 [body.nav-open_&amp;]:after:transform-[rotate(90deg)] bg-white"
               ></span>
             </button>
             <nav aria-label="Main navigation">
@@ -320,7 +314,7 @@
                 404 Not Found
               </h1>
               <p
-                class="mt-1 font-sans text-base font-semibold text-white/90 [text-shadow:1px_1px_2px_black] laptop:my-4 laptop:text-xl text-center"
+                class="mt-1 font-sans text-base font-semibold text-white/90 mix-blend-hard-light [text-shadow:1px_1px_2px_black] laptop:my-4 laptop:text-xl text-center"
               >
                 &quot;Dick Laurent is dead.&quot;
               </p>
@@ -339,7 +333,7 @@
                 >To the top</a
               >
               <div
-                class="flex transform-gpu flex-col transition-transform duration-500 has-[a:hover]:scale-105"
+                class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent"
               >
                 <div
                   class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
