@@ -170,7 +170,7 @@ function NavListItem({
           after:origin-center after:scale-x-0 after:bg-accent
           after:transition-transform after:duration-500
           hover:text-accent hover:after:scale-x-100
-          ${hasBackdrop ? "mix-blend-hard-light" : ""}
+          ${hasBackdrop ? "mix-blend-hard-light text-shadow-lg" : ""}
         `}
         href={value.target}
         style={
