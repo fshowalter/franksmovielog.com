@@ -11,7 +11,7 @@ export const DROPDOWN_CLOSE_DELAY_MS = 150;
 /**
  * Delay before scrolling to item in milliseconds.
  */
-export const SCROLL_DELAY_MS = 50;
+const SCROLL_DELAY_MS = 50;
 
 // Positioning constants
 const SPACE_BUFFER_ABOVE = 20;
