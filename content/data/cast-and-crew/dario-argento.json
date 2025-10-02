@@ -1,8 +1,8 @@
 {
   "name": "Dario Argento",
   "slug": "dario-argento",
-  "titleCount": 23,
-  "reviewCount": 8,
+  "titleCount": 24,
+  "reviewCount": 9,
   "titles": [
     {
       "imdbId": "tt0064116",
@@ -36,6 +36,7 @@
       "releaseYear": "1970",
       "releaseDate": "1970-02-27",
       "genres": [
+        "Drama",
         "Horror",
         "Mystery",
         "Thriller"
@@ -222,7 +223,6 @@
       "reviewSequence": null,
       "creditedAs": [
         "director",
-        "performer",
         "writer"
       ],
       "watchlistDirectorNames": [
@@ -517,6 +517,32 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt1034415",
+      "title": "Suspiria",
+      "sortTitle": "suspiria-2018",
+      "releaseYear": "2018",
+      "releaseDate": "2018-09-01",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "suspiria-2018",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2021-07-02",
+      "reviewSequence": 2249,
+      "creditedAs": [
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt10935560",
       "title": "Dark Glasses",
       "sortTitle": "dark-glasses-2022",
@@ -600,10 +626,9 @@
       "watchlistCollectionNames": []
     }
   ],
-  "description": "Writer, director, and performer with 8 reviewed and 15 watchlist titles.",
+  "description": "Writer and director with 9 reviewed and 15 watchlist titles.",
   "creditedAs": [
     "writer",
-    "director",
-    "performer"
+    "director"
   ]
 }

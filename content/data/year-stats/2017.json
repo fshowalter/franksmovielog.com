@@ -169,6 +169,7 @@
           "releaseYear": "1970",
           "releaseDate": "1970-02-27",
           "genres": [
+            "Drama",
             "Horror",
             "Mystery",
             "Thriller"
@@ -602,6 +603,7 @@
           "releaseYear": "1970",
           "releaseDate": "1970-02-27",
           "genres": [
+            "Drama",
             "Horror",
             "Mystery",
             "Thriller"
@@ -700,7 +702,8 @@
           "releaseDate": "2016-01-21",
           "genres": [
             "Action",
-            "Comedy"
+            "Comedy",
+            "Sci-Fi"
           ],
           "slug": "deadpool-2016",
           "grade": "B+",
@@ -893,6 +896,7 @@
           "releaseYear": "1970",
           "releaseDate": "1970-02-27",
           "genres": [
+            "Drama",
             "Horror",
             "Mystery",
             "Thriller"
@@ -1284,6 +1288,58 @@
           "reviewSequence": 788,
           "viewingDate": "2017-11-13",
           "viewingSequence": 1744,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
+      "name": "Larry Lieber",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt3896198",
+          "title": "Guardians of the Galaxy Vol. 2",
+          "sortTitle": "guardians-of-the-galaxy-vol-2-2017",
+          "releaseYear": "2017",
+          "releaseDate": "2017-04-10",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "guardians-of-the-galaxy-vol-2-2017",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-08-29",
+          "reviewSequence": 1987,
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 1746,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt3501632",
+          "title": "Thor: Ragnarok",
+          "sortTitle": "thor-ragnarok-2017",
+          "releaseYear": "2017",
+          "releaseDate": "2017-10-10",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": "thor-ragnarok-2017",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-26",
+          "reviewSequence": 2000,
+          "viewingDate": "2017-12-13",
+          "viewingSequence": 1748,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }

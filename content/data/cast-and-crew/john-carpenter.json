@@ -1,8 +1,8 @@
 {
   "name": "John Carpenter",
   "slug": "john-carpenter",
-  "titleCount": 22,
-  "reviewCount": 10,
+  "titleCount": 25,
+  "reviewCount": 13,
   "titles": [
     {
       "imdbId": "tt0069945",
@@ -172,7 +172,6 @@
       "reviewSequence": 1301,
       "creditedAs": [
         "director",
-        "performer",
         "writer"
       ],
       "watchlistDirectorNames": [],
@@ -185,7 +184,7 @@
       "title": "The Thing",
       "sortTitle": "thing-1982",
       "releaseYear": "1982",
-      "releaseDate": "1982-06-25",
+      "releaseDate": "1982-??-??",
       "genres": [
         "Horror",
         "Mystery",
@@ -543,6 +542,57 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt10665338",
+      "title": "Halloween Kills",
+      "sortTitle": "halloween-kills-2021",
+      "releaseYear": "2021",
+      "releaseDate": "2021-09-08",
+      "genres": [
+        "Action",
+        "Drama",
+        "Horror",
+        "Thriller"
+      ],
+      "slug": "halloween-kills-2021",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2022-03-03",
+      "reviewSequence": 2387,
+      "creditedAs": [
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt10665342",
+      "title": "Halloween Ends",
+      "sortTitle": "halloween-ends-2022",
+      "releaseYear": "2022",
+      "releaseDate": "2022-10-06",
+      "genres": [
+        "Drama",
+        "Horror",
+        "Mystery",
+        "Romance",
+        "Thriller"
+      ],
+      "slug": "halloween-ends-2022",
+      "grade": "C-",
+      "gradeValue": 5,
+      "reviewDate": "2023-06-08",
+      "reviewSequence": 2618,
+      "creditedAs": [
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt1369706",
       "title": "The Ward",
       "sortTitle": "ward-2010",
@@ -567,9 +617,34 @@
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt1502407",
+      "title": "Halloween",
+      "sortTitle": "halloween-2018",
+      "releaseYear": "2018",
+      "releaseDate": "2018-09-08",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Horror",
+        "Thriller"
+      ],
+      "slug": "halloween-2018",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2022-03-03",
+      "reviewSequence": 2386,
+      "creditedAs": [
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "description": "Director, writer, and performer with 10 reviewed and 12 watchlist titles.",
+  "description": "Director, writer, and performer with 13 reviewed and 12 watchlist titles.",
   "creditedAs": [
     "director",
     "writer",

@@ -823,6 +823,7 @@
           "releaseYear": "1944",
           "releaseDate": "1944-09-29",
           "genres": [
+            "Drama",
             "Western"
           ],
           "slug": "tall-in-the-saddle-1944",
@@ -1050,6 +1051,7 @@
           "genres": [
             "Crime",
             "Horror",
+            "Mystery",
             "Thriller"
           ],
           "slug": null,
@@ -1623,6 +1625,77 @@
   ],
   "mostWatchedWriters": [
     {
+      "name": "Mark Jones",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0110329",
+          "title": "Leprechaun 2",
+          "sortTitle": "leprechaun-2-1994",
+          "releaseYear": "1994",
+          "releaseDate": "1994-04-08",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "leprechaun-2-1994",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2024-01-15",
+          "reviewSequence": 2684,
+          "viewingDate": "2024-01-15",
+          "viewingSequence": 2684,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0116861",
+          "title": "Leprechaun 4: In Space",
+          "sortTitle": "leprechaun-4-in-space-1996",
+          "releaseYear": "1996",
+          "releaseDate": "1996-??-??",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "leprechaun-4-in-space-1996",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-01-27",
+          "reviewSequence": 2689,
+          "viewingDate": "2024-01-27",
+          "viewingSequence": 2689,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0339294",
+          "title": "Leprechaun 6: Back 2 Tha Hood",
+          "sortTitle": "leprechaun-6-back-2-tha-hood-2003",
+          "releaseYear": "2003",
+          "releaseDate": "2003-12-01",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "leprechaun-6-back-2-tha-hood-2003",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2025-01-10",
+          "reviewSequence": 2830,
+          "viewingDate": "2024-02-23",
+          "viewingSequence": 2697,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Lucio Fulci",
       "count": 3,
       "slug": "lucio-fulci",
@@ -2130,51 +2203,6 @@
           "viewingDate": "2024-10-26",
           "viewingSequence": 2790,
           "medium": "iTunes",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Dardano Sacchetti",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0081318",
-          "title": "City of the Living Dead",
-          "sortTitle": "city-of-the-living-dead-1980",
-          "releaseYear": "1980",
-          "releaseDate": "1980-08-11",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "city-of-the-living-dead-1980",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2024-04-10",
-          "reviewSequence": 2706,
-          "viewingDate": "2024-04-10",
-          "viewingSequence": 2706,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0084298",
-          "title": "Manhattan Baby",
-          "sortTitle": "manhattan-baby-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-08-12",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "manhattan-baby-1982",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2024-10-18",
-          "reviewSequence": 2779,
-          "viewingDate": "2024-10-18",
-          "viewingSequence": 2779,
-          "medium": "Blu-ray",
           "venue": null
         }
       ]

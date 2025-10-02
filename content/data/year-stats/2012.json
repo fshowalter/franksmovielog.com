@@ -694,7 +694,7 @@
           "title": "The Thing",
           "sortTitle": "thing-1982",
           "releaseYear": "1982",
-          "releaseDate": "1982-06-25",
+          "releaseDate": "1982-??-??",
           "genres": [
             "Horror",
             "Mystery",
@@ -1122,7 +1122,8 @@
           "releaseYear": "1934",
           "releaseDate": "1934-05-31",
           "genres": [
-            "Drama"
+            "Drama",
+            "Romance"
           ],
           "slug": "the-key-1934",
           "grade": "D+",
@@ -1704,7 +1705,7 @@
           "title": "Paradise Canyon",
           "sortTitle": "paradise-canyon-1935",
           "releaseYear": "1935",
-          "releaseDate": "1935-07-20",
+          "releaseDate": "1935-??-??",
           "genres": [
             "Action",
             "Drama",
@@ -2396,8 +2397,312 @@
       ]
     },
     {
+      "name": "Christopher Lee",
+      "count": 15,
+      "slug": "christopher-lee",
+      "viewings": [
+        {
+          "imdbId": "tt0058155",
+          "title": "The Gorgon",
+          "sortTitle": "gorgon-1964",
+          "releaseYear": "1964",
+          "releaseDate": "1964-08-21",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-gorgon-1964",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2008-09-07",
+          "reviewSequence": 836,
+          "viewingDate": "2012-01-15",
+          "viewingSequence": 1145,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0062833",
+          "title": "The Crimson Cult",
+          "sortTitle": "crimson-cult-1968",
+          "releaseYear": "1968",
+          "releaseDate": "1968-12-01",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-crimson-cult-1968",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-05-03",
+          "reviewSequence": 2867,
+          "viewingDate": "2012-01-15",
+          "viewingSequence": 1146,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0089175",
+          "title": "Fright Night",
+          "sortTitle": "fright-night-1985",
+          "releaseYear": "1985",
+          "releaseDate": "1985-08-02",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": 2032,
+          "viewingDate": "2012-01-28",
+          "viewingSequence": 1173,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0059710",
+          "title": "She",
+          "sortTitle": "she-1965",
+          "releaseYear": "1965",
+          "releaseDate": "1965-04-18",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": "she-1965",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2012-01-29",
+          "reviewSequence": 1175,
+          "viewingDate": "2012-01-29",
+          "viewingSequence": 1175,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0068713",
+          "title": "Horror Express",
+          "sortTitle": "horror-express-1972",
+          "releaseYear": "1972",
+          "releaseDate": "1972-09-30",
+          "genres": [
+            "Adventure",
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "horror-express-1972",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2024-04-27",
+          "reviewSequence": 2712,
+          "viewingDate": "2012-03-25",
+          "viewingSequence": 1250,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0068458",
+          "title": "Death Line",
+          "sortTitle": "death-line-1972",
+          "releaseYear": "1972",
+          "releaseDate": "1972-10-13",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "death-line-1972",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2008-10-31",
+          "reviewSequence": 896,
+          "viewingDate": "2012-03-25",
+          "viewingSequence": 1251,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1077368",
+          "title": "Dark Shadows",
+          "sortTitle": "dark-shadows-2012",
+          "releaseYear": "2012",
+          "releaseDate": "2012-05-09",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "dark-shadows-2012",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2012-06-07",
+          "reviewSequence": 1305,
+          "viewingDate": "2012-06-07",
+          "viewingSequence": 1305,
+          "medium": null,
+          "venue": "AMC Tysons Corner 16"
+        },
+        {
+          "imdbId": "tt0089175",
+          "title": "Fright Night",
+          "sortTitle": "fright-night-1985",
+          "releaseYear": "1985",
+          "releaseDate": "1985-08-02",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": 2032,
+          "viewingDate": "2012-07-07",
+          "viewingSequence": 1322,
+          "medium": "35mm",
+          "venue": "AFI Silver"
+        },
+        {
+          "imdbId": "tt0089175",
+          "title": "Fright Night",
+          "sortTitle": "fright-night-1985",
+          "releaseYear": "1985",
+          "releaseDate": "1985-08-02",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": 2032,
+          "viewingDate": "2012-07-08",
+          "viewingSequence": 1324,
+          "medium": "35mm",
+          "venue": "AFI Silver"
+        },
+        {
+          "imdbId": "tt0089175",
+          "title": "Fright Night",
+          "sortTitle": "fright-night-1985",
+          "releaseYear": "1985",
+          "releaseDate": "1985-08-02",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "fright-night-1985",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2020-10-31",
+          "reviewSequence": 2032,
+          "viewingDate": "2012-07-30",
+          "viewingSequence": 1335,
+          "medium": "Blu-ray",
+          "venue": "The Black Cat"
+        },
+        {
+          "imdbId": "tt0052905",
+          "title": "The Hound of the Baskervilles",
+          "sortTitle": "hound-of-the-baskervilles-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-03-28",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-hound-of-the-baskervilles-1959",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2025-05-24",
+          "reviewSequence": 2884,
+          "viewingDate": "2012-10-28",
+          "viewingSequence": 1358,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0062885",
+          "title": "The Devil Rides Out",
+          "sortTitle": "devil-rides-out-1968",
+          "releaseYear": "1968",
+          "releaseDate": "1968-05-19",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-devil-rides-out-1968",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": 1596,
+          "viewingDate": "2012-11-02",
+          "viewingSequence": 1365,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0059127",
+          "title": "Dracula: Prince of Darkness",
+          "sortTitle": "dracula-prince-of-darkness-1966",
+          "releaseYear": "1966",
+          "releaseDate": "1966-01-02",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "dracula-prince-of-darkness-1966",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2003-10-16",
+          "reviewSequence": 54,
+          "viewingDate": "2012-11-03",
+          "viewingSequence": 1367,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0062909",
+          "title": "Dracula Has Risen from the Grave",
+          "sortTitle": "dracula-has-risen-from-the-grave-1968",
+          "releaseYear": "1968",
+          "releaseDate": "1968-11-07",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Romance"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-11-09",
+          "viewingSequence": 1369,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0903624",
+          "title": "The Hobbit: An Unexpected Journey",
+          "sortTitle": "hobbit-an-unexpected-journey-2012",
+          "releaseYear": "2012",
+          "releaseDate": "2012-11-28",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2012-12-13",
+          "viewingSequence": 1377,
+          "medium": null,
+          "venue": "AMC Tysons Corner 16"
+        }
+      ]
+    },
+    {
       "name": "Yakima Canutt",
-      "count": 13,
+      "count": 12,
       "slug": null,
       "viewings": [
         {
@@ -2509,7 +2814,7 @@
           "title": "Paradise Canyon",
           "sortTitle": "paradise-canyon-1935",
           "releaseYear": "1935",
-          "releaseDate": "1935-07-20",
+          "releaseDate": "1935-??-??",
           "genres": [
             "Action",
             "Drama",
@@ -2653,255 +2958,6 @@
           "viewingSequence": 1232,
           "medium": "Netflix",
           "venue": null
-        },
-        {
-          "imdbId": "tt0031971",
-          "title": "Stagecoach",
-          "sortTitle": "stagecoach-1939",
-          "releaseYear": "1939",
-          "releaseDate": "1939-??-??",
-          "genres": [
-            "Adventure",
-            "Drama",
-            "Western"
-          ],
-          "slug": "stagecoach-1939",
-          "grade": "A+",
-          "gradeValue": 13,
-          "reviewDate": "2008-01-22",
-          "reviewSequence": 554,
-          "viewingDate": "2012-04-06",
-          "viewingSequence": 1268,
-          "medium": "TCM HD",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Christopher Lee",
-      "count": 11,
-      "slug": "christopher-lee",
-      "viewings": [
-        {
-          "imdbId": "tt0058155",
-          "title": "The Gorgon",
-          "sortTitle": "gorgon-1964",
-          "releaseYear": "1964",
-          "releaseDate": "1964-08-21",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-gorgon-1964",
-          "grade": "C-",
-          "gradeValue": 5,
-          "reviewDate": "2008-09-07",
-          "reviewSequence": 836,
-          "viewingDate": "2012-01-15",
-          "viewingSequence": 1145,
-          "medium": "TCM HD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0062833",
-          "title": "The Crimson Cult",
-          "sortTitle": "crimson-cult-1968",
-          "releaseYear": "1968",
-          "releaseDate": "1968-12-01",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-crimson-cult-1968",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2025-05-03",
-          "reviewSequence": 2867,
-          "viewingDate": "2012-01-15",
-          "viewingSequence": 1146,
-          "medium": "Netflix",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0059710",
-          "title": "She",
-          "sortTitle": "she-1965",
-          "releaseYear": "1965",
-          "releaseDate": "1965-04-18",
-          "genres": [
-            "Adventure",
-            "Fantasy"
-          ],
-          "slug": "she-1965",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2012-01-29",
-          "reviewSequence": 1175,
-          "viewingDate": "2012-01-29",
-          "viewingSequence": 1175,
-          "medium": "TCM HD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0068713",
-          "title": "Horror Express",
-          "sortTitle": "horror-express-1972",
-          "releaseYear": "1972",
-          "releaseDate": "1972-09-30",
-          "genres": [
-            "Adventure",
-            "Horror",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "horror-express-1972",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2024-04-27",
-          "reviewSequence": 2712,
-          "viewingDate": "2012-03-25",
-          "viewingSequence": 1250,
-          "medium": "TCM HD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0068458",
-          "title": "Death Line",
-          "sortTitle": "death-line-1972",
-          "releaseYear": "1972",
-          "releaseDate": "1972-10-13",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "death-line-1972",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2008-10-31",
-          "reviewSequence": 896,
-          "viewingDate": "2012-03-25",
-          "viewingSequence": 1251,
-          "medium": "TCM HD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1077368",
-          "title": "Dark Shadows",
-          "sortTitle": "dark-shadows-2012",
-          "releaseYear": "2012",
-          "releaseDate": "2012-05-09",
-          "genres": [
-            "Comedy",
-            "Fantasy",
-            "Horror"
-          ],
-          "slug": "dark-shadows-2012",
-          "grade": "C",
-          "gradeValue": 6,
-          "reviewDate": "2012-06-07",
-          "reviewSequence": 1305,
-          "viewingDate": "2012-06-07",
-          "viewingSequence": 1305,
-          "medium": null,
-          "venue": "AMC Tysons Corner 16"
-        },
-        {
-          "imdbId": "tt0052905",
-          "title": "The Hound of the Baskervilles",
-          "sortTitle": "hound-of-the-baskervilles-1959",
-          "releaseYear": "1959",
-          "releaseDate": "1959-03-28",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "the-hound-of-the-baskervilles-1959",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2025-05-24",
-          "reviewSequence": 2884,
-          "viewingDate": "2012-10-28",
-          "viewingSequence": 1358,
-          "medium": "TCM HD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0062885",
-          "title": "The Devil Rides Out",
-          "sortTitle": "devil-rides-out-1968",
-          "releaseYear": "1968",
-          "releaseDate": "1968-05-19",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-devil-rides-out-1968",
-          "grade": "B",
-          "gradeValue": 9,
-          "reviewDate": "2015-01-17",
-          "reviewSequence": 1596,
-          "viewingDate": "2012-11-02",
-          "viewingSequence": 1365,
-          "medium": "TCM HD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0059127",
-          "title": "Dracula: Prince of Darkness",
-          "sortTitle": "dracula-prince-of-darkness-1966",
-          "releaseYear": "1966",
-          "releaseDate": "1966-01-02",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "dracula-prince-of-darkness-1966",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2003-10-16",
-          "reviewSequence": 54,
-          "viewingDate": "2012-11-03",
-          "viewingSequence": 1367,
-          "medium": "TCM HD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0062909",
-          "title": "Dracula Has Risen from the Grave",
-          "sortTitle": "dracula-has-risen-from-the-grave-1968",
-          "releaseYear": "1968",
-          "releaseDate": "1968-11-07",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Romance"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2012-11-09",
-          "viewingSequence": 1369,
-          "medium": "TCM HD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0903624",
-          "title": "The Hobbit: An Unexpected Journey",
-          "sortTitle": "hobbit-an-unexpected-journey-2012",
-          "releaseYear": "2012",
-          "releaseDate": "2012-11-28",
-          "genres": [
-            "Adventure",
-            "Fantasy"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2012-12-13",
-          "viewingSequence": 1377,
-          "medium": null,
-          "venue": "AMC Tysons Corner 16"
         }
       ]
     },
@@ -3720,6 +3776,7 @@
           "releaseDate": "1940-02-29",
           "genres": [
             "Drama",
+            "Romance",
             "Thriller"
           ],
           "slug": "the-house-of-the-seven-gables-1940",
@@ -3849,7 +3906,8 @@
           "releaseYear": "1934",
           "releaseDate": "1934-05-31",
           "genres": [
-            "Drama"
+            "Drama",
+            "Romance"
           ],
           "slug": "the-key-1934",
           "grade": "D+",
@@ -4641,7 +4699,7 @@
           "title": "Paradise Canyon",
           "sortTitle": "paradise-canyon-1935",
           "releaseYear": "1935",
-          "releaseDate": "1935-07-20",
+          "releaseDate": "1935-??-??",
           "genres": [
             "Action",
             "Drama",
