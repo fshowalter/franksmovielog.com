@@ -131,6 +131,7 @@
           "releaseYear": "1970",
           "releaseDate": "1970-02-27",
           "genres": [
+            "Drama",
             "Horror",
             "Mystery",
             "Thriller"
@@ -439,6 +440,8 @@
           "releaseYear": "2014",
           "releaseDate": "2014-03-07",
           "genres": [
+            "Action",
+            "Adventure",
             "Horror",
             "Thriller"
           ],
@@ -784,6 +787,7 @@
           "releaseDate": "2013-01-12",
           "genres": [
             "Action",
+            "Drama",
             "Thriller",
             "Western"
           ],
@@ -830,7 +834,8 @@
           "genres": [
             "Action",
             "Comedy",
-            "Crime"
+            "Crime",
+            "Mystery"
           ],
           "slug": null,
           "grade": null,
@@ -945,8 +950,7 @@
           "releaseYear": "2012",
           "releaseDate": "2012-09-01",
           "genres": [
-            "Drama",
-            "History"
+            "Drama"
           ],
           "slug": null,
           "grade": null,
@@ -978,6 +982,74 @@
           "viewingSequence": 1569,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
+      "name": "Thom Mathews",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0089907",
+          "title": "The Return of the Living Dead",
+          "sortTitle": "return-of-the-living-dead-1985",
+          "releaseYear": "1985",
+          "releaseDate": "1985-04-18",
+          "genres": [
+            "Comedy",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "the-return-of-the-living-dead-1985",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2008-09-12",
+          "reviewSequence": 843,
+          "viewingDate": "2014-01-25",
+          "viewingSequence": 1491,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0091080",
+          "title": "Friday the 13th Part VI: Jason Lives",
+          "sortTitle": "friday-the-13th-part-vi-jason-lives-1986",
+          "releaseYear": "1986",
+          "releaseDate": "1986-08-01",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "friday-the-13th-part-vi-jason-lives-1986",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-04-16",
+          "reviewSequence": 2208,
+          "viewingDate": "2014-12-20",
+          "viewingSequence": 1583,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0095179",
+          "title": "Friday the 13th: The New Blood",
+          "sortTitle": "friday-the-13th-the-new-blood-1988",
+          "releaseYear": "1988",
+          "releaseDate": "1988-05-13",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "friday-the-13th-the-new-blood-1988",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2023-10-13",
+          "reviewSequence": 2661,
+          "viewingDate": "2014-12-27",
+          "viewingSequence": 1585,
+          "medium": "Netflix",
+          "venue": null
         }
       ]
     },
@@ -1191,75 +1263,6 @@
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
-    },
-    {
-      "name": "Clark Middleton",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0378194",
-          "title": "Kill Bill: Vol. 2",
-          "sortTitle": "kill-bill-vol-2-2004",
-          "releaseYear": "2004",
-          "releaseDate": "2004-04-08",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "kill-bill-vol-2-2004",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2004-05-02",
-          "reviewSequence": 149,
-          "viewingDate": "2014-03-29",
-          "viewingSequence": 1503,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1706620",
-          "title": "Snowpiercer",
-          "sortTitle": "snowpiercer-2013",
-          "releaseYear": "2013",
-          "releaseDate": "2013-07-29",
-          "genres": [
-            "Action",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-07-17",
-          "viewingSequence": 1537,
-          "medium": null,
-          "venue": "Angelika Film Center Mosaic"
-        },
-        {
-          "imdbId": "tt2562232",
-          "title": "Birdman or (The Unexpected Virtue of Ignorance)",
-          "sortTitle": "birdman-or-the-unexpected-virtue-of-ignorance-2014",
-          "releaseYear": "2014",
-          "releaseDate": "2014-08-27",
-          "genres": [
-            "Comedy",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-11-20",
-          "viewingSequence": 1572,
-          "medium": null,
-          "venue": "Angelika Film Center Mosaic"
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
@@ -1388,6 +1391,7 @@
           "releaseYear": "1970",
           "releaseDate": "1970-02-27",
           "genres": [
+            "Drama",
             "Horror",
             "Mystery",
             "Thriller"

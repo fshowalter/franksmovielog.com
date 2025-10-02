@@ -817,6 +817,7 @@
           "genres": [
             "Crime",
             "Drama",
+            "Horror",
             "Thriller"
           ],
           "slug": "funny-games-1997",
@@ -954,6 +955,7 @@
           "releaseYear": "1970",
           "releaseDate": "1970-02-27",
           "genres": [
+            "Drama",
             "Horror",
             "Mystery",
             "Thriller"
@@ -1408,6 +1410,7 @@
           "releaseDate": "1930-10-27",
           "genres": [
             "Action",
+            "Drama",
             "Romance",
             "Western"
           ],
@@ -1572,7 +1575,7 @@
           "title": "Behind the Mask",
           "sortTitle": "behind-the-mask-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-02-25",
+          "releaseDate": "1932-02-11",
           "genres": [
             "Crime",
             "Horror",
@@ -1801,7 +1804,7 @@
     },
     {
       "name": "Hugh Jackman",
-      "count": 8,
+      "count": 7,
       "slug": null,
       "viewings": [
         {
@@ -1885,26 +1888,6 @@
           "viewingDate": "2021-01-30",
           "viewingSequence": 2127,
           "medium": "Vudu",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1270798",
-          "title": "X-Men: First Class",
-          "sortTitle": "x-men-first-class-2011",
-          "releaseYear": "2011",
-          "releaseDate": "2011-05-25",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "x-men-first-class-2011",
-          "grade": "B",
-          "gradeValue": 9,
-          "reviewDate": "2021-02-06",
-          "reviewSequence": 2135,
-          "viewingDate": "2021-02-06",
-          "viewingSequence": 2135,
-          "medium": "Blu-ray",
           "venue": null
         },
         {
@@ -3414,6 +3397,121 @@
       ]
     },
     {
+      "name": "Dario Argento",
+      "count": 5,
+      "slug": "dario-argento",
+      "viewings": [
+        {
+          "imdbId": "tt0065143",
+          "title": "The Bird with the Crystal Plumage",
+          "sortTitle": "bird-with-the-crystal-plumage-1970",
+          "releaseYear": "1970",
+          "releaseDate": "1970-02-27",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-01-22",
+          "reviewSequence": 2119,
+          "viewingDate": "2021-01-22",
+          "viewingSequence": 2119,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0065761",
+          "title": "The Cat o' Nine Tails",
+          "sortTitle": "cat-o-nine-tails-1971",
+          "releaseYear": "1971",
+          "releaseDate": "1971-02-12",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cat-o-nine-tails-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2021-02-05",
+          "reviewSequence": 2134,
+          "viewingDate": "2021-02-05",
+          "viewingSequence": 2134,
+          "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0066735",
+          "title": "Four Flies on Grey Velvet",
+          "sortTitle": "four-flies-on-grey-velvet-1971",
+          "releaseYear": "1971",
+          "releaseDate": "1971-12-17",
+          "genres": [
+            "Crime",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "four-flies-on-grey-velvet-1971",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-07-02",
+          "reviewSequence": 2248,
+          "viewingDate": "2021-07-02",
+          "viewingSequence": 2248,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1034415",
+          "title": "Suspiria",
+          "sortTitle": "suspiria-2018",
+          "releaseYear": "2018",
+          "releaseDate": "2018-09-01",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "suspiria-2018",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-07-02",
+          "reviewSequence": 2249,
+          "viewingDate": "2021-07-02",
+          "viewingSequence": 2249,
+          "medium": "Amazon",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0069884",
+          "title": "The Five Days",
+          "sortTitle": "five-days-1973",
+          "releaseYear": "1973",
+          "releaseDate": "1973-12-20",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "History"
+          ],
+          "slug": "the-five-days-1973",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-12-14",
+          "reviewSequence": 2333,
+          "viewingDate": "2021-12-14",
+          "viewingSequence": 2333,
+          "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Michael Haneke",
       "count": 5,
       "slug": "michael-haneke",
@@ -3486,6 +3584,7 @@
           "genres": [
             "Crime",
             "Drama",
+            "Horror",
             "Thriller"
           ],
           "slug": "funny-games-1997",
@@ -3716,97 +3815,6 @@
           "viewingDate": "2021-03-06",
           "viewingSequence": 2165,
           "medium": "Disney+",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Dario Argento",
-      "count": 4,
-      "slug": "dario-argento",
-      "viewings": [
-        {
-          "imdbId": "tt0065143",
-          "title": "The Bird with the Crystal Plumage",
-          "sortTitle": "bird-with-the-crystal-plumage-1970",
-          "releaseYear": "1970",
-          "releaseDate": "1970-02-27",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-bird-with-the-crystal-plumage-1970",
-          "grade": "B-",
-          "gradeValue": 8,
-          "reviewDate": "2021-01-22",
-          "reviewSequence": 2119,
-          "viewingDate": "2021-01-22",
-          "viewingSequence": 2119,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0065761",
-          "title": "The Cat o' Nine Tails",
-          "sortTitle": "cat-o-nine-tails-1971",
-          "releaseYear": "1971",
-          "releaseDate": "1971-02-12",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-cat-o-nine-tails-1971",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2021-02-05",
-          "reviewSequence": 2134,
-          "viewingDate": "2021-02-05",
-          "viewingSequence": 2134,
-          "medium": "iTunes",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0066735",
-          "title": "Four Flies on Grey Velvet",
-          "sortTitle": "four-flies-on-grey-velvet-1971",
-          "releaseYear": "1971",
-          "releaseDate": "1971-12-17",
-          "genres": [
-            "Crime",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "four-flies-on-grey-velvet-1971",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2021-07-02",
-          "reviewSequence": 2248,
-          "viewingDate": "2021-07-02",
-          "viewingSequence": 2248,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0069884",
-          "title": "The Five Days",
-          "sortTitle": "five-days-1973",
-          "releaseYear": "1973",
-          "releaseDate": "1973-12-20",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "History"
-          ],
-          "slug": "the-five-days-1973",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2021-12-14",
-          "reviewSequence": 2333,
-          "viewingDate": "2021-12-14",
-          "viewingSequence": 2333,
-          "medium": "DVD",
           "venue": null
         }
       ]

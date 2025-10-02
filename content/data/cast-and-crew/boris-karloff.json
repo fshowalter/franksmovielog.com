@@ -1,8 +1,8 @@
 {
   "name": "Boris Karloff",
   "slug": "boris-karloff",
-  "titleCount": 98,
-  "reviewCount": 44,
+  "titleCount": 99,
+  "reviewCount": 45,
   "titles": [
     {
       "imdbId": "tt0019684",
@@ -86,6 +86,7 @@
       "releaseDate": "1930-10-27",
       "genres": [
         "Action",
+        "Drama",
         "Romance",
         "Western"
       ],
@@ -374,7 +375,7 @@
       "title": "Behind the Mask",
       "sortTitle": "behind-the-mask-1932",
       "releaseYear": "1932",
-      "releaseDate": "1932-02-25",
+      "releaseDate": "1932-02-11",
       "genres": [
         "Crime",
         "Horror",
@@ -427,6 +428,7 @@
       "releaseDate": "1932-11-05",
       "genres": [
         "Adventure",
+        "Drama",
         "Horror",
         "Sci-Fi"
       ],
@@ -808,7 +810,7 @@
       "title": "The Invisible Ray",
       "sortTitle": "invisible-ray-1935",
       "releaseYear": "1935",
-      "releaseDate": "1935-12-24",
+      "releaseDate": "1936-01-20",
       "genres": [
         "Horror",
         "Sci-Fi",
@@ -1135,7 +1137,8 @@
       "releaseYear": "1940",
       "releaseDate": "1940-09-30",
       "genres": [
-        "Horror"
+        "Horror",
+        "Sci-Fi"
       ],
       "slug": null,
       "grade": null,
@@ -2347,6 +2350,31 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0071790",
+      "title": "Madhouse",
+      "sortTitle": "madhouse-1974",
+      "releaseYear": "1974",
+      "releaseDate": "1974-03-28",
+      "genres": [
+        "Crime",
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "madhouse-1974",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2008-01-25",
+      "reviewSequence": 558,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0321754",
       "title": "A Connecticut Yankee",
       "sortTitle": "connecticut-yankee-1955",
@@ -2473,7 +2501,7 @@
       "watchlistCollectionNames": []
     }
   ],
-  "description": "Performer with 44 reviewed and 54 watchlist titles.",
+  "description": "Performer with 45 reviewed and 54 watchlist titles.",
   "creditedAs": [
     "performer"
   ]
