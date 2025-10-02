@@ -2,7 +2,7 @@ import { act, render, screen, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import { MultiSelectField, SCROLL_DELAY_MS } from "./MultiSelectField";
+import { MultiSelectField } from "./MultiSelectField";
 
 // Mock scrollIntoView for all tests
 if (!Element.prototype.scrollIntoView) {
