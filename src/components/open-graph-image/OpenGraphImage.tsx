@@ -24,7 +24,6 @@ export function OpenGraphImage({
   sectionHead = "Frank's Movie Log",
   title,
 }: OpenGraphImageProps): React.JSX.Element {
-  // eslint-disable-next-line react-hooks/no-unused-directives
   "use no memo";
 
   return (

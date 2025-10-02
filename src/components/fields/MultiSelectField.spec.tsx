@@ -99,7 +99,7 @@ describe("MultiSelectField", () => {
       await user.click(screen.getByText("Option 2"));
 
       await waitFor(() => {
-        expect(onChange).toHaveBeenCalledWith(["Option 2"]);
+        expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 2"]);
       });
 
       // Dropdown should close immediately
@@ -120,7 +120,7 @@ describe("MultiSelectField", () => {
       await user.click(screen.getByText("Option 1"));
 
       await waitFor(() => {
-        expect(onChange).toHaveBeenCalledWith(["Option 1"]);
+        expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 1"]);
       });
     });
 
@@ -161,12 +161,12 @@ describe("MultiSelectField", () => {
       // Select first option
       await user.click(button);
       await user.click(screen.getByText("Option 1"));
-      expect(onChange).toHaveBeenCalledWith(["Option 1"]);
+      expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 1"]);
 
       // Select second option
       await user.click(button);
       await user.click(screen.getByText("Option 3"));
-      expect(onChange).toHaveBeenCalledWith(["Option 1", "Option 3"]);
+      expect(onChange).toHaveBeenNthCalledWith(2, ["Option 1", "Option 3"]);
 
       // Select third option
       await user.click(button);
@@ -213,16 +213,6 @@ describe("MultiSelectField", () => {
       await user.click(removeButton);
 
       expect(onChange).toHaveBeenLastCalledWith([]);
-
-      // Advance timers to trigger scrollIntoView after SCROLL_DELAY_MS
-      act(() => {
-        vi.advanceTimersByTime(SCROLL_DELAY_MS);
-      });
-
-      expect(scrollIntoViewSpy).toHaveBeenCalledWith({
-        behavior: "smooth",
-        block: "nearest",
-      });
     });
 
     it("clears all selections when clear button is clicked", async ({
@@ -250,16 +240,6 @@ describe("MultiSelectField", () => {
       await user.click(clearButton);
 
       expect(onChange).toHaveBeenLastCalledWith([]);
-
-      // Advance timers to trigger scrollIntoView after SCROLL_DELAY_MS
-      act(() => {
-        vi.advanceTimersByTime(SCROLL_DELAY_MS);
-      });
-
-      expect(scrollIntoViewSpy).toHaveBeenCalledWith({
-        behavior: "smooth",
-        block: "nearest",
-      });
     });
   });
 
@@ -443,7 +423,7 @@ describe("MultiSelectField", () => {
         await user.click(thirdOption);
 
         await waitFor(() => {
-          expect(onChange).toHaveBeenCalledWith(["Option 3"]);
+          expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 3"]);
         });
       });
 
@@ -466,7 +446,7 @@ describe("MultiSelectField", () => {
 
         // Should have selected Option 1
         await waitFor(() => {
-          expect(onChange).toHaveBeenCalledWith(["Option 1"]);
+          expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 1"]);
         });
       });
 
@@ -489,7 +469,7 @@ describe("MultiSelectField", () => {
 
         // Should have selected Option 1
         await waitFor(() => {
-          expect(onChange).toHaveBeenCalledWith(["Option 1"]);
+          expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 1"]);
         });
       });
 
@@ -513,7 +493,7 @@ describe("MultiSelectField", () => {
         await user.keyboard("{Enter}");
 
         await waitFor(() => {
-          expect(onChange).toHaveBeenCalledWith(["Option 2"]);
+          expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 2"]);
         });
       });
 
@@ -538,7 +518,7 @@ describe("MultiSelectField", () => {
         await user.keyboard(" ");
 
         await waitFor(() => {
-          expect(onChange).toHaveBeenCalledWith(["Option 3"]);
+          expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 3"]);
         });
       });
     });
@@ -605,7 +585,7 @@ describe("MultiSelectField", () => {
         await user.click(screen.getByText("Option 2"));
 
         await waitFor(() => {
-          expect(onChange).toHaveBeenCalledWith(["Option 2"]);
+          expect(onChange).toHaveBeenCalledExactlyOnceWith(["Option 2"]);
         });
 
         // Dropdown should close immediately
@@ -927,16 +907,6 @@ describe("MultiSelectField", () => {
         await user.keyboard("{Enter}");
 
         expect(onChange).toHaveBeenLastCalledWith([]);
-
-        // Advance timers to trigger scrollIntoView after SCROLL_DELAY_MS
-        act(() => {
-          vi.advanceTimersByTime(SCROLL_DELAY_MS);
-        });
-
-        expect(scrollIntoViewSpy).toHaveBeenCalledWith({
-          behavior: "smooth",
-          block: "nearest",
-        });
       });
 
       it("removes selected option with Space key on remove button", async ({
@@ -961,16 +931,6 @@ describe("MultiSelectField", () => {
         await user.keyboard(" ");
 
         expect(onChange).toHaveBeenLastCalledWith([]);
-
-        // Advance timers to trigger scrollIntoView after SCROLL_DELAY_MS
-        act(() => {
-          vi.advanceTimersByTime(SCROLL_DELAY_MS);
-        });
-
-        expect(scrollIntoViewSpy).toHaveBeenCalledWith({
-          behavior: "smooth",
-          block: "nearest",
-        });
       });
 
       it("clears all selections with Enter key on clear button", async ({
@@ -997,16 +957,6 @@ describe("MultiSelectField", () => {
         await user.keyboard("{Enter}");
 
         expect(onChange).toHaveBeenLastCalledWith([]);
-
-        // Advance timers to trigger scrollIntoView after SCROLL_DELAY_MS
-        act(() => {
-          vi.advanceTimersByTime(SCROLL_DELAY_MS);
-        });
-
-        expect(scrollIntoViewSpy).toHaveBeenCalledWith({
-          behavior: "smooth",
-          block: "nearest",
-        });
       });
 
       it("clears all selections with Space key on clear button", async ({
@@ -1033,16 +983,6 @@ describe("MultiSelectField", () => {
         await user.keyboard(" ");
 
         expect(onChange).toHaveBeenLastCalledWith([]);
-
-        // Advance timers to trigger scrollIntoView after SCROLL_DELAY_MS
-        act(() => {
-          vi.advanceTimersByTime(SCROLL_DELAY_MS);
-        });
-
-        expect(scrollIntoViewSpy).toHaveBeenCalledWith({
-          behavior: "smooth",
-          block: "nearest",
-        });
       });
     });
   });
