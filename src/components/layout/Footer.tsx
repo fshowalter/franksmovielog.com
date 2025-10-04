@@ -7,129 +7,134 @@ import { TableOfContents } from "./TableOfContents";
  */
 export function Footer(): React.JSX.Element {
   return (
-    <footer className={"bg-footer text-white"}>
-      <div className="mx-auto max-w-(--breakpoint-laptop) px-container py-20">
-        <div
-          className={`
-            flex w-full flex-col
-            tablet:flex-row-reverse tablet:justify-between
-          `}
-        >
-          <a
-            className={`
-              mx-auto mb-8 w-full max-w-button transform-gpu rounded-md
-              bg-canvas py-5 text-center font-sans text-sm font-normal
-              tracking-wide text-default uppercase transition-all
-              hover:scale-105 hover:bg-default hover:text-default
-              hover:drop-shadow-lg
-              tablet:mx-0
-            `}
-            href="#top"
-          >
-            To the top
-          </a>
-          <Logo />
-        </div>
-        <div
-          className={`
-            justify-between
-            tablet:flex
-          `}
-        >
+    <footer className="relative">
+      <div className="relative z-10 bg-footer text-white">
+        <div className="mx-auto max-w-(--breakpoint-laptop) px-container py-20">
           <div
             className={`
-              flex max-w-[640px] flex-col pb-12
-              tablet:pr-32
+              flex w-full flex-col
+              tablet:flex-row-reverse tablet:justify-between
             `}
           >
-            <div className={`pt-10 font-sans font-normal text-grey`}>
-              <p
-                className={`
-                  mb-6 text-pretty
-                  first-letter:float-left first-letter:mt-[6px]
-                  first-letter:pr-1 first-letter:font-sans
-                  first-letter:text-[40px] first-letter:leading-[.8]
-                  first-letter:font-bold first-letter:text-white
-                `}
-              >
-                Hi there, I&apos;m Frank, a husband and father old enough to
-                have sat wide-eyed during <em>E.T</em>&apos;s first theatrical
-                run, I&apos;ve been watching, absorbing, and dissecting films
-                ever since.
-              </p>
-
-              <p className="mb-6 text-pretty">
-                This site began in 2003 when I realized two things: I had become
-                the designated &ldquo;movie guy&rdquo; among my friends (you
-                know, the one everyone asks about every new release), and I was
-                frequently experiencing the peculiar déjà vu of realizing,
-                halfway through a film, that I&apos;d already seen it. Clearly,
-                I needed a system.
-              </p>
-
-              <p className="mb-6 text-pretty">
-                What began as personal record-keeping evolved into this little
-                corner of the internet where I share my thoughts on everything
-                from blockbusters to obscure indies that deserved better.
-              </p>
-
-              <p className="mb-6 text-pretty">
-                New visitors might want to start by reading about{" "}
-                <FooterLink href="/how-i-grade/" text="how I grade" /> films.
-                After that, feel free to browse{" "}
-                <FooterLink href="/reviews/" text="my reviews" />. If
-                you&apos;re looking for something that flew under the radar but
-                deserves your attention, I recommend my{" "}
-                <FooterLink href="/reviews/underseen/" text="underseen gems" />{" "}
-                section. Or, for those moments when you want to feel righteously
-                contrarian, I maintain an list of{" "}
-                <FooterLink
-                  href="/reviews/overrated/"
-                  text="overrated disappointments"
-                />
-                .
-              </p>
-
-              <p className="mb-6 text-pretty">
-                I also keep a{" "}
-                <FooterLink href="/viewings/" text="viewing log" /> that tracks
-                everything I watch, whether it gets a full review or not,
-                complete with{" "}
-                <FooterLink href="/viewings/stats/" text="stats" />. In an age
-                of endless content, sometimes the act of remembering what
-                we&apos;ve seen becomes as important as the seeing itself.
-              </p>
-
-              <p className="mb-6 text-pretty">
-                And finally, if you&apos;re curious about what&apos;s on my
-                critical horizon,{" "}
-                <FooterLink href="/watchlist/" text="my watchlist" /> details
-                the films I plan to review and why they&apos;ve caught my
-                interest.
-              </p>
-
-              <p className="text-pretty">
-                In an era of algorithmic recommendations and corporate marketing
-                machines, consider this site a human alternative—one
-                person&apos;s attempt to catalog the vast ocean of cinema and
-                maybe help a few fellow travelers along the way.
-              </p>
-            </div>
+            <a
+              className={`
+                mx-auto mb-8 w-full max-w-button transform-gpu rounded-md
+                bg-canvas py-5 text-center font-sans text-sm font-normal
+                tracking-wide text-default uppercase transition-all
+                hover:scale-105 hover:bg-default hover:text-default
+                hover:drop-shadow-lg
+                tablet:mx-0
+              `}
+              href="#top"
+            >
+              To the top
+            </a>
+            <Logo />
           </div>
           <div
             className={`
-              flex grow-0 flex-col gap-20 pt-10 pb-20
-              tablet:basis-button tablet:pr-10
+              justify-between
+              tablet:flex
             `}
           >
-            <TableOfContents />
+            <div
+              className={`
+                flex max-w-[640px] flex-col pb-12
+                tablet:pr-32
+              `}
+            >
+              <div className={`pt-10 font-sans font-normal text-grey`}>
+                <p
+                  className={`
+                    mb-6 text-pretty
+                    first-letter:float-left first-letter:mt-[6px]
+                    first-letter:pr-1 first-letter:font-sans
+                    first-letter:text-[40px] first-letter:leading-[.8]
+                    first-letter:font-bold first-letter:text-white
+                  `}
+                >
+                  Hi there, I&apos;m Frank, a husband and father old enough to
+                  have sat wide-eyed during <em>E.T</em>&apos;s first theatrical
+                  run, I&apos;ve been watching, absorbing, and dissecting films
+                  ever since.
+                </p>
+
+                <p className="mb-6 text-pretty">
+                  This site began in 2003 when I realized two things: I had
+                  become the designated &ldquo;movie guy&rdquo; among my friends
+                  (you know, the one everyone asks about every new release), and
+                  I was frequently experiencing the peculiar déjà vu of
+                  realizing, halfway through a film, that I&apos;d already seen
+                  it. Clearly, I needed a system.
+                </p>
+
+                <p className="mb-6 text-pretty">
+                  What began as personal record-keeping evolved into this little
+                  corner of the internet where I share my thoughts on everything
+                  from blockbusters to obscure indies that deserved better.
+                </p>
+
+                <p className="mb-6 text-pretty">
+                  New visitors might want to start by reading about{" "}
+                  <FooterLink href="/how-i-grade/" text="how I grade" /> films.
+                  After that, feel free to browse{" "}
+                  <FooterLink href="/reviews/" text="my reviews" />. If
+                  you&apos;re looking for something that flew under the radar
+                  but deserves your attention, I recommend my{" "}
+                  <FooterLink
+                    href="/reviews/underseen/"
+                    text="underseen gems"
+                  />{" "}
+                  section. Or, for those moments when you want to feel
+                  righteously contrarian, I maintain an list of{" "}
+                  <FooterLink
+                    href="/reviews/overrated/"
+                    text="overrated disappointments"
+                  />
+                  .
+                </p>
+
+                <p className="mb-6 text-pretty">
+                  I also keep a{" "}
+                  <FooterLink href="/viewings/" text="viewing log" /> that
+                  tracks everything I watch, whether it gets a full review or
+                  not, complete with{" "}
+                  <FooterLink href="/viewings/stats/" text="stats" />. In an age
+                  of endless content, sometimes the act of remembering what
+                  we&apos;ve seen becomes as important as the seeing itself.
+                </p>
+
+                <p className="mb-6 text-pretty">
+                  And finally, if you&apos;re curious about what&apos;s on my
+                  critical horizon,{" "}
+                  <FooterLink href="/watchlist/" text="my watchlist" /> details
+                  the films I plan to review and why they&apos;ve caught my
+                  interest.
+                </p>
+
+                <p className="text-pretty">
+                  In an era of algorithmic recommendations and corporate
+                  marketing machines, consider this site a human alternative—one
+                  person&apos;s attempt to catalog the vast ocean of cinema and
+                  maybe help a few fellow travelers along the way.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`
+                flex grow-0 flex-col gap-20 pt-10 pb-20
+                tablet:basis-button tablet:pr-10
+              `}
+            >
+              <TableOfContents />
+            </div>
           </div>
         </div>
       </div>
       <p
         className={`
-          w-full bg-canvas px-container py-10 text-center leading-5 font-normal
-          text-default
+          sticky bottom-0 z-0 w-full bg-canvas px-container py-10 text-center
+          leading-5 font-normal text-default
         `}
       >
         All reviews by Frank Showalter. All images used in accordance with the{" "}
