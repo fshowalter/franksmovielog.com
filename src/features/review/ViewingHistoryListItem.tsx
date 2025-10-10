@@ -58,7 +58,7 @@ export function ViewingHistoryListItem({
           <VenueNotes value={value.venueNotes} />
         </div>
       </div>
-      <div>
+      <div className="tablet:-mt-13 tablet:min-h-[52px]">
         <ViewingNotes value={value.viewingNotes} />
       </div>
     </li>

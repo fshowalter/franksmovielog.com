@@ -80,7 +80,6 @@ export function Collections({
 
   return (
     <FilterAndSortContainer
-      className={state.sort.startsWith("name-") ? `[--scroll-offset:52px]` : ""}
       filters={
         <CollectionsFilters
           dispatch={dispatch}
