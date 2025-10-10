@@ -46,13 +46,11 @@ description = description.slice(
   Math.max(0, Math.min(description.length, description.lastIndexOf(" "))),
 );
 
-let metaTitle = `${title} movie review`;
+let metaTitle = `${title} (${releaseYear}) movie review`;
 
 if (title.length <= 10) {
-  metaTitle = `${title} & summary`;
+  metaTitle = `${metaTitle} & summary`;
 }
-
-metaTitle = `${title} (${releaseYear})`;
 ---
 
 <AstroPageShell
