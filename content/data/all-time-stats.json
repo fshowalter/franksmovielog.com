@@ -1,8 +1,8 @@
 {
-  "viewingCount": 2932,
+  "viewingCount": 2933,
   "titleCount": 2222,
-  "reviewCount": 1810,
-  "watchlistTitlesReviewedCount": 991,
+  "reviewCount": 1811,
+  "watchlistTitlesReviewedCount": 992,
   "gradeDistribution": [
     {
       "name": "A+",
@@ -51,7 +51,7 @@
     },
     {
       "name": "D+",
-      "count": 256,
+      "count": 257,
       "sortValue": 4
     },
     {
@@ -73,7 +73,7 @@
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 406
+      "count": 407
     },
     {
       "name": "Netflix",
@@ -181,7 +181,7 @@
     },
     {
       "name": "1980s",
-      "count": 376
+      "count": 377
     },
     {
       "name": "1990s",
@@ -6579,7 +6579,7 @@
     },
     {
       "name": "Lucio Fulci",
-      "count": 27,
+      "count": 28,
       "slug": "lucio-fulci",
       "viewings": [
         {
@@ -6751,11 +6751,11 @@
             "Horror",
             "Sci-Fi"
           ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
+          "slug": "zombie-3-1988",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-10-11",
+          "reviewSequence": 2933,
           "viewingDate": "2018-01-20",
           "viewingSequence": 1758,
           "medium": null,
@@ -7133,6 +7133,27 @@
           "reviewSequence": 2895,
           "viewingDate": "2025-06-09",
           "viewingSequence": 2895,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0096511",
+          "title": "Zombie 3",
+          "sortTitle": "zombie-3-1988",
+          "releaseYear": "1988",
+          "releaseDate": "1988-06-01",
+          "genres": [
+            "Action",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "zombie-3-1988",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-10-11",
+          "reviewSequence": 2933,
+          "viewingDate": "2025-10-11",
+          "viewingSequence": 2933,
           "medium": "Blu-ray",
           "venue": null
         }
