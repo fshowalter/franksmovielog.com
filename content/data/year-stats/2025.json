@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 64,
-  "viewingCount": 105,
-  "titleCount": 102,
+  "viewingCount": 106,
+  "titleCount": 103,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 61
+      "count": 62
     },
     {
       "name": "4k UHD Blu-ray",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1980s",
-      "count": 22
+      "count": 23
     },
     {
       "name": "1990s",
@@ -203,6 +203,75 @@
           "reviewSequence": 2901,
           "viewingDate": "2025-06-15",
           "viewingSequence": 2901,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Lucio Fulci",
+      "count": 3,
+      "slug": "lucio-fulci",
+      "viewings": [
+        {
+          "imdbId": "tt0082307",
+          "title": "The Beyond",
+          "sortTitle": "beyond-1981",
+          "releaseYear": "1981",
+          "releaseDate": "1981-04-29",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": 1628,
+          "viewingDate": "2025-04-24",
+          "viewingSequence": 2865,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0061074",
+          "title": "Massacre Time",
+          "sortTitle": "massacre-time-1966",
+          "releaseYear": "1966",
+          "releaseDate": "1966-08-10",
+          "genres": [
+            "Action",
+            "Drama",
+            "Thriller",
+            "Western"
+          ],
+          "slug": "massacre-time-1966",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2025-06-09",
+          "reviewSequence": 2895,
+          "viewingDate": "2025-06-09",
+          "viewingSequence": 2895,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0096511",
+          "title": "Zombie 3",
+          "sortTitle": "zombie-3-1988",
+          "releaseYear": "1988",
+          "releaseDate": "1988-06-01",
+          "genres": [
+            "Action",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "zombie-3-1988",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-10-11",
+          "reviewSequence": 2933,
+          "viewingDate": "2025-10-11",
+          "viewingSequence": 2933,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -541,54 +610,6 @@
           "reviewSequence": 2906,
           "viewingDate": "2025-07-04",
           "viewingSequence": 2906,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Lucio Fulci",
-      "count": 2,
-      "slug": "lucio-fulci",
-      "viewings": [
-        {
-          "imdbId": "tt0082307",
-          "title": "The Beyond",
-          "sortTitle": "beyond-1981",
-          "releaseYear": "1981",
-          "releaseDate": "1981-04-29",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-beyond-1981",
-          "grade": "A",
-          "gradeValue": 12,
-          "reviewDate": "2015-06-23",
-          "reviewSequence": 1628,
-          "viewingDate": "2025-04-24",
-          "viewingSequence": 2865,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0061074",
-          "title": "Massacre Time",
-          "sortTitle": "massacre-time-1966",
-          "releaseYear": "1966",
-          "releaseDate": "1966-08-10",
-          "genres": [
-            "Action",
-            "Drama",
-            "Thriller",
-            "Western"
-          ],
-          "slug": "massacre-time-1966",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2025-06-09",
-          "reviewSequence": 2895,
-          "viewingDate": "2025-06-09",
-          "viewingSequence": 2895,
           "medium": "Blu-ray",
           "venue": null
         }
