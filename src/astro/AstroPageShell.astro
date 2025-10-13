@@ -202,7 +202,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
             aria-live="polite"
             class={`
               px-4 py-4 font-sans text-xs font-normal text-subtle
-              empty:hidden
+              empty:hidden border-b border-default
             `}
             id="pagefind-results-counter"
             role="status"
@@ -214,7 +214,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
         <div
           aria-label="Search results"
           class={`
-            min-h-0 flex-1 overflow-y-auto overscroll-contain
+            min-h-0 flex-1 overflow-y-auto overscroll-contain overflow-x-clip
             outline-offset-[-2px]
             focus:outline-accent
           `}

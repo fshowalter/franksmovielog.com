@@ -1174,7 +1174,7 @@ describe("AstroPageShell", () => {
           words: [1],
         });
 
-        const mockResults = Array.from({ length: 10 }, (_, i) =>
+        const mockResults = Array.from({ length: 20 }, (_, i) =>
           createMockResult(`${i + 1}`),
         );
 
@@ -1200,14 +1200,15 @@ describe("AstroPageShell", () => {
           });
           expect(results.textContent).toContain("Result 1");
           expect(results.textContent).toContain("Result 5");
-          expect(results.textContent).not.toContain("Result 6");
+          expect(results.textContent).toContain("Result 10");
+          expect(results.textContent).not.toContain("Result 11");
         });
 
         // Click load more
         const loadMoreButton = queries.getByRole("button", {
           name: /load.*more/i,
         });
-        expect(loadMoreButton.textContent).toContain("Load 5 more");
+        expect(loadMoreButton.textContent).toContain("Load 10 more");
 
         await user.click(loadMoreButton);
 
@@ -1221,8 +1222,8 @@ describe("AstroPageShell", () => {
           const results = queries.getByRole("region", {
             name: /search results/i,
           });
-          expect(results.textContent).toContain("Result 6");
-          expect(results.textContent).toContain("Result 10");
+          expect(results.textContent).toContain("Result 11");
+          expect(results.textContent).toContain("Result 20");
         });
 
         // Load more button should be hidden after loading all results
