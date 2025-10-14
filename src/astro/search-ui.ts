@@ -202,7 +202,7 @@ export class SearchUI {
   private readonly config = {
     bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
     debounceTimeoutMs: 150,
-    pageSize: 5,
+    pageSize: 10,
     resultsText: {
       many_results: '[COUNT] results for "[SEARCH_TERM]"',
       one_result: '[COUNT] result for "[SEARCH_TERM]"',
@@ -461,7 +461,7 @@ export class SearchUI {
     const { image, image_alt, title } = result.meta;
 
     return `
-        <li class="relative transition-all gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] hover:bg-subtle border-t border-default last-of-type:border-b grid grid-cols-[min(25%,80px)_1fr] focus-within:bg-subtle focus-within:outline-[rgb(38,132,255)] focus-within:outline-1 focus-within:-outline-offset-2">
+        <li class="relative transition-all gap-x-6 tablet:px-6 laptop:px-8 py-6 px-[8%] hover:bg-subtle border-t first-of-type:border-none border-default last-of-type:border-b grid grid-cols-[min(25%,80px)_1fr] focus-within:bg-subtle focus-within:outline-[rgb(38,132,255)] focus-within:outline-1 focus-within:-outline-offset-2">
           ${
             this.config.showImages && image
               ? `
@@ -556,7 +556,7 @@ export class SearchUI {
       this.elements.loadMoreButton.textContent = `Load ${Math.min(
         remainingResults.length,
         this.config.pageSize,
-      )} more (${totalResults - visibleResults} total)`;
+      )} more (${totalResults - visibleResults} remaining)`;
     } else {
       this.elements.loadMoreWrapper.classList.add("hidden");
     }
