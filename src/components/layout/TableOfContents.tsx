@@ -29,7 +29,7 @@ function MenuItem({ value }: { value: NavItem }): React.JSX.Element {
           relative inline-block origin-left transform-gpu transition-all
           duration-500
           after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-          after:origin-bottom-left after:scale-x-0 after:bg-accent
+          after:origin-center after:scale-x-0 after:bg-accent
           after:transition-transform after:duration-500
           hover:text-accent hover:after:scale-x-100
         `}
@@ -64,8 +64,8 @@ function SubMenu({ values }: { values: NavItem[] }): false | React.JSX.Element {
                 relative inline-block origin-left transform-gpu pb-1
                 transition-all duration-500
                 after:absolute after:bottom-0 after:left-0 after:h-px
-                after:w-full after:origin-bottom-left after:scale-x-0
-                after:bg-accent after:transition-transform after:duration-500
+                after:w-full after:origin-center after:scale-x-0 after:bg-accent
+                after:transition-transform after:duration-500
                 hover:text-accent hover:after:scale-x-100
               `}
               href={value.target}
