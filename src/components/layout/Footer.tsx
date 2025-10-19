@@ -141,7 +141,8 @@ export function Footer(): React.JSX.Element {
         <a
           className={`
             relative inline-block pr-4 text-inherit underline underline-offset-3
-            hover:bg-default hover:text-accent
+            transition-colors
+            hover:text-accent
           `}
           href="http://www.copyright.gov/title17/92chap1.html#107"
           rel="nofollow"
@@ -178,7 +179,7 @@ function FooterLink({
   return (
     <a
       className={`
-        underline
+        underline transition-colors
         hover:text-accent
       `}
       href={href}
