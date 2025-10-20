@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 67,
-  "viewingCount": 109,
-  "titleCount": 106,
+  "newTitleCount": 68,
+  "viewingCount": 110,
+  "titleCount": 107,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 63
+      "count": 64
     },
     {
       "name": "4k UHD Blu-ray",
@@ -70,7 +70,7 @@
     },
     {
       "name": "1990s",
-      "count": 11
+      "count": 12
     },
     {
       "name": "2000s",
@@ -141,6 +141,75 @@
     }
   ],
   "mostWatchedDirectors": [
+    {
+      "name": "Wes Craven",
+      "count": 3,
+      "slug": "wes-craven",
+      "viewings": [
+        {
+          "imdbId": "tt0082245",
+          "title": "Deadly Blessing",
+          "sortTitle": "deadly-blessing-1981",
+          "releaseYear": "1981",
+          "releaseDate": "1981-08-14",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "deadly-blessing-1981",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2025-01-27",
+          "reviewSequence": 2841,
+          "viewingDate": "2025-01-27",
+          "viewingSequence": 2841,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0117571",
+          "title": "Scream",
+          "sortTitle": "scream-1996",
+          "releaseYear": "1996",
+          "releaseDate": "1996-12-18",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-1996",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-05-06",
+          "reviewSequence": 2870,
+          "viewingDate": "2025-05-06",
+          "viewingSequence": 2870,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0105121",
+          "title": "The People Under the Stairs",
+          "sortTitle": "people-under-the-stairs-1991",
+          "releaseYear": "1991",
+          "releaseDate": "1991-11-01",
+          "genres": [
+            "Comedy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-people-under-the-stairs-1991",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2025-10-19",
+          "reviewSequence": 2937,
+          "viewingDate": "2025-10-19",
+          "viewingSequence": 2937,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
     {
       "name": "Howard Hawks",
       "count": 3,
@@ -418,53 +487,6 @@
           "viewingDate": "2025-02-06",
           "viewingSequence": 2842,
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Wes Craven",
-      "count": 2,
-      "slug": "wes-craven",
-      "viewings": [
-        {
-          "imdbId": "tt0082245",
-          "title": "Deadly Blessing",
-          "sortTitle": "deadly-blessing-1981",
-          "releaseYear": "1981",
-          "releaseDate": "1981-08-14",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "deadly-blessing-1981",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2025-01-27",
-          "reviewSequence": 2841,
-          "viewingDate": "2025-01-27",
-          "viewingSequence": 2841,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0117571",
-          "title": "Scream",
-          "sortTitle": "scream-1996",
-          "releaseYear": "1996",
-          "releaseDate": "1996-12-18",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-1996",
-          "grade": "B-",
-          "gradeValue": 8,
-          "reviewDate": "2025-05-06",
-          "reviewSequence": 2870,
-          "viewingDate": "2025-05-06",
-          "viewingSequence": 2870,
-          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -1559,6 +1581,75 @@
   ],
   "mostWatchedWriters": [
     {
+      "name": "Wes Craven",
+      "count": 3,
+      "slug": "wes-craven",
+      "viewings": [
+        {
+          "imdbId": "tt0082245",
+          "title": "Deadly Blessing",
+          "sortTitle": "deadly-blessing-1981",
+          "releaseYear": "1981",
+          "releaseDate": "1981-08-14",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "deadly-blessing-1981",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2025-01-27",
+          "reviewSequence": 2841,
+          "viewingDate": "2025-01-27",
+          "viewingSequence": 2841,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0093629",
+          "title": "A Nightmare on Elm Street 3: Dream Warriors",
+          "sortTitle": "nightmare-on-elm-street-3-dream-warriors-1987",
+          "releaseYear": "1987",
+          "releaseDate": "1987-02-27",
+          "genres": [
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-03-01",
+          "reviewSequence": 2853,
+          "viewingDate": "2025-03-01",
+          "viewingSequence": 2853,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0105121",
+          "title": "The People Under the Stairs",
+          "sortTitle": "people-under-the-stairs-1991",
+          "releaseYear": "1991",
+          "releaseDate": "1991-11-01",
+          "genres": [
+            "Comedy",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-people-under-the-stairs-1991",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2025-10-19",
+          "reviewSequence": 2937,
+          "viewingDate": "2025-10-19",
+          "viewingSequence": 2937,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Bram Stoker",
       "count": 2,
       "slug": null,
@@ -1841,53 +1932,6 @@
           "reviewSequence": 2842,
           "viewingDate": "2025-02-06",
           "viewingSequence": 2842,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Wes Craven",
-      "count": 2,
-      "slug": "wes-craven",
-      "viewings": [
-        {
-          "imdbId": "tt0082245",
-          "title": "Deadly Blessing",
-          "sortTitle": "deadly-blessing-1981",
-          "releaseYear": "1981",
-          "releaseDate": "1981-08-14",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "deadly-blessing-1981",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2025-01-27",
-          "reviewSequence": 2841,
-          "viewingDate": "2025-01-27",
-          "viewingSequence": 2841,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0093629",
-          "title": "A Nightmare on Elm Street 3: Dream Warriors",
-          "sortTitle": "nightmare-on-elm-street-3-dream-warriors-1987",
-          "releaseYear": "1987",
-          "releaseDate": "1987-02-27",
-          "genres": [
-            "Fantasy",
-            "Horror"
-          ],
-          "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
-          "grade": "B-",
-          "gradeValue": 8,
-          "reviewDate": "2025-03-01",
-          "reviewSequence": 2853,
-          "viewingDate": "2025-03-01",
-          "viewingSequence": 2853,
           "medium": "Blu-ray",
           "venue": null
         }
