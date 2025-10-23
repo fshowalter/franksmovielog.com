@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 69,
-  "viewingCount": 111,
-  "titleCount": 108,
+  "newTitleCount": 70,
+  "viewingCount": 112,
+  "titleCount": 109,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 65
+      "count": 66
     },
     {
       "name": "4k UHD Blu-ray",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1980s",
-      "count": 24
+      "count": 25
     },
     {
       "name": "1990s",
@@ -205,6 +205,76 @@
           "reviewSequence": 2937,
           "viewingDate": "2025-10-19",
           "viewingSequence": 2937,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "William Friedkin",
+      "count": 3,
+      "slug": "william-friedkin",
+      "viewings": [
+        {
+          "imdbId": "tt0070047",
+          "title": "The Exorcist",
+          "sortTitle": "exorcist-1973",
+          "releaseYear": "1973",
+          "releaseDate": "1973-12-26",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2025-02-18",
+          "viewingSequence": 2848,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0067116",
+          "title": "The French Connection",
+          "sortTitle": "french-connection-1971",
+          "releaseYear": "1971",
+          "releaseDate": "1971-10-07",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "slug": "the-french-connection-1971",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2025-07-14",
+          "reviewSequence": 2910,
+          "viewingDate": "2025-07-14",
+          "viewingSequence": 2910,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0080569",
+          "title": "Cruising",
+          "sortTitle": "cruising-1980",
+          "releaseYear": "1980",
+          "releaseDate": "1980-02-08",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "cruising-1980",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2025-10-22",
+          "reviewSequence": 2939,
+          "viewingDate": "2025-10-22",
+          "viewingSequence": 2939,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -531,54 +601,6 @@
           "reviewSequence": 2867,
           "viewingDate": "2025-05-03",
           "viewingSequence": 2867,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "William Friedkin",
-      "count": 2,
-      "slug": "william-friedkin",
-      "viewings": [
-        {
-          "imdbId": "tt0070047",
-          "title": "The Exorcist",
-          "sortTitle": "exorcist-1973",
-          "releaseYear": "1973",
-          "releaseDate": "1973-12-26",
-          "genres": [
-            "Horror"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2025-02-18",
-          "viewingSequence": 2848,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0067116",
-          "title": "The French Connection",
-          "sortTitle": "french-connection-1971",
-          "releaseYear": "1971",
-          "releaseDate": "1971-10-07",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": "the-french-connection-1971",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2025-07-14",
-          "reviewSequence": 2910,
-          "viewingDate": "2025-07-14",
-          "viewingSequence": 2910,
           "medium": "Blu-ray",
           "venue": null
         }
