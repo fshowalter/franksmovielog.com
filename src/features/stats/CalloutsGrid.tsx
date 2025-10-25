@@ -33,7 +33,11 @@ function StatsCallout({
 }: {
   label: string;
   value: number;
-}): React.JSX.Element {
+}): false | React.JSX.Element {
+  if (value === 0) {
+    return false;
+  }
+
   return (
     <div
       className={`
