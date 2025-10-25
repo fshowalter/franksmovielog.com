@@ -66,6 +66,7 @@ export function YearStats({
           { label: "Viewings", value: stats.viewingCount },
           { label: "Movies", value: stats.titleCount },
           { label: "New Movies", value: stats.newTitleCount },
+          { label: "Reviews", value: stats.reviewCount },
         ]}
       />
       <div
