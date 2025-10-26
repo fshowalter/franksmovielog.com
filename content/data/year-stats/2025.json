@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 73,
-  "viewingCount": 115,
-  "titleCount": 112,
+  "newTitleCount": 74,
+  "viewingCount": 116,
+  "titleCount": 113,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 22
+      "count": 23
     },
     {
       "name": "iTunes",
@@ -70,7 +70,7 @@
     },
     {
       "name": "1990s",
-      "count": 13
+      "count": 14
     },
     {
       "name": "2000s",
@@ -143,7 +143,7 @@
   "mostWatchedDirectors": [
     {
       "name": "Wes Craven",
-      "count": 3,
+      "count": 4,
       "slug": "wes-craven",
       "viewings": [
         {
@@ -206,6 +206,26 @@
           "viewingDate": "2025-10-19",
           "viewingSequence": 2937,
           "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0120082",
+          "title": "Scream 2",
+          "sortTitle": "scream-2-1997",
+          "releaseYear": "1997",
+          "releaseDate": "1997-12-10",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-2-1997",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2025-10-25",
+          "reviewSequence": 2943,
+          "viewingDate": "2025-10-25",
+          "viewingSequence": 2943,
+          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -2103,5 +2123,5 @@
       ]
     }
   ],
-  "reviewCount": 92
+  "reviewCount": 93
 }
