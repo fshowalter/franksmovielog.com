@@ -5,11 +5,13 @@ import type { Root as HastRoot } from "hast";
  * @returns Transformer function for the AST
  */
 export function rootAsSpan() {
-  return (tree: HastRoot) => {
-    const firstChild = tree.children[0];
+  return pluginFunction;
+}
 
-    if (firstChild && firstChild.type === "element") {
-      firstChild.tagName = "span";
-    }
-  };
+function pluginFunction(tree: HastRoot) {
+  const firstChild = tree.children[0];
+
+  if (firstChild && firstChild.type === "element") {
+    firstChild.tagName = "span";
+  }
 }
