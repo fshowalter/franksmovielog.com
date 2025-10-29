@@ -173,11 +173,6 @@ function NavListItem({
           ${hasBackdrop ? "mix-blend-hard-light text-shadow-lg" : ""}
         `}
         href={value.target}
-        style={
-          {
-            // textShadow: hasBackdrop ? "1px 1px 2px black" : "",
-          }
-        }
       >
         {value.text}
       </a>
