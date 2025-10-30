@@ -62,7 +62,7 @@
     />
     <div class="group">
       <a
-        class="absolute top-0.5 left-1/2 z-skip-link mx-auto [transform:translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2 text-center text-accent focus:[transform:translate(-50%,0%)]"
+        class="absolute top-0.5 left-1/2 z-skip-link mx-auto transform-[translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2 text-center text-accent focus:transform-[translate(-50%,0%)]"
         href="#content"
         >Skip to content</a
       >
@@ -7095,7 +7095,7 @@
           ESC
         </button>
         <!-- Fixed Search Input Section -->
-        <div class="flex-shrink-0">
+        <div class="shrink-0">
           <!-- Search Form with magnifying glass icon -->
           <form aria-label="Site search" onsubmit="return false" role="search">
             <div class="relative">
@@ -7149,7 +7149,7 @@
               </button>
               <!-- Border line after input -->
               <div
-                class="absolute right-0 bottom-0 left-0 h-px bg-[var(--color-border)]"
+                class="absolute right-0 bottom-0 left-0 h-px bg-border"
               ></div>
             </div>
           </form>
@@ -7165,7 +7165,7 @@
         <!-- Scrollable Results Area -->
         <div
           aria-label="Search results"
-          class="min-h-0 flex-1 overflow-x-clip overflow-y-auto overscroll-contain outline-offset-[-2px] focus:outline-accent"
+          class="min-h-0 flex-1 overflow-x-clip overflow-y-auto overscroll-contain -outline-offset-2 focus:outline-accent"
           id="pagefind-results-wrapper"
           role="region"
         >
@@ -7174,7 +7174,7 @@
           <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
             <button
               aria-controls="pagefind-results"
-              class="mx-auto block h-10 w-full max-w-[430px] bg-canvas font-sans text-xs font-medium tracking-[0.8px] text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
+              class="mx-auto block h-10 w-full max-w-button bg-canvas font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
               id="pagefind-load-more"
               type="button"
             >
