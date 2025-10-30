@@ -185,7 +185,7 @@ function SearchButton(): React.JSX.Element {
     <div
       className={`
         z-search-button
-        [body.nav-open_&]:!text-[#fff]
+        [body.nav-open_&]:text-white!
       `}
     >
       <button
