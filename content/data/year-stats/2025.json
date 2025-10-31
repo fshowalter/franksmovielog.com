@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 76,
-  "viewingCount": 119,
-  "titleCount": 116,
+  "newTitleCount": 77,
+  "viewingCount": 120,
+  "titleCount": 117,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 23
+      "count": 24
     },
     {
       "name": "iTunes",
@@ -74,7 +74,7 @@
     },
     {
       "name": "2000s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "2010s",
@@ -143,7 +143,7 @@
   "mostWatchedDirectors": [
     {
       "name": "Wes Craven",
-      "count": 4,
+      "count": 5,
       "slug": "wes-craven",
       "viewings": [
         {
@@ -225,6 +225,26 @@
           "reviewSequence": 2943,
           "viewingDate": "2025-10-25",
           "viewingSequence": 2943,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0134084",
+          "title": "Scream 3",
+          "sortTitle": "scream-3-2000",
+          "releaseYear": "2000",
+          "releaseDate": "2000-02-03",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-3-2000",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2025-10-30",
+          "reviewSequence": 2947,
+          "viewingDate": "2025-10-30",
+          "viewingSequence": 2947,
           "medium": "4k UHD Blu-ray",
           "venue": null
         }
@@ -1692,6 +1712,73 @@
       ]
     },
     {
+      "name": "Kevin Williamson",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0117571",
+          "title": "Scream",
+          "sortTitle": "scream-1996",
+          "releaseYear": "1996",
+          "releaseDate": "1996-12-18",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-1996",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-05-06",
+          "reviewSequence": 2870,
+          "viewingDate": "2025-05-06",
+          "viewingSequence": 2870,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0120082",
+          "title": "Scream 2",
+          "sortTitle": "scream-2-1997",
+          "releaseYear": "1997",
+          "releaseDate": "1997-12-10",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-2-1997",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2025-10-25",
+          "reviewSequence": 2943,
+          "viewingDate": "2025-10-25",
+          "viewingSequence": 2943,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0134084",
+          "title": "Scream 3",
+          "sortTitle": "scream-3-2000",
+          "releaseYear": "2000",
+          "releaseDate": "2000-02-03",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-3-2000",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2025-10-30",
+          "reviewSequence": 2947,
+          "viewingDate": "2025-10-30",
+          "viewingSequence": 2947,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Bram Stoker",
       "count": 2,
       "slug": null,
@@ -2074,54 +2161,7 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Jules Furthman",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0053221",
-          "title": "Rio Bravo",
-          "sortTitle": "rio-bravo-1959",
-          "releaseYear": "1959",
-          "releaseDate": "1959-03-08",
-          "genres": [
-            "Western"
-          ],
-          "slug": "rio-bravo-1959",
-          "grade": "A+",
-          "gradeValue": 13,
-          "reviewDate": "2025-03-22",
-          "reviewSequence": 2861,
-          "viewingDate": "2025-03-22",
-          "viewingSequence": 2861,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0031762",
-          "title": "Only Angels Have Wings",
-          "sortTitle": "only-angels-have-wings-1939",
-          "releaseYear": "1939",
-          "releaseDate": "1939-05-12",
-          "genres": [
-            "Adventure",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "only-angels-have-wings-1939",
-          "grade": "A-",
-          "gradeValue": 11,
-          "reviewDate": "2025-06-15",
-          "reviewSequence": 2900,
-          "viewingDate": "2025-06-15",
-          "viewingSequence": 2900,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
-  "reviewCount": 96
+  "reviewCount": 97
 }
