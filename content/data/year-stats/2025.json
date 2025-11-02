@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 78,
-  "viewingCount": 123,
-  "titleCount": 120,
+  "newTitleCount": 79,
+  "viewingCount": 124,
+  "titleCount": 121,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 72
+      "count": 73
     },
     {
       "name": "4k UHD Blu-ray",
@@ -78,7 +78,7 @@
     },
     {
       "name": "2010s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "2020s",
@@ -143,7 +143,7 @@
   "mostWatchedDirectors": [
     {
       "name": "Wes Craven",
-      "count": 5,
+      "count": 6,
       "slug": "wes-craven",
       "viewings": [
         {
@@ -246,6 +246,26 @@
           "viewingDate": "2025-10-30",
           "viewingSequence": 2947,
           "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1262416",
+          "title": "Scream 4",
+          "sortTitle": "scream-4-2011",
+          "releaseYear": "2011",
+          "releaseDate": "2011-04-11",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-4-2011",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-01",
+          "reviewSequence": 2951,
+          "viewingDate": "2025-11-01",
+          "viewingSequence": 2951,
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -1150,6 +1170,267 @@
       ]
     },
     {
+      "name": "Neve Campbell",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0117571",
+          "title": "Scream",
+          "sortTitle": "scream-1996",
+          "releaseYear": "1996",
+          "releaseDate": "1996-12-18",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-1996",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-05-06",
+          "reviewSequence": 2870,
+          "viewingDate": "2025-05-06",
+          "viewingSequence": 2870,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0120082",
+          "title": "Scream 2",
+          "sortTitle": "scream-2-1997",
+          "releaseYear": "1997",
+          "releaseDate": "1997-12-10",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-2-1997",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2025-10-25",
+          "reviewSequence": 2943,
+          "viewingDate": "2025-10-25",
+          "viewingSequence": 2943,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0134084",
+          "title": "Scream 3",
+          "sortTitle": "scream-3-2000",
+          "releaseYear": "2000",
+          "releaseDate": "2000-02-03",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-3-2000",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2025-10-30",
+          "reviewSequence": 2947,
+          "viewingDate": "2025-10-30",
+          "viewingSequence": 2947,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1262416",
+          "title": "Scream 4",
+          "sortTitle": "scream-4-2011",
+          "releaseYear": "2011",
+          "releaseDate": "2011-04-11",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-4-2011",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-01",
+          "reviewSequence": 2951,
+          "viewingDate": "2025-11-01",
+          "viewingSequence": 2951,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Courteney Cox",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0117571",
+          "title": "Scream",
+          "sortTitle": "scream-1996",
+          "releaseYear": "1996",
+          "releaseDate": "1996-12-18",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-1996",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-05-06",
+          "reviewSequence": 2870,
+          "viewingDate": "2025-05-06",
+          "viewingSequence": 2870,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0120082",
+          "title": "Scream 2",
+          "sortTitle": "scream-2-1997",
+          "releaseYear": "1997",
+          "releaseDate": "1997-12-10",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-2-1997",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2025-10-25",
+          "reviewSequence": 2943,
+          "viewingDate": "2025-10-25",
+          "viewingSequence": 2943,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0134084",
+          "title": "Scream 3",
+          "sortTitle": "scream-3-2000",
+          "releaseYear": "2000",
+          "releaseDate": "2000-02-03",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-3-2000",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2025-10-30",
+          "reviewSequence": 2947,
+          "viewingDate": "2025-10-30",
+          "viewingSequence": 2947,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1262416",
+          "title": "Scream 4",
+          "sortTitle": "scream-4-2011",
+          "releaseYear": "2011",
+          "releaseDate": "2011-04-11",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-4-2011",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-01",
+          "reviewSequence": 2951,
+          "viewingDate": "2025-11-01",
+          "viewingSequence": 2951,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "David Arquette",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0117571",
+          "title": "Scream",
+          "sortTitle": "scream-1996",
+          "releaseYear": "1996",
+          "releaseDate": "1996-12-18",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-1996",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-05-06",
+          "reviewSequence": 2870,
+          "viewingDate": "2025-05-06",
+          "viewingSequence": 2870,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0120082",
+          "title": "Scream 2",
+          "sortTitle": "scream-2-1997",
+          "releaseYear": "1997",
+          "releaseDate": "1997-12-10",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-2-1997",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2025-10-25",
+          "reviewSequence": 2943,
+          "viewingDate": "2025-10-25",
+          "viewingSequence": 2943,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0134084",
+          "title": "Scream 3",
+          "sortTitle": "scream-3-2000",
+          "releaseYear": "2000",
+          "releaseDate": "2000-02-03",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-3-2000",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2025-10-30",
+          "reviewSequence": 2947,
+          "viewingDate": "2025-10-30",
+          "viewingSequence": 2947,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1262416",
+          "title": "Scream 4",
+          "sortTitle": "scream-4-2011",
+          "releaseYear": "2011",
+          "releaseDate": "2011-04-11",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-4-2011",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-01",
+          "reviewSequence": 2951,
+          "viewingDate": "2025-11-01",
+          "viewingSequence": 2951,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Nicholas Hoult",
       "count": 3,
       "slug": null,
@@ -1428,219 +1709,96 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "C. Thomas Howell",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0088224",
-          "title": "Tank",
-          "sortTitle": "tank-1984",
-          "releaseYear": "1984",
-          "releaseDate": "1984-03-16",
-          "genres": [
-            "Action",
-            "Comedy",
-            "Drama"
-          ],
-          "slug": "tank-1984",
-          "grade": "B-",
-          "gradeValue": 8,
-          "reviewDate": "2025-06-07",
-          "reviewSequence": 2893,
-          "viewingDate": "2025-06-07",
-          "viewingSequence": 2893,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Jean-Pierre Cassel",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0071877",
-          "title": "Murder on the Orient Express",
-          "sortTitle": "murder-on-the-orient-express-1974",
-          "releaseYear": "1974",
-          "releaseDate": "1974-11-21",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2025-07-31",
-          "viewingSequence": 2916,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Jack Taylor",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0065569",
-          "title": "Count Dracula",
-          "sortTitle": "count-dracula-1970",
-          "releaseYear": "1970",
-          "releaseDate": "1970-04-03",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "count-dracula-1970",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2025-03-06",
-          "reviewSequence": 2855,
-          "viewingDate": "2025-03-06",
-          "viewingSequence": 2855,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
+    {
+      "name": "Kevin Williamson",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0117571",
+          "title": "Scream",
+          "sortTitle": "scream-1996",
+          "releaseYear": "1996",
+          "releaseDate": "1996-12-18",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-1996",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-05-06",
+          "reviewSequence": 2870,
+          "viewingDate": "2025-05-06",
+          "viewingSequence": 2870,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0120082",
+          "title": "Scream 2",
+          "sortTitle": "scream-2-1997",
+          "releaseYear": "1997",
+          "releaseDate": "1997-12-10",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-2-1997",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2025-10-25",
+          "reviewSequence": 2943,
+          "viewingDate": "2025-10-25",
+          "viewingSequence": 2943,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0134084",
+          "title": "Scream 3",
+          "sortTitle": "scream-3-2000",
+          "releaseYear": "2000",
+          "releaseDate": "2000-02-03",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-3-2000",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2025-10-30",
+          "reviewSequence": 2947,
+          "viewingDate": "2025-10-30",
+          "viewingSequence": 2947,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1262416",
+          "title": "Scream 4",
+          "sortTitle": "scream-4-2011",
+          "releaseYear": "2011",
+          "releaseDate": "2011-04-11",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "scream-4-2011",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-01",
+          "reviewSequence": 2951,
+          "viewingDate": "2025-11-01",
+          "viewingSequence": 2951,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
     {
       "name": "Wes Craven",
       "count": 3,
@@ -1706,73 +1864,6 @@
           "viewingDate": "2025-10-19",
           "viewingSequence": 2937,
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Kevin Williamson",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0117571",
-          "title": "Scream",
-          "sortTitle": "scream-1996",
-          "releaseYear": "1996",
-          "releaseDate": "1996-12-18",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-1996",
-          "grade": "B-",
-          "gradeValue": 8,
-          "reviewDate": "2025-05-06",
-          "reviewSequence": 2870,
-          "viewingDate": "2025-05-06",
-          "viewingSequence": 2870,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0120082",
-          "title": "Scream 2",
-          "sortTitle": "scream-2-1997",
-          "releaseYear": "1997",
-          "releaseDate": "1997-12-10",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-2-1997",
-          "grade": "C-",
-          "gradeValue": 5,
-          "reviewDate": "2025-10-25",
-          "reviewSequence": 2943,
-          "viewingDate": "2025-10-25",
-          "viewingSequence": 2943,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0134084",
-          "title": "Scream 3",
-          "sortTitle": "scream-3-2000",
-          "releaseYear": "2000",
-          "releaseDate": "2000-02-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-3-2000",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2025-10-30",
-          "reviewSequence": 2947,
-          "viewingDate": "2025-10-30",
-          "viewingSequence": 2947,
-          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -2162,5 +2253,5 @@
       ]
     }
   ],
-  "reviewCount": 100
+  "reviewCount": 101
 }
