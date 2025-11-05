@@ -99,7 +99,7 @@ export function Review({
           {value.title}
         </h1>
         <OriginalTitle
-          className="mb-4 text-muted"
+          className="mb-4 text-center text-muted"
           value={value.originalTitle}
         />
         <Grade className="mb-6" height={24} value={value.grade} />
