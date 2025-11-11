@@ -1,12 +1,12 @@
 {
   "year": "2025",
   "newTitleCount": 82,
-  "viewingCount": 127,
+  "viewingCount": 129,
   "titleCount": 124,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 75
+      "count": 77
     },
     {
       "name": "4k UHD Blu-ray",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1980s",
-      "count": 28
+      "count": 30
     },
     {
       "name": "1990s",
@@ -137,6 +137,41 @@
       "gradeValue": 9,
       "reviewDate": "2025-07-20",
       "reviewSequence": 2912,
+      "count": 2
+    },
+    {
+      "imdbId": "tt0098662",
+      "title": "Witchtrap",
+      "releaseYear": "1989",
+      "sortTitle": "witchtrap-1989",
+      "releaseDate": "1989-09-07",
+      "genres": [
+        "Action",
+        "Horror",
+        "Thriller"
+      ],
+      "slug": "witchtrap-1989",
+      "grade": "B-",
+      "gradeValue": 8,
+      "reviewDate": "2025-11-08",
+      "reviewSequence": 2956,
+      "count": 2
+    },
+    {
+      "imdbId": "tt0086610",
+      "title": "Xtro",
+      "releaseYear": "1982",
+      "sortTitle": "xtro-1982",
+      "releaseDate": "1982-12-06",
+      "genres": [
+        "Horror",
+        "Sci-Fi"
+      ],
+      "slug": "xtro-1982",
+      "grade": "B",
+      "gradeValue": 9,
+      "reviewDate": "2025-10-28",
+      "reviewSequence": 2946,
       "count": 2
     }
   ],
@@ -265,6 +300,76 @@
           "reviewSequence": 2951,
           "viewingDate": "2025-11-01",
           "viewingSequence": 2951,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Kevin Tenney",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0093624",
+          "title": "Night of the Demons",
+          "sortTitle": "night-of-the-demons-1988",
+          "releaseYear": "1988",
+          "releaseDate": "1988-04-27",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "night-of-the-demons-1988",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2025-01-14",
+          "reviewSequence": 2834,
+          "viewingDate": "2025-01-14",
+          "viewingSequence": 2834,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0098662",
+          "title": "Witchtrap",
+          "sortTitle": "witchtrap-1989",
+          "releaseYear": "1989",
+          "releaseDate": "1989-09-07",
+          "genres": [
+            "Action",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "witchtrap-1989",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-08",
+          "reviewSequence": 2956,
+          "viewingDate": "2025-10-05",
+          "viewingSequence": 2929,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0098662",
+          "title": "Witchtrap",
+          "sortTitle": "witchtrap-1989",
+          "releaseYear": "1989",
+          "releaseDate": "1989-09-07",
+          "genres": [
+            "Action",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "witchtrap-1989",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-08",
+          "reviewSequence": 2956,
+          "viewingDate": "2025-11-08",
+          "viewingSequence": 2956,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -520,55 +625,6 @@
           "reviewSequence": 2908,
           "viewingDate": "2025-07-07",
           "viewingSequence": 2908,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Kevin Tenney",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0093624",
-          "title": "Night of the Demons",
-          "sortTitle": "night-of-the-demons-1988",
-          "releaseYear": "1988",
-          "releaseDate": "1988-04-27",
-          "genres": [
-            "Comedy",
-            "Fantasy",
-            "Horror"
-          ],
-          "slug": "night-of-the-demons-1988",
-          "grade": "C-",
-          "gradeValue": 5,
-          "reviewDate": "2025-01-14",
-          "reviewSequence": 2834,
-          "viewingDate": "2025-01-14",
-          "viewingSequence": 2834,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0098662",
-          "title": "Witchtrap",
-          "sortTitle": "witchtrap-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-09-07",
-          "genres": [
-            "Action",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "witchtrap-1989",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2025-10-05",
-          "reviewSequence": 2929,
-          "viewingDate": "2025-10-05",
-          "viewingSequence": 2929,
           "medium": "Blu-ray",
           "venue": null
         }
