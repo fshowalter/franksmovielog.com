@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 84,
-  "viewingCount": 132,
-  "titleCount": 127,
+  "newTitleCount": 85,
+  "viewingCount": 133,
+  "titleCount": 128,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 77
+      "count": 78
     },
     {
       "name": "4k UHD Blu-ray",
@@ -70,7 +70,7 @@
     },
     {
       "name": "1990s",
-      "count": 15
+      "count": 16
     },
     {
       "name": "2000s",
@@ -2319,55 +2319,52 @@
       ]
     },
     {
-      "name": "Kuang Ni",
+      "name": "William Peter Blatty",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0075415",
-          "title": "The Web of Death",
-          "sortTitle": "web-of-death-1976",
-          "releaseYear": "1976",
-          "releaseDate": "1976-10-28",
+          "imdbId": "tt0070047",
+          "title": "The Exorcist",
+          "sortTitle": "exorcist-1973",
+          "releaseYear": "1973",
+          "releaseDate": "1973-12-26",
           "genres": [
-            "Action",
-            "Drama",
-            "Fantasy",
-            "Mystery",
-            "Romance"
+            "Horror"
           ],
-          "slug": "the-web-of-death-1976",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2025-02-19",
-          "reviewSequence": 2849,
-          "viewingDate": "2025-02-19",
-          "viewingSequence": 2849,
-          "medium": "Blu-ray",
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2025-02-18",
+          "viewingSequence": 2848,
+          "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0076168",
-          "title": "Executioners from Shaolin",
-          "sortTitle": "executioners-from-shaolin-1977",
-          "releaseYear": "1977",
-          "releaseDate": "1977-02-16",
+          "imdbId": "tt0099528",
+          "title": "The Exorcist III",
+          "sortTitle": "exorcist-iii-1990",
+          "releaseYear": "1990",
+          "releaseDate": "1990-08-17",
           "genres": [
-            "Action",
-            "Drama"
+            "Drama",
+            "Horror",
+            "Mystery"
           ],
-          "slug": "executioners-from-shaolin-1977",
-          "grade": "C-",
-          "gradeValue": 5,
-          "reviewDate": "2025-05-13",
-          "reviewSequence": 2874,
-          "viewingDate": "2025-05-13",
-          "viewingSequence": 2874,
+          "slug": "the-exorcist-iii-1990",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2025-11-12",
+          "reviewSequence": 2960,
+          "viewingDate": "2025-11-12",
+          "viewingSequence": 2960,
           "medium": "Blu-ray",
           "venue": null
         }
       ]
     }
   ],
-  "reviewCount": 107
+  "reviewCount": 108
 }
