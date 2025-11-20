@@ -2,7 +2,7 @@
 sequence: 1
 imdbId: tt0081248
 date: 2024-05-23
-slug: burial-ground-the-nights-of-terror-1981
+slug: burial-ground-1981
 medium: 4k UHD Blu-ray
 venue: null
 venueNotes: null

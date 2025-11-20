@@ -1,7 +1,7 @@
 {
   "name": "Lucio Fulci",
   "slug": "lucio-fulci",
-  "titleCount": 32,
+  "titleCount": 33,
   "reviewCount": 17,
   "titles": [
     {
@@ -22,7 +22,8 @@
       "reviewDate": "2025-06-09",
       "reviewSequence": 2895,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -197,7 +198,8 @@
       "reviewDate": "2022-02-10",
       "reviewSequence": 2373,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -677,7 +679,8 @@
       "reviewDate": "2025-10-11",
       "reviewSequence": 2933,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -793,8 +796,8 @@
     },
     {
       "imdbId": "tt0101760",
-      "title": "Door to Silence",
-      "sortTitle": "door-to-silence-1991",
+      "title": "Le porte del silenzio",
+      "sortTitle": "le-porte-del-silenzio-1991",
       "releaseYear": "1991",
       "releaseDate": "1991-12-01",
       "genres": [
@@ -816,9 +819,36 @@
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0273255",
+      "title": "Hansel e Gretel",
+      "sortTitle": "hansel-e-gretel-1990",
+      "releaseYear": "1990",
+      "releaseDate": "1990-??-??",
+      "genres": [
+        "Crime",
+        "Fantasy",
+        "Horror",
+        "Mystery"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Lucio Fulci"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "description": "Director, writer, and performer with 17 reviewed and 15 watchlist titles.",
+  "description": "Director, writer, and performer with 17 reviewed and 16 watchlist titles.",
   "creditedAs": [
     "director",
     "writer",

@@ -168,6 +168,53 @@
       ]
     },
     {
+      "name": "Don Sharp",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0059635",
+          "title": "Rasputin: The Mad Monk",
+          "sortTitle": "rasputin-the-mad-monk-1966",
+          "releaseYear": "1966",
+          "releaseDate": "1966-02-20",
+          "genres": [
+            "Biography",
+            "Drama",
+            "Horror"
+          ],
+          "slug": "rasputin-the-mad-monk-1966",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-01-17",
+          "reviewSequence": 1597,
+          "viewingDate": "2015-01-17",
+          "viewingSequence": 1597,
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0075334",
+          "title": "To the Devil a Daughter",
+          "sortTitle": "to-the-devil-a-daughter-1976",
+          "releaseYear": "1976",
+          "releaseDate": "1976-02-22",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "to-the-devil-a-daughter-1976",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2015-02-21",
+          "reviewSequence": 1606,
+          "viewingDate": "2015-02-21",
+          "viewingSequence": 1606,
+          "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Don Siegel",
       "count": 2,
       "slug": "don-siegel",
@@ -358,7 +405,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 12,
+      "count": 11,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -498,25 +545,6 @@
           "viewingSequence": 1639,
           "medium": "Shudder",
           "venue": null
-        },
-        {
-          "imdbId": "tt0089175",
-          "title": "Fright Night",
-          "sortTitle": "fright-night-1985",
-          "releaseYear": "1985",
-          "releaseDate": "1985-08-02",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "fright-night-1985",
-          "grade": "A+",
-          "gradeValue": 13,
-          "reviewDate": "2020-10-31",
-          "reviewSequence": 2032,
-          "viewingDate": "2015-08-22",
-          "viewingSequence": 1643,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
           "imdbId": "tt0057078",
@@ -1383,56 +1411,144 @@
       ]
     },
     {
-      "name": "Ralph Dumke",
-      "count": 2,
+      "name": "Bill Hader",
+      "count": 3,
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0047476",
-          "title": "She Couldn't Say No",
-          "sortTitle": "she-couldnt-say-no-1953",
-          "releaseYear": "1953",
-          "releaseDate": "1953-06-28",
+          "imdbId": "tt2096673",
+          "title": "Inside Out",
+          "sortTitle": "inside-out-2015",
+          "releaseYear": "2015",
+          "releaseDate": "2015-05-18",
+          "genres": [
+            "Animation",
+            "Adventure",
+            "Comedy",
+            "Drama",
+            "Family",
+            "Fantasy"
+          ],
+          "slug": "inside-out-2015",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2015-06-22",
+          "reviewSequence": 1627,
+          "viewingDate": "2015-06-22",
+          "viewingSequence": 1627,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt1571249",
+          "title": "The Skeleton Twins",
+          "sortTitle": "skeleton-twins-2014",
+          "releaseYear": "2014",
+          "releaseDate": "2014-??-??",
           "genres": [
             "Comedy",
-            "Drama"
+            "Drama",
+            "Romance"
           ],
-          "slug": "she-couldnt-say-no-1953",
-          "grade": "C-",
-          "gradeValue": 5,
-          "reviewDate": "2015-01-03",
-          "reviewSequence": 1588,
-          "viewingDate": "2015-01-03",
-          "viewingSequence": 1588,
-          "medium": "TCM HD",
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-08-01",
+          "viewingSequence": 1634,
+          "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0043131",
-          "title": "Where Danger Lives",
-          "sortTitle": "where-danger-lives-1950",
-          "releaseYear": "1950",
-          "releaseDate": "1950-11-15",
+          "imdbId": "tt3152624",
+          "title": "Trainwreck",
+          "sortTitle": "trainwreck-2015",
+          "releaseYear": "2015",
+          "releaseDate": "2015-03-16",
           "genres": [
-            "Action",
-            "Crime",
-            "Film-Noir",
-            "Thriller"
+            "Comedy",
+            "Drama",
+            "Romance"
           ],
-          "slug": "where-danger-lives-1950",
-          "grade": "F",
-          "gradeValue": 1,
-          "reviewDate": "2015-02-07",
-          "reviewSequence": 1601,
-          "viewingDate": "2015-02-07",
-          "viewingSequence": 1601,
-          "medium": "TCM HD",
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-12-12",
+          "viewingSequence": 1659,
+          "medium": "Amazon",
           "venue": null
         }
       ]
     }
   ],
   "mostWatchedWriters": [
+    {
+      "name": "H.P. Lovecraft",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0062833",
+          "title": "The Crimson Cult",
+          "sortTitle": "crimson-cult-1968",
+          "releaseYear": "1968",
+          "releaseDate": "1968-12-01",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-crimson-cult-1968",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2025-05-03",
+          "reviewSequence": 2867,
+          "viewingDate": "2015-01-31",
+          "viewingSequence": 1600,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0082307",
+          "title": "The Beyond",
+          "sortTitle": "beyond-1981",
+          "releaseYear": "1981",
+          "releaseDate": "1981-04-29",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": 1628,
+          "viewingDate": "2015-06-23",
+          "viewingSequence": 1628,
+          "medium": "35mm",
+          "venue": "Alamo Drafthouse Cinema - Winchester"
+        },
+        {
+          "imdbId": "tt0082307",
+          "title": "The Beyond",
+          "sortTitle": "beyond-1981",
+          "releaseYear": "1981",
+          "releaseDate": "1981-04-29",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-beyond-1981",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2015-06-23",
+          "reviewSequence": 1628,
+          "viewingDate": "2015-11-05",
+          "viewingSequence": 1657,
+          "medium": "35mm",
+          "venue": "AFI Silver"
+        }
+      ]
+    },
     {
       "name": "Dardano Sacchetti",
       "count": 3,
@@ -1749,54 +1865,6 @@
     },
     {
       "name": "Lawrence Kasdan",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0082971",
-          "title": "Raiders of the Lost Ark",
-          "sortTitle": "raiders-of-the-lost-ark-1981",
-          "releaseYear": "1981",
-          "releaseDate": "1981-06-12",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2015-02-14",
-          "viewingSequence": 1604,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt2488496",
-          "title": "Star Wars: Episode VII - The Force Awakens",
-          "sortTitle": "star-wars-episode-vii-the-force-awakens-2015",
-          "releaseYear": "2015",
-          "releaseDate": "2015-12-14",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2015-12-21",
-          "viewingSequence": 1661,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        }
-      ]
-    },
-    {
-      "name": "George Lucas",
       "count": 2,
       "slug": null,
       "viewings": [

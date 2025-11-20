@@ -1593,7 +1593,7 @@
   "mostWatchedWriters": [
     {
       "name": "John Carpenter",
-      "count": 6,
+      "count": 4,
       "slug": "john-carpenter",
       "viewings": [
         {
@@ -1636,269 +1636,37 @@
           "venue": null
         },
         {
-          "imdbId": "tt0097474",
-          "title": "Halloween 5: The Revenge of Michael Myers",
-          "sortTitle": "halloween-5-the-revenge-of-michael-myers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-10-13",
+          "imdbId": "tt0085636",
+          "title": "Halloween III: Season of the Witch",
+          "sortTitle": "halloween-iii-season-of-the-witch-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-10-22",
           "genres": [
             "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-02-02",
-          "viewingSequence": 1857,
-          "medium": "Shudder",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0113253",
-          "title": "Halloween: The Curse of Michael Myers",
-          "sortTitle": "halloween-the-curse-of-michael-myers-1995",
-          "releaseYear": "1995",
-          "releaseDate": "1995-09-29",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-02-02",
-          "viewingSequence": 1858,
-          "medium": "Amazon",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0120694",
-          "title": "Halloween H20: 20 Years Later",
-          "sortTitle": "halloween-h20-20-years-later-1998",
-          "releaseYear": "1998",
-          "releaseDate": "1998-07-27",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-02-09",
-          "viewingSequence": 1860,
-          "medium": "Vudu",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0220506",
-          "title": "Halloween: Resurrection",
-          "sortTitle": "halloween-resurrection-2002",
-          "releaseYear": "2002",
-          "releaseDate": "2002-07-01",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-02-15",
-          "viewingSequence": 1862,
-          "medium": "Hulu",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Debra Hill",
-      "count": 6,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0077651",
-          "title": "Halloween",
-          "sortTitle": "halloween-1978",
-          "releaseYear": "1978",
-          "releaseDate": "1978-10-25",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "halloween-1978",
-          "grade": "A",
-          "gradeValue": 12,
-          "reviewDate": "2021-10-30",
-          "reviewSequence": 2315,
-          "viewingDate": "2019-01-31",
-          "viewingSequence": 1853,
-          "medium": "Shudder",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0082495",
-          "title": "Halloween II",
-          "sortTitle": "halloween-ii-1981",
-          "releaseYear": "1981",
-          "releaseDate": "1981-10-30",
-          "genres": [
-            "Horror"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-01-31",
-          "viewingSequence": 1854,
-          "medium": "Amazon",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0097474",
-          "title": "Halloween 5: The Revenge of Michael Myers",
-          "sortTitle": "halloween-5-the-revenge-of-michael-myers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-10-13",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-02-02",
-          "viewingSequence": 1857,
-          "medium": "Shudder",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0113253",
-          "title": "Halloween: The Curse of Michael Myers",
-          "sortTitle": "halloween-the-curse-of-michael-myers-1995",
-          "releaseYear": "1995",
-          "releaseDate": "1995-09-29",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-02-02",
-          "viewingSequence": 1858,
-          "medium": "Amazon",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0120694",
-          "title": "Halloween H20: 20 Years Later",
-          "sortTitle": "halloween-h20-20-years-later-1998",
-          "releaseYear": "1998",
-          "releaseDate": "1998-07-27",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-02-09",
-          "viewingSequence": 1860,
-          "medium": "Vudu",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0220506",
-          "title": "Halloween: Resurrection",
-          "sortTitle": "halloween-resurrection-2002",
-          "releaseYear": "2002",
-          "releaseDate": "2002-07-01",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2019-02-15",
-          "viewingSequence": 1862,
-          "medium": "Hulu",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Victor Miller",
-      "count": 5,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0211443",
-          "title": "Jason X",
-          "sortTitle": "jason-x-2001",
-          "releaseYear": "2001",
-          "releaseDate": "2001-07-24",
-          "genres": [
-            "Action",
-            "Horror",
+            "Mystery",
             "Sci-Fi",
             "Thriller"
           ],
-          "slug": "jason-x-2001",
-          "grade": "B",
-          "gradeValue": 9,
-          "reviewDate": "2025-06-13",
-          "reviewSequence": 2898,
-          "viewingDate": "2019-02-16",
-          "viewingSequence": 1864,
-          "medium": "Netflix",
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2019-02-01",
+          "viewingSequence": 1855,
+          "medium": "Vudu",
           "venue": null
         },
         {
-          "imdbId": "tt0329101",
-          "title": "Freddy vs. Jason",
-          "sortTitle": "freddy-vs-jason-2003",
-          "releaseYear": "2003",
-          "releaseDate": "2003-08-13",
-          "genres": [
-            "Action",
-            "Horror"
-          ],
-          "slug": "freddy-vs-jason-2003",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2023-01-13",
-          "reviewSequence": 2557,
-          "viewingDate": "2019-04-13",
-          "viewingSequence": 1871,
-          "medium": "Netflix",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0758746",
-          "title": "Friday the 13th",
-          "sortTitle": "friday-the-13th-2009",
-          "releaseYear": "2009",
-          "releaseDate": "2009-02-09",
+          "imdbId": "tt0085636",
+          "title": "Halloween III: Season of the Witch",
+          "sortTitle": "halloween-iii-season-of-the-witch-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-10-22",
           "genres": [
             "Horror",
             "Mystery",
+            "Sci-Fi",
             "Thriller"
           ],
           "slug": null,
@@ -1906,53 +1674,10 @@
           "gradeValue": null,
           "reviewDate": null,
           "reviewSequence": null,
-          "viewingDate": "2019-04-27",
-          "viewingSequence": 1873,
-          "medium": "Netflix",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0082418",
-          "title": "Friday the 13th Part 2",
-          "sortTitle": "friday-the-13th-part-2-1981",
-          "releaseYear": "1981",
-          "releaseDate": "1981-05-01",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "friday-the-13th-part-2-1981",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2020-11-13",
-          "reviewSequence": 2042,
-          "viewingDate": "2019-09-13",
-          "viewingSequence": 1907,
+          "viewingDate": "2019-10-22",
+          "viewingSequence": 1915,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        },
-        {
-          "imdbId": "tt0211443",
-          "title": "Jason X",
-          "sortTitle": "jason-x-2001",
-          "releaseYear": "2001",
-          "releaseDate": "2001-07-24",
-          "genres": [
-            "Action",
-            "Horror",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "jason-x-2001",
-          "grade": "B",
-          "gradeValue": 9,
-          "reviewDate": "2025-06-13",
-          "reviewSequence": 2898,
-          "viewingDate": "2019-12-13",
-          "viewingSequence": 1926,
-          "medium": "Vudu",
-          "venue": null
         }
       ]
     },
@@ -2380,6 +2105,146 @@
     },
     {
       "name": "Bill Mantlo",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt4154796",
+          "title": "Avengers: Endgame",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-04-18",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": 2043,
+          "viewingDate": "2019-05-13",
+          "viewingSequence": 1875,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt4154796",
+          "title": "Avengers: Endgame",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-04-18",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": 2043,
+          "viewingDate": "2019-05-16",
+          "viewingSequence": 1876,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt4154796",
+          "title": "Avengers: Endgame",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-04-18",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": 2043,
+          "viewingDate": "2019-06-03",
+          "viewingSequence": 1881,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
+      "name": "Keith Giffen",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt4154796",
+          "title": "Avengers: Endgame",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-04-18",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": 2043,
+          "viewingDate": "2019-05-13",
+          "viewingSequence": 1875,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt4154796",
+          "title": "Avengers: Endgame",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-04-18",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": 2043,
+          "viewingDate": "2019-05-16",
+          "viewingSequence": 1876,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt4154796",
+          "title": "Avengers: Endgame",
+          "sortTitle": "avengers-endgame-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-04-18",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": "avengers-endgame-2019",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-11-14",
+          "reviewSequence": 2043,
+          "viewingDate": "2019-06-03",
+          "viewingSequence": 1881,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
+      "name": "Jim Starlin",
       "count": 3,
       "slug": null,
       "viewings": [

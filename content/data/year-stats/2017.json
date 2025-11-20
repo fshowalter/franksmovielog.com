@@ -443,6 +443,76 @@
       ]
     },
     {
+      "name": "Seth Green",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0118655",
+          "title": "Austin Powers: International Man of Mystery",
+          "sortTitle": "austin-powers-international-man-of-mystery-1997",
+          "releaseYear": "1997",
+          "releaseDate": "1997-04-29",
+          "genres": [
+            "Adventure",
+            "Comedy"
+          ],
+          "slug": "austin-powers-international-man-of-mystery-1997",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2003-11-03",
+          "reviewSequence": 65,
+          "viewingDate": "2017-10-11",
+          "viewingSequence": 1735,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt3896198",
+          "title": "Guardians of the Galaxy Vol. 2",
+          "sortTitle": "guardians-of-the-galaxy-vol-2-2017",
+          "releaseYear": "2017",
+          "releaseDate": "2017-04-10",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+          ],
+          "slug": "guardians-of-the-galaxy-vol-2-2017",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-08-29",
+          "reviewSequence": 1987,
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 1746,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt3850590",
+          "title": "Krampus",
+          "sortTitle": "krampus-2015",
+          "releaseYear": "2015",
+          "releaseDate": "2015-11-30",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "krampus-2015",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2020-12-25",
+          "reviewSequence": 2085,
+          "viewingDate": "2017-12-24",
+          "viewingSequence": 1752,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Lafe McKee",
       "count": 2,
       "slug": null,
@@ -640,6 +710,56 @@
       ]
     },
     {
+      "name": "Taika Waititi",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt3416742",
+          "title": "What We Do in the Shadows",
+          "sortTitle": "what-we-do-in-the-shadows-2014",
+          "releaseYear": "2014",
+          "releaseDate": "2014-01-19",
+          "genres": [
+            "Comedy",
+            "Horror"
+          ],
+          "slug": "what-we-do-in-the-shadows-2014",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2017-03-01",
+          "reviewSequence": 1713,
+          "viewingDate": "2017-03-01",
+          "viewingSequence": 1713,
+          "medium": "Amazon",
+          "venue": null
+        },
+        {
+          "imdbId": "tt3501632",
+          "title": "Thor: Ragnarok",
+          "sortTitle": "thor-ragnarok-2017",
+          "releaseYear": "2017",
+          "releaseDate": "2017-10-10",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Fantasy",
+            "Sci-Fi"
+          ],
+          "slug": "thor-ragnarok-2017",
+          "grade": "A",
+          "gradeValue": 12,
+          "reviewDate": "2020-09-26",
+          "reviewSequence": 2000,
+          "viewingDate": "2017-12-13",
+          "viewingSequence": 1748,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
       "name": "Cohen Holloway",
       "count": 2,
       "slug": null,
@@ -785,100 +905,6 @@
           "viewingSequence": 1730,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        }
-      ]
-    },
-    {
-      "name": "Paul Herman",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0113277",
-          "title": "Heat",
-          "sortTitle": "heat-1995",
-          "releaseYear": "1995",
-          "releaseDate": "1995-12-06",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama"
-          ],
-          "slug": "heat-1995",
-          "grade": "A+",
-          "gradeValue": 13,
-          "reviewDate": "2022-03-12",
-          "reviewSequence": 2388,
-          "viewingDate": "2017-05-02",
-          "viewingSequence": 1720,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        },
-        {
-          "imdbId": "tt0099685",
-          "title": "Goodfellas",
-          "sortTitle": "goodfellas-1990",
-          "releaseYear": "1990",
-          "releaseDate": "1990-09-09",
-          "genres": [
-            "Biography",
-            "Crime",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2017-08-17",
-          "viewingSequence": 1730,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        }
-      ]
-    },
-    {
-      "name": "Dean Martin",
-      "count": 2,
-      "slug": "dean-martin",
-      "viewings": [
-        {
-          "imdbId": "tt0053221",
-          "title": "Rio Bravo",
-          "sortTitle": "rio-bravo-1959",
-          "releaseYear": "1959",
-          "releaseDate": "1959-03-08",
-          "genres": [
-            "Western"
-          ],
-          "slug": "rio-bravo-1959",
-          "grade": "A+",
-          "gradeValue": 13,
-          "reviewDate": "2025-03-22",
-          "reviewSequence": 2861,
-          "viewingDate": "2017-06-18",
-          "viewingSequence": 1723,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        },
-        {
-          "imdbId": "tt0053221",
-          "title": "Rio Bravo",
-          "sortTitle": "rio-bravo-1959",
-          "releaseYear": "1959",
-          "releaseDate": "1959-03-08",
-          "genres": [
-            "Western"
-          ],
-          "slug": "rio-bravo-1959",
-          "grade": "A+",
-          "gradeValue": 13,
-          "reviewDate": "2025-03-22",
-          "reviewSequence": 2861,
-          "viewingDate": "2017-12-09",
-          "viewingSequence": 1747,
-          "medium": "Blu-ray",
-          "venue": null
         }
       ]
     }

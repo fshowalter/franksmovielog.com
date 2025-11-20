@@ -1,7 +1,7 @@
 {
   "name": "Sergio Leone",
   "slug": "sergio-leone",
-  "titleCount": 7,
+  "titleCount": 8,
   "reviewCount": 2,
   "titles": [
     {
@@ -24,6 +24,32 @@
       "creditedAs": [
         "director",
         "writer"
+      ],
+      "watchlistDirectorNames": [
+        "Sergio Leone"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0056504",
+      "title": "Sodom and Gomorrah",
+      "sortTitle": "sodom-and-gomorrah-1962",
+      "releaseYear": "1962",
+      "releaseDate": "1962-10-04",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "History"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
       ],
       "watchlistDirectorNames": [
         "Sergio Leone"
@@ -189,9 +215,9 @@
       "watchlistCollectionNames": []
     }
   ],
-  "description": "Writer and director with 2 reviewed and 5 watchlist titles.",
+  "description": "Director and writer with 2 reviewed and 6 watchlist titles.",
   "creditedAs": [
-    "writer",
-    "director"
+    "director",
+    "writer"
   ]
 }

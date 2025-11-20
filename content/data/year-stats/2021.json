@@ -61,11 +61,11 @@
     },
     {
       "name": "1960s",
-      "count": 13
+      "count": 12
     },
     {
       "name": "1970s",
-      "count": 40
+      "count": 41
     },
     {
       "name": "1980s",
@@ -667,8 +667,7 @@
           "releaseYear": "1976",
           "releaseDate": "1976-11-03",
           "genres": [
-            "Horror",
-            "Mystery"
+            "Horror"
           ],
           "slug": "carrie-1976",
           "grade": "B-",
@@ -1399,7 +1398,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Boris Karloff",
-      "count": 10,
+      "count": 14,
       "slug": "boris-karloff",
       "viewings": [
         {
@@ -1421,6 +1420,26 @@
           "reviewSequence": 2109,
           "viewingDate": "2021-01-14",
           "viewingSequence": 2109,
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0022403",
+          "title": "Smart Money",
+          "sortTitle": "smart-money-1931",
+          "releaseYear": "1931",
+          "releaseDate": "1931-06-11",
+          "genres": [
+            "Crime",
+            "Drama"
+          ],
+          "slug": "smart-money-1931",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2021-01-27",
+          "reviewSequence": 2124,
+          "viewingDate": "2021-01-27",
+          "viewingSequence": 2124,
           "medium": "DVD",
           "venue": null
         },
@@ -1487,6 +1506,27 @@
           "venue": null
         },
         {
+          "imdbId": "tt0022582",
+          "title": "The Yellow Ticket",
+          "sortTitle": "yellow-ticket-1931",
+          "releaseYear": "1931",
+          "releaseDate": "1931-10-30",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "War"
+          ],
+          "slug": "the-yellow-ticket-1931",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-03-03",
+          "reviewSequence": 2162,
+          "viewingDate": "2021-03-03",
+          "viewingSequence": 2162,
+          "medium": "YouTube",
+          "venue": null
+        },
+        {
           "imdbId": "tt0021932",
           "title": "The Guilty Generation",
           "sortTitle": "guilty-generation-1931",
@@ -1504,6 +1544,27 @@
           "reviewSequence": 2171,
           "viewingDate": "2021-03-12",
           "viewingSequence": 2171,
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0022103",
+          "title": "The Mad Genius",
+          "sortTitle": "mad-genius-1931",
+          "releaseYear": "1931",
+          "releaseDate": "1931-09-30",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Romance"
+          ],
+          "slug": "the-mad-genius-1931",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2021-04-13",
+          "reviewSequence": 2205,
+          "viewingDate": "2021-04-13",
+          "viewingSequence": 2205,
           "medium": "DVD",
           "venue": null
         },
@@ -1568,6 +1629,25 @@
           "viewingDate": "2021-06-29",
           "viewingSequence": 2245,
           "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0021702",
+          "title": "Business and Pleasure",
+          "sortTitle": "business-and-pleasure-1932",
+          "releaseYear": "1932",
+          "releaseDate": "1932-02-24",
+          "genres": [
+            "Comedy"
+          ],
+          "slug": "business-and-pleasure-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2021-08-01",
+          "reviewSequence": 2262,
+          "viewingDate": "2021-08-01",
+          "viewingSequence": 2262,
+          "medium": "VHS-rip",
           "venue": null
         },
         {
@@ -1803,6 +1883,174 @@
       ]
     },
     {
+      "name": "John Wayne",
+      "count": 8,
+      "slug": "john-wayne",
+      "viewings": [
+        {
+          "imdbId": "tt0022134",
+          "title": "Arizona",
+          "sortTitle": "arizona-1931",
+          "releaseYear": "1931",
+          "releaseDate": "1931-06-27",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "arizona-1931",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2021-01-20",
+          "reviewSequence": 2116,
+          "viewingDate": "2021-01-20",
+          "viewingSequence": 2116,
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0053221",
+          "title": "Rio Bravo",
+          "sortTitle": "rio-bravo-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-03-08",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": 2861,
+          "viewingDate": "2021-01-29",
+          "viewingSequence": 2126,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0022293",
+          "title": "The Range Feud",
+          "sortTitle": "range-feud-1931",
+          "releaseYear": "1931",
+          "releaseDate": "1931-10-14",
+          "genres": [
+            "Drama",
+            "Mystery",
+            "Western"
+          ],
+          "slug": "the-range-feud-1931",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-03-12",
+          "reviewSequence": 2170,
+          "viewingDate": "2021-03-12",
+          "viewingSequence": 2170,
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0022109",
+          "title": "Maker of Men",
+          "sortTitle": "maker-of-men-1931",
+          "releaseYear": "1931",
+          "releaseDate": "1931-12-10",
+          "genres": [
+            "Drama",
+            "Sport"
+          ],
+          "slug": "maker-of-men-1931",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2021-03-16",
+          "reviewSequence": 2176,
+          "viewingDate": "2021-03-16",
+          "viewingSequence": 2176,
+          "medium": "YouTube",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0023567",
+          "title": "Texas Cyclone",
+          "sortTitle": "texas-cyclone-1932",
+          "releaseYear": "1932",
+          "releaseDate": "1932-02-24",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "texas-cyclone-1932",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2021-08-11",
+          "reviewSequence": 2268,
+          "viewingDate": "2021-08-11",
+          "viewingSequence": 2268,
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0023899",
+          "title": "College Coach",
+          "sortTitle": "college-coach-1933",
+          "releaseYear": "1933",
+          "releaseDate": "1933-11-04",
+          "genres": [
+            "Drama",
+            "Sport"
+          ],
+          "slug": "college-coach-1933",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2021-11-26",
+          "reviewSequence": 2319,
+          "viewingDate": "2021-11-26",
+          "viewingSequence": 2319,
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0022681",
+          "title": "The Big Stampede",
+          "sortTitle": "big-stampede-1932",
+          "releaseYear": "1932",
+          "releaseDate": "1932-09-29",
+          "genres": [
+            "Drama",
+            "Western"
+          ],
+          "slug": "the-big-stampede-1932",
+          "grade": "D-",
+          "gradeValue": 2,
+          "reviewDate": "2021-11-28",
+          "reviewSequence": 2321,
+          "viewingDate": "2021-11-28",
+          "viewingSequence": 2321,
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0023631",
+          "title": "Two-Fisted Law",
+          "sortTitle": "two-fisted-law-1932",
+          "releaseYear": "1932",
+          "releaseDate": "1932-06-08",
+          "genres": [
+            "Adventure",
+            "Drama",
+            "Western"
+          ],
+          "slug": "two-fisted-law-1932",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2021-12-22",
+          "reviewSequence": 2346,
+          "viewingDate": "2021-12-22",
+          "viewingSequence": 2346,
+          "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Hugh Jackman",
       "count": 7,
       "slug": null,
@@ -1957,149 +2205,150 @@
       ]
     },
     {
-      "name": "John Wayne",
+      "name": "Brad Dourif",
       "count": 7,
-      "slug": "john-wayne",
+      "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0022134",
-          "title": "Arizona",
-          "sortTitle": "arizona-1931",
-          "releaseYear": "1931",
-          "releaseDate": "1931-06-27",
+          "imdbId": "tt0094862",
+          "title": "Child's Play",
+          "sortTitle": "childs-play-1988",
+          "releaseYear": "1988",
+          "releaseDate": "1988-11-09",
           "genres": [
-            "Drama",
-            "Romance"
+            "Horror",
+            "Thriller"
           ],
-          "slug": "arizona-1931",
+          "slug": "childs-play-1988",
           "grade": "C-",
           "gradeValue": 5,
-          "reviewDate": "2021-01-20",
-          "reviewSequence": 2116,
-          "viewingDate": "2021-01-20",
-          "viewingSequence": 2116,
-          "medium": "DVD",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0053221",
-          "title": "Rio Bravo",
-          "sortTitle": "rio-bravo-1959",
-          "releaseYear": "1959",
-          "releaseDate": "1959-03-08",
-          "genres": [
-            "Western"
-          ],
-          "slug": "rio-bravo-1959",
-          "grade": "A+",
-          "gradeValue": 13,
-          "reviewDate": "2025-03-22",
-          "reviewSequence": 2861,
-          "viewingDate": "2021-01-29",
-          "viewingSequence": 2126,
+          "reviewDate": "2021-03-17",
+          "reviewSequence": 2177,
+          "viewingDate": "2021-03-17",
+          "viewingSequence": 2177,
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0022293",
-          "title": "The Range Feud",
-          "sortTitle": "range-feud-1931",
-          "releaseYear": "1931",
-          "releaseDate": "1931-10-14",
+          "imdbId": "tt0099253",
+          "title": "Child's Play 2",
+          "sortTitle": "childs-play-2-1990",
+          "releaseYear": "1990",
+          "releaseDate": "1990-11-09",
           "genres": [
-            "Drama",
-            "Mystery",
-            "Western"
+            "Horror",
+            "Thriller"
           ],
-          "slug": "the-range-feud-1931",
+          "slug": "childs-play-2-1990",
           "grade": "D+",
           "gradeValue": 4,
-          "reviewDate": "2021-03-12",
-          "reviewSequence": 2170,
-          "viewingDate": "2021-03-12",
-          "viewingSequence": 2170,
-          "medium": "DVD",
+          "reviewDate": "2021-04-04",
+          "reviewSequence": 2197,
+          "viewingDate": "2021-04-04",
+          "viewingSequence": 2197,
+          "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0022109",
-          "title": "Maker of Men",
-          "sortTitle": "maker-of-men-1931",
-          "releaseYear": "1931",
-          "releaseDate": "1931-12-10",
+          "imdbId": "tt0103956",
+          "title": "Child's Play 3",
+          "sortTitle": "childs-play-3-1991",
+          "releaseYear": "1991",
+          "releaseDate": "1991-08-30",
           "genres": [
-            "Drama",
-            "Sport"
+            "Horror",
+            "Thriller"
           ],
-          "slug": "maker-of-men-1931",
-          "grade": "F",
-          "gradeValue": 1,
-          "reviewDate": "2021-03-16",
-          "reviewSequence": 2176,
-          "viewingDate": "2021-03-16",
-          "viewingSequence": 2176,
-          "medium": "YouTube",
+          "slug": "childs-play-3-1991",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-04-11",
+          "reviewSequence": 2203,
+          "viewingDate": "2021-04-11",
+          "viewingSequence": 2203,
+          "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0023567",
-          "title": "Texas Cyclone",
-          "sortTitle": "texas-cyclone-1932",
-          "releaseYear": "1932",
-          "releaseDate": "1932-02-24",
+          "imdbId": "tt0144120",
+          "title": "Bride of Chucky",
+          "sortTitle": "bride-of-chucky-1998",
+          "releaseYear": "1998",
+          "releaseDate": "1998-10-15",
           "genres": [
-            "Drama",
-            "Western"
+            "Comedy",
+            "Horror",
+            "Thriller"
           ],
-          "slug": "texas-cyclone-1932",
+          "slug": "bride-of-chucky-1998",
           "grade": "C-",
           "gradeValue": 5,
-          "reviewDate": "2021-08-11",
-          "reviewSequence": 2268,
-          "viewingDate": "2021-08-11",
-          "viewingSequence": 2268,
-          "medium": "DVD",
+          "reviewDate": "2021-04-18",
+          "reviewSequence": 2210,
+          "viewingDate": "2021-04-18",
+          "viewingSequence": 2210,
+          "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0022681",
-          "title": "The Big Stampede",
-          "sortTitle": "big-stampede-1932",
-          "releaseYear": "1932",
-          "releaseDate": "1932-09-29",
+          "imdbId": "tt0387575",
+          "title": "Seed of Chucky",
+          "sortTitle": "seed-of-chucky-2004",
+          "releaseYear": "2004",
+          "releaseDate": "2004-11-10",
           "genres": [
-            "Drama",
-            "Western"
+            "Comedy",
+            "Horror",
+            "Thriller"
           ],
-          "slug": "the-big-stampede-1932",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2021-11-28",
-          "reviewSequence": 2321,
-          "viewingDate": "2021-11-28",
-          "viewingSequence": 2321,
-          "medium": "Watch TCM",
+          "slug": "seed-of-chucky-2004",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2021-04-25",
+          "reviewSequence": 2217,
+          "viewingDate": "2021-04-25",
+          "viewingSequence": 2217,
+          "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0023631",
-          "title": "Two-Fisted Law",
-          "sortTitle": "two-fisted-law-1932",
-          "releaseYear": "1932",
-          "releaseDate": "1932-06-08",
+          "imdbId": "tt2230358",
+          "title": "Curse of Chucky",
+          "sortTitle": "curse-of-chucky-2013",
+          "releaseYear": "2013",
+          "releaseDate": "2013-08-02",
           "genres": [
-            "Adventure",
-            "Drama",
-            "Western"
+            "Horror",
+            "Thriller"
           ],
-          "slug": "two-fisted-law-1932",
-          "grade": "F",
-          "gradeValue": 1,
-          "reviewDate": "2021-12-22",
-          "reviewSequence": 2346,
-          "viewingDate": "2021-12-22",
-          "viewingSequence": 2346,
-          "medium": "DVD",
+          "slug": "curse-of-chucky-2013",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2021-05-16",
+          "reviewSequence": 2230,
+          "viewingDate": "2021-05-16",
+          "viewingSequence": 2230,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt3280262",
+          "title": "Cult of Chucky",
+          "sortTitle": "cult-of-chucky-2017",
+          "releaseYear": "2017",
+          "releaseDate": "2017-08-24",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "cult-of-chucky-2017",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2021-06-03",
+          "reviewSequence": 2235,
+          "viewingDate": "2021-06-03",
+          "viewingSequence": 2235,
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -2691,123 +2940,12 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Gerrit Graham",
-      "count": 5,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0063036",
-          "title": "Greetings",
-          "sortTitle": "greetings-1968",
-          "releaseYear": "1968",
-          "releaseDate": "1968-12-15",
-          "genres": [
-            "Comedy",
-            "Drama"
-          ],
-          "slug": "greetings-1968",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2021-02-03",
-          "reviewSequence": 2131,
-          "viewingDate": "2021-02-03",
-          "viewingSequence": 2131,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0065836",
-          "title": "Hi, Mom!",
-          "sortTitle": "hi-mom-1970",
-          "releaseYear": "1970",
-          "releaseDate": "1970-??-??",
-          "genres": [
-            "Comedy",
-            "Drama"
-          ],
-          "slug": "hi-mom-1970",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2021-03-31",
-          "reviewSequence": 2193,
-          "viewingDate": "2021-03-31",
-          "viewingSequence": 2193,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0099253",
-          "title": "Child's Play 2",
-          "sortTitle": "childs-play-2-1990",
-          "releaseYear": "1990",
-          "releaseDate": "1990-11-09",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "childs-play-2-1990",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2021-04-04",
-          "reviewSequence": 2197,
-          "viewingDate": "2021-04-04",
-          "viewingSequence": 2197,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0071994",
-          "title": "Phantom of the Paradise",
-          "sortTitle": "phantom-of-the-paradise-1974",
-          "releaseYear": "1974",
-          "releaseDate": "1974-11-01",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Music",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": "phantom-of-the-paradise-1974",
-          "grade": "B",
-          "gradeValue": 9,
-          "reviewDate": "2021-07-01",
-          "reviewSequence": 2247,
-          "viewingDate": "2021-07-01",
-          "viewingSequence": 2247,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0079302",
-          "title": "Home Movies",
-          "sortTitle": "home-movies-1979",
-          "releaseYear": "1979",
-          "releaseDate": "1979-08-28",
-          "genres": [
-            "Comedy"
-          ],
-          "slug": "home-movies-1979",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2021-12-01",
-          "reviewSequence": 2324,
-          "viewingDate": "2021-12-01",
-          "viewingSequence": 2324,
-          "medium": "DVD",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
     {
       "name": "Ingmar Bergman",
-      "count": 11,
+      "count": 14,
       "slug": "ingmar-bergman",
       "viewings": [
         {
@@ -2908,6 +3046,45 @@
           "venue": null
         },
         {
+          "imdbId": "tt0046345",
+          "title": "Summer with Monika",
+          "sortTitle": "summer-with-monika-1953",
+          "releaseYear": "1953",
+          "releaseDate": "1953-02-09",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "summer-with-monika-1953",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2021-04-12",
+          "reviewSequence": 2204,
+          "viewingDate": "2021-04-12",
+          "viewingSequence": 2204,
+          "medium": "Criterion Channel",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0045848",
+          "title": "Sawdust and Tinsel",
+          "sortTitle": "sawdust-and-tinsel-1953",
+          "releaseYear": "1953",
+          "releaseDate": "1953-09-14",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "sawdust-and-tinsel-1953",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2021-04-22",
+          "reviewSequence": 2214,
+          "viewingDate": "2021-04-22",
+          "viewingSequence": 2214,
+          "medium": "Criterion Channel",
+          "venue": null
+        },
+        {
           "imdbId": "tt0047167",
           "title": "A Lesson in Love",
           "sortTitle": "lesson-in-love-1954",
@@ -3004,6 +3181,25 @@
           "reviewSequence": 2279,
           "viewingDate": "2021-09-10",
           "viewingSequence": 2279,
+          "medium": "Criterion Channel",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0052017",
+          "title": "Brink of Life",
+          "sortTitle": "brink-of-life-1958",
+          "releaseYear": "1958",
+          "releaseDate": "1958-03-31",
+          "genres": [
+            "Drama"
+          ],
+          "slug": "brink-of-life-1958",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-09-19",
+          "reviewSequence": 2286,
+          "viewingDate": "2021-09-19",
+          "viewingSequence": 2286,
           "medium": "Criterion Channel",
           "venue": null
         },
@@ -3397,121 +3593,6 @@
       ]
     },
     {
-      "name": "Dario Argento",
-      "count": 5,
-      "slug": "dario-argento",
-      "viewings": [
-        {
-          "imdbId": "tt0065143",
-          "title": "The Bird with the Crystal Plumage",
-          "sortTitle": "bird-with-the-crystal-plumage-1970",
-          "releaseYear": "1970",
-          "releaseDate": "1970-02-27",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-bird-with-the-crystal-plumage-1970",
-          "grade": "B-",
-          "gradeValue": 8,
-          "reviewDate": "2021-01-22",
-          "reviewSequence": 2119,
-          "viewingDate": "2021-01-22",
-          "viewingSequence": 2119,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0065761",
-          "title": "The Cat o' Nine Tails",
-          "sortTitle": "cat-o-nine-tails-1971",
-          "releaseYear": "1971",
-          "releaseDate": "1971-02-12",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-cat-o-nine-tails-1971",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2021-02-05",
-          "reviewSequence": 2134,
-          "viewingDate": "2021-02-05",
-          "viewingSequence": 2134,
-          "medium": "iTunes",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0066735",
-          "title": "Four Flies on Grey Velvet",
-          "sortTitle": "four-flies-on-grey-velvet-1971",
-          "releaseYear": "1971",
-          "releaseDate": "1971-12-17",
-          "genres": [
-            "Crime",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "four-flies-on-grey-velvet-1971",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2021-07-02",
-          "reviewSequence": 2248,
-          "viewingDate": "2021-07-02",
-          "viewingSequence": 2248,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1034415",
-          "title": "Suspiria",
-          "sortTitle": "suspiria-2018",
-          "releaseYear": "2018",
-          "releaseDate": "2018-09-01",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "suspiria-2018",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2021-07-02",
-          "reviewSequence": 2249,
-          "viewingDate": "2021-07-02",
-          "viewingSequence": 2249,
-          "medium": "Amazon",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0069884",
-          "title": "The Five Days",
-          "sortTitle": "five-days-1973",
-          "releaseYear": "1973",
-          "releaseDate": "1973-12-20",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "History"
-          ],
-          "slug": "the-five-days-1973",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2021-12-14",
-          "reviewSequence": 2333,
-          "viewingDate": "2021-12-14",
-          "viewingSequence": 2333,
-          "medium": "DVD",
-          "venue": null
-        }
-      ]
-    },
-    {
       "name": "Michael Haneke",
       "count": 5,
       "slug": "michael-haneke",
@@ -3820,6 +3901,98 @@
       ]
     },
     {
+      "name": "Dario Argento",
+      "count": 4,
+      "slug": "dario-argento",
+      "viewings": [
+        {
+          "imdbId": "tt0065143",
+          "title": "The Bird with the Crystal Plumage",
+          "sortTitle": "bird-with-the-crystal-plumage-1970",
+          "releaseYear": "1970",
+          "releaseDate": "1970-02-27",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bird-with-the-crystal-plumage-1970",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2021-01-22",
+          "reviewSequence": 2119,
+          "viewingDate": "2021-01-22",
+          "viewingSequence": 2119,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0065761",
+          "title": "The Cat o' Nine Tails",
+          "sortTitle": "cat-o-nine-tails-1971",
+          "releaseYear": "1971",
+          "releaseDate": "1971-02-12",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-cat-o-nine-tails-1971",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2021-02-05",
+          "reviewSequence": 2134,
+          "viewingDate": "2021-02-05",
+          "viewingSequence": 2134,
+          "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0066735",
+          "title": "Four Flies on Grey Velvet",
+          "sortTitle": "four-flies-on-grey-velvet-1971",
+          "releaseYear": "1971",
+          "releaseDate": "1971-12-17",
+          "genres": [
+            "Crime",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "four-flies-on-grey-velvet-1971",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-07-02",
+          "reviewSequence": 2248,
+          "viewingDate": "2021-07-02",
+          "viewingSequence": 2248,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0069884",
+          "title": "The Five Days",
+          "sortTitle": "five-days-1973",
+          "releaseYear": "1973",
+          "releaseDate": "1973-12-20",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "History"
+          ],
+          "slug": "the-five-days-1973",
+          "grade": "D+",
+          "gradeValue": 4,
+          "reviewDate": "2021-12-14",
+          "reviewSequence": 2333,
+          "viewingDate": "2021-12-14",
+          "viewingSequence": 2333,
+          "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Simon Kinberg",
       "count": 4,
       "slug": null,
@@ -3912,6 +4085,78 @@
       ]
     },
     {
+      "name": "Garrett Fort",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0021224",
+          "title": "Outside the Law",
+          "sortTitle": "outside-the-law-1930",
+          "releaseYear": "1930",
+          "releaseDate": "1930-09-18",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Romance",
+            "Thriller"
+          ],
+          "slug": "outside-the-law-1930",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2021-01-01",
+          "reviewSequence": 2092,
+          "viewingDate": "2021-01-01",
+          "viewingSequence": 2092,
+          "medium": "VHS-rip",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0021815",
+          "title": "Dr\u00e1cula",
+          "sortTitle": "dracula-1931",
+          "releaseYear": "1931",
+          "releaseDate": "1931-03-11",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "dracula-1931-spanish",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2021-03-28",
+          "reviewSequence": 2191,
+          "viewingDate": "2021-03-28",
+          "viewingSequence": 2191,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0021884",
+          "title": "Frankenstein",
+          "sortTitle": "frankenstein-1931",
+          "releaseYear": "1931",
+          "releaseDate": "1931-11-19",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "frankenstein-1931",
+          "grade": "B+",
+          "gradeValue": 10,
+          "reviewDate": "2021-04-20",
+          "reviewSequence": 2212,
+          "viewingDate": "2021-04-20",
+          "viewingSequence": 2212,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "David Cronenberg",
       "count": 3,
       "slug": "david-cronenberg",
@@ -3974,77 +4219,6 @@
           "viewingDate": "2021-02-04",
           "viewingSequence": 2132,
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "David Hayter",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0120903",
-          "title": "X-Men",
-          "sortTitle": "x-men-2000",
-          "releaseYear": "2000",
-          "releaseDate": "2000-07-12",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "x-men-2000",
-          "grade": "B",
-          "gradeValue": 9,
-          "reviewDate": "2021-01-09",
-          "reviewSequence": 2103,
-          "viewingDate": "2021-01-09",
-          "viewingSequence": 2103,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0290334",
-          "title": "X2: X-Men United",
-          "sortTitle": "x2-x-men-united-2003",
-          "releaseYear": "2003",
-          "releaseDate": "2003-04-24",
-          "genres": [
-            "Action",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "x2-x-men-united-2003",
-          "grade": "C",
-          "gradeValue": 6,
-          "reviewDate": "2021-01-16",
-          "reviewSequence": 2111,
-          "viewingDate": "2021-01-16",
-          "viewingSequence": 2111,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0409459",
-          "title": "Watchmen",
-          "sortTitle": "watchmen-2009",
-          "releaseYear": "2009",
-          "releaseDate": "2009-02-23",
-          "genres": [
-            "Action",
-            "Drama",
-            "Mystery",
-            "Sci-Fi"
-          ],
-          "slug": "watchmen-2009",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2021-04-17",
-          "reviewSequence": 2209,
-          "viewingDate": "2021-04-17",
-          "viewingSequence": 2209,
-          "medium": "HBO Max",
           "venue": null
         }
       ]

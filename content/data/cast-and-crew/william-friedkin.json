@@ -1,7 +1,7 @@
 {
   "name": "William Friedkin",
   "slug": "william-friedkin",
-  "titleCount": 23,
+  "titleCount": 24,
   "reviewCount": 7,
   "titles": [
     {
@@ -21,7 +21,8 @@
       "reviewDate": "2021-09-20",
       "reviewSequence": 2287,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -116,7 +117,8 @@
       "reviewDate": "2025-07-14",
       "reviewSequence": 2910,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -164,7 +166,8 @@
       "reviewDate": null,
       "reviewSequence": null,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [
         "William Friedkin"
@@ -390,7 +393,7 @@
       "title": "Blue Chips",
       "sortTitle": "blue-chips-1994",
       "releaseYear": "1994",
-      "releaseDate": "1994-02-18",
+      "releaseDate": "1994-02-14",
       "genres": [
         "Drama",
         "Sport"
@@ -589,11 +592,38 @@
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt6883152",
+      "title": "The Devil and Father Amorth",
+      "sortTitle": "devil-and-father-amorth-2017",
+      "releaseYear": "2017",
+      "releaseDate": "2017-08-31",
+      "genres": [
+        "Horror"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director",
+        "performer",
+        "writer"
+      ],
+      "watchlistDirectorNames": [
+        "William Friedkin"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "description": "Director and writer with 7 reviewed and 16 watchlist titles.",
+  "description": "Director, writer, and performer with 7 reviewed and 17 watchlist titles.",
   "creditedAs": [
     "director",
-    "writer"
+    "writer",
+    "performer"
   ]
 }

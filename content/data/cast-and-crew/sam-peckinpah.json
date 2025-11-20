@@ -1,8 +1,8 @@
 {
   "name": "Sam Peckinpah",
   "slug": "sam-peckinpah",
-  "titleCount": 17,
-  "reviewCount": 9,
+  "titleCount": 18,
+  "reviewCount": 10,
   "titles": [
     {
       "imdbId": "tt0054795",
@@ -43,6 +43,29 @@
       "gradeValue": 12,
       "reviewDate": "2007-12-01",
       "reviewSequence": 469,
+      "creditedAs": [
+        "director",
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0059037",
+      "title": "The Cincinnati Kid",
+      "sortTitle": "cincinnati-kid-1965",
+      "releaseYear": "1965",
+      "releaseDate": "1965-10-15",
+      "genres": [
+        "Drama"
+      ],
+      "slug": "the-cincinnati-kid-1965",
+      "grade": "B+",
+      "gradeValue": 10,
+      "reviewDate": "2007-11-13",
+      "reviewSequence": 452,
       "creditedAs": [
         "director"
       ],
@@ -441,7 +464,7 @@
       "watchlistCollectionNames": []
     }
   ],
-  "description": "Director, writer, and performer with 9 reviewed and 8 watchlist titles.",
+  "description": "Director, writer, and performer with 10 reviewed and 8 watchlist titles.",
   "creditedAs": [
     "director",
     "writer",

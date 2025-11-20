@@ -289,6 +289,54 @@
       ]
     },
     {
+      "name": "Jack Hill",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0066830",
+          "title": "The Big Doll House",
+          "sortTitle": "big-doll-house-1971",
+          "releaseYear": "1971",
+          "releaseDate": "1971-04-30",
+          "genres": [
+            "Action",
+            "Drama",
+            "Thriller"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2013-01-31",
+          "viewingSequence": 1398,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0057569",
+          "title": "The Terror",
+          "sortTitle": "terror-1963",
+          "releaseYear": "1963",
+          "releaseDate": "1963-05-30",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "the-terror-1963",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2007-06-15",
+          "reviewSequence": 227,
+          "viewingDate": "2013-03-05",
+          "viewingSequence": 1413,
+          "medium": "TCM HD",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Jon Favreau",
       "count": 2,
       "slug": null,
@@ -1274,30 +1322,9 @@
   "mostWatchedWriters": [
     {
       "name": "Larry Lieber",
-      "count": 4,
+      "count": 3,
       "slug": null,
       "viewings": [
-        {
-          "imdbId": "tt0371746",
-          "title": "Iron Man",
-          "sortTitle": "iron-man-2008",
-          "releaseYear": "2008",
-          "releaseDate": "2008-04-14",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "iron-man-2008",
-          "grade": "A-",
-          "gradeValue": 11,
-          "reviewDate": "2008-05-01",
-          "reviewSequence": 694,
-          "viewingDate": "2013-02-17",
-          "viewingSequence": 1408,
-          "medium": "Blu-ray",
-          "venue": null
-        },
         {
           "imdbId": "tt1228705",
           "title": "Iron Man 2",
@@ -1360,144 +1387,6 @@
           "viewingSequence": 1467,
           "medium": null,
           "venue": "AMC Tysons Corner 16"
-        }
-      ]
-    },
-    {
-      "name": "Don Heck",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0371746",
-          "title": "Iron Man",
-          "sortTitle": "iron-man-2008",
-          "releaseYear": "2008",
-          "releaseDate": "2008-04-14",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "iron-man-2008",
-          "grade": "A-",
-          "gradeValue": 11,
-          "reviewDate": "2008-05-01",
-          "reviewSequence": 694,
-          "viewingDate": "2013-02-17",
-          "viewingSequence": 1408,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1228705",
-          "title": "Iron Man 2",
-          "sortTitle": "iron-man-2-2010",
-          "releaseYear": "2010",
-          "releaseDate": "2010-04-26",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2013-02-17",
-          "viewingSequence": 1409,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1300854",
-          "title": "Iron Man 3",
-          "sortTitle": "iron-man-3-2013",
-          "releaseYear": "2013",
-          "releaseDate": "2013-04-14",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2013-05-02",
-          "viewingSequence": 1424,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        }
-      ]
-    },
-    {
-      "name": "Victor Miller",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0080761",
-          "title": "Friday the 13th",
-          "sortTitle": "friday-the-13th-1980",
-          "releaseYear": "1980",
-          "releaseDate": "1980-05-09",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "friday-the-13th-1980",
-          "grade": "C-",
-          "gradeValue": 5,
-          "reviewDate": "2020-11-13",
-          "reviewSequence": 2041,
-          "viewingDate": "2013-09-13",
-          "viewingSequence": 1440,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0082418",
-          "title": "Friday the 13th Part 2",
-          "sortTitle": "friday-the-13th-part-2-1981",
-          "releaseYear": "1981",
-          "releaseDate": "1981-05-01",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "friday-the-13th-part-2-1981",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2020-11-13",
-          "reviewSequence": 2042,
-          "viewingDate": "2013-09-21",
-          "viewingSequence": 1442,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0083972",
-          "title": "Friday the 13th: Part 3",
-          "sortTitle": "friday-the-13th-part-3-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-08-13",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "friday-the-13th-part-3-1982",
-          "grade": "C-",
-          "gradeValue": 5,
-          "reviewDate": "2021-03-12",
-          "reviewSequence": 2172,
-          "viewingDate": "2013-09-27",
-          "viewingSequence": 1443,
-          "medium": "Blu-ray",
-          "venue": null
         }
       ]
     },
@@ -1697,6 +1586,54 @@
       ]
     },
     {
+      "name": "Don Heck",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt1228705",
+          "title": "Iron Man 2",
+          "sortTitle": "iron-man-2-2010",
+          "releaseYear": "2010",
+          "releaseDate": "2010-04-26",
+          "genres": [
+            "Action",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2013-02-17",
+          "viewingSequence": 1409,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1300854",
+          "title": "Iron Man 3",
+          "sortTitle": "iron-man-3-2013",
+          "releaseYear": "2013",
+          "releaseDate": "2013-04-14",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2013-05-02",
+          "viewingSequence": 1424,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
       "name": "David Mamet",
       "count": 2,
       "slug": "david-mamet",
@@ -1747,6 +1684,55 @@
       ]
     },
     {
+      "name": "Ron Kurz",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0080761",
+          "title": "Friday the 13th",
+          "sortTitle": "friday-the-13th-1980",
+          "releaseYear": "1980",
+          "releaseDate": "1980-05-09",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "friday-the-13th-1980",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2020-11-13",
+          "reviewSequence": 2041,
+          "viewingDate": "2013-09-13",
+          "viewingSequence": 1440,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0082418",
+          "title": "Friday the 13th Part 2",
+          "sortTitle": "friday-the-13th-part-2-1981",
+          "releaseYear": "1981",
+          "releaseDate": "1981-05-01",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "friday-the-13th-part-2-1981",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2020-11-13",
+          "reviewSequence": 2042,
+          "viewingDate": "2013-09-21",
+          "viewingSequence": 1442,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Adam McKay",
       "count": 2,
       "slug": null,
@@ -1792,49 +1778,52 @@
       ]
     },
     {
-      "name": "Ron Kurz",
+      "name": "Na Hong-jin",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0082418",
-          "title": "Friday the 13th Part 2",
-          "sortTitle": "friday-the-13th-part-2-1981",
-          "releaseYear": "1981",
-          "releaseDate": "1981-05-01",
+          "imdbId": "tt1190539",
+          "title": "The Chaser",
+          "sortTitle": "chaser-2008",
+          "releaseYear": "2008",
+          "releaseDate": "2008-02-14",
           "genres": [
-            "Horror",
-            "Mystery",
+            "Action",
+            "Crime",
+            "Drama",
             "Thriller"
           ],
-          "slug": "friday-the-13th-part-2-1981",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2020-11-13",
-          "reviewSequence": 2042,
-          "viewingDate": "2013-09-21",
-          "viewingSequence": 1442,
-          "medium": "Blu-ray",
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2013-10-29",
+          "viewingSequence": 1453,
+          "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0083972",
-          "title": "Friday the 13th: Part 3",
-          "sortTitle": "friday-the-13th-part-3-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-08-13",
+          "imdbId": "tt1230385",
+          "title": "The Yellow Sea",
+          "sortTitle": "yellow-sea-2010",
+          "releaseYear": "2010",
+          "releaseDate": "2010-12-22",
           "genres": [
-            "Horror",
+            "Action",
+            "Crime",
+            "Drama",
             "Thriller"
           ],
-          "slug": "friday-the-13th-part-3-1982",
-          "grade": "C-",
-          "gradeValue": 5,
-          "reviewDate": "2021-03-12",
-          "reviewSequence": 2172,
-          "viewingDate": "2013-09-27",
-          "viewingSequence": 1443,
-          "medium": "Blu-ray",
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2013-12-28",
+          "viewingSequence": 1480,
+          "medium": "Netflix",
           "venue": null
         }
       ]
