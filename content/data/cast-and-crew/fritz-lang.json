@@ -1,7 +1,7 @@
 {
   "name": "Fritz Lang",
   "slug": "fritz-lang",
-  "titleCount": 29,
+  "titleCount": 30,
   "reviewCount": 3,
   "titles": [
     {
@@ -72,7 +72,8 @@
       "reviewDate": null,
       "reviewSequence": null,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [
         "Fritz Lang"
@@ -167,6 +168,31 @@
       "genres": [
         "Drama",
         "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "Fritz Lang"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0033486",
+      "title": "Confirm or Deny",
+      "sortTitle": "confirm-or-deny-1941",
+      "releaseYear": "1941",
+      "releaseDate": "1941-11-19",
+      "genres": [
+        "Drama",
+        "War"
       ],
       "slug": null,
       "grade": null,
@@ -685,7 +711,8 @@
       "reviewDate": null,
       "reviewSequence": null,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [
         "Fritz Lang"
@@ -711,7 +738,8 @@
       "reviewDate": null,
       "reviewSequence": null,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [
         "Fritz Lang"
@@ -773,7 +801,7 @@
       "watchlistCollectionNames": []
     }
   ],
-  "description": "Director and writer with 3 reviewed and 26 watchlist titles.",
+  "description": "Director and writer with 3 reviewed and 27 watchlist titles.",
   "creditedAs": [
     "director",
     "writer"

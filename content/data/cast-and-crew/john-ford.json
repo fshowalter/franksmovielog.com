@@ -1,8 +1,8 @@
 {
   "name": "John Ford",
   "slug": "john-ford",
-  "titleCount": 58,
-  "reviewCount": 50,
+  "titleCount": 63,
+  "reviewCount": 52,
   "titles": [
     {
       "imdbId": "tt0019699",
@@ -19,6 +19,30 @@
       "gradeValue": 1,
       "reviewDate": "2020-07-12",
       "reviewSequence": 1965,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0020359",
+      "title": "Salute",
+      "sortTitle": "salute-1929",
+      "releaseYear": "1929",
+      "releaseDate": "1929-09-01",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Sport"
+      ],
+      "slug": "salute-1929",
+      "grade": "D+",
+      "gradeValue": 4,
+      "reviewDate": "2020-10-09",
+      "reviewSequence": 2008,
       "creditedAs": [
         "director"
       ],
@@ -92,7 +116,8 @@
       "reviewDate": "2020-11-06",
       "reviewSequence": 2037,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -176,6 +201,31 @@
       "genres": [
         "Adventure",
         "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "John Ford"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0022897",
+      "title": "Flesh",
+      "sortTitle": "flesh-1932",
+      "releaseYear": "1932",
+      "releaseDate": "1932-12-08",
+      "genres": [
+        "Drama",
+        "Romance"
       ],
       "slug": null,
       "grade": null,
@@ -837,6 +887,30 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0041746",
+      "title": "Pinky",
+      "sortTitle": "pinky-1949",
+      "releaseYear": "1949",
+      "releaseDate": "1949-09-29",
+      "genres": [
+        "Drama"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "John Ford"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0041866",
       "title": "She Wore a Yellow Ribbon",
       "sortTitle": "she-wore-a-yellow-ribbon-1949",
@@ -899,7 +973,8 @@
       "reviewDate": "2009-02-16",
       "reviewSequence": 1054,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -946,7 +1021,8 @@
       "reviewDate": "2008-05-27",
       "reviewSequence": 733,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -1375,6 +1451,29 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0059930",
+      "title": "Young Cassidy",
+      "sortTitle": "young-cassidy-1965",
+      "releaseYear": "1965",
+      "releaseDate": "1965-02-25",
+      "genres": [
+        "Biography",
+        "Drama"
+      ],
+      "slug": "young-cassidy-1965",
+      "grade": "C",
+      "gradeValue": 6,
+      "reviewDate": "2008-07-21",
+      "reviewSequence": 794,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0060050",
       "title": "7 Women",
       "sortTitle": "7-women-1965",
@@ -1395,9 +1494,34 @@
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0274560",
+      "title": "Undercover",
+      "sortTitle": "undercover-1944",
+      "releaseYear": "1944",
+      "releaseDate": "1944-??-??",
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "director"
+      ],
+      "watchlistDirectorNames": [
+        "John Ford"
+      ],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "description": "Director and writer with 50 reviewed and 8 watchlist titles.",
+  "description": "Director and writer with 52 reviewed and 11 watchlist titles.",
   "creditedAs": [
     "director",
     "writer"

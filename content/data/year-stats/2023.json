@@ -66,11 +66,11 @@
     },
     {
       "name": "1960s",
-      "count": 9
+      "count": 8
     },
     {
       "name": "1970s",
-      "count": 12
+      "count": 13
     },
     {
       "name": "1980s",
@@ -133,9 +133,30 @@
   "mostWatchedDirectors": [
     {
       "name": "Michael Curtiz",
-      "count": 6,
+      "count": 8,
       "slug": null,
       "viewings": [
+        {
+          "imdbId": "tt0027367",
+          "title": "Black Legion",
+          "sortTitle": "black-legion-1937",
+          "releaseYear": "1937",
+          "releaseDate": "1937-01-16",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "black-legion-1937",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2023-02-13",
+          "reviewSequence": 2568,
+          "viewingDate": "2023-02-13",
+          "viewingSequence": 2568,
+          "medium": "Watch TCM",
+          "venue": null
+        },
         {
           "imdbId": "tt0022735",
           "title": "The Cabin in the Cotton",
@@ -213,6 +234,28 @@
           "reviewSequence": 2616,
           "viewingDate": "2023-06-03",
           "viewingSequence": 2616,
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0029217",
+          "title": "Marked Woman",
+          "sortTitle": "marked-woman-1937",
+          "releaseYear": "1937",
+          "releaseDate": "1937-04-03",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "marked-woman-1937",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2023-06-04",
+          "reviewSequence": 2617,
+          "viewingDate": "2023-06-04",
+          "viewingSequence": 2617,
           "medium": "Watch TCM",
           "venue": null
         },
@@ -612,58 +655,57 @@
       ]
     },
     {
-      "name": "Justin Benson",
+      "name": "Tay Garnett",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt1977895",
-          "title": "Resolution",
-          "sortTitle": "resolution-2012",
-          "releaseYear": "2012",
-          "releaseDate": "2012-04-22",
+          "imdbId": "tt0023305",
+          "title": "One Way Passage",
+          "sortTitle": "one-way-passage-1932",
+          "releaseYear": "1932",
+          "releaseDate": "1932-10-04",
           "genres": [
+            "Comedy",
             "Drama",
-            "Horror",
-            "Mystery",
-            "Thriller"
+            "Romance"
           ],
-          "slug": "resolution-2012",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2023-04-07",
-          "reviewSequence": 2592,
-          "viewingDate": "2023-04-07",
-          "viewingSequence": 2592,
-          "medium": "Blu-ray",
+          "slug": "one-way-passage-1932",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-04-05",
+          "reviewSequence": 2588,
+          "viewingDate": "2023-04-05",
+          "viewingSequence": 2588,
+          "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt3986820",
-          "title": "The Endless",
-          "sortTitle": "endless-2017",
-          "releaseYear": "2017",
-          "releaseDate": "2017-04-21",
+          "imdbId": "tt0043955",
+          "title": "The Racket",
+          "sortTitle": "racket-1951",
+          "releaseYear": "1951",
+          "releaseDate": "1951-10-25",
           "genres": [
-            "Horror",
-            "Mystery",
-            "Sci-Fi",
+            "Crime",
+            "Drama",
+            "Film-Noir",
             "Thriller"
           ],
-          "slug": "the-endless-2017",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2023-04-13",
-          "reviewSequence": 2597,
-          "viewingDate": "2023-04-13",
-          "viewingSequence": 2597,
-          "medium": "Blu-ray",
+          "slug": "the-racket-1951",
+          "grade": "B-",
+          "gradeValue": 8,
+          "reviewDate": "2023-07-11",
+          "reviewSequence": 2634,
+          "viewingDate": "2023-07-11",
+          "viewingSequence": 2634,
+          "medium": "Watch TCM",
           "venue": null
         }
       ]
     },
     {
-      "name": "Aaron Moorhead",
+      "name": "Justin Benson",
       "count": 2,
       "slug": null,
       "viewings": [
@@ -1965,6 +2007,75 @@
       ]
     },
     {
+      "name": "Wilson Mizner",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0023305",
+          "title": "One Way Passage",
+          "sortTitle": "one-way-passage-1932",
+          "releaseYear": "1932",
+          "releaseDate": "1932-10-04",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "one-way-passage-1932",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-04-05",
+          "reviewSequence": 2588,
+          "viewingDate": "2023-04-05",
+          "viewingSequence": 2588,
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0023731",
+          "title": "20,000 Years in Sing Sing",
+          "sortTitle": "20000-years-in-sing-sing-1932",
+          "releaseYear": "1932",
+          "releaseDate": "1932-12-24",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir"
+          ],
+          "slug": "20000-years-in-sing-sing-1932",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2023-05-09",
+          "reviewSequence": 2605,
+          "viewingDate": "2023-05-09",
+          "viewingSequence": 2605,
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0023125",
+          "title": "Lawyer Man",
+          "sortTitle": "lawyer-man-1932",
+          "releaseYear": "1932",
+          "releaseDate": "1932-12-10",
+          "genres": [
+            "Drama",
+            "Romance"
+          ],
+          "slug": "lawyer-man-1932",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-05-19",
+          "reviewSequence": 2610,
+          "viewingDate": "2023-05-19",
+          "viewingSequence": 2610,
+          "medium": "Watch TCM",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Don Coscarelli",
       "count": 3,
       "slug": null,
@@ -2031,176 +2142,6 @@
           "reviewSequence": 2649,
           "viewingDate": "2023-08-31",
           "viewingSequence": 2649,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Bob Kane",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0096895",
-          "title": "Batman",
-          "sortTitle": "batman-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-??-??",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": "batman-1989",
-          "grade": "A-",
-          "gradeValue": 11,
-          "reviewDate": "2023-05-12",
-          "reviewSequence": 2608,
-          "viewingDate": "2023-05-12",
-          "viewingSequence": 2608,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0468569",
-          "title": "The Dark Knight",
-          "sortTitle": "dark-knight-2008",
-          "releaseYear": "2008",
-          "releaseDate": "2008-07-14",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": "the-dark-knight-2008",
-          "grade": "A-",
-          "gradeValue": 11,
-          "reviewDate": "2023-06-22",
-          "reviewSequence": 2626,
-          "viewingDate": "2023-06-22",
-          "viewingSequence": 2626,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0106364",
-          "title": "Batman: Mask of the Phantasm",
-          "sortTitle": "batman-mask-of-the-phantasm-1993",
-          "releaseYear": "1993",
-          "releaseDate": "1993-12-25",
-          "genres": [
-            "Animation",
-            "Action",
-            "Adventure",
-            "Crime",
-            "Family",
-            "Mystery",
-            "Sci-Fi"
-          ],
-          "slug": "batman-mask-of-the-phantasm-1993",
-          "grade": "B",
-          "gradeValue": 9,
-          "reviewDate": "2023-09-14",
-          "reviewSequence": 2652,
-          "viewingDate": "2023-09-14",
-          "viewingSequence": 2652,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Michael Arlen",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0034716",
-          "title": "The Falcon Takes Over",
-          "sortTitle": "falcon-takes-over-1942",
-          "releaseYear": "1942",
-          "releaseDate": "1942-05-29",
-          "genres": [
-            "Comedy",
-            "Crime",
-            "Mystery",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": "the-falcon-takes-over-1942",
-          "grade": "F",
-          "gradeValue": 1,
-          "reviewDate": "2023-01-09",
-          "reviewSequence": 2556,
-          "viewingDate": "2023-01-09",
-          "viewingSequence": 2556,
-          "medium": "Watch TCM",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0035980",
-          "title": "The Heavenly Body",
-          "sortTitle": "heavenly-body-1944",
-          "releaseYear": "1944",
-          "releaseDate": "1944-03-23",
-          "genres": [
-            "Comedy",
-            "Romance"
-          ],
-          "slug": "the-heavenly-body-1944",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2023-06-23",
-          "reviewSequence": 2627,
-          "viewingDate": "2023-06-23",
-          "viewingSequence": 2627,
-          "medium": "Watch TCM",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Wes Craven",
-      "count": 2,
-      "slug": "wes-craven",
-      "viewings": [
-        {
-          "imdbId": "tt0329101",
-          "title": "Freddy vs. Jason",
-          "sortTitle": "freddy-vs-jason-2003",
-          "releaseYear": "2003",
-          "releaseDate": "2003-08-13",
-          "genres": [
-            "Action",
-            "Horror"
-          ],
-          "slug": "freddy-vs-jason-2003",
-          "grade": "D",
-          "gradeValue": 3,
-          "reviewDate": "2023-01-13",
-          "reviewSequence": 2557,
-          "viewingDate": "2023-01-13",
-          "viewingSequence": 2557,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0089686",
-          "title": "A Nightmare on Elm Street 2: Freddy's Revenge",
-          "sortTitle": "nightmare-on-elm-street-2-freddys-revenge-1985",
-          "releaseYear": "1985",
-          "releaseDate": "1985-10-01",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "a-nightmare-on-elm-street-2-freddys-revenge-1985",
-          "grade": "F",
-          "gradeValue": 1,
-          "reviewDate": "2023-06-19",
-          "reviewSequence": 2623,
-          "viewingDate": "2023-06-19",
-          "viewingSequence": 2623,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2403,6 +2344,96 @@
           "viewingSequence": 2586,
           "medium": "Blu-ray",
           "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Umberto Lenzi",
+      "count": 2,
+      "slug": "umberto-lenzi",
+      "viewings": [
+        {
+          "imdbId": "tt0095740",
+          "title": "Nightmare Beach",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseYear": "1989",
+          "releaseDate": "1989-07-14",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": 2581,
+          "viewingDate": "2023-03-28",
+          "viewingSequence": 2581,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0095740",
+          "title": "Nightmare Beach",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseYear": "1989",
+          "releaseDate": "1989-07-14",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": 2581,
+          "viewingDate": "2023-10-28",
+          "viewingSequence": 2665,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
+      "name": "Vittorio Rambaldi",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0095740",
+          "title": "Nightmare Beach",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseYear": "1989",
+          "releaseDate": "1989-07-14",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": 2581,
+          "viewingDate": "2023-03-28",
+          "viewingSequence": 2581,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0095740",
+          "title": "Nightmare Beach",
+          "sortTitle": "nightmare-beach-1989",
+          "releaseYear": "1989",
+          "releaseDate": "1989-07-14",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "nightmare-beach-1989",
+          "grade": "D",
+          "gradeValue": 3,
+          "reviewDate": "2023-03-28",
+          "reviewSequence": 2581,
+          "viewingDate": "2023-10-28",
+          "viewingSequence": 2665,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     }

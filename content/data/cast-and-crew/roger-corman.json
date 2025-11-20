@@ -1,7 +1,7 @@
 {
   "name": "Roger Corman",
   "slug": "roger-corman",
-  "titleCount": 15,
+  "titleCount": 16,
   "reviewCount": 13,
   "titles": [
     {
@@ -187,7 +187,8 @@
       "reviewDate": "2007-06-15",
       "reviewSequence": 227,
       "creditedAs": [
-        "director"
+        "director",
+        "writer"
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
@@ -364,9 +365,35 @@
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt3454574",
+      "title": "Extraordinary Tales",
+      "sortTitle": "extraordinary-tales-2013",
+      "releaseYear": "2013",
+      "releaseDate": "2013-02-28",
+      "genres": [
+        "Animation",
+        "Horror",
+        "Mystery"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [
+        "Christopher Lee"
+      ],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "description": "Director, performer, and writer with 13 reviewed and 2 watchlist titles.",
+  "description": "Director, performer, and writer with 13 reviewed and 3 watchlist titles.",
   "creditedAs": [
     "director",
     "performer",

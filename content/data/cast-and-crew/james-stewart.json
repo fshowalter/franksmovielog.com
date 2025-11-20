@@ -1,7 +1,7 @@
 {
   "name": "James Stewart",
   "slug": "james-stewart",
-  "titleCount": 80,
+  "titleCount": 82,
   "reviewCount": 20,
   "titles": [
     {
@@ -807,7 +807,9 @@
       "creditedAs": [
         "performer"
       ],
-      "watchlistDirectorNames": [],
+      "watchlistDirectorNames": [
+        "John Huston"
+      ],
       "watchlistPerformerNames": [
         "James Stewart"
       ],
@@ -1527,6 +1529,31 @@
       "watchlistCollectionNames": []
     },
     {
+      "imdbId": "tt0055627",
+      "title": "X-15",
+      "sortTitle": "x-15-1961",
+      "releaseYear": "1961",
+      "releaseDate": "1961-12-22",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [
+        "James Stewart"
+      ],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
       "imdbId": "tt0056085",
       "title": "How the West Was Won",
       "sortTitle": "how-the-west-was-won-1962",
@@ -1720,7 +1747,8 @@
       ],
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [
-        "James Stewart"
+        "James Stewart",
+        "Warren Oates"
       ],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
@@ -2024,9 +2052,38 @@
       ],
       "watchlistWriterNames": [],
       "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0101329",
+      "title": "An American Tail: Fievel Goes West",
+      "sortTitle": "american-tail-fievel-goes-west-1991",
+      "releaseYear": "1991",
+      "releaseDate": "1991-11-17",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Musical",
+        "Western"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "performer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [
+        "James Stewart"
+      ],
+      "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
     }
   ],
-  "description": "Performer with 20 reviewed and 60 watchlist titles.",
+  "description": "Performer with 20 reviewed and 62 watchlist titles.",
   "creditedAs": [
     "performer"
   ]
