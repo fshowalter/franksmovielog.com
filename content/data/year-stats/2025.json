@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 86,
-  "viewingCount": 135,
-  "titleCount": 130,
+  "newTitleCount": 87,
+  "viewingCount": 136,
+  "titleCount": 131,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 78
+      "count": 79
     },
     {
       "name": "4k UHD Blu-ray",
@@ -74,7 +74,7 @@
     },
     {
       "name": "1990s",
-      "count": 16
+      "count": 17
     },
     {
       "name": "2000s",
@@ -1994,6 +1994,74 @@
       ]
     },
     {
+      "name": "William Peter Blatty",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0070047",
+          "title": "The Exorcist",
+          "sortTitle": "exorcist-1973",
+          "releaseYear": "1973",
+          "releaseDate": "1973-12-26",
+          "genres": [
+            "Horror"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2025-02-18",
+          "viewingSequence": 2848,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0099528",
+          "title": "The Exorcist III",
+          "sortTitle": "exorcist-iii-1990",
+          "releaseYear": "1990",
+          "releaseDate": "1990-08-17",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-exorcist-iii-1990",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2025-11-12",
+          "reviewSequence": 2960,
+          "viewingDate": "2025-11-12",
+          "viewingSequence": 2960,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt10045260",
+          "title": "The Exorcist III: Legion",
+          "sortTitle": "exorcist-iii-legion-1990",
+          "releaseYear": "1990",
+          "releaseDate": "2016-10-25",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-exorcist-iii-legion-1990",
+          "grade": "C+",
+          "gradeValue": 7,
+          "reviewDate": "2025-11-16",
+          "reviewSequence": 2963,
+          "viewingDate": "2025-11-16",
+          "viewingSequence": 2963,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Lucio Fulci",
       "count": 3,
       "slug": "lucio-fulci",
@@ -2340,53 +2408,7 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Peter Bryan",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0061411",
-          "title": "The Blood Beast Terror",
-          "sortTitle": "blood-beast-terror-1968",
-          "releaseYear": "1968",
-          "releaseDate": "1969-05-16",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-blood-beast-terror-1968",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2025-02-11",
-          "reviewSequence": 2844,
-          "viewingDate": "2025-02-11",
-          "viewingSequence": 2844,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0052905",
-          "title": "The Hound of the Baskervilles",
-          "sortTitle": "hound-of-the-baskervilles-1959",
-          "releaseYear": "1959",
-          "releaseDate": "1959-07-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "the-hound-of-the-baskervilles-1959",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2025-05-24",
-          "reviewSequence": 2884,
-          "viewingDate": "2025-05-24",
-          "viewingSequence": 2884,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
-  "reviewCount": 110
+  "reviewCount": 111
 }
