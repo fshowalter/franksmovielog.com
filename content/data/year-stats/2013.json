@@ -718,97 +718,6 @@
       ]
     },
     {
-      "name": "Stan Lee",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0371746",
-          "title": "Iron Man",
-          "sortTitle": "iron-man-2008",
-          "releaseYear": "2008",
-          "releaseDate": "2008-04-14",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "iron-man-2008",
-          "grade": "A-",
-          "gradeValue": 11,
-          "reviewDate": "2008-05-01",
-          "reviewSequence": 694,
-          "viewingDate": "2013-02-17",
-          "viewingSequence": 1408,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1228705",
-          "title": "Iron Man 2",
-          "sortTitle": "iron-man-2-2010",
-          "releaseYear": "2010",
-          "releaseDate": "2010-04-26",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2013-02-17",
-          "viewingSequence": 1409,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1300854",
-          "title": "Iron Man 3",
-          "sortTitle": "iron-man-3-2013",
-          "releaseYear": "2013",
-          "releaseDate": "2013-04-14",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2013-05-02",
-          "viewingSequence": 1424,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        },
-        {
-          "imdbId": "tt1981115",
-          "title": "Thor: The Dark World",
-          "sortTitle": "thor-the-dark-world-2013",
-          "releaseYear": "2013",
-          "releaseDate": "2013-10-22",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Fantasy",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2013-11-25",
-          "viewingSequence": 1467,
-          "medium": null,
-          "venue": "AMC Tysons Corner 16"
-        }
-      ]
-    },
-    {
       "name": "Tom Hardy",
       "count": 4,
       "slug": null,
@@ -1315,6 +1224,72 @@
           "viewingSequence": 1450,
           "medium": "Netflix",
           "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Paul Rudd",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0243655",
+          "title": "Wet Hot American Summer",
+          "sortTitle": "wet-hot-american-summer-2001",
+          "releaseYear": "2001",
+          "releaseDate": "2001-01-23",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2013-01-20",
+          "viewingSequence": 1394,
+          "medium": "Netflix",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1655460",
+          "title": "Wanderlust",
+          "sortTitle": "wanderlust-2012",
+          "releaseYear": "2012",
+          "releaseDate": "2012-02-16",
+          "genres": [
+            "Comedy",
+            "Romance"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2013-10-13",
+          "viewingSequence": 1449,
+          "medium": "HBO HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1229340",
+          "title": "Anchorman 2: The Legend Continues",
+          "sortTitle": "anchorman-2-the-legend-continues-2013",
+          "releaseYear": "2013",
+          "releaseDate": "2013-11-24",
+          "genres": [
+            "Comedy"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2013-12-27",
+          "viewingSequence": 1478,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     }

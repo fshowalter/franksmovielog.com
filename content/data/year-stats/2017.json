@@ -562,55 +562,6 @@
       ]
     },
     {
-      "name": "Duke",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0022681",
-          "title": "The Big Stampede",
-          "sortTitle": "big-stampede-1932",
-          "releaseYear": "1932",
-          "releaseDate": "1932-09-29",
-          "genres": [
-            "Drama",
-            "Western"
-          ],
-          "slug": "the-big-stampede-1932",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2021-11-28",
-          "reviewSequence": 2321,
-          "viewingDate": "2017-01-10",
-          "viewingSequence": 1703,
-          "medium": "TCM",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0024647",
-          "title": "The Telegraph Trail",
-          "sortTitle": "telegraph-trail-1933",
-          "releaseYear": "1933",
-          "releaseDate": "1933-03-18",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Drama",
-            "Western"
-          ],
-          "slug": "the-telegraph-trail-1933",
-          "grade": "D-",
-          "gradeValue": 2,
-          "reviewDate": "2024-08-05",
-          "reviewSequence": 2745,
-          "viewingDate": "2017-01-17",
-          "viewingSequence": 1705,
-          "medium": "TCM",
-          "venue": null
-        }
-      ]
-    },
-    {
       "name": "Patrick Stewart",
       "count": 2,
       "slug": null,
@@ -810,56 +761,6 @@
       ]
     },
     {
-      "name": "Stan Lee",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt1431045",
-          "title": "Deadpool",
-          "sortTitle": "deadpool-2016",
-          "releaseYear": "2016",
-          "releaseDate": "2016-01-21",
-          "genres": [
-            "Action",
-            "Comedy",
-            "Sci-Fi"
-          ],
-          "slug": "deadpool-2016",
-          "grade": "B+",
-          "gradeValue": 10,
-          "reviewDate": "2021-02-27",
-          "reviewSequence": 2158,
-          "viewingDate": "2017-04-20",
-          "viewingSequence": 1717,
-          "medium": "HBO GO",
-          "venue": null
-        },
-        {
-          "imdbId": "tt3896198",
-          "title": "Guardians of the Galaxy Vol. 2",
-          "sortTitle": "guardians-of-the-galaxy-vol-2-2017",
-          "releaseYear": "2017",
-          "releaseDate": "2017-04-10",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Sci-Fi"
-          ],
-          "slug": "guardians-of-the-galaxy-vol-2-2017",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2020-08-29",
-          "reviewSequence": 1987,
-          "viewingDate": "2017-12-09",
-          "viewingSequence": 1746,
-          "medium": "Netflix",
-          "venue": null
-        }
-      ]
-    },
-    {
       "name": "Robert De Niro",
       "count": 2,
       "slug": null,
@@ -905,6 +806,100 @@
           "viewingSequence": 1730,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
+      "name": "Paul Herman",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0113277",
+          "title": "Heat",
+          "sortTitle": "heat-1995",
+          "releaseYear": "1995",
+          "releaseDate": "1995-12-06",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama"
+          ],
+          "slug": "heat-1995",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2022-03-12",
+          "reviewSequence": 2388,
+          "viewingDate": "2017-05-02",
+          "viewingSequence": 1720,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt0099685",
+          "title": "Goodfellas",
+          "sortTitle": "goodfellas-1990",
+          "releaseYear": "1990",
+          "releaseDate": "1990-09-09",
+          "genres": [
+            "Biography",
+            "Crime",
+            "Drama"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2017-08-17",
+          "viewingSequence": 1730,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        }
+      ]
+    },
+    {
+      "name": "Dean Martin",
+      "count": 2,
+      "slug": "dean-martin",
+      "viewings": [
+        {
+          "imdbId": "tt0053221",
+          "title": "Rio Bravo",
+          "sortTitle": "rio-bravo-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-03-08",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": 2861,
+          "viewingDate": "2017-06-18",
+          "viewingSequence": 1723,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt0053221",
+          "title": "Rio Bravo",
+          "sortTitle": "rio-bravo-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-03-08",
+          "genres": [
+            "Western"
+          ],
+          "slug": "rio-bravo-1959",
+          "grade": "A+",
+          "gradeValue": 13,
+          "reviewDate": "2025-03-22",
+          "reviewSequence": 2861,
+          "viewingDate": "2017-12-09",
+          "viewingSequence": 1747,
+          "medium": "Blu-ray",
+          "venue": null
         }
       ]
     }
@@ -1314,58 +1309,6 @@
           "reviewSequence": 788,
           "viewingDate": "2017-11-13",
           "viewingSequence": 1744,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        }
-      ]
-    },
-    {
-      "name": "Larry Lieber",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt3896198",
-          "title": "Guardians of the Galaxy Vol. 2",
-          "sortTitle": "guardians-of-the-galaxy-vol-2-2017",
-          "releaseYear": "2017",
-          "releaseDate": "2017-04-10",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Sci-Fi"
-          ],
-          "slug": "guardians-of-the-galaxy-vol-2-2017",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2020-08-29",
-          "reviewSequence": 1987,
-          "viewingDate": "2017-12-09",
-          "viewingSequence": 1746,
-          "medium": "Netflix",
-          "venue": null
-        },
-        {
-          "imdbId": "tt3501632",
-          "title": "Thor: Ragnarok",
-          "sortTitle": "thor-ragnarok-2017",
-          "releaseYear": "2017",
-          "releaseDate": "2017-10-10",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Fantasy",
-            "Sci-Fi"
-          ],
-          "slug": "thor-ragnarok-2017",
-          "grade": "A",
-          "gradeValue": 12,
-          "reviewDate": "2020-09-26",
-          "reviewSequence": 2000,
-          "viewingDate": "2017-12-13",
-          "viewingSequence": 1748,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
