@@ -123,7 +123,7 @@
     {
       "name": "Terence Fisher",
       "count": 2,
-      "slug": null,
+      "slug": "terence-fisher",
       "viewings": [
         {
           "imdbId": "tt0062885",
@@ -1016,99 +1016,6 @@
       ]
     },
     {
-      "name": "Stan Lee",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt1843866",
-          "title": "Captain America: The Winter Soldier",
-          "sortTitle": "captain-america-the-winter-soldier-2014",
-          "releaseYear": "2014",
-          "releaseDate": "2014-03-13",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2015-01-04",
-          "viewingSequence": 1590,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt2015381",
-          "title": "Guardians of the Galaxy",
-          "sortTitle": "guardians-of-the-galaxy-2014",
-          "releaseYear": "2014",
-          "releaseDate": "2014-07-21",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2015-01-11",
-          "viewingSequence": 1595,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt2395427",
-          "title": "Avengers: Age of Ultron",
-          "sortTitle": "avengers-age-of-ultron-2015",
-          "releaseYear": "2015",
-          "releaseDate": "2015-04-13",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "avengers-age-of-ultron-2015",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2020-07-11",
-          "reviewSequence": 1964,
-          "viewingDate": "2015-04-30",
-          "viewingSequence": 1617,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        },
-        {
-          "imdbId": "tt0478970",
-          "title": "Ant-Man",
-          "sortTitle": "ant-man-2015",
-          "releaseYear": "2015",
-          "releaseDate": "2015-06-29",
-          "genres": [
-            "Action",
-            "Comedy",
-            "Sci-Fi"
-          ],
-          "slug": "ant-man-2015",
-          "grade": "D+",
-          "gradeValue": 4,
-          "reviewDate": "2020-07-18",
-          "reviewSequence": 1967,
-          "viewingDate": "2015-07-30",
-          "viewingSequence": 1633,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        }
-      ]
-    },
-    {
       "name": "Vincent Price",
       "count": 4,
       "slug": "vincent-price",
@@ -1482,6 +1389,55 @@
           "venue": null
         }
       ]
+    },
+    {
+      "name": "Ralph Dumke",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0047476",
+          "title": "She Couldn't Say No",
+          "sortTitle": "she-couldnt-say-no-1953",
+          "releaseYear": "1953",
+          "releaseDate": "1953-06-28",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "she-couldnt-say-no-1953",
+          "grade": "C-",
+          "gradeValue": 5,
+          "reviewDate": "2015-01-03",
+          "reviewSequence": 1588,
+          "viewingDate": "2015-01-03",
+          "viewingSequence": 1588,
+          "medium": "TCM HD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0043131",
+          "title": "Where Danger Lives",
+          "sortTitle": "where-danger-lives-1950",
+          "releaseYear": "1950",
+          "releaseDate": "1950-11-15",
+          "genres": [
+            "Action",
+            "Crime",
+            "Film-Noir",
+            "Thriller"
+          ],
+          "slug": "where-danger-lives-1950",
+          "grade": "F",
+          "gradeValue": 1,
+          "reviewDate": "2015-02-07",
+          "reviewSequence": 1601,
+          "viewingDate": "2015-02-07",
+          "viewingSequence": 1601,
+          "medium": "TCM HD",
+          "venue": null
+        }
+      ]
     }
   ],
   "mostWatchedWriters": [
@@ -1610,106 +1566,6 @@
           "viewingSequence": 1657,
           "medium": "35mm",
           "venue": "AFI Silver"
-        }
-      ]
-    },
-    {
-      "name": "Joe Simon",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt1843866",
-          "title": "Captain America: The Winter Soldier",
-          "sortTitle": "captain-america-the-winter-soldier-2014",
-          "releaseYear": "2014",
-          "releaseDate": "2014-03-13",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2015-01-04",
-          "viewingSequence": 1590,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt2395427",
-          "title": "Avengers: Age of Ultron",
-          "sortTitle": "avengers-age-of-ultron-2015",
-          "releaseYear": "2015",
-          "releaseDate": "2015-04-13",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "avengers-age-of-ultron-2015",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2020-07-11",
-          "reviewSequence": 1964,
-          "viewingDate": "2015-04-30",
-          "viewingSequence": 1617,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        }
-      ]
-    },
-    {
-      "name": "Jim Starlin",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt2015381",
-          "title": "Guardians of the Galaxy",
-          "sortTitle": "guardians-of-the-galaxy-2014",
-          "releaseYear": "2014",
-          "releaseDate": "2014-07-21",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2015-01-11",
-          "viewingSequence": 1595,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt2395427",
-          "title": "Avengers: Age of Ultron",
-          "sortTitle": "avengers-age-of-ultron-2015",
-          "releaseYear": "2015",
-          "releaseDate": "2015-04-13",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "avengers-age-of-ultron-2015",
-          "grade": "C+",
-          "gradeValue": 7,
-          "reviewDate": "2020-07-11",
-          "reviewSequence": 1964,
-          "viewingDate": "2015-04-30",
-          "viewingSequence": 1617,
-          "medium": null,
-          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     },
@@ -2004,6 +1860,105 @@
           "viewingSequence": 1639,
           "medium": "Shudder",
           "venue": null
+        }
+      ]
+    },
+    {
+      "name": "George Baxt",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0053719",
+          "title": "The City of the Dead",
+          "sortTitle": "city-of-the-dead-1960",
+          "releaseYear": "1960",
+          "releaseDate": "1960-09-09",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-city-of-the-dead-1960",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2015-06-06",
+          "reviewSequence": 1623,
+          "viewingDate": "2015-06-06",
+          "viewingSequence": 1623,
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0067924",
+          "title": "Vampire Circus",
+          "sortTitle": "vampire-circus-1972",
+          "releaseYear": "1972",
+          "releaseDate": "1972-04-30",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "vampire-circus-1972",
+          "grade": "B",
+          "gradeValue": 9,
+          "reviewDate": "2012-02-19",
+          "reviewSequence": 1209,
+          "viewingDate": "2015-10-31",
+          "viewingSequence": 1655,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Michael Arndt",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt2096673",
+          "title": "Inside Out",
+          "sortTitle": "inside-out-2015",
+          "releaseYear": "2015",
+          "releaseDate": "2015-05-18",
+          "genres": [
+            "Animation",
+            "Adventure",
+            "Comedy",
+            "Drama",
+            "Family",
+            "Fantasy"
+          ],
+          "slug": "inside-out-2015",
+          "grade": "C",
+          "gradeValue": 6,
+          "reviewDate": "2015-06-22",
+          "reviewSequence": 1627,
+          "viewingDate": "2015-06-22",
+          "viewingSequence": 1627,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
+        },
+        {
+          "imdbId": "tt2488496",
+          "title": "Star Wars: Episode VII - The Force Awakens",
+          "sortTitle": "star-wars-episode-vii-the-force-awakens-2015",
+          "releaseYear": "2015",
+          "releaseDate": "2015-12-14",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+          ],
+          "slug": null,
+          "grade": null,
+          "gradeValue": null,
+          "reviewDate": null,
+          "reviewSequence": null,
+          "viewingDate": "2015-12-21",
+          "viewingSequence": 1661,
+          "medium": null,
+          "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
       ]
     }
