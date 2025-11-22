@@ -1,7 +1,7 @@
 {
   "name": "John Huston",
   "slug": "john-huston",
-  "titleCount": 53,
+  "titleCount": 54,
   "reviewCount": 30,
   "titles": [
     {
@@ -18,7 +18,7 @@
       ],
       "slug": "murders-in-the-rue-morgue-1932",
       "grade": "D-",
-      "gradeValue": 2,
+      "gradeValue": 5,
       "reviewDate": "2021-07-15",
       "reviewSequence": 2254,
       "creditedAs": [
@@ -41,7 +41,7 @@
       ],
       "slug": "the-amazing-dr-clitterhouse-1938",
       "grade": "B-",
-      "gradeValue": 8,
+      "gradeValue": 11,
       "reviewDate": "2008-04-22",
       "reviewSequence": 691,
       "creditedAs": [
@@ -64,7 +64,7 @@
       ],
       "slug": "jezebel-1938",
       "grade": "D+",
-      "gradeValue": 4,
+      "gradeValue": 7,
       "reviewDate": "2008-08-17",
       "reviewSequence": 822,
       "creditedAs": [
@@ -73,6 +73,31 @@
       "watchlistDirectorNames": [],
       "watchlistPerformerNames": [],
       "watchlistWriterNames": [],
+      "watchlistCollectionNames": []
+    },
+    {
+      "imdbId": "tt0032145",
+      "title": "Wuthering Heights",
+      "sortTitle": "wuthering-heights-1939",
+      "releaseYear": "1939",
+      "releaseDate": "1939-04-07",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "slug": null,
+      "grade": null,
+      "gradeValue": null,
+      "reviewDate": null,
+      "reviewSequence": null,
+      "creditedAs": [
+        "writer"
+      ],
+      "watchlistDirectorNames": [],
+      "watchlistPerformerNames": [],
+      "watchlistWriterNames": [
+        "Ben Hecht"
+      ],
       "watchlistCollectionNames": []
     },
     {
@@ -90,7 +115,7 @@
       ],
       "slug": "high-sierra-1941",
       "grade": "B-",
-      "gradeValue": 8,
+      "gradeValue": 11,
       "reviewDate": "2022-09-13",
       "reviewSequence": 2474,
       "creditedAs": [
@@ -116,7 +141,7 @@
       ],
       "slug": "the-maltese-falcon-1941",
       "grade": "A",
-      "gradeValue": 12,
+      "gradeValue": 15,
       "reviewDate": "2007-07-06",
       "reviewSequence": 250,
       "creditedAs": [
@@ -143,7 +168,7 @@
       ],
       "slug": "sergeant-york-1941",
       "grade": "C",
-      "gradeValue": 6,
+      "gradeValue": 9,
       "reviewDate": "2008-04-21",
       "reviewSequence": 689,
       "creditedAs": [
@@ -169,7 +194,7 @@
       ],
       "slug": "across-the-pacific-1942",
       "grade": "C-",
-      "gradeValue": 5,
+      "gradeValue": 8,
       "reviewDate": "2007-09-24",
       "reviewSequence": 376,
       "creditedAs": [
@@ -219,7 +244,7 @@
       ],
       "slug": "key-largo-1948",
       "grade": "B+",
-      "gradeValue": 10,
+      "gradeValue": 13,
       "reviewDate": "2007-07-15",
       "reviewSequence": 261,
       "creditedAs": [
@@ -272,7 +297,7 @@
       ],
       "slug": "the-treasure-of-the-sierra-madre-1948",
       "grade": "A",
-      "gradeValue": 12,
+      "gradeValue": 15,
       "reviewDate": "2007-07-06",
       "reviewSequence": 251,
       "creditedAs": [
@@ -298,7 +323,7 @@
       ],
       "slug": "we-were-strangers-1949",
       "grade": "D+",
-      "gradeValue": 4,
+      "gradeValue": 7,
       "reviewDate": "2008-07-09",
       "reviewSequence": 777,
       "creditedAs": [
@@ -324,7 +349,7 @@
       ],
       "slug": "the-asphalt-jungle-1950",
       "grade": "B",
-      "gradeValue": 9,
+      "gradeValue": 12,
       "reviewDate": "2007-07-15",
       "reviewSequence": 262,
       "creditedAs": [
@@ -350,7 +375,7 @@
       ],
       "slug": "the-african-queen-1951",
       "grade": "B+",
-      "gradeValue": 10,
+      "gradeValue": 13,
       "reviewDate": "2007-10-24",
       "reviewSequence": 431,
       "creditedAs": [
@@ -374,7 +399,7 @@
       ],
       "slug": "the-red-badge-of-courage-1951",
       "grade": "C-",
-      "gradeValue": 5,
+      "gradeValue": 8,
       "reviewDate": "2008-02-10",
       "reviewSequence": 578,
       "creditedAs": [
@@ -400,7 +425,7 @@
       ],
       "slug": "moulin-rouge-1952",
       "grade": "C+",
-      "gradeValue": 7,
+      "gradeValue": 10,
       "reviewDate": "2007-12-22",
       "reviewSequence": 512,
       "creditedAs": [
@@ -456,7 +481,7 @@
       ],
       "slug": "moby-dick-1956",
       "grade": "C+",
-      "gradeValue": 7,
+      "gradeValue": 10,
       "reviewDate": "2008-02-04",
       "reviewSequence": 569,
       "creditedAs": [
@@ -491,7 +516,9 @@
         "John Huston"
       ],
       "watchlistPerformerNames": [],
-      "watchlistWriterNames": [],
+      "watchlistWriterNames": [
+        "Ben Hecht"
+      ],
       "watchlistCollectionNames": []
     },
     {
@@ -507,7 +534,7 @@
       ],
       "slug": "heaven-knows-mr-allison-1957",
       "grade": "B-",
-      "gradeValue": 8,
+      "gradeValue": 11,
       "reviewDate": "2007-07-31",
       "reviewSequence": 291,
       "creditedAs": [
@@ -614,7 +641,7 @@
       ],
       "slug": "the-misfits-1961",
       "grade": "B",
-      "gradeValue": 9,
+      "gradeValue": 12,
       "reviewDate": "2007-07-31",
       "reviewSequence": 290,
       "creditedAs": [
@@ -689,7 +716,7 @@
       ],
       "slug": "the-night-of-the-iguana-1964",
       "grade": "B+",
-      "gradeValue": 10,
+      "gradeValue": 13,
       "reviewDate": "2007-08-06",
       "reviewSequence": 306,
       "creditedAs": [
@@ -738,7 +765,7 @@
       ],
       "slug": "casino-royale-1967",
       "grade": "C-",
-      "gradeValue": 5,
+      "gradeValue": 8,
       "reviewDate": "2003-09-25",
       "reviewSequence": 31,
       "creditedAs": [
@@ -763,7 +790,7 @@
       ],
       "slug": "reflections-in-a-golden-eye-1967",
       "grade": "C-",
-      "gradeValue": 5,
+      "gradeValue": 8,
       "reviewDate": "2007-08-07",
       "reviewSequence": 309,
       "creditedAs": [
@@ -866,7 +893,7 @@
       ],
       "slug": "the-kremlin-letter-1970",
       "grade": "C+",
-      "gradeValue": 7,
+      "gradeValue": 10,
       "reviewDate": "2008-09-05",
       "reviewSequence": 830,
       "creditedAs": [
@@ -918,7 +945,7 @@
       ],
       "slug": "fat-city-1972",
       "grade": "D+",
-      "gradeValue": 4,
+      "gradeValue": 7,
       "reviewDate": "2007-08-13",
       "reviewSequence": 319,
       "creditedAs": [
@@ -994,7 +1021,7 @@
       ],
       "slug": "chinatown-1974",
       "grade": "A+",
-      "gradeValue": 13,
+      "gradeValue": 16,
       "reviewDate": "2009-03-07",
       "reviewSequence": 1079,
       "creditedAs": [
@@ -1018,7 +1045,7 @@
       ],
       "slug": "the-man-who-would-be-king-1975",
       "grade": "B",
-      "gradeValue": 9,
+      "gradeValue": 12,
       "reviewDate": "2007-08-23",
       "reviewSequence": 336,
       "creditedAs": [
@@ -1072,7 +1099,7 @@
       ],
       "slug": "tentacles-1977",
       "grade": "D",
-      "gradeValue": 3,
+      "gradeValue": 6,
       "reviewDate": "2025-06-28",
       "reviewSequence": 2903,
       "creditedAs": [
@@ -1145,7 +1172,7 @@
       ],
       "slug": "the-visitor-1979",
       "grade": "D+",
-      "gradeValue": 4,
+      "gradeValue": 7,
       "reviewDate": "2015-03-07",
       "reviewSequence": 1610,
       "creditedAs": [
@@ -1168,7 +1195,7 @@
       ],
       "slug": "wise-blood-1979",
       "grade": "C-",
-      "gradeValue": 5,
+      "gradeValue": 8,
       "reviewDate": "2008-08-10",
       "reviewSequence": 815,
       "creditedAs": [
@@ -1246,7 +1273,7 @@
       ],
       "slug": "annie-1982",
       "grade": "C-",
-      "gradeValue": 5,
+      "gradeValue": 8,
       "reviewDate": "2008-07-04",
       "reviewSequence": 773,
       "creditedAs": [
@@ -1268,7 +1295,7 @@
       ],
       "slug": "under-the-volcano-1984",
       "grade": "B-",
-      "gradeValue": 8,
+      "gradeValue": 11,
       "reviewDate": "2008-09-15",
       "reviewSequence": 844,
       "creditedAs": [
@@ -1317,7 +1344,7 @@
       ],
       "slug": "the-dead-1987",
       "grade": "D-",
-      "gradeValue": 2,
+      "gradeValue": 5,
       "reviewDate": "2007-09-06",
       "reviewSequence": 344,
       "creditedAs": [
@@ -1354,7 +1381,7 @@
       "watchlistCollectionNames": []
     }
   ],
-  "description": "Director, writer, and performer with 30 reviewed and 23 watchlist titles.",
+  "description": "Director, writer, and performer with 30 reviewed and 24 watchlist titles.",
   "creditedAs": [
     "director",
     "writer",
