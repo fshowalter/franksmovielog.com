@@ -1,8 +1,8 @@
 {
   "year": "2025",
   "newTitleCount": 88,
-  "viewingCount": 137,
-  "titleCount": 132,
+  "viewingCount": 138,
+  "titleCount": 133,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Watch TCM",
-      "count": 6
+      "count": 7
     },
     {
       "name": "Criterion Channel",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1950s",
-      "count": 8
+      "count": 9
     },
     {
       "name": "1960s",
@@ -1003,116 +1003,8 @@
       ]
     },
     {
-      "name": "Peter Cushing",
-      "count": 5,
-      "slug": "peter-cushing",
-      "viewings": [
-        {
-          "imdbId": "tt0061411",
-          "title": "The Blood Beast Terror",
-          "sortTitle": "blood-beast-terror-1968",
-          "releaseYear": "1968",
-          "releaseDate": "1969-05-16",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-blood-beast-terror-1968",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-02-11",
-          "reviewSequence": 2844,
-          "viewingDate": "2025-02-11",
-          "viewingSequence": 2844,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0068230",
-          "title": "Asylum",
-          "sortTitle": "asylum-1972",
-          "releaseYear": "1972",
-          "releaseDate": "1972-11-17",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "asylum-1972",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-02-22",
-          "reviewSequence": 2851,
-          "viewingDate": "2025-02-22",
-          "viewingSequence": 2851,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0065887",
-          "title": "Blood Suckers",
-          "sortTitle": "blood-suckers-1971",
-          "releaseYear": "1971",
-          "releaseDate": "1972-09-??",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "blood-suckers-1971",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-03-08",
-          "reviewSequence": 2856,
-          "viewingDate": "2025-03-08",
-          "viewingSequence": 2856,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0052905",
-          "title": "The Hound of the Baskervilles",
-          "sortTitle": "hound-of-the-baskervilles-1959",
-          "releaseYear": "1959",
-          "releaseDate": "1959-07-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "the-hound-of-the-baskervilles-1959",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2025-05-24",
-          "reviewSequence": 2884,
-          "viewingDate": "2025-05-24",
-          "viewingSequence": 2884,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0064949",
-          "title": "Scream and Scream Again",
-          "sortTitle": "scream-and-scream-again-1970",
-          "releaseYear": "1970",
-          "releaseDate": "1970-02-13",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Horror",
-            "Mystery",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "scream-and-scream-again-1970",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-07-04",
-          "reviewSequence": 2906,
-          "viewingDate": "2025-07-04",
-          "viewingSequence": 2906,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
       "name": "Vincent Price",
-      "count": 5,
+      "count": 6,
       "slug": "vincent-price",
       "viewings": [
         {
@@ -1201,6 +1093,135 @@
           "reviewSequence": 2904,
           "viewingDate": "2025-07-01",
           "viewingSequence": 2904,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0064949",
+          "title": "Scream and Scream Again",
+          "sortTitle": "scream-and-scream-again-1970",
+          "releaseYear": "1970",
+          "releaseDate": "1970-02-13",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "scream-and-scream-again-1970",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2025-07-04",
+          "reviewSequence": 2906,
+          "viewingDate": "2025-07-04",
+          "viewingSequence": 2906,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0052602",
+          "title": "The Bat",
+          "sortTitle": "bat-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-08-09",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bat-1959",
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2025-11-22",
+          "reviewSequence": 2965,
+          "viewingDate": "2025-11-22",
+          "viewingSequence": 2965,
+          "medium": "Watch TCM",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Peter Cushing",
+      "count": 5,
+      "slug": "peter-cushing",
+      "viewings": [
+        {
+          "imdbId": "tt0061411",
+          "title": "The Blood Beast Terror",
+          "sortTitle": "blood-beast-terror-1968",
+          "releaseYear": "1968",
+          "releaseDate": "1969-05-16",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-blood-beast-terror-1968",
+          "grade": "D-",
+          "gradeValue": 5,
+          "reviewDate": "2025-02-11",
+          "reviewSequence": 2844,
+          "viewingDate": "2025-02-11",
+          "viewingSequence": 2844,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0068230",
+          "title": "Asylum",
+          "sortTitle": "asylum-1972",
+          "releaseYear": "1972",
+          "releaseDate": "1972-11-17",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "asylum-1972",
+          "grade": "D",
+          "gradeValue": 6,
+          "reviewDate": "2025-02-22",
+          "reviewSequence": 2851,
+          "viewingDate": "2025-02-22",
+          "viewingSequence": 2851,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0065887",
+          "title": "Blood Suckers",
+          "sortTitle": "blood-suckers-1971",
+          "releaseYear": "1971",
+          "releaseDate": "1972-09-??",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "blood-suckers-1971",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2025-03-08",
+          "reviewSequence": 2856,
+          "viewingDate": "2025-03-08",
+          "viewingSequence": 2856,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0052905",
+          "title": "The Hound of the Baskervilles",
+          "sortTitle": "hound-of-the-baskervilles-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-07-03",
+          "genres": [
+            "Horror",
+            "Mystery"
+          ],
+          "slug": "the-hound-of-the-baskervilles-1959",
+          "grade": "B+",
+          "gradeValue": 13,
+          "reviewDate": "2025-05-24",
+          "reviewSequence": 2884,
+          "viewingDate": "2025-05-24",
+          "viewingSequence": 2884,
           "medium": "Blu-ray",
           "venue": null
         },
@@ -2410,5 +2431,5 @@
       ]
     }
   ],
-  "reviewCount": 112
+  "reviewCount": 113
 }
