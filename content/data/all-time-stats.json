@@ -1,5 +1,5 @@
 {
-  "viewingCount": 2964,
+  "viewingCount": 2965,
   "titleCount": 2246,
   "reviewCount": 1837,
   "watchlistTitlesReviewedCount": 1017,
@@ -51,7 +51,7 @@
     },
     {
       "name": "D+",
-      "count": 262,
+      "count": 261,
       "sortValue": 7
     },
     {
@@ -66,7 +66,7 @@
     },
     {
       "name": "F+",
-      "count": 2,
+      "count": 3,
       "sortValue": 4
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "name": "Watch TCM",
-      "count": 131
+      "count": 132
     },
     {
       "name": "iTunes",
@@ -174,7 +174,7 @@
     },
     {
       "name": "1950s",
-      "count": 290
+      "count": 291
     },
     {
       "name": "1960s",
@@ -22207,7 +22207,7 @@
     },
     {
       "name": "Vincent Price",
-      "count": 62,
+      "count": 63,
       "slug": "vincent-price",
       "viewings": [
         {
@@ -22687,10 +22687,10 @@
             "Thriller"
           ],
           "slug": "the-bat-1959",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2008-02-29",
-          "reviewSequence": 614,
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2025-11-22",
+          "reviewSequence": 2965,
           "viewingDate": "2008-02-29",
           "viewingSequence": 614,
           "medium": null,
@@ -23525,6 +23525,27 @@
           "viewingDate": "2025-07-04",
           "viewingSequence": 2906,
           "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0052602",
+          "title": "The Bat",
+          "sortTitle": "bat-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-08-09",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-bat-1959",
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2025-11-22",
+          "reviewSequence": 2965,
+          "viewingDate": "2025-11-22",
+          "viewingSequence": 2965,
+          "medium": "Watch TCM",
           "venue": null
         }
       ]
