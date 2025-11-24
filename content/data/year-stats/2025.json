@@ -1,12 +1,12 @@
 {
   "year": "2025",
-  "newTitleCount": 88,
-  "viewingCount": 138,
-  "titleCount": 133,
+  "newTitleCount": 89,
+  "viewingCount": 139,
+  "titleCount": 134,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 80
+      "count": 81
     },
     {
       "name": "4k UHD Blu-ray",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1950s",
-      "count": 9
+      "count": 10
     },
     {
       "name": "1960s",
@@ -800,50 +800,49 @@
       ]
     },
     {
-      "name": "Robert Stevenson",
+      "name": "Terence Fisher",
       "count": 2,
-      "slug": null,
+      "slug": "terence-fisher",
       "viewings": [
         {
-          "imdbId": "tt0044825",
-          "title": "The Las Vegas Story",
-          "sortTitle": "las-vegas-story-1952",
-          "releaseYear": "1952",
-          "releaseDate": "1952-03-28",
+          "imdbId": "tt0052905",
+          "title": "The Hound of the Baskervilles",
+          "sortTitle": "hound-of-the-baskervilles-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-07-03",
           "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir"
+            "Horror",
+            "Mystery"
           ],
-          "slug": "the-las-vegas-story-1952",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-05-30",
-          "reviewSequence": 2887,
-          "viewingDate": "2025-05-30",
-          "viewingSequence": 2887,
-          "medium": "DVD",
+          "slug": "the-hound-of-the-baskervilles-1959",
+          "grade": "B+",
+          "gradeValue": 13,
+          "reviewDate": "2025-05-24",
+          "reviewSequence": 2884,
+          "viewingDate": "2025-05-24",
+          "viewingSequence": 2884,
+          "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0043828",
-          "title": "My Forbidden Past",
-          "sortTitle": "my-forbidden-past-1951",
-          "releaseYear": "1951",
-          "releaseDate": "1951-04-21",
+          "imdbId": "tt0053041",
+          "title": "The Man Who Could Cheat Death",
+          "sortTitle": "man-who-could-cheat-death-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-11-30",
           "genres": [
-            "Crime",
             "Drama",
-            "Romance"
+            "Horror",
+            "Sci-Fi"
           ],
-          "slug": "my-forbidden-past-1951",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-11-01",
-          "reviewSequence": 2949,
-          "viewingDate": "2025-11-01",
-          "viewingSequence": 2949,
-          "medium": "Watch TCM",
+          "slug": "the-man-who-could-cheat-death-1959",
+          "grade": "D+",
+          "gradeValue": 7,
+          "reviewDate": "2025-11-22",
+          "reviewSequence": 2966,
+          "viewingDate": "2025-11-22",
+          "viewingSequence": 2966,
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -852,7 +851,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 7,
+      "count": 8,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -997,6 +996,27 @@
           "reviewSequence": 2908,
           "viewingDate": "2025-07-07",
           "viewingSequence": 2908,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0053041",
+          "title": "The Man Who Could Cheat Death",
+          "sortTitle": "man-who-could-cheat-death-1959",
+          "releaseYear": "1959",
+          "releaseDate": "1959-11-30",
+          "genres": [
+            "Drama",
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "the-man-who-could-cheat-death-1959",
+          "grade": "D+",
+          "gradeValue": 7,
+          "reviewDate": "2025-11-22",
+          "reviewSequence": 2966,
+          "viewingDate": "2025-11-22",
+          "viewingSequence": 2966,
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2431,5 +2451,5 @@
       ]
     }
   ],
-  "reviewCount": 113
+  "reviewCount": 114
 }
