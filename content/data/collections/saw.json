@@ -1,8 +1,8 @@
 {
   "name": "Saw",
   "slug": "saw",
-  "titleCount": 9,
-  "reviewCount": 7,
+  "titleCount": 10,
+  "reviewCount": 8,
   "titles": [
     {
       "imdbId": "tt0387564",
@@ -139,11 +139,11 @@
       "reviewSequence": 2559
     },
     {
-      "imdbId": "tt3348730",
-      "title": "Jigsaw",
-      "sortTitle": "jigsaw-2017",
-      "releaseYear": "2017",
-      "releaseDate": "2017-10-27",
+      "imdbId": "tt21807222",
+      "title": "Saw X",
+      "sortTitle": "saw-x-2023",
+      "releaseYear": "2023",
+      "releaseDate": "2023-09-29",
       "genres": [
         "Horror",
         "Mystery",
@@ -154,6 +154,23 @@
       "gradeValue": null,
       "reviewDate": null,
       "reviewSequence": null
+    },
+    {
+      "imdbId": "tt3348730",
+      "title": "Jigsaw",
+      "sortTitle": "jigsaw-2017",
+      "releaseYear": "2017",
+      "releaseDate": "2017-10-27",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "slug": "jigsaw-2017",
+      "grade": "D-",
+      "gradeValue": 5,
+      "reviewDate": "2025-11-23",
+      "reviewSequence": 2969
     }
   ],
   "description": "The _Saw_ franchise."
