@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 91,
-  "viewingCount": 142,
-  "titleCount": 137,
+  "newTitleCount": 92,
+  "viewingCount": 143,
+  "titleCount": 138,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Watch TCM",
-      "count": 7
+      "count": 8
     },
     {
       "name": "Criterion Channel",
@@ -62,7 +62,7 @@
     },
     {
       "name": "1950s",
-      "count": 10
+      "count": 11
     },
     {
       "name": "1960s",
@@ -855,7 +855,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 8,
+      "count": 9,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -1022,6 +1022,29 @@
           "viewingDate": "2025-11-22",
           "viewingSequence": 2966,
           "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0044517",
+          "title": "The Crimson Pirate",
+          "sortTitle": "crimson-pirate-1952",
+          "releaseYear": "1952",
+          "releaseDate": "1952-09-27",
+          "genres": [
+            "Action",
+            "Adventure",
+            "Comedy",
+            "Drama",
+            "Romance"
+          ],
+          "slug": "the-crimson-pirate-1952",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-24",
+          "reviewSequence": 2970,
+          "viewingDate": "2025-11-24",
+          "viewingSequence": 2970,
+          "medium": "Watch TCM",
           "venue": null
         }
       ]
@@ -2475,5 +2498,5 @@
       ]
     }
   ],
-  "reviewCount": 117
+  "reviewCount": 118
 }
