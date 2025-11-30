@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 93,
-  "viewingCount": 145,
-  "titleCount": 140,
+  "newTitleCount": 94,
+  "viewingCount": 146,
+  "titleCount": 141,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -25,12 +25,12 @@
       "count": 3
     },
     {
-      "name": "DVD",
+      "name": "Hulu",
       "count": 2
     },
     {
-      "name": "Hulu",
-      "count": 1
+      "name": "DVD",
+      "count": 2
     },
     {
       "name": "3D DCP",
@@ -86,7 +86,7 @@
     },
     {
       "name": "2010s",
-      "count": 9
+      "count": 10
     },
     {
       "name": "2020s",
@@ -314,6 +314,97 @@
       ]
     },
     {
+      "name": "Marcus Dunstan",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0844479",
+          "title": "The Collector",
+          "sortTitle": "collector-2009",
+          "releaseYear": "2009",
+          "releaseDate": "2009-07-31",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "the-collector-2009",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2025-02-06",
+          "reviewSequence": 2842,
+          "viewingDate": "2025-01-25",
+          "viewingSequence": 2840,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0844479",
+          "title": "The Collector",
+          "sortTitle": "collector-2009",
+          "releaseYear": "2009",
+          "releaseDate": "2009-07-31",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "the-collector-2009",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2025-02-06",
+          "reviewSequence": 2842,
+          "viewingDate": "2025-02-06",
+          "viewingSequence": 2842,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt1748227",
+          "title": "The Collection",
+          "sortTitle": "collection-2012",
+          "releaseYear": "2012",
+          "releaseDate": "2012-11-30",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "the-collection-2012",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2025-11-08",
+          "reviewSequence": 2958,
+          "viewingDate": "2025-11-08",
+          "viewingSequence": 2958,
+          "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "imdbId": "tt11045340",
+          "title": "Pilgrim",
+          "sortTitle": "pilgrim-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-11-01",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "pilgrim-2019",
+          "grade": "D",
+          "gradeValue": 6,
+          "reviewDate": "2025-11-26",
+          "reviewSequence": 2973,
+          "viewingDate": "2025-11-26",
+          "viewingSequence": 2973,
+          "medium": "Hulu",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Kevin Tenney",
       "count": 3,
       "slug": null,
@@ -379,73 +470,6 @@
           "viewingDate": "2025-11-08",
           "viewingSequence": 2956,
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Marcus Dunstan",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0844479",
-          "title": "The Collector",
-          "sortTitle": "collector-2009",
-          "releaseYear": "2009",
-          "releaseDate": "2009-07-31",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collector-2009",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-02-06",
-          "reviewSequence": 2842,
-          "viewingDate": "2025-01-25",
-          "viewingSequence": 2840,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0844479",
-          "title": "The Collector",
-          "sortTitle": "collector-2009",
-          "releaseYear": "2009",
-          "releaseDate": "2009-07-31",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collector-2009",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-02-06",
-          "reviewSequence": 2842,
-          "viewingDate": "2025-02-06",
-          "viewingSequence": 2842,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt1748227",
-          "title": "The Collection",
-          "sortTitle": "collection-2012",
-          "releaseYear": "2012",
-          "releaseDate": "2012-11-30",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collection-2012",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-08",
-          "reviewSequence": 2958,
-          "viewingDate": "2025-11-08",
-          "viewingSequence": 2958,
-          "medium": "iTunes",
           "venue": null
         }
       ]
@@ -1918,7 +1942,7 @@
   "mostWatchedWriters": [
     {
       "name": "Patrick Melton",
-      "count": 3,
+      "count": 4,
       "slug": null,
       "viewings": [
         {
@@ -1979,13 +2003,37 @@
           "viewingDate": "2025-11-08",
           "viewingSequence": 2958,
           "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "imdbId": "tt11045340",
+          "title": "Pilgrim",
+          "sortTitle": "pilgrim-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-11-01",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "pilgrim-2019",
+          "grade": "D",
+          "gradeValue": 6,
+          "reviewDate": "2025-11-26",
+          "reviewSequence": 2973,
+          "viewingDate": "2025-11-26",
+          "viewingSequence": 2973,
+          "medium": "Hulu",
           "venue": null
         }
       ]
     },
     {
       "name": "Marcus Dunstan",
-      "count": 3,
+      "count": 4,
       "slug": null,
       "viewings": [
         {
@@ -2046,6 +2094,30 @@
           "viewingDate": "2025-11-08",
           "viewingSequence": 2958,
           "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "imdbId": "tt11045340",
+          "title": "Pilgrim",
+          "sortTitle": "pilgrim-2019",
+          "releaseYear": "2019",
+          "releaseDate": "2019-11-01",
+          "genres": [
+            "Drama",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "pilgrim-2019",
+          "grade": "D",
+          "gradeValue": 6,
+          "reviewDate": "2025-11-26",
+          "reviewSequence": 2973,
+          "viewingDate": "2025-11-26",
+          "viewingSequence": 2973,
+          "medium": "Hulu",
           "venue": null
         }
       ]
@@ -2536,5 +2608,5 @@
       ]
     }
   ],
-  "reviewCount": 120
+  "reviewCount": 121
 }
