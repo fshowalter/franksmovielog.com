@@ -1,8 +1,8 @@
 {
   "year": "2025",
   "newTitleCount": 94,
-  "viewingCount": 147,
-  "titleCount": 142,
+  "viewingCount": 148,
+  "titleCount": 143,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -33,11 +33,11 @@
       "count": 2
     },
     {
-      "name": "3D DCP",
-      "count": 1
+      "name": "HBO Max",
+      "count": 2
     },
     {
-      "name": "HBO Max",
+      "name": "3D DCP",
       "count": 1
     }
   ],
@@ -62,7 +62,7 @@
     },
     {
       "name": "1950s",
-      "count": 11
+      "count": 12
     },
     {
       "name": "1960s",
@@ -842,54 +842,51 @@
       ]
     },
     {
-      "name": "Gordon Hessler",
+      "name": "John Sturges",
       "count": 2,
-      "slug": null,
+      "slug": "john-sturges",
       "viewings": [
         {
-          "imdbId": "tt0089835",
-          "title": "Pray for Death",
-          "sortTitle": "pray-for-death-1985",
-          "releaseYear": "1985",
-          "releaseDate": "1985-08-05",
+          "imdbId": "tt0051848",
+          "title": "The Law and Jake Wade",
+          "sortTitle": "law-and-jake-wade-1958",
+          "releaseYear": "1958",
+          "releaseDate": "1958-10-23",
           "genres": [
-            "Action",
-            "Crime",
             "Drama",
-            "Thriller"
+            "Western"
           ],
-          "slug": "pray-for-death-1985",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-03-08",
-          "reviewSequence": 2857,
-          "viewingDate": "2025-03-08",
-          "viewingSequence": 2857,
+          "slug": "the-law-and-jake-wade-1958",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2025-02-28",
+          "reviewSequence": 2852,
+          "viewingDate": "2025-02-28",
+          "viewingSequence": 2852,
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0064949",
-          "title": "Scream and Scream Again",
-          "sortTitle": "scream-and-scream-again-1970",
-          "releaseYear": "1970",
-          "releaseDate": "1970-02-13",
+          "imdbId": "tt0042771",
+          "title": "Mystery Street",
+          "sortTitle": "mystery-street-1950",
+          "releaseYear": "1950",
+          "releaseDate": "1950-08-11",
           "genres": [
             "Crime",
             "Drama",
-            "Horror",
+            "Film-Noir",
             "Mystery",
-            "Sci-Fi",
             "Thriller"
           ],
-          "slug": "scream-and-scream-again-1970",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-07-04",
-          "reviewSequence": 2906,
-          "viewingDate": "2025-07-04",
-          "viewingSequence": 2906,
-          "medium": "Blu-ray",
+          "slug": "mystery-street-1950",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2025-11-29",
+          "reviewSequence": 2975,
+          "viewingDate": "2025-11-29",
+          "viewingSequence": 2975,
+          "medium": "HBO Max",
           "venue": null
         }
       ]
@@ -2608,5 +2605,5 @@
       ]
     }
   ],
-  "reviewCount": 122
+  "reviewCount": 123
 }
