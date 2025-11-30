@@ -125,8 +125,8 @@ export function FilterAndSortContainer<T extends string>({
       <div className={`group/list-with-filters mx-auto bg-subtle`}>
         <div
           className={`
-            sticky top-[calc(0px_+_var(--scroll-offset,0px))] z-15
-            scroll-mt-[calc(0px_+_var(--scroll-offset,0px))] border-b
+            sticky top-[calc(0px+var(--scroll-offset,0px))] z-15
+            scroll-mt-[calc(0px+var(--scroll-offset,0px))] border-b
             border-default bg-default text-xs
             tablet:col-span-full
           `}
@@ -142,14 +142,14 @@ export function FilterAndSortContainer<T extends string>({
         </div>
         <div
           className={`
-            mx-auto max-w-[var(--breakpoint-desktop)]
+            mx-auto max-w-(--breakpoint-desktop)
             tablet:px-container
           `}
         >
           <div
             className={`
-              mx-auto max-w-[var(--breakpoint-desktop)] grow
-              scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset)_+_var(--scroll-offset,0px))]
+              mx-auto max-w-(--breakpoint-desktop) grow
+              scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset)+var(--scroll-offset,0px))]
               pb-10
               [--filter-and-sort-container-scroll-offset:181px]
               tablet:[--filter-and-sort-container-scroll-offset:121px]
