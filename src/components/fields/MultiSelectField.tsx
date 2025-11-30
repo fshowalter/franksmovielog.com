@@ -419,9 +419,9 @@ export function MultiSelectField({
           aria-haspopup="listbox"
           aria-label={label}
           className={`
-            relative w-full cursor-default
-            scroll-mt-[var(--control-scroll-offset,0)] rounded border
-            border-default bg-default pr-10 pl-3 text-left text-base text-subtle
+            relative w-full cursor-default scroll-mt-(--control-scroll-offset,0)
+            rounded border border-default bg-default pr-10 pl-3 text-left
+            text-base text-subtle
             focus:border-[rgb(38,132,255)]
             focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none
           `}
@@ -433,7 +433,7 @@ export function MultiSelectField({
         >
           <div
             className={`
-              flex min-h-[36px] flex-wrap items-center gap-1 py-2
+              flex min-h-9 flex-wrap items-center gap-1 py-2
               ${selectedOptions.length > 0 ? "pr-16" : "pr-10"}
             `}
           >

@@ -47,7 +47,7 @@ export function Footer(): React.JSX.Element {
                 <p
                   className={`
                     mb-6 text-pretty
-                    first-letter:float-left first-letter:mt-[6px]
+                    first-letter:float-left first-letter:mt-1.5
                     first-letter:pr-1 first-letter:font-sans
                     first-letter:text-[40px] first-letter:leading-[.8]
                     first-letter:font-bold first-letter:text-white
