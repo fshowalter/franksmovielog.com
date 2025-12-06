@@ -4,10 +4,13 @@ import { Grade } from "~/components/grade/Grade";
 import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdown";
 import { Still } from "~/components/still/Still";
 
+import { ListItemCreditedAs } from "../list-item-credited-as/ListItemCreditedAs";
+
 /**
  * Data structure for review card content.
  */
 export type ReviewCardValue = {
+  creditedAs?: string[];
   excerpt: string;
   genres: readonly string[];
   grade: string;
@@ -115,7 +118,15 @@ export function ReviewCard({
               laptop:tracking-wide
             `}
           >
-            {value.reviewDisplayDate}
+            {value.creditedAs &&
+              value.creditedAs.map((value, index) => {
+                if (index === 0) {
+                  return value;
+                }
+
+                return `, ${value}`;
+              })}
+            {!value.creditedAs && value.reviewDisplayDate}
           </div>
         )}
         <a
@@ -153,6 +164,17 @@ export function ReviewCard({
             height={24}
             value={value.grade}
           />
+        )}
+        {value.creditedAs && (
+          <div
+            className={`
+              -mt-4 mb-4 font-sans text-xs leading-4 font-normal tracking-wider
+              text-subtle
+              laptop:tracking-wide
+            `}
+          >
+            Reviewed: {value.reviewDisplayDate}
+          </div>
         )}
         <RenderedMarkdown
           className={`

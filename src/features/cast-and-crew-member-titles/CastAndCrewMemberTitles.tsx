@@ -1,10 +1,13 @@
 import { useReducer } from "react";
 
-import type { PosterImageProps } from "~/api/posters";
+import type { StillImageProps } from "~/api/stills";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
-import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
+import { GroupedReviewCardList } from "~/components/review-card-list/GroupedReviewCardList";
+import { PlaceholderCard } from "~/components/review-card-list/PlaceholderCard";
+import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
+import { ReviewCard } from "~/components/review-card/ReviewCard";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
@@ -21,7 +24,6 @@ import {
   selectHasPendingFilters,
 } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
-import { CastAndCrewMemberTitleListItem } from "./CastAndCrewMemberTitlesListItem";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
@@ -43,11 +45,11 @@ export type CastAndCrewMemberTitlesProps = {
  */
 export type CastAndCrewMemberTitlesValue = {
   creditedAs: string[];
+  excerpt: string;
   genres: string[];
   grade?: string;
   gradeValue?: number;
   imdbId: string;
-  posterImageProps: PosterImageProps;
   releaseSequence: number;
   releaseYear: string;
   reviewDisplayDate?: string;
@@ -55,6 +57,7 @@ export type CastAndCrewMemberTitlesValue = {
   reviewYear?: string;
   slug?: string;
   sortTitle: string;
+  stillImageProps: StillImageProps;
   title: string;
   watchlistCollectionNames: string[];
   watchlistDirectorNames: string[];
@@ -134,18 +137,33 @@ export function CastAndCrewMemberTitles({
       }}
       totalCount={totalCount}
     >
-      <GroupedPosterList
+      <GroupedReviewCardList
         groupedValues={groupedValues}
         onShowMore={() => dispatch(createShowMoreAction())}
         totalCount={totalCount}
         visibleCount={state.showCount}
       >
         {(value) => {
+          if (value.slug && value.grade) {
+            return (
+              <ReviewCard
+                as="li"
+                imageConfig={ReviewCardListImageConfig}
+                key={value.imdbId}
+                value={value}
+              />
+            );
+          }
           return (
-            <CastAndCrewMemberTitleListItem key={value.imdbId} value={value} />
+            <PlaceholderCard
+              as="li"
+              imageConfig={ReviewCardListImageConfig}
+              key={value.imdbId}
+              value={value}
+            />
           );
         }}
-      </GroupedPosterList>
+      </GroupedReviewCardList>
     </FilterAndSortContainer>
   );
 }

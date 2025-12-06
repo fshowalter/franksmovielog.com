@@ -1,6 +1,6 @@
 import { castAndCrewMember } from "~/api/cast-and-crew";
-import { getFluidWidthPosterImageProps } from "~/api/posters";
-import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
+import { getStillImageProps } from "~/api/stills";
+import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
 import { displayDate } from "~/utils/displayDate";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
@@ -26,10 +26,6 @@ export async function getCastAndCrewMemberTitlesProps(
       member.titles.map(async (title) => {
         return {
           ...title,
-          posterImageProps: await getFluidWidthPosterImageProps(
-            title.slug,
-            PosterListItemImageConfig,
-          ),
           reviewDisplayDate: displayDate(title.reviewDate),
           reviewSequence: title.reviewSequence,
           reviewYear: title.reviewDate
@@ -38,6 +34,10 @@ export async function getCastAndCrewMemberTitlesProps(
                 year: "numeric",
               })
             : "",
+          stillImageProps: await getStillImageProps(
+            title.slug || "default",
+            ReviewCardListImageConfig,
+          ),
         };
       }),
     ),
