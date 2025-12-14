@@ -4,8 +4,6 @@ import { Grade } from "~/components/grade/Grade";
 import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdown";
 import { Still } from "~/components/still/Still";
 
-import { ListItemCreditedAs } from "../list-item-credited-as/ListItemCreditedAs";
-
 /**
  * Data structure for review card content.
  */
@@ -168,7 +166,7 @@ export function ReviewCard({
         {value.creditedAs && (
           <div
             className={`
-              -mt-4 mb-4 font-sans text-xs leading-4 font-normal tracking-wider
+              -mt-4 mb-6 font-sans text-xs leading-4 font-normal tracking-wider
               text-subtle
               laptop:tracking-wide
             `}
