@@ -50,6 +50,8 @@ jobs:
       - name: install dependencies
         run: npm install
 
+      - run: df -h
+
       - name: build
         run: npm run build
 
