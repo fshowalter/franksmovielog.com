@@ -5,9 +5,17 @@ import type { StillImageProps } from "~/api/stills";
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { GroupedReviewCardList } from "~/components/review-card-list/GroupedReviewCardList";
-import { PlaceholderCard } from "~/components/review-card-list/PlaceholderCard";
 import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
-import { ReviewCard } from "~/components/review-card/ReviewCard";
+import { ReviewCard } from "~/components/review-card/Card";
+import { CardContent } from "~/components/review-card/CardContent";
+import { CardExcerpt } from "~/components/review-card/CardExcerpt";
+import { CardEyebrow } from "~/components/review-card/CardEyebrow";
+import { CardFooter } from "~/components/review-card/CardFooter";
+import { CardGrade } from "~/components/review-card/CardGrade";
+import { CardMobilePadding } from "~/components/review-card/CardMobilePadding";
+import { CardStill } from "~/components/review-card/CardStill";
+import { CardTitle } from "~/components/review-card/CardTitle";
+import { PlaceholderCard } from "~/features/cast-and-crew-member-titles/PlaceholderCard";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
@@ -146,12 +154,28 @@ export function CastAndCrewMemberTitles({
         {(value) => {
           if (value.slug && value.grade) {
             return (
-              <ReviewCard
-                as="li"
-                imageConfig={ReviewCardListImageConfig}
-                key={value.imdbId}
-                value={value}
-              />
+              <ReviewCard as="li" key={value.imdbId}>
+                <CardMobilePadding>
+                  <CardStill
+                    imageConfig={ReviewCardListImageConfig}
+                    imageProps={value.stillImageProps}
+                  />
+                  <CardContent>
+                    <CardEyebrow>{value.creditedAs.join(", ")}</CardEyebrow>
+                    <CardTitle
+                      releaseYear={value.releaseYear}
+                      slug={value.slug}
+                      title={value.title}
+                    />
+                    <CardGrade grade={value.grade} />
+                    <CardExcerpt
+                      dateLine={value.reviewDisplayDate}
+                      excerpt={value.excerpt}
+                    />
+                    <CardFooter>{value.genres.join(", ")}</CardFooter>
+                  </CardContent>
+                </CardMobilePadding>
+              </ReviewCard>
             );
           }
           return (

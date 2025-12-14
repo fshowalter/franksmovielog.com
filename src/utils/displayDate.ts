@@ -3,7 +3,10 @@
  * @param date - The date to format (Date object, string, or undefined)
  * @returns Formatted date string or empty string if date is undefined
  */
-export function displayDate(date: Date | string | undefined) {
+export function displayDate(
+  date: Date | string | undefined,
+  includeWeekday = true,
+) {
   if (!date) {
     return "";
   }
@@ -24,5 +27,7 @@ export function displayDate(date: Date | string | undefined) {
   const day = parts.find((part) => part.type === "day")?.value;
   const year = parts.find((part) => part.type === "year")?.value;
 
-  return `${weekday}, ${month} ${day}, ${year}`;
+  const weekdayFormatted = includeWeekday ? `${weekday}, ` : "";
+
+  return `${weekdayFormatted}${month} ${day}, ${year}`;
 }

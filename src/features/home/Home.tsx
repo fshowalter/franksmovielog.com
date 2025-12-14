@@ -1,6 +1,14 @@
 import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
 
-import { ReviewCard } from "~/components/review-card/ReviewCard";
+import { ReviewCard } from "~/components/review-card/Card";
+import { CardContent } from "~/components/review-card/CardContent";
+import { CardExcerpt } from "~/components/review-card/CardExcerpt";
+import { CardEyebrow } from "~/components/review-card/CardEyebrow";
+import { CardFooter } from "~/components/review-card/CardFooter";
+import { CardGrade } from "~/components/review-card/CardGrade";
+import { CardMobilePadding } from "~/components/review-card/CardMobilePadding";
+import { CardStill } from "~/components/review-card/CardStill";
+import { CardTitle } from "~/components/review-card/CardTitle";
 import { SubHeading } from "~/components/sub-heading/SubHeading";
 
 /**
@@ -43,12 +51,25 @@ export function Home({ values }: HomeProps): React.JSX.Element {
       >
         {values.map((value) => {
           return (
-            <ReviewCard
-              as="li"
-              imageConfig={HomeStillImageConfig}
-              key={value.imdbId}
-              value={value}
-            />
+            <ReviewCard as="li" key={value.imdbId}>
+              <CardMobilePadding>
+                <CardStill
+                  imageConfig={HomeStillImageConfig}
+                  imageProps={value.stillImageProps}
+                />
+                <CardContent>
+                  <CardEyebrow>{value.reviewDisplayDate}</CardEyebrow>
+                  <CardTitle
+                    releaseYear={value.releaseYear}
+                    slug={value.slug}
+                    title={value.title}
+                  />
+                  <CardGrade grade={value.grade} />
+                  <CardExcerpt excerpt={value.excerpt} />
+                  <CardFooter>{value.genres.join(", ")}</CardFooter>
+                </CardContent>
+              </CardMobilePadding>
+            </ReviewCard>
           );
         })}
       </ul>

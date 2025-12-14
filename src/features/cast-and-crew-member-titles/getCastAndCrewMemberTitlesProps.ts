@@ -26,7 +26,7 @@ export async function getCastAndCrewMemberTitlesProps(
       member.titles.map(async (title) => {
         return {
           ...title,
-          reviewDisplayDate: displayDate(title.reviewDate),
+          reviewDisplayDate: displayDate(title.reviewDate, false),
           reviewSequence: title.reviewSequence,
           reviewYear: title.reviewDate
             ? new Date(title.reviewDate).toLocaleDateString("en-US", {

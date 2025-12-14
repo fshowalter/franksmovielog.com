@@ -4,10 +4,10 @@
  * @param props.genres - The genres to display
  * @returns Styled genres component
  */
-export function CardGenres({
-  genres,
+export function CardFooter({
+  children,
 }: {
-  genres: string[];
+  children: React.ReactNode;
 }): React.JSX.Element {
   return (
     <div
@@ -16,13 +16,7 @@ export function CardGenres({
         laptop:tracking-wide
       `}
     >
-      {genres.map((genre, index) => {
-        if (index === 0) {
-          return <span key={genre}>{genre}</span>;
-        }
-
-        return <span key={genre}>, {genre}</span>;
-      })}
+      {children}
     </div>
   );
 }

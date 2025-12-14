@@ -1,9 +1,3 @@
-import type { StillImageProps } from "~/api/stills";
-
-import { Grade } from "~/components/grade/Grade";
-import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdown";
-import { Still } from "~/components/still/Still";
-
 /**
  * Card component displaying a movie review summary.
  * @param props - Component props
@@ -14,45 +8,47 @@ import { Still } from "~/components/still/Still";
  * @returns Review card with still image, title, grade, and excerpt
  */
 export function CardTitle({
-  as = "div",
-  imageConfig,
-  value,
-  variant = "primary",
+  releaseYear,
+  slug,
+  title,
 }: {
-  as?: React.ElementType;
-  imageConfig: {
-    height: number;
-    sizes: string;
-    width: number;
-  };
-  value: ReviewCardValue;
-  variant?: "primary" | "secondary";
+  releaseYear: string;
+  slug?: string;
+  title: string;
 }): React.JSX.Element {
-  const Component = as;
+  const releaseYearComponent = (
+    <span className={`text-sm leading-none font-normal text-muted`}>
+      {releaseYear}
+    </span>
+  );
+
+  if (slug) {
+    return (
+      <a
+        className={`
+          mb-3 block text-2.5xl leading-7 font-medium text-default
+          transition-all duration-500
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          hover:text-accent
+          tablet:text-2xl
+          laptop:text-2.5xl
+        `}
+        href={`/reviews/${slug}/`}
+      >
+        {title}&nbsp;{releaseYearComponent}
+      </a>
+    );
+  }
 
   return (
-    <a
+    <div
       className={`
-        mb-3 block font-medium text-default transition-all duration-500
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
-        hover:text-accent
-        ${
-          variant === "primary"
-            ? `
-                  text-2.5xl leading-7
-                  tablet:text-2xl
-                  laptop:text-2.5xl
-                `
-            : ""
-        }
-        ${variant === "secondary" ? `text-xl leading-6` : ""}
+        mb-3 block text-2.5xl leading-7 font-medium text-subtle
+        tablet:text-2xl
+        laptop:text-2.5xl
       `}
-      href={`/reviews/${value.slug}/`}
     >
-      {value.title}&nbsp;
-      <span className="text-sm leading-none font-normal text-muted">
-        {value.releaseYear}
-      </span>
-    </a>
+      {title}&nbsp;{releaseYearComponent}
+    </div>
   );
 }
