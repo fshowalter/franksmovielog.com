@@ -14,25 +14,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: df -h
+      - name: Free Disk Space
+        uses: endersonmenezes/free-disk-space@v3 # Use @main for latest, @v3 for stable
+        with:
+          remove_android: true
+          remove_dotnet: true
+          remove_haskell: true
+          remove_tool_cache: true
+          remove_swap: true
+          remove_packages: "azure-cli google-cloud-cli microsoft-edge-stable google-chrome-stable firefox postgresql* temurin-* *llvm* mysql* dotnet-sdk-*"
+          remove_packages_one_command: true
+          remove_folders: "/usr/share/swift /usr/share/miniconda /usr/share/az* /usr/local/lib/node_modules /usr/local/share/chromium /usr/local/share/powershell /usr/local/julia /usr/local/aws-cli /usr/local/aws-sam-cli /usr/share/gradle"
+          rm_cmd: "rmz" # Use 'rmz' for faster deletion (default: 'rm')
+          rmz_version: "3.1.1" # Required when rm_cmd is 'rmz'
+          testing: false
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
-      - run: df -h
-      - run: du
       - name: setup node
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
 
-      - run: df -h
-
       - name: setup npm
         run: |
           ./npm_use.sh &&
           npm --version &&
           npm list -g --depth 0
-
-      - run: df -h
 
       - name: get astro cache
         id: astro-cache-build
@@ -43,8 +50,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-astro-cache-v2-
 
-      - run: df -h
-
       - name: get content cache
         id: content-cache-build
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
@@ -54,12 +59,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-content-cache-v1-
 
-      - run: df -h
-
       - name: install dependencies
         run: npm install
-
-      - run: df -h
 
       - name: build
         run: npm run build
