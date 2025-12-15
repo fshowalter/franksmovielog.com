@@ -1,6 +1,5 @@
 import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
 
-import { ReviewCard } from "~/components/review-card/Card";
 import { CardContent } from "~/components/review-card/CardContent";
 import { CardExcerpt } from "~/components/review-card/CardExcerpt";
 import { CardEyebrow } from "~/components/review-card/CardEyebrow";
@@ -9,6 +8,7 @@ import { CardGrade } from "~/components/review-card/CardGrade";
 import { CardMobilePadding } from "~/components/review-card/CardMobilePadding";
 import { CardStill } from "~/components/review-card/CardStill";
 import { CardTitle } from "~/components/review-card/CardTitle";
+import { ReviewCard } from "~/components/review-card/ReviewCardContainer";
 import { SubHeading } from "~/components/sub-heading/SubHeading";
 
 /**

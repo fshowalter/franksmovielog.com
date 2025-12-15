@@ -9,15 +9,16 @@
  */
 export function CardContent({
   children,
+  paddingClassNames = "px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]",
 }: {
   children: React.ReactNode;
+  paddingClassNames?: string;
 }): React.JSX.Element {
   return (
     <div
       className={`
-        flex grow flex-col px-1 pb-8
-        tablet:px-[8%]
-        laptop:pr-[10%] laptop:pl-[8.5%]
+        flex grow flex-col
+        ${paddingClassNames}
       `}
     >
       {children}

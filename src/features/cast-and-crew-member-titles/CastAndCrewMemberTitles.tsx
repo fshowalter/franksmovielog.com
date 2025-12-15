@@ -4,9 +4,9 @@ import type { StillImageProps } from "~/api/stills";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
+import { ListItemWatchlistReason } from "~/components/list-item-watchlist-reason/ListItemWatchlistReason";
 import { GroupedReviewCardList } from "~/components/review-card-list/GroupedReviewCardList";
 import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
-import { ReviewCard } from "~/components/review-card/Card";
 import { CardContent } from "~/components/review-card/CardContent";
 import { CardExcerpt } from "~/components/review-card/CardExcerpt";
 import { CardEyebrow } from "~/components/review-card/CardEyebrow";
@@ -15,7 +15,9 @@ import { CardGrade } from "~/components/review-card/CardGrade";
 import { CardMobilePadding } from "~/components/review-card/CardMobilePadding";
 import { CardStill } from "~/components/review-card/CardStill";
 import { CardTitle } from "~/components/review-card/CardTitle";
-import { PlaceholderCard } from "~/features/cast-and-crew-member-titles/PlaceholderCard";
+import { CardTitleLink } from "~/components/review-card/CardTitleLink";
+import { PlaceholderCardContainer } from "~/components/review-card/PlaceholderCardContainer";
+import { ReviewCardContainer } from "~/components/review-card/ReviewCardContainer";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
@@ -154,7 +156,7 @@ export function CastAndCrewMemberTitles({
         {(value) => {
           if (value.slug && value.grade) {
             return (
-              <ReviewCard as="li" key={value.imdbId}>
+              <ReviewCardContainer as="li" key={value.imdbId}>
                 <CardMobilePadding>
                   <CardStill
                     imageConfig={ReviewCardListImageConfig}
@@ -162,7 +164,7 @@ export function CastAndCrewMemberTitles({
                   />
                   <CardContent>
                     <CardEyebrow>{value.creditedAs.join(", ")}</CardEyebrow>
-                    <CardTitle
+                    <CardTitleLink
                       releaseYear={value.releaseYear}
                       slug={value.slug}
                       title={value.title}
@@ -175,16 +177,35 @@ export function CastAndCrewMemberTitles({
                     <CardFooter>{value.genres.join(", ")}</CardFooter>
                   </CardContent>
                 </CardMobilePadding>
-              </ReviewCard>
+              </ReviewCardContainer>
             );
           }
           return (
-            <PlaceholderCard
-              as="li"
-              imageConfig={ReviewCardListImageConfig}
-              key={value.imdbId}
-              value={value}
-            />
+            <PlaceholderCardContainer as="li" key={value.imdbId}>
+              <CardStill
+                imageConfig={ReviewCardListImageConfig}
+                imageProps={value.stillImageProps}
+              />
+              <CardContent>
+                <CardEyebrow>{value.creditedAs.join(", ")}</CardEyebrow>
+                <div className="mb-3">
+                  <CardTitle
+                    releaseYear={value.releaseYear}
+                    textColorClassNames="text-subtle"
+                    title={value.title}
+                  />
+                </div>
+                <div className="mt-1 mb-9">
+                  <ListItemWatchlistReason
+                    collectionNames={value.watchlistCollectionNames}
+                    directorNames={value.watchlistDirectorNames}
+                    performerNames={value.watchlistPerformerNames}
+                    writerNames={value.watchlistWriterNames}
+                  />
+                </div>
+                <CardFooter>{value.genres.join(", ")}</CardFooter>
+              </CardContent>
+            </PlaceholderCardContainer>
           );
         }}
       </GroupedReviewCardList>

@@ -30,7 +30,7 @@ export function CardExcerpt({
       className={`
         leading-normal mb-6 text-lg tracking-prose text-muted
         **:data-dateline:inline-block **:data-dateline:font-sans
-        **:data-dateline:text-sm **:data-dateline:leading-[26.25px]
+        **:data-dateline:text-base **:data-dateline:leading-[26.25px]
         **:data-dateline:font-normal **:data-dateline:tracking-wider
         **:data-dateline:text-subtle **:data-dateline:uppercase
         **:data-dateline:laptop:tracking-wide

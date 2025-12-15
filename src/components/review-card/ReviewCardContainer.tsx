@@ -5,7 +5,7 @@
  * @param props.children - Content to display in the card
  * @returns Review card shell
  */
-export function ReviewCard({
+export function ReviewCardContainer({
   as = "div",
   children,
 }: {
