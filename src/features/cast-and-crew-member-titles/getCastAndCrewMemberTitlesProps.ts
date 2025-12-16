@@ -53,7 +53,7 @@ function newDisplayDate(date: Date | string | undefined) {
 
   const formatter = new Intl.DateTimeFormat("en-US", {
     day: "2-digit",
-    month: "2-digit",
+    month: "short",
     timeZone: "UTC",
     weekday: "short",
     year: "numeric",

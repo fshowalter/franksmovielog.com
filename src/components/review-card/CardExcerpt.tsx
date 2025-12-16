@@ -21,20 +21,13 @@ export function CardExcerpt({
   if (dateLine) {
     excerptWithDateline = excerpt.replace(
       "<p>",
-      `<p><span data-dateline>${dateLine}&nbsp;&mdash;&nbsp;</span>`,
+      `<p><span class="inline-block font-sans text-[15px] font-normal leading-[26.25px] tracking-wide text-subtle">${dateLine}&nbsp;<span class="font-light">&mdash;</span>&nbsp;</span>`,
     );
   }
 
   return (
     <RenderedMarkdown
-      className={`
-        leading-normal mb-6 text-lg tracking-prose text-muted
-        **:data-dateline:inline-block **:data-dateline:font-sans
-        **:data-dateline:text-base **:data-dateline:leading-[26.25px]
-        **:data-dateline:font-normal **:data-dateline:tracking-wider
-        **:data-dateline:text-subtle **:data-dateline:uppercase
-        **:data-dateline:laptop:tracking-wide
-      `}
+      className={`leading-normal mb-6 text-lg tracking-prose text-muted`}
       text={excerptWithDateline}
     />
   );
