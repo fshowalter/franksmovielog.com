@@ -21,7 +21,7 @@ export function CardExcerpt({
   if (dateLine) {
     excerptWithDateline = excerpt.replace(
       "<p>",
-      `<p><span class="inline-block font-sans text-[15px] font-normal leading-[26.25px] tracking-wide text-subtle">${dateLine}&nbsp;<span class="font-light">&mdash;</span>&nbsp;</span>`,
+      `<p><span class="inline-block font-sans text-xs uppercase font-normal leading-[26.25px] tracking-wide text-subtle">${dateLine}&nbsp;<span class="font-light">&mdash;</span>&nbsp;</span>`,
     );
   }
 
