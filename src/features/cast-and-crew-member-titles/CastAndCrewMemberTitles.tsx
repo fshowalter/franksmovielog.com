@@ -118,7 +118,6 @@ export function CastAndCrewMemberTitles({
 
   return (
     <FilterAndSortContainer
-      className="[--scroll-offset:52px]"
       filters={
         <CastAndCrewMemberTitlesFilters
           dispatch={dispatch}
@@ -147,7 +146,7 @@ export function CastAndCrewMemberTitles({
           ),
         sortOptions: <ReviewedTitleSortOptions />,
       }}
-      topNav={<SubNav groupedValues={groupedValues} sortValue={state.sort} />}
+      subNav={<SubNav groupedValues={groupedValues} sortValue={state.sort} />}
       totalCount={totalCount}
     >
       <GroupedReviewCardList

@@ -23,6 +23,7 @@ type Props<T extends string> = {
   onResetFilters: () => void;
   pendingFilteredCount: number;
   sortProps: SortProps<T>;
+  subNav?: React.ReactNode;
   topNav?: React.ReactNode;
   totalCount: number;
 };
@@ -45,6 +46,7 @@ export function FilterAndSortContainer<T extends string>({
   onResetFilters,
   pendingFilteredCount,
   sortProps,
+  subNav,
   topNav,
   totalCount,
 }: Props<T>): React.JSX.Element {
@@ -126,9 +128,10 @@ export function FilterAndSortContainer<T extends string>({
         <div
           className={`
             sticky top-[calc(0px+var(--scroll-offset,0px))] z-15
-            scroll-mt-[calc(0px+var(--scroll-offset,0px))] border-b
-            border-default bg-default text-xs
+            scroll-mt-[calc(0px+var(--scroll-offset,0px))] border-default
+            bg-default text-xs
             tablet:col-span-full
+            ${subNav ? "" : "border-b"}
           `}
         >
           <FilterAndSortHeader
@@ -139,6 +142,7 @@ export function FilterAndSortContainer<T extends string>({
             toggleButtonRef={toggleButtonRef}
             totalCount={totalCount}
           />
+          {subNav && subNav}
         </div>
         <div
           className={`
@@ -151,8 +155,17 @@ export function FilterAndSortContainer<T extends string>({
               mx-auto max-w-(--breakpoint-desktop) grow
               scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset)+var(--scroll-offset,0px))]
               pb-10
-              [--filter-and-sort-container-scroll-offset:181px]
-              tablet:[--filter-and-sort-container-scroll-offset:121px]
+              ${
+                subNav
+                  ? `
+                    [--filter-and-sort-container-scroll-offset:188px]
+                    tablet:[--filter-and-sort-container-scroll-offset:140px]
+                  `
+                  : `
+                    [--filter-and-sort-container-scroll-offset:181px]
+                    tablet:[--filter-and-sort-container-scroll-offset:121px]
+                  `
+              }
             `}
             id="list"
             ref={listRef}
