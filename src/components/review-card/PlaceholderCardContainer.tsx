@@ -17,8 +17,7 @@ export function PlaceholderCardContainer({
   return (
     <Component
       className={`
-        group/card relative mb-1 w-(--review-card-width,100%) self-start
-        bg-default/50
+        group/card relative mb-1 w-(--review-card-width,100%) bg-default/50
         tablet:mb-0
       `}
     >

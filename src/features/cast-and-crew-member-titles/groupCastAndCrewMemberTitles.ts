@@ -1,4 +1,5 @@
 import { groupMaybeReviewedTitles } from "~/groupers/groupMaybeReviewedTitles";
+import { groupValues } from "~/groupers/groupValues";
 
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
@@ -15,5 +16,24 @@ export function groupCastAndCrewMemberTitles(
   sort: CastAndCrewMemberTitlesSort,
   showCount: number,
 ) {
+  if (sort.startsWith("release-date")) {
+    return groupValues(filteredValues, sort, groupForReleaseDateValue);
+  }
+
   return groupMaybeReviewedTitles(filteredValues, showCount, sort);
+}
+
+function groupForReleaseDateValue(
+  value: CastAndCrewMemberTitlesValue,
+  sort: CastAndCrewMemberTitlesSort,
+) {
+  switch (sort) {
+    case "release-date-asc":
+    case "release-date-desc": {
+      return `${value.releaseYear.slice(0, 3)}0s`;
+    }
+    default: {
+      return "";
+    }
+  }
 }

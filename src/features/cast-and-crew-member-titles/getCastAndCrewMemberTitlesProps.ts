@@ -52,7 +52,7 @@ function newDisplayDate(date: Date | string | undefined) {
   const viewingDate = new Date(date);
 
   const formatter = new Intl.DateTimeFormat("en-US", {
-    day: "2-digit",
+    day: "numeric",
     month: "short",
     timeZone: "UTC",
     weekday: "short",
@@ -64,5 +64,5 @@ function newDisplayDate(date: Date | string | undefined) {
   const day = parts.find((part) => part.type === "day")?.value;
   const year = parts.find((part) => part.type === "year")?.value;
 
-  return `${year}-${month}-${day}`;
+  return `${month} ${day}, ${year}`;
 }

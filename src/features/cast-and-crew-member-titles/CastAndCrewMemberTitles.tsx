@@ -37,6 +37,7 @@ import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
+import { SubNav } from "./SubNav";
 
 /**
  * Props for the CastAndCrewMemberTitles component.
@@ -117,6 +118,7 @@ export function CastAndCrewMemberTitles({
 
   return (
     <FilterAndSortContainer
+      className="[--scroll-offset:52px]"
       filters={
         <CastAndCrewMemberTitlesFilters
           dispatch={dispatch}
@@ -145,10 +147,12 @@ export function CastAndCrewMemberTitles({
           ),
         sortOptions: <ReviewedTitleSortOptions />,
       }}
+      topNav={<SubNav groupedValues={groupedValues} sortValue={state.sort} />}
       totalCount={totalCount}
     >
       <GroupedReviewCardList
         groupedValues={groupedValues}
+        groupItemClassName={`scroll-mt-[calc(52px_+_var(--filter-and-sort-container-scroll-offset))]`}
         onShowMore={() => dispatch(createShowMoreAction())}
         totalCount={totalCount}
         visibleCount={state.showCount}
@@ -174,7 +178,11 @@ export function CastAndCrewMemberTitles({
                       dateLine={value.reviewDisplayDate}
                       excerpt={value.excerpt}
                     />
-                    <CardFooter>{value.genres.join(", ")}</CardFooter>
+                    <CardFooter>
+                      {value.genres.join(", ")}
+                      <span className={`font-light opacity-50`}>&mdash;</span>
+                      {value.reviewDisplayDate}
+                    </CardFooter>
                   </CardContent>
                 </CardMobilePadding>
               </ReviewCardContainer>
@@ -182,29 +190,31 @@ export function CastAndCrewMemberTitles({
           }
           return (
             <PlaceholderCardContainer as="li" key={value.imdbId}>
-              <CardStill
-                imageConfig={ReviewCardListImageConfig}
-                imageProps={value.stillImageProps}
-              />
-              <CardContent>
-                <CardEyebrow>{value.creditedAs.join(", ")}</CardEyebrow>
-                <div className="mb-3">
-                  <CardTitle
-                    releaseYear={value.releaseYear}
-                    textColorClassNames="text-subtle"
-                    title={value.title}
-                  />
-                </div>
-                <div className="mt-1 mb-9">
-                  <ListItemWatchlistReason
-                    collectionNames={value.watchlistCollectionNames}
-                    directorNames={value.watchlistDirectorNames}
-                    performerNames={value.watchlistPerformerNames}
-                    writerNames={value.watchlistWriterNames}
-                  />
-                </div>
-                <CardFooter>{value.genres.join(", ")}</CardFooter>
-              </CardContent>
+              <CardMobilePadding>
+                <CardStill
+                  imageConfig={ReviewCardListImageConfig}
+                  imageProps={value.stillImageProps}
+                />
+                <CardContent>
+                  <CardEyebrow>{value.creditedAs.join(", ")}</CardEyebrow>
+                  <div className="mb-3">
+                    <CardTitle
+                      releaseYear={value.releaseYear}
+                      textColorClassNames="text-subtle"
+                      title={value.title}
+                    />
+                  </div>
+                  <div className="mt-1 mb-9">
+                    <ListItemWatchlistReason
+                      collectionNames={value.watchlistCollectionNames}
+                      directorNames={value.watchlistDirectorNames}
+                      performerNames={value.watchlistPerformerNames}
+                      writerNames={value.watchlistWriterNames}
+                    />
+                  </div>
+                  <CardFooter>{value.genres.join(", ")}</CardFooter>
+                </CardContent>
+              </CardMobilePadding>
             </PlaceholderCardContainer>
           );
         }}

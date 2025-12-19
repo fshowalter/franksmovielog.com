@@ -28,7 +28,7 @@ export function CardExcerpt({
   return (
     <RenderedMarkdown
       className={`leading-normal mb-6 text-lg tracking-prose text-muted`}
-      text={excerptWithDateline}
+      text={excerpt}
     />
   );
 }
