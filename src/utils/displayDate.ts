@@ -1,9 +1,21 @@
 /**
- * Formats a date into a human-readable string in the format "Weekday, Month Day, Year".
+ * Formats a date into a human-readable string.
  * @param date - The date to format (Date object, string, or undefined)
- * @returns Formatted date string or empty string if date is undefined
+ * @param options - Formatting options
+ * @param options.dayFormat - Day format ("numeric" for "1" or "2-digit" for "01", defaults to "numeric")
+ * @param options.includeWeekday - Whether to include weekday in output (defaults to false)
+ * @returns Formatted date string (e.g., "Jan 15, 2024" or "Wed, Jan 15, 2024") or empty string if date is undefined
  */
-export function displayDate(date: Date | string | undefined) {
+export function displayDate(
+  date: Date | string | undefined,
+  {
+    dayFormat = "numeric",
+    includeWeekday = false,
+  }: {
+    dayFormat?: "2-digit" | "numeric";
+    includeWeekday?: boolean;
+  } = {},
+) {
   if (!date) {
     return "";
   }
@@ -11,7 +23,7 @@ export function displayDate(date: Date | string | undefined) {
   const viewingDate = new Date(date);
 
   const formatter = new Intl.DateTimeFormat("en-US", {
-    day: "2-digit",
+    day: dayFormat,
     month: "short",
     timeZone: "UTC",
     weekday: "short",
@@ -24,5 +36,7 @@ export function displayDate(date: Date | string | undefined) {
   const day = parts.find((part) => part.type === "day")?.value;
   const year = parts.find((part) => part.type === "year")?.value;
 
-  return `${weekday}, ${month} ${day}, ${year}`;
+  const weekdayFormatted = includeWeekday ? `${weekday}, ` : "";
+
+  return `${weekdayFormatted}${month} ${day}, ${year}`;
 }

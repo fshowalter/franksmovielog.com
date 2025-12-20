@@ -4,6 +4,7 @@ import { perfLogger } from "~/utils/performanceLogger";
 import type { CastAndCrewMemberJson } from "./data/cast-and-crew-json";
 
 import { allCastAndCrewJson } from "./data/cast-and-crew-json";
+import { loadExcerptHtml } from "./reviews";
 import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
 
 let cachedCastAndCrewJson: CastAndCrewMemberJson[];
@@ -62,27 +63,37 @@ export async function castAndCrewMember(slug: string): Promise<{
 
     const releaseSequenceMap = createReleaseSequenceMap(member.titles);
 
-    const titles = member.titles.map((title) => {
-      releaseYears.add(title.releaseYear);
+    const titles = await Promise.all(
+      member.titles.map(async (title) => {
+        releaseYears.add(title.releaseYear);
 
-      for (const genre of title.genres) {
-        distinctGenres.add(genre);
-      }
+        for (const genre of title.genres) {
+          distinctGenres.add(genre);
+        }
 
-      if (title.reviewDate) {
-        distinctReviewYears.add(
-          new Date(title.reviewDate).toLocaleDateString("en-US", {
-            timeZone: "UTC",
-            year: "numeric",
-          }),
-        );
-      }
+        if (title.reviewDate) {
+          distinctReviewYears.add(
+            new Date(title.reviewDate).toLocaleDateString("en-US", {
+              timeZone: "UTC",
+              year: "numeric",
+            }),
+          );
+        }
 
-      return {
-        ...title,
-        releaseSequence: releaseSequenceMap.get(title.imdbId)!,
-      };
-    });
+        let excerpt;
+
+        if (title.slug) {
+          const titleWithExcerpt = await loadExcerptHtml({ slug: title.slug });
+          excerpt = titleWithExcerpt.excerpt;
+        }
+
+        return {
+          excerpt,
+          ...title,
+          releaseSequence: releaseSequenceMap.get(title.imdbId)!,
+        };
+      }),
+    );
 
     return {
       distinctGenres: [...distinctGenres].toSorted(),

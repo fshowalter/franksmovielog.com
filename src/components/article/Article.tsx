@@ -1,4 +1,4 @@
-import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
+import type { MoreReviewsValue } from "~/components/more-reviews/MoreReviews";
 
 import { LongFormText } from "~/components/long-form-text/LongFormText";
 import { MoreReviews } from "~/components/more-reviews/MoreReviews";
@@ -9,7 +9,7 @@ import { MoreReviewsHeading } from "~/components/more-reviews/MoreReviewsHeading
  */
 export type ArticleProps = {
   content: string | undefined;
-  recentReviews: ReviewCardValue[];
+  recentReviews: MoreReviewsValue[];
 };
 
 /**

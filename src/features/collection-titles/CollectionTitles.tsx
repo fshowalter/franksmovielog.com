@@ -5,7 +5,7 @@ import type { PosterImageProps } from "~/api/posters";
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
-import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
+import { useGroupedValues } from "~/hooks/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionTitlesSort } from "./sortCollectionTitles";
@@ -15,7 +15,6 @@ import {
   createClearFiltersAction,
   createInitialState,
   createResetFiltersAction,
-  createShowMoreAction,
   createSortAction,
   reducer,
   selectHasPendingFilters,
@@ -82,14 +81,13 @@ export function CollectionTitles({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = usePaginatedGroupedValues(
+  const [groupedValues, totalCount] = useGroupedValues(
     sortCollectionTitles,
     filterCollectionTitles,
     groupCollectionTitles,
     state.values,
     state.sort,
     state.activeFilterValues,
-    state.showCount,
   );
 
   const pendingFilteredCount = usePendingFilterCount(
@@ -131,9 +129,8 @@ export function CollectionTitles({
     >
       <GroupedPosterList
         groupedValues={groupedValues}
-        onShowMore={() => dispatch(createShowMoreAction())}
         totalCount={totalCount}
-        visibleCount={state.showCount}
+        visibleCount={totalCount}
       >
         {(value) => {
           return <CollectionTitlesListItem key={value.imdbId} value={value} />;

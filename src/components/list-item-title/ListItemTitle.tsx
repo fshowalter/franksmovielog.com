@@ -48,7 +48,7 @@ export function ListItemTitle({
       className={`
         ${className}
         block text-base leading-5 font-semibold
-        text-[var(--list-item-title-unreviewed-color,var(--fg-subtle))]
+        text-(--list-item-title-unreviewed-color,var(--fg-subtle))
       `}
     >
       {title}

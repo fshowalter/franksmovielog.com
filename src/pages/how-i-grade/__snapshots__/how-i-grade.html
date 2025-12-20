@@ -569,7 +569,7 @@
                   class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase"
                 >
                   <a
-                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:after:scale-x-100"
+                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:after:scale-x-100"
                     href="/reviews/"
                     >Recent
                     <!-- -->
@@ -577,13 +577,13 @@
                   >
                 </h2>
                 <ul
-                  class="flex w-full flex-col items-start gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between tablet:[--review-card-width:47%] laptop:flex-nowrap laptop:[--review-card-width:47%]"
+                  class="flex w-full flex-col items-start gap-[3%] gap-y-[6vw] [--still-opacity:20%] tablet:flex-row tablet:flex-wrap tablet:justify-between tablet:[--card-width:47%] laptop:flex-nowrap laptop:[--card-width:47%]"
                 >
                   <li
-                    class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                    class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-20"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
                         src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fstay-hungry-1976.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -606,7 +606,7 @@
                       class="flex grow flex-col px-6 pb-6 laptop:pr-[14%] laptop:pl-[12%]"
                     >
                       <a
-                        class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6"
+                        class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6 text-default mb-3"
                         href="/reviews/stay-hungry-1976/"
                         >Stay Hungry<!-- --> <span
                           class="text-sm leading-none font-normal text-muted"
@@ -624,7 +624,7 @@
                           width="90"
                       /></picture>
                       <div
-                        class="rendered-markdown tracking-prose text-muted mb-8 text-base leading-[1.6]"
+                        class="rendered-markdown mb-8 leading-[1.6] tracking-prose text-muted"
                       >
                         <p>
                           In Birmingham, rich kid Jeff Bridges falls for gym
@@ -636,19 +636,15 @@
                       <div
                         class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                       >
-                        <span>Comedy</span
-                        ><span
-                          >,
-                          <!-- -->Drama</span
-                        >
+                        Comedy, Drama
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                    class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-20"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
                         src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Ftheyre-coming-to-get-you-1972.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -671,7 +667,7 @@
                       class="flex grow flex-col px-6 pb-6 laptop:pr-[14%] laptop:pl-[12%]"
                     >
                       <a
-                        class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6"
+                        class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6 text-default mb-3"
                         href="/reviews/theyre-coming-to-get-you-1972/"
                         >They&#x27;re Coming to Get You!<!-- --> <span
                           class="text-sm leading-none font-normal text-muted"
@@ -689,7 +685,7 @@
                           width="90"
                       /></picture>
                       <div
-                        class="rendered-markdown tracking-prose text-muted mb-8 text-base leading-[1.6]"
+                        class="rendered-markdown mb-8 leading-[1.6] tracking-prose text-muted"
                       >
                         <p>
                           Haunted by nightmares after losing her unborn child in
@@ -701,19 +697,15 @@
                       <div
                         class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                       >
-                        <span>Horror</span
-                        ><span
-                          >,
-                          <!-- -->Thriller</span
-                        >
+                        Horror, Thriller
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                    class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-20"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
                         src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fsuperman-2025.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -736,7 +728,7 @@
                       class="flex grow flex-col px-6 pb-6 laptop:pr-[14%] laptop:pl-[12%]"
                     >
                       <a
-                        class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6"
+                        class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6 text-default mb-3"
                         href="/reviews/superman-2025/"
                         >Superman<!-- --> <span
                           class="text-sm leading-none font-normal text-muted"
@@ -754,7 +746,7 @@
                           width="90"
                       /></picture>
                       <div
-                        class="rendered-markdown tracking-prose text-muted mb-8 text-base leading-[1.6]"
+                        class="rendered-markdown mb-8 leading-[1.6] tracking-prose text-muted"
                       >
                         <p>
                           Three years into his crime-fighting career, a young
@@ -765,22 +757,15 @@
                       <div
                         class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                       >
-                        <span>Action</span
-                        ><span
-                          >,
-                          <!-- -->Adventure</span
-                        ><span
-                          >,
-                          <!-- -->Sci-Fi</span
-                        >
+                        Action, Adventure, Sci-Fi
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                    class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-20"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
                         src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-french-connection-1971.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -803,7 +788,7 @@
                       class="flex grow flex-col px-6 pb-6 laptop:pr-[14%] laptop:pl-[12%]"
                     >
                       <a
-                        class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6"
+                        class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6 text-default mb-3"
                         href="/reviews/the-french-connection-1971/"
                         >The French Connection<!-- --> <span
                           class="text-sm leading-none font-normal text-muted"
@@ -821,7 +806,7 @@
                           width="90"
                       /></picture>
                       <div
-                        class="rendered-markdown tracking-prose text-muted mb-8 text-base leading-[1.6]"
+                        class="rendered-markdown mb-8 leading-[1.6] tracking-prose text-muted"
                       >
                         <p>
                           New York City vice cop Gene Hackman relentlessly
@@ -832,17 +817,7 @@
                       <div
                         class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                       >
-                        <span>Action</span
-                        ><span
-                          >,
-                          <!-- -->Crime</span
-                        ><span
-                          >,
-                          <!-- -->Drama</span
-                        ><span
-                          >,
-                          <!-- -->Thriller</span
-                        >
+                        Action, Crime, Drama, Thriller
                       </div>
                     </div>
                   </li>

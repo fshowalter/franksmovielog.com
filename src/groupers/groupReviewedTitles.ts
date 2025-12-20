@@ -29,9 +29,9 @@ export function groupReviewedTitles<
 ) {
   return groupTitles(
     filteredValues,
-    showCount,
     sort,
     createGroupForReviewedTitle(extraGrouper),
+    showCount,
   );
 }
 

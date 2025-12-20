@@ -13,7 +13,6 @@ import type { CollectionTitlesSort } from "./sortCollectionTitles";
 export function groupCollectionTitles(
   filteredValues: CollectionTitlesValue[],
   sort: CollectionTitlesSort,
-  showCount: number,
 ) {
-  return groupMaybeReviewedTitles(filteredValues, showCount, sort);
+  return groupMaybeReviewedTitles(filteredValues, sort);
 }
