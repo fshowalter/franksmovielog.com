@@ -12,7 +12,11 @@ export function SubNav({
           laptop:justify-center
         `}
       >
-        <h3 className={`snap-start p-4 font-sans whitespace-nowrap text-grey`}>
+        <h3
+          className={`
+            snap-start p-4 font-sans tracking-normal whitespace-nowrap text-grey
+          `}
+        >
           Jump to:
         </h3>
         <ul className={`contents`}>{children}</ul>

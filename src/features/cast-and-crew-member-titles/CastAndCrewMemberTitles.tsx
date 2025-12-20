@@ -9,7 +9,7 @@ import { PlaceholderCard } from "~/components/placeholder-card/PlaceholderCard";
 import { GroupedReviewCardList } from "~/components/review-card-list/GroupedReviewCardList";
 import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
 import { ReviewCard } from "~/components/review-card/ReviewCard";
-import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
+import { useGroupedValues } from "~/hooks/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
@@ -19,7 +19,6 @@ import {
   createClearFiltersAction,
   createInitialState,
   createResetFiltersAction,
-  createShowMoreAction,
   createSortAction,
   reducer,
   selectHasPendingFilters,
@@ -89,14 +88,13 @@ export function CastAndCrewMemberTitles({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = usePaginatedGroupedValues(
+  const [groupedValues, totalCount] = useGroupedValues(
     sortCastAndCrewMemberTitles,
     filterCastAndCrewMemberTitles,
     groupCastAndCrewMemberTitles,
     state.values,
     state.sort,
     state.activeFilterValues,
-    state.showCount,
   );
 
   const pendingFilteredCount = usePendingFilterCount(
@@ -148,9 +146,6 @@ export function CastAndCrewMemberTitles({
       <GroupedReviewCardList
         groupedValues={groupedValues}
         groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)] tablet:scroll-mt-[calc(24px_+_var(--filter-and-sort-container-scroll-offset,0px))]`}
-        onShowMore={() => dispatch(createShowMoreAction())}
-        totalCount={totalCount}
-        visibleCount={state.showCount}
       >
         {(value) => {
           if (value.slug && value.grade && value.excerpt) {

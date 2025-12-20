@@ -25,8 +25,8 @@ export function CardStill({
       className={`
         relative mb-6 block overflow-hidden
         after:absolute after:top-0 after:left-0 after:aspect-video
-        after:size-full after:bg-default
-        after:opacity-(--review-card-still-opacity,15%) after:duration-500
+        after:size-full after:bg-default after:opacity-(--still-opacity,15%)
+        after:duration-500
         group-has-[a:hover]/card:after:opacity-0
         tablet:after:inset-x-0 tablet:after:top-0
       `}

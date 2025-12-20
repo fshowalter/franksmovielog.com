@@ -761,19 +761,19 @@
                   class="py-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase"
                 >
                   <a
-                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform hover:after:scale-x-100"
+                    class="relative -mb-1 inline-block transform-gpu pb-1 transition-transform after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:after:scale-x-100"
                     href="/reviews/"
                     >More <span class="text-accent">Reviews</span></a
                   >
                 </h2>
                 <ul
-                  class="flex w-full flex-col items-start gap-[3%] gap-y-[6vw] tablet:flex-row tablet:flex-wrap tablet:justify-between tablet:[--review-card-width:47%] laptop:flex-nowrap laptop:[--review-card-width:47%]"
+                  class="flex w-full flex-col items-start gap-[3%] gap-y-[6vw] [--still-opacity:20%] tablet:flex-row tablet:flex-wrap tablet:justify-between tablet:[--card-width:47%] laptop:flex-nowrap laptop:[--card-width:47%]"
                 >
                   <li
-                    class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                    class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-20"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
                         src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fnight-of-the-living-dead-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -796,7 +796,7 @@
                       class="flex grow flex-col px-6 pb-6 laptop:pr-[14%] laptop:pl-[12%]"
                     >
                       <a
-                        class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6"
+                        class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6 text-default mb-3"
                         href="/reviews/night-of-the-living-dead-1968/"
                         >Night of the Living Dead<!-- --> <span
                           class="text-sm leading-none font-normal text-muted"
@@ -814,7 +814,7 @@
                           width="90"
                       /></picture>
                       <div
-                        class="rendered-markdown tracking-prose text-muted mb-8 text-base leading-[1.6]"
+                        class="rendered-markdown mb-8 leading-[1.6] tracking-prose text-muted"
                       >
                         <p>
                           As the dead return to life to feed on the living,
@@ -824,19 +824,15 @@
                       <div
                         class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                       >
-                        <span>Horror</span
-                        ><span
-                          >,
-                          <!-- -->Thriller</span
-                        >
+                        Horror, Thriller
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                    class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-20"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
                         src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-night-they-raided-minskys-1968.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -859,7 +855,7 @@
                       class="flex grow flex-col px-6 pb-6 laptop:pr-[14%] laptop:pl-[12%]"
                     >
                       <a
-                        class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6"
+                        class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6 text-default mb-3"
                         href="/reviews/the-night-they-raided-minskys-1968/"
                         >The Night They Raided Minsky&#x27;s<!-- --> <span
                           class="text-sm leading-none font-normal text-muted"
@@ -877,7 +873,7 @@
                           width="90"
                       /></picture>
                       <div
-                        class="rendered-markdown tracking-prose text-muted mb-8 text-base leading-[1.6]"
+                        class="rendered-markdown mb-8 leading-[1.6] tracking-prose text-muted"
                       >
                         <p>
                           After his debut, the musical comedy
@@ -894,15 +890,15 @@
                       <div
                         class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                       >
-                        <span>Comedy</span>
+                        Comedy
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                    class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-20"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
                         src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fnightbitch-2024.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -925,7 +921,7 @@
                       class="flex grow flex-col px-6 pb-6 laptop:pr-[14%] laptop:pl-[12%]"
                     >
                       <a
-                        class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6"
+                        class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6 text-default mb-3"
                         href="/reviews/nightbitch-2024/"
                         >Nightbitch<!-- --> <span
                           class="text-sm leading-none font-normal text-muted"
@@ -943,7 +939,7 @@
                           width="90"
                       /></picture>
                       <div
-                        class="rendered-markdown tracking-prose text-muted mb-8 text-base leading-[1.6]"
+                        class="rendered-markdown mb-8 leading-[1.6] tracking-prose text-muted"
                       >
                         <p>
                           Unnamed former artist Amy Adams grapples with maternal
@@ -954,19 +950,15 @@
                       <div
                         class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                       >
-                        <span>Comedy</span
-                        ><span
-                          >,
-                          <!-- -->Horror</span
-                        >
+                        Comedy, Horror
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                    class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-20"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
                         src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fnightcrawler-2014.png%3ForigWidth%3D2000%26origHeight%3D1125%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -989,7 +981,7 @@
                       class="flex grow flex-col px-6 pb-6 laptop:pr-[14%] laptop:pl-[12%]"
                     >
                       <a
-                        class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6"
+                        class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-xl leading-6 text-default mb-3"
                         href="/reviews/nightcrawler-2014/"
                         >Nightcrawler<!-- --> <span
                           class="text-sm leading-none font-normal text-muted"
@@ -1007,7 +999,7 @@
                           width="90"
                       /></picture>
                       <div
-                        class="rendered-markdown tracking-prose text-muted mb-8 text-base leading-[1.6]"
+                        class="rendered-markdown mb-8 leading-[1.6] tracking-prose text-muted"
                       >
                         <p>
                           Scathing indictment of the news media. Gyllenhaal
@@ -1021,14 +1013,7 @@
                       <div
                         class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                       >
-                        <span>Crime</span
-                        ><span
-                          >,
-                          <!-- -->Drama</span
-                        ><span
-                          >,
-                          <!-- -->Thriller</span
-                        >
+                        Crime, Drama, Thriller
                       </div>
                     </div>
                   </li>

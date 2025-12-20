@@ -5,7 +5,13 @@
  */
 export function displayDate(
   date: Date | string | undefined,
-  includeWeekday = true,
+  {
+    dayFormat = "numeric",
+    includeWeekday = false,
+  }: {
+    dayFormat?: "2-digit" | "numeric";
+    includeWeekday?: boolean;
+  } = {},
 ) {
   if (!date) {
     return "";
@@ -14,7 +20,7 @@ export function displayDate(
   const viewingDate = new Date(date);
 
   const formatter = new Intl.DateTimeFormat("en-US", {
-    day: "2-digit",
+    day: dayFormat,
     month: "short",
     timeZone: "UTC",
     weekday: "short",

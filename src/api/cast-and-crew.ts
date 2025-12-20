@@ -83,7 +83,7 @@ export async function castAndCrewMember(slug: string): Promise<{
         let excerpt;
 
         if (title.slug) {
-          const titleWithExcerpt = await loadExcerptHtml(title);
+          const titleWithExcerpt = await loadExcerptHtml({ slug: title.slug });
           excerpt = titleWithExcerpt.excerpt;
         }
 

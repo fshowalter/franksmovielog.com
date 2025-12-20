@@ -15,5 +15,5 @@ export function groupWatchlistValues(
   sort: WatchlistSort,
   showCount: number,
 ) {
-  return groupTitles(filteredValues, showCount, sort);
+  return groupTitles(filteredValues, sort, undefined, showCount);
 }

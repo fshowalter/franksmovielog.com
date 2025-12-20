@@ -1,5 +1,4 @@
 import { GroupingListItem } from "~/components/grouping-list-item/GroupingListItem";
-import { ShowMoreButton } from "~/components/show-more-button/ShowMoreButton";
 
 import { ReviewCardList } from "./ReviewCardList";
 
@@ -18,17 +17,11 @@ export function GroupedReviewCardList<T>({
   children,
   groupedValues,
   groupItemClassName,
-  onShowMore,
-  totalCount,
-  visibleCount,
   ...rest
 }: {
   children: (item: T) => React.ReactNode;
   groupedValues: Map<string, Iterable<T>>;
   groupItemClassName?: string;
-  onShowMore?: () => void;
-  totalCount: number;
-  visibleCount: number;
 }): React.JSX.Element {
   return (
     <>
@@ -51,13 +44,6 @@ export function GroupedReviewCardList<T>({
           );
         })}
       </ol>
-      {onShowMore && (
-        <div className="flex flex-col items-center px-container py-10">
-          {totalCount > visibleCount && (
-            <ShowMoreButton onShowMore={onShowMore} />
-          )}
-        </div>
-      )}
     </>
   );
 }

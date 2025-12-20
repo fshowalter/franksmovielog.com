@@ -2,6 +2,7 @@ import { castAndCrewMember } from "~/api/cast-and-crew";
 import { loadExcerptHtml } from "~/api/reviews";
 import { getStillImageProps } from "~/api/stills";
 import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
+import { displayDate } from "~/utils/displayDate";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
 
@@ -34,7 +35,9 @@ export async function getCastAndCrewMemberTitlesProps(
         return {
           ...title,
           excerpt,
-          reviewDisplayDate: newDisplayDate(title.reviewDate),
+          reviewDisplayDate: displayDate(title.reviewDate, {
+            dayFormat: "numeric",
+          }),
           reviewSequence: title.reviewSequence,
           reviewYear: title.reviewDate
             ? new Date(title.reviewDate).toLocaleDateString("en-US", {
@@ -50,27 +53,4 @@ export async function getCastAndCrewMemberTitlesProps(
       }),
     ),
   };
-}
-
-function newDisplayDate(date: Date | string | undefined) {
-  if (!date) {
-    return "";
-  }
-
-  const viewingDate = new Date(date);
-
-  const formatter = new Intl.DateTimeFormat("en-US", {
-    day: "numeric",
-    month: "short",
-    timeZone: "UTC",
-    weekday: "short",
-    year: "numeric",
-  });
-
-  const parts = formatter.formatToParts(viewingDate);
-  const month = parts.find((part) => part.type === "month")?.value;
-  const day = parts.find((part) => part.type === "day")?.value;
-  const year = parts.find((part) => part.type === "year")?.value;
-
-  return `${month} ${day}, ${year}`;
 }

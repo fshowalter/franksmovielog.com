@@ -588,40 +588,4 @@ describe("CollectionTitles", () => {
       expect(getTitleFilter()).toHaveValue("Dr. No");
     });
   });
-
-  describe("pagination", () => {
-    it("paginates long lists", async ({ expect }) => {
-      // Create 110 titles across multiple years to force pagination
-      // Since default sort is release-date-desc, newer films appear first
-      const titles = Array.from({ length: 110 }, (_, i) => {
-        const year = 2020 - Math.floor(i / 5);
-        return createCollectionTitle({
-          releaseSequence: 3000 - i, // Higher sequences for older films to maintain desc order
-          releaseYear: String(year),
-          title: `Bond Film ${i + 1}`,
-        });
-      });
-
-      const user = getUserWithFakeTimers();
-      render(<CollectionTitles {...baseProps} values={titles} />);
-
-      const posterList = getGroupedPosterList();
-
-      // With release-date-desc sort, Bond Film 1 (year 2020) should be visible
-      // Films are shown in groups by year, newer years first
-      expect(within(posterList).getByText("Bond Film 1")).toBeInTheDocument();
-
-      // Should show first 100 films (Bond Film 1 through Bond Film 100)
-      expect(within(posterList).getByText("Bond Film 100")).toBeInTheDocument();
-      expect(
-        within(posterList).queryByText("Bond Film 101"),
-      ).not.toBeInTheDocument();
-
-      await clickShowMore(user);
-
-      // Should now show all films
-      expect(within(posterList).getByText("Bond Film 101")).toBeInTheDocument();
-      expect(within(posterList).getByText("Bond Film 110")).toBeInTheDocument();
-    });
-  });
 });

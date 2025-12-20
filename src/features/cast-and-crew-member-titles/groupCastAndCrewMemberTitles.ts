@@ -14,13 +14,12 @@ import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles"
 export function groupCastAndCrewMemberTitles(
   filteredValues: CastAndCrewMemberTitlesValue[],
   sort: CastAndCrewMemberTitlesSort,
-  showCount: number,
 ) {
   if (sort.startsWith("release-date")) {
     return groupValues(filteredValues, sort, groupForReleaseDateValue);
   }
 
-  return groupMaybeReviewedTitles(filteredValues, showCount, sort);
+  return groupMaybeReviewedTitles(filteredValues, sort);
 }
 
 function groupForReleaseDateValue(

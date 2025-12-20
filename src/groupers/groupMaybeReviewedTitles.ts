@@ -23,13 +23,11 @@ export function groupMaybeReviewedTitles<
   TSort extends string,
 >(
   filteredValues: TValue[],
-  showCount: number,
   sort: TSort,
   extraGrouper?: GroupFn<TValue, TSort>,
 ) {
   return groupTitles(
     filteredValues,
-    showCount,
     sort,
     createGroupForMaybeReviewedTitle(extraGrouper),
   );
