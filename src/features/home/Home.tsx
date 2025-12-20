@@ -1,21 +1,23 @@
-import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
+import type { StillImageProps } from "~/api/stills";
 
-import { CardContent } from "~/components/review-card/CardContent";
-import { CardExcerpt } from "~/components/review-card/CardExcerpt";
-import { CardEyebrow } from "~/components/review-card/CardEyebrow";
-import { CardFooter } from "~/components/review-card/CardFooter";
-import { CardGrade } from "~/components/review-card/CardGrade";
-import { CardMobilePadding } from "~/components/review-card/CardMobilePadding";
-import { CardStill } from "~/components/review-card/CardStill";
-import { CardTitle } from "~/components/review-card/CardTitle";
-import { ReviewCard } from "~/components/review-card/ReviewCardContainer";
+import { ReviewCard } from "~/components/review-card/ReviewCard";
 import { SubHeading } from "~/components/sub-heading/SubHeading";
 
 /**
  * Props for the Home component.
  */
 export type HomeProps = {
-  values: ReviewCardValue[];
+  values: {
+    excerpt: string;
+    genres: readonly string[];
+    grade: string;
+    imdbId: string;
+    releaseYear: string;
+    reviewDisplayDate: string;
+    slug: string;
+    stillImageProps: StillImageProps;
+    title: string;
+  }[];
 };
 
 /**
@@ -44,32 +46,26 @@ export function Home({ values }: HomeProps): React.JSX.Element {
         className={`
           flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8
           tablet:flex-row tablet:justify-between tablet:gap-y-[6vw]
-          tablet:px-container tablet:[--review-card-width:47%]
-          laptop:gap-y-[3vw] laptop:[--review-card-width:31.33%]
+          tablet:px-container tablet:[--card-width:47%]
+          laptop:gap-y-[3vw] laptop:[--card-width:31.33%]
           desktop:gap-y-14
         `}
       >
         {values.map((value) => {
           return (
-            <ReviewCard as="li" key={value.imdbId}>
-              <CardMobilePadding>
-                <CardStill
-                  imageConfig={HomeStillImageConfig}
-                  imageProps={value.stillImageProps}
-                />
-                <CardContent>
-                  <CardEyebrow>{value.reviewDisplayDate}</CardEyebrow>
-                  <CardTitle
-                    releaseYear={value.releaseYear}
-                    slug={value.slug}
-                    title={value.title}
-                  />
-                  <CardGrade grade={value.grade} />
-                  <CardExcerpt excerpt={value.excerpt} />
-                  <CardFooter>{value.genres.join(", ")}</CardFooter>
-                </CardContent>
-              </CardMobilePadding>
-            </ReviewCard>
+            <ReviewCard
+              as="li"
+              excerpt={value.excerpt}
+              eyebrow={value.reviewDisplayDate}
+              footer={value.genres.join(", ")}
+              grade={value.grade}
+              key={value.imdbId}
+              releaseYear={value.releaseYear}
+              slug={value.slug}
+              stillImageConfig={HomeStillImageConfig}
+              stillImageProps={value.stillImageProps}
+              title={value.title}
+            />
           );
         })}
       </ul>

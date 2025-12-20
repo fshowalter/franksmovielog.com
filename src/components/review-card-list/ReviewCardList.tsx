@@ -20,8 +20,8 @@ export function ReviewCardList({
       className={`
         flex w-full flex-col flex-wrap justify-center gap-x-[3%]
         tablet:flex-row tablet:justify-start tablet:gap-y-[6vw]
-        tablet:[--review-card-width:47%]
-        laptop:gap-y-[3vw] laptop:[--review-card-width:31.33%]
+        tablet:[--card-width:47%]
+        laptop:gap-y-[3vw] laptop:[--card-width:31.33%]
         desktop:gap-y-14
       `}
     >

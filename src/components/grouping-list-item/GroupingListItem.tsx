@@ -19,7 +19,7 @@ export function GroupingListItem({
     <li
       className={`
         block
-        first-of-type:mt-4
+        first-of-type:pt-4
         ${className ?? ""}
       `}
       id={groupText}

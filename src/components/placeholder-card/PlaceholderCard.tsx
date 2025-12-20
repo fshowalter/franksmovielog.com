@@ -1,42 +1,33 @@
 import type { StillImageProps } from "~/api/stills";
 
 import { CardBodyPadding } from "~/components/card-body-padding/CardBodyPadding";
-import { CardElevatingContainer } from "~/components/card-elevating-container/CardElevatingContainer";
 import { CardEyebrow } from "~/components/card-eyebrow/CardEyebrow";
 import { CardFooter } from "~/components/card-footer/CardFooter";
 import { CardStill } from "~/components/card-still/CardStill";
 import { CardTitle } from "~/components/card-title/CardTitle";
-import { Grade } from "~/components/grade/Grade";
-import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdown";
 
 /**
- * Card component displaying a movie review summary.
+ * Card component
  * @param props - Component props
  * @param props.as - The element type to render (defaults to "div")
- * @param props.imageConfig - Image sizing configuration
- * @param props.value - Review data to display
- * @param props.variant - Visual style variant ("primary" or "secondary")
- * @returns Review card with still image, title, grade, and excerpt
+ * @param props.children - Content to display in the card
+ * @returns Review card shell
  */
-export function ReviewCard({
+export function PlaceholderCard({
   as = "div",
-  excerpt,
+  bodyText,
   eyebrow,
   footer,
-  grade,
   releaseYear,
-  slug,
   stillImageConfig,
   stillImageProps,
   title,
 }: {
   as?: React.ElementType;
-  excerpt: string;
+  bodyText: React.ReactNode;
   eyebrow: React.ReactNode;
   footer: React.ReactNode;
-  grade: string;
   releaseYear: string;
-  slug: string;
   stillImageConfig: {
     height: number;
     sizes: string;
@@ -45,26 +36,27 @@ export function ReviewCard({
   stillImageProps: StillImageProps;
   title: string;
 }): React.JSX.Element {
+  const Component = as;
+
   return (
-    <CardElevatingContainer as={as} mobilePadding={true}>
+    <Component
+      className={`
+        group/card relative mb-1 flex w-(--card-width,100%) flex-col
+        bg-default/50 px-[8%] pt-12
+        tablet:mb-0 tablet:px-0 tablet:pt-0
+      `}
+    >
       <CardStill imageConfig={stillImageConfig} imageProps={stillImageProps} />
       <CardBodyPadding>
         <CardEyebrow>{eyebrow}</CardEyebrow>
-        <CardTitle releaseYear={releaseYear} slug={slug} title={title} />
-        <Grade
-          className={`
-            mb-5
-            tablet:mb-8
-          `}
-          height={24}
-          value={grade}
+        <CardTitle
+          releaseYear={releaseYear}
+          textColorClassNames="text-subtle"
+          title={title}
         />
-        <RenderedMarkdown
-          className={`leading-normal mb-6 text-lg tracking-prose text-muted`}
-          text={excerpt}
-        />
+        <div className="mt-1 mb-9">{bodyText}</div>
         <CardFooter>{footer}</CardFooter>
       </CardBodyPadding>
-    </CardElevatingContainer>
+    </Component>
   );
 }

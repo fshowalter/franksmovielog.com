@@ -1,7 +1,7 @@
 import { castAndCrewMember } from "~/api/cast-and-crew";
+import { loadExcerptHtml } from "~/api/reviews";
 import { getStillImageProps } from "~/api/stills";
 import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
-import { displayDate } from "~/utils/displayDate";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
 
@@ -24,8 +24,16 @@ export async function getCastAndCrewMemberTitlesProps(
     initialSort: "release-date-asc",
     values: await Promise.all(
       member.titles.map(async (title) => {
+        let excerpt;
+
+        if (title.slug) {
+          const reviewWithExcerpt = await loadExcerptHtml({ slug: title.slug });
+          excerpt = reviewWithExcerpt.excerpt;
+        }
+
         return {
           ...title,
+          excerpt,
           reviewDisplayDate: newDisplayDate(title.reviewDate),
           reviewSequence: title.reviewSequence,
           reviewYear: title.reviewDate

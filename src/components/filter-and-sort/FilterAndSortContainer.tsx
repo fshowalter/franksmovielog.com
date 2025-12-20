@@ -153,13 +153,13 @@ export function FilterAndSortContainer<T extends string>({
           <div
             className={`
               mx-auto max-w-(--breakpoint-desktop) grow
-              scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset)+var(--scroll-offset,0px))]
+              scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))]
               pb-10
               ${
                 subNav
                   ? `
-                    [--filter-and-sort-container-scroll-offset:188px]
-                    tablet:[--filter-and-sort-container-scroll-offset:140px]
+                    [--filter-and-sort-container-scroll-offset:236px]
+                    tablet:[--filter-and-sort-container-scroll-offset:176px]
                   `
                   : `
                     [--filter-and-sort-container-scroll-offset:181px]

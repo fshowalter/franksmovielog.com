@@ -9,13 +9,17 @@
  */
 export function CardTitle({
   leadingClassNames = "leading-7",
+  marginClassNames = "mb-3",
   releaseYear,
+  slug,
   textColorClassNames = "text-default",
   textSizeClassNames = "text-2.5xl tablet:text-2xl laptop:text-2.5xl",
   title,
 }: {
   leadingClassNames?: string;
+  marginClassNames?: string;
   releaseYear: string;
+  slug?: string;
   textColorClassNames?: string;
   textSizeClassNames?: string;
   title: string;
@@ -26,6 +30,25 @@ export function CardTitle({
     </span>
   );
 
+  if (slug) {
+    return (
+      <a
+        className={`
+          block font-medium transition-all duration-500
+          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          hover:text-accent
+          ${textSizeClassNames}
+          ${leadingClassNames}
+          ${textColorClassNames}
+          ${marginClassNames}
+        `}
+        href={`/reviews/${slug}/`}
+      >
+        {title}&nbsp;{releaseYearComponent}
+      </a>
+    );
+  }
+
   return (
     <div
       className={`
@@ -33,6 +56,7 @@ export function CardTitle({
         ${textSizeClassNames}
         ${leadingClassNames}
         ${textColorClassNames}
+        ${marginClassNames}
       `}
     >
       {title}&nbsp;{releaseYearComponent}

@@ -5,19 +5,10 @@ import type { StillImageProps } from "~/api/stills";
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { ListItemWatchlistReason } from "~/components/list-item-watchlist-reason/ListItemWatchlistReason";
+import { PlaceholderCard } from "~/components/placeholder-card/PlaceholderCard";
 import { GroupedReviewCardList } from "~/components/review-card-list/GroupedReviewCardList";
 import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
-import { CardContent } from "~/components/review-card/CardContent";
-import { CardExcerpt } from "~/components/review-card/CardExcerpt";
-import { CardEyebrow } from "~/components/review-card/CardEyebrow";
-import { CardFooter } from "~/components/review-card/CardFooter";
-import { CardGrade } from "~/components/review-card/CardGrade";
-import { CardMobilePadding } from "~/components/review-card/CardMobilePadding";
-import { CardStill } from "~/components/review-card/CardStill";
-import { CardTitle } from "~/components/review-card/CardTitle";
-import { CardTitleLink } from "~/components/review-card/CardTitleLink";
-import { PlaceholderCardContainer } from "~/components/review-card/PlaceholderCardContainer";
-import { ReviewCardContainer } from "~/components/review-card/ReviewCardContainer";
+import { ReviewCard } from "~/components/review-card/ReviewCard";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
@@ -34,10 +25,10 @@ import {
   selectHasPendingFilters,
 } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
+import { CastAndCrewMemberTitlesSubNav } from "./CastAndCrewMemberTitlesSubNav";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
-import { SubNav } from "./SubNav";
 
 /**
  * Props for the CastAndCrewMemberTitles component.
@@ -56,7 +47,7 @@ export type CastAndCrewMemberTitlesProps = {
  */
 export type CastAndCrewMemberTitlesValue = {
   creditedAs: string[];
-  excerpt: string;
+  excerpt: string | undefined;
   genres: string[];
   grade?: string;
   gradeValue?: number;
@@ -146,75 +137,64 @@ export function CastAndCrewMemberTitles({
           ),
         sortOptions: <ReviewedTitleSortOptions />,
       }}
-      subNav={<SubNav groupedValues={groupedValues} sortValue={state.sort} />}
+      subNav={
+        <CastAndCrewMemberTitlesSubNav
+          groupedValues={groupedValues}
+          sortValue={state.sort}
+        />
+      }
       totalCount={totalCount}
     >
       <GroupedReviewCardList
         groupedValues={groupedValues}
-        groupItemClassName={`scroll-mt-[calc(52px_+_var(--filter-and-sort-container-scroll-offset))]`}
+        groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)] tablet:scroll-mt-[calc(24px_+_var(--filter-and-sort-container-scroll-offset,0px))]`}
         onShowMore={() => dispatch(createShowMoreAction())}
         totalCount={totalCount}
         visibleCount={state.showCount}
       >
         {(value) => {
-          if (value.slug && value.grade) {
+          if (value.slug && value.grade && value.excerpt) {
             return (
-              <ReviewCardContainer as="li" key={value.imdbId}>
-                <CardMobilePadding>
-                  <CardStill
-                    imageConfig={ReviewCardListImageConfig}
-                    imageProps={value.stillImageProps}
-                  />
-                  <CardContent>
-                    <CardEyebrow>{value.creditedAs.join(", ")}</CardEyebrow>
-                    <CardTitleLink
-                      releaseYear={value.releaseYear}
-                      slug={value.slug}
-                      title={value.title}
-                    />
-                    <CardGrade grade={value.grade} />
-                    <CardExcerpt
-                      dateLine={value.reviewDisplayDate}
-                      excerpt={value.excerpt}
-                    />
-                    <CardFooter>
-                      {value.genres.join(", ")}
-                      <span className={`font-light opacity-50`}>&mdash;</span>
-                      {value.reviewDisplayDate}
-                    </CardFooter>
-                  </CardContent>
-                </CardMobilePadding>
-              </ReviewCardContainer>
+              <ReviewCard
+                as="li"
+                excerpt={value.excerpt}
+                eyebrow={value.creditedAs.join(", ")}
+                footer={
+                  <>
+                    {value.genres.join(", ")}
+                    <span className={`font-light opacity-50`}>&mdash;</span>
+                    {value.reviewDisplayDate}
+                  </>
+                }
+                grade={value.grade}
+                key={value.imdbId}
+                releaseYear={value.releaseYear}
+                slug={value.slug}
+                stillImageConfig={ReviewCardListImageConfig}
+                stillImageProps={value.stillImageProps}
+                title={value.title}
+              />
             );
           }
           return (
-            <PlaceholderCardContainer as="li" key={value.imdbId}>
-              <CardMobilePadding>
-                <CardStill
-                  imageConfig={ReviewCardListImageConfig}
-                  imageProps={value.stillImageProps}
+            <PlaceholderCard
+              as="li"
+              bodyText={
+                <ListItemWatchlistReason
+                  collectionNames={value.watchlistCollectionNames}
+                  directorNames={value.watchlistDirectorNames}
+                  performerNames={value.watchlistPerformerNames}
+                  writerNames={value.watchlistWriterNames}
                 />
-                <CardContent>
-                  <CardEyebrow>{value.creditedAs.join(", ")}</CardEyebrow>
-                  <div className="mb-3">
-                    <CardTitle
-                      releaseYear={value.releaseYear}
-                      textColorClassNames="text-subtle"
-                      title={value.title}
-                    />
-                  </div>
-                  <div className="mt-1 mb-9">
-                    <ListItemWatchlistReason
-                      collectionNames={value.watchlistCollectionNames}
-                      directorNames={value.watchlistDirectorNames}
-                      performerNames={value.watchlistPerformerNames}
-                      writerNames={value.watchlistWriterNames}
-                    />
-                  </div>
-                  <CardFooter>{value.genres.join(", ")}</CardFooter>
-                </CardContent>
-              </CardMobilePadding>
-            </PlaceholderCardContainer>
+              }
+              eyebrow={value.creditedAs.join(", ")}
+              footer={value.genres.join(", ")}
+              key={value.imdbId}
+              releaseYear={value.releaseYear}
+              stillImageConfig={ReviewCardListImageConfig}
+              stillImageProps={value.stillImageProps}
+              title={value.title}
+            />
           );
         }}
       </GroupedReviewCardList>

@@ -7,9 +7,8 @@
  * @param props.variant - Visual style variant ("primary" or "secondary")
  * @returns Review card with still image, title, grade, and excerpt
  */
-export function CardContent({
+export function CardBodyPadding({
   children,
-  paddingClassNames = "px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]",
 }: {
   children: React.ReactNode;
   paddingClassNames?: string;
@@ -17,8 +16,9 @@ export function CardContent({
   return (
     <div
       className={`
-        flex grow flex-col
-        ${paddingClassNames}
+        flex grow flex-col px-1 pb-8
+        tablet:px-[8%]
+        laptop:pr-[10%] laptop:pl-[8.5%]
       `}
     >
       {children}
