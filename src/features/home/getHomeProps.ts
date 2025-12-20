@@ -1,9 +1,8 @@
 import { loadExcerptHtml, mostRecentReviews } from "~/api/reviews";
 import { getStillImageProps } from "~/api/stills";
+import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
 
 import type { HomeProps } from "./Home";
-
-import { HomeStillImageConfig } from "./Home";
 
 /**
  * Fetches data for the home page including recent reviews with excerpts and still images.
@@ -26,7 +25,7 @@ export async function getHomeProps(): Promise<HomeProps> {
           reviewDisplayDate: formatDate(value.reviewDate),
           stillImageProps: await getStillImageProps(
             value.slug,
-            HomeStillImageConfig,
+            ReviewCardListImageConfig,
           ),
         };
       }),
