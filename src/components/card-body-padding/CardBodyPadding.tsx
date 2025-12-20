@@ -8,7 +8,6 @@ export function CardBodyPadding({
   children,
 }: {
   children: React.ReactNode;
-  paddingClassNames?: string;
 }): React.JSX.Element {
   return (
     <div
