@@ -1,6 +1,14 @@
-import type { ReviewCardValue } from "~/components/review-card/ReviewCard";
+import type { MoreReviewsCardValue } from "./MoreReviewsCard";
 
-import { ReviewCard } from "~/components/review-card/ReviewCard";
+import { MoreReviewsCard } from "./MoreReviewsCard";
+
+/**
+ * Data structure for a review in the more reviews section.
+ * Extends MoreReviewsCardValue with an imdbId for unique identification.
+ */
+export type MoreReviewsValue = MoreReviewsCardValue & {
+  imdbId: string;
+};
 
 /**
  * Image configuration for review cards in the more reviews section.
@@ -24,7 +32,7 @@ export function MoreReviews({
   values,
 }: {
   children: React.ReactNode;
-  values: ReviewCardValue[];
+  values: MoreReviewsValue[];
 }): React.JSX.Element {
   return (
     <nav data-pagefind-ignore>
@@ -38,21 +46,14 @@ export function MoreReviews({
         <ul
           className={`
             flex w-full flex-col items-start gap-[3%] gap-y-[6vw]
+            [--still-opacity:20%]
             tablet:flex-row tablet:flex-wrap tablet:justify-between
-            tablet:[--review-card-width:47%]
-            laptop:flex-nowrap laptop:[--review-card-width:47%]
+            tablet:[--card-width:47%]
+            laptop:flex-nowrap laptop:[--card-width:47%]
           `}
         >
           {values.map((value) => {
-            return (
-              <ReviewCard
-                as="li"
-                imageConfig={MoreReviewsImageConfig}
-                key={value.slug}
-                value={value}
-                variant="secondary"
-              />
-            );
+            return <MoreReviewsCard key={value.imdbId} value={value} />;
           })}
         </ul>
       </div>

@@ -169,8 +169,8 @@ export function Review({
                 relative -mb-1 inline-block transform-gpu pb-1
                 transition-transform
                 after:absolute after:bottom-0 after:left-0 after:h-px
-                after:w-full after:origin-bottom-right after:scale-x-0
-                after:bg-accent after:transition-transform
+                after:w-full after:origin-center after:scale-x-0 after:bg-accent
+                after:transition-transform after:duration-500
                 hover:after:scale-x-100
               `}
               href={`/reviews/`}

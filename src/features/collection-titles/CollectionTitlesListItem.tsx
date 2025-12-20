@@ -30,7 +30,9 @@ export function CollectionTitlesListItem({
           year={value.releaseYear}
         />
         {value.grade && <ListItemGrade grade={value.grade} />}
-        <ListItemReviewDate displayDate={value.reviewDisplayDate} />
+        {value.reviewDisplayDate && (
+          <ListItemReviewDate displayDate={value.reviewDisplayDate} />
+        )}
         <ListItemGenres values={value.genres} />
       </ListItemDetails>
     </PosterListItem>

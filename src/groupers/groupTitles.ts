@@ -20,13 +20,15 @@ export function groupTitles<
   TSort extends string,
 >(
   filteredValues: TValue[],
-  showCount: number,
   sort: TSort,
   extraGrouper?: GroupFn<TValue, TSort>,
+  showCount?: number,
 ) {
-  const paginatedValues = filteredValues.slice(0, showCount);
+  const valuesToGroup = showCount
+    ? filteredValues.slice(0, showCount)
+    : filteredValues;
 
-  return groupValues(paginatedValues, sort, createGroupForTitle(extraGrouper));
+  return groupValues(valuesToGroup, sort, createGroupForTitle(extraGrouper));
 }
 
 function createGroupForTitle<

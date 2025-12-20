@@ -3,17 +3,12 @@ import type {
   MaybeReviewedTitleFiltersState,
   MaybeReviewedTitleFiltersValues,
 } from "~/reducers/maybeReviewedTitleFiltersReducer";
-import type { ShowMoreAction, ShowMoreState } from "~/reducers/showMoreReducer";
 import type { SortAction, SortState } from "~/reducers/sortReducer";
 
 import {
   createInitialMaybeReviewedTitleFiltersState,
   maybeReviewedTitleFiltersReducer,
 } from "~/reducers/maybeReviewedTitleFiltersReducer";
-import {
-  createInitialShowMoreState,
-  showMoreReducer,
-} from "~/reducers/showMoreReducer";
 import {
   createInitialSortState,
   createSortActionCreator,
@@ -36,14 +31,11 @@ export {
   selectHasPendingFilters,
 } from "~/reducers/maybeReviewedTitleFiltersReducer";
 
-export { createShowMoreAction } from "~/reducers/showMoreReducer";
-
 /**
  * Union type of all actions for collection titles state management.
  */
 export type CollectionTitlesAction =
   | MaybeReviewedTitleFiltersAction
-  | ShowMoreAction
   | SortAction<CollectionTitlesSort>;
 
 /**
@@ -55,7 +47,6 @@ type CollectionTitlesState = Omit<
   MaybeReviewedTitleFiltersState<CollectionTitlesValue>,
   "activeFilterValues" | "pendingFilterValues"
 > &
-  ShowMoreState &
   SortState<CollectionTitlesSort> & {
     activeFilterValues: CollectionTitlesFiltersValues;
     pendingFilterValues: CollectionTitlesFiltersValues;
@@ -75,7 +66,6 @@ export function createInitialState({
   initialSort: CollectionTitlesSort;
   values: CollectionTitlesValue[];
 }): CollectionTitlesState {
-  const showMoreState = createInitialShowMoreState();
   const sortState = createInitialSortState({ initialSort });
   const reviewedTitleFilterState = createInitialMaybeReviewedTitleFiltersState({
     values,
@@ -83,7 +73,6 @@ export function createInitialState({
 
   return {
     ...reviewedTitleFilterState,
-    ...showMoreState,
     ...sortState,
   };
 }
@@ -99,9 +88,6 @@ export function reducer(
   action: CollectionTitlesAction,
 ) {
   switch (action.type) {
-    case "showMore/showMore": {
-      return showMoreReducer(state, action);
-    }
     case "sort/sort": {
       return sortReducer(state, action);
     }

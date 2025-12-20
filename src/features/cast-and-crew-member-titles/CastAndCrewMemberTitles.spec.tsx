@@ -21,10 +21,7 @@ import {
   fillTitleFilter,
   getTitleFilter,
 } from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
-import {
-  clickShowMore,
-  getGroupedPosterList,
-} from "~/components/poster-list/PosterList.testHelper";
+import { getGroupedReviewCardList } from "~/components/review-card-list/ReviewCardList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type {
@@ -42,14 +39,11 @@ const createTitle = (
   testIdCounter += 1;
   return {
     creditedAs: ["Director"],
+    excerpt: "test excerpt",
     genres: ["Drama"],
     grade: "B+",
     gradeValue: 8,
     imdbId: `tt${String(testIdCounter).padStart(7, "0")}`,
-    posterImageProps: {
-      src: "/poster.jpg",
-      srcSet: "/poster.jpg 1x",
-    },
     releaseSequence: testIdCounter,
     releaseYear: "1960",
     reviewDisplayDate: "Jan 1, 2020",
@@ -57,6 +51,10 @@ const createTitle = (
     reviewYear: "2020",
     slug: `test-movie-${testIdCounter}`,
     sortTitle: `Test Movie ${testIdCounter}`,
+    stillImageProps: {
+      src: "/still.jpg",
+      srcSet: "/still.jpg 1x",
+    },
     title: `Test Movie ${testIdCounter}`,
     watchlistCollectionNames: [],
     watchlistDirectorNames: [],
@@ -101,12 +99,14 @@ describe("CastAndCrewMemberTitles", () => {
       await fillTitleFilter(user, "Psycho");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      const reviewCardList = getGroupedReviewCardList();
+      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
       expect(
-        within(posterList).queryByText("The Birds"),
+        within(reviewCardList).queryByText("The Birds"),
       ).not.toBeInTheDocument();
-      expect(within(posterList).queryByText("Vertigo")).not.toBeInTheDocument();
+      expect(
+        within(reviewCardList).queryByText("Vertigo"),
+      ).not.toBeInTheDocument();
     });
 
     it("filters by genres", async ({ expect }) => {
@@ -135,13 +135,13 @@ describe("CastAndCrewMemberTitles", () => {
       await clickGenresFilterOption(user, "Thriller");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      const reviewCardList = getGroupedReviewCardList();
+      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
       expect(
-        within(posterList).getByText("North by Northwest"),
+        within(reviewCardList).getByText("North by Northwest"),
       ).toBeInTheDocument();
       expect(
-        within(posterList).queryByText("The Trouble with Harry"),
+        within(reviewCardList).queryByText("The Trouble with Harry"),
       ).not.toBeInTheDocument();
     });
 
@@ -159,11 +159,13 @@ describe("CastAndCrewMemberTitles", () => {
       await fillReleaseYearFilter(user, "1950", "1970");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Stage Fright")).toBeInTheDocument();
-      expect(within(posterList).getByText("Marnie")).toBeInTheDocument();
+      const reviewCardList = getGroupedReviewCardList();
       expect(
-        within(posterList).queryByText("Family Plot"),
+        within(reviewCardList).getByText("Stage Fright"),
+      ).toBeInTheDocument();
+      expect(within(reviewCardList).getByText("Marnie")).toBeInTheDocument();
+      expect(
+        within(reviewCardList).queryByText("Family Plot"),
       ).not.toBeInTheDocument();
     });
 
@@ -193,13 +195,15 @@ describe("CastAndCrewMemberTitles", () => {
       await fillReviewYearFilter(user, "2019", "2021");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Rear Window")).toBeInTheDocument();
+      const reviewCardList = getGroupedReviewCardList();
       expect(
-        within(posterList).getByText("Strangers on a Train"),
+        within(reviewCardList).getByText("Rear Window"),
       ).toBeInTheDocument();
       expect(
-        within(posterList).queryByText("To Catch a Thief"),
+        within(reviewCardList).getByText("Strangers on a Train"),
+      ).toBeInTheDocument();
+      expect(
+        within(reviewCardList).queryByText("To Catch a Thief"),
       ).not.toBeInTheDocument();
     });
 
@@ -232,15 +236,15 @@ describe("CastAndCrewMemberTitles", () => {
       await fillGradeFilter(user, "B-", "B+");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const reviewCardList = getGroupedReviewCardList();
       expect(
-        within(posterList).getByText("Dial M for Murder"),
+        within(reviewCardList).getByText("Dial M for Murder"),
       ).toBeInTheDocument();
       expect(
-        within(posterList).queryByText("I Confess"),
+        within(reviewCardList).queryByText("I Confess"),
       ).not.toBeInTheDocument();
       expect(
-        within(posterList).queryByText("North by Northwest"),
+        within(reviewCardList).queryByText("North by Northwest"),
       ).not.toBeInTheDocument();
     });
 
@@ -275,10 +279,12 @@ describe("CastAndCrewMemberTitles", () => {
       await clickReviewedStatusFilterOption(user, "Reviewed");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
-      expect(within(posterList).getByText("The Birds")).toBeInTheDocument();
-      expect(within(posterList).queryByText("Marnie")).not.toBeInTheDocument();
+      const reviewCardList = getGroupedReviewCardList();
+      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
+      expect(within(reviewCardList).getByText("The Birds")).toBeInTheDocument();
+      expect(
+        within(reviewCardList).queryByText("Marnie"),
+      ).not.toBeInTheDocument();
     });
 
     it("filters by reviewed status - unreviewed only", async ({ expect }) => {
@@ -312,10 +318,14 @@ describe("CastAndCrewMemberTitles", () => {
       await clickReviewedStatusFilterOption(user, "Not Reviewed");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
-      expect(within(posterList).queryByText("Psycho")).not.toBeInTheDocument();
-      expect(within(posterList).getByText("Marnie")).toBeInTheDocument();
-      expect(within(posterList).getByText("Torn Curtain")).toBeInTheDocument();
+      const reviewCardList = getGroupedReviewCardList();
+      expect(
+        within(reviewCardList).queryByText("Psycho"),
+      ).not.toBeInTheDocument();
+      expect(within(reviewCardList).getByText("Marnie")).toBeInTheDocument();
+      expect(
+        within(reviewCardList).getByText("Torn Curtain"),
+      ).toBeInTheDocument();
     });
 
     it("filters by credited as", async ({ expect }) => {
@@ -344,13 +354,15 @@ describe("CastAndCrewMemberTitles", () => {
       await clickCreditedAsFilterOption(user, "Director");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("The 39 Steps")).toBeInTheDocument();
+      const reviewCardList = getGroupedReviewCardList();
       expect(
-        within(posterList).queryByText("Blackmail"),
+        within(reviewCardList).getByText("The 39 Steps"),
+      ).toBeInTheDocument();
+      expect(
+        within(reviewCardList).queryByText("Blackmail"),
       ).not.toBeInTheDocument();
       expect(
-        within(posterList).queryByText("To Catch a Thief"),
+        within(reviewCardList).queryByText("To Catch a Thief"),
       ).not.toBeInTheDocument();
     });
   });
@@ -380,8 +392,8 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickSortOption(user, "Title (A → Z)");
 
-      const posterList = getGroupedPosterList();
-      const allText = posterList.textContent || "";
+      const reviewCardList = getGroupedReviewCardList();
+      const allText = reviewCardList.textContent || "";
       const birdsIndex = allText.indexOf("The Birds");
       const psychoIndex = allText.indexOf("Psycho");
       const vertigoIndex = allText.indexOf("Vertigo");
@@ -414,8 +426,8 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickSortOption(user, "Title (Z → A)");
 
-      const posterList = getGroupedPosterList();
-      const allText = posterList.textContent || "";
+      const reviewCardList = getGroupedReviewCardList();
+      const allText = reviewCardList.textContent || "";
       const vertigoIndex = allText.indexOf("Vertigo");
       const psychoIndex = allText.indexOf("Psycho");
       const birdsIndex = allText.indexOf("The Birds");
@@ -448,8 +460,8 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
-      const posterList = getGroupedPosterList();
-      const allText = posterList.textContent || "";
+      const reviewCardList = getGroupedReviewCardList();
+      const allText = reviewCardList.textContent || "";
       const stageFrightIndex = allText.indexOf("Stage Fright");
       const marnieIndex = allText.indexOf("Marnie");
       const familyPlotIndex = allText.indexOf("Family Plot");
@@ -482,8 +494,8 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickSortOption(user, "Release Date (Newest First)");
 
-      const posterList = getGroupedPosterList();
-      const allText = posterList.textContent || "";
+      const reviewCardList = getGroupedReviewCardList();
+      const allText = reviewCardList.textContent || "";
       const familyPlotIndex = allText.indexOf("Family Plot");
       const marnieIndex = allText.indexOf("Marnie");
       const stageFrightIndex = allText.indexOf("Stage Fright");
@@ -519,8 +531,8 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickSortOption(user, "Grade (Best First)");
 
-      const posterList = getGroupedPosterList();
-      const allText = posterList.textContent || "";
+      const reviewCardList = getGroupedReviewCardList();
+      const allText = reviewCardList.textContent || "";
       const rearWindowIndex = allText.indexOf("Rear Window");
       const manWhoKnewIndex = allText.indexOf("The Man Who Knew Too Much");
       const iConfessIndex = allText.indexOf("I Confess");
@@ -556,8 +568,8 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickSortOption(user, "Grade (Worst First)");
 
-      const posterList = getGroupedPosterList();
-      const allText = posterList.textContent || "";
+      const reviewCardList = getGroupedReviewCardList();
+      const allText = reviewCardList.textContent || "";
       const iConfessIndex = allText.indexOf("I Confess");
       const manWhoKnewIndex = allText.indexOf("The Man Who Knew Too Much");
       const rearWindowIndex = allText.indexOf("Rear Window");
@@ -590,8 +602,8 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickSortOption(user, "Review Date (Oldest First)");
 
-      const posterList = getGroupedPosterList();
-      const allText = posterList.textContent || "";
+      const reviewCardList = getGroupedReviewCardList();
+      const allText = reviewCardList.textContent || "";
       const psychoIndex = allText.indexOf("Psycho");
       const northIndex = allText.indexOf("North by Northwest");
       const vertigoIndex = allText.indexOf("Vertigo");
@@ -624,8 +636,8 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickSortOption(user, "Review Date (Newest First)");
 
-      const posterList = getGroupedPosterList();
-      const allText = posterList.textContent || "";
+      const reviewCardList = getGroupedReviewCardList();
+      const allText = reviewCardList.textContent || "";
       const vertigoIndex = allText.indexOf("Vertigo");
       const northIndex = allText.indexOf("North by Northwest");
       const psychoIndex = allText.indexOf("Psycho");
@@ -658,10 +670,10 @@ describe("CastAndCrewMemberTitles", () => {
       await clickCreditedAsFilterOption(user, "Director");
       await clickViewResults(user);
 
-      let posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Notorious")).toBeInTheDocument();
+      let reviewCardList = getGroupedReviewCardList();
+      expect(within(reviewCardList).getByText("Notorious")).toBeInTheDocument();
       expect(
-        within(posterList).queryByText("Shadow of a Doubt"),
+        within(reviewCardList).queryByText("Shadow of a Doubt"),
       ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
@@ -672,10 +684,10 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickViewResults(user);
 
-      posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Notorious")).toBeInTheDocument();
+      reviewCardList = getGroupedReviewCardList();
+      expect(within(reviewCardList).getByText("Notorious")).toBeInTheDocument();
       expect(
-        within(posterList).getByText("Shadow of a Doubt"),
+        within(reviewCardList).getByText("Shadow of a Doubt"),
       ).toBeInTheDocument();
     });
   });
@@ -694,60 +706,24 @@ describe("CastAndCrewMemberTitles", () => {
       await fillTitleFilter(user, "Psycho");
       await clickViewResults(user);
 
-      let posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      let reviewCardList = getGroupedReviewCardList();
+      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
       expect(
-        within(posterList).queryByText("The Birds"),
+        within(reviewCardList).queryByText("The Birds"),
       ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Different");
       await clickCloseFilters(user);
 
-      posterList = getGroupedPosterList();
-      expect(within(posterList).getByText("Psycho")).toBeInTheDocument();
+      reviewCardList = getGroupedReviewCardList();
+      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
       expect(
-        within(posterList).queryByText("The Birds"),
+        within(reviewCardList).queryByText("The Birds"),
       ).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       expect(getTitleFilter()).toHaveValue("Psycho");
-    });
-  });
-
-  describe("pagination", () => {
-    it("paginates long lists", async ({ expect }) => {
-      // Create 110 titles across multiple years to force pagination
-      // Since default sort is release-date-desc, newer films appear first
-      const titles = Array.from({ length: 110 }, (_, i) => {
-        const year = 2020 - Math.floor(i / 5);
-        return createTitle({
-          releaseSequence: 3000 - i, // Higher sequences for older films to maintain desc order
-          releaseYear: String(year),
-          title: `Film ${i + 1}`,
-        });
-      });
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      const posterList = getGroupedPosterList();
-
-      // With release-date-desc sort, Film 1 (year 2020) should be visible
-      // Films are shown in groups by year, newer years first
-      expect(within(posterList).getByText("Film 1")).toBeInTheDocument();
-
-      // Should show first 100 films (Film 1 through Film 100)
-      expect(within(posterList).getByText("Film 100")).toBeInTheDocument();
-      expect(
-        within(posterList).queryByText("Film 101"),
-      ).not.toBeInTheDocument();
-
-      await clickShowMore(user);
-
-      // Should now show all films
-      expect(within(posterList).getByText("Film 101")).toBeInTheDocument();
-      expect(within(posterList).getByText("Film 110")).toBeInTheDocument();
     });
   });
 });

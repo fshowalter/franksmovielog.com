@@ -328,13 +328,13 @@
               Latest Reviews
             </h2>
             <ul
-              class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-[6vw] tablet:px-container tablet:[--review-card-width:47%] laptop:gap-y-[3vw] laptop:[--review-card-width:31.33%] desktop:gap-y-14"
+              class="flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8 tablet:flex-row tablet:justify-between tablet:gap-y-[6vw] tablet:px-container tablet:[--card-width:47%] laptop:gap-y-[3vw] laptop:[--card-width:31.33%] desktop:gap-y-14"
             >
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fstay-hungry-1976.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -362,7 +362,7 @@
                     26 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/stay-hungry-1976/"
                     >Stay Hungry<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -380,7 +380,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       In Birmingham, rich kid Jeff Bridges falls for gym
@@ -392,19 +392,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Comedy</span
-                    ><span
-                      >,
-                      <!-- -->Drama</span
-                    >
+                    Comedy, Drama
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Ftheyre-coming-to-get-you-1972.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -432,7 +428,7 @@
                     25 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/theyre-coming-to-get-you-1972/"
                     >They&#x27;re Coming to Get You!<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -450,7 +446,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       Haunted by nightmares after losing her unborn child in a
@@ -461,19 +457,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Horror</span
-                    ><span
-                      >,
-                      <!-- -->Thriller</span
-                    >
+                    Horror, Thriller
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fsuperman-2025.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -501,7 +493,7 @@
                     20 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/superman-2025/"
                     >Superman<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -519,7 +511,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       Three years into his crime-fighting career, a young
@@ -530,22 +522,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Action</span
-                    ><span
-                      >,
-                      <!-- -->Adventure</span
-                    ><span
-                      >,
-                      <!-- -->Sci-Fi</span
-                    >
+                    Action, Adventure, Sci-Fi
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-french-connection-1971.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -573,7 +558,7 @@
                     14 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/the-french-connection-1971/"
                     >The French Connection<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -591,7 +576,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       New York City vice cop Gene Hackman relentlessly pursues a
@@ -602,25 +587,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Action</span
-                    ><span
-                      >,
-                      <!-- -->Crime</span
-                    ><span
-                      >,
-                      <!-- -->Drama</span
-                    ><span
-                      >,
-                      <!-- -->Thriller</span
-                    >
+                    Action, Crime, Drama, Thriller
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fa-reason-to-live-a-reason-to-die-1972.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -648,7 +623,7 @@
                     13 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/a-reason-to-live-a-reason-to-die-1972/"
                     >A Reason to Live, a Reason to Die<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -666,7 +641,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       Disgraced Union officer James Coburn assembles a suicide
@@ -676,19 +651,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Drama</span
-                    ><span
-                      >,
-                      <!-- -->Western</span
-                    >
+                    Drama, Western
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fthe-return-of-the-musketeers-1989.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -716,7 +687,7 @@
                     07 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/the-return-of-the-musketeers-1989/"
                     >The Return of the Musketeers<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -734,7 +705,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       Twenty years after their last adventure, D’Artagnan
@@ -744,22 +715,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Action</span
-                    ><span
-                      >,
-                      <!-- -->Adventure</span
-                    ><span
-                      >,
-                      <!-- -->Romance</span
-                    >
+                    Action, Adventure, Romance
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fzombie-holocaust-1980.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -787,7 +751,7 @@
                     05 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/zombie-holocaust-1980/"
                     >Zombie Holocaust<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -805,7 +769,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       A doctor and anthropologist trace a spate of cannibalistic
@@ -816,28 +780,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Adventure</span
-                    ><span
-                      >,
-                      <!-- -->Horror</span
-                    ><span
-                      >,
-                      <!-- -->Mystery</span
-                    ><span
-                      >,
-                      <!-- -->Sci-Fi</span
-                    ><span
-                      >,
-                      <!-- -->Thriller</span
-                    >
+                    Adventure, Horror, Mystery, Sci-Fi, Thriller
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fscream-and-scream-again-1970.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -865,7 +816,7 @@
                     04 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/scream-and-scream-again-1970/"
                     >Scream and Scream Again<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -883,7 +834,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       A detective investigating a string of vampire-like murders
@@ -895,31 +846,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Crime</span
-                    ><span
-                      >,
-                      <!-- -->Drama</span
-                    ><span
-                      >,
-                      <!-- -->Horror</span
-                    ><span
-                      >,
-                      <!-- -->Mystery</span
-                    ><span
-                      >,
-                      <!-- -->Sci-Fi</span
-                    ><span
-                      >,
-                      <!-- -->Thriller</span
-                    >
+                    Crime, Drama, Horror, Mystery, Sci-Fi, Thriller
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Ftropic-thunder-2008.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -947,7 +882,7 @@
                     01 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/tropic-thunder-2008/"
                     >Tropic Thunder<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -965,7 +900,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       A group of pampered actors find themselves in genuine
@@ -976,22 +911,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Action</span
-                    ><span
-                      >,
-                      <!-- -->Comedy</span
-                    ><span
-                      >,
-                      <!-- -->War</span
-                    >
+                    Action, Comedy, War
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fhis-kind-of-woman-1951.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -1019,7 +947,7 @@
                     01 Jul 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/his-kind-of-woman-1951/"
                     >His Kind of Woman<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -1037,7 +965,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       Gambler Robert Mitchum is coerced into traveling to a
@@ -1050,28 +978,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Action</span
-                    ><span
-                      >,
-                      <!-- -->Crime</span
-                    ><span
-                      >,
-                      <!-- -->Film-Noir</span
-                    ><span
-                      >,
-                      <!-- -->Romance</span
-                    ><span
-                      >,
-                      <!-- -->Thriller</span
-                    >
+                    Action, Crime, Film-Noir, Romance, Thriller
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Ftentacles-1977.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -1099,7 +1014,7 @@
                     28 Jun 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/tentacles-1977/"
                     >Tentacles<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -1117,7 +1032,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       Reporter John Huston traces a spate of mysterious deaths
@@ -1128,31 +1043,15 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Action</span
-                    ><span
-                      >,
-                      <!-- -->Adventure</span
-                    ><span
-                      >,
-                      <!-- -->Comedy</span
-                    ><span
-                      >,
-                      <!-- -->Horror</span
-                    ><span
-                      >,
-                      <!-- -->Sci-Fi</span
-                    ><span
-                      >,
-                      <!-- -->Thriller</span
-                    >
+                    Action, Adventure, Comedy, Horror, Sci-Fi, Thriller
                   </div>
                 </div>
               </li>
               <li
-                class="group/card relative mb-1 w-(--review-card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
+                class="group/card relative mb-1 w-(--card-width) transform-gpu bg-default transition-transform duration-500 tablet:mb-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl flex flex-col px-[8%] pt-12 tablet:px-0 tablet:pt-0"
               >
                 <div
-                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0 after:opacity-15"
+                  class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-(--still-opacity,15%) after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                 >
                   <img
                     src="/_image/?href=%2Fcontent%2Fassets%2Fstills%2Fred-river-1948.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
@@ -1180,7 +1079,7 @@
                     15 Jun 2025
                   </div>
                   <a
-                    class="mb-3 block font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl leading-7 tablet:text-2xl laptop:text-2.5xl"
+                    class="block font-medium transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full hover:text-accent text-2.5xl tablet:text-2xl laptop:text-2.5xl leading-7 text-default mb-3"
                     href="/reviews/red-river-1948/"
                     >Red River<!-- --> <span
                       class="text-sm leading-none font-normal text-muted"
@@ -1198,7 +1097,7 @@
                       width="120"
                   /></picture>
                   <div
-                    class="rendered-markdown tracking-prose text-muted leading-normal mb-6 text-lg"
+                    class="rendered-markdown leading-normal mb-6 text-lg tracking-prose text-muted"
                   >
                     <p>
                       A desperate cattle drive forces a wedge between
@@ -1209,11 +1108,7 @@
                   <div
                     class="mt-auto font-sans text-xs leading-4 tracking-wider text-subtle laptop:tracking-wide"
                   >
-                    <span>Drama</span
-                    ><span
-                      >,
-                      <!-- -->Western</span
-                    >
+                    Drama, Western
                   </div>
                 </div>
               </li>

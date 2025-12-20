@@ -84,7 +84,6 @@ export function CastAndCrew({
 
   return (
     <FilterAndSortContainer
-      className={state.sort.startsWith("name-") ? `[--scroll-offset:52px]` : ""}
       filters={
         <CastAndCrewFilters
           dispatch={dispatch}
@@ -107,14 +106,14 @@ export function CastAndCrew({
           dispatch(createSortAction(e.target.value as CastAndCrewSort)),
         sortOptions: <CollectionSortOptions />,
       }}
-      topNav={
+      subNav={
         <AlphabetSubNav groupedValues={groupedValues} sortValue={state.sort} />
       }
       totalCount={totalCount}
     >
       <GroupedAvatarList
         groupedValues={groupedValues}
-        groupItemClassName={`scroll-mt-[calc(52px_+_var(--filter-and-sort-container-scroll-offset))]`}
+        groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)]`}
       >
         {(value) => {
           return <CastAndCrewListItem key={value.name} value={value} />;

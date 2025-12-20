@@ -1,11 +1,15 @@
 import { useReducer } from "react";
 
-import type { PosterImageProps } from "~/api/posters";
+import type { StillImageProps } from "~/api/stills";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
-import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
-import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
+import { ListItemWatchlistReason } from "~/components/list-item-watchlist-reason/ListItemWatchlistReason";
+import { PlaceholderCard } from "~/components/placeholder-card/PlaceholderCard";
+import { GroupedReviewCardList } from "~/components/review-card-list/GroupedReviewCardList";
+import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
+import { ReviewCard } from "~/components/review-card/ReviewCard";
+import { useGroupedValues } from "~/hooks/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
@@ -15,13 +19,12 @@ import {
   createClearFiltersAction,
   createInitialState,
   createResetFiltersAction,
-  createShowMoreAction,
   createSortAction,
   reducer,
   selectHasPendingFilters,
 } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
-import { CastAndCrewMemberTitleListItem } from "./CastAndCrewMemberTitlesListItem";
+import { CastAndCrewMemberTitlesSubNav } from "./CastAndCrewMemberTitlesSubNav";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
@@ -43,11 +46,11 @@ export type CastAndCrewMemberTitlesProps = {
  */
 export type CastAndCrewMemberTitlesValue = {
   creditedAs: string[];
+  excerpt: string | undefined;
   genres: string[];
   grade?: string;
   gradeValue?: number;
   imdbId: string;
-  posterImageProps: PosterImageProps;
   releaseSequence: number;
   releaseYear: string;
   reviewDisplayDate?: string;
@@ -55,6 +58,7 @@ export type CastAndCrewMemberTitlesValue = {
   reviewYear?: string;
   slug?: string;
   sortTitle: string;
+  stillImageProps: StillImageProps;
   title: string;
   watchlistCollectionNames: string[];
   watchlistDirectorNames: string[];
@@ -84,14 +88,13 @@ export function CastAndCrewMemberTitles({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = usePaginatedGroupedValues(
+  const [groupedValues, totalCount] = useGroupedValues(
     sortCastAndCrewMemberTitles,
     filterCastAndCrewMemberTitles,
     groupCastAndCrewMemberTitles,
     state.values,
     state.sort,
     state.activeFilterValues,
-    state.showCount,
   );
 
   const pendingFilteredCount = usePendingFilterCount(
@@ -132,20 +135,64 @@ export function CastAndCrewMemberTitles({
           ),
         sortOptions: <ReviewedTitleSortOptions />,
       }}
+      subNav={
+        <CastAndCrewMemberTitlesSubNav
+          groupedValues={groupedValues}
+          sortValue={state.sort}
+        />
+      }
       totalCount={totalCount}
     >
-      <GroupedPosterList
+      <GroupedReviewCardList
         groupedValues={groupedValues}
-        onShowMore={() => dispatch(createShowMoreAction())}
-        totalCount={totalCount}
-        visibleCount={state.showCount}
+        groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)] tablet:scroll-mt-[calc(24px_+_var(--filter-and-sort-container-scroll-offset,0px))]`}
       >
         {(value) => {
+          if (value.slug && value.grade && value.excerpt) {
+            return (
+              <ReviewCard
+                as="li"
+                excerpt={value.excerpt}
+                eyebrow={value.creditedAs.join(", ")}
+                footer={
+                  <>
+                    {value.genres.join(", ")}
+                    <span className={`font-light opacity-50`}>&mdash;</span>
+                    {value.reviewDisplayDate}
+                  </>
+                }
+                grade={value.grade}
+                key={value.imdbId}
+                releaseYear={value.releaseYear}
+                slug={value.slug}
+                stillImageConfig={ReviewCardListImageConfig}
+                stillImageProps={value.stillImageProps}
+                title={value.title}
+              />
+            );
+          }
           return (
-            <CastAndCrewMemberTitleListItem key={value.imdbId} value={value} />
+            <PlaceholderCard
+              as="li"
+              bodyText={
+                <ListItemWatchlistReason
+                  collectionNames={value.watchlistCollectionNames}
+                  directorNames={value.watchlistDirectorNames}
+                  performerNames={value.watchlistPerformerNames}
+                  writerNames={value.watchlistWriterNames}
+                />
+              }
+              eyebrow={value.creditedAs.join(", ")}
+              footer={value.genres.join(", ")}
+              key={value.imdbId}
+              releaseYear={value.releaseYear}
+              stillImageConfig={ReviewCardListImageConfig}
+              stillImageProps={value.stillImageProps}
+              title={value.title}
+            />
           );
         }}
-      </GroupedPosterList>
+      </GroupedReviewCardList>
     </FilterAndSortContainer>
   );
 }
