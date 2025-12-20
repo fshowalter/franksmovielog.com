@@ -3,7 +3,7 @@ import type { StillImageProps } from "~/api/stills";
 import { Still } from "~/components/still/Still";
 
 /**
- * Card component displaying a movie review summary.
+ * Card component displaying a movie still image.
  * @param props - Component props
  * @param props.imageProps - The image properties
  * @param props.imageConfig - Image sizing configuration
