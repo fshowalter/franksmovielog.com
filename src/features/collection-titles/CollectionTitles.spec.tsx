@@ -17,10 +17,7 @@ import {
   fillTitleFilter,
   getTitleFilter,
 } from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
-import {
-  clickShowMore,
-  getGroupedPosterList,
-} from "~/components/poster-list/PosterList.testHelper";
+import { getGroupedPosterList } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type {
