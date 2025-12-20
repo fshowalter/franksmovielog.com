@@ -1,8 +1,8 @@
 /**
- * Card component displaying a movie genres.
+ * Component that displays footer content at the bottom of a card.
  * @param props - Component props
- * @param props.genres - The genres to display
- * @returns Styled genres component
+ * @param props.children - Footer content to display
+ * @returns Styled footer element
  */
 export function CardFooter({
   children,

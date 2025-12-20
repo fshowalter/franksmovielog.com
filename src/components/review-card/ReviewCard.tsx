@@ -13,9 +13,15 @@ import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdow
  * Card component displaying a movie review summary.
  * @param props - Component props
  * @param props.as - The element type to render (defaults to "div")
- * @param props.imageConfig - Image sizing configuration
- * @param props.value - Review data to display
- * @param props.variant - Visual style variant ("primary" or "secondary")
+ * @param props.excerpt - Review excerpt text
+ * @param props.eyebrow - Content to display above the title
+ * @param props.footer - Content to display in the card footer
+ * @param props.grade - Movie review grade
+ * @param props.releaseYear - The movie's release year
+ * @param props.slug - Review slug for linking to review page
+ * @param props.stillImageConfig - Image sizing configuration
+ * @param props.stillImageProps - Still image properties
+ * @param props.title - The movie title
  * @returns Review card with still image, title, grade, and excerpt
  */
 export function ReviewCard({

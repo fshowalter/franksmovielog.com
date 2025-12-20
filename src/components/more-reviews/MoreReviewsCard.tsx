@@ -9,6 +9,9 @@ import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdow
 
 import { MoreReviewsImageConfig } from "./MoreReviews";
 
+/**
+ * Data structure for a review card in the more reviews section.
+ */
 export type MoreReviewsCardValue = {
   excerpt: string;
   genres: readonly string[];
@@ -19,6 +22,12 @@ export type MoreReviewsCardValue = {
   title: string;
 };
 
+/**
+ * Card component for displaying a review in the more reviews section.
+ * @param props - Component props
+ * @param props.value - Review data to display
+ * @returns Review card with still image, title, grade, and excerpt
+ */
 export function MoreReviewsCard({
   value,
 }: {

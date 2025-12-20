@@ -1,7 +1,10 @@
 /**
- * Formats a date into a human-readable string in the format "Weekday, Month Day, Year".
+ * Formats a date into a human-readable string.
  * @param date - The date to format (Date object, string, or undefined)
- * @returns Formatted date string or empty string if date is undefined
+ * @param options - Formatting options
+ * @param options.dayFormat - Day format ("numeric" for "1" or "2-digit" for "01", defaults to "numeric")
+ * @param options.includeWeekday - Whether to include weekday in output (defaults to false)
+ * @returns Formatted date string (e.g., "Jan 15, 2024" or "Wed, Jan 15, 2024") or empty string if date is undefined
  */
 export function displayDate(
   date: Date | string | undefined,

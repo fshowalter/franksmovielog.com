@@ -1,11 +1,8 @@
 /**
- * Card component displaying a movie review summary.
+ * Wrapper component that applies consistent padding to card body content.
  * @param props - Component props
- * @param props.as - The element type to render (defaults to "div")
- * @param props.imageConfig - Image sizing configuration
- * @param props.value - Review data to display
- * @param props.variant - Visual style variant ("primary" or "secondary")
- * @returns Review card with still image, title, grade, and excerpt
+ * @param props.children - Content to display with padding
+ * @returns Padded container for card body content
  */
 export function CardBodyPadding({
   children,

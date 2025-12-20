@@ -2,6 +2,10 @@ import type { MoreReviewsCardValue } from "./MoreReviewsCard";
 
 import { MoreReviewsCard } from "./MoreReviewsCard";
 
+/**
+ * Data structure for a review in the more reviews section.
+ * Extends MoreReviewsCardValue with an imdbId for unique identification.
+ */
 export type MoreReviewsValue = MoreReviewsCardValue & {
   imdbId: string;
 };

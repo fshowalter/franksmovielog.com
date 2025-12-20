@@ -1,7 +1,7 @@
 import type React from "react";
 
 /**
- * Image configuration for home page still images.
+ * Image configuration for review card still images.
  */
 export const ReviewCardListImageConfig = {
   height: 360,
@@ -10,6 +10,12 @@ export const ReviewCardListImageConfig = {
   width: 640,
 };
 
+/**
+ * Container component that displays review cards in a responsive grid layout.
+ * @param props - Component props
+ * @param props.children - Review card elements to display
+ * @returns Responsive grid of review cards
+ */
 export function ReviewCardList({
   children,
 }: {

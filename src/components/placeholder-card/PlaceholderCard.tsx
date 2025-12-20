@@ -7,11 +7,17 @@ import { CardStill } from "~/components/card-still/CardStill";
 import { CardTitle } from "~/components/card-title/CardTitle";
 
 /**
- * Card component
+ * Card component for displaying unreviewed or placeholder movie titles.
  * @param props - Component props
  * @param props.as - The element type to render (defaults to "div")
- * @param props.children - Content to display in the card
- * @returns Review card shell
+ * @param props.bodyText - Content to display in the card body
+ * @param props.eyebrow - Content to display above the title
+ * @param props.footer - Content to display in the card footer
+ * @param props.releaseYear - The movie's release year
+ * @param props.stillImageConfig - Image sizing configuration
+ * @param props.stillImageProps - Still image properties
+ * @param props.title - The movie title
+ * @returns Placeholder card with still image, title, and content
  */
 export function PlaceholderCard({
   as = "div",

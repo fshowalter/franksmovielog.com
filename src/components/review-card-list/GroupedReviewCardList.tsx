@@ -3,15 +3,12 @@ import { GroupingListItem } from "~/components/grouping-list-item/GroupingListIt
 import { ReviewCardList } from "./ReviewCardList";
 
 /**
- * Displays a grouped list of review cards with show more functionality.
+ * Displays a grouped list of review cards organized by group headers.
  * @param props - Component props
  * @param props.children - Render function for each item
  * @param props.groupedValues - Map of grouped values
  * @param props.groupItemClassName - Optional CSS class for group items
- * @param props.onShowMore - Handler for show more button
- * @param props.totalCount - Total number of items
- * @param props.visibleCount - Number of visible items
- * @returns Grouped review card list with optional show more button
+ * @returns Grouped review card list with section headers
  */
 export function GroupedReviewCardList<T>({
   children,

@@ -1,3 +1,9 @@
+/**
+ * Navigation component for jumping to specific sections within a page.
+ * @param props - Component props
+ * @param props.children - SubNavLink components to display
+ * @returns Sticky navigation bar with jump links
+ */
 export function SubNav({
   children,
 }: {
@@ -25,6 +31,14 @@ export function SubNav({
   );
 }
 
+/**
+ * Link component for navigation items in the SubNav.
+ * Displays as an active link if linkFunc is provided, otherwise as inactive text.
+ * @param props - Component props
+ * @param props.linkFunc - Optional function to generate href from value
+ * @param props.value - Display text and link parameter
+ * @returns Navigation link or text element
+ */
 export function SubNavLink({
   linkFunc,
   value,

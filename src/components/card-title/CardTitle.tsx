@@ -1,11 +1,15 @@
 /**
- * Card component displaying a movie review summary.
+ * Component that displays a movie title with release year.
+ * Renders as a link if slug is provided, otherwise as plain text.
  * @param props - Component props
- * @param props.as - The element type to render (defaults to "div")
- * @param props.imageConfig - Image sizing configuration
- * @param props.value - Review data to display
- * @param props.variant - Visual style variant ("primary" or "secondary")
- * @returns Review card with still image, title, grade, and excerpt
+ * @param props.leadingClassNames - Custom CSS classes for line height (defaults to "leading-7")
+ * @param props.marginClassNames - Custom CSS classes for margin (defaults to "mb-3")
+ * @param props.releaseYear - The movie's release year
+ * @param props.slug - Optional review slug for linking to review page
+ * @param props.textColorClassNames - Custom CSS classes for text color (defaults to "text-default")
+ * @param props.textSizeClassNames - Custom CSS classes for text size (defaults to responsive sizing)
+ * @param props.title - The movie title
+ * @returns Movie title element with release year
  */
 export function CardTitle({
   leadingClassNames = "leading-7",

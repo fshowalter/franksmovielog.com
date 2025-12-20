@@ -1,9 +1,10 @@
 /**
- * Card component
+ * Container component that provides elevation effect on hover.
  * @param props - Component props
  * @param props.as - The element type to render (defaults to "div")
  * @param props.children - Content to display in the card
- * @returns Review card shell
+ * @param props.mobilePadding - Whether to apply padding on mobile devices
+ * @returns Card container with hover elevation effect
  */
 export function CardElevatingContainer({
   as = "div",
