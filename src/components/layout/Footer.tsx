@@ -39,7 +39,7 @@ export function Footer(): React.JSX.Element {
           >
             <div
               className={`
-                flex max-w-[640px] flex-col pb-12
+                flex max-w-160 flex-col pb-12
                 tablet:pr-32
               `}
             >
@@ -70,11 +70,11 @@ export function Footer(): React.JSX.Element {
                 <p className="mb-6 text-pretty">
                   Twenty-plus years later, I&apos;m still at it. Though my age
                   is showing. I no longer realize halfway through movies that
-                  I've seen them before. Now I only discover it when I go to
-                  write a review and find I already wrote one fifteen to twenty
-                  years prior. Still, in an era of algorithms and marketing
-                  machines, this site offers something simpler: one person
-                  cataloging cinema, one film at a time.
+                  I&apos;ve seen them before. Now I only discover it when I go
+                  to write a review and find I already wrote one fifteen to
+                  twenty years prior. Still, in an era of algorithms and
+                  marketing machines, this site offers something simpler: one
+                  person cataloging cinema, one film at a time.
                 </p>
 
                 <p className="mb-6 text-pretty">
