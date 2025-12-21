@@ -1,5 +1,6 @@
 import type { StillImageProps } from "~/api/stills";
 
+import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
 import { ReviewCard } from "~/components/review-card/ReviewCard";
 import { SubHeading } from "~/components/sub-heading/SubHeading";
 
@@ -18,16 +19,6 @@ export type HomeProps = {
     stillImageProps: StillImageProps;
     title: string;
   }[];
-};
-
-/**
- * Image configuration for home page still images.
- */
-export const HomeStillImageConfig = {
-  height: 360,
-  sizes:
-    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
-  width: 640,
 };
 
 /**
@@ -62,7 +53,7 @@ export function Home({ values }: HomeProps): React.JSX.Element {
               key={value.imdbId}
               releaseYear={value.releaseYear}
               slug={value.slug}
-              stillImageConfig={HomeStillImageConfig}
+              stillImageConfig={ReviewCardListImageConfig}
               stillImageProps={value.stillImageProps}
               title={value.title}
             />
