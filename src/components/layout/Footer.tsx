@@ -39,7 +39,7 @@ export function Footer(): React.JSX.Element {
           >
             <div
               className={`
-                flex max-w-[640px] flex-col pb-12
+                flex max-w-160 flex-col pb-12
                 tablet:pr-32
               `}
             >
@@ -55,38 +55,39 @@ export function Footer(): React.JSX.Element {
                 >
                   Hi there, I&apos;m Frank, a husband and father old enough to
                   have sat wide-eyed during <em>E.T</em>&apos;s first theatrical
-                  run, I&apos;ve been watching, absorbing, and dissecting films
-                  ever since.
+                  run.
                 </p>
 
                 <p className="mb-6 text-pretty">
-                  This site began in 2003 when I realized two things: I had
-                  become the designated &ldquo;movie guy&rdquo; among my friends
-                  (you know, the one everyone asks about every new release), and
-                  I was frequently experiencing the peculiar déjà vu of
-                  realizing, halfway through a film, that I&apos;d already seen
-                  it. Clearly, I needed a system.
+                  This site began in 2003 when, after college, I became the
+                  designated &ldquo;movie guy&rdquo; among my friends. You know
+                  the type. Realizing—more than once—halfway through a movie
+                  that I&apos;d already seen it convinced me I needed to keep
+                  track. That, and my ego convinced me more than my friends
+                  would be interested in my opinions.
                 </p>
 
                 <p className="mb-6 text-pretty">
-                  What began as personal record-keeping evolved into this little
-                  corner of the internet where I share my thoughts on everything
-                  from blockbusters to obscure indies that deserved better.
+                  Twenty-plus years later, I&apos;m still at it. Though my age
+                  is showing. I no longer realize halfway through movies that
+                  I&apos;ve seen them before. Now I only discover it when I go
+                  to write a review and find I already wrote one fifteen to
+                  twenty years prior. Still, in an era of algorithms and
+                  marketing machines, this site offers something simpler: one
+                  person cataloging cinema, one film at a time.
                 </p>
 
                 <p className="mb-6 text-pretty">
-                  New visitors might want to start by reading about{" "}
-                  <FooterLink href="/how-i-grade/" text="how I grade" /> films.
-                  After that, feel free to browse{" "}
-                  <FooterLink href="/reviews/" text="my reviews" />. If
-                  you&apos;re looking for something that flew under the radar
-                  but deserves your attention, I recommend my{" "}
+                  New visitors should start with{" "}
+                  <FooterLink href="/how-i-grade/" text="how I grade" />. Then
+                  browse <FooterLink href="/reviews/" text="my reviews" />.
+                  Looking for something that flew under the radar? Try my list
+                  of{" "}
                   <FooterLink
                     href="/reviews/underseen/"
                     text="underseen gems"
-                  />{" "}
-                  section. Or, for those moments when you want to feel
-                  righteously contrarian, I maintain an list of{" "}
+                  />
+                  . Feeling righteously contrarian? My{" "}
                   <FooterLink
                     href="/reviews/overrated/"
                     text="overrated disappointments"
@@ -99,24 +100,17 @@ export function Footer(): React.JSX.Element {
                   <FooterLink href="/viewings/" text="viewing log" /> that
                   tracks everything I watch, whether it gets a full review or
                   not, complete with{" "}
-                  <FooterLink href="/viewings/stats/" text="stats" />. In an age
-                  of endless content, sometimes the act of remembering what
-                  we&apos;ve seen becomes as important as the seeing itself.
+                  <FooterLink href="/viewings/stats/" text="stats" />. At my
+                  age, remembering what I&apos;ve seen is as important as the
+                  seeing itself.
                 </p>
 
-                <p className="mb-6 text-pretty">
-                  And finally, if you&apos;re curious about what&apos;s on my
+                <p className="text-pretty">
+                  Finally, if you&apos;re curious about what&apos;s on my
                   critical horizon,{" "}
                   <FooterLink href="/watchlist/" text="my watchlist" /> details
                   the films I plan to review and why they&apos;ve caught my
                   interest.
-                </p>
-
-                <p className="text-pretty">
-                  In an era of algorithmic recommendations and corporate
-                  marketing machines, consider this site a human alternative—one
-                  person&apos;s attempt to catalog the vast ocean of cinema and
-                  maybe help a few fellow travelers along the way.
                 </p>
               </div>
             </div>
