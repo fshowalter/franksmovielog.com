@@ -55,16 +55,17 @@ export function Footer(): React.JSX.Element {
                 >
                   Hi there, I&apos;m Frank, a husband and father old enough to
                   have sat wide-eyed during <em>E.T</em>&apos;s first theatrical
-                  run.
+                  run. Among my friends, I&apos;m the designated &ldquo;movie
+                  guy.&rdquo; You know the type: First job at a video store.
+                  Knows his Hawks from his Fords.
                 </p>
 
                 <p className="mb-6 text-pretty">
-                  This site began in 2003 when, after college, I became the
-                  designated &ldquo;movie guy&rdquo; among my friends. You know
-                  the type. Realizing—more than once—halfway through a movie
-                  that I&apos;d already seen it convinced me I needed to keep
-                  track. That, and my ego convinced me more than my friends
-                  would be interested in my opinions.
+                  This site began in 2003 when I got fed up with realizing
+                  halfway through yet another movie that I&apos;d already seen
+                  it. I figured writing reviews would help. That, and my ego
+                  convinced me more than my friends would be interested in my
+                  opinions.
                 </p>
 
                 <p className="mb-6 text-pretty">
