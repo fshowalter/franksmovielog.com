@@ -156,9 +156,9 @@ export function CastAndCrewMemberTitles({
                 eyebrow={value.creditedAs.join(", ")}
                 footer={
                   <>
-                    {value.genres.join(", ")}
-                    <span className={`font-light opacity-50`}>&mdash;</span>
                     {value.reviewDisplayDate}
+                    <span className={`font-light opacity-50`}> — </span>
+                    {value.genres.join(", ")}
                   </>
                 }
                 grade={value.grade}
