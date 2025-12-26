@@ -159,7 +159,6 @@ export function CastAndCrewMemberTitles({
                     <div className="mb-2 text-accent">
                       {value.reviewDisplayDate}
                     </div>
-                    {/* <span className={`font-light opacity-50`}> — </span> */}
                     {value.genres.join(", ")}
                   </>
                 }
