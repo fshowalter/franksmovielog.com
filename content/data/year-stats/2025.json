@@ -1,8 +1,8 @@
 {
   "year": "2025",
-  "newTitleCount": 99,
-  "viewingCount": 156,
-  "titleCount": 151,
+  "newTitleCount": 100,
+  "viewingCount": 157,
+  "titleCount": 152,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 24
+      "count": 25
     },
     {
       "name": "iTunes",
@@ -82,7 +82,7 @@
     },
     {
       "name": "1980s",
-      "count": 33
+      "count": 34
     },
     {
       "name": "1990s",
@@ -1406,6 +1406,181 @@
       ]
     },
     {
+      "name": "Linnea Quigley",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0093624",
+          "title": "Night of the Demons",
+          "sortTitle": "night-of-the-demons-1988",
+          "releaseYear": "1988",
+          "releaseDate": "1988-04-27",
+          "genres": [
+            "Comedy",
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "night-of-the-demons-1988",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2025-01-14",
+          "reviewSequence": 2834,
+          "viewingDate": "2025-01-14",
+          "viewingSequence": 2834,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0098662",
+          "title": "Witchtrap",
+          "sortTitle": "witchtrap-1989",
+          "releaseYear": "1989",
+          "releaseDate": "1989-09-07",
+          "genres": [
+            "Action",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "witchtrap-1989",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2025-11-08",
+          "reviewSequence": 2956,
+          "viewingDate": "2025-10-05",
+          "viewingSequence": 2929,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0098662",
+          "title": "Witchtrap",
+          "sortTitle": "witchtrap-1989",
+          "releaseYear": "1989",
+          "releaseDate": "1989-09-07",
+          "genres": [
+            "Action",
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "witchtrap-1989",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2025-11-08",
+          "reviewSequence": 2956,
+          "viewingDate": "2025-11-08",
+          "viewingSequence": 2956,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0095742",
+          "title": "A Nightmare on Elm Street 4: The Dream Master",
+          "sortTitle": "nightmare-on-elm-street-4-the-dream-master-1988",
+          "releaseYear": "1988",
+          "releaseDate": "1988-08-19",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "a-nightmare-on-elm-street-4-the-dream-master-1988",
+          "grade": "D-",
+          "gradeValue": 5,
+          "reviewDate": "2025-12-26",
+          "reviewSequence": 2984,
+          "viewingDate": "2025-12-26",
+          "viewingSequence": 2984,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Robert Englund",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0093629",
+          "title": "A Nightmare on Elm Street 3: Dream Warriors",
+          "sortTitle": "nightmare-on-elm-street-3-dream-warriors-1987",
+          "releaseYear": "1987",
+          "releaseDate": "1987-02-27",
+          "genres": [
+            "Fantasy",
+            "Horror"
+          ],
+          "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2025-03-01",
+          "reviewSequence": 2853,
+          "viewingDate": "2025-03-01",
+          "viewingSequence": 2853,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0075268",
+          "title": "Stay Hungry",
+          "sortTitle": "stay-hungry-1976",
+          "releaseYear": "1976",
+          "releaseDate": "1976-04-25",
+          "genres": [
+            "Comedy",
+            "Drama"
+          ],
+          "slug": "stay-hungry-1976",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2025-07-26",
+          "reviewSequence": 2914,
+          "viewingDate": "2025-07-26",
+          "viewingSequence": 2914,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0074455",
+          "title": "Eaten Alive",
+          "sortTitle": "eaten-alive-1976",
+          "releaseYear": "1976",
+          "releaseDate": "1976-10-31",
+          "genres": [
+            "Horror",
+            "Thriller"
+          ],
+          "slug": "eaten-alive-1976",
+          "grade": "D-",
+          "gradeValue": 5,
+          "reviewDate": "2025-10-27",
+          "reviewSequence": 2945,
+          "viewingDate": "2025-10-27",
+          "viewingSequence": 2945,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0095742",
+          "title": "A Nightmare on Elm Street 4: The Dream Master",
+          "sortTitle": "nightmare-on-elm-street-4-the-dream-master-1988",
+          "releaseYear": "1988",
+          "releaseDate": "1988-08-19",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "a-nightmare-on-elm-street-4-the-dream-master-1988",
+          "grade": "D-",
+          "gradeValue": 5,
+          "reviewDate": "2025-12-26",
+          "reviewSequence": 2984,
+          "viewingDate": "2025-12-26",
+          "viewingSequence": 2984,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Roger Jackson",
       "count": 4,
       "slug": null,
@@ -1820,146 +1995,6 @@
           "viewingSequence": 2912,
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
-        }
-      ]
-    },
-    {
-      "name": "Oliver Reed",
-      "count": 3,
-      "slug": "oliver-reed",
-      "viewings": [
-        {
-          "imdbId": "tt0058991",
-          "title": "The Brigand of Kandahar",
-          "sortTitle": "brigand-of-kandahar-1965",
-          "releaseYear": "1965",
-          "releaseDate": "1965-08-09",
-          "genres": [
-            "Adventure",
-            "History"
-          ],
-          "slug": "the-brigand-of-kandahar-1965",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-01-10",
-          "reviewSequence": 2831,
-          "viewingDate": "2025-01-10",
-          "viewingSequence": 2831,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Michael York",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0098194",
-          "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
-          "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0071877",
-          "title": "Murder on the Orient Express",
-          "sortTitle": "murder-on-the-orient-express-1974",
-          "releaseYear": "1974",
-          "releaseDate": "1974-11-21",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2025-07-31",
-          "viewingSequence": 2916,
-          "medium": "4k UHD Blu-ray",
-          "venue": null
         }
       ]
     }
@@ -2633,5 +2668,5 @@
       ]
     }
   ],
-  "reviewCount": 129
+  "reviewCount": 130
 }
