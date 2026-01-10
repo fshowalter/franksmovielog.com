@@ -6,6 +6,7 @@ slug: the-curse-of-frankenstein-1957
 venue: null
 venueNotes: null
 medium: Blu-ray
-mediumNotes: 2012 | Lionsgate Films | Academy ratio
+mediumNotes: Lionsgate Films, 2012
 ---
 
+Academy ratio
