@@ -12,7 +12,7 @@ export function CardEyebrow({
   return (
     <div
       className={`
-        mb-3 font-sans text-xs leading-4 font-normal tracking-wider text-subtle
+        mb-3 font-sans text-xs/4 font-normal tracking-wider text-subtle
         uppercase
         laptop:tracking-wide
       `}

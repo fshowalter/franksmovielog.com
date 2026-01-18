@@ -12,7 +12,7 @@ export function CardFooter({
   return (
     <div
       className={`
-        mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
+        mt-auto font-sans text-xs/4 tracking-wider text-subtle
         laptop:tracking-wide
       `}
     >

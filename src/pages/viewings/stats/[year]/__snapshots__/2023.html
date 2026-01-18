@@ -51,7 +51,7 @@
     <title>2023 Stats - Frank&#39;s Movie Log</title>
   </head>
   <body
-    class="h-full w-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
+    class="size-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
   >
     <link
       rel="preload"
@@ -74,11 +74,11 @@
             class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent mix-blend-hard-light"
           >
             <div
-              class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+              class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
             >
               <a href="/">Frank&#x27;s Movie Log</a>
             </div>
-            <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+            <p class="w-full pl-px text-sm/4 italic opacity-85">
               by Frank Showalter
             </p>
           </div>
@@ -136,7 +136,7 @@
               <button
                 aria-keyshortcuts="Control+K"
                 aria-label="Search"
-                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm leading-6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
+                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm/6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
                 data-open-modal="true"
                 disabled=""
                 title="Search: Control+K"
@@ -167,7 +167,7 @@
               aria-controls="nav-menu"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
-              class="group/button relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
+              class="group/button relative z-nav-toggle ml-2 flex size-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
               data-nav-drawer-toggle="true"
               type="button"
             >
@@ -323,7 +323,7 @@
               loading="eager"
             />
             <div
-              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-(image:--hero-gradient)"
+              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:size-full after:bg-(image:--hero-gradient)"
             >
               <p class="mb-4">
                 <a
@@ -333,7 +333,7 @@
                 >
               </p>
               <h1
-                class="text-[2rem] leading-10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
+                class="text-[2rem]/10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
                 data-pagefind-weight="10"
               >
                 2023 Stats
@@ -501,11 +501,9 @@
               <div
                 class="flex size-30 flex-col justify-center rounded-full bg-stripe text-center text-default shadow-all tablet:size-36"
               >
-                <div class="text-[1.75rem] leading-8 tablet:text-[2rem]">
-                  125
-                </div>
+                <div class="text-[1.75rem]/8 tablet:text-[2rem]">125</div>
                 <div
-                  class="font-sans text-xxs leading-6 font-light text-muted tablet:text-sm"
+                  class="font-sans text-xxs/6 font-light text-muted tablet:text-sm"
                 >
                   Viewings
                 </div>
@@ -513,11 +511,9 @@
               <div
                 class="flex size-30 flex-col justify-center rounded-full bg-stripe text-center text-default shadow-all tablet:size-36"
               >
-                <div class="text-[1.75rem] leading-8 tablet:text-[2rem]">
-                  123
-                </div>
+                <div class="text-[1.75rem]/8 tablet:text-[2rem]">123</div>
                 <div
-                  class="font-sans text-xxs leading-6 font-light text-muted tablet:text-sm"
+                  class="font-sans text-xxs/6 font-light text-muted tablet:text-sm"
                 >
                   Movies
                 </div>
@@ -525,11 +521,9 @@
               <div
                 class="flex size-30 flex-col justify-center rounded-full bg-stripe text-center text-default shadow-all tablet:size-36"
               >
-                <div class="text-[1.75rem] leading-8 tablet:text-[2rem]">
-                  78
-                </div>
+                <div class="text-[1.75rem]/8 tablet:text-[2rem]">78</div>
                 <div
-                  class="font-sans text-xxs leading-6 font-light text-muted tablet:text-sm"
+                  class="font-sans text-xxs/6 font-light text-muted tablet:text-sm"
                 >
                   New Movies
                 </div>
@@ -537,11 +531,9 @@
               <div
                 class="flex size-30 flex-col justify-center rounded-full bg-stripe text-center text-default shadow-all tablet:size-36"
               >
-                <div class="text-[1.75rem] leading-8 tablet:text-[2rem]">
-                  99
-                </div>
+                <div class="text-[1.75rem]/8 tablet:text-[2rem]">99</div>
                 <div
-                  class="font-sans text-xxs leading-6 font-light text-muted tablet:text-sm"
+                  class="font-sans text-xxs/6 font-light text-muted tablet:text-sm"
                 >
                   Reviews
                 </div>
@@ -551,7 +543,7 @@
               class="mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col items-stretch gap-y-8 py-10 tablet:px-container"
             >
               <section
-                class="max-w-[calc(250px_*_4)] pb-5 laptop:pb-10 desktop:max-w-[calc(298px_*_4)] mx-auto w-full"
+                class="max-w-[calc(250px*4)] pb-5 laptop:pb-10 desktop:max-w-[calc(298px*4)] mx-auto w-full"
               >
                 <h2
                   class="px-container py-4 text-xl font-medium tablet:text-center tablet:text-2xl laptop:py-8"
@@ -589,7 +581,7 @@
                         class="flex flex-col justify-center tablet:mt-2 tablet:w-full tablet:text-center"
                       >
                         <a
-                          class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                          class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                           href="/reviews/nightmare-beach-1989/"
                           >Nightmare Beach<!-- -->  <span
                             class="text-xxs leading-none font-light text-subtle"
@@ -631,7 +623,7 @@
                         class="flex flex-col justify-center tablet:mt-2 tablet:w-full tablet:text-center"
                       >
                         <a
-                          class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                          class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                           href="/reviews/the-last-of-sheila-1973/"
                           >The Last of Sheila<!-- -->  <span
                             class="text-xxs leading-none font-light text-subtle"
@@ -662,12 +654,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           1930s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           23
                         </div>
@@ -684,12 +676,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           1940s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           4
                         </div>
@@ -706,12 +698,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           1950s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           6
                         </div>
@@ -728,12 +720,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           1960s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           9
                         </div>
@@ -750,12 +742,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           1970s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           12
                         </div>
@@ -772,12 +764,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           1980s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           30
                         </div>
@@ -794,12 +786,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           1990s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           12
                         </div>
@@ -816,12 +808,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           2000s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           6
                         </div>
@@ -838,12 +830,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           2010s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           10
                         </div>
@@ -860,12 +852,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           2020s
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           13
                         </div>
@@ -891,12 +883,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           Blu-ray
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           42
                         </div>
@@ -913,12 +905,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           Watch TCM
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           34
                         </div>
@@ -935,12 +927,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           4k UHD Blu-ray
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           14
                         </div>
@@ -957,12 +949,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           iTunes
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           9
                         </div>
@@ -979,12 +971,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           Criterion Channel
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           6
                         </div>
@@ -1001,12 +993,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           Arrow Player
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           4
                         </div>
@@ -1023,12 +1015,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           Amazon
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           3
                         </div>
@@ -1045,12 +1037,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           HBO Max
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           1
                         </div>
@@ -1067,12 +1059,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           VHS-rip
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           1
                         </div>
@@ -1089,12 +1081,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           DVD
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           1
                         </div>
@@ -1122,12 +1114,12 @@
                     <div class="col-span-3 grid grid-cols-subgrid py-3">
                       <div class="col-span-3 grid grid-cols-subgrid">
                         <div
-                          class="pb-1 font-sans text-sm leading-3.5 tracking-prose text-muted"
+                          class="pb-1 font-sans text-sm/3.5 tracking-prose text-muted"
                         >
                           Alamo Drafthouse Cinema - One Loudoun
                         </div>
                         <div
-                          class="col-start-3 self-center pb-1 text-right font-sans text-sm leading-3.5 text-nowrap text-subtle"
+                          class="col-start-3 self-center pb-1 text-right font-sans text-sm/3.5 text-nowrap text-subtle"
                         >
                           8
                         </div>
@@ -1160,7 +1152,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Michael Curtiz</span
                           >
                         </div>
@@ -1210,7 +1202,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-cabin-in-the-cotton-1932/"
                                     >The Cabin in the Cotton<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1218,7 +1210,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 23, 2023
                                   </div>
@@ -1256,7 +1248,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/20000-years-in-sing-sing-1932/"
                                     >20,000 Years in Sing Sing<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1264,7 +1256,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 9, 2023
                                   </div>
@@ -1302,7 +1294,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/private-detective-62-1933/"
                                     >Private Detective 62<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1310,7 +1302,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 20, 2023
                                   </div>
@@ -1348,7 +1340,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-key-1934/"
                                     >The Key<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1356,7 +1348,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 3, 2023
                                   </div>
@@ -1394,7 +1386,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-kennel-murder-case-1933/"
                                     >The Kennel Murder Case<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1402,7 +1394,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 29, 2023
                                   </div>
@@ -1440,7 +1432,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/life-with-father-1947/"
                                     >Life with Father<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1448,7 +1440,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jul 15, 2023
                                   </div>
@@ -1472,7 +1464,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >William Dieterle</span
                           >
                         </div>
@@ -1522,7 +1514,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-great-omalley-1937/"
                                     >The Great O&#x27;Malley<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1530,7 +1522,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 6, 2023
                                   </div>
@@ -1568,7 +1560,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/fashions-of-1934-1934/"
                                     >Fashions of 1934<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1576,7 +1568,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 2, 2023
                                   </div>
@@ -1614,7 +1606,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/lawyer-man-1932/"
                                     >Lawyer Man<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1622,7 +1614,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 19, 2023
                                   </div>
@@ -1646,7 +1638,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Richard Donner</span
                           >
                         </div>
@@ -1696,7 +1688,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-goonies-1985/"
                                     >The Goonies<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1704,7 +1696,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jan 26, 2023
                                   </div>
@@ -1742,7 +1734,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/superman-ii-the-richard-donner-cut-1980/"
                                     >Superman II: The Richard Donner Cut<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1750,7 +1742,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 12, 2023
                                   </div>
@@ -1774,7 +1766,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Archie Mayo</span
                           >
                         </div>
@@ -1824,7 +1816,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-life-of-jimmy-dolan-1933/"
                                     >The Life of Jimmy Dolan<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1832,7 +1824,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 9, 2023
                                   </div>
@@ -1870,7 +1862,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/black-legion-1937/"
                                     >Black Legion<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1878,7 +1870,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 13, 2023
                                   </div>
@@ -1902,7 +1894,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/lucio-fulci/"
                             >Lucio Fulci</a
                           >
@@ -1953,7 +1945,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-new-york-ripper-1982/"
                                     >The New York Ripper<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -1961,7 +1953,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Mar 11, 2023
                                   </div>
@@ -1999,7 +1991,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-psychic-1977/"
                                     >The Psychic<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2007,7 +1999,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 3, 2023
                                   </div>
@@ -2031,7 +2023,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/william-friedkin/"
                             >William Friedkin</a
                           >
@@ -2082,7 +2074,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-birthday-party-1968/"
                                     >The Birthday Party<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2090,7 +2082,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Mar 19, 2023
                                   </div>
@@ -2128,7 +2120,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-night-they-raided-minskys-1968/"
                                     >The Night They Raided Minsky&#x27;s<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2136,7 +2128,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Sep 25, 2023
                                   </div>
@@ -2160,7 +2152,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >James Justice</span
                           >
                         </div>
@@ -2210,7 +2202,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/nightmare-beach-1989/"
                                     >Nightmare Beach<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2218,7 +2210,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Mar 28, 2023
                                   </div>
@@ -2256,7 +2248,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/nightmare-beach-1989/"
                                     >Nightmare Beach<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2264,7 +2256,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Oct 28, 2023
                                   </div>
@@ -2288,7 +2280,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/umberto-lenzi/"
                             >Umberto Lenzi</a
                           >
@@ -2339,7 +2331,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/nightmare-beach-1989/"
                                     >Nightmare Beach<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2347,7 +2339,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Mar 28, 2023
                                   </div>
@@ -2385,7 +2377,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/nightmare-beach-1989/"
                                     >Nightmare Beach<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2393,7 +2385,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Oct 28, 2023
                                   </div>
@@ -2417,7 +2409,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Justin Benson</span
                           >
                         </div>
@@ -2467,7 +2459,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/resolution-2012/"
                                     >Resolution<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2475,7 +2467,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 7, 2023
                                   </div>
@@ -2513,7 +2505,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-endless-2017/"
                                     >The Endless<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2521,7 +2513,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 13, 2023
                                   </div>
@@ -2545,7 +2537,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Aaron Moorhead</span
                           >
                         </div>
@@ -2595,7 +2587,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/resolution-2012/"
                                     >Resolution<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2603,7 +2595,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 7, 2023
                                   </div>
@@ -2641,7 +2633,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-endless-2017/"
                                     >The Endless<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2649,7 +2641,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 13, 2023
                                   </div>
@@ -2682,7 +2674,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/william-powell/"
                             >William Powell</a
                           >
@@ -2733,7 +2725,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/one-way-passage-1932/"
                                     >One Way Passage<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2741,7 +2733,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 5, 2023
                                   </div>
@@ -2779,7 +2771,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/fashions-of-1934-1934/"
                                     >Fashions of 1934<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2787,7 +2779,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 2, 2023
                                   </div>
@@ -2825,7 +2817,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/lawyer-man-1932/"
                                     >Lawyer Man<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2833,7 +2825,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 19, 2023
                                   </div>
@@ -2871,7 +2863,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/private-detective-62-1933/"
                                     >Private Detective 62<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2879,7 +2871,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 20, 2023
                                   </div>
@@ -2917,7 +2909,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-key-1934/"
                                     >The Key<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2925,7 +2917,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 3, 2023
                                   </div>
@@ -2963,7 +2955,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-heavenly-body-1944/"
                                     >The Heavenly Body<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -2971,7 +2963,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 23, 2023
                                   </div>
@@ -3009,7 +3001,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-girl-who-had-everything-1953/"
                                     >The Girl Who Had Everything<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3017,7 +3009,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 27, 2023
                                   </div>
@@ -3055,7 +3047,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/its-a-big-country-an-american-anthology-1951/"
                                     >It&#x27;s a Big Country: An American
                                     Anthology<!-- -->  <span
@@ -3064,7 +3056,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 28, 2023
                                   </div>
@@ -3102,7 +3094,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-kennel-murder-case-1933/"
                                     >The Kennel Murder Case<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3110,7 +3102,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 29, 2023
                                   </div>
@@ -3148,7 +3140,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/life-with-father-1947/"
                                     >Life with Father<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3156,7 +3148,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jul 15, 2023
                                   </div>
@@ -3194,7 +3186,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/street-of-chance-1930/"
                                     >Street of Chance<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3202,7 +3194,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Sep 23, 2023
                                   </div>
@@ -3240,7 +3232,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/ladies-man-1931/"
                                     >Ladies&#x27; Man<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3248,7 +3240,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Oct 31, 2023
                                   </div>
@@ -3272,7 +3264,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Henry O&#x27;Neill</span
                           >
                         </div>
@@ -3322,7 +3314,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-great-omalley-1937/"
                                     >The Great O&#x27;Malley<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3330,7 +3322,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 6, 2023
                                   </div>
@@ -3368,7 +3360,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/bullets-or-ballots-1936/"
                                     >Bullets or Ballots<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3376,7 +3368,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 6, 2023
                                   </div>
@@ -3414,7 +3406,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/midnight-1934/"
                                     >Midnight<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3422,7 +3414,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 8, 2023
                                   </div>
@@ -3460,7 +3452,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/fashions-of-1934-1934/"
                                     >Fashions of 1934<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3468,7 +3460,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 2, 2023
                                   </div>
@@ -3506,7 +3498,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-key-1934/"
                                     >The Key<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3514,7 +3506,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 3, 2023
                                   </div>
@@ -3552,7 +3544,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/marked-woman-1937/"
                                     >Marked Woman<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3560,7 +3552,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 4, 2023
                                   </div>
@@ -3598,7 +3590,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-heavenly-body-1944/"
                                     >The Heavenly Body<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3606,7 +3598,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 23, 2023
                                   </div>
@@ -3630,7 +3622,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/humphrey-bogart/"
                             >Humphrey Bogart</a
                           >
@@ -3681,7 +3673,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/black-legion-1937/"
                                     >Black Legion<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3689,7 +3681,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 13, 2023
                                   </div>
@@ -3727,7 +3719,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-great-omalley-1937/"
                                     >The Great O&#x27;Malley<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3735,7 +3727,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 6, 2023
                                   </div>
@@ -3773,7 +3765,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/bullets-or-ballots-1936/"
                                     >Bullets or Ballots<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3781,7 +3773,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 6, 2023
                                   </div>
@@ -3819,7 +3811,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/midnight-1934/"
                                     >Midnight<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3827,7 +3819,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 8, 2023
                                   </div>
@@ -3865,7 +3857,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/marked-woman-1937/"
                                     >Marked Woman<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3873,7 +3865,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 4, 2023
                                   </div>
@@ -3897,7 +3889,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/bette-davis/"
                             >Bette Davis</a
                           >
@@ -3948,7 +3940,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/so-big-1932/"
                                     >So Big!<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -3956,7 +3948,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 8, 2023
                                   </div>
@@ -3994,7 +3986,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-cabin-in-the-cotton-1932/"
                                     >The Cabin in the Cotton<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4002,7 +3994,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 23, 2023
                                   </div>
@@ -4040,7 +4032,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/fashions-of-1934-1934/"
                                     >Fashions of 1934<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4048,7 +4040,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 2, 2023
                                   </div>
@@ -4086,7 +4078,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/20000-years-in-sing-sing-1932/"
                                     >20,000 Years in Sing Sing<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4094,7 +4086,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 9, 2023
                                   </div>
@@ -4132,7 +4124,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/marked-woman-1937/"
                                     >Marked Woman<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4140,7 +4132,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 4, 2023
                                   </div>
@@ -4164,7 +4156,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Reggie Bannister</span
                           >
                         </div>
@@ -4214,7 +4206,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/phantasm-iii-lord-of-the-dead-1994/"
                                     >Phantasm III: Lord of the Dead<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4222,7 +4214,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 13, 2023
                                   </div>
@@ -4260,7 +4252,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/phantasm-iv-oblivion-1998/"
                                     >Phantasm IV: Oblivion<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4268,7 +4260,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 27, 2023
                                   </div>
@@ -4306,7 +4298,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/phantasm-ravager-2016/"
                                     >Phantasm: Ravager<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4314,7 +4306,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Aug 31, 2023
                                   </div>
@@ -4352,14 +4344,14 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <span
-                                    class="block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                    class="block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                     >Silent Night, Deadly Night 4: Initiation<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
                                       >1990</span
                                     ></span
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Dec 17, 2023
                                   </div>
@@ -4383,7 +4375,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/james-coburn/"
                             >James Coburn</a
                           >
@@ -4434,7 +4426,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-last-of-sheila-1973/"
                                     >The Last of Sheila<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4442,7 +4434,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 25, 2023
                                   </div>
@@ -4480,7 +4472,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-last-of-sheila-1973/"
                                     >The Last of Sheila<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4488,7 +4480,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 27, 2023
                                   </div>
@@ -4526,7 +4518,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-carey-treatment-1972/"
                                     >The Carey Treatment<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4534,7 +4526,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 19, 2023
                                   </div>
@@ -4572,7 +4564,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-magnificent-seven-1960/"
                                     >The Magnificent Seven<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4580,7 +4572,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Aug 23, 2023
                                   </div>
@@ -4604,7 +4596,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Allen Jenkins</span
                           >
                         </div>
@@ -4654,7 +4646,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-falcon-takes-over-1942/"
                                     >The Falcon Takes Over<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4662,7 +4654,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jan 9, 2023
                                   </div>
@@ -4700,7 +4692,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/lawyer-man-1932/"
                                     >Lawyer Man<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4708,7 +4700,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 19, 2023
                                   </div>
@@ -4746,7 +4738,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/marked-woman-1937/"
                                     >Marked Woman<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4754,7 +4746,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 4, 2023
                                   </div>
@@ -4778,7 +4770,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Robert Englund</span
                           >
                         </div>
@@ -4828,7 +4820,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/freddy-vs-jason-2003/"
                                     >Freddy vs. Jason<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4836,7 +4828,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jan 13, 2023
                                   </div>
@@ -4874,7 +4866,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/behind-the-mask-the-rise-of-leslie-vernon-2006/"
                                     >Behind the Mask: The Rise of Leslie Vernon<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -4882,7 +4874,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 8, 2023
                                   </div>
@@ -4920,7 +4912,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/a-nightmare-on-elm-street-2-freddys-revenge-1985/"
                                     >A Nightmare on Elm Street 2: Freddy&#x27;s
                                     Revenge<!-- -->  <span
@@ -4929,7 +4921,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 19, 2023
                                   </div>
@@ -4953,7 +4945,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/john-wayne/"
                             >John Wayne</a
                           >
@@ -5004,7 +4996,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-star-packer-1934/"
                                     >The Star Packer<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5012,7 +5004,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 4, 2023
                                   </div>
@@ -5050,7 +5042,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-life-of-jimmy-dolan-1933/"
                                     >The Life of Jimmy Dolan<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5058,7 +5050,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 9, 2023
                                   </div>
@@ -5096,7 +5088,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/big-jim-mclain-1952/"
                                     >Big Jim McLain<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5104,7 +5096,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jul 31, 2023
                                   </div>
@@ -5128,7 +5120,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Arthur Hohl</span
                           >
                         </div>
@@ -5178,7 +5170,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-life-of-jimmy-dolan-1933/"
                                     >The Life of Jimmy Dolan<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5186,7 +5178,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 9, 2023
                                   </div>
@@ -5224,7 +5216,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/private-detective-62-1933/"
                                     >Private Detective 62<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5232,7 +5224,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 20, 2023
                                   </div>
@@ -5270,7 +5262,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-kennel-murder-case-1933/"
                                     >The Kennel Murder Case<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5278,7 +5270,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 29, 2023
                                   </div>
@@ -5311,7 +5303,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Robert Lord</span
                           >
                         </div>
@@ -5361,7 +5353,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/black-legion-1937/"
                                     >Black Legion<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5369,7 +5361,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 13, 2023
                                   </div>
@@ -5407,7 +5399,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/one-way-passage-1932/"
                                     >One Way Passage<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5415,7 +5407,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 5, 2023
                                   </div>
@@ -5453,7 +5445,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/so-big-1932/"
                                     >So Big!<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5461,7 +5453,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 8, 2023
                                   </div>
@@ -5499,7 +5491,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/20000-years-in-sing-sing-1932/"
                                     >20,000 Years in Sing Sing<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5507,7 +5499,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 9, 2023
                                   </div>
@@ -5531,7 +5523,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Brian Yuzna</span
                           >
                         </div>
@@ -5581,7 +5573,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/from-beyond-1986/"
                                     >From Beyond<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5589,7 +5581,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 2, 2023
                                   </div>
@@ -5627,14 +5619,14 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <span
-                                    class="block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                    class="block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                     >Silent Night, Deadly Night 4: Initiation<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
                                       >1990</span
                                     ></span
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Dec 17, 2023
                                   </div>
@@ -5672,14 +5664,14 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <span
-                                    class="block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                    class="block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                     >Silent Night, Deadly Night 5: The Toy Maker<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
                                       >1991</span
                                     ></span
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Dec 21, 2023
                                   </div>
@@ -5703,7 +5695,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Don Coscarelli</span
                           >
                         </div>
@@ -5753,7 +5745,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/phantasm-iii-lord-of-the-dead-1994/"
                                     >Phantasm III: Lord of the Dead<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5761,7 +5753,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 13, 2023
                                   </div>
@@ -5799,7 +5791,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/phantasm-iv-oblivion-1998/"
                                     >Phantasm IV: Oblivion<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5807,7 +5799,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 27, 2023
                                   </div>
@@ -5845,7 +5837,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/phantasm-ravager-2016/"
                                     >Phantasm: Ravager<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5853,7 +5845,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Aug 31, 2023
                                   </div>
@@ -5877,7 +5869,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Bob Kane</span
                           >
                         </div>
@@ -5927,7 +5919,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/batman-1989/"
                                     >Batman<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5935,7 +5927,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     May 12, 2023
                                   </div>
@@ -5973,7 +5965,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-dark-knight-2008/"
                                     >The Dark Knight<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -5981,7 +5973,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 22, 2023
                                   </div>
@@ -6019,7 +6011,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/batman-mask-of-the-phantasm-1993/"
                                     >Batman: Mask of the Phantasm<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6027,7 +6019,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Sep 14, 2023
                                   </div>
@@ -6051,7 +6043,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Michael Arlen</span
                           >
                         </div>
@@ -6101,7 +6093,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-falcon-takes-over-1942/"
                                     >The Falcon Takes Over<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6109,7 +6101,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jan 9, 2023
                                   </div>
@@ -6147,7 +6139,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-heavenly-body-1944/"
                                     >The Heavenly Body<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6155,7 +6147,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 23, 2023
                                   </div>
@@ -6179,7 +6171,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/wes-craven/"
                             >Wes Craven</a
                           >
@@ -6230,7 +6222,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/freddy-vs-jason-2003/"
                                     >Freddy vs. Jason<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6238,7 +6230,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jan 13, 2023
                                   </div>
@@ -6276,7 +6268,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/a-nightmare-on-elm-street-2-freddys-revenge-1985/"
                                     >A Nightmare on Elm Street 2: Freddy&#x27;s
                                     Revenge<!-- -->  <span
@@ -6285,7 +6277,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 19, 2023
                                   </div>
@@ -6309,7 +6301,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Abem Finkel</span
                           >
                         </div>
@@ -6359,7 +6351,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/black-legion-1937/"
                                     >Black Legion<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6367,7 +6359,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 13, 2023
                                   </div>
@@ -6405,7 +6397,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/marked-woman-1937/"
                                     >Marked Woman<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6413,7 +6405,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jun 4, 2023
                                   </div>
@@ -6437,7 +6429,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >William Wister Haines</span
                           >
                         </div>
@@ -6487,7 +6479,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/black-legion-1937/"
                                     >Black Legion<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6495,7 +6487,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Feb 13, 2023
                                   </div>
@@ -6533,7 +6525,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-racket-1951/"
                                     >The Racket<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6541,7 +6533,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Jul 11, 2023
                                   </div>
@@ -6565,7 +6557,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <a
-                            class="relative inline-block font-serif text-base leading-6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
+                            class="relative inline-block font-serif text-base/6 font-medium text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-left after:scale-x-0 after:bg-(--fg-accent) after:transition-all after:duration-500 hover:after:scale-x-100"
                             href="/cast-and-crew/lucio-fulci/"
                             >Lucio Fulci</a
                           >
@@ -6616,7 +6608,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-new-york-ripper-1982/"
                                     >The New York Ripper<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6624,7 +6616,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Mar 11, 2023
                                   </div>
@@ -6662,7 +6654,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-psychic-1977/"
                                     >The Psychic<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6670,7 +6662,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 3, 2023
                                   </div>
@@ -6694,7 +6686,7 @@
                           class="transform-gpu font-sans text-xs text-muted transition-transform tablet:text-sm"
                         >
                           <span
-                            class="inline-block font-serif text-base leading-6 font-normal text-muted"
+                            class="inline-block font-serif text-base/6 font-normal text-muted"
                             >Dardano Sacchetti</span
                           >
                         </div>
@@ -6744,7 +6736,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-new-york-ripper-1982/"
                                     >The New York Ripper<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6752,7 +6744,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Mar 11, 2023
                                   </div>
@@ -6790,7 +6782,7 @@
                                   class="flex grow flex-col items-start gap-y-1 tablet:mt-2 tablet:w-full tablet:px-1"
                                 >
                                   <a
-                                    class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                    class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                     href="/reviews/the-psychic-1977/"
                                     >The Psychic<!-- -->  <span
                                       class="text-xxs leading-none font-light text-subtle"
@@ -6798,7 +6790,7 @@
                                     ></a
                                   >
                                   <div
-                                    class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                    class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                   >
                                     Apr 3, 2023
                                   </div>
@@ -6835,11 +6827,11 @@
                   class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent"
                 >
                   <div
-                    class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+                    class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
                   >
                     <a href="/">Frank&#x27;s Movie Log</a>
                   </div>
-                  <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+                  <p class="w-full pl-px text-sm/4 italic opacity-85">
                     by Frank Showalter
                   </p>
                 </div>
@@ -7095,7 +7087,7 @@
               <!-- Magnifying glass icon -->
               <svg
                 aria-hidden="true"
-                class="pointer-events-none absolute top-[18px] left-4 h-5 w-5 text-default opacity-70"
+                class="pointer-events-none absolute top-[18px] left-4 size-5 text-default opacity-70"
                 fill="none"
                 height="18"
                 viewBox="0 0 18 18"
@@ -7125,12 +7117,12 @@
               <!-- Clear button -->
               <button
                 aria-label="Clear search"
-                class="absolute top-6 right-24 hidden h-4 w-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
+                class="absolute top-6 right-24 hidden size-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
                 id="pagefind-clear-button"
                 type="button"
               >
                 <svg
-                  class="h-full w-full"
+                  class="size-full"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -7150,7 +7142,7 @@
           <div
             aria-atomic="true"
             aria-live="polite"
-            class="border-b border-default px-4 py-4 font-sans text-xs font-normal text-subtle empty:hidden"
+            class="border-b border-default p-4 font-sans text-xs font-normal text-subtle empty:hidden"
             id="pagefind-results-counter"
             role="status"
           ></div>
@@ -7164,7 +7156,7 @@
         >
           <div id="pagefind-results"></div>
           <!-- Load More Button -->
-          <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
+          <div class="hidden p-4" id="pagefind-load-more-wrapper">
             <button
               aria-controls="pagefind-results"
               class="mx-auto block h-10 w-full max-w-button bg-canvas font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
@@ -7176,7 +7168,7 @@
           </div>
         </div>
         <div
-          class="px-4 py-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
+          class="p-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd

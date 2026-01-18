@@ -52,7 +52,7 @@ export function Credits({
   return (
     <aside
       className={`
-        group/credits bg-subtle px-container pt-8 pb-8
+        group/credits bg-subtle px-container py-8
         tablet:pt-12
         ${className ?? ""}
       `}
@@ -126,11 +126,7 @@ function Credit({
 }): React.JSX.Element {
   return (
     <div>
-      <dt
-        className={`
-          font-sans text-xs leading-4 tracking-wide text-subtle uppercase
-        `}
-      >
+      <dt className={`font-sans text-xs/4 tracking-wide text-subtle uppercase`}>
         {term}
       </dt>
       <dd className="font-normal text-wrap text-muted">{value}</dd>

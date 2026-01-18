@@ -56,7 +56,7 @@
     <title>Friday the 13th movie reviews - Frank&#39;s Movie Log</title>
   </head>
   <body
-    class="h-full w-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
+    class="size-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
   >
     <style>
       astro-island,
@@ -281,11 +281,11 @@
             class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent mix-blend-hard-light"
           >
             <div
-              class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+              class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
             >
               <a href="/">Frank&#x27;s Movie Log</a>
             </div>
-            <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+            <p class="w-full pl-px text-sm/4 italic opacity-85">
               by Frank Showalter
             </p>
           </div>
@@ -343,7 +343,7 @@
               <button
                 aria-keyshortcuts="Control+K"
                 aria-label="Search"
-                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm leading-6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
+                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm/6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
                 data-open-modal="true"
                 disabled=""
                 title="Search: Control+K"
@@ -374,7 +374,7 @@
               aria-controls="nav-menu"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
-              class="group/button relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
+              class="group/button relative z-nav-toggle ml-2 flex size-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
               data-nav-drawer-toggle="true"
               type="button"
             >
@@ -530,7 +530,7 @@
               loading="eager"
             />
             <div
-              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-(image:--hero-gradient)"
+              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:size-full after:bg-(image:--hero-gradient)"
             >
               <p class="mb-4">
                 <a
@@ -540,7 +540,7 @@
                 >
               </p>
               <h1
-                class="text-[2rem] leading-10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
+                class="text-[2rem]/10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
                 data-pagefind-weight="10"
               >
                 Friday the 13th
@@ -555,7 +555,7 @@
             </div>
           </header>
           <astro-island
-            uid="29Jwwi"
+            uid="Z1lw8Db"
             prefix="r1"
             component-url="~/features/collection-titles/CollectionTitles"
             component-export="CollectionTitles"
@@ -594,7 +594,7 @@
                         class="flex items-baseline gap-x-4 text-xs font-bold tracking-wide text-subtle"
                         >Sort<!-- -->
                         <select
-                          class="flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4 font-serif text-base font-normal tracking-normal overflow-ellipsis text-default shadow-all outline-accent"
+                          class="flex w-full appearance-none border-none bg-default px-4 py-2 font-serif text-base font-normal tracking-normal text-ellipsis text-default shadow-all outline-accent"
                         >
                           <option value="title-asc">Title (A → Z)</option>
                           <option value="title-desc">Title (Z → A)</option>
@@ -637,7 +637,7 @@
                       <li class="block first-of-type:pt-4" id="1980">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1980
                           </div>
@@ -675,7 +675,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-1980/"
                                       >Friday the 13th<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -693,12 +693,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 13, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -723,7 +723,7 @@
                       <li class="block first-of-type:pt-4" id="1981">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1981
                           </div>
@@ -761,7 +761,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-part-2-1981/"
                                       >Friday the 13th Part 2<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -779,12 +779,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 13, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -809,7 +809,7 @@
                       <li class="block first-of-type:pt-4" id="1982">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1982
                           </div>
@@ -847,7 +847,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-part-3-1982/"
                                       >Friday the 13th: Part 3<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -865,12 +865,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Mar 12, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -890,7 +890,7 @@
                       <li class="block first-of-type:pt-4" id="1984">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1984
                           </div>
@@ -928,7 +928,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-the-final-chapter-1984/"
                                       >Friday the 13th: The Final Chapter<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -946,12 +946,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 2, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -971,7 +971,7 @@
                       <li class="block first-of-type:pt-4" id="1985">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1985
                           </div>
@@ -1009,7 +1009,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-a-new-beginning-1985/"
                                       >Friday the 13th: A New Beginning<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1027,12 +1027,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 9, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -1057,7 +1057,7 @@
                       <li class="block first-of-type:pt-4" id="1986">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1986
                           </div>
@@ -1095,7 +1095,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-part-vi-jason-lives-1986/"
                                       >Friday the 13th Part VI: Jason Lives<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1113,12 +1113,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 16, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -1138,7 +1138,7 @@
                       <li class="block first-of-type:pt-4" id="1988">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1988
                           </div>
@@ -1176,7 +1176,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-the-new-blood-1988/"
                                       >Friday the 13th: The New Blood<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1194,12 +1194,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 13, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -1219,7 +1219,7 @@
                       <li class="block first-of-type:pt-4" id="1989">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1989
                           </div>
@@ -1257,7 +1257,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/friday-the-13th-part-viii-jason-takes-manhattan-1989/"
                                       >Friday the 13th Part VIII: Jason Takes
                                       Manhattan<!-- -->  <span
@@ -1276,12 +1276,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 13, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Adventure</span
                                       ><span
@@ -1306,7 +1306,7 @@
                       <li class="block first-of-type:pt-4" id="1993">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1993
                           </div>
@@ -1344,7 +1344,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/jason-goes-to-hell-the-final-friday-1993/"
                                       >Jason Goes to Hell: The Final Friday<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1362,12 +1362,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       May 22, 2025
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Fantasy</span
                                       ><span
@@ -1392,7 +1392,7 @@
                       <li class="block first-of-type:pt-4" id="2001">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2001
                           </div>
@@ -1430,7 +1430,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/jason-x-2001/"
                                       >Jason X<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1448,12 +1448,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 13, 2025
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1483,7 +1483,7 @@
                       <li class="block first-of-type:pt-4" id="2003">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2003
                           </div>
@@ -1521,7 +1521,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/freddy-vs-jason-2003/"
                                       >Freddy vs. Jason<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1539,12 +1539,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jan 13, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1564,7 +1564,7 @@
                       <li class="block first-of-type:pt-4" id="2009">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2009
                           </div>
@@ -1602,14 +1602,14 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <span
-                                      class="block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                      class="block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                       >Friday the 13th<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
                                         >2009</span
                                       ></span
                                     >
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -1643,16 +1643,16 @@
                     id="filters"
                   >
                     <form
-                      class="flex h-full w-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
+                      class="flex size-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
                     >
                       <button
                         aria-label="Close filters"
-                        class="absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
+                        class="absolute top-7 right-4 z-10 flex size-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
                         type="button"
                       >
                         <svg
                           aria-hidden="true"
-                          class="h-4 w-4 transform-gpu"
+                          class="size-4 transform-gpu"
                           fill="none"
                           stroke="currentColor"
                           stroke-width="2"
@@ -1694,7 +1694,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="1980" selected="">1980</option>
                                 <option value="1981">1981</option>
@@ -1714,7 +1714,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2009" selected="">2009</option>
                                 <option value="2003">2003</option>
@@ -1743,7 +1743,7 @@
                               aria-expanded="false"
                               aria-haspopup="listbox"
                               aria-label="Genres"
-                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
+                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded-sm border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
                               id="button-genres"
                               type="button"
                             >
@@ -1756,7 +1756,7 @@
                                 class="absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2"
                                 ><svg
                                   aria-hidden="true"
-                                  class="pointer-events-none h-5 w-5 text-subtle"
+                                  class="pointer-events-none size-5 text-subtle"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -1783,7 +1783,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="1" selected="">F</option>
                                 <option value="2">D-</option>
@@ -1804,7 +1804,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="13" selected="">A+</option>
                                 <option value="12">A</option>
@@ -1835,7 +1835,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2020" selected="">2020</option>
                                 <option value="2021">2021</option>
@@ -1847,7 +1847,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2025" selected="">2025</option>
                                 <option value="2023">2023</option>
@@ -1862,7 +1862,7 @@
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >Reviewed Status</span
                           ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                           >
                             <option value="All">All</option>
                             <option value="Reviewed">Reviewed</option>
@@ -1914,11 +1914,11 @@
                   class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent"
                 >
                   <div
-                    class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+                    class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
                   >
                     <a href="/">Frank&#x27;s Movie Log</a>
                   </div>
-                  <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+                  <p class="w-full pl-px text-sm/4 italic opacity-85">
                     by Frank Showalter
                   </p>
                 </div>
@@ -2174,7 +2174,7 @@
               <!-- Magnifying glass icon -->
               <svg
                 aria-hidden="true"
-                class="pointer-events-none absolute top-[18px] left-4 h-5 w-5 text-default opacity-70"
+                class="pointer-events-none absolute top-[18px] left-4 size-5 text-default opacity-70"
                 fill="none"
                 height="18"
                 viewBox="0 0 18 18"
@@ -2204,12 +2204,12 @@
               <!-- Clear button -->
               <button
                 aria-label="Clear search"
-                class="absolute top-6 right-24 hidden h-4 w-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
+                class="absolute top-6 right-24 hidden size-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
                 id="pagefind-clear-button"
                 type="button"
               >
                 <svg
-                  class="h-full w-full"
+                  class="size-full"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2229,7 +2229,7 @@
           <div
             aria-atomic="true"
             aria-live="polite"
-            class="border-b border-default px-4 py-4 font-sans text-xs font-normal text-subtle empty:hidden"
+            class="border-b border-default p-4 font-sans text-xs font-normal text-subtle empty:hidden"
             id="pagefind-results-counter"
             role="status"
           ></div>
@@ -2243,7 +2243,7 @@
         >
           <div id="pagefind-results"></div>
           <!-- Load More Button -->
-          <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
+          <div class="hidden p-4" id="pagefind-load-more-wrapper">
             <button
               aria-controls="pagefind-results"
               class="mx-auto block h-10 w-full max-w-button bg-canvas font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
@@ -2255,7 +2255,7 @@
           </div>
         </div>
         <div
-          class="px-4 py-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
+          class="p-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd

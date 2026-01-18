@@ -56,7 +56,7 @@
     <title>James Bond movie reviews - Frank&#39;s Movie Log</title>
   </head>
   <body
-    class="h-full w-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
+    class="size-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
   >
     <style>
       astro-island,
@@ -281,11 +281,11 @@
             class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent mix-blend-hard-light"
           >
             <div
-              class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+              class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
             >
               <a href="/">Frank&#x27;s Movie Log</a>
             </div>
-            <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+            <p class="w-full pl-px text-sm/4 italic opacity-85">
               by Frank Showalter
             </p>
           </div>
@@ -343,7 +343,7 @@
               <button
                 aria-keyshortcuts="Control+K"
                 aria-label="Search"
-                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm leading-6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
+                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm/6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
                 data-open-modal="true"
                 disabled=""
                 title="Search: Control+K"
@@ -374,7 +374,7 @@
               aria-controls="nav-menu"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
-              class="group/button relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
+              class="group/button relative z-nav-toggle ml-2 flex size-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
               data-nav-drawer-toggle="true"
               type="button"
             >
@@ -530,7 +530,7 @@
               loading="eager"
             />
             <div
-              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-(image:--hero-gradient)"
+              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:size-full after:bg-(image:--hero-gradient)"
             >
               <p class="mb-4">
                 <a
@@ -540,7 +540,7 @@
                 >
               </p>
               <h1
-                class="text-[2rem] leading-10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
+                class="text-[2rem]/10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
                 data-pagefind-weight="10"
               >
                 James Bond
@@ -553,7 +553,7 @@
             </div>
           </header>
           <astro-island
-            uid="r78GP"
+            uid="Z2mK5eI"
             prefix="r1"
             component-url="~/features/collection-titles/CollectionTitles"
             component-export="CollectionTitles"
@@ -592,7 +592,7 @@
                         class="flex items-baseline gap-x-4 text-xs font-bold tracking-wide text-subtle"
                         >Sort<!-- -->
                         <select
-                          class="flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4 font-serif text-base font-normal tracking-normal overflow-ellipsis text-default shadow-all outline-accent"
+                          class="flex w-full appearance-none border-none bg-default px-4 py-2 font-serif text-base font-normal tracking-normal text-ellipsis text-default shadow-all outline-accent"
                         >
                           <option value="title-asc">Title (A → Z)</option>
                           <option value="title-desc">Title (Z → A)</option>
@@ -635,7 +635,7 @@
                       <li class="block first-of-type:pt-4" id="1962">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1962
                           </div>
@@ -673,7 +673,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/dr-no-1962/"
                                       >Dr. No<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -691,12 +691,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 22, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -721,7 +721,7 @@
                       <li class="block first-of-type:pt-4" id="1963">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1963
                           </div>
@@ -759,7 +759,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/from-russia-with-love-1963/"
                                       >From Russia with Love<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -777,12 +777,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 1, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -807,7 +807,7 @@
                       <li class="block first-of-type:pt-4" id="1964">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1964
                           </div>
@@ -845,7 +845,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/goldfinger-1964/"
                                       >Goldfinger<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -863,12 +863,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 2, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -893,7 +893,7 @@
                       <li class="block first-of-type:pt-4" id="1965">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1965
                           </div>
@@ -931,7 +931,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/thunderball-1965/"
                                       >Thunderball<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -949,12 +949,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 2, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -979,7 +979,7 @@
                       <li class="block first-of-type:pt-4" id="1967">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1967
                           </div>
@@ -1017,7 +1017,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/casino-royale-1967/"
                                       >Casino Royale<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1035,12 +1035,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Sep 25, 2003
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span>
                                     </div>
@@ -1073,7 +1073,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/you-only-live-twice-1967/"
                                       >You Only Live Twice<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1091,12 +1091,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 3, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1121,7 +1121,7 @@
                       <li class="block first-of-type:pt-4" id="1969">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1969
                           </div>
@@ -1159,7 +1159,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/on-her-majestys-secret-service-1969/"
                                       >On Her Majesty&#x27;s Secret Service<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1177,12 +1177,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 3, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1207,7 +1207,7 @@
                       <li class="block first-of-type:pt-4" id="1971">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1971
                           </div>
@@ -1245,7 +1245,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/diamonds-are-forever-1971/"
                                       >Diamonds Are Forever<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1263,12 +1263,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 4, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1293,7 +1293,7 @@
                       <li class="block first-of-type:pt-4" id="1973">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1973
                           </div>
@@ -1331,7 +1331,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/live-and-let-die-1973/"
                                       >Live and Let Die<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1349,12 +1349,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jul 1, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1379,7 +1379,7 @@
                       <li class="block first-of-type:pt-4" id="1974">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1974
                           </div>
@@ -1417,7 +1417,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-man-with-the-golden-gun-1974/"
                                       >The Man with the Golden Gun<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1435,12 +1435,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 5, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1465,7 +1465,7 @@
                       <li class="block first-of-type:pt-4" id="1977">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1977
                           </div>
@@ -1503,7 +1503,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-spy-who-loved-me-1977/"
                                       >The Spy Who Loved Me<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1521,12 +1521,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 5, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1551,7 +1551,7 @@
                       <li class="block first-of-type:pt-4" id="1979">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1979
                           </div>
@@ -1589,7 +1589,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/moonraker-1979/"
                                       >Moonraker<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1607,12 +1607,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 5, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1642,7 +1642,7 @@
                       <li class="block first-of-type:pt-4" id="1981">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1981
                           </div>
@@ -1680,7 +1680,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/for-your-eyes-only-1981/"
                                       >For Your Eyes Only<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1698,12 +1698,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 6, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1728,7 +1728,7 @@
                       <li class="block first-of-type:pt-4" id="1983">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1983
                           </div>
@@ -1766,7 +1766,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/octopussy-1983/"
                                       >Octopussy<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1784,12 +1784,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 7, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1833,7 +1833,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/never-say-never-again-1983/"
                                       >Never Say Never Again<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1851,12 +1851,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 8, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1881,7 +1881,7 @@
                       <li class="block first-of-type:pt-4" id="1985">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1985
                           </div>
@@ -1919,7 +1919,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/a-view-to-a-kill-1985/"
                                       >A View to a Kill<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1937,12 +1937,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 9, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1967,7 +1967,7 @@
                       <li class="block first-of-type:pt-4" id="1987">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1987
                           </div>
@@ -2005,7 +2005,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-living-daylights-1987/"
                                       >The Living Daylights<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2023,12 +2023,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 10, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2053,7 +2053,7 @@
                       <li class="block first-of-type:pt-4" id="1989">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1989
                           </div>
@@ -2091,7 +2091,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/licence-to-kill-1989/"
                                       >Licence to Kill<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2109,12 +2109,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 11, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2139,7 +2139,7 @@
                       <li class="block first-of-type:pt-4" id="1995">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1995
                           </div>
@@ -2177,7 +2177,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/goldeneye-1995/"
                                       >GoldenEye<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2195,12 +2195,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 4, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2225,7 +2225,7 @@
                       <li class="block first-of-type:pt-4" id="1997">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1997
                           </div>
@@ -2263,7 +2263,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/tomorrow-never-dies-1997/"
                                       >Tomorrow Never Dies<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2281,12 +2281,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 6, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2311,7 +2311,7 @@
                       <li class="block first-of-type:pt-4" id="1999">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             1999
                           </div>
@@ -2349,7 +2349,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-world-is-not-enough-1999/"
                                       >The World Is Not Enough<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2367,12 +2367,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 6, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2397,7 +2397,7 @@
                       <li class="block first-of-type:pt-4" id="2002">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2002
                           </div>
@@ -2435,14 +2435,14 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <span
-                                      class="block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                      class="block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                       >Die Another Day<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
                                         >2002</span
                                       ></span
                                     >
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2467,7 +2467,7 @@
                       <li class="block first-of-type:pt-4" id="2006">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2006
                           </div>
@@ -2505,7 +2505,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/casino-royale-2006/"
                                       >Casino Royale<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2523,12 +2523,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 15, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2553,7 +2553,7 @@
                       <li class="block first-of-type:pt-4" id="2008">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2008
                           </div>
@@ -2591,7 +2591,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/quantum-of-solace-2008/"
                                       >Quantum of Solace<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2609,12 +2609,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 20, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2644,7 +2644,7 @@
                       <li class="block first-of-type:pt-4" id="2012">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2012
                           </div>
@@ -2682,14 +2682,14 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <span
-                                      class="block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                      class="block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                       >Skyfall<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
                                         >2012</span
                                       ></span
                                     >
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2714,7 +2714,7 @@
                       <li class="block first-of-type:pt-4" id="2015">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2015
                           </div>
@@ -2752,14 +2752,14 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <span
-                                      class="block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                      class="block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                       >Spectre<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
                                         >2015</span
                                       ></span
                                     >
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2784,7 +2784,7 @@
                       <li class="block first-of-type:pt-4" id="2021">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             2021
                           </div>
@@ -2822,7 +2822,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/no-time-to-die-2021/"
                                       >No Time to Die<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2840,12 +2840,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 16, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2879,16 +2879,16 @@
                     id="filters"
                   >
                     <form
-                      class="flex h-full w-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
+                      class="flex size-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
                     >
                       <button
                         aria-label="Close filters"
-                        class="absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
+                        class="absolute top-7 right-4 z-10 flex size-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
                         type="button"
                       >
                         <svg
                           aria-hidden="true"
-                          class="h-4 w-4 transform-gpu"
+                          class="size-4 transform-gpu"
                           fill="none"
                           stroke="currentColor"
                           stroke-width="2"
@@ -2930,7 +2930,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="1962" selected="">1962</option>
                                 <option value="1963">1963</option>
@@ -2963,7 +2963,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2021" selected="">2021</option>
                                 <option value="2015">2015</option>
@@ -3005,7 +3005,7 @@
                               aria-expanded="false"
                               aria-haspopup="listbox"
                               aria-label="Genres"
-                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
+                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded-sm border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
                               id="button-genres"
                               type="button"
                             >
@@ -3018,7 +3018,7 @@
                                 class="absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2"
                                 ><svg
                                   aria-hidden="true"
-                                  class="pointer-events-none h-5 w-5 text-subtle"
+                                  class="pointer-events-none size-5 text-subtle"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -3045,7 +3045,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="1" selected="">F</option>
                                 <option value="2">D-</option>
@@ -3066,7 +3066,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="13" selected="">A+</option>
                                 <option value="12">A</option>
@@ -3097,7 +3097,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2003" selected="">2003</option>
                                 <option value="2008">2008</option>
@@ -3111,7 +3111,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2024" selected="">2024</option>
                                 <option value="2022">2022</option>
@@ -3128,7 +3128,7 @@
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >Reviewed Status</span
                           ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                           >
                             <option value="All">All</option>
                             <option value="Reviewed">Reviewed</option>
@@ -3180,11 +3180,11 @@
                   class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent"
                 >
                   <div
-                    class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+                    class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
                   >
                     <a href="/">Frank&#x27;s Movie Log</a>
                   </div>
-                  <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+                  <p class="w-full pl-px text-sm/4 italic opacity-85">
                     by Frank Showalter
                   </p>
                 </div>
@@ -3440,7 +3440,7 @@
               <!-- Magnifying glass icon -->
               <svg
                 aria-hidden="true"
-                class="pointer-events-none absolute top-[18px] left-4 h-5 w-5 text-default opacity-70"
+                class="pointer-events-none absolute top-[18px] left-4 size-5 text-default opacity-70"
                 fill="none"
                 height="18"
                 viewBox="0 0 18 18"
@@ -3470,12 +3470,12 @@
               <!-- Clear button -->
               <button
                 aria-label="Clear search"
-                class="absolute top-6 right-24 hidden h-4 w-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
+                class="absolute top-6 right-24 hidden size-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
                 id="pagefind-clear-button"
                 type="button"
               >
                 <svg
-                  class="h-full w-full"
+                  class="size-full"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3495,7 +3495,7 @@
           <div
             aria-atomic="true"
             aria-live="polite"
-            class="border-b border-default px-4 py-4 font-sans text-xs font-normal text-subtle empty:hidden"
+            class="border-b border-default p-4 font-sans text-xs font-normal text-subtle empty:hidden"
             id="pagefind-results-counter"
             role="status"
           ></div>
@@ -3509,7 +3509,7 @@
         >
           <div id="pagefind-results"></div>
           <!-- Load More Button -->
-          <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
+          <div class="hidden p-4" id="pagefind-load-more-wrapper">
             <button
               aria-controls="pagefind-results"
               class="mx-auto block h-10 w-full max-w-button bg-canvas font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
@@ -3521,7 +3521,7 @@
           </div>
         </div>
         <div
-          class="px-4 py-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
+          class="p-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd

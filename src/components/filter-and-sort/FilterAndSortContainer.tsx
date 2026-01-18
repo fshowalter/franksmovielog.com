@@ -211,7 +211,7 @@ export function FilterAndSortContainer<T extends string>({
           >
             <form
               className={`
-                flex h-full w-full flex-col text-sm
+                flex size-full flex-col text-sm
                 tablet:text-base
                 [@media(min-height:815px)]:pt-12
               `}
@@ -221,7 +221,7 @@ export function FilterAndSortContainer<T extends string>({
               <button
                 aria-label="Close filters"
                 className={`
-                  absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu
+                  absolute top-7 right-4 z-10 flex size-10 transform-gpu
                   cursor-pointer items-center justify-center rounded-full
                   bg-canvas text-default drop-shadow-sm transition-transform
                   hover:scale-105 hover:drop-shadow-md
@@ -234,7 +234,7 @@ export function FilterAndSortContainer<T extends string>({
               >
                 <svg
                   aria-hidden="true"
-                  className="h-4 w-4 transform-gpu"
+                  className="size-4 transform-gpu"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"

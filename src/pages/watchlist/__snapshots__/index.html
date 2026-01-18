@@ -51,7 +51,7 @@
     <title>Watchlist - Frank&#39;s Movie Log</title>
   </head>
   <body
-    class="h-full w-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
+    class="size-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
   >
     <style>
       astro-island,
@@ -276,11 +276,11 @@
             class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent mix-blend-hard-light"
           >
             <div
-              class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+              class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
             >
               <a href="/">Frank&#x27;s Movie Log</a>
             </div>
-            <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+            <p class="w-full pl-px text-sm/4 italic opacity-85">
               by Frank Showalter
             </p>
           </div>
@@ -338,7 +338,7 @@
               <button
                 aria-keyshortcuts="Control+K"
                 aria-label="Search"
-                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm leading-6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
+                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm/6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
                 data-open-modal="true"
                 disabled=""
                 title="Search: Control+K"
@@ -369,7 +369,7 @@
               aria-controls="nav-menu"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
-              class="group/button relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
+              class="group/button relative z-nav-toggle ml-2 flex size-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
               data-nav-drawer-toggle="true"
               type="button"
             >
@@ -525,10 +525,10 @@
               loading="eager"
             />
             <div
-              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-(image:--hero-gradient)"
+              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:size-full after:bg-(image:--hero-gradient)"
             >
               <h1
-                class="text-[2rem] leading-10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
+                class="text-[2rem]/10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
                 data-pagefind-weight="10"
               >
                 Watchlist
@@ -541,7 +541,7 @@
             </div>
           </header>
           <astro-island
-            uid="2cvl7y"
+            uid="V1Sxq"
             prefix="r1"
             component-url="~/features/watchlist/Watchlist"
             component-export="Watchlist"
@@ -590,7 +590,7 @@
                         class="flex items-baseline gap-x-4 text-xs font-bold tracking-wide text-subtle"
                         >Sort<!-- -->
                         <select
-                          class="flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4 font-serif text-base font-normal tracking-normal overflow-ellipsis text-default shadow-all outline-accent"
+                          class="flex w-full appearance-none border-none bg-default px-4 py-2 font-serif text-base font-normal tracking-normal text-ellipsis text-default shadow-all outline-accent"
                         >
                           <option value="title-asc" selected="">
                             Title (A → Z)
@@ -628,7 +628,7 @@
                         <li class="block first-of-type:pt-4" id="#">
                           <div class="pt-0 text-md">
                             <div
-                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                             >
                               #
                             </div>
@@ -666,20 +666,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >3 Women<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1977</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Robert Altman directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -723,21 +723,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >5 Card Stud<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1968</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Dean Martin and Robert Mitchum
                                         performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -786,21 +786,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >7 Man Army<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1976</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -844,20 +844,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >7 Men from Now<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1956</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Lee Marvin performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Western</span>
                                       </div>
@@ -890,20 +890,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >12 Angry Men<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1957</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sidney Lumet directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Crime</span
                                         ><span
@@ -942,20 +942,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >12 Angry Men<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1997</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->William Friedkin directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Crime</span
                                         ><span
@@ -994,21 +994,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The 14 Amazons<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1972</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -1057,20 +1057,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >21 Hours at Munich<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1976</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->William Holden performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -1119,21 +1119,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The 36th Chamber of Shaolin<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1978</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -1177,20 +1177,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >52 Pick-Up<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1986</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Frankenheimer directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Crime</span
                                         ><span
@@ -1234,21 +1234,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The 82 Tenants<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1982</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span>
                                       </div>
@@ -1281,20 +1281,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >92 in the Shade<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1975</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Warren Oates performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -1333,20 +1333,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >99 and 44/100% Dead!<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1974</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Frankenheimer directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -1395,20 +1395,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The 1,000 Eyes of Dr. Mabuse<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1960</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Fritz Lang directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Crime</span
                                         ><span
@@ -1452,21 +1452,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >1941<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1979</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Christopher Lee and Warren Oates
                                         performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -1491,7 +1491,7 @@
                         <li class="block first-of-type:pt-4" id="A">
                           <div class="pt-0 text-md">
                             <div
-                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                             >
                               A
                             </div>
@@ -1529,7 +1529,7 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Abbott and Costello Meet Dr. Jekyll and
                                         Mr. Hyde<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
@@ -1537,13 +1537,13 @@
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Boris Karloff performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -1592,21 +1592,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Abbott and Costello Meet the Mummy<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1955</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Universal
                                         Monsters collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -1665,21 +1665,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Absolution<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1978</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Anthony Shaffer has a writing
                                         credit<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -1723,20 +1723,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Accursed<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1957</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Christopher Lee performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -1785,20 +1785,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Action of the Tiger<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1957</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sean Connery performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -1847,20 +1847,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Adventure&#x27;s End<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1937</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Wayne performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -1899,21 +1899,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Adventures of Captain Fabian<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1951</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Errol Flynn and Vincent Price
                                         performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span>
                                       </div>
@@ -1946,20 +1946,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Adventures of Greyfriars Bobby<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >2005</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Christopher Lee performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -2003,20 +2003,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Adventure Story<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1961</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sean Connery performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span>
                                       </div>
@@ -2049,20 +2049,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Aenigma<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1987</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Lucio Fulci directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Horror</span
                                         ><span
@@ -2111,20 +2111,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Affair<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1971</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->George A. Romero directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -2168,20 +2168,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >An Affair to Remember<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1957</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Cary Grant performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -2220,20 +2220,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Affliction<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1997</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->James Coburn performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -2277,20 +2277,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The African Queen<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1977</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Warren Oates performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -2339,20 +2339,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >After Liverpool<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1974</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Michael Haneke directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -2385,20 +2385,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >After the Rehearsal<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1984</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Ingmar Bergman directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -2431,20 +2431,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Against All Flags<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1952</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Errol Flynn performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -2493,20 +2493,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Against the Wall<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1994</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Frankenheimer directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -2555,20 +2555,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Agency<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1980</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Robert Mitchum performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -2612,20 +2612,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Air Mail<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1932</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Ford directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -2664,21 +2664,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Airport &#x27;77<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1977</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Christopher Lee and James
                                         Stewart performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -2722,20 +2722,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Airport<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1970</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Dean Martin performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -2779,20 +2779,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Alexander the Great<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1956</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Peter Cushing performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Biography</span
                                         ><span
@@ -2841,20 +2841,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Alias John Preston<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1955</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Christopher Lee performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Horror</span
                                         ><span
@@ -2898,20 +2898,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Alias Mr. Twilight<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1946</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Sturges directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Crime</span
                                         ><span
@@ -2950,20 +2950,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Alice Cooper: The Nightmare<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1975</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Vincent Price performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Horror</span
                                         ><span
@@ -3002,20 +3002,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Allegheny Uprising<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1939</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Wayne performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -3069,20 +3069,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >All Fall Down<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1962</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Frankenheimer directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -3115,20 +3115,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >All in a Night&#x27;s Work<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1961</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Dean Martin performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -3167,21 +3167,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >All Men Are Brothers<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1975</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -3220,20 +3220,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >All the King&#x27;s Men<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1958</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sidney Lumet directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -3266,20 +3266,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >All These Women<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1964</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Ingmar Bergman directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span>
                                       </div>
@@ -3312,20 +3312,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Altered States<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1980</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Ken Russell directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Horror</span
                                         ><span
@@ -3369,20 +3369,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Amazing Adventure<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1936</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Cary Grant performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -3426,20 +3426,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Ambassador<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1984</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Robert Mitchum performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -3488,21 +3488,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Ambitious Kung Fu Girl<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1981</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -3541,20 +3541,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Ambushers<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1967</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Dean Martin performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -3603,20 +3603,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >American Guerrilla in the Philippines<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1950</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Fritz Lang directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -3655,20 +3655,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >American Gun<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >2002</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->James Coburn performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -3701,20 +3701,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Amour<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >2012</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Michael Haneke directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -3747,20 +3747,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Amsterdam Kill<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1977</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Robert Mitchum performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -3804,20 +3804,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Amusement Park<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1975</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->George A. Romero directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -3861,20 +3861,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Anatomy of a Murder<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1959</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->James Stewart performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -3913,20 +3913,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >And Baby Makes Six<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1979</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Warren Oates performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -3965,20 +3965,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Angel Face<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1952</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Robert Mitchum performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Crime</span
                                         ><span
@@ -4032,21 +4032,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Angry Guest<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1972</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -4085,20 +4085,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Anna Karenina<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1961</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sean Connery performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -4131,21 +4131,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Anniversary<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1968</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Hammer Films
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -4189,21 +4189,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Anonymous Heroes<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1971</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -4242,20 +4242,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Another Dawn<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1937</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Errol Flynn performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -4288,20 +4288,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Another Time, Another Place<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1958</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sean Connery performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -4345,20 +4345,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Anzio<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1968</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Robert Mitchum performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -4402,20 +4402,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Apartment Complex<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1999</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Tobe Hooper directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -4459,20 +4459,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Apartment for Peggy<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1948</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->William Holden performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -4511,20 +4511,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Ape<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1940</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Boris Karloff performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Horror</span>
                                       </div>
@@ -4557,20 +4557,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Ape Man<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1943</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Bela Lugosi performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -4614,20 +4614,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Appointment<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1969</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sidney Lumet directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -4666,21 +4666,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Appointment with Death<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1988</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Anthony Shaffer has a writing
                                         credit<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Crime</span
                                         ><span
@@ -4729,21 +4729,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Arabian Adventure<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1979</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Christopher Lee and Peter
                                         Cushing performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -4782,21 +4782,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Aria<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1987</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Ken Russell and Robert Altman
                                         directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -4840,20 +4840,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Around the World in 80 Days<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1956</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Frank Sinatra performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -4902,20 +4902,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Arsenic &amp; Old Lace<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1962</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Boris Karloff performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -4959,20 +4959,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Ashanti<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1979</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->William Holden performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -5026,20 +5026,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Asmodée<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1952</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Peter Cushing performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span>
                                       </div>
@@ -5072,21 +5072,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Assassin<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1967</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -5125,20 +5125,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Attack<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1956</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Lee Marvin performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -5182,20 +5182,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >At the Earth&#x27;s Core<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1976</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Peter Cushing performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -5239,20 +5239,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Autumn Sonata<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1978</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Ingmar Bergman directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -5291,20 +5291,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Avalanche Express<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1979</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Lee Marvin performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -5343,20 +5343,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Avengers<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1998</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sean Connery performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -5405,20 +5405,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Avenging Angel<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1995</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->James Coburn performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -5457,21 +5457,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Avenging Eagle<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1978</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -5515,21 +5515,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Avenging Warriors of Shaolin<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1979</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->it&#x27;s in the Shaw Brothers
                                         collection<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -5549,7 +5549,7 @@
                         <li class="block first-of-type:pt-4" id="B">
                           <div class="pt-0 text-md">
                             <div
-                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                             >
                               B
                             </div>
@@ -5587,20 +5587,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Babes in Bagdad<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1952</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Christopher Lee performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span>
                                       </div>
@@ -5633,20 +5633,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Baby Comes Home<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1980</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Warren Oates performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -5685,20 +5685,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Backanterna<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1993</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Ingmar Bergman directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Music</span>
                                       </div>
@@ -5731,20 +5731,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Backfire!<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1995</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Robert Mitchum performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span>
                                       </div>
@@ -5777,20 +5777,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Backlash<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1956</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Sturges directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -5829,20 +5829,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Badlands<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1973</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Warren Oates performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Action</span
                                         ><span
@@ -5886,20 +5886,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Bad One<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1930</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Boris Karloff performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Romance</span
                                         ><span
@@ -5938,20 +5938,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Ballad of Cable Hogue<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1970</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Sam Peckinpah directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -6000,20 +6000,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Ball of Fire<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1941</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Howard Hawks directed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -6052,20 +6052,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Baltimore Bullet<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1980</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->James Coburn performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Comedy</span
                                         ><span
@@ -6109,20 +6109,20 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >Bar 20<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1943</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->Robert Mitchum performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Drama</span
                                         ><span
@@ -6161,21 +6161,21 @@
                                       class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                     >
                                       <span
-                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base leading-5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
+                                        class="[--list-item-title-unreviewed-color:var(--fg-muted)] block text-base/5 font-semibold text-(--list-item-title-unreviewed-color,var(--fg-subtle))"
                                         >The Barbarian and the Geisha<!-- -->  <span
                                           class="text-xxs leading-none font-light text-subtle"
                                           >1958</span
                                         ></span
                                       >
                                       <div
-                                        class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                                        class="font-sans text-sm/4 font-normal tracking-prose text-subtle"
                                       >
                                         Because
                                         <!-- -->John Huston directed and John
                                         Wayne performed<!-- -->.
                                       </div>
                                       <div
-                                        class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                        class="font-sans text-xs/4 tracking-prose text-subtle"
                                       >
                                         <span>Adventure</span
                                         ><span
@@ -6225,16 +6225,16 @@
                     id="filters"
                   >
                     <form
-                      class="flex h-full w-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
+                      class="flex size-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
                     >
                       <button
                         aria-label="Close filters"
-                        class="absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
+                        class="absolute top-7 right-4 z-10 flex size-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
                         type="button"
                       >
                         <svg
                           aria-hidden="true"
-                          class="h-4 w-4 transform-gpu"
+                          class="size-4 transform-gpu"
                           fill="none"
                           stroke="currentColor"
                           stroke-width="2"
@@ -6276,7 +6276,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="1929" selected="">1929</option>
                                 <option value="1930">1930</option>
@@ -6376,7 +6376,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2024" selected="">2024</option>
                                 <option value="2023">2023</option>
@@ -6485,7 +6485,7 @@
                               aria-expanded="false"
                               aria-haspopup="listbox"
                               aria-label="Genres"
-                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
+                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded-sm border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
                               id="button-genres"
                               type="button"
                             >
@@ -6498,7 +6498,7 @@
                                 class="absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2"
                                 ><svg
                                   aria-hidden="true"
-                                  class="pointer-events-none h-5 w-5 text-subtle"
+                                  class="pointer-events-none size-5 text-subtle"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -6518,7 +6518,7 @@
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >Director</span
                           ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                           >
                             <option value="All">All</option>
                             <option value="Alfred Hitchcock">
@@ -6583,7 +6583,7 @@
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >Performer</span
                           ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                           >
                             <option value="All">All</option>
                             <option value="Bela Lugosi">Bela Lugosi</option>
@@ -6622,7 +6622,7 @@
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >Writer</span
                           ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                           >
                             <option value="All">All</option>
                             <option value="Anthony Shaffer">
@@ -6637,7 +6637,7 @@
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >Collection</span
                           ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                           >
                             <option value="All">All</option>
                             <option value="Friday the 13th">
@@ -6698,11 +6698,11 @@
                   class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent"
                 >
                   <div
-                    class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+                    class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
                   >
                     <a href="/">Frank&#x27;s Movie Log</a>
                   </div>
-                  <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+                  <p class="w-full pl-px text-sm/4 italic opacity-85">
                     by Frank Showalter
                   </p>
                 </div>
@@ -6958,7 +6958,7 @@
               <!-- Magnifying glass icon -->
               <svg
                 aria-hidden="true"
-                class="pointer-events-none absolute top-[18px] left-4 h-5 w-5 text-default opacity-70"
+                class="pointer-events-none absolute top-[18px] left-4 size-5 text-default opacity-70"
                 fill="none"
                 height="18"
                 viewBox="0 0 18 18"
@@ -6988,12 +6988,12 @@
               <!-- Clear button -->
               <button
                 aria-label="Clear search"
-                class="absolute top-6 right-24 hidden h-4 w-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
+                class="absolute top-6 right-24 hidden size-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
                 id="pagefind-clear-button"
                 type="button"
               >
                 <svg
-                  class="h-full w-full"
+                  class="size-full"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -7013,7 +7013,7 @@
           <div
             aria-atomic="true"
             aria-live="polite"
-            class="border-b border-default px-4 py-4 font-sans text-xs font-normal text-subtle empty:hidden"
+            class="border-b border-default p-4 font-sans text-xs font-normal text-subtle empty:hidden"
             id="pagefind-results-counter"
             role="status"
           ></div>
@@ -7027,7 +7027,7 @@
         >
           <div id="pagefind-results"></div>
           <!-- Load More Button -->
-          <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
+          <div class="hidden p-4" id="pagefind-load-more-wrapper">
             <button
               aria-controls="pagefind-results"
               class="mx-auto block h-10 w-full max-w-button bg-canvas font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
@@ -7039,7 +7039,7 @@
           </div>
         </div>
         <div
-          class="px-4 py-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
+          class="p-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd
