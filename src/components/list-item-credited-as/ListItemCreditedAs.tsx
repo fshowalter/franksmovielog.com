@@ -16,7 +16,7 @@ export function ListItemCreditedAs({
   return (
     <div
       className={`
-        text-sm leading-5 font-normal tracking-prose text-muted
+        text-sm/5 font-normal tracking-prose text-muted
         ${className}
       `}
     >

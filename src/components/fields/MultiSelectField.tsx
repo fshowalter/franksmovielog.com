@@ -420,7 +420,7 @@ export function MultiSelectField({
           aria-label={label}
           className={`
             relative w-full cursor-default scroll-mt-(--control-scroll-offset,0)
-            rounded border border-default bg-default pr-10 pl-3 text-left
+            rounded-sm border border-default bg-default pr-10 pl-3 text-left
             text-base text-subtle
             focus:border-[rgb(38,132,255)]
             focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none
@@ -443,8 +443,8 @@ export function MultiSelectField({
               selectedOptions.map((option) => (
                 <span
                   className={`
-                    inline-flex items-center gap-1 rounded bg-canvas px-2 py-0.5
-                    text-sm text-default
+                    inline-flex items-center gap-1 rounded-sm bg-canvas px-2
+                    py-0.5 text-sm text-default
                   `}
                   key={option}
                 >
@@ -473,7 +473,7 @@ export function MultiSelectField({
                   >
                     <svg
                       aria-hidden="true"
-                      className="h-3 w-3"
+                      className="size-3"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -519,7 +519,7 @@ export function MultiSelectField({
                 >
                   <svg
                     aria-hidden="true"
-                    className="h-4 w-4"
+                    className="size-4"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -538,7 +538,7 @@ export function MultiSelectField({
             )}
             <svg
               aria-hidden="true"
-              className="pointer-events-none h-5 w-5 text-subtle"
+              className="pointer-events-none size-5 text-subtle"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

@@ -65,8 +65,8 @@ export function FilterAndSortHeader<T extends string>({
           Sort{" "}
           <select
             className={`
-              flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4
-              font-serif text-base font-normal tracking-normal overflow-ellipsis
+              flex w-full appearance-none border-none bg-default px-4 py-2
+              font-serif text-base font-normal tracking-normal text-ellipsis
               text-default shadow-all outline-accent
             `}
             onChange={onSortChange}

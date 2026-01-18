@@ -63,12 +63,11 @@ export function CalendarCell({
         <div className="@container/poster-list">
           <ol
             className={`
-              flex flex-col
-              [--poster-list-item-width:33.33%]
+              flex flex-col [--poster-list-item-width:33.33%]
               tablet:flex-row tablet:flex-wrap
               tablet-landscape:flex-col
               tablet-landscape:[--poster-list-item-width:100%]
-              @min-[calc((250px_*_3)_+_1px)]/poster-list:[--poster-list-item-width:25%]
+              @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%]
             `}
           >
             {value.viewings!.map((viewing) => (

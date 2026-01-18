@@ -81,7 +81,8 @@ function Breadcrumb({
           after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
           after:origin-center after:scale-x-0 after:bg-accent
           after:transition-transform after:duration-500
-          hover:text-accent hover:after:scale-x-100
+          hover:text-accent
+          hover:after:scale-x-100
         `}
         href={value.href}
       >
@@ -102,8 +103,7 @@ function Deck({
     <p
       className={`
         mt-1 font-sans text-base font-semibold text-white/90
-        mix-blend-hard-light
-        [text-shadow:1px_1px_2px_black]
+        mix-blend-hard-light [text-shadow:1px_1px_2px_black]
         laptop:my-4 laptop:text-xl
         ${center ? `text-center` : ""}
       `}
@@ -126,7 +126,7 @@ function Title({
       className={
         className ||
         `
-          text-[2rem] leading-10 font-extrabold
+          text-[2rem]/10 font-extrabold
           [text-shadow:1px_1px_2px_rgba(0,0,0,.25)]
           tablet:text-4xl
           laptop:text-7xl
@@ -173,8 +173,8 @@ function Wrapper({
           ${centerText ? "items-center" : ""}
           z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
           px-container
-          after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
-          after:w-full after:bg-(image:--hero-gradient)
+          after:absolute after:top-0 after:left-0 after:-z-10 after:size-full
+          after:bg-(image:--hero-gradient)
         `}
       >
         {children}

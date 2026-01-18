@@ -37,9 +37,9 @@ export function MostWatchedMovies({
   return (
     <section
       className={`
-        max-w-[calc(250px_*_4)] pb-5
+        max-w-[calc(250px*4)] pb-5
         laptop:pb-10
-        desktop:max-w-[calc(298px_*_4)]
+        desktop:max-w-[calc(298px*4)]
         ${className}
       `}
     >

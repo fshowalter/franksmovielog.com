@@ -32,9 +32,7 @@ export function ListItemWatchlistReason({
 
   return (
     <div
-      className={`
-        font-sans text-sm leading-4 font-normal tracking-prose text-subtle
-      `}
+      className={`font-sans text-sm/4 font-normal tracking-prose text-subtle`}
     >
       Because {toSentence(credits)}.
     </div>

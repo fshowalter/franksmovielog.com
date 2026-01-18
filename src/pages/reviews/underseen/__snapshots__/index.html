@@ -54,7 +54,7 @@
     <title>Underseen Gems - Frank&#39;s Movie Log</title>
   </head>
   <body
-    class="h-full w-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
+    class="size-full bg-canvas text-default data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs [&#38;.nav-open]:overflow-hidden"
   >
     <style>
       astro-island,
@@ -279,11 +279,11 @@
             class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent mix-blend-hard-light"
           >
             <div
-              class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+              class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
             >
               <a href="/">Frank&#x27;s Movie Log</a>
             </div>
-            <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+            <p class="w-full pl-px text-sm/4 italic opacity-85">
               by Frank Showalter
             </p>
           </div>
@@ -341,7 +341,7 @@
               <button
                 aria-keyshortcuts="Control+K"
                 aria-label="Search"
-                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm leading-6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
+                class="flex size-10 transform-gpu cursor-pointer items-center justify-center overflow-hidden text-sm/6 ring-default transition-all duration-500 hover:text-accent laptop:ml-6"
                 data-open-modal="true"
                 disabled=""
                 title="Search: Control+K"
@@ -372,7 +372,7 @@
               aria-controls="nav-menu"
               aria-expanded="false"
               aria-label="Toggle navigation menu"
-              class="group/button relative z-nav-toggle ml-2 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
+              class="group/button relative z-nav-toggle ml-2 flex size-10 transform-gpu cursor-pointer items-center justify-center transition-all duration-500"
               data-nav-drawer-toggle="true"
               type="button"
             >
@@ -528,7 +528,7 @@
               loading="eager"
             />
             <div
-              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-(image:--hero-gradient)"
+              class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:size-full after:bg-(image:--hero-gradient)"
             >
               <p class="mb-4">
                 <a
@@ -538,7 +538,7 @@
                 >
               </p>
               <h1
-                class="text-[2rem] leading-10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
+                class="text-[2rem]/10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
                 data-pagefind-weight="10"
               >
                 Underseen
@@ -595,7 +595,7 @@
             </ul>
           </nav>
           <astro-island
-            uid="2t7q6h"
+            uid="ZITxUd"
             prefix="r3"
             component-url="~/features/reviews/Underseen"
             component-export="Underseen"
@@ -634,7 +634,7 @@
                         class="flex items-baseline gap-x-4 text-xs font-bold tracking-wide text-subtle"
                         >Sort<!-- -->
                         <select
-                          class="flex w-full appearance-none border-none bg-default py-2 pr-4 pl-4 font-serif text-base font-normal tracking-normal overflow-ellipsis text-default shadow-all outline-accent"
+                          class="flex w-full appearance-none border-none bg-default px-4 py-2 font-serif text-base font-normal tracking-normal text-ellipsis text-default shadow-all outline-accent"
                         >
                           <option value="title-asc" selected="">
                             Title (A → Z)
@@ -679,7 +679,7 @@
                       <li class="block first-of-type:pt-4" id="#">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             #
                           </div>
@@ -717,7 +717,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/20000-years-in-sing-sing-1932/"
                                       >20,000 Years in Sing Sing<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -735,12 +735,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       May 9, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -765,7 +765,7 @@
                       <li class="block first-of-type:pt-4" id="A">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             A
                           </div>
@@ -803,7 +803,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-amazing-dr-clitterhouse-1938/"
                                       >The Amazing Dr. Clitterhouse<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -821,12 +821,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 22, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -865,7 +865,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/arrebato-1979/"
                                       >Arrebato<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -883,12 +883,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Sep 16, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -918,7 +918,7 @@
                       <li class="block first-of-type:pt-4" id="B">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             B
                           </div>
@@ -956,7 +956,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/bandido-1956/"
                                       >Bandido!<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -974,12 +974,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jan 27, 2012
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1033,7 +1033,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/beyond-the-door-iii-1989/"
                                       >Beyond the Door III<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1051,12 +1051,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 27, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Fantasy</span
                                       ><span
@@ -1095,7 +1095,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/blood-alley-1955/"
                                       >Blood Alley<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1113,12 +1113,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Dec 25, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1157,7 +1157,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/blood-on-the-moon-1948/"
                                       >Blood on the Moon<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1175,12 +1175,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 20, 2007
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -1219,7 +1219,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/bone-1972/"
                                       >Bone<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1237,12 +1237,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 2, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -1286,7 +1286,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-boxers-omen-1983/"
                                       >The Boxer&#x27;s Omen<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1304,12 +1304,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Mar 30, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span>
                                     </div>
@@ -1342,7 +1342,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-bribe-1949/"
                                       >The Bribe<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1360,12 +1360,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Dec 12, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -1395,7 +1395,7 @@
                       <li class="block first-of-type:pt-4" id="C">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             C
                           </div>
@@ -1433,7 +1433,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-camp-on-blood-island-1958/"
                                       >The Camp on Blood Island<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1451,12 +1451,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 10, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1505,7 +1505,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-carey-treatment-1972/"
                                       >The Carey Treatment<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1523,12 +1523,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 19, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -1572,7 +1572,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-corn-is-green-1945/"
                                       >The Corn Is Green<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1590,12 +1590,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Sep 7, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span>
                                     </div>
@@ -1628,7 +1628,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/count-yorga-vampire-1970/"
                                       >Count Yorga, Vampire<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1646,12 +1646,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 24, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -1710,7 +1710,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/crisis-1946/"
                                       >Crisis<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1728,12 +1728,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Dec 13, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -1753,7 +1753,7 @@
                       <li class="block first-of-type:pt-4" id="D">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             D
                           </div>
@@ -1791,7 +1791,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-dawn-patrol-1930/"
                                       >The Dawn Patrol<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1809,12 +1809,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Sep 13, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1858,7 +1858,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/dead-heat-on-a-merry-go-round-1966/"
                                       >Dead Heat on a Merry-Go-Round<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1876,12 +1876,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 23, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -1925,7 +1925,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/disciples-of-shaolin-1975/"
                                       >Disciples of Shaolin<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -1943,12 +1943,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 5, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -1987,7 +1987,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/dragon-swamp-1969/"
                                       >Dragon Swamp<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2005,12 +2005,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Dec 1, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2049,7 +2049,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/duel-to-the-death-1983/"
                                       >Duel to the Death<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2067,12 +2067,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jan 13, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2107,7 +2107,7 @@
                       <li class="block first-of-type:pt-4" id="E">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             E
                           </div>
@@ -2145,7 +2145,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/escape-from-fort-bravo-1953/"
                                       >Escape from Fort Bravo<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2163,12 +2163,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 10, 2007
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Western</span>
                                     </div>
@@ -2182,7 +2182,7 @@
                       <li class="block first-of-type:pt-4" id="H">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             H
                           </div>
@@ -2220,7 +2220,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/habit-1995/"
                                       >Habit<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2238,12 +2238,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 12, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -2287,7 +2287,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/having-a-wild-weekend-1965/"
                                       >Having a Wild Weekend<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2305,12 +2305,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 18, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -2349,7 +2349,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/home-from-the-hill-1960/"
                                       >Home from the Hill<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2367,12 +2367,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 21, 2012
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -2411,7 +2411,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/homicidal-1961/"
                                       >Homicidal<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2429,12 +2429,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 20, 2007
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -2478,7 +2478,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-hurricane-1937/"
                                       >The Hurricane<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2496,12 +2496,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 22, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2531,7 +2531,7 @@
                       <li class="block first-of-type:pt-4" id="I">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             I
                           </div>
@@ -2569,7 +2569,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/in-name-only-1939/"
                                       >In Name Only<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2587,12 +2587,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 22, 2007
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -2631,7 +2631,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/it-rains-on-our-love-1946/"
                                       >It Rains on Our Love<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2649,12 +2649,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Dec 16, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -2693,7 +2693,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/i-went-down-1997/"
                                       >I Went Down<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2711,12 +2711,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jul 8, 2004
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -2746,7 +2746,7 @@
                       <li class="block first-of-type:pt-4" id="J">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             J
                           </div>
@@ -2784,7 +2784,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-joker-is-wild-1957/"
                                       >The Joker Is Wild<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2802,12 +2802,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 15, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Biography</span
                                       ><span
@@ -2832,7 +2832,7 @@
                       <li class="block first-of-type:pt-4" id="L">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             L
                           </div>
@@ -2870,7 +2870,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/last-stop-on-the-night-train-1975/"
                                       >Last Stop on the Night Train<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2888,12 +2888,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Sep 24, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Horror</span
                                       ><span
@@ -2932,7 +2932,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-long-gray-line-1955/"
                                       >The Long Gray Line<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -2950,12 +2950,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 22, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Biography</span
                                       ><span
@@ -3004,7 +3004,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-lost-patrol-1934/"
                                       >The Lost Patrol<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3022,12 +3022,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 23, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -3057,7 +3057,7 @@
                       <li class="block first-of-type:pt-4" id="M">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             M
                           </div>
@@ -3095,7 +3095,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/macao-1952/"
                                       >Macao<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3113,12 +3113,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jan 3, 2009
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Adventure</span
                                       ><span
@@ -3172,7 +3172,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/miranda-2002/"
                                       >Miranda<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3190,12 +3190,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 28, 2004
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -3244,7 +3244,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/murder-a-la-mod-1968/"
                                       >Murder à la Mod<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3262,12 +3262,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jan 1, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -3297,7 +3297,7 @@
                       <li class="block first-of-type:pt-4" id="N">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             N
                           </div>
@@ -3335,7 +3335,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/ninja-in-the-dragons-den-1982/"
                                       >Ninja in the Dragon&#x27;s Den<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3353,12 +3353,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Apr 24, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -3378,7 +3378,7 @@
                       <li class="block first-of-type:pt-4" id="O">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             O
                           </div>
@@ -3416,7 +3416,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/one-armed-boxer-1972/"
                                       >One-Armed Boxer<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3434,12 +3434,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Sep 1, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -3483,7 +3483,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/one-on-top-of-the-other-1969/"
                                       >One on Top of the Other<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3501,12 +3501,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Sep 24, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -3536,7 +3536,7 @@
                       <li class="block first-of-type:pt-4" id="P">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             P
                           </div>
@@ -3574,7 +3574,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/paranoiac-1963/"
                                       >Paranoiac<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3592,12 +3592,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 15, 2007
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -3646,7 +3646,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-peanut-butter-solution-1985/"
                                       >The Peanut Butter Solution<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3664,12 +3664,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 26, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Adventure</span
                                       ><span
@@ -3723,7 +3723,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-phantom-of-the-opera-1962/"
                                       >The Phantom of the Opera<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3741,12 +3741,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 11, 2007
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -3805,7 +3805,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-presidents-analyst-1967/"
                                       >The President&#x27;s Analyst<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3823,12 +3823,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Dec 18, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -3853,7 +3853,7 @@
                       <li class="block first-of-type:pt-4" id="R">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             R
                           </div>
@@ -3891,7 +3891,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-racket-1951/"
                                       >The Racket<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3909,12 +3909,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jul 11, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -3963,7 +3963,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-rat-pack-1998/"
                                       >The Rat Pack<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -3981,12 +3981,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Sep 3, 2003
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Biography</span
                                       ><span
@@ -4030,7 +4030,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-road-to-singapore-1931/"
                                       >The Road to Singapore<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4048,12 +4048,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Mar 2, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -4073,7 +4073,7 @@
                       <li class="block first-of-type:pt-4" id="S">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             S
                           </div>
@@ -4111,7 +4111,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/salvation-1987/"
                                       >Salvation!<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4129,12 +4129,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 27, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span>
                                     </div>
@@ -4167,7 +4167,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/scalpel-1977/"
                                       >Scalpel<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4185,12 +4185,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jul 16, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -4234,7 +4234,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-seventh-curse-1986/"
                                       >The Seventh Curse<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4252,12 +4252,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 17, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -4296,7 +4296,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/she-played-with-fire-1957/"
                                       >She Played with Fire<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4314,12 +4314,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 12, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Crime</span
                                       ><span
@@ -4368,7 +4368,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/soldier-in-the-rain-1963/"
                                       >Soldier in the Rain<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4386,12 +4386,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 14, 2012
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -4435,7 +4435,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/soul-of-the-sword-1978/"
                                       >Soul of the Sword<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4453,12 +4453,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       May 31, 2025
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -4497,7 +4497,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-stranglers-of-bombay-1959/"
                                       >The Stranglers of Bombay<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4515,12 +4515,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Oct 2, 2008
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -4550,7 +4550,7 @@
                       <li class="block first-of-type:pt-4" id="T">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             T
                           </div>
@@ -4588,7 +4588,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/tall-in-the-saddle-1944/"
                                       >Tall in the Saddle<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4606,12 +4606,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 6, 2024
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Western</span>
                                     </div>
@@ -4644,7 +4644,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/the-thief-who-came-to-dinner-1973/"
                                       >The Thief Who Came to Dinner<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4662,12 +4662,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Aug 30, 2022
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -4706,7 +4706,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/trouble-along-the-way-1953/"
                                       >Trouble Along the Way<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4724,12 +4724,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Mar 11, 2004
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -4759,7 +4759,7 @@
                       <li class="block first-of-type:pt-4" id="U">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             U
                           </div>
@@ -4797,7 +4797,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/up-the-river-1930/"
                                       >Up the River<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4815,12 +4815,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Nov 6, 2020
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Comedy</span
                                       ><span
@@ -4845,7 +4845,7 @@
                       <li class="block first-of-type:pt-4" id="V">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             V
                           </div>
@@ -4883,7 +4883,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/violent-playground-1958/"
                                       >Violent Playground<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4901,12 +4901,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jun 28, 2021
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Drama</span
                                       ><span
@@ -4926,7 +4926,7 @@
                       <li class="block first-of-type:pt-4" id="W">
                         <div class="pt-0 text-md">
                           <div
-                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl leading-8 tablet:px-1"
+                            class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
                           >
                             W
                           </div>
@@ -4964,7 +4964,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/welcome-home-brother-charles-1975/"
                                       >Welcome Home Brother Charles<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -4982,12 +4982,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jul 6, 2023
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Action</span
                                       ><span
@@ -5031,7 +5031,7 @@
                                     class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
                                   >
                                     <a
-                                      class="text-base leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                      class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
                                       href="/reviews/west-of-shanghai-1937/"
                                       >West of Shanghai<!-- -->  <span
                                         class="text-xxs leading-none font-light text-subtle"
@@ -5049,12 +5049,12 @@
                                         width="75"
                                     /></picture>
                                     <div
-                                      class="font-sans text-[13px] leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-[13px]/4 tracking-prose text-subtle"
                                     >
                                       Jul 23, 2007
                                     </div>
                                     <div
-                                      class="font-sans text-xs leading-4 tracking-prose text-subtle"
+                                      class="font-sans text-xs/4 tracking-prose text-subtle"
                                     >
                                       <span>Adventure</span
                                       ><span
@@ -5091,16 +5091,16 @@
                     id="filters"
                   >
                     <form
-                      class="flex h-full w-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
+                      class="flex size-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
                     >
                       <button
                         aria-label="Close filters"
-                        class="absolute top-7 right-4 z-10 flex h-10 w-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
+                        class="absolute top-7 right-4 z-10 flex size-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
                         type="button"
                       >
                         <svg
                           aria-hidden="true"
-                          class="h-4 w-4 transform-gpu"
+                          class="size-4 transform-gpu"
                           fill="none"
                           stroke="currentColor"
                           stroke-width="2"
@@ -5142,7 +5142,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="1930" selected="">1930</option>
                                 <option value="1931">1931</option>
@@ -5196,7 +5196,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2002" selected="">2002</option>
                                 <option value="1998">1998</option>
@@ -5259,7 +5259,7 @@
                               aria-expanded="false"
                               aria-haspopup="listbox"
                               aria-label="Genres"
-                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
+                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded-sm border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
                               id="button-genres"
                               type="button"
                             >
@@ -5272,7 +5272,7 @@
                                 class="absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2"
                                 ><svg
                                   aria-hidden="true"
-                                  class="pointer-events-none h-5 w-5 text-subtle"
+                                  class="pointer-events-none size-5 text-subtle"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -5299,7 +5299,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="1" selected="">F</option>
                                 <option value="2">D-</option>
@@ -5320,7 +5320,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="13" selected="">A+</option>
                                 <option value="12">A</option>
@@ -5351,7 +5351,7 @@
                                 class="min-w-10 text-left text-sm tracking-serif-wide"
                                 >From</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2003" selected="">2003</option>
                                 <option value="2004">2004</option>
@@ -5371,7 +5371,7 @@
                                 class="min-w-10 text-center text-sm tracking-serif-wide"
                                 >to</span
                               ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base leading-6 text-subtle shadow-all outline-accent"
+                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
                               >
                                 <option value="2025" selected="">2025</option>
                                 <option value="2024">2024</option>
@@ -5434,11 +5434,11 @@
                   class="flex transform-gpu flex-col transition-all duration-500 has-[a:hover]:text-accent"
                 >
                   <div
-                    class="text-[1.375rem] leading-8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
+                    class="text-[1.375rem]/8 font-normal whitespace-nowrap tablet:text-[1.5625rem]"
                   >
                     <a href="/">Frank&#x27;s Movie Log</a>
                   </div>
-                  <p class="w-full pl-px text-sm leading-4 italic opacity-85">
+                  <p class="w-full pl-px text-sm/4 italic opacity-85">
                     by Frank Showalter
                   </p>
                 </div>
@@ -5694,7 +5694,7 @@
               <!-- Magnifying glass icon -->
               <svg
                 aria-hidden="true"
-                class="pointer-events-none absolute top-[18px] left-4 h-5 w-5 text-default opacity-70"
+                class="pointer-events-none absolute top-[18px] left-4 size-5 text-default opacity-70"
                 fill="none"
                 height="18"
                 viewBox="0 0 18 18"
@@ -5724,12 +5724,12 @@
               <!-- Clear button -->
               <button
                 aria-label="Clear search"
-                class="absolute top-6 right-24 hidden h-4 w-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
+                class="absolute top-6 right-24 hidden size-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
                 id="pagefind-clear-button"
                 type="button"
               >
                 <svg
-                  class="h-full w-full"
+                  class="size-full"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -5749,7 +5749,7 @@
           <div
             aria-atomic="true"
             aria-live="polite"
-            class="border-b border-default px-4 py-4 font-sans text-xs font-normal text-subtle empty:hidden"
+            class="border-b border-default p-4 font-sans text-xs font-normal text-subtle empty:hidden"
             id="pagefind-results-counter"
             role="status"
           ></div>
@@ -5763,7 +5763,7 @@
         >
           <div id="pagefind-results"></div>
           <!-- Load More Button -->
-          <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
+          <div class="hidden p-4" id="pagefind-load-more-wrapper">
             <button
               aria-controls="pagefind-results"
               class="mx-auto block h-10 w-full max-w-button bg-canvas font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
@@ -5775,7 +5775,7 @@
           </div>
         </div>
         <div
-          class="px-4 py-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
+          class="p-4 font-sans text-xs font-light tracking-wide text-subtle tablet:px-6 laptop:block laptop:px-8"
         >
           <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
             >Tab</kbd

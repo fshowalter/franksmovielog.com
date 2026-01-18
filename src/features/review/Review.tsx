@@ -81,7 +81,8 @@ export function Review({
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
               after:origin-center after:scale-x-0 after:bg-accent
               after:transition-transform
-              hover:text-accent hover:after:scale-x-100
+              hover:text-accent
+              hover:after:scale-x-100
             `}
             href="/reviews/"
           >

@@ -117,7 +117,7 @@ function Callout({
         {reviewed.toLocaleString()} / {total.toLocaleString()}
         <div
           className={`
-            font-sans text-sm leading-4 font-normal tracking-prose text-subtle
+            font-sans text-sm/4 font-normal tracking-prose text-subtle
           `}
         >
           Reviewed
