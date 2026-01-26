@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 5,
-  "viewingCount": 9,
-  "titleCount": 9,
+  "newTitleCount": 6,
+  "viewingCount": 10,
+  "titleCount": 10,
   "mediaDistribution": [
     {
       "name": "4k UHD Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "Blu-ray",
-      "count": 3
+      "count": 4
     },
     {
       "name": "DVD",
@@ -37,12 +37,59 @@
     },
     {
       "name": "1990s",
-      "count": 3
+      "count": 4
     }
   ],
   "mostWatchedTitles": [],
   "mostWatchedDirectors": [],
-  "mostWatchedPerformers": [],
+  "mostWatchedPerformers": [
+    {
+      "name": "Julian Sands",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0102511",
+          "title": "Naked Lunch",
+          "sortTitle": "naked-lunch-1991",
+          "releaseYear": "1991",
+          "releaseDate": "1991-12-12",
+          "genres": [
+            "Drama",
+            "Mystery"
+          ],
+          "slug": "naked-lunch-1991",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2026-01-24",
+          "reviewSequence": 2997,
+          "viewingDate": "2026-01-24",
+          "viewingSequence": 2997,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0119889",
+          "title": "The Phantom of the Opera",
+          "sortTitle": "phantom-of-the-opera-1998",
+          "releaseYear": "1998",
+          "releaseDate": "1998-11-20",
+          "genres": [
+            "Horror"
+          ],
+          "slug": "the-phantom-of-the-opera-1998",
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2026-01-25",
+          "reviewSequence": 2998,
+          "viewingDate": "2026-01-25",
+          "viewingSequence": 2998,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    }
+  ],
   "mostWatchedWriters": [],
-  "reviewCount": 9
+  "reviewCount": 10
 }
