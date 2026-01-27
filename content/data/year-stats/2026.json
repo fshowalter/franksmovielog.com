@@ -1,15 +1,15 @@
 {
   "year": "2026",
   "newTitleCount": 6,
-  "viewingCount": 10,
-  "titleCount": 10,
+  "viewingCount": 11,
+  "titleCount": 11,
   "mediaDistribution": [
     {
-      "name": "4k UHD Blu-ray",
-      "count": 4
+      "name": "Blu-ray",
+      "count": 5
     },
     {
-      "name": "Blu-ray",
+      "name": "4k UHD Blu-ray",
       "count": 4
     },
     {
@@ -25,7 +25,7 @@
     },
     {
       "name": "1960s",
-      "count": 2
+      "count": 3
     },
     {
       "name": "1970s",
@@ -43,6 +43,55 @@
   "mostWatchedTitles": [],
   "mostWatchedDirectors": [],
   "mostWatchedPerformers": [
+    {
+      "name": "Christopher Lee",
+      "count": 2,
+      "slug": "christopher-lee",
+      "viewings": [
+        {
+          "imdbId": "tt0050280",
+          "title": "The Curse of Frankenstein",
+          "sortTitle": "curse-of-frankenstein-1957",
+          "releaseYear": "1957",
+          "releaseDate": "1957-05-02",
+          "genres": [
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-curse-of-frankenstein-1957",
+          "grade": "A",
+          "gradeValue": 15,
+          "reviewDate": "2026-01-08",
+          "reviewSequence": 2991,
+          "viewingDate": "2026-01-08",
+          "viewingSequence": 2991,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0057924",
+          "title": "The Castle of the Living Dead",
+          "sortTitle": "castle-of-the-living-dead-1964",
+          "releaseYear": "1964",
+          "releaseDate": "1964-08-05",
+          "genres": [
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-castle-of-the-living-dead-1964",
+          "grade": "D",
+          "gradeValue": 6,
+          "reviewDate": "2026-01-26",
+          "reviewSequence": 2999,
+          "viewingDate": "2026-01-26",
+          "viewingSequence": 2999,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
     {
       "name": "Julian Sands",
       "count": 2,
@@ -91,5 +140,5 @@
     }
   ],
   "mostWatchedWriters": [],
-  "reviewCount": 10
+  "reviewCount": 11
 }
