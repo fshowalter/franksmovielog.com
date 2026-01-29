@@ -4,6 +4,7 @@ import path from "node:path";
 import sharp from "sharp";
 
 import { allReviews } from "~/api/reviews";
+import { getOpenGraphStillBuffer } from "~/api/stills";
 import { fileForGrade } from "~/components/grade/fileForGrade";
 import { ReviewOpenGraphImage } from "~/features/review/ReviewOpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
@@ -40,12 +41,7 @@ export async function getStaticPaths() {
 export const GET: APIRoute = async function get({ props }) {
   const { grade, slug, title, year } = props as Props;
 
-  const imageBuffer = await sharp(
-    path.resolve(`./content/assets/stills/${slug}.png`),
-  )
-    .resize(1200)
-    .toFormat("png")
-    .toBuffer();
+  const imageBuffer = await getOpenGraphStillBuffer(slug);
 
   const gradeBuffer = await sharp(
     path.resolve(`./public${fileForGrade(grade)}`),
