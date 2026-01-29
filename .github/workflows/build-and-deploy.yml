@@ -43,7 +43,7 @@ jobs:
 
       - name: get astro cache
         id: astro-cache-build
-        uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: node_modules/.astro
           key: ${{ runner.os }}-astro-cache-v2-${{ github.run_id }}
@@ -52,7 +52,7 @@ jobs:
 
       - name: get content cache
         id: content-cache-build
-        uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: .cache
           key: ${{ runner.os }}-content-cache-v1-${{ github.run_id }}
