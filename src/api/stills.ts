@@ -1,6 +1,18 @@
 import { getImage } from "astro:assets";
+import path from "node:path";
+import sharp from "sharp";
+
+import {
+  createCacheConfig,
+  createCacheKey,
+  ensureCacheDir,
+  getCachedItem,
+  saveCachedItem,
+} from "~/utils/cache";
 
 import { normalizeSources } from "./utils/normalizeSources";
+
+const cacheConfig = createCacheConfig("still-og");
 
 /**
  * Props for still images.
@@ -13,6 +25,50 @@ export type StillImageProps = {
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/stills/*.png",
 );
+
+/**
+ * Generates OpenGraph still image.
+ * @param slug - Identifier for the backdrop image
+ * @returns Base64-encoded PNG image string
+ */
+export async function getOpenGraphStillBuffer(slug: string) {
+  const width = 1200;
+  const format = "png";
+  let cacheKey = "";
+
+  if (cacheConfig.enableCache) {
+    await ensureCacheDir(cacheConfig.cacheDir);
+
+    const cacheKeyData = `${slug}-${width}-${format}`;
+    cacheKey = createCacheKey(cacheKeyData);
+
+    const cachedBackdrop = await getCachedItem<Buffer<ArrayBufferLike>>(
+      cacheConfig.cacheDir,
+      cacheKey,
+      "png",
+      true,
+      cacheConfig.debugCache,
+      `Cached open-graph still: ${slug}`,
+    );
+
+    if (cachedBackdrop) {
+      return cachedBackdrop;
+    }
+  }
+
+  const imageBuffer = await sharp(
+    path.resolve(`./content/assets/stills/${slug}.png`),
+  )
+    .resize(width)
+    .toFormat(format)
+    .toBuffer();
+
+  if (cacheConfig.enableCache) {
+    await saveCachedItem(cacheConfig.cacheDir, cacheKey, "png", imageBuffer);
+  }
+
+  return imageBuffer;
+}
 
 /**
  * Generates OpenGraph still image source URL.

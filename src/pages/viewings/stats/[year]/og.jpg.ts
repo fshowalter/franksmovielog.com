@@ -32,7 +32,7 @@ export const GET: APIRoute = async function get({ props }) {
     }),
   );
 
-  return new Response(jpeg, {
+  return new Response(new Uint8ClampedArray(jpeg), {
     headers: {
       "Content-Type": "image/jpg",
     },
