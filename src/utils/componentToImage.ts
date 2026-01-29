@@ -45,13 +45,11 @@ type ReactElementWithType = ReactElement & {
  */
 export async function componentToImage(
   component: ReturnType<OpenGraphImageComponent>,
-): Promise<Uint8Array<ArrayBuffer>> {
+): Promise<Buffer<ArrayBufferLike>> {
   // If caching is disabled, generate and return image directly
   if (!cacheConfig.enableCache) {
     const svg = await componentToSvg(component);
-    return (await sharp(Buffer.from(svg))
-      .jpeg()
-      .toBuffer()) as Uint8Array<ArrayBuffer>;
+    return await sharp(Buffer.from(svg)).jpeg().toBuffer();
   }
 
   await ensureCacheDir(cacheConfig.cacheDir);
@@ -61,7 +59,7 @@ export async function componentToImage(
   const cacheKey = createCacheKey(serialized);
 
   // Check for cached image
-  const cachedImage = await getCachedItem<Uint8Array<ArrayBuffer>>(
+  const cachedImage = await getCachedItem<Buffer<ArrayBufferLike>>(
     cacheConfig.cacheDir,
     cacheKey,
     "jpg",
@@ -78,9 +76,7 @@ export async function componentToImage(
   const svg = await componentToSvg(component);
 
   // Convert SVG to JPEG
-  const imageBuffer = (await sharp(Buffer.from(svg))
-    .jpeg()
-    .toBuffer()) as Uint8Array<ArrayBuffer>;
+  const imageBuffer = await sharp(Buffer.from(svg)).jpeg().toBuffer();
 
   // Save to cache
   await saveCachedItem(cacheConfig.cacheDir, cacheKey, "jpg", imageBuffer);

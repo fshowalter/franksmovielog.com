@@ -102,7 +102,7 @@ export async function saveCachedItem(
   cacheDir: string,
   cacheKey: string,
   extension: string,
-  content: string | Uint8Array<ArrayBuffer>,
+  content: Buffer<ArrayBufferLike> | string,
 ): Promise<void> {
   const cachePath = getCachePath(cacheDir, cacheKey, extension);
   const cacheSubDir = path.dirname(cachePath);
