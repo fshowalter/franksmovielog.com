@@ -7,7 +7,16 @@ import { allReviews } from "~/api/reviews";
 import { getOpenGraphStillBuffer } from "~/api/stills";
 import { fileForGrade } from "~/components/grade/fileForGrade";
 import { ReviewOpenGraphImage } from "~/features/review/ReviewOpenGraphImage";
+import {
+  createCacheConfig,
+  createCacheKey,
+  ensureCacheDir,
+  getCachedItem,
+  saveCachedItem,
+} from "~/utils/cache";
 import { componentToImage } from "~/utils/componentToImage";
+
+const cacheConfig = createCacheConfig("grade-og");
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
@@ -43,12 +52,32 @@ export const GET: APIRoute = async function get({ props }) {
 
   const imageBuffer = await getOpenGraphStillBuffer(slug);
 
-  const gradeBuffer = await sharp(
-    path.resolve(`./public${fileForGrade(grade)}`),
-  )
-    .resize(240)
-    .toFormat("png")
-    .toBuffer();
+  const width = 240;
+  let gradeBuffer;
+  let cacheKey = "";
+
+  if (cacheConfig.enableCache) {
+    await ensureCacheDir(cacheConfig.cacheDir);
+
+    const cacheKeyData = `${grade}-${width}`;
+    cacheKey = createCacheKey(cacheKeyData);
+
+    gradeBuffer = await getCachedItem<Buffer<ArrayBufferLike>>(
+      cacheConfig.cacheDir,
+      cacheKey,
+      "png",
+      true,
+      cacheConfig.debugCache,
+      `Cached open-graph grade: ${grade}`,
+    );
+  }
+
+  if (!gradeBuffer) {
+    gradeBuffer = await sharp(path.resolve(`./public${fileForGrade(grade)}`))
+      .resize(240)
+      .toFormat("png")
+      .toBuffer();
+  }
 
   const jpeg = await componentToImage(
     ReviewOpenGraphImage({
@@ -58,6 +87,10 @@ export const GET: APIRoute = async function get({ props }) {
       title,
     }),
   );
+
+  if (cacheConfig.enableCache) {
+    await saveCachedItem(cacheConfig.cacheDir, cacheKey, "png", gradeBuffer);
+  }
 
   return new Response(new Uint8ClampedArray(jpeg), {
     headers: {
