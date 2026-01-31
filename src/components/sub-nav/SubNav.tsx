@@ -20,7 +20,8 @@ export function SubNav({
       >
         <h3
           className={`
-            snap-start p-4 font-sans tracking-normal whitespace-nowrap text-grey
+            snap-start p-4 pr-2 font-sans text-base tracking-normal
+            whitespace-nowrap text-grey
           `}
         >
           Jump to:
