@@ -158,11 +158,11 @@ export function FilterAndSortContainer<T extends string>({
               ${
                 subNav
                   ? `
-                    [--filter-and-sort-container-scroll-offset:236px]
+                    [--filter-and-sort-container-scroll-offset:204px]
                     tablet:[--filter-and-sort-container-scroll-offset:176px]
                   `
                   : `
-                    [--filter-and-sort-container-scroll-offset:181px]
+                    [--filter-and-sort-container-scroll-offset:148px]
                     tablet:[--filter-and-sort-container-scroll-offset:121px]
                   `
               }
