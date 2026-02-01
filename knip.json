@@ -18,7 +18,6 @@
     "!scripts/**"
   ],
   "ignoreDependencies": [
-    "@anthropic-ai/claude-code",
     "@prettier/plugin-xml",
     "babel-plugin-react-compiler",
     "@vitest/coverage-v8"
