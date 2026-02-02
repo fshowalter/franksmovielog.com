@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 9,
-  "viewingCount": 15,
-  "titleCount": 15,
+  "viewingCount": 16,
+  "titleCount": 16,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -23,10 +23,18 @@
     {
       "name": "HBO Max",
       "count": 1
+    },
+    {
+      "name": "Watch TCM",
+      "count": 1
     }
   ],
   "venueDistribution": [],
   "decadeDistribution": [
+    {
+      "name": "1930s",
+      "count": 1
+    },
     {
       "name": "1940s",
       "count": 1
@@ -153,8 +161,58 @@
           "venue": null
         }
       ]
+    },
+    {
+      "name": "Henry Stephenson",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0038700",
+          "title": "The Locket",
+          "sortTitle": "locket-1946",
+          "releaseYear": "1946",
+          "releaseDate": "1946-12-20",
+          "genres": [
+            "Crime",
+            "Drama",
+            "Film-Noir",
+            "Romance"
+          ],
+          "slug": "the-locket-1946",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-01-31",
+          "reviewSequence": 3003,
+          "viewingDate": "2026-01-31",
+          "viewingSequence": 3003,
+          "medium": "HBO Max",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0026922",
+          "title": "Rendezvous",
+          "sortTitle": "rendezvous-1935",
+          "releaseYear": "1935",
+          "releaseDate": "1935-10-23",
+          "genres": [
+            "Comedy",
+            "Drama",
+            "War"
+          ],
+          "slug": "rendezvous-1935",
+          "grade": "C",
+          "gradeValue": 9,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3004,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3004,
+          "medium": "Watch TCM",
+          "venue": null
+        }
+      ]
     }
   ],
   "mostWatchedWriters": [],
-  "reviewCount": 15
+  "reviewCount": 16
 }
