@@ -46,18 +46,18 @@ jobs:
         uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: node_modules/.astro
-          key: ${{ runner.os }}-astro-cache-v2-${{ github.run_id }}
+          key: astro-cache-v1-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-astro-cache-v2-
+            astro-cache-v1-
 
       - name: get content cache
         id: content-cache-build
         uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: .cache
-          key: ${{ runner.os }}-content-cache-v1-${{ github.run_id }}
+          key: content-cache-v1-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-content-cache-v1-
+            content-cache-v1-
 
       - name: install dependencies
         run: npm install
