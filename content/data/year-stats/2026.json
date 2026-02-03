@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 9,
-  "viewingCount": 16,
-  "titleCount": 16,
+  "newTitleCount": 10,
+  "viewingCount": 17,
+  "titleCount": 17,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 6
+      "count": 7
     },
     {
       "name": "4k UHD Blu-ray",
@@ -53,7 +53,7 @@
     },
     {
       "name": "1980s",
-      "count": 2
+      "count": 3
     },
     {
       "name": "1990s",
@@ -163,56 +163,382 @@
       ]
     },
     {
-      "name": "Henry Stephenson",
+      "name": "Lung Ti",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0038700",
-          "title": "The Locket",
-          "sortTitle": "locket-1946",
-          "releaseYear": "1946",
-          "releaseDate": "1946-12-20",
+          "imdbId": "tt0076519",
+          "title": "Jade Tiger",
+          "sortTitle": "jade-tiger-1977",
+          "releaseYear": "1977",
+          "releaseDate": "1977-05-07",
           "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir",
-            "Romance"
+            "Action",
+            "Adventure"
           ],
-          "slug": "the-locket-1946",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2026-01-31",
-          "reviewSequence": 3003,
-          "viewingDate": "2026-01-31",
-          "viewingSequence": 3003,
-          "medium": "HBO Max",
+          "slug": "jade-tiger-1977",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2026-01-27",
+          "reviewSequence": 3000,
+          "viewingDate": "2026-01-27",
+          "viewingSequence": 3000,
+          "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0026922",
-          "title": "Rendezvous",
-          "sortTitle": "rendezvous-1935",
-          "releaseYear": "1935",
-          "releaseDate": "1935-10-23",
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
           "genres": [
-            "Comedy",
-            "Drama",
-            "War"
+            "Action",
+            "Drama"
           ],
-          "slug": "rendezvous-1935",
-          "grade": "C",
-          "gradeValue": 9,
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
           "reviewDate": "2026-02-01",
-          "reviewSequence": 3004,
+          "reviewSequence": 3005,
           "viewingDate": "2026-02-01",
-          "viewingSequence": 3004,
-          "medium": "Watch TCM",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Lo Lieh",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0076519",
+          "title": "Jade Tiger",
+          "sortTitle": "jade-tiger-1977",
+          "releaseYear": "1977",
+          "releaseDate": "1977-05-07",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": "jade-tiger-1977",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2026-01-27",
+          "reviewSequence": 3000,
+          "viewingDate": "2026-01-27",
+          "viewingSequence": 3000,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3005,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Fei Ai",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0076519",
+          "title": "Jade Tiger",
+          "sortTitle": "jade-tiger-1977",
+          "releaseYear": "1977",
+          "releaseDate": "1977-05-07",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": "jade-tiger-1977",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2026-01-27",
+          "reviewSequence": 3000,
+          "viewingDate": "2026-01-27",
+          "viewingSequence": 3000,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3005,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Shih-Ou Chang",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0076519",
+          "title": "Jade Tiger",
+          "sortTitle": "jade-tiger-1977",
+          "releaseYear": "1977",
+          "releaseDate": "1977-05-07",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": "jade-tiger-1977",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2026-01-27",
+          "reviewSequence": 3000,
+          "viewingDate": "2026-01-27",
+          "viewingSequence": 3000,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3005,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Miao Ching",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0076519",
+          "title": "Jade Tiger",
+          "sortTitle": "jade-tiger-1977",
+          "releaseYear": "1977",
+          "releaseDate": "1977-05-07",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": "jade-tiger-1977",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2026-01-27",
+          "reviewSequence": 3000,
+          "viewingDate": "2026-01-27",
+          "viewingSequence": 3000,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3005,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Tsun Liu",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0076519",
+          "title": "Jade Tiger",
+          "sortTitle": "jade-tiger-1977",
+          "releaseYear": "1977",
+          "releaseDate": "1977-05-07",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": "jade-tiger-1977",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2026-01-27",
+          "reviewSequence": 3000,
+          "viewingDate": "2026-01-27",
+          "viewingSequence": 3000,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3005,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Huang Pei-Chi",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0076519",
+          "title": "Jade Tiger",
+          "sortTitle": "jade-tiger-1977",
+          "releaseYear": "1977",
+          "releaseDate": "1977-05-07",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": "jade-tiger-1977",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2026-01-27",
+          "reviewSequence": 3000,
+          "viewingDate": "2026-01-27",
+          "viewingSequence": 3000,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3005,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Kwai Shan",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0076519",
+          "title": "Jade Tiger",
+          "sortTitle": "jade-tiger-1977",
+          "releaseYear": "1977",
+          "releaseDate": "1977-05-07",
+          "genres": [
+            "Action",
+            "Adventure"
+          ],
+          "slug": "jade-tiger-1977",
+          "grade": "C-",
+          "gradeValue": 8,
+          "reviewDate": "2026-01-27",
+          "reviewSequence": 3000,
+          "viewingDate": "2026-01-27",
+          "viewingSequence": 3000,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3005,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
     }
   ],
   "mostWatchedWriters": [],
-  "reviewCount": 16
+  "reviewCount": 17
 }
