@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 10,
-  "viewingCount": 17,
-  "titleCount": 17,
+  "viewingCount": 18,
+  "titleCount": 18,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 5
+      "count": 6
     },
     {
       "name": "DVD",
@@ -53,7 +53,7 @@
     },
     {
       "name": "1980s",
-      "count": 3
+      "count": 4
     },
     {
       "name": "1990s",
@@ -112,6 +112,53 @@
           "viewingDate": "2026-01-26",
           "viewingSequence": 2999,
           "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Lynn Theel",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0077235",
+          "title": "Big Wednesday",
+          "sortTitle": "big-wednesday-1978",
+          "releaseYear": "1978",
+          "releaseDate": "1978-05-25",
+          "genres": [
+            "Drama",
+            "Sport"
+          ],
+          "slug": "big-wednesday-1978",
+          "grade": "B",
+          "gradeValue": 12,
+          "reviewDate": "2026-01-18",
+          "reviewSequence": 2993,
+          "viewingDate": "2026-01-18",
+          "viewingSequence": 2993,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0080904",
+          "title": "Humanoids from the Deep",
+          "sortTitle": "humanoids-from-the-deep-1980",
+          "releaseYear": "1980",
+          "releaseDate": "1980-03-28",
+          "genres": [
+            "Horror",
+            "Sci-Fi"
+          ],
+          "slug": "humanoids-from-the-deep-1980",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2026-02-02",
+          "reviewSequence": 3006,
+          "viewingDate": "2026-02-02",
+          "viewingSequence": 3006,
+          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -490,55 +537,8 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Kwai Shan",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0076519",
-          "title": "Jade Tiger",
-          "sortTitle": "jade-tiger-1977",
-          "releaseYear": "1977",
-          "releaseDate": "1977-05-07",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": "jade-tiger-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2026-01-27",
-          "reviewSequence": 3000,
-          "viewingDate": "2026-01-27",
-          "viewingSequence": 3000,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0085840",
-          "title": "Mercenaries from Hong Kong",
-          "sortTitle": "mercenaries-from-hong-kong-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-12-22",
-          "genres": [
-            "Action",
-            "Drama"
-          ],
-          "slug": "mercenaries-from-hong-kong-1982",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2026-02-01",
-          "reviewSequence": 3005,
-          "viewingDate": "2026-02-01",
-          "viewingSequence": 3005,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [],
-  "reviewCount": 17
+  "reviewCount": 18
 }
