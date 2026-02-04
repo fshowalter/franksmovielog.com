@@ -73,12 +73,12 @@ function Breadcrumb({
   }
 
   return (
-    <p className="mb-4">
+    <p className="mb-2">
       <a
         className={`
-          relative inline-block font-sans text-sm font-bold tracking-wide
-          text-white/85 uppercase transition-all duration-500
-          after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
+          relative inline-block font-sans text-sm/relaxed font-bold
+          tracking-wide text-white/85 uppercase transition-all duration-500
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-accent
           after:transition-transform after:duration-500
           hover:text-accent
@@ -104,7 +104,7 @@ function Deck({
       className={`
         mt-1 font-sans text-base font-semibold text-white/90
         mix-blend-hard-light [text-shadow:1px_1px_2px_black]
-        laptop:my-4 laptop:text-xl
+        laptop:my-2 laptop:text-xl
         ${center ? `text-center` : ""}
       `}
     >
