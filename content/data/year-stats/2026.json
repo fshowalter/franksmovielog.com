@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 10,
-  "viewingCount": 19,
-  "titleCount": 19,
+  "newTitleCount": 11,
+  "viewingCount": 20,
+  "titleCount": 20,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 6
+      "count": 7
     },
     {
       "name": "DVD",
@@ -60,12 +60,66 @@
       "count": 4
     },
     {
+      "name": "2000s",
+      "count": 1
+    },
+    {
       "name": "2020s",
       "count": 1
     }
   ],
   "mostWatchedTitles": [],
-  "mostWatchedDirectors": [],
+  "mostWatchedDirectors": [
+    {
+      "name": "David Cronenberg",
+      "count": 2,
+      "slug": "david-cronenberg",
+      "viewings": [
+        {
+          "imdbId": "tt0102511",
+          "title": "Naked Lunch",
+          "sortTitle": "naked-lunch-1991",
+          "releaseYear": "1991",
+          "releaseDate": "1991-12-12",
+          "genres": [
+            "Drama",
+            "Mystery"
+          ],
+          "slug": "naked-lunch-1991",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2026-01-24",
+          "reviewSequence": 2997,
+          "viewingDate": "2026-01-24",
+          "viewingSequence": 2997,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0399146",
+          "title": "A History of Violence",
+          "sortTitle": "history-of-violence-2005",
+          "releaseYear": "2005",
+          "releaseDate": "2005-05-03",
+          "genres": [
+            "Action",
+            "Crime",
+            "Drama",
+            "Thriller"
+          ],
+          "slug": "a-history-of-violence-2005",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2026-02-05",
+          "reviewSequence": 3008,
+          "viewingDate": "2026-02-05",
+          "viewingSequence": 3008,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    }
+  ],
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
@@ -540,5 +594,5 @@
     }
   ],
   "mostWatchedWriters": [],
-  "reviewCount": 19
+  "reviewCount": 20
 }
