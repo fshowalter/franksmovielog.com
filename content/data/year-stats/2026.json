@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 11,
-  "viewingCount": 20,
-  "titleCount": 20,
+  "newTitleCount": 12,
+  "viewingCount": 21,
+  "titleCount": 21,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 8
+      "count": 9
     },
     {
       "name": "4k UHD Blu-ray",
@@ -49,7 +49,7 @@
     },
     {
       "name": "1970s",
-      "count": 4
+      "count": 5
     },
     {
       "name": "1980s",
@@ -593,6 +593,56 @@
       ]
     }
   ],
-  "mostWatchedWriters": [],
-  "reviewCount": 20
+  "mostWatchedWriters": [
+    {
+      "name": "John Milius",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0077235",
+          "title": "Big Wednesday",
+          "sortTitle": "big-wednesday-1978",
+          "releaseYear": "1978",
+          "releaseDate": "1978-05-25",
+          "genres": [
+            "Drama",
+            "Sport"
+          ],
+          "slug": "big-wednesday-1978",
+          "grade": "B",
+          "gradeValue": 12,
+          "reviewDate": "2026-01-18",
+          "reviewSequence": 2993,
+          "viewingDate": "2026-01-18",
+          "viewingSequence": 2993,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0070355",
+          "title": "Magnum Force",
+          "sortTitle": "magnum-force-1973",
+          "releaseYear": "1973",
+          "releaseDate": "1973-12-13",
+          "genres": [
+            "Action",
+            "Crime",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "magnum-force-1973",
+          "grade": "B-",
+          "gradeValue": 11,
+          "reviewDate": "2026-02-06",
+          "reviewSequence": 3009,
+          "viewingDate": "2026-02-06",
+          "viewingSequence": 3009,
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    }
+  ],
+  "reviewCount": 21
 }
