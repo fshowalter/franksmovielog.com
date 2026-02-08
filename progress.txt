@@ -243,11 +243,40 @@ All core components are now ready for use in Stage 2 (Reviews page conversion).
 
 ---
 
+### Task 2.4: Build Applied Filter Chips Helper ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** a1dd8165f
+- **Files Created:**
+  - `/src/features/reviews/appliedFilterChips.ts`
+  - `/src/features/reviews/appliedFilterChips.spec.ts`
+- **Tests:** 24/24 passing
+- **Features Implemented:**
+  - `buildAppliedFilterChips()` function converts ReviewsFiltersValues to FilterChip array
+  - Handles genre filters (multi-select) - creates individual chip per genre
+  - Handles grade range filter - converts numeric values (1-13) to letter grades (F to A+)
+  - Handles release year range filter - displays as "YYYY" or "YYYY-YYYY"
+  - Handles review year range filter - displays as "YYYY" or "YYYY-YYYY"
+  - Handles title search filter - displays as "Search: [query]"
+  - Excludes default/empty values (full grade range 1-13, empty/whitespace title)
+  - Generates unique IDs for each chip (e.g., "genre-horror", "gradeValue", "title")
+  - Maintains consistent ordering: genres, grade, releaseYear, reviewYear, title
+
+**Notes:**
+- Grade number to letter mapping follows GradeField component pattern
+- Grade range format matches spec: "A-" for single grade, "B+ to A-" for range
+- Full grade range (1-13) is excluded as it's the default "All" state
+- Genre IDs are kebab-case of genre name for uniqueness
+- All linting and TypeScript checks pass
+- Comprehensive test coverage including edge cases
+
+---
+
 ## Next Task
 
 **Stage 2: First Feature Conversion - Reviews Page (continued)**
 
-Task 2.4: Build appliedFilterChips helper for Reviews
-- Create `/src/features/reviews/appliedFilterChips.ts`
-- Convert active filter values into FilterChip format
-- Handle all filter types (genres, grade, years, title search)
+Task 2.5: Update FilterAndSortContainer
+- Accept new props: `activeFilters`, `onRemoveFilter`
+- Render AppliedFilters at top of drawer
+- Maintain backward compatibility
