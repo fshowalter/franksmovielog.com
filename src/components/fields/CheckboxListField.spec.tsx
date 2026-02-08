@@ -1,4 +1,4 @@
-import { act, render, screen, within } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, it, vi } from "vitest";
 
@@ -9,11 +9,11 @@ import { CheckboxListField } from "./CheckboxListField";
 // Helper function to get checkbox by its label text
 // Note: We use a regex pattern because the accessible name includes the count, e.g., "Action(10)"
 const getCheckboxByLabel = (labelText: string): HTMLInputElement => {
-  return screen.getByRole("checkbox", { name: new RegExp(`^${labelText}`) }) as HTMLInputElement;
+  return screen.getByRole("checkbox", { name: new RegExp(`^${labelText}`) });
 };
 
 const queryCheckboxByLabel = (labelText: string): HTMLInputElement | null => {
-  return screen.queryByRole("checkbox", { name: new RegExp(`^${labelText}`) }) as HTMLInputElement | null;
+  return screen.queryByRole("checkbox", { name: new RegExp(`^${labelText}`) });
 };
 
 const createDefaultProps = (
@@ -96,8 +96,8 @@ describe("CheckboxListField", () => {
       });
       render(<CheckboxListField {...props} />);
 
-      const actionCheckbox = getCheckboxByLabel("Action") as HTMLInputElement;
-      const horrorCheckbox = getCheckboxByLabel("Horror") as HTMLInputElement;
+      const actionCheckbox = getCheckboxByLabel("Action");
+      const horrorCheckbox = getCheckboxByLabel("Horror");
 
       expect(actionCheckbox.checked).toBe(true);
       expect(horrorCheckbox.checked).toBe(true);
@@ -177,7 +177,7 @@ describe("CheckboxListField", () => {
 
       expect(onChange).toHaveBeenCalledExactlyOnceWith(["action"]);
       expect(
-        (getCheckboxByLabel("Action") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Action")).checked,
       ).toBe(true);
     });
 
@@ -194,7 +194,7 @@ describe("CheckboxListField", () => {
 
       expect(onChange).toHaveBeenCalledExactlyOnceWith([]);
       expect(
-        (getCheckboxByLabel("Action") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Action")).checked,
       ).toBe(false);
     });
 
@@ -224,13 +224,13 @@ describe("CheckboxListField", () => {
       await user.keyboard(" ");
 
       expect(onChange).toHaveBeenCalledExactlyOnceWith(["action"]);
-      expect((checkbox as HTMLInputElement).checked).toBe(true);
+      expect(checkbox.checked).toBe(true);
 
       // Press space again to uncheck
       await user.keyboard(" ");
 
       expect(onChange).toHaveBeenLastCalledWith([]);
-      expect((checkbox as HTMLInputElement).checked).toBe(false);
+      expect(checkbox.checked).toBe(false);
     });
   });
 
@@ -396,10 +396,10 @@ describe("CheckboxListField", () => {
 
       // Verify initial state
       expect(
-        (getCheckboxByLabel("Action") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Action")).checked,
       ).toBe(true);
       expect(
-        (getCheckboxByLabel("Comedy") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Comedy")).checked,
       ).toBe(true);
 
       // Select additional option
@@ -414,13 +414,13 @@ describe("CheckboxListField", () => {
 
       // Should reset to default values
       expect(
-        (getCheckboxByLabel("Action") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Action")).checked,
       ).toBe(true);
       expect(
-        (getCheckboxByLabel("Comedy") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Comedy")).checked,
       ).toBe(true);
       expect(
-        (getCheckboxByLabel("Drama") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Drama")).checked,
       ).toBe(false);
     });
 
@@ -441,10 +441,10 @@ describe("CheckboxListField", () => {
       await user.click(getCheckboxByLabel("Comedy"));
 
       expect(
-        (getCheckboxByLabel("Action") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Action")).checked,
       ).toBe(true);
       expect(
-        (getCheckboxByLabel("Comedy") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Comedy")).checked,
       ).toBe(true);
 
       // Reset the form
@@ -455,10 +455,10 @@ describe("CheckboxListField", () => {
 
       // Should clear all selections
       expect(
-        (getCheckboxByLabel("Action") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Action")).checked,
       ).toBe(false);
       expect(
-        (getCheckboxByLabel("Comedy") as HTMLInputElement).checked,
+        (getCheckboxByLabel("Comedy")).checked,
       ).toBe(false);
     });
 

@@ -4,20 +4,20 @@ import { useEffect, useState } from "react";
 
 import { LabelText } from "./LabelText";
 
-export interface CheckboxListFieldOption {
+export type CheckboxListFieldOption = {
   count: number;
   label: string;
   value: string;
-}
+};
 
-export interface CheckboxListFieldProps {
+export type CheckboxListFieldProps = {
   defaultValues?: readonly string[];
   label: string;
   onChange: (values: string[]) => void;
   onClear?: () => void;
   options: readonly CheckboxListFieldOption[];
   showMoreThreshold?: number;
-}
+};
 
 /**
  * Checkbox list field for multi-selection with show more/less and clear functionality.
@@ -45,7 +45,7 @@ export function CheckboxListField({
   const [showAll, setShowAll] = useState(false);
 
   // AIDEV-NOTE: Sort options - selected items first (in selection order), then unselected alphabetically
-  const sortedOptions = [...options].sort((a, b) => {
+  const sortedOptions = [...options].toSorted((a, b) => {
     const aSelected = selectedValues.includes(a.value);
     const bSelected = selectedValues.includes(b.value);
 
@@ -150,8 +150,8 @@ export function CheckboxListField({
               <label
                 className={`
                   flex cursor-pointer items-center gap-3 rounded-sm py-2
-                  hover:bg-stripe
                   focus-within:bg-stripe
+                  hover:bg-stripe
                 `}
                 htmlFor={checkboxId}
                 key={option.value}

@@ -1,0 +1,174 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filters 1`] = `
+<div
+  class="mb-4 rounded-sm border border-default bg-stripe p-4"
+>
+  <h3
+    class="mb-2 text-sm font-medium text-subtle"
+  >
+    Applied Filters:
+  </h3>
+  <div
+    class="mb-3 flex flex-wrap gap-2"
+  >
+    <button
+      aria-label="Remove Genre: Horror filter"
+      class="
+                inline-flex items-center gap-2 rounded-sm border border-default
+                bg-canvas px-3 py-1.5 text-sm text-default transition-colors
+                hover:border-accent hover:bg-accent
+                focus:border-accent focus:bg-accent focus:outline-none
+              "
+      type="button"
+    >
+      <span>
+        Genre: Horror
+      </span>
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    <button
+      aria-label="Remove Genre: Action filter"
+      class="
+                inline-flex items-center gap-2 rounded-sm border border-default
+                bg-canvas px-3 py-1.5 text-sm text-default transition-colors
+                hover:border-accent hover:bg-accent
+                focus:border-accent focus:bg-accent focus:outline-none
+              "
+      type="button"
+    >
+      <span>
+        Genre: Action
+      </span>
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+    <button
+      aria-label="Remove Search: alien filter"
+      class="
+                inline-flex items-center gap-2 rounded-sm border border-default
+                bg-canvas px-3 py-1.5 text-sm text-default transition-colors
+                hover:border-accent hover:bg-accent
+                focus:border-accent focus:bg-accent focus:outline-none
+              "
+      type="button"
+    >
+      <span>
+        Search: alien
+      </span>
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <button
+    class="
+          text-sm text-accent
+          hover:underline
+          focus:underline focus:outline-none
+        "
+    type="button"
+  >
+    Clear all
+  </button>
+</div>
+`;
+
+exports[`AppliedFilters > Visual Rendering > matches snapshot with search filter 1`] = `
+<div
+  class="mb-4 rounded-sm border border-default bg-stripe p-4"
+>
+  <h3
+    class="mb-2 text-sm font-medium text-subtle"
+  >
+    Applied Filters:
+  </h3>
+  <div
+    class="mb-3 flex flex-wrap gap-2"
+  >
+    <button
+      aria-label="Remove Search: alien filter"
+      class="
+                inline-flex items-center gap-2 rounded-sm border border-default
+                bg-canvas px-3 py-1.5 text-sm text-default transition-colors
+                hover:border-accent hover:bg-accent
+                focus:border-accent focus:bg-accent focus:outline-none
+              "
+      type="button"
+    >
+      <span>
+        Search: alien
+      </span>
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <button
+    class="
+          text-sm text-accent
+          hover:underline
+          focus:underline focus:outline-none
+        "
+    type="button"
+  >
+    Clear all
+  </button>
+</div>
+`;
+
+exports[`AppliedFilters > Visual Rendering > matches snapshot with single filter 1`] = `
+<div
+  class="mb-4 rounded-sm border border-default bg-stripe p-4"
+>
+  <h3
+    class="mb-2 text-sm font-medium text-subtle"
+  >
+    Applied Filters:
+  </h3>
+  <div
+    class="mb-3 flex flex-wrap gap-2"
+  >
+    <button
+      aria-label="Remove Genre: Horror filter"
+      class="
+                inline-flex items-center gap-2 rounded-sm border border-default
+                bg-canvas px-3 py-1.5 text-sm text-default transition-colors
+                hover:border-accent hover:bg-accent
+                focus:border-accent focus:bg-accent focus:outline-none
+              "
+      type="button"
+    >
+      <span>
+        Genre: Horror
+      </span>
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <button
+    class="
+          text-sm text-accent
+          hover:underline
+          focus:underline focus:outline-none
+        "
+    type="button"
+  >
+    Clear all
+  </button>
+</div>
+`;
