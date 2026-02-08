@@ -97,7 +97,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 (When collapsed)
 ┌─────────────────────────────────────┐
-│ ▶ Genres (1 selected)               │  ← Shows selection count
+│ ▶ Genres                            │
 └─────────────────────────────────────┘
 ```
 
@@ -106,7 +106,6 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 #### Summary (Always Visible)
 - **Disclosure triangle:** ▶ when closed, ▼ when open
 - **Section title:** Filter category name (e.g., "Genres", "Release Year")
-- **Selection indicator:** "(N selected)" when collapsed and items are selected
 
 #### Details (Collapsible Content)
 - **Checkbox items:** List of all available options
@@ -246,10 +245,15 @@ Clicking × on chip clears the search field.
 - Checked item moves to top of list (within expanded section)
 - **Counts update dynamically** across all filter sections (items matching current filter state)
 - Count updates in "View X Results" button immediately
-- Applied filters section updates immediately
+- Applied filters section updates immediately (shows PENDING filters, not active)
+  - As user checks/unchecks boxes: chips appear/disappear in real-time
+  - User sees immediate feedback about what will be applied
+  - When "View Results" clicked: pending becomes active, drawer closes
+  - When drawer re-opened: AppliedFilters shows current pending state (initially matches active)
 
 **Show More:**
-- Click "Show more" → expands to show all items (no count in text for consistent width)
+- Text format: MUST be "+ Show more" (no count, for consistent width)
+- Clicking expands to show all items
 - Stays expanded until section is collapsed via summary
 - Selected items remain visible even when showing limited items (always at top)
 - When both "Show more" and "Clear" links visible, they appear on same line: "[Show more] | [Clear]"
@@ -550,6 +554,38 @@ Each filter option needs a count of matching items. For example:
 - Matches design system (Tailwind theme)
 - Responsive on all breakpoints
 - Clear visual hierarchy
+
+---
+
+## Critical Implementation Requirements
+
+These requirements MUST be verified during implementation to prevent drift:
+
+### Visual Text Strings
+- [ ] "Show more" button text is EXACTLY "+ Show more" (no count, no variation)
+- [ ] No "(n selected)" text appears anywhere in filter UI
+- [ ] Applied filter chips use format: "Category: Value" or just "Value" when category equals value
+- [ ] "Clear all" link text is EXACTLY "Clear all"
+
+### Interaction Timing
+- [ ] AppliedFilters updates in real-time as checkboxes are checked/unchecked (before clicking "View Results")
+- [ ] Checking a box immediately shows chip in AppliedFilters section
+- [ ] Unchecking a box immediately removes chip from AppliedFilters section
+- [ ] Clicking × on chip immediately unchecks corresponding checkbox
+- [ ] "Clear all" immediately unchecks all checkboxes and removes all chips
+
+### Filter Section Behavior
+- [ ] "Show more" expands list and changes to inline display (no separate "Show less" button)
+- [ ] Collapsing section via summary resets to showing first 3 items
+- [ ] Selected items always appear at top (newest selection first)
+- [ ] Unselected items always alphabetical (A-Z)
+- [ ] Clear link appears beneath checkboxes only when selections exist
+
+### Visual Hierarchy
+- [ ] AppliedFilters section appears at very top of drawer (before all filter sections)
+- [ ] AppliedFilters has distinct background color (bg-stripe) to stand out
+- [ ] Filter sections use native details/summary with disclosure triangle
+- [ ] Counts appear in parentheses after each option label
 
 ---
 

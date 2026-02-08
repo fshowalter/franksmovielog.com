@@ -3,24 +3,21 @@ import type { ReactNode } from "react";
 export type FilterSectionProps = {
   children: ReactNode;
   defaultOpen?: boolean;
-  selectionCount?: number;
   title: string;
 };
 
 /**
  * Collapsible filter section wrapper using native details/summary.
- * Shows selection count when collapsed and items are selected.
+ * AIDEV-NOTE: Spec compliance - NO selection count shown in summary (removed per spec)
  * @param props - Component props
  * @param props.children - Filter field content to render in details
  * @param props.defaultOpen - Whether section should be open by default (default: false)
- * @param props.selectionCount - Number of selected items (shown in summary when > 0 and collapsed)
  * @param props.title - Section title displayed in summary
  * @returns Collapsible filter section with accessible details/summary structure
  */
 export function FilterSection({
   children,
   defaultOpen = false,
-  selectionCount = 0,
   title,
 }: FilterSectionProps): React.JSX.Element {
   return (
@@ -52,15 +49,6 @@ export function FilterSection({
           </svg>
           {title}
         </span>
-        {/* Show selection count when collapsed and items are selected */}
-        {selectionCount > 0 && (
-          <span className="
-            text-sm text-subtle
-            [[open]>&]:hidden
-          ">
-            ({selectionCount} selected)
-          </span>
-        )}
       </summary>
       {/* Content area for filter fields */}
       <div className="px-4 pb-3">{children}</div>

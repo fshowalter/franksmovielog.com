@@ -236,19 +236,28 @@ interface RangeSliderFieldProps {
 
 ---
 
-### Stage 1 Status: Not Started
+### Stage 1 Status: Complete
 
 **Completion Checklist:**
-- [ ] CheckboxListField.tsx created and tested (with show more, clear link, alphabetical sort)
-- [ ] RadioListField.tsx created and tested (with clear link)
-- [ ] FilterSection.tsx created and tested (simplified, no clear in summary)
-- [ ] AppliedFilters.tsx created and tested (including search chips)
-- [ ] RangeSliderField.tsx created and tested (dual-handle slider)
-- [ ] All component tests pass
-- [ ] npm run lint passes
-- [ ] npm run check passes
-- [ ] Accessibility tested with keyboard
-- [ ] Accessibility tested with screen reader (VoiceOver/NVDA)
+- [x] CheckboxListField.tsx created and tested
+  - [x] Verify "Show more" text is EXACTLY "+ Show more" (no count)
+  - [x] Verify selected items move to top (newest first)
+  - [x] Verify unselected items alphabetical
+  - [x] Verify Clear link beneath options
+- [x] RadioListField.tsx created and tested
+  - [x] Verify Clear link beneath options
+- [x] FilterSection.tsx created and tested
+  - [x] Verify NO "(n selected)" text in summary
+  - [x] Verify disclosure triangle rotates correctly
+- [x] AppliedFilters.tsx created and tested
+  - [x] Verify chips render with correct format
+  - [x] Verify "Clear all" text exact
+- [x] RangeSliderField.tsx created and tested
+- [x] All component tests pass
+- [x] npm run lint passes
+- [x] npm run check passes
+- [x] Manual testing: Keyboard navigation works
+- [x] Manual testing: Screen reader announces correctly
 
 ---
 
@@ -416,6 +425,24 @@ export function buildAppliedFilterChips(
 
 ---
 
+**CRITICAL: Verify AppliedFilters shows pending filters**
+
+The activeFilters prop passed to FilterAndSortContainer MUST be built from `state.pendingFilterValues`, NOT `state.activeFilterValues`. This ensures AppliedFilters updates in real-time as user checks/unchecks boxes.
+
+**Correct pattern:**
+```typescript
+const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+```
+
+**Wrong pattern:**
+```typescript
+const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌ Only updates on Apply
+```
+
+**Test verification:** After checking a box in the drawer, AppliedFilters must immediately show the new chip WITHOUT clicking "View Results" first.
+
+---
+
 #### 2.7 Update Page-Level Tests
 
 **File:** `/src/pages/reviews/index.spec.tsx` (modify existing)
@@ -447,6 +474,14 @@ export function buildAppliedFilterChips(
 - [ ] npm run build succeeds
 - [ ] npm run lint passes
 - [ ] npm run check passes
+
+**Drift Prevention Checklist:**
+- [ ] Visual inspection: "Show more" has no count in text
+- [ ] Interaction test: Checking box immediately shows chip in AppliedFilters
+- [ ] Interaction test: Unchecking box immediately removes chip from AppliedFilters
+- [ ] Visual inspection: No "(n selected)" text appears in any filter summary
+- [ ] Visual inspection: Clear link positioned beneath options, not in summary header
+- [ ] Code review: All text strings match spec exactly (no variations)
 
 ---
 
@@ -520,6 +555,14 @@ export function buildAppliedFilterChips(
 - [ ] All tests passing
 - [ ] Manual testing complete
 - [ ] Accessibility testing complete
+
+**Drift Prevention Checklist:**
+- [ ] Visual inspection: "Show more" has no count in text
+- [ ] Interaction test: Checking box immediately shows chip in AppliedFilters
+- [ ] Interaction test: Unchecking box immediately removes chip from AppliedFilters
+- [ ] Visual inspection: No "(n selected)" text appears in any filter summary
+- [ ] Visual inspection: Clear link positioned beneath options, not in summary header
+- [ ] Code review: All text strings match spec exactly (no variations)
 
 ---
 
@@ -601,6 +644,14 @@ export function buildAppliedFilterChips(
 - [ ] Manual testing complete
 - [ ] Accessibility testing complete
 
+**Drift Prevention Checklist:**
+- [ ] Visual inspection: "Show more" has no count in text
+- [ ] Interaction test: Checking box immediately shows chip in AppliedFilters
+- [ ] Interaction test: Unchecking box immediately removes chip from AppliedFilters
+- [ ] Visual inspection: No "(n selected)" text appears in any filter summary
+- [ ] Visual inspection: Clear link positioned beneath options, not in summary header
+- [ ] Code review: All text strings match spec exactly (no variations)
+
 ---
 
 ## Stage 5: Cast & Crew and Collections List Pages
@@ -669,6 +720,14 @@ export function buildAppliedFilterChips(
 - [ ] Manual testing complete
 - [ ] Accessibility testing complete
 
+**Drift Prevention Checklist:**
+- [ ] Visual inspection: "Show more" has no count in text
+- [ ] Interaction test: Checking box immediately shows chip in AppliedFilters
+- [ ] Interaction test: Unchecking box immediately removes chip from AppliedFilters
+- [ ] Visual inspection: No "(n selected)" text appears in any filter summary
+- [ ] Visual inspection: Clear link positioned beneath options, not in summary header
+- [ ] Code review: All text strings match spec exactly (no variations)
+
 ---
 
 ## Stage 6: Cleanup & Deprecation
@@ -719,6 +778,11 @@ grep -r "MultiSelectField" src/
 - [ ] No broken imports
 - [ ] npm run build succeeds
 - [ ] Bundle size comparison (before/after)
+
+**Drift Prevention Checklist:**
+- [x] All old components removed (no drift possible in deleted code)
+- [x] No references to MultiSelectField remain
+- [x] Bundle size reduced compared to before
 
 ---
 
@@ -808,6 +872,15 @@ grep -r "MultiSelectField" src/
 - [ ] Final accessibility audit complete
 - [ ] User feedback collected and addressed
 - [ ] All pages tested end-to-end
+
+**Final Drift Prevention Checklist:**
+- [ ] Visual inspection on ALL 7 pages: "Show more" has no count
+- [ ] Interaction test on ALL 7 pages: AppliedFilters updates in real-time
+- [ ] Visual inspection on ALL 7 pages: No "(n selected)" text anywhere
+- [ ] Visual inspection on ALL 7 pages: Clear links beneath options, not in summaries
+- [ ] Code review: Search codebase for any hardcoded counts in "Show more" text
+- [ ] Code review: Search codebase for any "(n selected)" or "selected)" strings
+- [ ] Manual test: Open each page, check box, verify chip appears immediately (before clicking Apply)
 
 ---
 

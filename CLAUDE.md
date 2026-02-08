@@ -224,3 +224,16 @@ Add specially formatted comments throughout the codebase, where appropriate, for
 
 - Don't use the `any` type. The linter will error on it.
 - **IMPORTANT**: Always use `import type { ... }` for type-only imports to ensure proper tree-shaking. Never mix type imports with regular imports using `import { type ... }` syntax as this can prevent tree-shaking optimizations.
+
+## Spec Compliance
+
+When implementing from FILTER_REDESIGN_SPEC.md:
+
+1. **Before coding**: Read the "Critical Implementation Requirements" section
+2. **During coding**: Add AIDEV-NOTE comments for spec-critical code
+3. **After coding**: Manually verify each applicable requirement
+4. **During PR review**: Check that all requirements are met
+
+**Key principle**: The spec is the source of truth. If implementation diverges, either:
+- Fix the implementation to match spec, OR
+- Update the spec and get user approval before continuing

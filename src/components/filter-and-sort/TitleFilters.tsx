@@ -55,7 +55,6 @@ export function TitleFilters({
             genres.defaultValues !== undefined &&
             genres.defaultValues.length > 0
           }
-          selectionCount={genres.defaultValues?.length ?? 0}
           title="Genres"
         >
           <CheckboxListField

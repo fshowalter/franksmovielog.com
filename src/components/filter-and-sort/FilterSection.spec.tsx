@@ -71,38 +71,8 @@ describe("FilterSection", () => {
     expect(details).not.toHaveAttribute("open");
   });
 
-  it("shows selection count when collapsed and selectionCount > 0", () => {
-    const { rerender } = render(
-      <FilterSection selectionCount={3} title="Genres">
-        <div>Content</div>
-      </FilterSection>,
-    );
-
-    // When closed, should show count
-    expect(screen.getByText("(3 selected)")).toBeInTheDocument();
-
-    // When opened, count should be hidden (CSS handles this with [[open]>&]:hidden)
-    rerender(
-      <FilterSection defaultOpen={true} selectionCount={3} title="Genres">
-        <div>Content</div>
-      </FilterSection>,
-    );
-
-    // The element still exists in DOM but should have the hidden class applied via CSS
-    expect(screen.getByText("(3 selected)")).toBeInTheDocument();
-  });
-
-  it("does not show selection count when selectionCount is 0", () => {
-    render(
-      <FilterSection selectionCount={0} title="Genres">
-        <div>Content</div>
-      </FilterSection>,
-    );
-
-    expect(screen.queryByText(/selected/)).not.toBeInTheDocument();
-  });
-
-  it("does not show selection count when not provided", () => {
+  it("does not show selection count (removed per spec)", () => {
+    // AIDEV-NOTE: Spec compliance - "(n selected)" feature was removed from spec
     render(
       <FilterSection title="Genres">
         <div>Content</div>
@@ -189,20 +159,10 @@ describe("FilterSection", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("snapshot test - open state with selections", () => {
+  it("snapshot test - open state", () => {
     const { container } = render(
-      <FilterSection defaultOpen={true} selectionCount={2} title="Genres">
+      <FilterSection defaultOpen={true} title="Genres">
         <div>Filter content here</div>
-      </FilterSection>,
-    );
-
-    expect(container).toMatchSnapshot();
-  });
-
-  it("snapshot test - closed state with selections", () => {
-    const { container } = render(
-      <FilterSection defaultOpen={false} selectionCount={5} title="Release Year">
-        <div>Year filter content</div>
       </FilterSection>,
     );
 

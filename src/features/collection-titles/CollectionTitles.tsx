@@ -100,7 +100,8 @@ export function CollectionTitles({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
-  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
+  // AIDEV-NOTE: Spec compliance - AppliedFilters must show pending filters for real-time updates
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
 
   return (
     <FilterAndSortContainer

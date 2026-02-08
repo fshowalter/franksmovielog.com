@@ -190,7 +190,8 @@ export function CheckboxListField({
                 onClick={handleShowMore}
                 type="button"
               >
-                + Show {hiddenCount} more
+                {/* AIDEV-NOTE: Spec compliance - "Show more" text must have no count */}
+                + Show more
               </button>
               {hasSelections && (
                 <span aria-hidden="true" className="text-sm text-subtle">
