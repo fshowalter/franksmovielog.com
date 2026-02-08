@@ -1,0 +1,59 @@
+# Filter UI Redesign Progress
+
+## Completed Tasks
+
+### Stage 1: Foundation - Core Components
+
+#### Task 1.1: Create CheckboxListField Component ✅
+- **Completed:** 2026-02-07
+- **Commit:** 5ef061c26
+- **Files Created:**
+  - `/src/components/fields/CheckboxListField.tsx`
+  - `/src/components/fields/CheckboxListField.spec.tsx`
+- **Tests:** 31/31 passing
+- **Features Implemented:**
+  - Inline checkbox list with option counts
+  - "Show more" functionality (configurable threshold, default: 3)
+  - Selected items automatically move to top in reverse selection order
+  - Unselected items sorted alphabetically (A-Z)
+  - Clear link beneath options (only visible when selections exist)
+  - Full keyboard navigation (Space to toggle, Tab navigation)
+  - Accessible with proper ARIA attributes
+  - Form reset support
+  - Screen reader announcements for selection count
+
+**Notes:**
+- Component follows spec exactly - selected items show first (newest at top), unselected alphabetically
+- "Show more" stays expanded until section collapsed (FilterSection will handle that)
+- Clear link positioned beneath options as specified
+- Accessible name includes count (e.g., "Action(10)") due to label structure
+
+#### Task 1.2: Create RadioListField Component ✅
+- **Completed:** 2026-02-07
+- **Commit:** 7e5ae49c8
+- **Files Created:**
+  - `/src/components/fields/RadioListField.tsx`
+  - `/src/components/fields/RadioListField.spec.tsx`
+- **Tests:** 25/25 passing
+- **Features Implemented:**
+  - Single selection via radio buttons (only one option at a time)
+  - Option counts displayed for each choice
+  - Clear link beneath options (only visible when non-default selected)
+  - Full keyboard navigation (Space/Enter to select)
+  - Accessible with proper ARIA attributes (radiogroup role, proper labels)
+  - Form reset support
+  - Screen reader announcements for selection changes
+
+**Notes:**
+- Component follows CheckboxListField pattern but adapted for single selection
+- Used for filters like "Reviewed Status" where only one option can be selected
+- Clear link resets to default value (or empty string if no default)
+- Uses type instead of interface per project conventions
+- Tailwind class order corrected (focus-within before hover)
+
+## Next Task
+
+**Task 1.3:** Create FilterSection Component
+- Wrapper for collapsible details/summary structure
+- Shows selection count in summary when collapsed
+- No Clear link in summary (that's handled by field components)
