@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import type { FilterChip } from "./AppliedFilters";
+
+import { AppliedFilters } from "./AppliedFilters";
 import { FilterAndSortHeader } from "./FilterAndSortHeader";
 
 /**
@@ -12,6 +15,7 @@ export type SortProps<T extends string> = {
 };
 
 type Props<T extends string> = {
+  activeFilters?: FilterChip[];
   children: React.ReactNode;
   className?: string;
   filters: React.ReactNode;
@@ -20,6 +24,7 @@ type Props<T extends string> = {
   onApplyFilters: () => void;
   onClearFilters: () => void;
   onFilterDrawerOpen: () => void;
+  onRemoveFilter?: (id: string) => void;
   onResetFilters: () => void;
   pendingFilteredCount: number;
   sortProps: SortProps<T>;
@@ -35,6 +40,7 @@ type Props<T extends string> = {
  * @returns Filter and sort container with drawer and header controls
  */
 export function FilterAndSortContainer<T extends string>({
+  activeFilters,
   children,
   className,
   filters,
@@ -43,6 +49,7 @@ export function FilterAndSortContainer<T extends string>({
   onApplyFilters,
   onClearFilters,
   onFilterDrawerOpen,
+  onRemoveFilter,
   onResetFilters,
   pendingFilteredCount,
   sortProps,
@@ -263,6 +270,13 @@ export function FilterAndSortContainer<T extends string>({
                 >
                   Filter
                 </legend>
+                {activeFilters && onRemoveFilter && (
+                  <AppliedFilters
+                    filters={activeFilters}
+                    onClearAll={onClearFilters}
+                    onRemove={onRemoveFilter}
+                  />
+                )}
                 {filters}
               </fieldset>
               <div
