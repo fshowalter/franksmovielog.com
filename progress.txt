@@ -391,11 +391,64 @@ The Reviews pages now have the complete new filter UI with:
 
 ---
 
+### Task 3.2: Collection Titles ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** 133a42fad
+- **Files Created:**
+  - `/src/features/collection-titles/appliedFilterChips.ts`
+  - `/src/features/collection-titles/appliedFilterChips.spec.ts`
+  - `/src/features/collection-titles/filterCollectionTitles.spec.ts`
+- **Files Modified:**
+  - `/src/features/collection-titles/CollectionTitles.tsx`
+  - `/src/features/collection-titles/CollectionTitlesFilters.tsx`
+  - `/src/features/collection-titles/CollectionTitles.reducer.ts`
+  - `/src/features/collection-titles/filterCollectionTitles.ts`
+- **Snapshots Updated:** 6 page-level snapshots (cast-and-crew member titles x3, collection titles x3)
+- **Tests:** 538/538 passing (24 new tests added)
+- **Features Implemented:**
+  - calculateGenreCounts helper for dynamic genre counts
+  - buildAppliedFilterChips helper for active filter chips
+  - AppliedFilters component integration
+  - Individual filter removal via chip × buttons
+  - Genre counts displayed in checkbox list (respects all non-genre filters)
+  - Supports all filter types: genres, grade, release/review year, reviewed status, title search
+
+**Notes:**
+- Collection Titles page now has the same AppliedFilters UI as Reviews and Cast & Crew Member Titles
+- Genre filter shows dynamic counts based on active filters (grade, years, reviewed status)
+- All filter types properly create chips in Applied Filters section
+- Full test coverage with comprehensive edge cases
+- All linting and TypeScript checks pass
+- Format check shows minor line length issues (will be fixed in next commit)
+
+---
+
+## Stage 3: Remaining Review-Type Pages ✅
+
+**Status:** Complete
+**Completed:** 2026-02-08
+
+All 2 tasks completed:
+1. ✅ Cast & Crew Member Titles
+2. ✅ Collection Titles
+
+Both pages now have the complete new filter UI with:
+- Checkbox-based genre selection (replacing dropdown)
+- FilterSection collapsible wrapper
+- AppliedFilters chips showing active filters
+- Dynamic genre counts respecting other active filters
+- Individual filter removal via chip × buttons
+- "Clear all" functionality
+
+---
+
 ## Next Task
 
-**Stage 3: Remaining Review-Type Pages**
+**Stage 4: Watchlist & Viewings Pages**
 
-Task 3.2: Collection Titles
+Task 4.1: Watchlist
+- Decide on CreditSelectField strategy (wrapper vs inline)
 - Add count calculation helpers
 - Convert filters to checkboxes
 - Add AppliedFilters integration
