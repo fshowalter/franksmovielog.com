@@ -8,12 +8,14 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 import type { ReviewsValue } from "./ReviewsListItem";
 import type { ReviewsSort } from "./sortReviews";
 
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterReviews } from "./filteredReviews";
 import { groupReviews } from "./groupReviews";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
@@ -78,9 +80,11 @@ export function Overrated({
   );
 
   const hasPendingFilters = selectHasPendingFilters(state);
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   return (
     <FilterAndSortContainer
+      activeFilters={activeFilters}
       filters={
         <ReviewsFilters
           dispatch={dispatch}
@@ -97,6 +101,7 @@ export function Overrated({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={(id) => dispatch(createRemoveAppliedFilterAction(id))}
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}
