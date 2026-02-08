@@ -1,8 +1,8 @@
 import type { UserEvent } from "@testing-library/user-event";
 
-import { screen } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 
-import { clickSelectFieldOption } from "~/components/fields/SelectField.testHelper";
+import { clickRadioListOption } from "~/components/fields/RadioListField.testHelper";
 
 /**
  * Clicks a collection filter option in tests.
@@ -13,7 +13,7 @@ export async function clickCollectionFilterOption(
   user: UserEvent,
   value: string,
 ) {
-  await clickSelectFieldOption(user, "Collection", value);
+  await clickRadioListOption(user, "Collection", value);
 }
 
 /**
@@ -25,7 +25,7 @@ export async function clickDirectorFilterOption(
   user: UserEvent,
   value: string,
 ) {
-  await clickSelectFieldOption(user, "Director", value);
+  await clickRadioListOption(user, "Director", value);
 }
 
 /**
@@ -37,7 +37,7 @@ export async function clickPerformerFilterOption(
   user: UserEvent,
   value: string,
 ) {
-  await clickSelectFieldOption(user, "Performer", value);
+  await clickRadioListOption(user, "Performer", value);
 }
 
 /**
@@ -46,13 +46,47 @@ export async function clickPerformerFilterOption(
  * @param value - Filter value to select
  */
 export async function clickWriterFilterOption(user: UserEvent, value: string) {
-  await clickSelectFieldOption(user, "Writer", value);
+  await clickRadioListOption(user, "Writer", value);
 }
 
 /**
- * Gets the director filter element.
- * @returns Director filter element
+ * Gets the "All" radio button from the director filter (for checking if filter is cleared).
+ * @returns The "All" radio button element
  */
 export function getDirectorFilter() {
-  return screen.getByLabelText("Director");
+  // Find all details elements (FilterSections)
+  const allDetailsElements = screen.queryAllByRole("group");
+  const summaries: HTMLElement[] = [];
+
+  // Get the summary element from each details
+  for (const details of allDetailsElements) {
+    const summary = details.querySelector("summary");
+    if (summary) {
+      summaries.push(summary as HTMLElement);
+    }
+  }
+
+  const filterSummary = summaries.find((summary) =>
+    summary.textContent?.includes("Director"),
+  );
+
+  if (!filterSummary) {
+    throw new Error("Unable to find Director FilterSection");
+  }
+
+  // Find the details element that contains this summary
+  const detailsElement = filterSummary.closest("details");
+  if (!detailsElement) {
+    throw new Error("Unable to find details element for Director");
+  }
+
+  // Find the "All" radio button within this section (value is "All")
+  const radios = within(detailsElement).getAllByRole("radio");
+  const allRadio = radios.find((rb) => (rb as HTMLInputElement).value === "All");
+
+  if (!allRadio) {
+    throw new Error('Unable to find "All" radio button in Director filter');
+  }
+
+  return allRadio;
 }

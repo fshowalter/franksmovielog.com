@@ -12,6 +12,32 @@ import { fillYearField } from "~/components/fields/YearField.testHelper";
  * @param value - Genre name to select
  */
 export async function clickGenresFilterOption(user: UserEvent, value: string) {
+  // Find all details elements (FilterSections)
+  const allDetailsElements = screen.queryAllByRole("group");
+  const summaries: HTMLElement[] = [];
+
+  // Get the summary element from each details
+  for (const details of allDetailsElements) {
+    const summary = details.querySelector("summary");
+    if (summary) {
+      summaries.push(summary as HTMLElement);
+    }
+  }
+
+  const genresFilterSummary = summaries.find((summary) =>
+    summary.textContent?.includes("Genres"),
+  );
+
+  if (genresFilterSummary) {
+    // Find the details element that contains this summary
+    const detailsElement = genresFilterSummary.closest("details");
+
+    // Expand the section if it's collapsed
+    if (detailsElement && !detailsElement.open) {
+      await user.click(genresFilterSummary);
+    }
+  }
+
   await toggleCheckboxListOption(user, value);
 }
 

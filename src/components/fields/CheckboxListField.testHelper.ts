@@ -40,7 +40,7 @@ export async function toggleCheckboxListOption(
   // If not found, try clicking "Show more" button
   if (!checkbox) {
     const showMoreButtons = screen.queryAllByRole("button", {
-      name: /\+ Show \d+ more/,
+      name: /\+ Show more/,
     });
 
     if (showMoreButtons.length > 0) {

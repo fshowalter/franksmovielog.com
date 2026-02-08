@@ -609,7 +609,7 @@ describe("Watchlist", () => {
 
       // Check that all filters are cleared
       expect(getTitleFilter()).toHaveValue("");
-      expect(getDirectorFilter()).toHaveValue("All");
+      expect(getDirectorFilter()).toBeChecked();
 
       await clickViewResults(user);
 

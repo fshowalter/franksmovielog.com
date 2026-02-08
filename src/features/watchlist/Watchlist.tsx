@@ -13,10 +13,12 @@ import type { WatchlistSort } from "./sortWatchlistValues";
 import { filterWatchlistValues } from "./filterWatchlistValues";
 import { groupWatchlistValues } from "./groupWatchlistValues";
 import { sortWatchlistValues } from "./sortWatchlistValues";
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
@@ -109,8 +111,11 @@ export function Watchlist({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+
   return (
     <FilterAndSortContainer
+      activeFilters={activeFilters}
       filters={
         <WatchlistFilters
           dispatch={dispatch}
@@ -121,6 +126,7 @@ export function Watchlist({
           distinctReleaseYears={distinctReleaseYears}
           distinctWriters={distinctWriters}
           filterValues={state.pendingFilterValues}
+          values={values}
         />
       }
       hasPendingFilters={hasPendingFilters}
@@ -130,6 +136,9 @@ export function Watchlist({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={(filterKey) => {
+        dispatch(createRemoveAppliedFilterAction(filterKey));
+      }}
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}

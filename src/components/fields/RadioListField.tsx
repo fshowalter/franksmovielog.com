@@ -63,6 +63,11 @@ export function RadioListField({
     }
   };
 
+  // AIDEV-NOTE: Sync internal state when defaultValue prop changes (e.g., when filters are cleared)
+  useEffect(() => {
+    setSelectedValue(defaultValue ?? "");
+  }, [defaultValue]);
+
   // AIDEV-NOTE: Listen for form reset events and reset to default value when form is reset
   useEffect(() => {
     // Find the parent form element

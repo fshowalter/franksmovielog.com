@@ -27,6 +27,7 @@ export {
   createClearFiltersAction,
   createGenresFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createTitleFilterChangedAction,
   selectHasPendingFilters,
