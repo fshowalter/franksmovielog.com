@@ -305,11 +305,63 @@ All core components are now ready for use in Stage 2 (Reviews page conversion).
 
 ---
 
+### Task 2.6: Update AllReviews Page Component ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** 971c86824
+- **Files Modified:**
+  - `/src/features/reviews/AllReviews.tsx`
+  - `/src/features/reviews/Overrated.tsx`
+  - `/src/features/reviews/Underrated.tsx`
+  - `/src/features/reviews/Underseen.tsx`
+- **Tests:** 102/102 passing (all reviews feature tests)
+- **Features Implemented:**
+  - Imported buildAppliedFilterChips helper and createRemoveAppliedFilterAction
+  - Calculate activeFilters from state.activeFilterValues in all review components
+  - Pass activeFilters prop to FilterAndSortContainer
+  - Pass onRemoveFilter callback that dispatches removeAppliedFilterAction
+  - Users can now see active filters as chips at top of filter drawer
+  - Users can remove individual filters by clicking × on chips
+  - "Clear all" button removes all filters at once
+  - All four review page components updated: AllReviews, Overrated, Underrated, Underseen
+
+**Notes:**
+- All review page components now have the AppliedFilters UI integration
+- Components remain fully functional with backward compatible FilterAndSortContainer
+- All linting and TypeScript checks pass
+- This completes Task 2.6 and Stage 2 of the implementation plan!
+
+---
+
+## Stage 2: First Feature Conversion - Reviews Page ✅
+
+**Status:** Complete
+**Completed:** 2026-02-08
+
+All 7 tasks completed:
+1. ✅ Add Count Calculation Helpers
+2. ✅ Update Reviews Reducer to Support Applied Filters
+3. ✅ Convert ReviewsFilters Component
+4. ✅ Build Applied Filter Chips Helper
+5. ✅ Update FilterAndSortContainer
+6. ✅ Update AllReviews Page Component (+ Overrated, Underrated, Underseen)
+7. ✅ Page-level tests automatically updated via snapshots
+
+The Reviews pages now have the complete new filter UI with:
+- Checkbox-based genre selection (replacing dropdown)
+- FilterSection collapsible wrapper
+- AppliedFilters chips showing active filters
+- Dynamic genre counts respecting other active filters
+- Individual filter removal via chip × buttons
+- "Clear all" functionality
+
+---
+
 ## Next Task
 
-**Stage 2: First Feature Conversion - Reviews Page (continued)**
+**Stage 3: Remaining Review-Type Pages**
 
-Task 2.6: Update AllReviews Page Component
-- Import `buildAppliedFilterChips` helper
-- Calculate `activeFilters` from state
-- Pass `activeFilters` and `onRemoveFilter` to FilterAndSortContainer
+Task 3.1: Cast & Crew Member Titles
+- Add count calculation helpers
+- Convert filters to checkboxes
+- Add AppliedFilters integration
