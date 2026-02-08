@@ -1,0 +1,360 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RadioListField > matches snapshot with default value 1`] = `
+<fieldset
+  class="text-left"
+>
+  <legend
+    class="sr-only"
+  >
+    <span
+      class="
+        inline-block h-6 text-left font-sans text-xs leading-none font-semibold
+        tracking-wide text-subtle uppercase
+      "
+    >
+      Reviewed Status
+    </span>
+  </legend>
+  <div
+    class="flex flex-col gap-2"
+  >
+    <div
+      aria-live="polite"
+      aria-relevant="additions removals"
+      class="flex flex-col"
+      role="radiogroup"
+    >
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-all"
+      >
+        <input
+          checked=""
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-all"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="all"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          All
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          100
+          )
+        </span>
+      </label>
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-reviewed"
+      >
+        <input
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-reviewed"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="reviewed"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          Reviewed
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          75
+          )
+        </span>
+      </label>
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-not-reviewed"
+      >
+        <input
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-not-reviewed"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="not-reviewed"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          Not Reviewed
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          25
+          )
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`RadioListField > matches snapshot with no default value 1`] = `
+<fieldset
+  class="text-left"
+>
+  <legend
+    class="sr-only"
+  >
+    <span
+      class="
+        inline-block h-6 text-left font-sans text-xs leading-none font-semibold
+        tracking-wide text-subtle uppercase
+      "
+    >
+      Reviewed Status
+    </span>
+  </legend>
+  <div
+    class="flex flex-col gap-2"
+  >
+    <div
+      aria-live="polite"
+      aria-relevant="additions removals"
+      class="flex flex-col"
+      role="radiogroup"
+    >
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-all"
+      >
+        <input
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-all"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="all"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          All
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          100
+          )
+        </span>
+      </label>
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-reviewed"
+      >
+        <input
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-reviewed"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="reviewed"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          Reviewed
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          75
+          )
+        </span>
+      </label>
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-not-reviewed"
+      >
+        <input
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-not-reviewed"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="not-reviewed"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          Not Reviewed
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          25
+          )
+        </span>
+      </label>
+    </div>
+  </div>
+</fieldset>
+`;
+
+exports[`RadioListField > matches snapshot with non-default value selected (shows Clear) 1`] = `
+<fieldset
+  class="text-left"
+>
+  <legend
+    class="sr-only"
+  >
+    <span
+      class="
+        inline-block h-6 text-left font-sans text-xs leading-none font-semibold
+        tracking-wide text-subtle uppercase
+      "
+    >
+      Reviewed Status
+    </span>
+  </legend>
+  <div
+    class="flex flex-col gap-2"
+  >
+    <div
+      aria-live="polite"
+      aria-relevant="additions removals"
+      class="flex flex-col"
+      role="radiogroup"
+    >
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-all"
+      >
+        <input
+          checked=""
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-all"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="all"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          All
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          100
+          )
+        </span>
+      </label>
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-reviewed"
+      >
+        <input
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-reviewed"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="reviewed"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          Reviewed
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          75
+          )
+        </span>
+      </label>
+      <label
+        class="
+                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  focus-within:bg-stripe
+                  hover:bg-stripe
+                "
+        for="radio-list-reviewed-status-not-reviewed"
+      >
+        <input
+          class="size-4 cursor-pointer accent-accent"
+          id="radio-list-reviewed-status-not-reviewed"
+          name="radio-list-reviewed-status"
+          type="radio"
+          value="not-reviewed"
+        />
+        <span
+          class="flex-1 text-sm text-default"
+        >
+          Not Reviewed
+        </span>
+        <span
+          class="text-sm text-subtle"
+        >
+          (
+          25
+          )
+        </span>
+      </label>
+    </div>
+    <div
+      class="flex items-center gap-2 pt-1"
+    >
+      <button
+        aria-label="Clear Reviewed Status selection"
+        class="
+                text-sm text-accent
+                hover:underline
+                focus:underline focus:outline-none
+              "
+        type="button"
+      >
+        Clear
+      </button>
+    </div>
+  </div>
+</fieldset>
+`;
