@@ -51,9 +51,33 @@
 - Uses type instead of interface per project conventions
 - Tailwind class order corrected (focus-within before hover)
 
+#### Task 1.3: Create FilterSection Component ✅
+- **Completed:** 2026-02-07
+- **Commit:** 548e64586
+- **Files Created:**
+  - `/src/components/filter-and-sort/FilterSection.tsx`
+  - `/src/components/filter-and-sort/FilterSection.spec.tsx`
+  - `/src/components/filter-and-sort/__snapshots__/FilterSection.spec.tsx.snap`
+- **Tests:** 15/15 passing
+- **Features Implemented:**
+  - Collapsible wrapper using native details/summary elements
+  - Shows selection count in summary when collapsed (only when count > 0)
+  - Disclosure triangle (▶/▼) that rotates based on open/closed state
+  - Full keyboard navigation via native browser behavior (Enter/Space)
+  - Accessible with proper ARIA attributes
+  - Tailwind styling matching project patterns
+  - No Clear link in summary (handled by field components as specified)
+
+**Notes:**
+- Uses native HTML details/summary for built-in accessibility
+- Keyboard behavior (Enter/Space toggle) is provided by browser, doesn't need explicit testing in jsdom
+- Linted and formatted according to project standards
+- Snapshots updated to match lint formatting
+
 ## Next Task
 
-**Task 1.3:** Create FilterSection Component
-- Wrapper for collapsible details/summary structure
-- Shows selection count in summary when collapsed
-- No Clear link in summary (that's handled by field components)
+**Task 1.4:** Create AppliedFilters Component
+- Displays active filters as removable chips
+- Shows "Clear all" link
+- Full keyboard support for chip removal
+- Hidden when no filters active
