@@ -74,10 +74,35 @@
 - Linted and formatted according to project standards
 - Snapshots updated to match lint formatting
 
+#### Task 1.4: Create AppliedFilters Component ✅
+- **Completed:** 2026-02-07
+- **Commit:** dd1cb5d4b
+- **Files Created:**
+  - `/src/components/filter-and-sort/AppliedFilters.tsx`
+  - `/src/components/filter-and-sort/AppliedFilters.spec.tsx`
+  - `/src/components/filter-and-sort/__snapshots__/AppliedFilters.spec.tsx.snap`
+- **Tests:** 20/20 passing
+- **Features Implemented:**
+  - Active filters displayed as removable chips
+  - Each chip shows category and label (e.g., "Genre: Horror" or just "Horror" when category equals label)
+  - Remove button (×) on each chip
+  - "Clear all" button to remove all filters at once
+  - Full keyboard support (Tab to chip, Enter/Space to remove)
+  - Proper ARIA attributes (aria-label for buttons, aria-hidden for × symbol)
+  - Automatically hidden when filters array is empty (returns undefined)
+  - Component follows project conventions (type instead of interface, proper prop ordering)
+
+**Notes:**
+- Component handles both multi-value filters (e.g., genres) and single-value filters (e.g., search queries)
+- Uses flexbox with gap for chip layout
+- Proper styling with Tailwind classes formatted per linter requirements
+- All tests include keyboard navigation, accessibility, and visual rendering
+- Also fixed linting issues in CheckboxListField as part of this task
+
 ## Next Task
 
-**Task 1.4:** Create AppliedFilters Component
-- Displays active filters as removable chips
-- Shows "Clear all" link
-- Full keyboard support for chip removal
-- Hidden when no filters active
+**Task 1.5:** Create RangeSliderField Component
+- Dual-handle range slider for year/grade filtering
+- Syncs with external from/to values
+- Clear link beneath slider
+- Accessible keyboard controls
