@@ -1,6 +1,7 @@
 import { CreditedAsFilter } from "~/components/filter-and-sort/CreditedAsFilter";
 import { MaybeReviewedTitleFilters } from "~/components/filter-and-sort/MaybeReviewedTitleFilters";
 
+import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type {
   CastAndCrewMemberTitlesAction,
   CastAndCrewMemberTitlesFiltersValues,
@@ -11,10 +12,12 @@ import {
   createGenresFilterChangedAction,
   createGradeFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createReviewedStatusFilterChangedAction,
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,
 } from "./CastAndCrewMemberTitles.reducer";
+import { calculateGenreCounts } from "./filterCastAndCrewMemberTitles";
 
 /**
  * Filter controls for cast and crew member titles page.
@@ -25,6 +28,7 @@ import {
  * @param props.distinctReleaseYears - Available release years for filtering
  * @param props.distinctReviewYears - Available review years for filtering
  * @param props.filterValues - Current active filter values
+ * @param props.values - All cast and crew member title values for count calculation
  * @returns Filter input components for cast and crew member titles
  */
 export function CastAndCrewMemberTitlesFilters({
@@ -34,6 +38,7 @@ export function CastAndCrewMemberTitlesFilters({
   distinctReleaseYears,
   distinctReviewYears,
   filterValues,
+  values,
 }: {
   dispatch: React.Dispatch<CastAndCrewMemberTitlesAction>;
   distinctCreditKinds: readonly string[];
@@ -41,7 +46,10 @@ export function CastAndCrewMemberTitlesFilters({
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: CastAndCrewMemberTitlesFiltersValues;
+  values: CastAndCrewMemberTitlesValue[];
 }): React.JSX.Element {
+  // Calculate genre counts based on current filters
+  const genreCounts = calculateGenreCounts(values, filterValues);
   return (
     <>
       {distinctCreditKinds.length > 1 && (
@@ -55,10 +63,11 @@ export function CastAndCrewMemberTitlesFilters({
       )}
       <MaybeReviewedTitleFilters
         genres={{
+          counts: genreCounts,
           defaultValues: filterValues.genres,
-
           onChange: (values) =>
             dispatch(createGenresFilterChangedAction(values)),
+          onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
           values: distinctGenres,
         }}
         grade={{

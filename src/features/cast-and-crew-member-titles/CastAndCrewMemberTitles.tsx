@@ -14,10 +14,12 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
 
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createSortAction,
   reducer,
@@ -107,6 +109,7 @@ export function CastAndCrewMemberTitles({
 
   return (
     <FilterAndSortContainer
+      activeFilters={buildAppliedFilterChips(state.activeFilterValues)}
       filters={
         <CastAndCrewMemberTitlesFilters
           dispatch={dispatch}
@@ -115,6 +118,7 @@ export function CastAndCrewMemberTitles({
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
+          values={values}
         />
       }
       hasPendingFilters={hasPendingFilters}
@@ -123,6 +127,9 @@ export function CastAndCrewMemberTitles({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={(filterId) =>
+        dispatch(createRemoveAppliedFilterAction(filterId))
+      }
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}
