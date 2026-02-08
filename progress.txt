@@ -177,8 +177,40 @@ All core components are now ready for use in Stage 2 (Reviews page conversion).
 
 ---
 
+### Task 2.2: Update Reviews Reducer to Support Applied Filters ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** ddd42a763
+- **Files Modified:**
+  - `/src/reducers/filtersReducer.ts`
+  - `/src/reducers/titleFiltersReducer.ts`
+  - `/src/reducers/reviewedTitleFiltersReducer.ts`
+  - `/src/features/reviews/reducer.ts`
+- **Tests:** No new tests (reducer tested through integration tests)
+- **Changes Implemented:**
+  - Added `RemoveAppliedFilterAction` type to base filtersReducer
+  - Added `createRemoveAppliedFilterAction` action creator
+  - Added `removeAppliedFilter` handler that removes a filter by key from pendingFilterValues
+  - Exported new action through titleFiltersReducer chain
+  - Exported new action through reviewedTitleFiltersReducer chain
+  - Exported new action from reviews feature reducer
+
+**Features:**
+- Enables removing individual filters by key (e.g., "genres", "gradeValue", "title")
+- Works by removing the specified key from pendingFilterValues
+- Integrates seamlessly with existing reducer hierarchy
+- All linting and TypeScript checks pass
+
+**Notes:**
+- Action uses `filterKey` parameter to identify which filter to remove
+- This enables the AppliedFilters component to remove specific chips
+- Follows existing reducer patterns and conventions
+- No breaking changes to existing functionality
+
+---
+
 ## Next Task
 
 **Stage 2: First Feature Conversion - Reviews Page**
 
-Starting with Task 2.2: Update Reviews Reducer to Support Applied Filters
+Starting with Task 2.3: Convert ReviewsFilters Component
