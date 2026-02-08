@@ -4,6 +4,7 @@
 export type FiltersAction =
   | ApplyFiltersAction
   | ClearFiltersAction
+  | RemoveAppliedFilterAction
   | ResetFiltersAction;
 
 /**
@@ -24,6 +25,11 @@ type ApplyFiltersAction = {
 
 type ClearFiltersAction = {
   type: "filters/cleared";
+};
+
+type RemoveAppliedFilterAction = {
+  filterKey: string;
+  type: "filters/removeAppliedFilter";
 };
 
 type ResetFiltersAction = {
@@ -65,6 +71,17 @@ export function createInitialFiltersState<TValue>({
 }
 
 /**
+ * Creates an action to remove a specific filter from pending filters.
+ * @param filterKey - The key of the filter to remove (e.g., "genres", "gradeValue", "title")
+ * @returns Remove applied filter action
+ */
+export function createRemoveAppliedFilterAction(
+  filterKey: string,
+): RemoveAppliedFilterAction {
+  return { filterKey, type: "filters/removeAppliedFilter" };
+}
+
+/**
  * Creates an action to reset filters to initial state.
  * @returns Reset filters action
  */
@@ -89,6 +106,10 @@ export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
 
     case "filters/cleared": {
       return clearFilters<TValue, TState>(state);
+    }
+
+    case "filters/removeAppliedFilter": {
+      return removeAppliedFilter<TValue, TState>(state, action);
     }
 
     case "filters/reset": {
@@ -130,6 +151,23 @@ function clearFilters<TValue, TState extends FiltersState<TValue>>(
   return {
     ...state,
     pendingFilterValues: {},
+  };
+}
+
+/**
+ * Remove a specific filter from pending filters
+ */
+function removeAppliedFilter<TValue, TState extends FiltersState<TValue>>(
+  state: TState,
+  action: RemoveAppliedFilterAction,
+): TState {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { [action.filterKey]: _removed, ...remainingFilters } =
+    state.pendingFilterValues;
+
+  return {
+    ...state,
+    pendingFilterValues: remainingFilters,
   };
 }
 
