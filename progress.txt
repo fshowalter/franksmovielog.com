@@ -145,8 +145,40 @@ All core components are now ready for use in Stage 2 (Reviews page conversion).
 
 ---
 
+## Stage 2: First Feature Conversion - Reviews Page
+
+### Task 2.1: Add Count Calculation Helpers ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** cf7dbb8a6
+- **Files Created:**
+  - `/src/features/reviews/filteredReviews.spec.ts`
+- **Files Modified:**
+  - `/src/features/reviews/filteredReviews.ts`
+- **Tests:** 26/26 passing
+- **Functions Implemented:**
+  - `calculateGenreCounts`: Counts how many reviews match each genre
+  - `calculateGradeCounts`: Calculates grade distribution (min, max, counts)
+  - `calculateReleaseYearCounts`: Calculates release year range and distribution
+  - `calculateReviewYearCounts`: Calculates review year range and distribution
+
+**Features:**
+- Dynamic counting: Each function excludes its own filter when calculating
+- Respects other active filters (e.g., when counting genres, respects grade/year filters)
+- Provides real-time feedback on filter combinations
+- Returns Maps for efficient lookup
+- Handles edge cases (empty arrays, invalid data)
+
+**Notes:**
+- All functions follow the same pattern: exclude own filter, apply others, count results
+- Matches the Orbit DVD pattern of dynamic filter counts
+- Comprehensive test coverage including edge cases
+- All linting and TypeScript checks pass
+
+---
+
 ## Next Task
 
 **Stage 2: First Feature Conversion - Reviews Page**
 
-Starting with Task 2.1: Add Count Calculation Helper to Reviews feature
+Starting with Task 2.2: Update Reviews Reducer to Support Applied Filters
