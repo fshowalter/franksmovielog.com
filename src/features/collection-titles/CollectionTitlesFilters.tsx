@@ -1,5 +1,6 @@
 import { MaybeReviewedTitleFilters } from "~/components/filter-and-sort/MaybeReviewedTitleFilters";
 
+import type { CollectionTitlesValue } from "./CollectionTitles";
 import type {
   CollectionTitlesAction,
   CollectionTitlesFiltersValues,
@@ -13,6 +14,7 @@ import {
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,
 } from "./CollectionTitles.reducer";
+import { calculateGenreCounts } from "./filterCollectionTitles";
 
 /**
  * Filter controls for the collection titles page.
@@ -22,6 +24,7 @@ import {
  * @param props.distinctReleaseYears - Available release years for filtering
  * @param props.distinctReviewYears - Available review years for filtering
  * @param props.filterValues - Current active filter values
+ * @param props.values - All collection title values (for calculating counts)
  * @returns Filter input components for collection titles
  */
 export function CollectionTitlesFilters({
@@ -30,18 +33,25 @@ export function CollectionTitlesFilters({
   distinctReleaseYears,
   distinctReviewYears,
   filterValues,
+  values,
 }: {
   dispatch: React.Dispatch<CollectionTitlesAction>;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: CollectionTitlesFiltersValues;
+  values?: CollectionTitlesValue[];
 }): React.JSX.Element {
+  // Calculate genre counts dynamically (respects all non-genre filters)
+  const genreCounts = values
+    ? calculateGenreCounts(values, filterValues)
+    : undefined;
+
   return (
     <MaybeReviewedTitleFilters
       genres={{
+        counts: genreCounts,
         defaultValues: filterValues.genres,
-
         onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
         values: distinctGenres,
       }}
