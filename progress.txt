@@ -209,8 +209,45 @@ All core components are now ready for use in Stage 2 (Reviews page conversion).
 
 ---
 
+### Task 2.3: Convert ReviewsFilters Component ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** 02632b776
+- **Files Modified:**
+  - `/src/components/filter-and-sort/TitleFilters.tsx` - Updated to use CheckboxListField + FilterSection for genres
+  - `/src/components/filter-and-sort/TitleFilters.testHelper.ts` - Updated to use CheckboxListField test helpers
+  - `/src/features/reviews/ReviewsFilters.tsx` - Added dynamic genre count calculation
+  - `/src/features/reviews/AllReviews.tsx` - Pass values prop for count calculation
+  - `/src/features/reviews/Overrated.tsx` - Pass values prop for count calculation
+  - `/src/features/reviews/Underrated.tsx` - Pass values prop for count calculation
+  - `/src/features/reviews/Underseen.tsx` - Pass values prop for count calculation
+- **Files Created:**
+  - `/src/components/fields/CheckboxListField.testHelper.ts` - Test helpers for checkbox interactions
+- **Snapshots Updated:** 11 page-level snapshots (reviews, overrated, underrated, underseen, cast-and-crew member titles, collection titles, watchlist)
+- **Tests:** 457/457 passing
+- **Features Implemented:**
+  - Genre filter converted from MultiSelectField (dropdown) to CheckboxListField (inline checkboxes)
+  - Wrapped in FilterSection with collapsible details/summary
+  - Dynamic count calculation using calculateGenreCounts helper (respects other active filters)
+  - Shows first 3 genres by default with "+ Show N more" button
+  - Clear link appears beneath checkboxes when selections exist
+  - Test helper auto-clicks "Show more" when checkbox not initially visible
+  - Counts optional (backward compatible for other features still using TitleFilters)
+
+**Notes:**
+- TitleFilters is a shared component used across multiple features (reviews, collection titles, cast-and-crew member titles, watchlist)
+- Made counts optional to maintain backward compatibility with features not yet converted
+- All existing tests updated and passing without breaking changes
+- Reviews pages now show checkbox UI instead of dropdown for genres
+- This completes Task 2.3 of the implementation plan
+
+---
+
 ## Next Task
 
-**Stage 2: First Feature Conversion - Reviews Page**
+**Stage 2: First Feature Conversion - Reviews Page (continued)**
 
-Starting with Task 2.3: Convert ReviewsFilters Component
+Task 2.4: Build appliedFilterChips helper for Reviews
+- Create `/src/features/reviews/appliedFilterChips.ts`
+- Convert active filter values into FilterChip format
+- Handle all filter types (genres, grade, years, title search)
