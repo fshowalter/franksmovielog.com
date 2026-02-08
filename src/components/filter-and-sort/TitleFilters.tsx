@@ -1,11 +1,14 @@
-import { MultiSelectField } from "~/components/fields/MultiSelectField";
+import { CheckboxListField } from "~/components/fields/CheckboxListField";
 import { TextField } from "~/components/fields/TextField";
 import { YearField } from "~/components/fields/YearField";
+import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 
 type TitleFiltersProps = {
   genres?: {
+    counts?: Map<string, number>;
     defaultValues?: readonly string[];
     onChange: (values: string[]) => void;
+    onClear?: () => void;
     values: readonly string[];
   };
   releaseYear: {
@@ -47,12 +50,26 @@ export function TitleFilters({
         years={releaseYear.values}
       />
       {genres && (
-        <MultiSelectField
-          defaultValues={genres.defaultValues}
-          label="Genres"
-          onChange={genres.onChange}
-          options={genres.values}
-        />
+        <FilterSection
+          defaultOpen={
+            genres.defaultValues !== undefined &&
+            genres.defaultValues.length > 0
+          }
+          selectionCount={genres.defaultValues?.length ?? 0}
+          title="Genres"
+        >
+          <CheckboxListField
+            defaultValues={genres.defaultValues}
+            label="Genres"
+            onChange={genres.onChange}
+            onClear={genres.onClear}
+            options={genres.values.map((value) => ({
+              count: genres.counts?.get(value) ?? 0,
+              label: value,
+              value,
+            }))}
+          />
+        </FilterSection>
       )}
     </>
   );

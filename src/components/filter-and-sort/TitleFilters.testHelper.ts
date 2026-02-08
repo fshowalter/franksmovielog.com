@@ -2,7 +2,7 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { clickMultiSelectFieldOption } from "~/components/fields/MultiSelectField.testHelper";
+import { toggleCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
 import { fillTextField } from "~/components/fields/TextField.testHelper";
 import { fillYearField } from "~/components/fields/YearField.testHelper";
 
@@ -12,7 +12,7 @@ import { fillYearField } from "~/components/fields/YearField.testHelper";
  * @param value - Genre name to select
  */
 export async function clickGenresFilterOption(user: UserEvent, value: string) {
-  await clickMultiSelectFieldOption(user, "Genres", value);
+  await toggleCheckboxListOption(user, value);
 }
 
 /**

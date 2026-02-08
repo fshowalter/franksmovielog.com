@@ -551,7 +551,7 @@
             </div>
           </header>
           <astro-island
-            uid="2fCtRi"
+            uid="Z13rwVT"
             prefix="r1"
             component-url="~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles"
             component-export="CastAndCrewMemberTitles"
@@ -1480,45 +1480,94 @@
                             >
                           </div>
                         </fieldset>
-                        <div class="flex flex-col text-left text-subtle">
-                          <label
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            for="button-genres"
-                            >Genres</label
+                        <details class="border-b border-default last:border-0">
+                          <summary
+                            class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
-                          <div class="relative">
-                            <button
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
-                              aria-label="Genres"
-                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded-sm border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
-                              id="button-genres"
-                              type="button"
-                            >
-                              <div
-                                class="flex min-h-9 flex-wrap items-center gap-1 py-2 pr-10"
+                            <span class="flex items-center gap-2"
+                              ><svg
+                                aria-hidden="true"
+                                class="size-3 transition-transform [[open]&gt;&amp;]:rotate-90"
+                                fill="currentColor"
+                                viewBox="0 0 8 12"
                               >
-                                <span class="text-subtle">Select...</span>
-                              </div>
-                              <span
-                                class="absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2"
-                                ><svg
-                                  aria-hidden="true"
-                                  class="pointer-events-none size-5 text-subtle"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
+                                <path
+                                  d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
+                                ></path></svg
+                              >Genres</span
+                            >
+                          </summary>
+                          <div class="px-4 pb-3">
+                            <fieldset class="text-left">
+                              <legend class="sr-only">
+                                <span
+                                  class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                  >Genres</span
                                 >
-                                  <path
-                                    d="M19 9l-7 7-7-7"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  ></path></svg
-                              ></span>
-                            </button>
+                              </legend>
+                              <div class="flex flex-col gap-2">
+                                <div
+                                  aria-live="polite"
+                                  aria-relevant="additions removals"
+                                  class="flex flex-col"
+                                  role="group"
+                                >
+                                  <label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="checkbox-list-genres-Action"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="checkbox-list-genres-Action"
+                                      type="checkbox"
+                                      value="Action"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Action</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->0<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="checkbox-list-genres-Adventure"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="checkbox-list-genres-Adventure"
+                                      type="checkbox"
+                                      value="Adventure"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Adventure</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->0<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="checkbox-list-genres-Comedy"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="checkbox-list-genres-Comedy"
+                                      type="checkbox"
+                                      value="Comedy"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Comedy</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->0<!-- -->)</span
+                                    ></label
+                                  >
+                                </div>
+                                <div class="flex items-center gap-2 pt-1">
+                                  <button
+                                    aria-expanded="false"
+                                    class="text-sm text-accent hover:underline focus:underline focus:outline-none"
+                                    type="button"
+                                  >
+                                    + Show
+                                    <!-- -->6<!-- -->
+                                    more
+                                  </button>
+                                </div>
+                              </div>
+                            </fieldset>
                           </div>
-                        </div>
+                        </details>
                         <fieldset class="text-subtle">
                           <legend
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
