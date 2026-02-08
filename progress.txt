@@ -272,11 +272,44 @@ All core components are now ready for use in Stage 2 (Reviews page conversion).
 
 ---
 
+### Task 2.5: Update FilterAndSortContainer ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** e2df54550
+- **Files Modified:**
+  - `/src/components/filter-and-sort/FilterAndSortContainer.tsx`
+  - `/src/components/filter-and-sort/FilterAndSortContainer.spec.tsx`
+- **Tests:** 24/24 passing (18 existing + 6 new)
+- **Features Implemented:**
+  - Added optional `activeFilters` prop (FilterChip[] from AppliedFilters component)
+  - Added optional `onRemoveFilter` callback prop (called when removing individual filter chips)
+  - Renders AppliedFilters component at top of filter drawer (after legend, before filter content)
+  - Fully backward compatible - both props are optional
+  - Only renders AppliedFilters when both activeFilters and onRemoveFilter are provided
+  - AppliedFilters automatically hidden when filters array is empty
+  - "Clear all" button in AppliedFilters uses existing onClearFilters callback
+
+**Test Coverage:**
+- Does not render when activeFilters prop not provided
+- Does not render when activeFilters is empty array
+- Does not render when onRemoveFilter prop not provided
+- Renders AppliedFilters when activeFilters contains filters
+- Calls onRemoveFilter with correct filter ID when chip removed
+- Calls onClearFilters when "Clear all" clicked
+
+**Notes:**
+- Component remains fully backward compatible - existing pages work without changes
+- All linting and TypeScript checks pass
+- AppliedFilters positioned at top of drawer for maximum visibility
+- This completes Task 2.5 of the implementation plan
+
+---
+
 ## Next Task
 
 **Stage 2: First Feature Conversion - Reviews Page (continued)**
 
-Task 2.5: Update FilterAndSortContainer
-- Accept new props: `activeFilters`, `onRemoveFilter`
-- Render AppliedFilters at top of drawer
-- Maintain backward compatibility
+Task 2.6: Update AllReviews Page Component
+- Import `buildAppliedFilterChips` helper
+- Calculate `activeFilters` from state
+- Pass `activeFilters` and `onRemoveFilter` to FilterAndSortContainer
