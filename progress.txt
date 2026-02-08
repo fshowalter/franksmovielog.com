@@ -357,11 +357,45 @@ The Reviews pages now have the complete new filter UI with:
 
 ---
 
+## Stage 3: Remaining Review-Type Pages
+
+### Task 3.1: Cast & Crew Member Titles ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** fea26668f
+- **Files Created:**
+  - `/src/features/cast-and-crew-member-titles/appliedFilterChips.ts`
+  - `/src/features/cast-and-crew-member-titles/appliedFilterChips.spec.ts`
+  - `/src/features/cast-and-crew-member-titles/filterCastAndCrewMemberTitles.spec.ts`
+- **Files Modified:**
+  - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.tsx`
+  - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitlesFilters.tsx`
+  - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.reducer.ts`
+  - `/src/features/cast-and-crew-member-titles/filterCastAndCrewMemberTitles.ts`
+  - `/src/reducers/maybeReviewedTitleFiltersReducer.ts`
+- **Tests:** 45/45 passing (18 component + 17 appliedFilterChips + 10 calculateGenreCounts)
+- **Features Implemented:**
+  - calculateGenreCounts helper for dynamic genre counts
+  - buildAppliedFilterChips helper for active filter chips
+  - AppliedFilters component integration
+  - Individual filter removal via chip × buttons
+  - Genre counts displayed in checkbox list
+  - Exported createRemoveAppliedFilterAction from reducers
+
+**Notes:**
+- Cast & Crew Member Titles page now has the same AppliedFilters UI as Reviews
+- Genre filter shows dynamic counts based on active filters (credited as, grade, years, reviewed status)
+- All filter types supported: genres, grade, release year, review year, reviewed status, credited as, title search
+- Full test coverage with comprehensive edge cases
+- All linting and TypeScript checks pass
+
+---
+
 ## Next Task
 
 **Stage 3: Remaining Review-Type Pages**
 
-Task 3.1: Cast & Crew Member Titles
+Task 3.2: Collection Titles
 - Add count calculation helpers
 - Convert filters to checkboxes
 - Add AppliedFilters integration
