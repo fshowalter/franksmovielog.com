@@ -487,17 +487,70 @@ Both pages now have the complete new filter UI with:
 
 ---
 
-## Stage 4: Watchlist & Viewings Pages - Partial
+## Stage 4: Watchlist & Viewings Pages
 
-**Status:** Viewings Complete ✅, Watchlist Pending
+### Task 4.1: Watchlist ✅
 
-Task 4.2 (Viewings) completed. Next task:
+- **Completed:** 2026-02-09
+- **Commit:** c70c496cd (linting fixes), 9dd525178 (test fixes), a86b95964 (snapshot updates)
+- **Files Created:**
+  - `/src/features/watchlist/appliedFilterChips.ts`
+  - `/src/features/watchlist/appliedFilterChips.spec.ts`
+  - `/src/features/watchlist/filterWatchlistValues.spec.ts`
+- **Files Modified:**
+  - `/src/features/watchlist/Watchlist.tsx` - Integrated AppliedFilters component
+  - `/src/features/watchlist/WatchlistFilters.tsx` - Converted to RadioListField for all single-select filters
+  - `/src/features/watchlist/Watchlist.reducer.ts` - Exported removeAppliedFilterAction
+  - `/src/features/watchlist/filterWatchlistValues.ts` - Added dynamic count calculation helpers
+- **Tests:** 55/55 passing (watchlist feature tests)
+- **Features Implemented:**
+  - Converted Director filter from dropdown to RadioListField with dynamic counts
+  - Converted Performer filter from dropdown to RadioListField with dynamic counts
+  - Converted Writer filter from dropdown to RadioListField with dynamic counts
+  - Converted Collection filter from dropdown to RadioListField with dynamic counts
+  - Added calculateGenreCounts helper (excludes genre filter, respects others)
+  - Added calculateDirectorCounts helper (excludes director filter, respects others)
+  - Added calculatePerformerCounts helper (excludes performer filter, respects others)
+  - Added calculateWriterCounts helper (excludes writer filter, respects others)
+  - Added calculateCollectionCounts helper (excludes collection filter, respects others)
+  - Added buildAppliedFilterChips helper for filter chip generation
+  - Integrated AppliedFilters component showing active filters as chips
+  - Individual filter removal via chip × buttons
+  - "Clear all" functionality removes all filters at once
+  - All filter types supported: genres, releaseYear, director, performer, writer, collection, title
 
-### Task 4.1: Watchlist (Pending)
-- Decide on CreditSelectField strategy (wrapper vs inline)
-- Add count calculation helpers
-- Convert filters to checkboxes
-- Add AppliedFilters integration
+**Decision:**
+- Chose to use RadioListField directly instead of creating a CreditSelectField wrapper
+- Director, Performer, Writer, and Collection all use the same RadioListField pattern
+- This keeps the implementation consistent and simple
+
+**Notes:**
+- Watchlist page now has the same AppliedFilters UI as all other converted pages
+- All single-select filters (director, performer, writer, collection) use RadioListField
+- Counts update dynamically based on other active filters (matching Orbit DVD pattern)
+- All linting and TypeScript checks pass
+- Page-level snapshots updated for Astro island UID changes
+- CheckboxListField tests updated to match spec ("+ Show more" without count)
+- This completes Task 4.1 and Stage 4 of the implementation plan
+
+---
+
+## Stage 4: Watchlist & Viewings Pages ✅
+
+**Status:** Complete
+**Completed:** 2026-02-09
+
+All 2 tasks completed:
+1. ✅ Watchlist
+2. ✅ Viewings (completed earlier)
+
+Both pages now have the complete new filter UI with:
+- RadioListField-based single-select filters (replacing dropdowns)
+- FilterSection collapsible wrappers
+- AppliedFilters chips showing active filters
+- Dynamic counts respecting other active filters
+- Individual filter removal via chip × buttons
+- "Clear all" functionality
 
 ---
 
