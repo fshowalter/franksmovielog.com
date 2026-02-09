@@ -20,6 +20,36 @@ export function filterCastAndCrew(
   return filterCollections(filterValues, sortedValues, extraFilters);
 }
 
+/**
+ * Calculates counts for each credited role, excluding the creditedAs filter.
+ * @param values - Array of cast/crew members
+ * @param filterValues - Current filter values (creditedAs filter is excluded from counting)
+ * @returns Map of credit role to count
+ */
+export function calculateCreditedAsCounts(
+  values: CastAndCrewValue[],
+  filterValues: CastAndCrewFiltersValues,
+): Map<string, number> {
+  // Apply all filters except creditedAs
+  const filtersWithoutCreditedAs: CastAndCrewFiltersValues = {
+    ...filterValues,
+    creditedAs: undefined,
+  };
+
+  const filtered = filterCastAndCrew(values, filtersWithoutCreditedAs);
+
+  // Count how many cast/crew members have each credited role
+  const counts = new Map<string, number>();
+
+  for (const value of filtered) {
+    for (const credit of value.creditedAs) {
+      counts.set(credit, (counts.get(credit) ?? 0) + 1);
+    }
+  }
+
+  return counts;
+}
+
 function createCreditedAsFilter(filterValue?: string) {
   if (!filterValue) return;
   return (value: CastAndCrewValue) => {

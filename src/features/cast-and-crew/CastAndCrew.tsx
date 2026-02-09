@@ -11,10 +11,12 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 import { AlphabetSubNav } from "./AlphabetSubNav";
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createSortAction,
   reducer,
@@ -82,12 +84,16 @@ export function CastAndCrew({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+
   return (
     <FilterAndSortContainer
+      activeFilters={activeFilters}
       filters={
         <CastAndCrewFilters
           dispatch={dispatch}
           filterValues={state.pendingFilterValues}
+          values={values}
         />
       }
       hasPendingFilters={hasPendingFilters}
@@ -96,6 +102,9 @@ export function CastAndCrew({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={(filterKey) => {
+        dispatch(createRemoveAppliedFilterAction(filterKey));
+      }}
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}
