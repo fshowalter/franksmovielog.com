@@ -669,12 +669,73 @@ Both pages now have the complete new filter UI with:
 
 ---
 
+## Stage 6: Cleanup & Deprecation
+
+### Task 6.1: Verify No Usage of Old Components ✅
+
+- **Completed:** 2026-02-09
+- **Commit:** 7d7f08af2
+- **Verification:**
+  - Ran knip to identify unused files
+  - Confirmed MultiSelectField only referenced by its own tests
+  - Confirmed SelectField and SelectOptions completely unused
+  - Confirmed ReviewedStatusFilter.tsx (UI component) unused (helpers still in use)
+  - No imports of old components found in active code
+
+### Task 6.2: Delete Old Components ✅
+
+- **Completed:** 2026-02-09
+- **Commit:** 7d7f08af2
+- **Files Deleted:**
+  - `/src/components/fields/MultiSelectField.tsx` - Replaced by CheckboxListField
+  - `/src/components/fields/MultiSelectField.spec.tsx` - Test file for deleted component
+  - `/src/components/fields/MultiSelectField.testHelper.ts` - Test helper for deleted component
+  - `/src/components/fields/SelectField.tsx` - Replaced by RadioListField
+  - `/src/components/fields/SelectField.testHelper.ts` - Unused test helper
+  - `/src/components/fields/SelectOptions.tsx` - Unused helper component
+  - `/src/components/filter-and-sort/ReviewedStatusFilter.tsx` - Replaced by RadioListField in MaybeReviewedTitleFilters
+  - `/src/components/fields/__snapshots__/` - Old field component snapshots
+- **Files Kept:**
+  - `/src/filterers/createReviewedStatusFilter.ts` - Pure function still in use
+  - `/src/components/filter-and-sort/ReviewedStatusFilter.testHelper.ts` - Test helper still in use
+- **Test Fixes:**
+  - Updated CreditedAsFilter.testHelper to use lowercase values ("director", "performer", "writer")
+  - Fixed test assertions in cast-and-crew and cast-and-crew-member-titles specs
+  - Fixed calculateCreditedAsCounts test to handle undefined counts properly
+- **Tests:** 589/589 passing
+- **Bundle Size:** Reduced by ~1,878 lines of code
+
+**Notes:**
+- All old components successfully deleted
+- No broken imports or references
+- All TypeScript checks pass
+- All tests pass
+- Knip now shows only 3 unused exports (test helpers that may be useful in future)
+
+---
+
+## Stage 6: Cleanup & Deprecation ✅
+
+**Status:** Complete
+**Completed:** 2026-02-09
+
+All tasks completed:
+1. ✅ Verify No Usage of Old Components
+2. ✅ Delete Old Components
+
+All old filter components have been removed from the codebase:
+- MultiSelectField → replaced by CheckboxListField
+- SelectField → replaced by RadioListField
+- SelectOptions → no longer needed
+- ReviewedStatusFilter → replaced by RadioListField
+
+The codebase is now fully migrated to the new checkbox/radio-based filter UI.
+
+---
+
 ## Next Task
 
-**Stage 6: Cleanup & Deprecation - Continue**
+**Stage 7: Polish & Optimization**
 
-Task 6.1: Verify No Usage of Old Components (In Progress)
-- Already ran knip - confirmed MultiSelectField.testHelper.ts, SelectField.testHelper.ts, and SelectOptions.tsx are unused
-- MultiSelectField itself is still used by tests only
-- Need to verify if ReviewedStatusFilter is now unused
-- Then proceed to Task 6.2: Delete Old Components
+Note: Formatting issues remain in 22 files (need to run prettier --write).
+These should be fixed before moving to Stage 7.
