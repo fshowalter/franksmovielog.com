@@ -443,6 +443,64 @@ Both pages now have the complete new filter UI with:
 
 ---
 
+## Stage 4: Watchlist & Viewings Pages
+
+### Task 4.2: Viewings ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** 4dfc7c0a4
+- **Files Created:**
+  - `/src/features/viewings/appliedFilterChips.ts`
+  - `/src/features/viewings/appliedFilterChips.spec.ts`
+  - `/src/features/viewings/filterViewings.spec.ts`
+- **Files Modified:**
+  - `/src/features/viewings/Viewings.tsx` - Integrated AppliedFilters component
+  - `/src/features/viewings/ViewingsFilters.tsx` - Converted to RadioListField for single-select filters
+  - `/src/features/viewings/Viewings.reducer.ts` - Exported removeAppliedFilterAction
+  - `/src/features/viewings/filterViewings.ts` - Added dynamic count calculation helpers
+  - `/src/components/fields/RadioListField.tsx` - Fixed linting issue with setState in effect
+  - `/src/components/fields/RadioListField.testHelper.ts` - Fixed function ordering
+  - `/src/components/filter-and-sort/TitleFilters.testHelper.ts` - Fixed unnecessary type assertion
+  - `/src/components/filter-and-sort/ReviewedStatusFilter.testHelper.ts` - Updated for RadioListField
+  - `/src/features/viewings/Viewings.testHelper.ts` - Fixed Array.from to spread operator
+  - `/src/features/viewings/Viewings.spec.tsx` - Updated tests for new UI
+- **Tests:** 44/44 passing (15 filterViewings + 15 appliedFilterChips + 14 Viewings component)
+- **Features Implemented:**
+  - Converted Medium filter from SelectField to RadioListField with dynamic counts
+  - Converted Venue filter from SelectField to RadioListField with dynamic counts
+  - Converted Reviewed Status filter from SelectField to RadioListField with dynamic counts
+  - Added calculateMediumCounts helper (excludes medium filter, respects others)
+  - Added calculateVenueCounts helper (excludes venue filter, respects others)
+  - Added calculateReviewedStatusCounts helper (excludes reviewedStatus filter, respects others)
+  - Added buildAppliedFilterChips helper for filter chip generation
+  - Integrated AppliedFilters component showing active filters as chips
+  - Individual filter removal via chip × buttons
+  - "Clear all" functionality removes all filters at once
+  - All filter types supported: medium, venue, reviewedStatus, releaseYear, viewingYear, title
+
+**Notes:**
+- Viewings page now has the same AppliedFilters UI as Reviews and other pages
+- All single-select filters (medium, venue, reviewed status) use RadioListField
+- Counts update dynamically based on other active filters (matching Orbit DVD pattern)
+- All linting and TypeScript checks pass
+- This completes Task 4.2 of Stage 4 in the implementation plan
+
+---
+
+## Stage 4: Watchlist & Viewings Pages - Partial
+
+**Status:** Viewings Complete ✅, Watchlist Pending
+
+Task 4.2 (Viewings) completed. Next task:
+
+### Task 4.1: Watchlist (Pending)
+- Decide on CreditSelectField strategy (wrapper vs inline)
+- Add count calculation helpers
+- Convert filters to checkboxes
+- Add AppliedFilters integration
+
+---
+
 ## Next Task
 
 **Stage 4: Watchlist & Viewings Pages**
