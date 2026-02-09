@@ -30,6 +30,38 @@ export function calculateGenreCounts(
 }
 
 /**
+ * Calculates the count of titles for each reviewed status.
+ * Excludes reviewed status filter when calculating counts.
+ * @param values - Array of collection titles
+ * @param filterValues - Active filter values
+ * @returns Map of reviewed status to count
+ */
+export function calculateReviewedStatusCounts(
+  values: CollectionTitlesValue[],
+  filterValues: CollectionTitlesFiltersValues,
+): Map<string, number> {
+  // Apply all filters EXCEPT reviewedStatus
+  const filtersWithoutReviewedStatus = {
+    ...filterValues,
+    reviewedStatus: undefined,
+  };
+  const allFiltered = filterCollectionTitles(
+    values,
+    filtersWithoutReviewedStatus,
+  );
+
+  // Count reviewed vs not reviewed (reviewed = has slug)
+  const reviewedCount = allFiltered.filter((v) => !!v.slug).length;
+  const notReviewedCount = allFiltered.length - reviewedCount;
+
+  return new Map([
+    ["All", allFiltered.length],
+    ["Not Reviewed", notReviewedCount],
+    ["Reviewed", reviewedCount],
+  ]);
+}
+
+/**
  * Filters collection titles based on review status, genre, and other criteria.
  * @param sortedValues - Array of collection titles to filter
  * @param filterValues - Object containing filter values

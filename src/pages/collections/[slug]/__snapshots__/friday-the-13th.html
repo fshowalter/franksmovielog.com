@@ -555,7 +555,7 @@
             </div>
           </header>
           <astro-island
-            uid="Z2cd5XB"
+            uid="2uakrs"
             prefix="r1"
             component-url="~/features/collection-titles/CollectionTitles"
             component-export="CollectionTitles"
@@ -1904,18 +1904,87 @@
                             >
                           </div>
                         </fieldset>
-                        <label class="flex flex-col"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Reviewed Status</span
-                          ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                        <details class="border-b border-default last:border-0">
+                          <summary
+                            class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
-                            <option value="All">All</option>
-                            <option value="Reviewed">Reviewed</option>
-                            <option value="Not Reviewed">Not Reviewed</option>
-                          </select></label
-                        >
+                            <span class="flex items-center gap-2"
+                              ><svg
+                                aria-hidden="true"
+                                class="size-3 transition-transform [[open]&gt;&amp;]:rotate-90"
+                                fill="currentColor"
+                                viewBox="0 0 8 12"
+                              >
+                                <path
+                                  d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
+                                ></path></svg
+                              >Reviewed Status</span
+                            >
+                          </summary>
+                          <div class="px-4 pb-3">
+                            <fieldset class="text-left">
+                              <legend class="sr-only">
+                                <span
+                                  class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                  >Reviewed Status</span
+                                >
+                              </legend>
+                              <div class="flex flex-col gap-2">
+                                <div
+                                  aria-live="polite"
+                                  aria-relevant="additions removals"
+                                  class="flex flex-col"
+                                  role="radiogroup"
+                                >
+                                  <label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-reviewed-status-All"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-reviewed-status-All"
+                                      type="radio"
+                                      name="radio-list-reviewed-status"
+                                      checked=""
+                                      value="All"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >All</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->12<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-reviewed-status-Reviewed"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-reviewed-status-Reviewed"
+                                      type="radio"
+                                      name="radio-list-reviewed-status"
+                                      value="Reviewed"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Reviewed</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->11<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-reviewed-status-Not Reviewed"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-reviewed-status-Not Reviewed"
+                                      type="radio"
+                                      name="radio-list-reviewed-status"
+                                      value="Not Reviewed"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Not Reviewed</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                        </details>
                       </fieldset>
                       <div
                         class="sticky bottom-0 z-filter-footer mt-auto w-full border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"

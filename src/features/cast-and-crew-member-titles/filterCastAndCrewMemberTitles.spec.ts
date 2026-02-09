@@ -3,7 +3,10 @@ import { describe, expect, it } from "vitest";
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type { CastAndCrewMemberTitlesFiltersValues } from "./CastAndCrewMemberTitles.reducer";
 
-import { calculateGenreCounts } from "./filterCastAndCrewMemberTitles";
+import {
+  calculateGenreCounts,
+  calculateReviewedStatusCounts,
+} from "./filterCastAndCrewMemberTitles";
 
 describe("calculateGenreCounts", () => {
   const mockValues: CastAndCrewMemberTitlesValue[] = [
@@ -195,5 +198,137 @@ describe("calculateGenreCounts", () => {
     const counts = calculateGenreCounts(mockValues, filterValues);
 
     expect(counts.size).toBe(0);
+  });
+});
+
+describe("calculateReviewedStatusCounts", () => {
+  const mockValues: CastAndCrewMemberTitlesValue[] = [
+    {
+      creditedAs: ["director"],
+      excerpt: undefined,
+      genres: ["Horror", "Thriller"],
+      grade: "A",
+      gradeValue: 12,
+      imdbId: "tt1",
+      releaseSequence: 1,
+      releaseYear: "1980",
+      reviewDisplayDate: "Jan 1, 2020",
+      reviewSequence: 1,
+      reviewYear: "2020",
+      slug: "test-1", // reviewed
+      sortTitle: "test 1",
+      stillImageProps: {} as never,
+      title: "Test 1",
+      watchlistCollectionNames: [],
+      watchlistDirectorNames: [],
+      watchlistPerformerNames: [],
+      watchlistWriterNames: [],
+    },
+    {
+      creditedAs: ["director"],
+      excerpt: undefined,
+      genres: ["Horror", "Action"],
+      grade: "B+",
+      gradeValue: 10,
+      imdbId: "tt2",
+      releaseSequence: 2,
+      releaseYear: "1985",
+      reviewDisplayDate: "Jan 1, 2021",
+      reviewSequence: 2,
+      reviewYear: "2021",
+      slug: "test-2", // reviewed
+      sortTitle: "test 2",
+      stillImageProps: {} as never,
+      title: "Test 2",
+      watchlistCollectionNames: [],
+      watchlistDirectorNames: [],
+      watchlistPerformerNames: [],
+      watchlistWriterNames: [],
+    },
+    {
+      creditedAs: ["writer"],
+      excerpt: undefined,
+      genres: ["Comedy", "Drama"],
+      gradeValue: undefined,
+      imdbId: "tt3",
+      releaseSequence: 3,
+      releaseYear: "1990",
+      reviewSequence: undefined,
+      reviewYear: undefined,
+      slug: undefined, // not reviewed
+      sortTitle: "test 3",
+      stillImageProps: {} as never,
+      title: "Test 3",
+      watchlistCollectionNames: [],
+      watchlistDirectorNames: [],
+      watchlistPerformerNames: [],
+      watchlistWriterNames: [],
+    },
+  ];
+
+  it("counts all statuses when no filters applied", () => {
+    const filterValues: CastAndCrewMemberTitlesFiltersValues = {};
+    const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+    expect(counts.get("All")).toBe(3);
+    expect(counts.get("Reviewed")).toBe(2);
+    expect(counts.get("Not Reviewed")).toBe(1);
+  });
+
+  it("counts statuses while respecting genre filter", () => {
+    const filterValues: CastAndCrewMemberTitlesFiltersValues = {
+      genres: ["Horror"],
+    };
+    const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+    // Only 2 Horror titles (both reviewed)
+    expect(counts.get("All")).toBe(2);
+    expect(counts.get("Reviewed")).toBe(2);
+    expect(counts.get("Not Reviewed")).toBe(0);
+  });
+
+  it("counts statuses while respecting grade filter", () => {
+    const filterValues: CastAndCrewMemberTitlesFiltersValues = {
+      gradeValue: [10, 13], // B+ to A+
+    };
+    const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+    // Only 2 titles with grades (both reviewed)
+    expect(counts.get("All")).toBe(2);
+    expect(counts.get("Reviewed")).toBe(2);
+    expect(counts.get("Not Reviewed")).toBe(0);
+  });
+
+  it("counts statuses while respecting credited as filter", () => {
+    const filterValues: CastAndCrewMemberTitlesFiltersValues = {
+      creditedAs: "director",
+    };
+    const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+    // Only 2 director credits (both reviewed)
+    expect(counts.get("All")).toBe(2);
+    expect(counts.get("Reviewed")).toBe(2);
+    expect(counts.get("Not Reviewed")).toBe(0);
+  });
+
+  it("ignores reviewed status filter when calculating counts", () => {
+    const filterValues: CastAndCrewMemberTitlesFiltersValues = {
+      reviewedStatus: "Reviewed", // This should be ignored
+    };
+    const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+    // Should count all titles, ignoring the reviewed status filter
+    expect(counts.get("All")).toBe(3);
+    expect(counts.get("Reviewed")).toBe(2);
+    expect(counts.get("Not Reviewed")).toBe(1);
+  });
+
+  it("returns zero counts when no values provided", () => {
+    const filterValues: CastAndCrewMemberTitlesFiltersValues = {};
+    const counts = calculateReviewedStatusCounts([], filterValues);
+
+    expect(counts.get("All")).toBe(0);
+    expect(counts.get("Reviewed")).toBe(0);
+    expect(counts.get("Not Reviewed")).toBe(0);
   });
 });

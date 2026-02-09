@@ -17,7 +17,10 @@ import {
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,
 } from "./CastAndCrewMemberTitles.reducer";
-import { calculateGenreCounts } from "./filterCastAndCrewMemberTitles";
+import {
+  calculateGenreCounts,
+  calculateReviewedStatusCounts,
+} from "./filterCastAndCrewMemberTitles";
 
 /**
  * Filter controls for cast and crew member titles page.
@@ -50,6 +53,13 @@ export function CastAndCrewMemberTitlesFilters({
 }): React.JSX.Element {
   // Calculate genre counts based on current filters
   const genreCounts = calculateGenreCounts(values, filterValues);
+
+  // Calculate reviewed status counts dynamically
+  const reviewedStatusCounts = calculateReviewedStatusCounts(
+    values,
+    filterValues,
+  );
+
   return (
     <>
       {distinctCreditKinds.length > 1 && (
@@ -82,9 +92,12 @@ export function CastAndCrewMemberTitlesFilters({
           values: distinctReleaseYears,
         }}
         reviewedStatus={{
+          counts: reviewedStatusCounts,
           defaultValue: filterValues.reviewedStatus,
           onChange: (value) =>
             dispatch(createReviewedStatusFilterChangedAction(value)),
+          onClear: () =>
+            dispatch(createRemoveAppliedFilterAction("reviewedStatus")),
         }}
         reviewYear={{
           defaultValues: filterValues.reviewYear,

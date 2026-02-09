@@ -10,11 +10,15 @@ import {
   createGenresFilterChangedAction,
   createGradeFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createReviewedStatusFilterChangedAction,
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,
 } from "./CollectionTitles.reducer";
-import { calculateGenreCounts } from "./filterCollectionTitles";
+import {
+  calculateGenreCounts,
+  calculateReviewedStatusCounts,
+} from "./filterCollectionTitles";
 
 /**
  * Filter controls for the collection titles page.
@@ -47,12 +51,18 @@ export function CollectionTitlesFilters({
     ? calculateGenreCounts(values, filterValues)
     : undefined;
 
+  // Calculate reviewed status counts dynamically
+  const reviewedStatusCounts = values
+    ? calculateReviewedStatusCounts(values, filterValues)
+    : undefined;
+
   return (
     <MaybeReviewedTitleFilters
       genres={{
         counts: genreCounts,
         defaultValues: filterValues.genres,
         onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
+        onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
         values: distinctGenres,
       }}
       grade={{
@@ -66,9 +76,12 @@ export function CollectionTitlesFilters({
         values: distinctReleaseYears,
       }}
       reviewedStatus={{
+        counts: reviewedStatusCounts,
         defaultValue: filterValues.reviewedStatus,
         onChange: (value) =>
           dispatch(createReviewedStatusFilterChangedAction(value)),
+        onClear: () =>
+          dispatch(createRemoveAppliedFilterAction("reviewedStatus")),
       }}
       reviewYear={{
         defaultValues: filterValues.reviewYear,

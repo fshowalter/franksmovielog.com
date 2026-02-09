@@ -30,6 +30,38 @@ export function calculateGenreCounts(
 }
 
 /**
+ * Calculates the count of titles for each reviewed status.
+ * Excludes reviewed status filter when calculating counts.
+ * @param values - Array of cast/crew member titles
+ * @param filterValues - Active filter values
+ * @returns Map of reviewed status to count
+ */
+export function calculateReviewedStatusCounts(
+  values: CastAndCrewMemberTitlesValue[],
+  filterValues: CastAndCrewMemberTitlesFiltersValues,
+): Map<string, number> {
+  // Apply all filters EXCEPT reviewedStatus
+  const filtersWithoutReviewedStatus = {
+    ...filterValues,
+    reviewedStatus: undefined,
+  };
+  const allFiltered = filterCastAndCrewMemberTitles(
+    values,
+    filtersWithoutReviewedStatus,
+  );
+
+  // Count reviewed vs not reviewed (reviewed = has slug)
+  const reviewedCount = allFiltered.filter((v) => !!v.slug).length;
+  const notReviewedCount = allFiltered.length - reviewedCount;
+
+  return new Map([
+    ["All", allFiltered.length],
+    ["Not Reviewed", notReviewedCount],
+    ["Reviewed", reviewedCount],
+  ]);
+}
+
+/**
  * Filters cast/crew member titles based on credited role and other criteria.
  * @param sortedValues - Array of cast/crew member titles to filter
  * @param filterValues - Object containing filter values including creditedAs

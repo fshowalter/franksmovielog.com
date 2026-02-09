@@ -3,7 +3,10 @@ import { describe, expect, it } from "vitest";
 import type { CollectionTitlesValue } from "./CollectionTitles";
 import type { CollectionTitlesFiltersValues } from "./CollectionTitles.reducer";
 
-import { calculateGenreCounts } from "./filterCollectionTitles";
+import {
+  calculateGenreCounts,
+  calculateReviewedStatusCounts,
+} from "./filterCollectionTitles";
 
 const mockTitle = (
   overrides: Partial<CollectionTitlesValue>,
@@ -154,5 +157,81 @@ describe("calculateGenreCounts", () => {
     // Only first title matches all filters (A grade, 1980, reviewed)
     expect(result.get("Horror")).toBe(1);
     expect(result.get("Drama")).toBe(undefined); // Not reviewed
+  });
+});
+
+describe("calculateReviewedStatusCounts", () => {
+  it("returns counts for all statuses when no filters applied", () => {
+    const titles = [
+      mockTitle({ slug: "reviewed-1" }), // reviewed
+      mockTitle({ slug: "reviewed-2" }), // reviewed
+      mockTitle({ slug: undefined }), // not reviewed
+    ];
+    const filterValues: CollectionTitlesFiltersValues = {};
+    const result = calculateReviewedStatusCounts(titles, filterValues);
+
+    expect(result.get("All")).toBe(3);
+    expect(result.get("Reviewed")).toBe(2);
+    expect(result.get("Not Reviewed")).toBe(1);
+  });
+
+  it("respects genre filter when counting reviewed status", () => {
+    const titles = [
+      mockTitle({ genres: ["Horror"], slug: "horror-1" }),
+      mockTitle({ genres: ["Horror"], slug: undefined }),
+      mockTitle({ genres: ["Drama"], slug: "drama-1" }),
+    ];
+    const filterValues: CollectionTitlesFiltersValues = {
+      genres: ["Horror"],
+    };
+    const result = calculateReviewedStatusCounts(titles, filterValues);
+
+    // Only 2 Horror titles
+    expect(result.get("All")).toBe(2);
+    expect(result.get("Reviewed")).toBe(1);
+    expect(result.get("Not Reviewed")).toBe(1);
+  });
+
+  it("respects grade filter when counting reviewed status", () => {
+    const titles = [
+      mockTitle({ gradeValue: 12, slug: "movie-1" }), // A
+      mockTitle({ gradeValue: 10, slug: "movie-2" }), // B+
+      mockTitle({ gradeValue: 8, slug: undefined }), // B-
+    ];
+    const filterValues: CollectionTitlesFiltersValues = {
+      gradeValue: [10, 13], // B+ to A+
+    };
+    const result = calculateReviewedStatusCounts(titles, filterValues);
+
+    // Only 2 titles match grade filter
+    expect(result.get("All")).toBe(2);
+    expect(result.get("Reviewed")).toBe(2);
+    expect(result.get("Not Reviewed")).toBe(0);
+  });
+
+  it("excludes reviewed status filter when calculating counts", () => {
+    const titles = [
+      mockTitle({ slug: "reviewed-1" }),
+      mockTitle({ slug: "reviewed-2" }),
+      mockTitle({ slug: undefined }),
+    ];
+    const filterValues: CollectionTitlesFiltersValues = {
+      reviewedStatus: "Reviewed", // This should be excluded from calculation
+    };
+    const result = calculateReviewedStatusCounts(titles, filterValues);
+
+    // All titles should be counted (reviewedStatus filter excluded)
+    expect(result.get("All")).toBe(3);
+    expect(result.get("Reviewed")).toBe(2);
+    expect(result.get("Not Reviewed")).toBe(1);
+  });
+
+  it("handles empty array", () => {
+    const filterValues: CollectionTitlesFiltersValues = {};
+    const result = calculateReviewedStatusCounts([], filterValues);
+
+    expect(result.get("All")).toBe(0);
+    expect(result.get("Reviewed")).toBe(0);
+    expect(result.get("Not Reviewed")).toBe(0);
   });
 });
