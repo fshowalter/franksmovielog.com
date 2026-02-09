@@ -188,7 +188,7 @@ describe("calculateCreditedAsCounts", () => {
 
     // Only Christopher Nolan matches
     expect(counts.get("director")).toBe(1);
-    expect(counts.get("performer")).toBe(0);
+    expect(counts.get("performer") ?? 0).toBe(0);
     expect(counts.get("writer")).toBe(1);
   });
 

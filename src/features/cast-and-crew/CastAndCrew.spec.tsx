@@ -102,7 +102,7 @@ describe("CastAndCrew", () => {
       render(<CastAndCrew {...baseProps} values={members} />);
 
       await clickToggleFilters(user);
-      await clickCreditedAsFilterOption(user, "Director");
+      await clickCreditedAsFilterOption(user, "director");
       await clickViewResults(user);
 
       const avatarList = getGroupedAvatarList();
@@ -244,7 +244,7 @@ describe("CastAndCrew", () => {
       // Apply multiple filters
       await clickToggleFilters(user);
       await fillNameFilter(user, "John");
-      await clickCreditedAsFilterOption(user, "Director");
+      await clickCreditedAsFilterOption(user, "director");
       await clickViewResults(user);
 
       let avatarList = getGroupedAvatarList();
@@ -262,7 +262,7 @@ describe("CastAndCrew", () => {
 
       // Check that all filters are cleared
       expect(getNameFilter()).toHaveValue("");
-      expect(getCreditedAsFilter()).toHaveValue("All");
+      expect(getCreditedAsFilter()).toBe("All");
 
       await clickViewResults(user);
 
