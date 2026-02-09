@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 12,
-  "viewingCount": 23,
-  "titleCount": 23,
+  "viewingCount": 24,
+  "titleCount": 24,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -14,7 +14,7 @@
     },
     {
       "name": "DVD",
-      "count": 2
+      "count": 3
     },
     {
       "name": "Watch TCM",
@@ -49,7 +49,7 @@
     },
     {
       "name": "1960s",
-      "count": 3
+      "count": 4
     },
     {
       "name": "1970s",
@@ -127,7 +127,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 2,
+      "count": 3,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -170,6 +170,74 @@
           "viewingDate": "2026-01-26",
           "viewingSequence": 2999,
           "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0059710",
+          "title": "She",
+          "sortTitle": "she-1965",
+          "releaseYear": "1965",
+          "releaseDate": "1965-04-18",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": "she-1965",
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2026-02-08",
+          "reviewSequence": 3012,
+          "viewingDate": "2026-02-08",
+          "viewingSequence": 3012,
+          "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Peter Cushing",
+      "count": 2,
+      "slug": "peter-cushing",
+      "viewings": [
+        {
+          "imdbId": "tt0050280",
+          "title": "The Curse of Frankenstein",
+          "sortTitle": "curse-of-frankenstein-1957",
+          "releaseYear": "1957",
+          "releaseDate": "1957-05-02",
+          "genres": [
+            "Horror",
+            "Sci-Fi",
+            "Thriller"
+          ],
+          "slug": "the-curse-of-frankenstein-1957",
+          "grade": "A",
+          "gradeValue": 15,
+          "reviewDate": "2026-01-08",
+          "reviewSequence": 2991,
+          "viewingDate": "2026-01-08",
+          "viewingSequence": 2991,
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0059710",
+          "title": "She",
+          "sortTitle": "she-1965",
+          "releaseYear": "1965",
+          "releaseDate": "1965-04-18",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": "she-1965",
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2026-02-08",
+          "reviewSequence": 3012,
+          "viewingDate": "2026-02-08",
+          "viewingSequence": 3012,
+          "medium": "DVD",
           "venue": null
         }
       ]
@@ -217,6 +285,54 @@
           "viewingDate": "2026-02-02",
           "viewingSequence": 3006,
           "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Andr\u00e9 Morell",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0055438",
+          "title": "The Shadow of the Cat",
+          "sortTitle": "shadow-of-the-cat-1961",
+          "releaseYear": "1961",
+          "releaseDate": "1961-05-01",
+          "genres": [
+            "Horror",
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-shadow-of-the-cat-1961",
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2026-01-19",
+          "reviewSequence": 2994,
+          "viewingDate": "2026-01-19",
+          "viewingSequence": 2994,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0059710",
+          "title": "She",
+          "sortTitle": "she-1965",
+          "releaseYear": "1965",
+          "releaseDate": "1965-04-18",
+          "genres": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "slug": "she-1965",
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2026-02-08",
+          "reviewSequence": 3012,
+          "viewingDate": "2026-02-08",
+          "viewingSequence": 3012,
+          "medium": "DVD",
           "venue": null
         }
       ]
@@ -501,100 +617,6 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Tsun Liu",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0076519",
-          "title": "Jade Tiger",
-          "sortTitle": "jade-tiger-1977",
-          "releaseYear": "1977",
-          "releaseDate": "1977-05-07",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": "jade-tiger-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2026-01-27",
-          "reviewSequence": 3000,
-          "viewingDate": "2026-01-27",
-          "viewingSequence": 3000,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0085840",
-          "title": "Mercenaries from Hong Kong",
-          "sortTitle": "mercenaries-from-hong-kong-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-12-22",
-          "genres": [
-            "Action",
-            "Drama"
-          ],
-          "slug": "mercenaries-from-hong-kong-1982",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2026-02-01",
-          "reviewSequence": 3005,
-          "viewingDate": "2026-02-01",
-          "viewingSequence": 3005,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Huang Pei-Chi",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0076519",
-          "title": "Jade Tiger",
-          "sortTitle": "jade-tiger-1977",
-          "releaseYear": "1977",
-          "releaseDate": "1977-05-07",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": "jade-tiger-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2026-01-27",
-          "reviewSequence": 3000,
-          "viewingDate": "2026-01-27",
-          "viewingSequence": 3000,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0085840",
-          "title": "Mercenaries from Hong Kong",
-          "sortTitle": "mercenaries-from-hong-kong-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-12-22",
-          "genres": [
-            "Action",
-            "Drama"
-          ],
-          "slug": "mercenaries-from-hong-kong-1982",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2026-02-01",
-          "reviewSequence": 3005,
-          "viewingDate": "2026-02-01",
-          "viewingSequence": 3005,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
@@ -648,5 +670,5 @@
       ]
     }
   ],
-  "reviewCount": 23
+  "reviewCount": 24
 }
