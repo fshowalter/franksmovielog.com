@@ -636,12 +636,45 @@ Both pages now have the complete new filter UI with:
 
 ---
 
+## Stage 6: Cleanup & Deprecation
+
+### Task 6.0: Convert Remaining Old Components ✅
+
+- **Completed:** 2026-02-09
+- **Commit:** 5157650e2
+- **Files Modified:**
+  - `/src/components/filter-and-sort/MaybeReviewedTitleFilters.tsx` - Converted from SelectField to RadioListField
+  - `/src/features/collection-titles/CollectionTitlesFilters.tsx` - Added dynamic reviewed status counts
+  - `/src/features/collection-titles/filterCollectionTitles.ts` - Added calculateReviewedStatusCounts helper
+  - `/src/features/collection-titles/filterCollectionTitles.spec.ts` - Added comprehensive tests
+  - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitlesFilters.tsx` - Added dynamic reviewed status counts
+  - `/src/features/cast-and-crew-member-titles/filterCastAndCrewMemberTitles.ts` - Added calculateReviewedStatusCounts helper
+  - `/src/features/cast-and-crew-member-titles/filterCastAndCrewMemberTitles.spec.ts` - Added comprehensive tests
+- **Snapshots Updated:** 6 page-level snapshots (cast-and-crew member titles x3, collection titles x3)
+- **Tests:** 29/29 passing (13 collection-titles + 16 cast-and-crew-member-titles)
+- **Features Implemented:**
+  - Converted MaybeReviewedTitleFilters from old SelectField dropdown to RadioListField
+  - Wrapped in FilterSection with collapsible details/summary
+  - Dynamic count calculation using calculateReviewedStatusCounts helper (respects all non-reviewedStatus filters)
+  - Shows first 3 radio options by default (All, Reviewed, Not Reviewed)
+  - Clear link appears beneath radio buttons when non-default selection exists
+  - Supports all filter types: genres, grade, release/review year, reviewed status, title search
+  - Used by both collection-titles and cast-and-crew-member-titles features
+
+**Notes:**
+- This was a missed conversion from Stage 3 - ReviewedStatusFilter was still using old SelectField
+- MaybeReviewedTitleFilters is a shared component used by multiple pages
+- All linting and TypeScript checks pass
+- This completes all conversions - now ready for cleanup of old components
+
+---
+
 ## Next Task
 
-**Stage 4: Watchlist & Viewings Pages - Complete Watchlist**
+**Stage 6: Cleanup & Deprecation - Continue**
 
-Task 4.1: Watchlist (Remaining)
-- Decide on CreditSelectField strategy (wrapper vs inline)
-- Add count calculation helpers
-- Convert filters to checkboxes
-- Add AppliedFilters integration
+Task 6.1: Verify No Usage of Old Components (In Progress)
+- Already ran knip - confirmed MultiSelectField.testHelper.ts, SelectField.testHelper.ts, and SelectOptions.tsx are unused
+- MultiSelectField itself is still used by tests only
+- Need to verify if ReviewedStatusFilter is now unused
+- Then proceed to Task 6.2: Delete Old Components
