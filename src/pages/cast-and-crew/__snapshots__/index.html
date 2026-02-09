@@ -544,7 +544,7 @@
             </div>
           </header>
           <astro-island
-            uid="Z1Px45m"
+            uid="1OuuLP"
             prefix="r1"
             component-url="~/features/cast-and-crew/CastAndCrew"
             component-export="CastAndCrew"
@@ -5224,20 +5224,103 @@
                           ><input
                             class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
                             placeholder="Enter all or part of a name"
-                            type="text" /></label
-                        ><label class="flex flex-col"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Credited As</span
-                          ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                            type="text"
+                        /></label>
+                        <details class="border-b border-default last:border-0">
+                          <summary
+                            class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
-                            <option value="All">All</option>
-                            <option value="director">Director</option>
-                            <option value="performer">Performer</option>
-                            <option value="writer">Writer</option>
-                          </select></label
-                        >
+                            <span class="flex items-center gap-2"
+                              ><svg
+                                aria-hidden="true"
+                                class="size-3 transition-transform [[open]&gt;&amp;]:rotate-90"
+                                fill="currentColor"
+                                viewBox="0 0 8 12"
+                              >
+                                <path
+                                  d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
+                                ></path></svg
+                              >Credited As</span
+                            >
+                          </summary>
+                          <div class="px-4 pb-3">
+                            <fieldset class="text-left">
+                              <legend class="sr-only">
+                                <span
+                                  class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                  >Credited As</span
+                                >
+                              </legend>
+                              <div class="flex flex-col gap-2">
+                                <div
+                                  aria-live="polite"
+                                  aria-relevant="additions removals"
+                                  class="flex flex-col"
+                                  role="radiogroup"
+                                >
+                                  <label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-credited-as-All"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-credited-as-All"
+                                      type="radio"
+                                      name="radio-list-credited-as"
+                                      checked=""
+                                      value="All"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >All</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->155<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-credited-as-director"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-credited-as-director"
+                                      type="radio"
+                                      name="radio-list-credited-as"
+                                      value="director"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Director</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->49<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-credited-as-performer"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-credited-as-performer"
+                                      type="radio"
+                                      name="radio-list-credited-as"
+                                      value="performer"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Performer</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->57<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-credited-as-writer"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-credited-as-writer"
+                                      type="radio"
+                                      name="radio-list-credited-as"
+                                      value="writer"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Writer</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->49<!-- -->)</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                        </details>
                       </fieldset>
                       <div
                         class="sticky bottom-0 z-filter-footer mt-auto w-full border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"

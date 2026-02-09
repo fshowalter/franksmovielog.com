@@ -541,7 +541,7 @@
             </div>
           </header>
           <astro-island
-            uid="1awWqK"
+            uid="1KilNK"
             prefix="r1"
             component-url="~/features/viewings/Viewings"
             component-export="Viewings"
@@ -1550,18 +1550,87 @@
                             >
                           </div>
                         </fieldset>
-                        <label class="flex flex-col"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Reviewed Status</span
-                          ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                        <details class="border-b border-default last:border-0">
+                          <summary
+                            class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
-                            <option value="All">All</option>
-                            <option value="Reviewed">Reviewed</option>
-                            <option value="Not Reviewed">Not Reviewed</option>
-                          </select></label
-                        >
+                            <span class="flex items-center gap-2"
+                              ><svg
+                                aria-hidden="true"
+                                class="size-3 transition-transform [[open]&gt;&amp;]:rotate-90"
+                                fill="currentColor"
+                                viewBox="0 0 8 12"
+                              >
+                                <path
+                                  d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
+                                ></path></svg
+                              >Reviewed Status</span
+                            >
+                          </summary>
+                          <div class="px-4 pb-3">
+                            <fieldset class="text-left">
+                              <legend class="sr-only">
+                                <span
+                                  class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                  >Reviewed Status</span
+                                >
+                              </legend>
+                              <div class="flex flex-col gap-2">
+                                <div
+                                  aria-live="polite"
+                                  aria-relevant="additions removals"
+                                  class="flex flex-col"
+                                  role="radiogroup"
+                                >
+                                  <label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-reviewed-status-All"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-reviewed-status-All"
+                                      type="radio"
+                                      name="radio-list-reviewed-status"
+                                      checked=""
+                                      value="All"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >All</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->2920<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-reviewed-status-Reviewed"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-reviewed-status-Reviewed"
+                                      type="radio"
+                                      name="radio-list-reviewed-status"
+                                      value="Reviewed"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Reviewed</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->2458<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-reviewed-status-Not Reviewed"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-reviewed-status-Not Reviewed"
+                                      type="radio"
+                                      name="radio-list-reviewed-status"
+                                      value="Not Reviewed"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Not Reviewed</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->462<!-- -->)</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                        </details>
                         <fieldset class="text-subtle">
                           <legend
                             class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
@@ -1628,101 +1697,787 @@
                             >
                           </div>
                         </fieldset>
-                        <label class="flex flex-col"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Medium</span
-                          ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                        <details class="border-b border-default last:border-0">
+                          <summary
+                            class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
-                            <option value="All">All</option>
-                            <option value="3D DCP">3D DCP</option>
-                            <option value="4k UHD Blu-ray">
-                              4k UHD Blu-ray
-                            </option>
-                            <option value="35mm">35mm</option>
-                            <option value="70mm">70mm</option>
-                            <option value="AFI Silver">AFI Silver</option>
-                            <option value="Alamo On Demand">
-                              Alamo On Demand
-                            </option>
-                            <option value="Amazon">Amazon</option>
-                            <option value="archive.org">archive.org</option>
-                            <option value="Arrow Player">Arrow Player</option>
-                            <option value="Arte">Arte</option>
-                            <option value="Blu-ray">Blu-ray</option>
-                            <option value="Criterion Channel">
-                              Criterion Channel
-                            </option>
-                            <option value="Disney+">Disney+</option>
-                            <option value="DVD">DVD</option>
-                            <option value="Encore HD">Encore HD</option>
-                            <option value="FandangoNOW">FandangoNOW</option>
-                            <option value="FXM">FXM</option>
-                            <option value="HBO GO">HBO GO</option>
-                            <option value="HBO HD">HBO HD</option>
-                            <option value="HBO Max">HBO Max</option>
-                            <option value="HDNet">HDNet</option>
-                            <option value="Hoopla">Hoopla</option>
-                            <option value="Hulu">Hulu</option>
-                            <option value="iTunes">iTunes</option>
-                            <option value="Kanopy">Kanopy</option>
-                            <option value="Max">Max</option>
-                            <option value="Netflix">Netflix</option>
-                            <option value="OK.ru">OK.ru</option>
-                            <option value="Shudder">Shudder</option>
-                            <option value="TCM">TCM</option>
-                            <option value="TCM HD">TCM HD</option>
-                            <option value="VHS-rip">VHS-rip</option>
-                            <option value="Vudu">Vudu</option>
-                            <option value="Watch TCM">Watch TCM</option>
-                            <option value="WEBRip">WEBRip</option>
-                            <option value="YouTube">YouTube</option>
-                          </select></label
-                        ><label class="flex flex-col"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Venue</span
-                          ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                            <span class="flex items-center gap-2"
+                              ><svg
+                                aria-hidden="true"
+                                class="size-3 transition-transform [[open]&gt;&amp;]:rotate-90"
+                                fill="currentColor"
+                                viewBox="0 0 8 12"
+                              >
+                                <path
+                                  d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
+                                ></path></svg
+                              >Medium</span
+                            >
+                          </summary>
+                          <div class="px-4 pb-3">
+                            <fieldset class="text-left">
+                              <legend class="sr-only">
+                                <span
+                                  class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                  >Medium</span
+                                >
+                              </legend>
+                              <div class="flex flex-col gap-2">
+                                <div
+                                  aria-live="polite"
+                                  aria-relevant="additions removals"
+                                  class="flex flex-col"
+                                  role="radiogroup"
+                                >
+                                  <label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-All"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-All"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      checked=""
+                                      value="All"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >All</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->2920<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-3D DCP"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-3D DCP"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="3D DCP"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >3D DCP</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-4k UHD Blu-ray"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-4k UHD Blu-ray"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="4k UHD Blu-ray"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >4k UHD Blu-ray</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->100<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-35mm"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-35mm"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="35mm"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >35mm</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->70<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-70mm"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-70mm"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="70mm"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >70mm</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->5<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-AFI Silver"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-AFI Silver"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="AFI Silver"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >AFI Silver</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Alamo On Demand"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Alamo On Demand"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Alamo On Demand"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Alamo On Demand</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->2<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Amazon"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Amazon"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Amazon"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Amazon</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->59<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-archive.org"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-archive.org"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="archive.org"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >archive.org</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->2<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Arrow Player"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Arrow Player"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Arrow Player"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Arrow Player</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->19<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Arte"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Arte"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Arte"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Arte</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Blu-ray"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Blu-ray"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Blu-ray"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Blu-ray</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->399<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Criterion Channel"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Criterion Channel"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Criterion Channel"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Criterion Channel</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->59<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Disney+"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Disney+"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Disney+"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Disney+</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->13<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-DVD"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-DVD"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="DVD"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >DVD</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->72<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Encore HD"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Encore HD"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Encore HD"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Encore HD</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->10<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-FandangoNOW"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-FandangoNOW"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="FandangoNOW"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >FandangoNOW</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-FXM"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-FXM"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="FXM"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >FXM</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-HBO GO"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-HBO GO"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="HBO GO"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >HBO GO</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-HBO HD"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-HBO HD"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="HBO HD"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >HBO HD</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->4<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-HBO Max"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-HBO Max"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="HBO Max"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >HBO Max</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->23<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-HDNet"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-HDNet"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="HDNet"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >HDNet</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->2<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Hoopla"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Hoopla"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Hoopla"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Hoopla</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Hulu"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Hulu"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Hulu"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Hulu</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->11<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-iTunes"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-iTunes"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="iTunes"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >iTunes</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->109<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Kanopy"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Kanopy"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Kanopy"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Kanopy</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->7<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Max"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Max"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Max"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Max</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Netflix"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Netflix"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Netflix"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Netflix</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->194<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-OK.ru"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-OK.ru"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="OK.ru"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >OK.ru</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->12<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Shudder"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Shudder"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Shudder"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Shudder</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->27<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-TCM"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-TCM"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="TCM"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >TCM</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->26<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-TCM HD"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-TCM HD"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="TCM HD"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >TCM HD</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->168<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-VHS-rip"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-VHS-rip"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="VHS-rip"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >VHS-rip</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->10<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Vudu"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Vudu"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Vudu"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Vudu</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->17<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-Watch TCM"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-Watch TCM"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="Watch TCM"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Watch TCM</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->126<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-WEBRip"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-WEBRip"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="WEBRip"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >WEBRip</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-medium-YouTube"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-medium-YouTube"
+                                      type="radio"
+                                      name="radio-list-medium"
+                                      value="YouTube"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >YouTube</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->11<!-- -->)</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                        </details>
+                        <details class="border-b border-default last:border-0">
+                          <summary
+                            class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
-                            <option value="All">All</option>
-                            <option value="35mm">35mm</option>
-                            <option value="AFI Silver">AFI Silver</option>
-                            <option
-                              value="Alamo Drafthouse Cinema - One Loudoun"
+                            <span class="flex items-center gap-2"
+                              ><svg
+                                aria-hidden="true"
+                                class="size-3 transition-transform [[open]&gt;&amp;]:rotate-90"
+                                fill="currentColor"
+                                viewBox="0 0 8 12"
+                              >
+                                <path
+                                  d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
+                                ></path></svg
+                              >Venue</span
                             >
-                              Alamo Drafthouse Cinema - One Loudoun
-                            </option>
-                            <option
-                              value="Alamo Drafthouse Cinema - Winchester"
-                            >
-                              Alamo Drafthouse Cinema - Winchester
-                            </option>
-                            <option
-                              value="Alamo Drafthouse Cinema - Woodbridge"
-                            >
-                              Alamo Drafthouse Cinema - Woodbridge
-                            </option>
-                            <option value="AMC Tysons Corner 16">
-                              AMC Tysons Corner 16
-                            </option>
-                            <option value="Angelika Film Center Mosaic">
-                              Angelika Film Center Mosaic
-                            </option>
-                            <option value="Landmark E Street Cinema">
-                              Landmark E Street Cinema
-                            </option>
-                            <option value="Lee Highway Multiplex Cinemas">
-                              Lee Highway Multiplex Cinemas
-                            </option>
-                            <option value="Majestic 20">Majestic 20</option>
-                            <option value="Prince Charles Cinema">
-                              Prince Charles Cinema
-                            </option>
-                            <option value="The Black Cat">The Black Cat</option>
-                          </select></label
-                        >
+                          </summary>
+                          <div class="px-4 pb-3">
+                            <fieldset class="text-left">
+                              <legend class="sr-only">
+                                <span
+                                  class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                  >Venue</span
+                                >
+                              </legend>
+                              <div class="flex flex-col gap-2">
+                                <div
+                                  aria-live="polite"
+                                  aria-relevant="additions removals"
+                                  class="flex flex-col"
+                                  role="radiogroup"
+                                >
+                                  <label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-All"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-All"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      checked=""
+                                      value="All"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >All</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->2920<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-35mm"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-35mm"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="35mm"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >35mm</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-AFI Silver"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-AFI Silver"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="AFI Silver"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >AFI Silver</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->77<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-Alamo Drafthouse Cinema - One Loudoun"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-Alamo Drafthouse Cinema - One Loudoun"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="Alamo Drafthouse Cinema - One Loudoun"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Alamo Drafthouse Cinema - One
+                                      Loudoun</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->219<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-Alamo Drafthouse Cinema - Winchester"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-Alamo Drafthouse Cinema - Winchester"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="Alamo Drafthouse Cinema - Winchester"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Alamo Drafthouse Cinema -
+                                      Winchester</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-Alamo Drafthouse Cinema - Woodbridge"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-Alamo Drafthouse Cinema - Woodbridge"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="Alamo Drafthouse Cinema - Woodbridge"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Alamo Drafthouse Cinema -
+                                      Woodbridge</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->7<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-AMC Tysons Corner 16"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-AMC Tysons Corner 16"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="AMC Tysons Corner 16"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >AMC Tysons Corner 16</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->40<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-Angelika Film Center Mosaic"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-Angelika Film Center Mosaic"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="Angelika Film Center Mosaic"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Angelika Film Center Mosaic</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->9<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-Landmark E Street Cinema"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-Landmark E Street Cinema"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="Landmark E Street Cinema"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Landmark E Street Cinema</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->10<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-Lee Highway Multiplex Cinemas"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-Lee Highway Multiplex Cinemas"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="Lee Highway Multiplex Cinemas"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Lee Highway Multiplex Cinemas</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->1<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-Majestic 20"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-Majestic 20"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="Majestic 20"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Majestic 20</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->3<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-Prince Charles Cinema"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-Prince Charles Cinema"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="Prince Charles Cinema"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Prince Charles Cinema</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->5<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="radio-list-venue-The Black Cat"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="radio-list-venue-The Black Cat"
+                                      type="radio"
+                                      name="radio-list-venue"
+                                      value="The Black Cat"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >The Black Cat</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->7<!-- -->)</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                            </fieldset>
+                          </div>
+                        </details>
                       </fieldset>
                       <div
                         class="sticky bottom-0 z-filter-footer mt-auto w-full border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"
