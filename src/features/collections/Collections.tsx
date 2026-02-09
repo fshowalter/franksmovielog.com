@@ -10,10 +10,12 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionsSort } from "./sortCollections";
 
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createSortAction,
   reducer,
@@ -78,8 +80,11 @@ export function Collections({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+
   return (
     <FilterAndSortContainer
+      activeFilters={activeFilters}
       filters={
         <CollectionsFilters
           dispatch={dispatch}
@@ -92,6 +97,9 @@ export function Collections({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={(filterId) =>
+        dispatch(createRemoveAppliedFilterAction(filterId))
+      }
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}
