@@ -538,12 +538,57 @@ Task 4.2 (Viewings) completed. Next task:
 
 ---
 
+### Task 5.2: Collections ✅
+
+- **Completed:** 2026-02-09
+- **Commit:** 0f83fb113
+- **Files Created:**
+  - `/src/features/collections/appliedFilterChips.ts`
+  - `/src/features/collections/appliedFilterChips.spec.ts`
+- **Files Modified:**
+  - `/src/features/collections/Collections.tsx` - Integrated AppliedFilters component
+  - `/src/features/collections/Collections.reducer.ts` - Exported removeAppliedFilterAction
+- **Tests:** 5/5 passing (appliedFilterChips), 12/12 passing (Collections feature)
+- **Features Implemented:**
+  - buildAppliedFilterChips helper for filter chip generation
+  - AppliedFilters component integration showing search query chips
+  - Search queries display as "Search: [query]" format
+  - Individual filter removal via chip × buttons
+  - "Clear all" functionality removes search filter
+  - Maintains consistency with other converted pages
+
+**Notes:**
+- Collections page only has text search filter (name field)
+- Decision: Add AppliedFilters for consistency (shows "Search: [query]" chip)
+- Minimal implementation suitable for single text-only filter
+- All linting and TypeScript checks pass
+- This completes Task 5.2 of Stage 5 in the implementation plan
+
+---
+
+## Stage 5: Cast & Crew and Collections List Pages ✅
+
+**Status:** Complete
+**Completed:** 2026-02-09
+
+All 2 tasks completed:
+1. ✅ Cast & Crew
+2. ✅ Collections
+
+Both pages now have the complete new filter UI with:
+- AppliedFilters chips showing active filters
+- Individual filter removal via chip × buttons
+- "Clear all" functionality
+- Consistent UI across all converted pages
+
+---
+
 ## Next Task
 
-**Stage 5: Cast & Crew and Collections List Pages**
+**Stage 4: Watchlist & Viewings Pages - Complete Watchlist**
 
-Task 5.2: Collections
-- Evaluate if AppliedFilters should show search query chip
-- If yes, add minimal appliedFilterChips helper
-- Update CollectionsFilters if needed
-- Update tests
+Task 4.1: Watchlist (Remaining)
+- Decide on CreditSelectField strategy (wrapper vs inline)
+- Add count calculation helpers
+- Convert filters to checkboxes
+- Add AppliedFilters integration
