@@ -501,12 +501,49 @@ Task 4.2 (Viewings) completed. Next task:
 
 ---
 
+## Stage 5: Cast & Crew and Collections List Pages
+
+### Task 5.1: Cast & Crew ✅
+
+- **Completed:** 2026-02-08
+- **Commit:** b2e289eae
+- **Files Created:**
+  - `/src/features/cast-and-crew/appliedFilterChips.ts`
+  - `/src/features/cast-and-crew/appliedFilterChips.spec.ts`
+  - `/src/features/cast-and-crew/filterCastAndCrew.spec.ts`
+- **Files Modified:**
+  - `/src/components/filter-and-sort/CreditedAsFilter.tsx` - Converted to RadioListField with FilterSection
+  - `/src/components/filter-and-sort/CreditedAsFilter.testHelper.ts` - Updated for RadioListField
+  - `/src/features/cast-and-crew/CastAndCrew.tsx` - Integrated AppliedFilters component
+  - `/src/features/cast-and-crew/CastAndCrewFilters.tsx` - Added dynamic count calculation
+  - `/src/features/cast-and-crew/CastAndCrew.reducer.ts` - Exported removeAppliedFilterAction
+  - `/src/features/cast-and-crew/filterCastAndCrew.ts` - Added calculateCreditedAsCounts helper
+  - `/src/reducers/collectionFiltersReducer.ts` - Exported removeAppliedFilterAction
+- **Tests:** 9/9 passing (appliedFilterChips), 15/15 passing (filterCastAndCrew)
+- **Features Implemented:**
+  - CreditedAsFilter converted from SelectField dropdown to RadioListField (inline radio buttons)
+  - Wrapped in FilterSection with collapsible details/summary
+  - Dynamic count calculation for credited roles (director, performer, writer)
+  - AppliedFilters component integration showing active filters as chips
+  - Individual filter removal via chip × buttons
+  - "Clear all" functionality removes all filters at once
+  - All filter types supported: name search, creditedAs role
+
+**Notes:**
+- Cast & Crew page now has the same AppliedFilters UI as other converted pages
+- CreditedAsFilter uses RadioListField for single-select role filtering
+- Counts update dynamically based on other active filters (name search)
+- All linting and TypeScript checks pass
+- This completes Task 5.1 of Stage 5 in the implementation plan
+
+---
+
 ## Next Task
 
-**Stage 4: Watchlist & Viewings Pages**
+**Stage 5: Cast & Crew and Collections List Pages**
 
-Task 4.1: Watchlist
-- Decide on CreditSelectField strategy (wrapper vs inline)
-- Add count calculation helpers
-- Convert filters to checkboxes
-- Add AppliedFilters integration
+Task 5.2: Collections
+- Evaluate if AppliedFilters should show search query chip
+- If yes, add minimal appliedFilterChips helper
+- Update CollectionsFilters if needed
+- Update tests
