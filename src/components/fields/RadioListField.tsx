@@ -64,8 +64,9 @@ export function RadioListField({
   };
 
   // AIDEV-NOTE: Sync internal state when defaultValue prop changes (e.g., when filters are cleared)
+  // This is a controlled component pattern where external state changes need to update internal state
   useEffect(() => {
-    setSelectedValue(defaultValue ?? "");
+    setSelectedValue(defaultValue ?? ""); // eslint-disable-line react-hooks/set-state-in-effect
   }, [defaultValue]);
 
   // AIDEV-NOTE: Listen for form reset events and reset to default value when form is reset
@@ -116,7 +117,7 @@ export function RadioListField({
                   hover:bg-stripe
                 `}
                 htmlFor={radioId}
-                key={option.value}
+                key={radioId}
               >
                 <input
                   checked={isChecked}

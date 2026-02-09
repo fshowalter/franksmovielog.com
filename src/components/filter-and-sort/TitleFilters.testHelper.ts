@@ -20,7 +20,7 @@ export async function clickGenresFilterOption(user: UserEvent, value: string) {
   for (const details of allDetailsElements) {
     const summary = details.querySelector("summary");
     if (summary) {
-      summaries.push(summary as HTMLElement);
+      summaries.push(summary);
     }
   }
 

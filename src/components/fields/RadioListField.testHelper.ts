@@ -3,24 +3,6 @@ import type { UserEvent } from "@testing-library/user-event";
 import { screen, within } from "@testing-library/react";
 
 /**
- * Test helper to get a radio button option element by value.
- * @param optionValue - Value of the radio button option
- * @returns Radio button element
- */
-export function getRadioListOption(optionValue: string) {
-  const radios = screen.getAllByRole("radio");
-  const radio = radios.find((rb) => (rb as HTMLInputElement).value === optionValue);
-
-  if (!radio) {
-    throw new Error(
-      `Unable to find radio button with value "${optionValue}". Available values: ${radios.map((rb) => (rb as HTMLInputElement).value).join(", ")}`,
-    );
-  }
-
-  return radio;
-}
-
-/**
  * Test helper to click a radio button option in a radio list field.
  * @param user - UserEvent instance for interactions
  * @param fieldLabel - Label of the radio list field (e.g., "Director", "Performer")
@@ -39,7 +21,7 @@ export async function clickRadioListOption(
   for (const details of allDetailsElements) {
     const summary = details.querySelector("summary");
     if (summary) {
-      summaries.push(summary as HTMLElement);
+      summaries.push(summary);
     }
   }
 
@@ -77,4 +59,22 @@ export async function clickRadioListOption(
   }
 
   await user.click(radio);
+}
+
+/**
+ * Test helper to get a radio button option element by value.
+ * @param optionValue - Value of the radio button option
+ * @returns Radio button element
+ */
+export function getRadioListOption(optionValue: string) {
+  const radios = screen.getAllByRole("radio");
+  const radio = radios.find((rb) => (rb as HTMLInputElement).value === optionValue);
+
+  if (!radio) {
+    throw new Error(
+      `Unable to find radio button with value "${optionValue}". Available values: ${radios.map((rb) => (rb as HTMLInputElement).value).join(", ")}`,
+    );
+  }
+
+  return radio;
 }

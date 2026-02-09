@@ -1,6 +1,6 @@
 import type { UserEvent } from "@testing-library/user-event";
 
-import { clickSelectFieldOption } from "~/components/fields/SelectField.testHelper";
+import { clickRadioListOption } from "~/components/fields/RadioListField.testHelper";
 
 /**
  * Test helper to select a reviewed status filter option.
@@ -11,5 +11,5 @@ export async function clickReviewedStatusFilterOption(
   user: UserEvent,
   reviewedStatus: "All" | "Not Reviewed" | "Reviewed",
 ) {
-  await clickSelectFieldOption(user, "Reviewed Status", reviewedStatus);
+  await clickRadioListOption(user, "Reviewed Status", reviewedStatus);
 }

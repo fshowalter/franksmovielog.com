@@ -1,11 +1,18 @@
-import { SelectField } from "~/components/fields/SelectField";
-import { SelectOptions } from "~/components/fields/SelectOptions";
+import type { RadioListFieldOption } from "~/components/fields/RadioListField";
+
+import { RadioListField } from "~/components/fields/RadioListField";
 import { YearField } from "~/components/fields/YearField";
-import { ReviewedStatusFilter } from "~/components/filter-and-sort/ReviewedStatusFilter";
+import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
 
+import type { ViewingsValue } from "./Viewings";
 import type { ViewingsAction, ViewingsFiltersValues } from "./Viewings.reducer";
 
+import {
+  calculateMediumCounts,
+  calculateReviewedStatusCounts,
+  calculateVenueCounts,
+} from "./filterViewings";
 import {
   createMediumFilterChangedAction,
   createReleaseYearFilterChangedAction,
@@ -24,6 +31,7 @@ import {
  * @param props.distinctVenues - Available venues for filtering
  * @param props.distinctViewingYears - Available viewing years for filtering
  * @param props.filterValues - Current active filter values
+ * @param props.values - All viewing values (for dynamic count calculation)
  * @returns Filter input components for viewings
  */
 export function ViewingsFilters({
@@ -33,6 +41,7 @@ export function ViewingsFilters({
   distinctVenues,
   distinctViewingYears,
   filterValues,
+  values,
 }: {
   dispatch: React.Dispatch<ViewingsAction>;
   distinctMedia: readonly string[];
@@ -40,7 +49,58 @@ export function ViewingsFilters({
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
   filterValues: ViewingsFiltersValues;
+  values: readonly ViewingsValue[];
 }): React.JSX.Element {
+  // Calculate dynamic counts for each filter
+  const mediumCounts = calculateMediumCounts([...values], filterValues);
+  const venueCounts = calculateVenueCounts([...values], filterValues);
+  const reviewedStatusCounts = calculateReviewedStatusCounts(
+    [...values],
+    filterValues,
+  );
+
+  // Build options with counts for RadioListField
+  // Filter out "All" from distinct arrays to avoid duplicate keys
+  const mediumOptions: RadioListFieldOption[] = [
+    { count: values.length, label: "All", value: "All" },
+    ...distinctMedia
+      .filter((medium) => medium !== "All")
+      .map((medium) => ({
+        count: mediumCounts.get(medium) ?? 0,
+        label: medium,
+        value: medium,
+      })),
+  ];
+
+  const venueOptions: RadioListFieldOption[] = [
+    { count: values.length, label: "All", value: "All" },
+    ...distinctVenues
+      .filter((venue) => venue !== "All")
+      .map((venue) => ({
+        count: venueCounts.get(venue) ?? 0,
+        label: venue,
+        value: venue,
+      })),
+  ];
+
+  const reviewedStatusOptions: RadioListFieldOption[] = [
+    {
+      count: reviewedStatusCounts.get("All") ?? 0,
+      label: "All",
+      value: "All",
+    },
+    {
+      count: reviewedStatusCounts.get("Reviewed") ?? 0,
+      label: "Reviewed",
+      value: "Reviewed",
+    },
+    {
+      count: reviewedStatusCounts.get("Not Reviewed") ?? 0,
+      label: "Not Reviewed",
+      value: "Not Reviewed",
+    },
+  ];
+
   return (
     <>
       <TitleFilters
@@ -55,12 +115,24 @@ export function ViewingsFilters({
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
-      <ReviewedStatusFilter
-        defaultValue={filterValues.reviewedStatus}
-        onChange={(value) =>
-          dispatch(createReviewedStatusFilterChangedAction(value))
+      <FilterSection
+        defaultOpen={
+          !!filterValues.reviewedStatus && filterValues.reviewedStatus !== "All"
         }
-      />
+        title="Reviewed Status"
+      >
+        <RadioListField
+          defaultValue={filterValues.reviewedStatus ?? "All"}
+          label="Reviewed Status"
+          onChange={(value) =>
+            dispatch(createReviewedStatusFilterChangedAction(value))
+          }
+          onClear={() =>
+            dispatch(createReviewedStatusFilterChangedAction("All"))
+          }
+          options={reviewedStatusOptions}
+        />
+      </FilterSection>
       <YearField
         defaultValues={filterValues.viewingYear}
         label="Viewing Year"
@@ -69,20 +141,30 @@ export function ViewingsFilters({
         }
         years={distinctViewingYears}
       />
-      <SelectField
-        defaultValue={filterValues.medium}
-        label="Medium"
-        onChange={(value) => dispatch(createMediumFilterChangedAction(value))}
+      <FilterSection
+        defaultOpen={!!filterValues.medium && filterValues.medium !== "All"}
+        title="Medium"
       >
-        <SelectOptions options={distinctMedia} />
-      </SelectField>
-      <SelectField
-        defaultValue={filterValues.venue}
-        label="Venue"
-        onChange={(value) => dispatch(createVenueFilterChangedAction(value))}
+        <RadioListField
+          defaultValue={filterValues.medium ?? "All"}
+          label="Medium"
+          onChange={(value) => dispatch(createMediumFilterChangedAction(value))}
+          onClear={() => dispatch(createMediumFilterChangedAction("All"))}
+          options={mediumOptions}
+        />
+      </FilterSection>
+      <FilterSection
+        defaultOpen={!!filterValues.venue && filterValues.venue !== "All"}
+        title="Venue"
       >
-        <SelectOptions options={distinctVenues} />
-      </SelectField>
+        <RadioListField
+          defaultValue={filterValues.venue ?? "All"}
+          label="Venue"
+          onChange={(value) => dispatch(createVenueFilterChangedAction(value))}
+          onClear={() => dispatch(createVenueFilterChangedAction("All"))}
+          options={venueOptions}
+        />
+      </FilterSection>
     </>
   );
 }

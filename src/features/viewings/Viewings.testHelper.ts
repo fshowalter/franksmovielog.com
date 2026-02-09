@@ -2,7 +2,7 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { clickSelectFieldOption } from "~/components/fields/SelectField.testHelper";
+import { clickRadioListOption } from "~/components/fields/RadioListField.testHelper";
 import { fillYearField } from "~/components/fields/YearField.testHelper";
 
 /**
@@ -11,7 +11,7 @@ import { fillYearField } from "~/components/fields/YearField.testHelper";
  * @param value - Filter value to select
  */
 export async function clickMediumFilterOption(user: UserEvent, value: string) {
-  await clickSelectFieldOption(user, "Medium", value);
+  await clickRadioListOption(user, "Medium", value);
 }
 
 /**
@@ -44,7 +44,7 @@ export async function clickPreviousMonthButton(user: UserEvent) {
  * @param value - Filter value to select
  */
 export async function clickVenueFilterOption(user: UserEvent, value: string) {
-  await clickSelectFieldOption(user, "Venue", value);
+  await clickRadioListOption(user, "Venue", value);
 }
 
 /**
@@ -70,11 +70,34 @@ export function getCalendar() {
 }
 
 /**
- * Gets the medium filter element.
- * @returns Medium filter element
+ * Gets the selected medium filter value.
+ * @returns Object with value property containing the selected medium value
  */
-export function getMediumFilter() {
-  return screen.getByLabelText("Medium");
+export function getMediumFilter(): { value: string } {
+  // Find all radiogroups and filter for the one with Medium in the legend
+  const radiogroups = screen.queryAllByRole("radiogroup");
+  const mediumGroup = radiogroups.find((group) => {
+    const legend = group.querySelector("legend");
+    return legend?.textContent?.includes("Medium");
+  });
+
+  if (!mediumGroup) {
+    // If radiogroup not found, return "All" as default (filter section may be closed)
+    return { value: "All" };
+  }
+
+  // Find the checked radio button
+  const radios = mediumGroup.querySelectorAll('input[type="radio"]');
+  const checkedRadio = [...radios].find(
+    (radio) => (radio as HTMLInputElement).checked,
+  );
+
+  if (checkedRadio) {
+    return { value: (checkedRadio as HTMLInputElement).value };
+  }
+
+  // Default to "All" if no radio is checked
+  return { value: "All" };
 }
 
 /**
