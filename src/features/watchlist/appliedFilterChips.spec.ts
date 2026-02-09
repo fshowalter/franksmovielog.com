@@ -34,7 +34,7 @@ describe("buildAppliedFilterChips", () => {
   it("builds release year chip for single year", () => {
     const filterValues: WatchlistFiltersValues = {
       genres: [],
-      releaseYear: ["2020"],
+      releaseYear: ["2020", "2020"],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
@@ -49,7 +49,7 @@ describe("buildAppliedFilterChips", () => {
   it("builds release year chip for year range", () => {
     const filterValues: WatchlistFiltersValues = {
       genres: [],
-      releaseYear: ["1980", "1981", "1982", "1989"],
+      releaseYear: ["1980", "1989"],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
@@ -196,10 +196,10 @@ describe("buildAppliedFilterChips", () => {
     });
   });
 
-  it("handles empty releaseYear array", () => {
+  it("handles undefined releaseYear", () => {
     const filterValues: WatchlistFiltersValues = {
       genres: [],
-      releaseYear: [],
+      releaseYear: undefined,
     };
     const chips = buildAppliedFilterChips(filterValues);
 

@@ -9,7 +9,6 @@ import {
   calculateGenreCounts,
   calculatePerformerCounts,
   calculateWriterCounts,
-  filterWatchlistValues,
 } from "./filterWatchlistValues";
 
 describe("filterWatchlistValues", () => {

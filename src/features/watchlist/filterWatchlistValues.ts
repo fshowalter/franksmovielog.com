@@ -4,48 +4,31 @@ import type { WatchlistValue } from "./Watchlist";
 import type { WatchlistFiltersValues } from "./Watchlist.reducer";
 
 /**
- * Filters watchlist titles based on director, performer, writer, collection, and other criteria.
- * @param sortedValues - Array of watchlist titles to filter
- * @param filterValues - Object containing filter values
- * @returns Filtered array of watchlist titles
- */
-export function filterWatchlistValues(
-  sortedValues: WatchlistValue[],
-  filterValues: WatchlistFiltersValues,
-) {
-  const extraFilters = [
-    createDirectorFilter(filterValues.director),
-    createPerformerFilter(filterValues.performer),
-    createWriterFilter(filterValues.writer),
-    createCollectionFilter(filterValues.collection),
-  ].filter((filterFn) => filterFn !== undefined);
-
-  return filterTitles(filterValues, sortedValues, extraFilters);
-}
-
-/**
- * Calculates the count of titles for each genre.
- * Used for displaying genre counts in filter UI.
- * Respects all filters EXCEPT genres to show dynamic counts.
+ * Calculates the count of titles for each collection.
+ * Used for displaying collection counts in filter UI.
+ * Respects all filters EXCEPT collection to show dynamic counts.
  * @param values - Array of watchlist values to count
  * @param currentFilters - Current filter values (to apply other filters when counting)
- * @returns Map of genre to count
+ * @returns Map of collection name to count
  */
-export function calculateGenreCounts(
+export function calculateCollectionCounts(
   values: WatchlistValue[],
   currentFilters: WatchlistFiltersValues,
 ): Map<string, number> {
-  // Apply all filters EXCEPT genres to get the base set
-  const filtersWithoutGenres: WatchlistFiltersValues = {
+  // Apply all filters EXCEPT collection to get the base set
+  const filtersWithoutCollection: WatchlistFiltersValues = {
     ...currentFilters,
-    genres: [],
+    collection: undefined,
   };
-  const filteredValues = filterWatchlistValues(values, filtersWithoutGenres);
+  const filteredValues = filterWatchlistValues(
+    values,
+    filtersWithoutCollection,
+  );
 
   const counts = new Map<string, number>();
   for (const value of filteredValues) {
-    for (const genre of value.genres) {
-      counts.set(genre, (counts.get(genre) ?? 0) + 1);
+    for (const collection of value.watchlistCollectionNames) {
+      counts.set(collection, (counts.get(collection) ?? 0) + 1);
     }
   }
 
@@ -75,6 +58,35 @@ export function calculateDirectorCounts(
   for (const value of filteredValues) {
     for (const director of value.watchlistDirectorNames) {
       counts.set(director, (counts.get(director) ?? 0) + 1);
+    }
+  }
+
+  return counts;
+}
+
+/**
+ * Calculates the count of titles for each genre.
+ * Used for displaying genre counts in filter UI.
+ * Respects all filters EXCEPT genres to show dynamic counts.
+ * @param values - Array of watchlist values to count
+ * @param currentFilters - Current filter values (to apply other filters when counting)
+ * @returns Map of genre to count
+ */
+export function calculateGenreCounts(
+  values: WatchlistValue[],
+  currentFilters: WatchlistFiltersValues,
+): Map<string, number> {
+  // Apply all filters EXCEPT genres to get the base set
+  const filtersWithoutGenres: WatchlistFiltersValues = {
+    ...currentFilters,
+    genres: [],
+  };
+  const filteredValues = filterWatchlistValues(values, filtersWithoutGenres);
+
+  const counts = new Map<string, number>();
+  for (const value of filteredValues) {
+    for (const genre of value.genres) {
+      counts.set(genre, (counts.get(genre) ?? 0) + 1);
     }
   }
 
@@ -143,35 +155,23 @@ export function calculateWriterCounts(
 }
 
 /**
- * Calculates the count of titles for each collection.
- * Used for displaying collection counts in filter UI.
- * Respects all filters EXCEPT collection to show dynamic counts.
- * @param values - Array of watchlist values to count
- * @param currentFilters - Current filter values (to apply other filters when counting)
- * @returns Map of collection name to count
+ * Filters watchlist titles based on director, performer, writer, collection, and other criteria.
+ * @param sortedValues - Array of watchlist titles to filter
+ * @param filterValues - Object containing filter values
+ * @returns Filtered array of watchlist titles
  */
-export function calculateCollectionCounts(
-  values: WatchlistValue[],
-  currentFilters: WatchlistFiltersValues,
-): Map<string, number> {
-  // Apply all filters EXCEPT collection to get the base set
-  const filtersWithoutCollection: WatchlistFiltersValues = {
-    ...currentFilters,
-    collection: undefined,
-  };
-  const filteredValues = filterWatchlistValues(
-    values,
-    filtersWithoutCollection,
-  );
+export function filterWatchlistValues(
+  sortedValues: WatchlistValue[],
+  filterValues: WatchlistFiltersValues,
+) {
+  const extraFilters = [
+    createDirectorFilter(filterValues.director),
+    createPerformerFilter(filterValues.performer),
+    createWriterFilter(filterValues.writer),
+    createCollectionFilter(filterValues.collection),
+  ].filter((filterFn) => filterFn !== undefined);
 
-  const counts = new Map<string, number>();
-  for (const value of filteredValues) {
-    for (const collection of value.watchlistCollectionNames) {
-      counts.set(collection, (counts.get(collection) ?? 0) + 1);
-    }
-  }
-
-  return counts;
+  return filterTitles(filterValues, sortedValues, extraFilters);
 }
 
 function createCollectionFilter(filterValue?: string) {

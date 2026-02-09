@@ -46,10 +46,8 @@ export function buildAppliedFilterChips(
   }
 
   // Release Year chip (range)
-  if (filterValues.releaseYear && filterValues.releaseYear.length > 0) {
-    const years = filterValues.releaseYear;
-    const minYear = years[0];
-    const maxYear = years[years.length - 1];
+  if (filterValues.releaseYear && filterValues.releaseYear.length === 2) {
+    const [minYear, maxYear] = filterValues.releaseYear;
     chips.push({
       category: "Release Year",
       id: "releaseYear",

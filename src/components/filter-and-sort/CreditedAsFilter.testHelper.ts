@@ -2,10 +2,7 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import {
-  clickRadioListFieldOption,
-  getRadioListFieldValue,
-} from "~/components/fields/RadioListField.testHelper";
+import { clickRadioListOption } from "~/components/fields/RadioListField.testHelper";
 
 /**
  * Test helper to select a credited-as filter option.
@@ -16,7 +13,7 @@ export async function clickCreditedAsFilterOption(
   user: UserEvent,
   value: "All" | "Director" | "Performer" | "Writer",
 ) {
-  await clickRadioListFieldOption(user, "Credited As", value);
+  await clickRadioListOption(user, "Credited As", value);
 }
 
 /**
@@ -24,7 +21,15 @@ export async function clickCreditedAsFilterOption(
  * @returns Currently selected credited-as value
  */
 export function getCreditedAsFilter(): string {
-  return getRadioListFieldValue("Credited As");
+  const filterSection = screen.getByRole("group", { name: /Credited As/i });
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+  const checkedRadio = filterSection.querySelector(
+    'input[type="radio"]:checked',
+  ) as HTMLInputElement | null;
+  if (!checkedRadio) {
+    throw new Error("No credited-as filter option is selected");
+  }
+  return checkedRadio.value;
 }
 
 /**

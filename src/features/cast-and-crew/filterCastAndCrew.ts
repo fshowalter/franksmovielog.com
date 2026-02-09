@@ -4,23 +4,6 @@ import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewFiltersValues } from "./CastAndCrew.reducer";
 
 /**
- * Filters cast and crew members based on credited role and name.
- * @param sortedValues - Array of cast/crew members to filter
- * @param filterValues - Object containing filter values including creditedAs and name
- * @returns Filtered array of cast/crew members
- */
-export function filterCastAndCrew(
-  sortedValues: CastAndCrewValue[],
-  filterValues: CastAndCrewFiltersValues,
-) {
-  const extraFilters = [createCreditedAsFilter(filterValues.creditedAs)].filter(
-    (filterFn) => filterFn !== undefined,
-  );
-
-  return filterCollections(filterValues, sortedValues, extraFilters);
-}
-
-/**
  * Calculates counts for each credited role, excluding the creditedAs filter.
  * @param values - Array of cast/crew members
  * @param filterValues - Current filter values (creditedAs filter is excluded from counting)
@@ -48,6 +31,23 @@ export function calculateCreditedAsCounts(
   }
 
   return counts;
+}
+
+/**
+ * Filters cast and crew members based on credited role and name.
+ * @param sortedValues - Array of cast/crew members to filter
+ * @param filterValues - Object containing filter values including creditedAs and name
+ * @returns Filtered array of cast/crew members
+ */
+export function filterCastAndCrew(
+  sortedValues: CastAndCrewValue[],
+  filterValues: CastAndCrewFiltersValues,
+) {
+  const extraFilters = [createCreditedAsFilter(filterValues.creditedAs)].filter(
+    (filterFn) => filterFn !== undefined,
+  );
+
+  return filterCollections(filterValues, sortedValues, extraFilters);
 }
 
 function createCreditedAsFilter(filterValue?: string) {

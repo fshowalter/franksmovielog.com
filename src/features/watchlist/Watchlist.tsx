@@ -10,10 +10,10 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
 
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterWatchlistValues } from "./filterWatchlistValues";
 import { groupWatchlistValues } from "./groupWatchlistValues";
 import { sortWatchlistValues } from "./sortWatchlistValues";
-import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,

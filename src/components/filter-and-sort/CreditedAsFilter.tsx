@@ -26,7 +26,7 @@ export function CreditedAsFilter({
 }): React.JSX.Element {
   // Build options with counts
   const allCount = counts
-    ? Array.from(counts.values()).reduce((sum, count) => sum + count, 0)
+    ? [...counts.values()].reduce((sum, count) => sum + count, 0)
     : 0;
 
   const options: RadioListFieldOption[] = [

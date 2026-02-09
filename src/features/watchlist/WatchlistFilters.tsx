@@ -11,18 +11,18 @@ import type {
 } from "./Watchlist.reducer";
 
 import {
-  createGenresFilterChangedAction,
-  createReleaseYearFilterChangedAction,
-  createTitleFilterChangedAction,
-  createWatchlistFilterChangedAction,
-} from "./Watchlist.reducer";
-import {
   calculateCollectionCounts,
   calculateDirectorCounts,
   calculateGenreCounts,
   calculatePerformerCounts,
   calculateWriterCounts,
 } from "./filterWatchlistValues";
+import {
+  createGenresFilterChangedAction,
+  createReleaseYearFilterChangedAction,
+  createTitleFilterChangedAction,
+  createWatchlistFilterChangedAction,
+} from "./Watchlist.reducer";
 
 /**
  * Filter controls for the watchlist page.
