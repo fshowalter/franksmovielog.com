@@ -14,6 +14,7 @@ This plan outlines the step-by-step implementation of the filter redesign from d
 **Goal:** Create new reusable components that will replace existing dropdown-based fields
 
 **Success Criteria:**
+
 - Components render correctly
 - Full keyboard navigation works
 - Screen reader announces states properly
@@ -26,6 +27,7 @@ This plan outlines the step-by-step implementation of the filter redesign from d
 **File:** `/src/components/fields/CheckboxListField.tsx`
 
 **Features:**
+
 - Accepts list of options with labels, values, and counts
 - Supports multi-selection via checkboxes
 - "Show more" functionality (no "show less" - collapse section instead)
@@ -36,6 +38,7 @@ This plan outlines the step-by-step implementation of the filter redesign from d
 - Proper ARIA attributes including aria-live for count updates
 
 **Props:**
+
 ```typescript
 interface CheckboxListFieldProps {
   label: string;
@@ -47,13 +50,14 @@ interface CheckboxListFieldProps {
   defaultValues?: readonly string[];
   onChange: (values: string[]) => void;
   onClear?: () => void;
-  showMoreThreshold?: number;  // Default: 3
+  showMoreThreshold?: number; // Default: 3
 }
 ```
 
 **Test File:** `/src/components/fields/CheckboxListField.spec.tsx`
 
 **Tests:**
+
 - Renders all options when count ≤ threshold
 - Shows "Show more" link when count > threshold
 - Expands on "Show more" click (stays expanded)
@@ -75,6 +79,7 @@ interface CheckboxListFieldProps {
 **File:** `/src/components/fields/RadioListField.tsx`
 
 **Features:**
+
 - Accepts list of options with labels, values, and counts
 - Single selection via radio buttons
 - No "Show more" needed (typically < 5 options)
@@ -83,6 +88,7 @@ interface CheckboxListFieldProps {
 - Proper ARIA attributes
 
 **Props:**
+
 ```typescript
 interface RadioListFieldProps {
   label: string;
@@ -100,6 +106,7 @@ interface RadioListFieldProps {
 **Test File:** `/src/components/fields/RadioListField.spec.tsx`
 
 **Tests:**
+
 - Renders all options
 - Only one option selectable at a time
 - Space/Enter toggles selection
@@ -119,12 +126,14 @@ interface RadioListFieldProps {
 **File:** `/src/components/filter-and-sort/FilterSection.tsx`
 
 **Features:**
+
 - Wraps filter fields in collapsible `<details>` / `<summary>` structure
 - Shows selection count in summary when collapsed ("N selected")
 - Keyboard accessible (Enter/Space to toggle)
 - No Clear link in summary (that's in field components)
 
 **Props:**
+
 ```typescript
 interface FilterSectionProps {
   title: string;
@@ -137,6 +146,7 @@ interface FilterSectionProps {
 **Test File:** `/src/components/filter-and-sort/FilterSection.spec.tsx`
 
 **Tests:**
+
 - Renders expanded when defaultOpen={true}
 - Renders collapsed when defaultOpen={false}
 - Shows "(N selected)" in summary when collapsed and selectionCount > 0
@@ -152,6 +162,7 @@ interface FilterSectionProps {
 **File:** `/src/components/filter-and-sort/AppliedFilters.tsx`
 
 **Features:**
+
 - Displays active filters as removable chips (including text search)
 - Shows "Clear all" link
 - Animates chips on add/remove (optional Phase 1, required Phase 4)
@@ -159,15 +170,16 @@ interface FilterSectionProps {
 - Hidden when no filters active
 
 **Props:**
+
 ```typescript
 interface FilterChip {
-  id: string;           // Unique identifier (e.g., "genre-horror", "search")
-  category: string;     // Display category (e.g., "Genre", "Search")
-  label: string;        // Display value (e.g., "Horror", "alien")
+  id: string; // Unique identifier (e.g., "genre-horror", "search")
+  category: string; // Display category (e.g., "Genre", "Search")
+  label: string; // Display value (e.g., "Horror", "alien")
 }
 
 interface AppliedFiltersProps {
-  filters: FilterChip[];  // Includes search query chips
+  filters: FilterChip[]; // Includes search query chips
   onRemove: (id: string) => void;
   onClearAll: () => void;
 }
@@ -176,6 +188,7 @@ interface AppliedFiltersProps {
 **Test File:** `/src/components/filter-and-sort/AppliedFilters.spec.tsx`
 
 **Tests:**
+
 - Renders nothing when filters array is empty
 - Renders chip for each filter (including search chips)
 - Calls onRemove with correct id when × clicked
@@ -193,6 +206,7 @@ interface AppliedFiltersProps {
 **File:** `/src/components/fields/RangeSliderField.tsx`
 
 **Features:**
+
 - Dual-handle range slider
 - Syncs with external from/to values (from YearField/GradeField dropdowns)
 - Updates on slider drag
@@ -202,22 +216,24 @@ interface AppliedFiltersProps {
 - Visual feedback of selected range
 
 **Props:**
+
 ```typescript
 interface RangeSliderFieldProps {
   label: string;
-  min: number;           // Minimum value (e.g., 1920 for years)
-  max: number;           // Maximum value (e.g., 2026 for years)
-  fromValue: number;     // Current "from" value
-  toValue: number;       // Current "to" value
+  min: number; // Minimum value (e.g., 1920 for years)
+  max: number; // Maximum value (e.g., 2026 for years)
+  fromValue: number; // Current "from" value
+  toValue: number; // Current "to" value
   onChange: (from: number, to: number) => void;
-  onClear?: () => void;  // Resets to min/max
-  formatValue?: (value: number) => string;  // Optional formatter (e.g., grade letters)
+  onClear?: () => void; // Resets to min/max
+  formatValue?: (value: number) => string; // Optional formatter (e.g., grade letters)
 }
 ```
 
 **Test File:** `/src/components/fields/RangeSliderField.spec.tsx`
 
 **Tests:**
+
 - Renders slider with correct min/max
 - Shows current from/to values
 - Updates on handle drag (simulated)
@@ -228,6 +244,7 @@ interface RangeSliderFieldProps {
 - Proper ARIA labels and roles
 
 **Implementation Note:**
+
 - Can use native HTML `<input type="range">` with two inputs for dual handles
 - Or use a library like `react-slider` or `rc-slider` if native solution is too limited
 - Should match visual style of existing form controls
@@ -239,6 +256,7 @@ interface RangeSliderFieldProps {
 ### Stage 1 Status: Complete
 
 **Completion Checklist:**
+
 - [x] CheckboxListField.tsx created and tested
   - [x] Verify "Show more" text is EXACTLY "+ Show more" (no count)
   - [x] Verify selected items move to top (newest first)
@@ -266,6 +284,7 @@ interface RangeSliderFieldProps {
 **Goal:** Convert Reviews page to use new checkbox-based filters, proving the architecture works end-to-end
 
 **Success Criteria:**
+
 - Reviews page filters work identically to old version
 - All filter types represented (multi-select, range, text)
 - Counts display correctly for each filter option
@@ -280,17 +299,20 @@ interface RangeSliderFieldProps {
 **File:** `/src/features/reviews/filterReviews.ts` (modify existing)
 
 **Add function:**
+
 ```typescript
 export function calculateGenreCounts(
-  reviews: ReviewWithContent[]
+  reviews: ReviewWithContent[],
 ): Map<string, number> {
   // Count how many reviews have each genre
   // Return Map of genre -> count
 }
 
-export function calculateYearCounts(
-  reviews: ReviewWithContent[]
-): { min: number; max: number; counts: Map<number, number> } {
+export function calculateYearCounts(reviews: ReviewWithContent[]): {
+  min: number;
+  max: number;
+  counts: Map<number, number>;
+} {
   // Calculate year range and counts per year
 }
 
@@ -308,6 +330,7 @@ export function calculateYearCounts(
 **File:** `/src/features/reviews/Reviews.reducer.ts` (modify existing)
 
 **Add action:**
+
 ```typescript
 type Action =
   | ... existing actions ...
@@ -327,6 +350,7 @@ type Action =
 **File:** `/src/features/reviews/ReviewsFilters.tsx` (modify existing)
 
 **Changes:**
+
 - Import new CheckboxListField, FilterSection, AppliedFilters
 - Calculate counts for each filter option using helpers from 2.1
 - Replace `<MultiSelectField>` with:
@@ -339,7 +363,7 @@ type Action =
   >
     <CheckboxListField
       label="Genres"
-      options={genreOptions}  // with counts
+      options={genreOptions} // with counts
       defaultValues={selectedGenres}
       onChange={(values) => dispatch({ type: "GENRE_FILTER", values })}
     />
@@ -366,9 +390,10 @@ type Action =
 **File:** `/src/features/reviews/appliedFilterChips.ts` (new)
 
 **Function:**
+
 ```typescript
 export function buildAppliedFilterChips(
-  filterValues: ReviewsFilterValues
+  filterValues: ReviewsFilterValues,
 ): FilterChip[] {
   // Convert active filter values into chip format
   // Example: { genres: ["Horror", "Action"] }
@@ -390,6 +415,7 @@ export function buildAppliedFilterChips(
 **File:** `/src/components/filter-and-sort/FilterAndSortContainer.tsx` (modify existing)
 
 **Changes:**
+
 - Accept new prop: `activeFilters: FilterChip[]`
 - Accept new prop: `onRemoveFilter: (id: string) => void`
 - Render AppliedFilters at top of drawer (before children)
@@ -408,6 +434,7 @@ export function buildAppliedFilterChips(
 **File:** `/src/features/reviews/AllReviews.tsx` (modify existing)
 
 **Changes:**
+
 - Import `buildAppliedFilterChips`
 - Calculate `activeFilters` from state
 - Pass to FilterAndSortContainer:
@@ -430,13 +457,15 @@ export function buildAppliedFilterChips(
 The activeFilters prop passed to FilterAndSortContainer MUST be built from `state.pendingFilterValues`, NOT `state.activeFilterValues`. This ensures AppliedFilters updates in real-time as user checks/unchecks boxes.
 
 **Correct pattern:**
+
 ```typescript
 const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
 ```
 
 **Wrong pattern:**
+
 ```typescript
-const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌ Only updates on Apply
+const activeFilters = buildAppliedFilterChips(state.activeFilterValues); // ❌ Only updates on Apply
 ```
 
 **Test verification:** After checking a box in the drawer, AppliedFilters must immediately show the new chip WITHOUT clicking "View Results" first.
@@ -448,6 +477,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 **File:** `/src/pages/reviews/index.spec.tsx` (modify existing)
 
 **Changes:**
+
 - Update snapshots (checkboxes instead of dropdowns)
 - Add interaction tests for new UI:
   - Click checkbox to select genre
@@ -462,6 +492,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 ### Stage 2 Status: Not Started
 
 **Completion Checklist:**
+
 - [ ] Count calculation helpers added and tested
 - [ ] Reviews reducer updated for applied filter removal
 - [ ] ReviewsFilters component converted to checkboxes
@@ -476,6 +507,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 - [ ] npm run check passes
 
 **Drift Prevention Checklist:**
+
 - [ ] Visual inspection: "Show more" has no count in text
 - [ ] Interaction test: Checking box immediately shows chip in AppliedFilters
 - [ ] Interaction test: Unchecking box immediately removes chip from AppliedFilters
@@ -490,6 +522,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 **Goal:** Convert the other pages that have similar filter patterns to Reviews
 
 **Success Criteria:**
+
 - All pages work identically to Reviews
 - Code duplication minimized via shared helpers
 - All tests passing
@@ -509,6 +542,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 #### 3.1 Cast & Crew Member Titles
 
 **Files:**
+
 - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitlesFilters.tsx`
 - `/src/features/cast-and-crew-member-titles/appliedFilterChips.ts` (new)
 - `/src/features/cast-and-crew-member-titles/filterCastAndCrewMemberTitles.ts` (add counts)
@@ -516,6 +550,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.reducer.ts`
 
 **Changes:**
+
 - Same pattern as Reviews (Stage 2)
 - Add count helpers
 - Convert MultiSelectField → CheckboxListField
@@ -531,6 +566,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 #### 3.2 Collection Titles
 
 **Files:**
+
 - `/src/features/collection-titles/CollectionTitlesFilters.tsx`
 - `/src/features/collection-titles/appliedFilterChips.ts` (new)
 - `/src/features/collection-titles/filterCollectionTitles.ts` (add counts)
@@ -538,6 +574,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 - `/src/features/collection-titles/CollectionTitles.reducer.ts`
 
 **Changes:**
+
 - Same pattern as Reviews
 - Add ReviewedStatusFilter conversion to RadioListField
 
@@ -550,6 +587,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 ### Stage 3 Status: Not Started
 
 **Completion Checklist:**
+
 - [ ] Cast & Crew Member Titles converted
 - [ ] Collection Titles converted
 - [ ] All tests passing
@@ -557,6 +595,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 - [ ] Accessibility testing complete
 
 **Drift Prevention Checklist:**
+
 - [ ] Visual inspection: "Show more" has no count in text
 - [ ] Interaction test: Checking box immediately shows chip in AppliedFilters
 - [ ] Interaction test: Unchecking box immediately removes chip from AppliedFilters
@@ -571,6 +610,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 **Goal:** Convert pages with unique filter combinations
 
 **Success Criteria:**
+
 - All custom filter fields work with new checkbox pattern
 - CreditSelectField adapted or replaced
 - All tests passing
@@ -592,14 +632,17 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 **Current:** CreditSelectField is a custom wrapper around MultiSelectField
 
 **Option A:** Convert to CheckboxListField
+
 - Create helper to format credit options with counts
 - Replace CreditSelectField → CheckboxListField + FilterSection
 
 **Option B:** Create CreditCheckboxField wrapper
+
 - New component wrapping CheckboxListField
 - Maintains credit-specific logic (avatar images, formatting)
 
 **Files:**
+
 - `/src/features/watchlist/WatchlistFilters.tsx`
 - `/src/features/watchlist/appliedFilterChips.ts` (new)
 - `/src/features/watchlist/filterWatchlist.ts` (add counts)
@@ -617,6 +660,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 #### 4.2 Viewings
 
 **Files:**
+
 - `/src/features/viewings/ViewingsFilters.tsx`
 - `/src/features/viewings/appliedFilterChips.ts` (new)
 - `/src/features/viewings/filterViewings.ts` (add counts)
@@ -624,6 +668,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 - `/src/features/viewings/Viewings.reducer.ts`
 
 **Changes:**
+
 - Convert Medium SelectField → RadioListField
 - Convert Venue SelectField → RadioListField
 - Convert ReviewedStatusFilter → RadioListField
@@ -638,6 +683,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 ### Stage 4 Status: Not Started
 
 **Completion Checklist:**
+
 - [ ] Watchlist converted (CreditSelectField handled)
 - [ ] Viewings converted
 - [ ] All tests passing
@@ -645,6 +691,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 - [ ] Accessibility testing complete
 
 **Drift Prevention Checklist:**
+
 - [ ] Visual inspection: "Show more" has no count in text
 - [ ] Interaction test: Checking box immediately shows chip in AppliedFilters
 - [ ] Interaction test: Unchecking box immediately removes chip from AppliedFilters
@@ -659,6 +706,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 **Goal:** Convert the simpler list pages
 
 **Success Criteria:**
+
 - CreditedAsFilter converted to RadioListField
 - Text-only search remains simple
 - All tests passing
@@ -678,12 +726,14 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 #### 5.1 Cast & Crew
 
 **Files:**
+
 - `/src/features/cast-and-crew/CastAndCrewFilters.tsx`
 - `/src/features/cast-and-crew/appliedFilterChips.ts` (new, minimal)
 - `/src/features/cast-and-crew/CastAndCrew.tsx`
 - `/src/features/cast-and-crew/CastAndCrew.reducer.ts`
 
 **Changes:**
+
 - Convert CreditedAsFilter to RadioListField
 - Add AppliedFilters (will only show credited-as chip)
 
@@ -696,9 +746,11 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 #### 5.2 Collections
 
 **Files:**
+
 - `/src/features/collections/CollectionsFilters.tsx`
 
 **Changes:**
+
 - Keep TextField as-is
 - May skip AppliedFilters (no chip-able filters)
 - Or add AppliedFilters for consistency (shows "Search: [query]" chip)
@@ -714,6 +766,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 ### Stage 5 Status: Not Started
 
 **Completion Checklist:**
+
 - [ ] Cast & Crew converted
 - [ ] Collections evaluated (AppliedFilters decision made)
 - [ ] All tests passing
@@ -721,6 +774,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 - [ ] Accessibility testing complete
 
 **Drift Prevention Checklist:**
+
 - [ ] Visual inspection: "Show more" has no count in text
 - [ ] Interaction test: Checking box immediately shows chip in AppliedFilters
 - [ ] Interaction test: Unchecking box immediately removes chip from AppliedFilters
@@ -735,6 +789,7 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 **Goal:** Remove old components that are no longer used
 
 **Success Criteria:**
+
 - All old components deleted
 - No references to old components in codebase
 - Bundle size reduced
@@ -744,17 +799,20 @@ const activeFilters = buildAppliedFilterChips(state.activeFilterValues);  // ❌
 #### 6.1 Verify No Usage of Old Components
 
 **Command:**
+
 ```bash
 npm run knip
 ```
 
 **Check for:**
+
 - MultiSelectField.tsx (should be unused)
 - Old SelectField wrappers (if fully replaced)
 
 #### 6.2 Delete Old Components
 
 **Files to remove:**
+
 - `/src/components/fields/MultiSelectField.tsx` (if fully replaced)
 - `/src/components/fields/MultiSelectField.spec.tsx`
 - Any old wrapper components (CreditSelectField.tsx, etc.)
@@ -764,6 +822,7 @@ npm run knip
 #### 6.3 Update Imports
 
 **Search for:**
+
 ```bash
 grep -r "MultiSelectField" src/
 ```
@@ -773,6 +832,7 @@ grep -r "MultiSelectField" src/
 ### Stage 6 Status: Not Started
 
 **Completion Checklist:**
+
 - [ ] Knip confirms no usage of old components
 - [ ] Old component files deleted
 - [ ] No broken imports
@@ -780,6 +840,7 @@ grep -r "MultiSelectField" src/
 - [ ] Bundle size comparison (before/after)
 
 **Drift Prevention Checklist:**
+
 - [x] All old components removed (no drift possible in deleted code)
 - [x] No references to MultiSelectField remain
 - [x] Bundle size reduced compared to before
@@ -791,6 +852,7 @@ grep -r "MultiSelectField" src/
 **Goal:** Add animations, optimize performance, finalize UX details
 
 **Success Criteria:**
+
 - Smooth animations (60fps)
 - No perceptible lag
 - Finalized "Show more" threshold
@@ -801,11 +863,13 @@ grep -r "MultiSelectField" src/
 #### 7.1 Add Animations
 
 **Components:**
+
 - AppliedFilters.tsx: Fade in/out chips
 - FilterSection.tsx: Smooth expand/collapse
 - CheckboxListField.tsx: Smooth show more/less
 
 **CSS:**
+
 - Use Tailwind transition utilities
 - Test on low-end devices
 
@@ -816,11 +880,13 @@ grep -r "MultiSelectField" src/
 #### 7.2 Performance Optimization
 
 **If needed (test first):**
+
 - Virtualize very long checkbox lists (100+ items)
 - Debounce count calculations
 - Memoize expensive renders
 
 **Measure:**
+
 - React DevTools Profiler
 - Lighthouse performance score
 
@@ -831,11 +897,13 @@ grep -r "MultiSelectField" src/
 #### 7.3 A/B Test "Show More" Threshold
 
 **Test values:**
+
 - 3 items (conservative)
 - 5 items (moderate)
 - 7 items (generous)
 
 **Method:**
+
 - User feedback
 - Analytics (if available)
 - Personal preference
@@ -849,11 +917,13 @@ grep -r "MultiSelectField" src/
 #### 7.4 Final Accessibility Audit
 
 **Tools:**
+
 - axe DevTools
 - Lighthouse accessibility score
 - Manual screen reader testing (VoiceOver, NVDA, JAWS)
 
 **Checklist:**
+
 - All WCAG 2.1 AA criteria met
 - Keyboard navigation tested on all pages
 - Focus management tested
@@ -866,6 +936,7 @@ grep -r "MultiSelectField" src/
 ### Stage 7 Status: Not Started
 
 **Completion Checklist:**
+
 - [ ] Animations added and smooth
 - [ ] Performance validated (no lag)
 - [ ] "Show more" threshold finalized
@@ -874,6 +945,7 @@ grep -r "MultiSelectField" src/
 - [ ] All pages tested end-to-end
 
 **Final Drift Prevention Checklist:**
+
 - [ ] Visual inspection on ALL 7 pages: "Show more" has no count
 - [ ] Interaction test on ALL 7 pages: AppliedFilters updates in real-time
 - [ ] Visual inspection on ALL 7 pages: No "(n selected)" text anywhere
@@ -889,6 +961,7 @@ grep -r "MultiSelectField" src/
 ### Per-Stage Testing
 
 **After each stage:**
+
 1. **Unit tests:** All new/modified component tests pass
 2. **Integration tests:** Page-level tests pass
 3. **Snapshot tests:** Review and approve snapshot changes
@@ -907,6 +980,7 @@ grep -r "MultiSelectField" src/
 ### Final Testing (After Stage 7)
 
 **Complete test suite:**
+
 1. Full regression test of all 7 pages
 2. Cross-browser testing (Chrome, Firefox, Safari, Edge)
 3. Mobile device testing (iOS Safari, Android Chrome)
@@ -921,11 +995,13 @@ grep -r "MultiSelectField" src/
 ### Option A: Feature Flag (Gradual Rollout)
 
 **If confident:**
+
 1. Deploy all stages to production
 2. Monitor for issues
 3. No flag needed (immediate switch)
 
 **If cautious:**
+
 1. Add feature flag to toggle old/new filters
 2. Deploy with flag=false (old filters)
 3. Test in production with flag=true (internal testing)
@@ -937,6 +1013,7 @@ grep -r "MultiSelectField" src/
 ### Option B: All-at-Once (Recommended)
 
 **Since this is a personal site:**
+
 - Complete all stages
 - Test thoroughly locally
 - Deploy to production
@@ -1010,16 +1087,16 @@ grep -r "MultiSelectField" src/
 2. **Animations:** Fade vs slide vs instant?
    - **Resolution needed:** Stage 7.1 (during polish)
 
-2. **Sort order for unselected items:** Alphabetical vs by count?
+3. **Sort order for unselected items:** Alphabetical vs by count?
    - **Resolution needed:** Stage 1 (during CheckboxListField implementation)
 
-3. **Watchlist CreditSelectField strategy:** Wrapper vs inline?
+4. **Watchlist CreditSelectField strategy:** Wrapper vs inline?
    - **Resolution needed:** Stage 4.1 (during Watchlist conversion)
 
-4. **Collections page AppliedFilters:** Include search query chip or skip?
+5. **Collections page AppliedFilters:** Include search query chip or skip?
    - **Resolution needed:** Stage 5.2 (during Collections conversion)
 
-5. **Animations:** Fade vs slide vs instant?
+6. **Animations:** Fade vs slide vs instant?
    - **Resolution needed:** Stage 7.1 (during polish)
 
 ---
@@ -1027,16 +1104,19 @@ grep -r "MultiSelectField" src/
 ## Resources Needed
 
 ### Development
+
 - Time estimate: ~20-30 hours total (all stages)
 - Dependencies: None (all changes use existing libraries)
 - Design assets: None (using existing Tailwind theme)
 
 ### Testing
+
 - Screen reader access (VoiceOver on macOS, NVDA on Windows)
 - Multiple browsers (Chrome, Firefox, Safari, Edge)
 - Mobile devices (iOS, Android)
 
 ### Documentation
+
 - Update CLAUDE.md with new component patterns (after completion)
 - Update MEMORY.md with lessons learned (during implementation)
 
@@ -1045,6 +1125,7 @@ grep -r "MultiSelectField" src/
 ## Success Criteria Summary
 
 ### Must Have (Blocking)
+
 - [ ] All 7 pages converted
 - [ ] All tests passing (unit, integration, snapshot)
 - [ ] All build checks passing (lint, check, knip, format)
@@ -1053,6 +1134,7 @@ grep -r "MultiSelectField" src/
 - [ ] No regressions in functionality
 
 ### Should Have (Important)
+
 - [ ] Smooth animations (60fps)
 - [ ] No perceptible performance lag
 - [ ] Consistent UX across all pages
@@ -1060,6 +1142,7 @@ grep -r "MultiSelectField" src/
 - [ ] Responsive on all breakpoints
 
 ### Nice to Have (Optional)
+
 - [ ] Dynamic counts (update when other filters change)
 - [ ] Range sliders for Year/Grade
 - [ ] Virtualization for very long lists

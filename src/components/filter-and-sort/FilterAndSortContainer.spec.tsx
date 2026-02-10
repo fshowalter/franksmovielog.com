@@ -478,9 +478,7 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      expect(
-        screen.queryByText("Applied Filters:"),
-      ).not.toBeInTheDocument();
+      expect(screen.queryByText("Applied Filters:")).not.toBeInTheDocument();
     });
 
     it("does not render AppliedFilters when activeFilters is empty", async ({
@@ -500,9 +498,7 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      expect(
-        screen.queryByText("Applied Filters:"),
-      ).not.toBeInTheDocument();
+      expect(screen.queryByText("Applied Filters:")).not.toBeInTheDocument();
     });
 
     it("renders AppliedFilters when activeFilters contains filters", async ({
@@ -607,9 +603,7 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      expect(
-        screen.queryByText("Applied Filters:"),
-      ).not.toBeInTheDocument();
+      expect(screen.queryByText("Applied Filters:")).not.toBeInTheDocument();
     });
   });
 });

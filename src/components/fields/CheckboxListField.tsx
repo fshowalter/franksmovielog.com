@@ -53,9 +53,7 @@ export function CheckboxListField({
     if (!aSelected && bSelected) return 1;
     if (aSelected && bSelected) {
       // Both selected - maintain selection order (most recent first)
-      return (
-        selectedValues.indexOf(b.value) - selectedValues.indexOf(a.value)
-      );
+      return selectedValues.indexOf(b.value) - selectedValues.indexOf(a.value);
     }
     // Both unselected - alphabetical order
     return a.label.localeCompare(b.label);
@@ -68,7 +66,10 @@ export function CheckboxListField({
   const visibleCount = showAll
     ? sortedOptions.length
     : selectedCount + showMoreThreshold;
-  const visibleOptions = sortedOptions.slice(0, Math.min(visibleCount, sortedOptions.length));
+  const visibleOptions = sortedOptions.slice(
+    0,
+    Math.min(visibleCount, sortedOptions.length),
+  );
   const hiddenCount = sortedOptions.length - visibleOptions.length;
 
   const handleCheckboxChange = (value: string, checked: boolean): void => {
@@ -219,7 +220,8 @@ export function CheckboxListField({
         {/* Selection count for screen readers */}
         {hasSelections && (
           <div className="sr-only" id={`${fieldsetId}-count`}>
-            {selectedValues.length} {selectedValues.length === 1 ? "option" : "options"} selected
+            {selectedValues.length}{" "}
+            {selectedValues.length === 1 ? "option" : "options"} selected
           </div>
         )}
       </div>

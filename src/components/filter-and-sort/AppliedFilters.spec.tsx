@@ -258,7 +258,7 @@ describe("AppliedFilters", () => {
       ).toBeInTheDocument();
     });
 
-    it('hides × symbol from screen readers with aria-hidden', () => {
+    it("hides × symbol from screen readers with aria-hidden", () => {
       render(
         <AppliedFilters
           filters={sampleFilters}

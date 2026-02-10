@@ -21,10 +21,13 @@ export function FilterSection({
   title,
 }: FilterSectionProps): React.JSX.Element {
   return (
-    <details className="
+    <details
+      className="
       border-b border-default
       last:border-0
-    " open={defaultOpen}>
+    "
+      open={defaultOpen}
+    >
       <summary
         className={`
           flex cursor-pointer items-center justify-between px-4 py-3 text-base

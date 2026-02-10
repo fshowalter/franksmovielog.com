@@ -124,10 +124,7 @@ export function WatchlistFilters({
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
-      <FilterSection
-        defaultOpen={!!filterValues.director}
-        title="Director"
-      >
+      <FilterSection defaultOpen={!!filterValues.director} title="Director">
         <RadioListField
           defaultValue={filterValues.director ?? "All"}
           label="Director"
@@ -140,10 +137,7 @@ export function WatchlistFilters({
           options={directorOptions}
         />
       </FilterSection>
-      <FilterSection
-        defaultOpen={!!filterValues.performer}
-        title="Performer"
-      >
+      <FilterSection defaultOpen={!!filterValues.performer} title="Performer">
         <RadioListField
           defaultValue={filterValues.performer ?? "All"}
           label="Performer"
@@ -156,10 +150,7 @@ export function WatchlistFilters({
           options={performerOptions}
         />
       </FilterSection>
-      <FilterSection
-        defaultOpen={!!filterValues.writer}
-        title="Writer"
-      >
+      <FilterSection defaultOpen={!!filterValues.writer} title="Writer">
         <RadioListField
           defaultValue={filterValues.writer ?? "All"}
           label="Writer"
@@ -172,10 +163,7 @@ export function WatchlistFilters({
           options={writerOptions}
         />
       </FilterSection>
-      <FilterSection
-        defaultOpen={!!filterValues.collection}
-        title="Collection"
-      >
+      <FilterSection defaultOpen={!!filterValues.collection} title="Collection">
         <RadioListField
           defaultValue={filterValues.collection ?? "All"}
           label="Collection"

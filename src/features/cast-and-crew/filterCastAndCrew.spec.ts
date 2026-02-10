@@ -3,7 +3,10 @@ import { beforeEach, describe, expect, it } from "vitest";
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewFiltersValues } from "./CastAndCrew.reducer";
 
-import { calculateCreditedAsCounts, filterCastAndCrew } from "./filterCastAndCrew";
+import {
+  calculateCreditedAsCounts,
+  filterCastAndCrew,
+} from "./filterCastAndCrew";
 
 describe("filterCastAndCrew", () => {
   let mockValues: CastAndCrewValue[];
@@ -77,7 +80,10 @@ describe("filterCastAndCrew", () => {
       const result = filterCastAndCrew(mockValues, filterValues);
 
       expect(result).toHaveLength(2);
-      expect(result.map((v) => v.name)).toEqual(["Tom Hardy", "Clint Eastwood"]);
+      expect(result.map((v) => v.name)).toEqual([
+        "Tom Hardy",
+        "Clint Eastwood",
+      ]);
     });
 
     it("filters by creditedAs = writer", () => {

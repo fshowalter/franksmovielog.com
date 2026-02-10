@@ -68,7 +68,9 @@ export async function clickRadioListOption(
  */
 export function getRadioListOption(optionValue: string) {
   const radios = screen.getAllByRole("radio");
-  const radio = radios.find((rb) => (rb as HTMLInputElement).value === optionValue);
+  const radio = radios.find(
+    (rb) => (rb as HTMLInputElement).value === optionValue,
+  );
 
   if (!radio) {
     throw new Error(

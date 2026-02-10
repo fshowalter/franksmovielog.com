@@ -55,10 +55,7 @@ export function calculateReviewedStatusCounts(
   };
 
   // Filter viewings with all filters except reviewedStatus
-  const filteredValues = filterViewings(
-    values,
-    filtersWithoutReviewedStatus,
-  );
+  const filteredValues = filterViewings(values, filtersWithoutReviewedStatus);
 
   // Count reviewed vs not reviewed
   let reviewedCount = 0;

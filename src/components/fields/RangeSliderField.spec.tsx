@@ -98,7 +98,9 @@ describe("RangeSliderField", () => {
       ).not.toBeInTheDocument();
     });
 
-    it("shows Clear link when range is not full (from changed)", ({ expect }) => {
+    it("shows Clear link when range is not full (from changed)", ({
+      expect,
+    }) => {
       const props = createDefaultProps({
         fromValue: 1980,
         toValue: 2026,
@@ -106,7 +108,9 @@ describe("RangeSliderField", () => {
       render(<RangeSliderField {...props} />);
 
       expect(
-        screen.getByRole("button", { name: "Reset Release Year to full range" }),
+        screen.getByRole("button", {
+          name: "Reset Release Year to full range",
+        }),
       ).toBeInTheDocument();
     });
 
@@ -118,7 +122,9 @@ describe("RangeSliderField", () => {
       render(<RangeSliderField {...props} />);
 
       expect(
-        screen.getByRole("button", { name: "Reset Release Year to full range" }),
+        screen.getByRole("button", {
+          name: "Reset Release Year to full range",
+        }),
       ).toBeInTheDocument();
     });
 
@@ -127,7 +133,9 @@ describe("RangeSliderField", () => {
       render(<RangeSliderField {...props} />);
 
       // Legend should be present but visually hidden (sr-only)
-      const legend = screen.getByText("Release Year", { selector: "legend span" });
+      const legend = screen.getByText("Release Year", {
+        selector: "legend span",
+      });
       expect(legend).toBeInTheDocument();
     });
   });
@@ -284,7 +292,9 @@ describe("RangeSliderField", () => {
       expect(to).toBeLessThan(2000);
     });
 
-    it("respects min boundary when decreasing from value", async ({ expect }) => {
+    it("respects min boundary when decreasing from value", async ({
+      expect,
+    }) => {
       const onChange = vi.fn();
       const props = createDefaultProps({
         fromValue: 1920,

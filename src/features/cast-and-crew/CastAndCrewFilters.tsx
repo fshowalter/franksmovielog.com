@@ -31,10 +31,7 @@ export function CastAndCrewFilters({
   values: readonly CastAndCrewValue[];
 }): React.JSX.Element {
   // Calculate dynamic counts for creditedAs filter
-  const creditedAsCounts = calculateCreditedAsCounts(
-    [...values],
-    filterValues,
-  );
+  const creditedAsCounts = calculateCreditedAsCounts([...values], filterValues);
 
   return (
     <>

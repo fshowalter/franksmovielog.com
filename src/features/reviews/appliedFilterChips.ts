@@ -73,7 +73,8 @@ export function buildAppliedFilterChips(
       chips.push({
         category: "Grade",
         id: "gradeValue",
-        label: minLetter === maxLetter ? minLetter : `${maxLetter} to ${minLetter}`,
+        label:
+          minLetter === maxLetter ? minLetter : `${maxLetter} to ${minLetter}`,
       });
     }
   }

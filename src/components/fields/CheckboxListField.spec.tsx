@@ -176,9 +176,7 @@ describe("CheckboxListField", () => {
       await user.click(getCheckboxByLabel("Action"));
 
       expect(onChange).toHaveBeenCalledExactlyOnceWith(["action"]);
-      expect(
-        (getCheckboxByLabel("Action")).checked,
-      ).toBe(true);
+      expect(getCheckboxByLabel("Action").checked).toBe(true);
     });
 
     it("unchecks checkbox when clicked again", async ({ expect }) => {
@@ -193,9 +191,7 @@ describe("CheckboxListField", () => {
       await user.click(getCheckboxByLabel("Action"));
 
       expect(onChange).toHaveBeenCalledExactlyOnceWith([]);
-      expect(
-        (getCheckboxByLabel("Action")).checked,
-      ).toBe(false);
+      expect(getCheckboxByLabel("Action").checked).toBe(false);
     });
 
     it("allows multiple selections", async ({ expect }) => {
@@ -210,7 +206,11 @@ describe("CheckboxListField", () => {
 
       expect(onChange).toHaveBeenNthCalledWith(1, ["action"]);
       expect(onChange).toHaveBeenNthCalledWith(2, ["action", "comedy"]);
-      expect(onChange).toHaveBeenNthCalledWith(3, ["action", "comedy", "drama"]);
+      expect(onChange).toHaveBeenNthCalledWith(3, [
+        "action",
+        "comedy",
+        "drama",
+      ]);
     });
 
     it("toggles checkbox with Space key", async ({ expect }) => {
@@ -255,7 +255,9 @@ describe("CheckboxListField", () => {
       expect((checkboxes[0] as HTMLInputElement).value).toBe("horror");
     });
 
-    it("shows selected items in reverse selection order", async ({ expect }) => {
+    it("shows selected items in reverse selection order", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       const props = createDefaultProps({
         showMoreThreshold: 10,
@@ -313,7 +315,9 @@ describe("CheckboxListField", () => {
       await user.click(getCheckboxByLabel("Action"));
 
       // Clear link should now be visible
-      expect(screen.getByRole("button", { name: /Clear/i })).toBeInTheDocument();
+      expect(
+        screen.getByRole("button", { name: /Clear/i }),
+      ).toBeInTheDocument();
     });
 
     it("clears all selections when Clear is clicked", async ({ expect }) => {
@@ -395,12 +399,8 @@ describe("CheckboxListField", () => {
       );
 
       // Verify initial state
-      expect(
-        (getCheckboxByLabel("Action")).checked,
-      ).toBe(true);
-      expect(
-        (getCheckboxByLabel("Comedy")).checked,
-      ).toBe(true);
+      expect(getCheckboxByLabel("Action").checked).toBe(true);
+      expect(getCheckboxByLabel("Comedy").checked).toBe(true);
 
       // Select additional option
       await user.click(getCheckboxByLabel("Drama"));
@@ -413,15 +413,9 @@ describe("CheckboxListField", () => {
       });
 
       // Should reset to default values
-      expect(
-        (getCheckboxByLabel("Action")).checked,
-      ).toBe(true);
-      expect(
-        (getCheckboxByLabel("Comedy")).checked,
-      ).toBe(true);
-      expect(
-        (getCheckboxByLabel("Drama")).checked,
-      ).toBe(false);
+      expect(getCheckboxByLabel("Action").checked).toBe(true);
+      expect(getCheckboxByLabel("Comedy").checked).toBe(true);
+      expect(getCheckboxByLabel("Drama").checked).toBe(false);
     });
 
     it("clears all selections when form is reset with no defaults", async ({
@@ -440,12 +434,8 @@ describe("CheckboxListField", () => {
       await user.click(getCheckboxByLabel("Action"));
       await user.click(getCheckboxByLabel("Comedy"));
 
-      expect(
-        (getCheckboxByLabel("Action")).checked,
-      ).toBe(true);
-      expect(
-        (getCheckboxByLabel("Comedy")).checked,
-      ).toBe(true);
+      expect(getCheckboxByLabel("Action").checked).toBe(true);
+      expect(getCheckboxByLabel("Comedy").checked).toBe(true);
 
       // Reset the form
       const form = container.querySelector("form");
@@ -454,12 +444,8 @@ describe("CheckboxListField", () => {
       });
 
       // Should clear all selections
-      expect(
-        (getCheckboxByLabel("Action")).checked,
-      ).toBe(false);
-      expect(
-        (getCheckboxByLabel("Comedy")).checked,
-      ).toBe(false);
+      expect(getCheckboxByLabel("Action").checked).toBe(false);
+      expect(getCheckboxByLabel("Comedy").checked).toBe(false);
     });
 
     it("collapses expanded list when form is reset", async ({ expect }) => {

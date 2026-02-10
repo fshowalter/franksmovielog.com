@@ -82,7 +82,9 @@ export function getDirectorFilter() {
 
   // Find the "All" radio button within this section (value is "All")
   const radios = within(detailsElement).getAllByRole("radio");
-  const allRadio = radios.find((rb) => (rb as HTMLInputElement).value === "All");
+  const allRadio = radios.find(
+    (rb) => (rb as HTMLInputElement).value === "All",
+  );
 
   if (!allRadio) {
     throw new Error('Unable to find "All" radio button in Director filter');

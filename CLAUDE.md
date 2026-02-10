@@ -235,5 +235,6 @@ When implementing from FILTER_REDESIGN_SPEC.md:
 4. **During PR review**: Check that all requirements are met
 
 **Key principle**: The spec is the source of truth. If implementation diverges, either:
+
 - Fix the implementation to match spec, OR
 - Update the spec and get user approval before continuing

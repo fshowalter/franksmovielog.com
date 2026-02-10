@@ -40,6 +40,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 ```
 
 **Elements:**
+
 - **Heading:** "Applied Filters:" (or just "Active Filters:")
 - **Filter chips:** Rounded pills with filter label + value + remove button (×)
   - Color: Subtle background (canvas or stripe)
@@ -49,6 +50,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 - **Animation:** Chips fade in/out when added/removed
 
 **Interaction:**
+
 - Click × on any chip → removes that specific filter
 - Click "Clear all" → removes all filters (same as existing Clear button)
 - Chips are keyboard accessible (tab to focus, Enter/Space to remove)
@@ -104,10 +106,12 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 **Elements:**
 
 #### Summary (Always Visible)
+
 - **Disclosure triangle:** ▶ when closed, ▼ when open
 - **Section title:** Filter category name (e.g., "Genres", "Release Year")
 
 #### Details (Collapsible Content)
+
 - **Checkbox items:** List of all available options
   - Checkbox (styled, accessible)
   - Label text
@@ -125,11 +129,13 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
   - Keyboard accessible
 
 **Default State:**
+
 - **Open or closed?** Sections with active selections open, others closed
 - **Initial limit:** Show first 3 items, hide rest behind "Show more"
 - **After expanding:** All items visible (stays expanded until section collapsed)
 
 **Selection Behavior:**
+
 - **Checked items:** Move to top of list when checked (grouped together)
 - **Unchecked items:** Return to alphabetical sort order when unchecked
 - **Sort order:**
@@ -155,6 +161,7 @@ For filters like "Reviewed Status" (All / Reviewed / Not Reviewed):
 ```
 
 **Differences from Multi-Select:**
+
 - Use radio buttons (○/⦿) instead of checkboxes (☐/☑)
 - Only one option can be selected at a time
 - "All" is the default selection
@@ -180,6 +187,7 @@ Dual controls: Dropdowns + sliders (both usable):
 ```
 
 **Interaction:**
+
 - Dropdowns and sliders stay in sync
 - Changing dropdown updates slider position
 - Dragging slider updates dropdown values
@@ -187,6 +195,7 @@ Dual controls: Dropdowns + sliders (both usable):
 - Clear link appears beneath when range is set (not default "All")
 
 **Benefits:**
+
 - Dropdowns: Precise year selection
 - Sliders: Quick range adjustment, visual feedback
 
@@ -204,6 +213,7 @@ Keep existing TextField component, but add to Applied Filters:
 
 **Applied Filters chip:**
 When user enters search text, show chip:
+
 ```
 Applied Filters:
 [Search: "alien" ×]
@@ -216,6 +226,7 @@ Clicking × on chip clears the search field.
 ## Responsive Design
 
 ### Mobile (< tablet breakpoint)
+
 - Filter sections stack vertically
 - Full-width checkboxes (larger touch targets)
 - "Show more" threshold: 3 items
@@ -223,6 +234,7 @@ Clicking × on chip clears the search field.
 - Clear links remain visible
 
 ### Tablet/Desktop
+
 - Same layout (drawer is narrow, so single column is appropriate)
 - "Show more" threshold: Could increase to 5 items (configurable)
 - Applied filters wrap naturally
@@ -234,6 +246,7 @@ Clicking × on chip clears the search field.
 ### 1. Selecting Filters
 
 **Checkbox interaction:**
+
 - Click anywhere on item row → toggles checkbox
 - Keyboard: Tab to focus, Space to toggle
 - Visual feedback:
@@ -242,6 +255,7 @@ Clicking × on chip clears the search field.
   - Focus: Outline/border highlight
 
 **Immediate feedback:**
+
 - Checked item moves to top of list (within expanded section)
 - **Counts update dynamically** across all filter sections (items matching current filter state)
 - Count updates in "View X Results" button immediately
@@ -252,6 +266,7 @@ Clicking × on chip clears the search field.
   - When drawer re-opened: AppliedFilters shows current pending state (initially matches active)
 
 **Show More:**
+
 - Text format: MUST be "+ Show more" (no count, for consistent width)
 - Clicking expands to show all items
 - Stays expanded until section is collapsed via summary
@@ -261,6 +276,7 @@ Clicking × on chip clears the search field.
 ### 2. Clearing Filters
 
 **Per-section clear:**
+
 - Click "Clear" link beneath filter options (not in summary)
 - Unchecks all items in that section
 - Section remains open
@@ -268,11 +284,13 @@ Clicking × on chip clears the search field.
 - Other filter counts update dynamically
 
 **Individual filter clear:**
+
 - Click × on chip in Applied Filters section
 - Unchecks corresponding checkbox
 - Chip disappears with animation
 
 **Clear all:**
+
 - Click "Clear all" in Applied Filters section OR existing Clear button
 - Unchecks all checkboxes across all sections
 - Applied Filters section disappears
@@ -281,11 +299,13 @@ Clicking × on chip clears the search field.
 ### 3. Collapsing Sections
 
 **Open/Close:**
+
 - Click anywhere on summary bar → toggles open/closed
 - Keyboard: Tab to focus summary, Enter/Space to toggle
 - Disclosure triangle rotates: ▶ (closed) ↔ ▼ (open)
 
 **Default state:**
+
 - Sections with active selections: Open
 - Sections with no selections: Closed (to reduce clutter)
 - User's open/closed state persists during session (optional)
@@ -293,6 +313,7 @@ Clicking × on chip clears the search field.
 ### 4. Applying Filters
 
 **No change to existing pattern:**
+
 - Filters are applied in real-time (pending state)
 - "View X Results" button shows count with pending filters
 - Clicking applies pending → active
@@ -305,6 +326,7 @@ Clicking × on chip clears the search field.
 ### Keyboard Navigation
 
 **Tab order:**
+
 1. Applied Filters section (if visible)
    - Each filter chip (Tab to focus, Enter/Space to remove)
    - "Clear all" link
@@ -315,6 +337,7 @@ Clicking × on chip clears the search field.
    - "Clear" link (Enter to clear section)
 
 **Screen readers:**
+
 - Announce section name when focusing summary
 - Announce checkbox state (checked/unchecked) and label + count
 - Announce selection count in summary ("3 selected")
@@ -324,19 +347,23 @@ Clicking × on chip clears the search field.
 ### ARIA Attributes
 
 **Details/Summary:**
+
 - Native `<details>` and `<summary>` provide built-in ARIA
 - Add `aria-expanded` for clarity (redundant but explicit)
 
 **Checkboxes:**
+
 - Use native `<input type="checkbox">` with `<label>`
 - `id` and `for` attributes properly linked
 - Group in `<fieldset>` with `<legend>` for section name
 
 **Applied Filters:**
+
 - Each chip has `role="button"` for remove action
 - `aria-label="Remove [filter name]"`
 
 **Show More:**
+
 - `aria-expanded` attribute (true when showing all)
 - `aria-controls` pointing to checkbox list container
 - `aria-live="polite"` for count updates
@@ -346,6 +373,7 @@ Clicking × on chip clears the search field.
 ## Visual Styling (Tailwind)
 
 ### Applied Filters Section
+
 ```css
 /* Container */
 bg-stripe rounded-sm p-4 mb-4 border border-default
@@ -365,6 +393,7 @@ text-sm text-accent hover:underline focus:underline
 ```
 
 ### Filter Section
+
 ```css
 /* Details element */
 border-b border-default last:border-0
@@ -397,12 +426,14 @@ text-sm text-subtle
 ```
 
 ### Show More
+
 ```css
 /* Link */
 text-sm text-accent hover:underline focus:underline pt-2 pb-2
 ```
 
 ### Clear Link (per section)
+
 ```css
 /* Link (beneath options) */
 text-sm text-accent hover:underline focus:underline pt-3 pb-2
@@ -480,12 +511,14 @@ Each filter option needs a count of matching items. For example:
 
 **Calculation strategy:**
 **Dynamic counts** (at runtime): Count items matching current filter state
+
 - Calculate counts based on currently applied filters
 - When user selects Genre "Horror", all other filter counts update to show only items that are ALSO Horror
 - This gives user immediate feedback on how many results each combination will yield
 - Matches Orbit DVD behavior
 
 **Implementation:** Add count calculation to each feature's filter functions:
+
 - `filteredReviews.ts` → add `calculateGenreCounts()` helper
 - `filteredWatchlist.ts` → add `calculateDirectorCounts()` helper
 - etc.
@@ -495,22 +528,26 @@ Each filter option needs a count of matching items. For example:
 ## Migration Strategy
 
 ### Phase 1: Core Infrastructure
+
 1. Create new components (CheckboxListField, RadioListField, FilterSection, AppliedFilters)
 2. Implement count calculation for one feature (e.g., Reviews)
 3. Convert one filter category to checkbox (e.g., Genres in Reviews)
 4. Test accessibility, keyboard nav, screen readers
 
 ### Phase 2: All Multi-Select Filters
+
 1. Convert all remaining MultiSelectField usages to CheckboxListField
 2. Add counts for all filter options across all features
 3. Test all 7 pages
 
 ### Phase 3: Single-Select Filters
+
 1. Convert ReviewedStatusFilter to RadioListField
 2. Convert CreditedAsFilter to RadioListField
 3. Convert any other single-select dropdowns
 
 ### Phase 4: Polish
+
 1. Add animations (chips fade in/out, sections expand/collapse)
 2. Optimize performance (virtualization if needed for very long lists)
 3. A/B test "Show more" threshold (3 vs 5 vs 7)
@@ -536,21 +573,25 @@ Each filter option needs a count of matching items. For example:
 ## Success Metrics
 
 ### Usability
+
 - Time to apply filters decreases (no dropdown clicks needed)
 - Fewer abandoned filter operations
 - Increased use of multi-select filters
 
 ### Accessibility
+
 - All WCAG 2.1 AA criteria met
 - Full keyboard navigation works
 - Screen reader testing passes
 
 ### Performance
+
 - No perceptible lag when checking/unchecking items
 - Smooth animations (60fps)
 - Fast initial render (< 100ms)
 
 ### Visual
+
 - Matches design system (Tailwind theme)
 - Responsive on all breakpoints
 - Clear visual hierarchy
@@ -562,12 +603,14 @@ Each filter option needs a count of matching items. For example:
 These requirements MUST be verified during implementation to prevent drift:
 
 ### Visual Text Strings
+
 - [ ] "Show more" button text is EXACTLY "+ Show more" (no count, no variation)
 - [ ] No "(n selected)" text appears anywhere in filter UI
 - [ ] Applied filter chips use format: "Category: Value" or just "Value" when category equals value
 - [ ] "Clear all" link text is EXACTLY "Clear all"
 
 ### Interaction Timing
+
 - [ ] AppliedFilters updates in real-time as checkboxes are checked/unchecked (before clicking "View Results")
 - [ ] Checking a box immediately shows chip in AppliedFilters section
 - [ ] Unchecking a box immediately removes chip from AppliedFilters section
@@ -575,6 +618,7 @@ These requirements MUST be verified during implementation to prevent drift:
 - [ ] "Clear all" immediately unchecks all checkboxes and removes all chips
 
 ### Filter Section Behavior
+
 - [ ] "Show more" expands list and changes to inline display (no separate "Show less" button)
 - [ ] Collapsing section via summary resets to showing first 3 items
 - [ ] Selected items always appear at top (newest selection first)
@@ -582,6 +626,7 @@ These requirements MUST be verified during implementation to prevent drift:
 - [ ] Clear link appears beneath checkboxes only when selections exist
 
 ### Visual Hierarchy
+
 - [ ] AppliedFilters section appears at very top of drawer (before all filter sections)
 - [ ] AppliedFilters has distinct background color (bg-stripe) to stand out
 - [ ] Filter sections use native details/summary with disclosure triangle

@@ -1,4 +1,5 @@
 # Accessibility Audit - Filter UI Redesign
+
 **Date:** 2026-02-09
 **Auditor:** Claude Code Assistant
 **Scope:** All 7 converted filter pages (Reviews, Watchlist, Viewings, Cast & Crew, Collections, Cast & Crew Member Titles, Collection Titles)
@@ -13,6 +14,7 @@
 The filter UI redesign successfully meets WCAG 2.1 AA accessibility criteria. All components provide proper keyboard navigation, screen reader support, and semantic HTML structure.
 
 ### Key Findings
+
 - ✅ All components use semantic HTML (fieldset, legend, details, summary, buttons)
 - ✅ Full keyboard navigation support across all filter components
 - ✅ Proper ARIA attributes and labels throughout
@@ -29,18 +31,21 @@ The filter UI redesign successfully meets WCAG 2.1 AA accessibility criteria. Al
 **File:** `/src/components/fields/CheckboxListField.tsx`
 
 #### Semantic HTML
+
 - ✅ Uses `<fieldset>` for grouping related checkboxes
 - ✅ Uses `<legend>` for group label (visually hidden but accessible)
 - ✅ Uses native `<input type="checkbox">` elements
 - ✅ Proper `<label>` elements with `htmlFor` association
 
 #### Keyboard Navigation
+
 - ✅ Tab navigation through all checkboxes
 - ✅ Space key to toggle checkbox state
 - ✅ Focus indicators visible (`focus-within:bg-stripe`)
 - ✅ "Show more" and "Clear" buttons keyboard accessible
 
 #### ARIA Attributes
+
 - ✅ `role="group"` on checkbox container
 - ✅ `aria-live="polite"` for dynamic list updates
 - ✅ `aria-relevant="additions removals"` for list changes
@@ -49,6 +54,7 @@ The filter UI redesign successfully meets WCAG 2.1 AA accessibility criteria. Al
 - ✅ `aria-label` on Clear button
 
 #### Screen Reader Support
+
 - ✅ Legend announces group name
 - ✅ Each checkbox announces label + count (e.g., "Action(10)")
 - ✅ Selection count announced via `aria-describedby` (e.g., "5 options selected")
@@ -56,6 +62,7 @@ The filter UI redesign successfully meets WCAG 2.1 AA accessibility criteria. Al
 - ✅ Dynamic updates announced via `aria-live="polite"`
 
 #### Form Integration
+
 - ✅ Responds to form reset events
 - ✅ Maintains state synchronization
 
@@ -68,30 +75,35 @@ The filter UI redesign successfully meets WCAG 2.1 AA accessibility criteria. Al
 **File:** `/src/components/fields/RadioListField.tsx`
 
 #### Semantic HTML
+
 - ✅ Uses `<fieldset>` for grouping related radio buttons
 - ✅ Uses `<legend>` for group label (visually hidden but accessible)
 - ✅ Uses native `<input type="radio">` elements with shared `name` attribute
 - ✅ Proper `<label>` elements with `htmlFor` association
 
 #### Keyboard Navigation
+
 - ✅ Tab navigation through all radio buttons
 - ✅ Space/Enter keys to select option
 - ✅ Focus indicators visible (`focus-within:bg-stripe`)
 - ✅ "Clear" button keyboard accessible
 
 #### ARIA Attributes
+
 - ✅ `role="radiogroup"` on radio container
 - ✅ `aria-live="polite"` for dynamic updates
 - ✅ `aria-relevant="additions removals"` for selection changes
 - ✅ `aria-label` on Clear button
 
 #### Screen Reader Support
+
 - ✅ Legend announces group name
 - ✅ Each radio announces label + count (e.g., "All(512)")
 - ✅ Selection changes announced via `aria-live="polite"`
 - ✅ Clear button announces purpose ("Clear [label] selection")
 
 #### Form Integration
+
 - ✅ Responds to form reset events
 - ✅ Syncs with external state changes via useEffect
 
@@ -104,25 +116,30 @@ The filter UI redesign successfully meets WCAG 2.1 AA accessibility criteria. Al
 **File:** `/src/components/filter-and-sort/FilterSection.tsx`
 
 #### Semantic HTML
+
 - ✅ Uses native `<details>` and `<summary>` elements
 - ✅ Provides built-in expand/collapse semantics
 - ✅ Disclosure triangle implemented as decorative SVG (`aria-hidden="true"`)
 
 #### Keyboard Navigation
+
 - ✅ Enter/Space keys toggle open/closed (native browser behavior)
 - ✅ Tab navigates to summary
 - ✅ Focus indicator visible (`focus-within:bg-stripe hover:bg-stripe focus:outline-none`)
 
 #### ARIA Attributes
+
 - ✅ Native `<details>` provides `aria-expanded` automatically
 - ✅ Decorative SVG properly hidden from screen readers
 
 #### Screen Reader Support
+
 - ✅ Summary content announced when focused
 - ✅ Expanded/collapsed state announced
 - ✅ Disclosure triangle rotation purely visual (not announced)
 
 #### Spec Compliance
+
 - ✅ NO selection count in summary (as per spec requirement)
 - ✅ Disclosure triangle rotates correctly (▶ closed, ▼ open)
 
@@ -135,27 +152,32 @@ The filter UI redesign successfully meets WCAG 2.1 AA accessibility criteria. Al
 **File:** `/src/components/filter-and-sort/AppliedFilters.tsx`
 
 #### Semantic HTML
+
 - ✅ Uses `<button>` elements for interactive chips
 - ✅ Proper heading hierarchy (`<h3>` for "Applied Filters:")
 - ✅ Semantic container structure
 
 #### Keyboard Navigation
+
 - ✅ Tab navigation through all filter chips
 - ✅ Tab navigation to "Clear all" button
 - ✅ Enter/Space activate chip removal
 - ✅ Focus indicators visible on chips and button
 
 #### ARIA Attributes
+
 - ✅ `aria-label` on each chip describes action (e.g., "Remove Genre: Horror filter")
 - ✅ `aria-hidden="true"` on × symbol (prevents duplicate announcement)
 
 #### Screen Reader Support
+
 - ✅ Heading announces section ("Applied Filters:")
 - ✅ Each chip announces full context (e.g., "Remove Genre: Horror filter")
 - ✅ × symbol hidden from screen readers (conveyed via aria-label)
 - ✅ "Clear all" button announces purpose
 
 #### Conditional Rendering
+
 - ✅ Component returns `undefined` when no filters active (proper React pattern)
 - ✅ No empty containers rendered
 
@@ -168,22 +190,26 @@ The filter UI redesign successfully meets WCAG 2.1 AA accessibility criteria. Al
 **File:** `/src/components/fields/RangeSliderField.tsx`
 
 #### Semantic HTML
+
 - ✅ Uses native `<input type="range">` elements
 - ✅ Proper label association
 - ✅ Fieldset/legend structure for grouping
 
 #### Keyboard Navigation
+
 - ✅ Arrow keys adjust slider values
 - ✅ Tab navigation between sliders
 - ✅ "Clear" button keyboard accessible
 
 #### ARIA Attributes
+
 - ✅ `aria-valuemin`, `aria-valuemax`, `aria-valuenow` on range inputs
 - ✅ `aria-valuetext` provides formatted value (e.g., grade letters)
 - ✅ `aria-label` on inputs describes purpose
 - ✅ `aria-label` on Clear button
 
 #### Screen Reader Support
+
 - ✅ Current value announced when changed
 - ✅ Range boundaries announced
 - ✅ Formatted values announced (e.g., "A-" instead of "11")
@@ -213,11 +239,13 @@ All pages share the same accessible component architecture and meet the same sta
 ### Perceivable
 
 #### 1.1 Text Alternatives
+
 - ✅ All non-text content has text alternatives
 - ✅ Decorative SVGs marked with `aria-hidden="true"`
 - ✅ Interactive elements have descriptive labels
 
 #### 1.3 Adaptable
+
 - ✅ Semantic HTML structure throughout
 - ✅ Proper heading hierarchy
 - ✅ Form fields properly labeled
@@ -225,6 +253,7 @@ All pages share the same accessible component architecture and meet the same sta
 - ✅ Meaningful sequence maintained
 
 #### 1.4 Distinguishable
+
 - ✅ Color not used as only visual means (text labels present)
 - ✅ Text contrast meets WCAG AA (using Tailwind theme colors)
 - ✅ Interactive elements have focus indicators
@@ -233,16 +262,19 @@ All pages share the same accessible component architecture and meet the same sta
 ### Operable
 
 #### 2.1 Keyboard Accessible
+
 - ✅ All functionality available via keyboard
 - ✅ No keyboard traps
 - ✅ Logical tab order
 - ✅ Keyboard shortcuts documented (Space, Enter, Arrow keys)
 
 #### 2.2 Enough Time
+
 - ✅ No time limits on filter interactions
 - ✅ No auto-updating content
 
 #### 2.4 Navigable
+
 - ✅ Bypass blocks via skip links (assumed from existing site structure)
 - ✅ Page titles present (assumed from page components)
 - ✅ Focus order follows visual order
@@ -252,16 +284,19 @@ All pages share the same accessible component architecture and meet the same sta
 ### Understandable
 
 #### 3.1 Readable
+
 - ✅ Language of page specified (assumed from existing site structure)
 - ✅ Clear, concise labels
 
 #### 3.2 Predictable
+
 - ✅ Focus does not trigger unexpected context changes
 - ✅ Consistent navigation patterns across all pages
 - ✅ Consistent component behavior
 - ✅ Clear feedback for actions (chips appear/disappear, counts update)
 
 #### 3.3 Input Assistance
+
 - ✅ Clear labels on all form controls
 - ✅ Error prevention (no destructive actions without confirmation)
 - ✅ Clear button provides undo mechanism
@@ -269,6 +304,7 @@ All pages share the same accessible component architecture and meet the same sta
 ### Robust
 
 #### 4.1 Compatible
+
 - ✅ Valid HTML (semantic elements used correctly)
 - ✅ ARIA attributes used properly (no conflicts with native semantics)
 - ✅ Name, role, value available for all UI components
@@ -279,6 +315,7 @@ All pages share the same accessible component architecture and meet the same sta
 ## Testing Recommendations
 
 ### Automated Testing
+
 - ✅ Component tests cover accessibility attributes
 - ✅ Tests verify ARIA labels and roles
 - ✅ Tests verify keyboard interactions
@@ -286,12 +323,15 @@ All pages share the same accessible component architecture and meet the same sta
 ### Manual Testing Required
 
 #### Screen Readers
+
 **Test with:**
+
 1. **VoiceOver (macOS)** - Test on Safari
 2. **NVDA (Windows)** - Test on Firefox
 3. **JAWS (Windows)** - Test on Chrome/Edge
 
 **Test scenarios:**
+
 - Navigate through filter sections
 - Toggle checkboxes/radio buttons
 - Use "Show more" button
@@ -301,7 +341,9 @@ All pages share the same accessible component architecture and meet the same sta
 - Verify dynamic updates announced
 
 #### Keyboard Navigation
+
 **Test scenarios:**
+
 - Tab through all interactive elements
 - Verify focus visible on all elements
 - Test Space/Enter on checkboxes/radio buttons
@@ -310,13 +352,16 @@ All pages share the same accessible component architecture and meet the same sta
 - Test with browser zoom at 200%
 
 #### Browser Testing
+
 **Test on:**
+
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
 **Mobile browsers:**
+
 - iOS Safari
 - Android Chrome
 
@@ -327,6 +372,7 @@ All pages share the same accessible component architecture and meet the same sta
 ### Critical Implementation Requirements
 
 #### Visual Text Strings
+
 - ✅ "Show more" button text is EXACTLY "+ Show more" (no count)
   - Verified in CheckboxListField.tsx:194
 - ✅ No "(n selected)" text appears anywhere in filter UI
@@ -337,6 +383,7 @@ All pages share the same accessible component architecture and meet the same sta
   - Verified in AppliedFilters.tsx:75
 
 #### Interaction Timing
+
 - ✅ AppliedFilters updates in real-time as checkboxes are checked/unchecked
   - Implemented via onChange callbacks to parent state
 - ✅ Checking a box immediately shows chip in AppliedFilters section
@@ -349,6 +396,7 @@ All pages share the same accessible component architecture and meet the same sta
   - Implemented via onClearAll callback
 
 #### Filter Section Behavior
+
 - ✅ "Show more" expands list and changes to inline display
   - Implemented with showAll state
 - ✅ Collapsing section via summary resets to showing first 3 items
@@ -361,6 +409,7 @@ All pages share the same accessible component architecture and meet the same sta
   - Verified in CheckboxListField.tsx:203
 
 #### Visual Hierarchy
+
 - ✅ AppliedFilters section appears at very top of drawer
   - Implemented in FilterAndSortContainer.tsx
 - ✅ AppliedFilters has distinct background color (bg-stripe)
@@ -375,11 +424,13 @@ All pages share the same accessible component architecture and meet the same sta
 ## Performance Considerations
 
 ### Rendering Performance
+
 - ✅ No unnecessary re-renders (React.memo not needed for current list sizes)
 - ✅ Efficient sorting algorithm (toSorted with localeCompare)
 - ✅ Conditional rendering (no hidden elements, proper React returns)
 
 ### Large Lists
+
 - ℹ️ No virtualization implemented (not needed for current data sizes)
 - ℹ️ Longest filter lists: ~20-30 items (genres) - well within acceptable range
 - ℹ️ "Show more" pattern keeps initial render small (3 items visible)
@@ -391,6 +442,7 @@ All pages share the same accessible component architecture and meet the same sta
 ## Recommendations
 
 ### Completed ✅
+
 1. All semantic HTML in place
 2. All ARIA attributes correctly implemented
 3. Full keyboard navigation support
@@ -398,6 +450,7 @@ All pages share the same accessible component architecture and meet the same sta
 5. Focus management working correctly
 
 ### Future Enhancements (Optional)
+
 1. **Animations** - Add smooth transitions (Stage 7.1)
    - Chip fade in/out
    - Section expand/collapse
@@ -427,6 +480,7 @@ The filter UI redesign successfully achieves WCAG 2.1 AA compliance across all c
 - Adherence to accessibility best practices
 
 **Recommended Actions:**
+
 1. ✅ Approve implementation as accessibility-compliant
 2. 📋 Conduct manual screen reader testing (VoiceOver, NVDA)
 3. 📋 Test across browsers and devices
@@ -437,6 +491,7 @@ The filter UI redesign successfully achieves WCAG 2.1 AA compliance across all c
 ## Appendix: Test Cases
 
 ### CheckboxListField Test Cases
+
 ```typescript
 // All test cases passing in CheckboxListField.spec.tsx
 ✅ Renders all options when count ≤ threshold
@@ -453,6 +508,7 @@ The filter UI redesign successfully achieves WCAG 2.1 AA compliance across all c
 ```
 
 ### RadioListField Test Cases
+
 ```typescript
 // All test cases passing in RadioListField.spec.tsx
 ✅ Renders all options
@@ -467,6 +523,7 @@ The filter UI redesign successfully achieves WCAG 2.1 AA compliance across all c
 ```
 
 ### FilterSection Test Cases
+
 ```typescript
 // All test cases passing in FilterSection.spec.tsx
 ✅ Renders expanded when defaultOpen={true}
@@ -477,6 +534,7 @@ The filter UI redesign successfully achieves WCAG 2.1 AA compliance across all c
 ```
 
 ### AppliedFilters Test Cases
+
 ```typescript
 // All test cases passing in AppliedFilters.spec.tsx
 ✅ Renders nothing when filters array is empty

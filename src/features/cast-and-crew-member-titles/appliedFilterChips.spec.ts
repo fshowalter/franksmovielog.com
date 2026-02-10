@@ -37,7 +37,9 @@ describe("buildAppliedFilterChips", () => {
       gradeValue: [11, 11], // A- only
     };
     const chips = buildAppliedFilterChips(filterValues);
-    expect(chips).toEqual([{ category: "Grade", id: "gradeValue", label: "A-" }]);
+    expect(chips).toEqual([
+      { category: "Grade", id: "gradeValue", label: "A-" },
+    ]);
   });
 
   it("excludes full grade range (1-13)", () => {

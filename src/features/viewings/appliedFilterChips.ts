@@ -48,10 +48,7 @@ export function buildAppliedFilterChips(
   }
 
   // Reviewed Status chip (single-select, exclude "All")
-  if (
-    filterValues.reviewedStatus &&
-    filterValues.reviewedStatus !== "All"
-  ) {
+  if (filterValues.reviewedStatus && filterValues.reviewedStatus !== "All") {
     chips.push({
       category: "Reviewed Status",
       id: "reviewedStatus",

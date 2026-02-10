@@ -172,9 +172,7 @@ describe("RadioListField", () => {
     const reviewedRadio = screen.getByRole("radio", { name: /^Reviewed/ });
     await user.click(reviewedRadio);
 
-    expect(
-      screen.getByRole("button", { name: /Clear/i }),
-    ).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Clear/i })).toBeInTheDocument();
   });
 
   it("does not show Clear link when no default value and empty selection", () => {
@@ -367,9 +365,7 @@ describe("RadioListField", () => {
 
     expect(allRadio.id).toBe("radio-list-reviewed-status-all");
     expect(reviewedRadio.id).toBe("radio-list-reviewed-status-reviewed");
-    expect(notReviewedRadio.id).toBe(
-      "radio-list-reviewed-status-not-reviewed",
-    );
+    expect(notReviewedRadio.id).toBe("radio-list-reviewed-status-not-reviewed");
   });
 
   it("groups radios with same name attribute", () => {

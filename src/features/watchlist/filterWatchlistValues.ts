@@ -110,10 +110,7 @@ export function calculatePerformerCounts(
     ...currentFilters,
     performer: undefined,
   };
-  const filteredValues = filterWatchlistValues(
-    values,
-    filtersWithoutPerformer,
-  );
+  const filteredValues = filterWatchlistValues(values, filtersWithoutPerformer);
 
   const counts = new Map<string, number>();
   for (const value of filteredValues) {
