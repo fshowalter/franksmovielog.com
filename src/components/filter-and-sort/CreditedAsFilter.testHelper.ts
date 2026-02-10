@@ -7,11 +7,18 @@ import { clickRadioListOption } from "~/components/fields/RadioListField.testHel
 /**
  * Test helper to select a credited-as filter option.
  * @param user - UserEvent instance for interactions
- * @param value - The credited-as option to select ("Director", "Performer", "Writer", or "All")
+ * @param value - The credited-as option to select (supports both lowercase and capitalized forms)
  */
 export async function clickCreditedAsFilterOption(
   user: UserEvent,
-  value: "All" | "Director" | "Performer" | "Writer",
+  value:
+    | "All"
+    | "Director"
+    | "Performer"
+    | "Writer"
+    | "director"
+    | "performer"
+    | "writer",
 ) {
   await clickRadioListOption(user, "Credited As", value);
 }
