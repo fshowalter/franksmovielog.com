@@ -13,12 +13,12 @@ export async function clickCreditedAsFilterOption(
   user: UserEvent,
   value:
     | "All"
-    | "Director"
-    | "Performer"
-    | "Writer"
     | "director"
+    | "Director"
     | "performer"
-    | "writer",
+    | "Performer"
+    | "writer"
+    | "Writer",
 ) {
   await clickRadioListOption(user, "Credited As", value);
 }
