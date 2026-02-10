@@ -30,7 +30,7 @@ const createCastAndCrewMember = (
   const name = overrides.name || "Test Person";
   return {
     avatarImageProps: undefined,
-    creditedAs: ["Director"],
+    creditedAs: ["director"],
     name,
     reviewCount: 5,
     slug: name.toLowerCase().replaceAll(/\s+/g, "-"),
@@ -81,7 +81,7 @@ describe("CastAndCrew", () => {
     it("filters by credited as", async ({ expect }) => {
       const members = [
         createCastAndCrewMember({
-          creditedAs: ["Director"],
+          creditedAs: ["director"],
           name: "Steven Spielberg",
         }),
         createCastAndCrewMember({
@@ -89,11 +89,11 @@ describe("CastAndCrew", () => {
           name: "Tom Hanks",
         }),
         createCastAndCrewMember({
-          creditedAs: ["Writer"],
+          creditedAs: ["writer"],
           name: "Charlie Kaufman",
         }),
         createCastAndCrewMember({
-          creditedAs: ["Director", "Writer"],
+          creditedAs: ["director", "writer"],
           name: "Christopher Nolan",
         }),
       ];
@@ -102,18 +102,18 @@ describe("CastAndCrew", () => {
       render(<CastAndCrew {...baseProps} values={members} />);
 
       await clickToggleFilters(user);
-      await clickCreditedAsFilterOption(user, "Director");
+      await clickCreditedAsFilterOption(user, "director");
       await clickViewResults(user);
 
       const avatarList = getGroupedAvatarList();
 
-      // Only Directors should be visible
+      // Only directors should be visible
       expect(
         within(avatarList).getByText("Steven Spielberg"),
       ).toBeInTheDocument();
       expect(
         within(avatarList).getByText("Christopher Nolan"),
-      ).toBeInTheDocument(); // Both Director and Writer
+      ).toBeInTheDocument(); // Both director and writer
       expect(
         within(avatarList).queryByText("Tom Hanks"),
       ).not.toBeInTheDocument();
@@ -225,11 +225,11 @@ describe("CastAndCrew", () => {
     it("clears all filters with clear button", async ({ expect }) => {
       const members = [
         createCastAndCrewMember({
-          creditedAs: ["Director"],
+          creditedAs: ["director"],
           name: "John Ford",
         }),
         createCastAndCrewMember({
-          creditedAs: ["Director"],
+          creditedAs: ["director"],
           name: "Howard Hawks",
         }),
         createCastAndCrewMember({
@@ -244,7 +244,7 @@ describe("CastAndCrew", () => {
       // Apply multiple filters
       await clickToggleFilters(user);
       await fillNameFilter(user, "John");
-      await clickCreditedAsFilterOption(user, "Director");
+      await clickCreditedAsFilterOption(user, "director");
       await clickViewResults(user);
 
       let avatarList = getGroupedAvatarList();
