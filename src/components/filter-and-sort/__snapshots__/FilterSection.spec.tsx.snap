@@ -4,9 +4,9 @@ exports[`FilterSection > snapshot test - closed state with no selections 1`] = `
 <div>
   <details
     class="
-      border-b border-default
-      last:border-0
-    "
+        border-b border-default
+        last:border-0
+      "
   >
     <summary
       class="
@@ -51,9 +51,9 @@ exports[`FilterSection > snapshot test - open state 1`] = `
 <div>
   <details
     class="
-      border-b border-default
-      last:border-0
-    "
+        border-b border-default
+        last:border-0
+      "
     open=""
   >
     <summary

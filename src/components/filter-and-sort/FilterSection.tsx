@@ -23,9 +23,9 @@ export function FilterSection({
   return (
     <details
       className="
-      border-b border-default
-      last:border-0
-    "
+        border-b border-default
+        last:border-0
+      "
       open={defaultOpen}
     >
       <summary

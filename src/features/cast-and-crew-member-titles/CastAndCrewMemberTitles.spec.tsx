@@ -351,7 +351,7 @@ describe("CastAndCrewMemberTitles", () => {
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
       await clickToggleFilters(user);
-      await clickCreditedAsFilterOption(user, "director");
+      await clickCreditedAsFilterOption(user, "Director");
       await clickViewResults(user);
 
       const reviewCardList = getGroupedReviewCardList();
@@ -667,7 +667,7 @@ describe("CastAndCrewMemberTitles", () => {
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Notorious");
-      await clickCreditedAsFilterOption(user, "director");
+      await clickCreditedAsFilterOption(user, "Director");
       await clickViewResults(user);
 
       let reviewCardList = getGroupedReviewCardList();
