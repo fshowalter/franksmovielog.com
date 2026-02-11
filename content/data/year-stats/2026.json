@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 13,
-  "viewingCount": 25,
-  "titleCount": 25,
+  "newTitleCount": 14,
+  "viewingCount": 26,
+  "titleCount": 26,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 9
+      "count": 10
     },
     {
       "name": "4k UHD Blu-ray",
@@ -53,7 +53,7 @@
     },
     {
       "name": "1970s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "1980s",
@@ -190,6 +190,55 @@
           "viewingDate": "2026-02-08",
           "viewingSequence": 3012,
           "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Allen Garfield",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0142688",
+          "title": "The Ninth Gate",
+          "sortTitle": "ninth-gate-1999",
+          "releaseYear": "1999",
+          "releaseDate": "1999-08-25",
+          "genres": [
+            "Mystery",
+            "Thriller"
+          ],
+          "slug": "the-ninth-gate-1999",
+          "grade": "B",
+          "gradeValue": 12,
+          "reviewDate": "2026-01-01",
+          "reviewSequence": 2990,
+          "viewingDate": "2026-01-01",
+          "viewingSequence": 2990,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0077275",
+          "title": "The Brink's Job",
+          "sortTitle": "brinks-job-1978",
+          "releaseYear": "1978",
+          "releaseDate": "1978-12-07",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Drama",
+            "History"
+          ],
+          "slug": "the-brinks-job-1978",
+          "grade": "D",
+          "gradeValue": 6,
+          "reviewDate": "2026-02-10",
+          "reviewSequence": 3014,
+          "viewingDate": "2026-02-10",
+          "viewingSequence": 3014,
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -333,6 +382,55 @@
           "viewingDate": "2026-02-08",
           "viewingSequence": 3012,
           "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Warren Oates",
+      "count": 2,
+      "slug": "warren-oates",
+      "viewings": [
+        {
+          "imdbId": "tt0058318",
+          "title": "Mail Order Bride",
+          "sortTitle": "mail-order-bride-1964",
+          "releaseYear": "1964",
+          "releaseDate": "1964-03-11",
+          "genres": [
+            "Comedy",
+            "Western"
+          ],
+          "slug": "mail-order-bride-1964",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-01-20",
+          "reviewSequence": 2995,
+          "viewingDate": "2026-01-20",
+          "viewingSequence": 2995,
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0077275",
+          "title": "The Brink's Job",
+          "sortTitle": "brinks-job-1978",
+          "releaseYear": "1978",
+          "releaseDate": "1978-12-07",
+          "genres": [
+            "Comedy",
+            "Crime",
+            "Drama",
+            "History"
+          ],
+          "slug": "the-brinks-job-1978",
+          "grade": "D",
+          "gradeValue": 6,
+          "reviewDate": "2026-02-10",
+          "reviewSequence": 3014,
+          "viewingDate": "2026-02-10",
+          "viewingSequence": 3014,
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -523,100 +621,6 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Shih-Ou Chang",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0076519",
-          "title": "Jade Tiger",
-          "sortTitle": "jade-tiger-1977",
-          "releaseYear": "1977",
-          "releaseDate": "1977-05-07",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": "jade-tiger-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2026-01-27",
-          "reviewSequence": 3000,
-          "viewingDate": "2026-01-27",
-          "viewingSequence": 3000,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0085840",
-          "title": "Mercenaries from Hong Kong",
-          "sortTitle": "mercenaries-from-hong-kong-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-12-22",
-          "genres": [
-            "Action",
-            "Drama"
-          ],
-          "slug": "mercenaries-from-hong-kong-1982",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2026-02-01",
-          "reviewSequence": 3005,
-          "viewingDate": "2026-02-01",
-          "viewingSequence": 3005,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Miao Ching",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0076519",
-          "title": "Jade Tiger",
-          "sortTitle": "jade-tiger-1977",
-          "releaseYear": "1977",
-          "releaseDate": "1977-05-07",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": "jade-tiger-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2026-01-27",
-          "reviewSequence": 3000,
-          "viewingDate": "2026-01-27",
-          "viewingSequence": 3000,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0085840",
-          "title": "Mercenaries from Hong Kong",
-          "sortTitle": "mercenaries-from-hong-kong-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-12-22",
-          "genres": [
-            "Action",
-            "Drama"
-          ],
-          "slug": "mercenaries-from-hong-kong-1982",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2026-02-01",
-          "reviewSequence": 3005,
-          "viewingDate": "2026-02-01",
-          "viewingSequence": 3005,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
@@ -670,5 +674,5 @@
       ]
     }
   ],
-  "reviewCount": 25
+  "reviewCount": 26
 }
