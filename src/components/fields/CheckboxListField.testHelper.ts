@@ -7,7 +7,7 @@ import { screen } from "@testing-library/react";
  * @param optionLabel - Label text of the checkbox option (matches the option value)
  * @returns Checkbox element
  */
-export function getCheckboxListOption(optionLabel: string) {
+function getCheckboxListOption(optionLabel: string) {
   const checkboxes = screen.getAllByRole("checkbox");
   const checkbox = checkboxes.find(
     (cb) => (cb as HTMLInputElement).value === optionLabel,

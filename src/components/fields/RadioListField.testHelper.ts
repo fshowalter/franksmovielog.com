@@ -66,7 +66,7 @@ export async function clickRadioListOption(
  * @param optionValue - Value of the radio button option
  * @returns Radio button element
  */
-export function getRadioListOption(optionValue: string) {
+function getRadioListOption(optionValue: string) {
   const radios = screen.getAllByRole("radio");
   const radio = radios.find(
     (rb) => (rb as HTMLInputElement).value === optionValue,
