@@ -551,7 +551,7 @@
             </div>
           </header>
           <astro-island
-            uid="fT2hT"
+            uid="1QHl1m"
             prefix="r1"
             component-url="~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles"
             component-export="CastAndCrewMemberTitles"
@@ -1438,48 +1438,112 @@
                             placeholder="Enter all or part of a title"
                             type="text"
                         /></label>
-                        <fieldset class="text-subtle">
-                          <legend
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                          >
-                            Release Year
-                          </legend>
-                          <div class="flex items-baseline">
-                            <label class="flex flex-1 items-center gap-x-[.5ch]"
-                              ><span
-                                class="min-w-10 text-left text-sm tracking-serif-wide"
-                                >From</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="1961" selected="">1961</option>
-                                <option value="1972">1972</option>
-                                <option value="1977">1977</option>
-                                <option value="1981">1981</option>
-                                <option value="1984">1984</option>
-                                <option value="1992">1992</option>
-                                <option value="1996">1996</option>
-                                <option value="1997">1997</option>
-                              </select></label
-                            ><label class="flex flex-1 items-center"
-                              ><span
-                                class="min-w-10 text-center text-sm tracking-serif-wide"
-                                >to</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="1997" selected="">1997</option>
-                                <option value="1996">1996</option>
-                                <option value="1992">1992</option>
-                                <option value="1984">1984</option>
-                                <option value="1981">1981</option>
-                                <option value="1977">1977</option>
-                                <option value="1972">1972</option>
-                                <option value="1961">1961</option>
-                              </select></label
+                        <div class="flex flex-col gap-4">
+                          <fieldset class="text-subtle">
+                            <legend
+                              class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >
-                          </div>
-                        </fieldset>
+                              Release Year
+                            </legend>
+                            <div class="flex items-baseline">
+                              <label
+                                class="flex flex-1 items-center gap-x-[.5ch]"
+                                ><span
+                                  class="min-w-10 text-left text-sm tracking-serif-wide"
+                                  >From</span
+                                ><select
+                                  class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                >
+                                  <option value="1961" selected="">1961</option>
+                                  <option value="1972">1972</option>
+                                  <option value="1977">1977</option>
+                                  <option value="1981">1981</option>
+                                  <option value="1984">1984</option>
+                                  <option value="1992">1992</option>
+                                  <option value="1996">1996</option>
+                                  <option value="1997">1997</option>
+                                </select></label
+                              ><label class="flex flex-1 items-center"
+                                ><span
+                                  class="min-w-10 text-center text-sm tracking-serif-wide"
+                                  >to</span
+                                ><select
+                                  class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                >
+                                  <option value="1997" selected="">1997</option>
+                                  <option value="1996">1996</option>
+                                  <option value="1992">1992</option>
+                                  <option value="1984">1984</option>
+                                  <option value="1981">1981</option>
+                                  <option value="1977">1977</option>
+                                  <option value="1972">1972</option>
+                                  <option value="1961">1961</option>
+                                </select></label
+                              >
+                            </div>
+                          </fieldset>
+                          <fieldset class="text-left">
+                            <legend class="sr-only">
+                              <span
+                                class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                >Release Year</span
+                              >
+                            </legend>
+                            <div class="flex flex-col gap-4 px-2 py-3">
+                              <div class="relative h-6">
+                                <div
+                                  class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                ></div>
+                                <div
+                                  class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                  style="left: 0%; right: 0%"
+                                ></div>
+                                <input
+                                  aria-label="Release Year minimum value"
+                                  aria-valuemax="1997"
+                                  aria-valuemin="1961"
+                                  aria-valuenow="1961"
+                                  aria-valuetext="1961"
+                                  class="range-input"
+                                  id="range-slider-release-year-from"
+                                  max="1997"
+                                  min="1961"
+                                  type="range"
+                                  value="1961"
+                                /><input
+                                  aria-label="Release Year maximum value"
+                                  aria-valuemax="1997"
+                                  aria-valuemin="1961"
+                                  aria-valuenow="1997"
+                                  aria-valuetext="1997"
+                                  class="range-input"
+                                  id="range-slider-release-year-to"
+                                  max="1997"
+                                  min="1961"
+                                  type="range"
+                                  value="1997"
+                                />
+                              </div>
+                              <div
+                                class="flex items-center justify-between text-xs text-subtle"
+                              >
+                                <span>1961</span
+                                ><span class="text-[10px]">—</span
+                                ><span>1997</span>
+                              </div>
+                            </div>
+                            <div
+                              aria-atomic="true"
+                              aria-live="polite"
+                              class="sr-only"
+                            >
+                              Range:
+                              <!-- -->1961<!-- -->
+                              to
+                              <!-- -->1997
+                            </div>
+                          </fieldset>
+                        </div>
                         <details class="border-b border-default last:border-0">
                           <summary
                             class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
@@ -1565,95 +1629,225 @@
                             </fieldset>
                           </div>
                         </details>
-                        <fieldset class="text-subtle">
-                          <legend
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                          >
-                            Grade
-                          </legend>
-                          <div class="flex flex-wrap items-baseline">
-                            <label class="flex flex-1 items-center gap-x-[.5ch]"
-                              ><span
-                                class="min-w-10 text-left text-sm tracking-serif-wide"
-                                >From</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="1" selected="">F</option>
-                                <option value="2">D-</option>
-                                <option value="3">D</option>
-                                <option value="4">D+</option>
-                                <option value="5">C-</option>
-                                <option value="6">C</option>
-                                <option value="7">C+</option>
-                                <option value="8">B-</option>
-                                <option value="9">B</option>
-                                <option value="10">B+</option>
-                                <option value="11">A-</option>
-                                <option value="12">A</option>
-                                <option value="13">A+</option>
-                              </select></label
-                            ><label class="flex flex-1 items-center"
-                              ><span
-                                class="min-w-10 text-center text-sm tracking-serif-wide"
-                                >to</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="13" selected="">A+</option>
-                                <option value="12">A</option>
-                                <option value="11">A-</option>
-                                <option value="10">B+</option>
-                                <option value="9">B</option>
-                                <option value="8">B-</option>
-                                <option value="7">C+</option>
-                                <option value="6">C</option>
-                                <option value="5">C-</option>
-                                <option value="4">D+</option>
-                                <option value="3">D</option>
-                                <option value="2">D-</option>
-                                <option value="1">F</option>
-                              </select></label
+                        <div class="flex flex-col gap-4">
+                          <fieldset class="text-subtle">
+                            <legend
+                              class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
                             >
-                          </div>
-                        </fieldset>
-                        <fieldset class="text-subtle">
-                          <legend
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                          >
-                            Review Year
-                          </legend>
-                          <div class="flex items-baseline">
-                            <label class="flex flex-1 items-center gap-x-[.5ch]"
-                              ><span
-                                class="min-w-10 text-left text-sm tracking-serif-wide"
-                                >From</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                              Grade
+                            </legend>
+                            <div class="flex flex-wrap items-baseline">
+                              <label
+                                class="flex flex-1 items-center gap-x-[.5ch]"
+                                ><span
+                                  class="min-w-10 text-left text-sm tracking-serif-wide"
+                                  >From</span
+                                ><select
+                                  class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                >
+                                  <option value="1" selected="">F</option>
+                                  <option value="2">D-</option>
+                                  <option value="3">D</option>
+                                  <option value="4">D+</option>
+                                  <option value="5">C-</option>
+                                  <option value="6">C</option>
+                                  <option value="7">C+</option>
+                                  <option value="8">B-</option>
+                                  <option value="9">B</option>
+                                  <option value="10">B+</option>
+                                  <option value="11">A-</option>
+                                  <option value="12">A</option>
+                                  <option value="13">A+</option>
+                                </select></label
+                              ><label class="flex flex-1 items-center"
+                                ><span
+                                  class="min-w-10 text-center text-sm tracking-serif-wide"
+                                  >to</span
+                                ><select
+                                  class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                >
+                                  <option value="13" selected="">A+</option>
+                                  <option value="12">A</option>
+                                  <option value="11">A-</option>
+                                  <option value="10">B+</option>
+                                  <option value="9">B</option>
+                                  <option value="8">B-</option>
+                                  <option value="7">C+</option>
+                                  <option value="6">C</option>
+                                  <option value="5">C-</option>
+                                  <option value="4">D+</option>
+                                  <option value="3">D</option>
+                                  <option value="2">D-</option>
+                                  <option value="1">F</option>
+                                </select></label
                               >
-                                <option value="2003" selected="">2003</option>
-                                <option value="2004">2004</option>
-                                <option value="2007">2007</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                              </select></label
-                            ><label class="flex flex-1 items-center"
-                              ><span
-                                class="min-w-10 text-center text-sm tracking-serif-wide"
-                                >to</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                            </div>
+                          </fieldset>
+                          <fieldset class="text-left">
+                            <legend class="sr-only">
+                              <span
+                                class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                >Grade</span
                               >
-                                <option value="2022" selected="">2022</option>
-                                <option value="2021">2021</option>
-                                <option value="2007">2007</option>
-                                <option value="2004">2004</option>
-                                <option value="2003">2003</option>
-                              </select></label
+                            </legend>
+                            <div class="flex flex-col gap-4 px-2 py-3">
+                              <div class="relative h-6">
+                                <div
+                                  class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                ></div>
+                                <div
+                                  class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                  style="left: 0%; right: 0%"
+                                ></div>
+                                <input
+                                  aria-label="Grade minimum value"
+                                  aria-valuemax="13"
+                                  aria-valuemin="1"
+                                  aria-valuenow="1"
+                                  aria-valuetext="F"
+                                  class="range-input"
+                                  id="range-slider-grade-from"
+                                  max="13"
+                                  min="1"
+                                  type="range"
+                                  value="1"
+                                /><input
+                                  aria-label="Grade maximum value"
+                                  aria-valuemax="13"
+                                  aria-valuemin="1"
+                                  aria-valuenow="13"
+                                  aria-valuetext="A+"
+                                  class="range-input"
+                                  id="range-slider-grade-to"
+                                  max="13"
+                                  min="1"
+                                  type="range"
+                                  value="13"
+                                />
+                              </div>
+                              <div
+                                class="flex items-center justify-between text-xs text-subtle"
+                              >
+                                <span>F</span><span class="text-[10px]">—</span
+                                ><span>A+</span>
+                              </div>
+                            </div>
+                            <div
+                              aria-atomic="true"
+                              aria-live="polite"
+                              class="sr-only"
                             >
-                          </div>
-                        </fieldset>
-                        <details class="border-b border-default last:border-0">
+                              Range:
+                              <!-- -->F<!-- -->
+                              to
+                              <!-- -->A+
+                            </div>
+                          </fieldset>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                          <fieldset class="text-subtle">
+                            <legend
+                              class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                            >
+                              Review Year
+                            </legend>
+                            <div class="flex items-baseline">
+                              <label
+                                class="flex flex-1 items-center gap-x-[.5ch]"
+                                ><span
+                                  class="min-w-10 text-left text-sm tracking-serif-wide"
+                                  >From</span
+                                ><select
+                                  class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                >
+                                  <option value="2003" selected="">2003</option>
+                                  <option value="2004">2004</option>
+                                  <option value="2007">2007</option>
+                                  <option value="2021">2021</option>
+                                  <option value="2022">2022</option>
+                                </select></label
+                              ><label class="flex flex-1 items-center"
+                                ><span
+                                  class="min-w-10 text-center text-sm tracking-serif-wide"
+                                  >to</span
+                                ><select
+                                  class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                >
+                                  <option value="2022" selected="">2022</option>
+                                  <option value="2021">2021</option>
+                                  <option value="2007">2007</option>
+                                  <option value="2004">2004</option>
+                                  <option value="2003">2003</option>
+                                </select></label
+                              >
+                            </div>
+                          </fieldset>
+                          <fieldset class="text-left">
+                            <legend class="sr-only">
+                              <span
+                                class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
+                                >Review Year</span
+                              >
+                            </legend>
+                            <div class="flex flex-col gap-4 px-2 py-3">
+                              <div class="relative h-6">
+                                <div
+                                  class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                ></div>
+                                <div
+                                  class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                  style="left: 0%; right: 0%"
+                                ></div>
+                                <input
+                                  aria-label="Review Year minimum value"
+                                  aria-valuemax="2022"
+                                  aria-valuemin="2003"
+                                  aria-valuenow="2003"
+                                  aria-valuetext="2003"
+                                  class="range-input"
+                                  id="range-slider-review-year-from"
+                                  max="2022"
+                                  min="2003"
+                                  type="range"
+                                  value="2003"
+                                /><input
+                                  aria-label="Review Year maximum value"
+                                  aria-valuemax="2022"
+                                  aria-valuemin="2003"
+                                  aria-valuenow="2022"
+                                  aria-valuetext="2022"
+                                  class="range-input"
+                                  id="range-slider-review-year-to"
+                                  max="2022"
+                                  min="2003"
+                                  type="range"
+                                  value="2022"
+                                />
+                              </div>
+                              <div
+                                class="flex items-center justify-between text-xs text-subtle"
+                              >
+                                <span>2003</span
+                                ><span class="text-[10px]">—</span
+                                ><span>2022</span>
+                              </div>
+                            </div>
+                            <div
+                              aria-atomic="true"
+                              aria-live="polite"
+                              class="sr-only"
+                            >
+                              Range:
+                              <!-- -->2003<!-- -->
+                              to
+                              <!-- -->2022
+                            </div>
+                          </fieldset>
+                        </div>
+                        <details
+                          class="border-b border-default last:border-0"
+                          open=""
+                        >
                           <summary
                             class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
@@ -1683,53 +1877,37 @@
                                   aria-live="polite"
                                   aria-relevant="additions removals"
                                   class="flex flex-col"
-                                  role="radiogroup"
+                                  role="group"
                                 >
                                   <label
                                     class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-reviewed-status-All"
+                                    for="checkbox-list-reviewed-status-Not Reviewed"
                                     ><input
                                       class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-reviewed-status-All"
-                                      type="radio"
-                                      name="radio-list-reviewed-status"
-                                      checked=""
-                                      value="All"
-                                    /><span class="flex-1 text-sm text-default"
-                                      >All</span
-                                    ><span class="text-sm text-subtle"
-                                      >(<!-- -->10<!-- -->)</span
-                                    ></label
-                                  ><label
-                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-reviewed-status-Reviewed"
-                                    ><input
-                                      class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-reviewed-status-Reviewed"
-                                      type="radio"
-                                      name="radio-list-reviewed-status"
-                                      value="Reviewed"
-                                    /><span class="flex-1 text-sm text-default"
-                                      >Reviewed</span
-                                    ><span class="text-sm text-subtle"
-                                      >(<!-- -->6<!-- -->)</span
-                                    ></label
-                                  ><label
-                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-reviewed-status-Not Reviewed"
-                                    ><input
-                                      class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-reviewed-status-Not Reviewed"
-                                      type="radio"
-                                      name="radio-list-reviewed-status"
+                                      id="checkbox-list-reviewed-status-Not Reviewed"
+                                      type="checkbox"
                                       value="Not Reviewed"
                                     /><span class="flex-1 text-sm text-default"
                                       >Not Reviewed</span
                                     ><span class="text-sm text-subtle"
                                       >(<!-- -->4<!-- -->)</span
                                     ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="checkbox-list-reviewed-status-Reviewed"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="checkbox-list-reviewed-status-Reviewed"
+                                      type="checkbox"
+                                      value="Reviewed"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Reviewed</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->6<!-- -->)</span
+                                    ></label
                                   >
                                 </div>
+                                <div class="flex items-center gap-2 pt-1"></div>
                               </div>
                             </fieldset>
                           </div>

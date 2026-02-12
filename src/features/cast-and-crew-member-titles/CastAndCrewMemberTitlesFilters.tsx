@@ -93,9 +93,9 @@ export function CastAndCrewMemberTitlesFilters({
         }}
         reviewedStatus={{
           counts: reviewedStatusCounts,
-          defaultValue: filterValues.reviewedStatus,
-          onChange: (value) =>
-            dispatch(createReviewedStatusFilterChangedAction(value)),
+          defaultValues: filterValues.reviewedStatus,
+          onChange: (values) =>
+            dispatch(createReviewedStatusFilterChangedAction(values)),
           onClear: () =>
             dispatch(createRemoveAppliedFilterAction("reviewedStatus")),
         }}

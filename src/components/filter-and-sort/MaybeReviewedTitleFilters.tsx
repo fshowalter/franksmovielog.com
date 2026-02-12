@@ -1,8 +1,8 @@
 import type { ComponentProps } from "react";
 
-import type { RadioListFieldOption } from "~/components/fields/RadioListField";
+import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
 
-import { RadioListField } from "~/components/fields/RadioListField";
+import { CheckboxListField } from "~/components/fields/CheckboxListField";
 
 import { FilterSection } from "./FilterSection";
 import { ReviewedTitleFilters } from "./ReviewedTitleFilters";
@@ -10,8 +10,8 @@ import { ReviewedTitleFilters } from "./ReviewedTitleFilters";
 type Props = ComponentProps<typeof ReviewedTitleFilters> & {
   reviewedStatus: {
     counts?: Map<string, number>;
-    defaultValue?: string;
-    onChange: (value: string) => void;
+    defaultValues?: readonly string[];
+    onChange: (values: string[]) => void;
     onClear?: () => void;
   };
 };
@@ -29,13 +29,8 @@ export function MaybeReviewedTitleFilters({
   reviewYear,
   title,
 }: Props): React.JSX.Element {
-  // Build options with counts for RadioListField
-  const reviewedStatusOptions: RadioListFieldOption[] = [
-    {
-      count: reviewedStatus.counts?.get("All") ?? 0,
-      label: "All",
-      value: "All",
-    },
+  // Build options with counts for CheckboxListField
+  const reviewedStatusOptions: CheckboxListFieldOption[] = [
     {
       count: reviewedStatus.counts?.get("Reviewed") ?? 0,
       label: "Reviewed",
@@ -57,20 +52,12 @@ export function MaybeReviewedTitleFilters({
         reviewYear={reviewYear}
         title={title}
       />
-      <FilterSection
-        defaultOpen={
-          !!reviewedStatus.defaultValue && reviewedStatus.defaultValue !== "All"
-        }
-        title="Reviewed Status"
-      >
-        <RadioListField
-          defaultValue={reviewedStatus.defaultValue ?? "All"}
+      <FilterSection title="Reviewed Status">
+        <CheckboxListField
+          defaultValues={reviewedStatus.defaultValues ?? []}
           label="Reviewed Status"
           onChange={reviewedStatus.onChange}
-          onClear={
-            reviewedStatus.onClear ??
-            ((): void => reviewedStatus.onChange("All"))
-          }
+          onClear={reviewedStatus.onClear ?? ((): void => reviewedStatus.onChange([]))}
           options={reviewedStatusOptions}
         />
       </FilterSection>

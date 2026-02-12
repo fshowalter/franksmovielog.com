@@ -136,23 +136,42 @@ describe("buildAppliedFilterChips", () => {
     ]);
   });
 
-  it("builds chip for reviewed status when not All", () => {
+  it("builds chip for each selected reviewed status", () => {
     const filterValues: CollectionTitlesFiltersValues = {
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
     };
     const result = buildAppliedFilterChips(filterValues);
     expect(result).toEqual([
       {
         category: "Reviewed Status",
-        id: "reviewedStatus",
+        id: "reviewedStatus-reviewed",
         label: "Reviewed",
       },
     ]);
   });
 
-  it("excludes reviewed status when All", () => {
+  it("builds chips for multiple reviewed statuses", () => {
     const filterValues: CollectionTitlesFiltersValues = {
-      reviewedStatus: "All",
+      reviewedStatus: ["Reviewed", "Not Reviewed"],
+    };
+    const result = buildAppliedFilterChips(filterValues);
+    expect(result).toEqual([
+      {
+        category: "Reviewed Status",
+        id: "reviewedStatus-reviewed",
+        label: "Reviewed",
+      },
+      {
+        category: "Reviewed Status",
+        id: "reviewedStatus-not-reviewed",
+        label: "Not Reviewed",
+      },
+    ]);
+  });
+
+  it("excludes reviewed status when empty array", () => {
+    const filterValues: CollectionTitlesFiltersValues = {
+      reviewedStatus: [],
     };
     const result = buildAppliedFilterChips(filterValues);
     expect(result).toEqual([]);
@@ -193,7 +212,7 @@ describe("buildAppliedFilterChips", () => {
       genres: ["Horror", "Drama"],
       gradeValue: [10, 13], // B+ to A+
       releaseYear: ["1980", "1989"],
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
       reviewYear: ["2020", "2023"],
       title: "night",
     };
@@ -226,7 +245,7 @@ describe("buildAppliedFilterChips", () => {
       },
       {
         category: "Reviewed Status",
-        id: "reviewedStatus",
+        id: "reviewedStatus-reviewed",
         label: "Reviewed",
       },
       {

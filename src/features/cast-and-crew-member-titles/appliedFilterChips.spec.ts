@@ -90,19 +90,42 @@ describe("buildAppliedFilterChips", () => {
     ]);
   });
 
-  it("creates chip for reviewed status (excludes All)", () => {
+  it("creates chip for each selected reviewed status", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
     };
     const chips = buildAppliedFilterChips(filterValues);
     expect(chips).toEqual([
-      { category: "Reviewed Status", id: "reviewedStatus", label: "Reviewed" },
+      {
+        category: "Reviewed Status",
+        id: "reviewedStatus-reviewed",
+        label: "Reviewed",
+      },
     ]);
   });
 
-  it("excludes reviewed status when set to All", () => {
+  it("creates chips for multiple reviewed statuses", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      reviewedStatus: "All",
+      reviewedStatus: ["Reviewed", "Not Reviewed"],
+    };
+    const chips = buildAppliedFilterChips(filterValues);
+    expect(chips).toEqual([
+      {
+        category: "Reviewed Status",
+        id: "reviewedStatus-reviewed",
+        label: "Reviewed",
+      },
+      {
+        category: "Reviewed Status",
+        id: "reviewedStatus-not-reviewed",
+        label: "Not Reviewed",
+      },
+    ]);
+  });
+
+  it("excludes reviewed status when empty array", () => {
+    const filterValues: CastAndCrewMemberTitlesFiltersValues = {
+      reviewedStatus: [],
     };
     const chips = buildAppliedFilterChips(filterValues);
     expect(chips).toEqual([]);
@@ -158,7 +181,7 @@ describe("buildAppliedFilterChips", () => {
       genres: ["Horror", "Sci-Fi"],
       gradeValue: [11, 10],
       releaseYear: ["1980", "1989"],
-      reviewedStatus: "Not Reviewed",
+      reviewedStatus: ["Not Reviewed"],
       reviewYear: ["2020", "2025"],
       title: "alien",
     };
@@ -171,7 +194,7 @@ describe("buildAppliedFilterChips", () => {
       { category: "Review Year", id: "reviewYear", label: "2020-2025" },
       {
         category: "Reviewed Status",
-        id: "reviewedStatus",
+        id: "reviewedStatus-not-reviewed",
         label: "Not Reviewed",
       },
       { category: "Credited As", id: "creditedAs", label: "director" },
