@@ -1082,6 +1082,53 @@ All 7 filterable pages successfully converted to new checkbox/radio-based filter
 
 ---
 
+### Task 8.5: Fix CreditedAs 0 Counts Bug ✅
+
+- **Completed:** 2026-02-12
+- **Verified:** calculateCreditedAsCounts function working correctly
+- **Tests:** 5/5 passing in filterCastAndCrew.spec.ts
+- **Evidence:** Snapshot diffs show non-zero counts (Director: 2, Performer: 146)
+- **Resolution:** Bug was already fixed by Task 8.4d conversion to CheckboxListField
+
+**Notes:**
+- The 0 counts bug was caused by the RadioListField implementation
+- Converting CreditedAsFilter to CheckboxListField with calculateCreditedAsCounts helper resolved the issue
+- All unit tests for calculateCreditedAsCounts passing
+- Cast & Crew page now shows accurate counts for each credited role
+- This completes Task 8.5 of Stage 8 in the implementation plan
+
+---
+
+### Task 8.4f: Update Viewings Reviewed Status Filter ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** (pending)
+- **Files Modified:**
+  - `/src/features/viewings/ViewingsFilters.tsx` - Converted to CheckboxListField
+  - `/src/features/viewings/Viewings.reducer.ts` - Changed reviewedStatus type to readonly string[]
+  - `/src/features/viewings/appliedFilterChips.ts` - Create chip per status value
+  - `/src/features/viewings/appliedFilterChips.spec.ts` - Updated tests for arrays
+  - `/src/features/viewings/filterViewings.spec.ts` - Updated tests for arrays
+- **Tests:** 15/15 passing (appliedFilterChips)
+- **Features Implemented:**
+  - Reviewed Status filter now allows multiple selection via checkboxes
+  - Each selected status creates individual chip in AppliedFilters
+  - Chip IDs use kebab-case format (e.g., "reviewedStatus-reviewed")
+  - handleRemoveAppliedFilter supports removing individual status values
+  - Dynamic counts update based on other active filters
+  - All filter logic updated to handle reviewedStatus as array
+  - Filter logic: if both "Reviewed" and "Not Reviewed" selected, shows all (no filtering)
+
+**Notes:**
+- This was the last RadioListField usage in source code
+- Successfully converted from single-select RadioListField to multi-select CheckboxListField
+- Matches Orbit DVD pattern where all filters allow multiple selection
+- Removed "All" option - empty selection means "All"
+- All appliedFilterChips unit tests passing with updated expectations
+- createReviewedStatusFilter already handles arrays, so no changes needed there
+- This completes the conversion - RadioListField can now be removed
+
+---
+
 **Remaining Stage 8 Tasks:**
-- Task 8.5: Fix CreditedAs 0 Counts Bug (may already be fixed by 8.4d)
 - Task 8.6: Remove RadioListField Component (Cleanup)

@@ -1,8 +1,6 @@
 import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
-import type { RadioListFieldOption } from "~/components/fields/RadioListField";
 
 import { CheckboxListField } from "~/components/fields/CheckboxListField";
-import { RadioListField } from "~/components/fields/RadioListField";
 import { YearField } from "~/components/fields/YearField";
 import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
@@ -80,12 +78,8 @@ export function ViewingsFilters({
       value: venue,
     }));
 
-  const reviewedStatusOptions: RadioListFieldOption[] = [
-    {
-      count: reviewedStatusCounts.get("All") ?? 0,
-      label: "All",
-      value: "All",
-    },
+  // Filter out "All" from distinct arrays since CheckboxListField doesn't need it
+  const reviewedStatusOptions: CheckboxListFieldOption[] = [
     {
       count: reviewedStatusCounts.get("Reviewed") ?? 0,
       label: "Reviewed",
@@ -114,19 +108,18 @@ export function ViewingsFilters({
       />
       <FilterSection
         defaultOpen={
-          !!filterValues.reviewedStatus && filterValues.reviewedStatus !== "All"
+          !!filterValues.reviewedStatus &&
+          filterValues.reviewedStatus.length > 0
         }
         title="Reviewed Status"
       >
-        <RadioListField
-          defaultValue={filterValues.reviewedStatus ?? "All"}
+        <CheckboxListField
+          defaultValues={filterValues.reviewedStatus ?? []}
           label="Reviewed Status"
-          onChange={(value) =>
-            dispatch(createReviewedStatusFilterChangedAction(value))
+          onChange={(values) =>
+            dispatch(createReviewedStatusFilterChangedAction(values))
           }
-          onClear={() =>
-            dispatch(createReviewedStatusFilterChangedAction("All"))
-          }
+          onClear={() => dispatch(createReviewedStatusFilterChangedAction([]))}
           options={reviewedStatusOptions}
         />
       </FilterSection>

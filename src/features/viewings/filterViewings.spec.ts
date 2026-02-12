@@ -209,7 +209,7 @@ describe("calculateVenueCounts", () => {
 
   it("respects reviewed status filter when calculating venue counts", () => {
     const filterValues: ViewingsFiltersValues = {
-      reviewedStatus: "Not Reviewed",
+      reviewedStatus: ["Not Reviewed"],
     };
     const counts = calculateVenueCounts(values, filterValues);
 
@@ -219,7 +219,7 @@ describe("calculateVenueCounts", () => {
 
   it("returns empty map when no viewings match filters", () => {
     const filterValues: ViewingsFiltersValues = {
-      medium: "Nonexistent",
+      medium: ["Nonexistent"],
     };
     const counts = calculateVenueCounts(values, filterValues);
 

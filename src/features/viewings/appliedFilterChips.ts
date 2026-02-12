@@ -49,13 +49,15 @@ export function buildAppliedFilterChips(
     });
   }
 
-  // Reviewed Status chip (single-select, exclude "All")
-  if (filterValues.reviewedStatus && filterValues.reviewedStatus !== "All") {
-    chips.push({
-      category: "Reviewed Status",
-      id: "reviewedStatus",
-      label: filterValues.reviewedStatus,
-    });
+  // Reviewed Status chips (multi-select, one chip per status)
+  if (filterValues.reviewedStatus && filterValues.reviewedStatus.length > 0) {
+    for (const status of filterValues.reviewedStatus) {
+      chips.push({
+        category: "Reviewed Status",
+        id: `reviewedStatus-${status.toLowerCase().replaceAll(" ", "-")}`,
+        label: status,
+      });
+    }
   }
 
   // Viewing Year chip (range)

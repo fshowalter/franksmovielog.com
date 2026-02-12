@@ -42,24 +42,24 @@ describe("buildAppliedFilterChips", () => {
     ]);
   });
 
-  it("creates chip for reviewed status when not All", () => {
+  it("creates chip for each reviewed status value", () => {
     const filterValues: ViewingsFiltersValues = {
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
     expect(chips).toEqual([
       {
         category: "Reviewed Status",
-        id: "reviewedStatus",
+        id: "reviewedStatus-reviewed",
         label: "Reviewed",
       },
     ]);
   });
 
-  it("excludes reviewed status chip when value is All", () => {
+  it("excludes reviewed status chip when empty array", () => {
     const filterValues: ViewingsFiltersValues = {
-      reviewedStatus: "All",
+      reviewedStatus: [],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
@@ -182,7 +182,7 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: ViewingsFiltersValues = {
       medium: ["4K UHD"],
       releaseYear: ["2020", "2023"],
-      reviewedStatus: "Not Reviewed",
+      reviewedStatus: ["Not Reviewed"],
       title: "dark knight",
       venue: ["Theater"],
       viewingYear: ["2024", "2024"],
@@ -197,7 +197,7 @@ describe("buildAppliedFilterChips", () => {
       },
       {
         category: "Reviewed Status",
-        id: "reviewedStatus",
+        id: "reviewedStatus-not-reviewed",
         label: "Not Reviewed",
       },
       {
@@ -228,7 +228,7 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: ViewingsFiltersValues = {
       medium: ["Streaming"],
       releaseYear: ["2020", "2022"],
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
       title: "test",
       venue: ["Home"],
       viewingYear: ["2023", "2024"],
@@ -238,7 +238,7 @@ describe("buildAppliedFilterChips", () => {
     // Expect consistent order: releaseYear, reviewedStatus, viewingYear, medium, venue, title
     expect(chips.map((chip) => chip.id)).toEqual([
       "releaseYear",
-      "reviewedStatus",
+      "reviewedStatus-reviewed",
       "viewingYear",
       "medium-streaming",
       "venue-home",

@@ -46,7 +46,7 @@ import type { ViewingsValue } from "./Viewings";
  */
 export type ViewingsFiltersValues = Omit<TitleFiltersValues, "genres"> & {
   medium?: readonly string[];
-  reviewedStatus?: string;
+  reviewedStatus?: readonly string[];
   venue?: readonly string[];
   viewingYear?: [string, string];
 };
@@ -68,7 +68,7 @@ type PreviousMonthClickedAction = {
 
 type ReviewedStatusFilterChangedAction = {
   type: "viewings/reviewedStatusChanged";
-  value: string;
+  values: readonly string[];
 };
 
 type VenueFilterChangedAction = {
@@ -155,13 +155,13 @@ export function createPreviousMonthClickedAction(
 
 /**
  * Creates an action for changing the reviewed status filter.
- * @param value - The reviewed status value
+ * @param values - The reviewed status values to filter by
  * @returns Reviewed status filter changed action
  */
 export function createReviewedStatusFilterChangedAction(
-  value: string,
+  values: readonly string[],
 ): ReviewedStatusFilterChangedAction {
-  return { type: "viewings/reviewedStatusChanged", value };
+  return { type: "viewings/reviewedStatusChanged", values };
 }
 
 /**
@@ -294,6 +294,26 @@ function handleRemoveAppliedFilter(
     };
   }
 
+  // Handle removal of individual reviewed status values (e.g., "reviewedStatus-reviewed")
+  if (action.filterKey.startsWith("reviewedStatus-")) {
+    const statusValue = action.filterKey
+      .replace(/^reviewedStatus-/, "")
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    const currentStatus = state.pendingFilterValues.reviewedStatus ?? [];
+    const newStatus = currentStatus.filter((s) => s !== statusValue);
+
+    return {
+      ...state,
+      pendingFilterValues: {
+        ...state.pendingFilterValues,
+        reviewedStatus: newStatus.length === 0 ? undefined : newStatus,
+      },
+    };
+  }
+
   // For all other filters, use the default behavior (remove entire filter)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { [action.filterKey]: _removed, ...remainingFilters } =
@@ -333,7 +353,7 @@ function handleReviewedStatusFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      reviewedStatus: action.value === "All" ? undefined : action.value,
+      reviewedStatus: action.values.length === 0 ? undefined : action.values,
     },
   };
 }
