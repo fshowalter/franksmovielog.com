@@ -60,23 +60,3 @@ export async function clickRadioListOption(
 
   await user.click(radio);
 }
-
-/**
- * Test helper to get a radio button option element by value.
- * @param optionValue - Value of the radio button option
- * @returns Radio button element
- */
-function getRadioListOption(optionValue: string) {
-  const radios = screen.getAllByRole("radio");
-  const radio = radios.find(
-    (rb) => (rb as HTMLInputElement).value === optionValue,
-  );
-
-  if (!radio) {
-    throw new Error(
-      `Unable to find radio button with value "${optionValue}". Available values: ${radios.map((rb) => (rb as HTMLInputElement).value).join(", ")}`,
-    );
-  }
-
-  return radio;
-}

@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FilterSection > snapshot test - closed state with no selections 1`] = `
+exports[`FilterSection > snapshot test - closed state 1`] = `
 <div>
   <details
     class="
@@ -20,21 +20,21 @@ exports[`FilterSection > snapshot test - closed state with no selections 1`] = `
       <span
         class="flex items-center gap-2"
       >
-        <svg
-          aria-hidden="true"
-          class="
-              size-3 transition-transform
-              [[open]>&]:rotate-90
-            "
-          fill="currentColor"
-          viewBox="0 0 8 12"
-        >
-          <path
-            d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
-          />
-        </svg>
         Genres
       </span>
+      <svg
+        aria-hidden="true"
+        class="
+            ml-auto size-3 transition-transform
+            [[open]>&]:rotate-90
+          "
+        fill="currentColor"
+        viewBox="0 0 8 12"
+      >
+        <path
+          d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
+        />
+      </svg>
     </summary>
     <div
       class="px-4 pb-3"
@@ -47,7 +47,7 @@ exports[`FilterSection > snapshot test - closed state with no selections 1`] = `
 </div>
 `;
 
-exports[`FilterSection > snapshot test - open state 1`] = `
+exports[`FilterSection > snapshot test - open state (default) 1`] = `
 <div>
   <details
     class="
@@ -68,21 +68,21 @@ exports[`FilterSection > snapshot test - open state 1`] = `
       <span
         class="flex items-center gap-2"
       >
-        <svg
-          aria-hidden="true"
-          class="
-              size-3 transition-transform
-              [[open]>&]:rotate-90
-            "
-          fill="currentColor"
-          viewBox="0 0 8 12"
-        >
-          <path
-            d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
-          />
-        </svg>
         Genres
       </span>
+      <svg
+        aria-hidden="true"
+        class="
+            ml-auto size-3 transition-transform
+            [[open]>&]:rotate-90
+          "
+        fill="currentColor"
+        viewBox="0 0 8 12"
+      >
+        <path
+          d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z"
+        />
+      </svg>
     </summary>
     <div
       class="px-4 pb-3"

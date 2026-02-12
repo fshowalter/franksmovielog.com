@@ -3,26 +3,6 @@ import type { UserEvent } from "@testing-library/user-event";
 import { screen } from "@testing-library/react";
 
 /**
- * Test helper to get a checkbox option element.
- * @param optionLabel - Label text of the checkbox option (matches the option value)
- * @returns Checkbox element
- */
-function getCheckboxListOption(optionLabel: string) {
-  const checkboxes = screen.getAllByRole("checkbox");
-  const checkbox = checkboxes.find(
-    (cb) => (cb as HTMLInputElement).value === optionLabel,
-  );
-
-  if (!checkbox) {
-    throw new Error(
-      `Unable to find checkbox with value "${optionLabel}". Available values: ${checkboxes.map((cb) => (cb as HTMLInputElement).value).join(", ")}`,
-    );
-  }
-
-  return checkbox;
-}
-
-/**
  * Test helper to toggle a checkbox option in a checkbox list field.
  * @param user - UserEvent instance for interactions
  * @param optionLabel - Label text of the checkbox option to toggle (matches the option value)

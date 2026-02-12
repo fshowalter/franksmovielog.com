@@ -38,11 +38,3 @@ export function getCreditedAsFilter(): string {
   }
   return checkedRadio.value;
 }
-
-/**
- * Test helper to get the credited-as filter section element.
- * @returns Credited-as filter section DOM element
- */
-function getCreditedAsFilterSection() {
-  return screen.getByRole("group", { name: /Credited As/i });
-}

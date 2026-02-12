@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import { FilterSection } from "./FilterSection";
 
 describe("FilterSection", () => {
-  it("renders closed by default", () => {
+  it("renders open by default (matching Orbit DVD pattern)", () => {
     render(
       <FilterSection title="Test Section">
         <div>Content</div>
@@ -13,18 +13,18 @@ describe("FilterSection", () => {
     );
 
     const details = screen.getByRole("group");
-    expect(details).not.toHaveAttribute("open");
+    expect(details).toHaveAttribute("open");
   });
 
-  it("renders open when defaultOpen is true", () => {
+  it("renders closed when defaultOpen is false", () => {
     render(
-      <FilterSection defaultOpen={true} title="Test Section">
+      <FilterSection defaultOpen={false} title="Test Section">
         <div>Content</div>
       </FilterSection>,
     );
 
     const details = screen.getByRole("group");
-    expect(details).toHaveAttribute("open");
+    expect(details).not.toHaveAttribute("open");
   });
 
   it("displays the section title", () => {
@@ -59,16 +59,16 @@ describe("FilterSection", () => {
     const details = screen.getByRole("group");
     const summary = screen.getByText("Test Section");
 
-    // Initially closed
-    expect(details).not.toHaveAttribute("open");
-
-    // Click to open
-    await user.click(summary);
+    // Initially open (default state)
     expect(details).toHaveAttribute("open");
 
     // Click to close
     await user.click(summary);
     expect(details).not.toHaveAttribute("open");
+
+    // Click to open again
+    await user.click(summary);
+    expect(details).toHaveAttribute("open");
   });
 
   it("does not show selection count (removed per spec)", () => {
@@ -149,7 +149,7 @@ describe("FilterSection", () => {
     expect(svg).toHaveAttribute("aria-hidden", "true");
   });
 
-  it("snapshot test - closed state with no selections", () => {
+  it("snapshot test - open state (default)", () => {
     const { container } = render(
       <FilterSection title="Genres">
         <div>Filter content here</div>
@@ -159,9 +159,9 @@ describe("FilterSection", () => {
     expect(container).toMatchSnapshot();
   });
 
-  it("snapshot test - open state", () => {
+  it("snapshot test - closed state", () => {
     const { container } = render(
-      <FilterSection defaultOpen={true} title="Genres">
+      <FilterSection defaultOpen={false} title="Genres">
         <div>Filter content here</div>
       </FilterSection>,
     );
