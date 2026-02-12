@@ -817,9 +817,41 @@ The codebase is now fully migrated to the new checkbox/radio-based filter UI.
 
 ---
 
-## Implementation Complete! 🎉
+## Stage 8: Corrections Based on Orbit DVD Reference
 
-**Status:** All stages complete, all tests passing, all quality checks passing
+### Task 8.1: Fix FilterSection Default State and Triangle Position ✅
+
+- **Completed:** 2026-02-11
+- **Commit:** bfc7894be
+- **Files Modified:**
+  - `/src/components/filter-and-sort/FilterSection.tsx` - Changed defaultOpen to true, moved triangle to far right
+  - `/src/components/filter-and-sort/FilterSection.spec.tsx` - Updated tests for new default behavior
+  - `/src/components/fields/CheckboxListField.testHelper.ts` - Removed unused helper function
+  - `/src/components/fields/RadioListField.testHelper.ts` - Removed unused helper function
+  - `/src/components/filter-and-sort/CreditedAsFilter.testHelper.ts` - Removed unused helper function
+- **Snapshots Updated:** 13 page-level snapshots (all filter pages)
+- **Tests:** 589/589 passing
+- **Features Implemented:**
+  - All FilterSections now open by default (matching Orbit DVD pattern)
+  - Disclosure triangle moved from left to far right of summary bar
+  - Better discoverability - users can see all filter options immediately
+  - Users can still collapse sections via summary click
+  - Updated AIDEV-NOTE comments documenting spec compliance
+
+**Notes:**
+- This matches the Orbit DVD reference pattern for better user experience
+- All sections showing by default improves discoverability
+- Triangle on right matches modern e-commerce filter patterns
+- All linting and TypeScript checks pass
+- All quality checks passing (lint, check, format)
+- This completes Task 8.1 of Stage 8 in the implementation plan
+
+---
+
+## Implementation Status
+
+**Stages 1-7:** ✅ Complete
+**Stage 8:** In Progress (Task 8.1 complete)
 
 All 7 filterable pages successfully converted to new checkbox/radio-based filter UI:
 1. ✅ Reviews
@@ -833,4 +865,11 @@ All 7 filterable pages successfully converted to new checkbox/radio-based filter
 9. ✅ Collections
 10. ✅ Collection Titles
 
-**Next Step:** Create PR and merge to main
+**Current Status:** Continuing with Stage 8 corrections to match Orbit DVD reference
+
+**Remaining Stage 8 Tasks:**
+- Task 8.2: Fix AppliedFilters Chip Display Format
+- Task 8.3: Integrate Range Sliders with Year/Grade Fields
+- Task 8.4: Convert RadioListField to CheckboxListField (all filters multi-select)
+- Task 8.5: Fix CreditedAs 0 Counts Bug
+- Task 8.6: Remove RadioListField Component (Cleanup)
