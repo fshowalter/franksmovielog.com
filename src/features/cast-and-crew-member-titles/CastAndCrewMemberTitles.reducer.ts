@@ -24,13 +24,13 @@ export {
   createGenresFilterChangedAction,
   createGradeFilterChangedAction,
   createReleaseYearFilterChangedAction,
-  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createReviewedStatusFilterChangedAction,
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,
   selectHasPendingFilters,
 } from "~/reducers/maybeReviewedTitleFiltersReducer";
+export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
 
 /**
  * Union type of all actions for cast and crew member titles state management.
@@ -45,7 +45,7 @@ export type CastAndCrewMemberTitlesAction =
  */
 export type CastAndCrewMemberTitlesFiltersValues =
   MaybeReviewedTitleFiltersValues & {
-    creditedAs?: string;
+    creditedAs?: readonly string[];
   };
 
 /**
@@ -62,18 +62,19 @@ type CastAndCrewMemberTitlesState = Omit<
 
 type CreditedAsFilterChangedAction = {
   type: "castAndCrewMemberTitles/creditedAsFilterChanged";
-  value: string;
+  values: string[];
 };
 
 /**
  * Creates an action for changing the credited-as filter.
- * @param value - The credited role to filter by
+ * Supports multiple selection (matching Orbit DVD pattern).
+ * @param values - The credited roles to filter by
  * @returns Credited-as filter changed action
  */
 export function createCreditedAsFilterChangedAction(
-  value: string,
+  values: string[],
 ): CreditedAsFilterChangedAction {
-  return { type: "castAndCrewMemberTitles/creditedAsFilterChanged", value };
+  return { type: "castAndCrewMemberTitles/creditedAsFilterChanged", values };
 }
 
 /**
@@ -115,6 +116,9 @@ export function reducer(
     case "castAndCrewMemberTitles/creditedAsFilterChanged": {
       return handleCreditedAsFilterChanged(state, action);
     }
+    case "filters/removeAppliedFilter": {
+      return handleRemoveAppliedFilter(state, action);
+    }
     case "sort/sort": {
       return sortReducer(state, action);
     }
@@ -132,9 +136,38 @@ function handleCreditedAsFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      creditedAs: action.value === "All" ? undefined : action.value,
+      creditedAs: action.values.length === 0 ? undefined : action.values,
     },
   };
+}
+
+function handleRemoveAppliedFilter(
+  state: CastAndCrewMemberTitlesState,
+  action: { filterKey: string; type: "filters/removeAppliedFilter" },
+): CastAndCrewMemberTitlesState {
+  // Handle removal of individual creditedAs values (e.g., "creditedAs-director")
+  if (action.filterKey.startsWith("creditedAs-")) {
+    const creditValue = action.filterKey.replace(/^creditedAs-/, "");
+    // Capitalize first letter to match data format
+    const formattedCredit =
+      creditValue.charAt(0).toUpperCase() + creditValue.slice(1);
+
+    const currentCreditedAs = state.pendingFilterValues.creditedAs ?? [];
+    const newCreditedAs = currentCreditedAs.filter(
+      (c) => c !== formattedCredit,
+    );
+
+    return {
+      ...state,
+      pendingFilterValues: {
+        ...state.pendingFilterValues,
+        creditedAs: newCreditedAs.length === 0 ? undefined : newCreditedAs,
+      },
+    };
+  }
+
+  // For all other filters, delegate to base reducer
+  return maybeReviewedTitleFiltersReducer(state, action);
 }
 
 /**

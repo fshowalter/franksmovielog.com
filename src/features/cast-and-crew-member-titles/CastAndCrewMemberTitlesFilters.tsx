@@ -18,6 +18,7 @@ import {
   createTitleFilterChangedAction,
 } from "./CastAndCrewMemberTitles.reducer";
 import {
+  calculateCreditedAsCounts,
   calculateGenreCounts,
   calculateReviewedStatusCounts,
 } from "./filterCastAndCrewMemberTitles";
@@ -60,13 +61,17 @@ export function CastAndCrewMemberTitlesFilters({
     filterValues,
   );
 
+  // Calculate credited as counts dynamically
+  const creditedAsCounts = calculateCreditedAsCounts(values, filterValues);
+
   return (
     <>
       {distinctCreditKinds.length > 1 && (
         <CreditedAsFilter
-          defaultValue={filterValues.creditedAs}
-          onChange={(value) =>
-            dispatch(createCreditedAsFilterChangedAction(value))
+          counts={creditedAsCounts}
+          defaultValues={filterValues.creditedAs ?? []}
+          onChange={(values) =>
+            dispatch(createCreditedAsFilterChangedAction(values))
           }
           values={distinctCreditKinds}
         />
