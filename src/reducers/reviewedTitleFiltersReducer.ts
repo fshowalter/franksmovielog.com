@@ -1,8 +1,11 @@
 import type {
+  RemoveAppliedFilterAction,
   TitleFiltersAction,
   TitleFiltersState,
   TitleFiltersValues,
 } from "./titleFiltersReducer";
+
+export type { RemoveAppliedFilterAction };
 
 export {
   createApplyFiltersAction,

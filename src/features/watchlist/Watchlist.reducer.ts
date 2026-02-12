@@ -52,10 +52,10 @@ export type WatchlistFiltersValues = ExtraWatchlistFiltersValues &
   TitleFiltersValues;
 
 type ExtraWatchlistFiltersValues = {
-  collection: readonly string[];
-  director: readonly string[];
-  performer: readonly string[];
-  writer: readonly string[];
+  collection?: readonly string[];
+  director?: readonly string[];
+  performer?: readonly string[];
+  writer?: readonly string[];
 };
 
 type WatchlistFilterChangedAction = {

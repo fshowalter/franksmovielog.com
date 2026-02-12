@@ -27,7 +27,7 @@ type ClearFiltersAction = {
   type: "filters/cleared";
 };
 
-type RemoveAppliedFilterAction = {
+export type RemoveAppliedFilterAction = {
   filterKey: string;
   type: "filters/removeAppliedFilter";
 };

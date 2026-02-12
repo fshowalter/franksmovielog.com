@@ -18,7 +18,7 @@ export function calculateCollectionCounts(
   // Apply all filters EXCEPT collection to get the base set
   const filtersWithoutCollection: WatchlistFiltersValues = {
     ...currentFilters,
-    collection: [],
+    collection: undefined,
   };
   const filteredValues = filterWatchlistValues(
     values,
@@ -50,7 +50,7 @@ export function calculateDirectorCounts(
   // Apply all filters EXCEPT director to get the base set
   const filtersWithoutDirector: WatchlistFiltersValues = {
     ...currentFilters,
-    director: [],
+    director: undefined,
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutDirector);
 
@@ -108,7 +108,7 @@ export function calculatePerformerCounts(
   // Apply all filters EXCEPT performer to get the base set
   const filtersWithoutPerformer: WatchlistFiltersValues = {
     ...currentFilters,
-    performer: [],
+    performer: undefined,
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutPerformer);
 
@@ -137,7 +137,7 @@ export function calculateWriterCounts(
   // Apply all filters EXCEPT writer to get the base set
   const filtersWithoutWriter: WatchlistFiltersValues = {
     ...currentFilters,
-    writer: [],
+    writer: undefined,
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutWriter);
 
@@ -171,7 +171,7 @@ export function filterWatchlistValues(
   return filterTitles(filterValues, sortedValues, extraFilters);
 }
 
-function createCollectionFilter(filterValues: readonly string[]) {
+function createCollectionFilter(filterValues?: readonly string[]) {
   if (!filterValues || filterValues.length === 0) return;
   return (value: WatchlistValue) => {
     // Title matches if it has at least one of the selected collections
@@ -181,7 +181,7 @@ function createCollectionFilter(filterValues: readonly string[]) {
   };
 }
 
-function createDirectorFilter(filterValues: readonly string[]) {
+function createDirectorFilter(filterValues?: readonly string[]) {
   if (!filterValues || filterValues.length === 0) return;
   return (value: WatchlistValue) => {
     // Title matches if it has at least one of the selected directors
@@ -191,7 +191,7 @@ function createDirectorFilter(filterValues: readonly string[]) {
   };
 }
 
-function createPerformerFilter(filterValues: readonly string[]) {
+function createPerformerFilter(filterValues?: readonly string[]) {
   if (!filterValues || filterValues.length === 0) return;
   return (value: WatchlistValue) => {
     // Title matches if it has at least one of the selected performers
@@ -201,7 +201,7 @@ function createPerformerFilter(filterValues: readonly string[]) {
   };
 }
 
-function createWriterFilter(filterValues: readonly string[]) {
+function createWriterFilter(filterValues?: readonly string[]) {
   if (!filterValues || filterValues.length === 0) return;
   return (value: WatchlistValue) => {
     // Title matches if it has at least one of the selected writers
