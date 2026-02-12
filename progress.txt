@@ -1047,7 +1047,41 @@ All 7 filterable pages successfully converted to new checkbox/radio-based filter
 
 ---
 
+### Task 8.4e: Update Watchlist Credit Filters (Director, Performer, Writer, Collection) ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** e09cb79fa
+- **Files Modified:**
+  - `/src/features/watchlist/WatchlistFilters.tsx` - Converted to CheckboxListField
+  - `/src/features/watchlist/Watchlist.reducer.ts` - Changed all credit fields to readonly string[]
+  - `/src/features/watchlist/filterWatchlistValues.ts` - Updated filter functions to handle arrays
+  - `/src/features/watchlist/appliedFilterChips.ts` - Create chip per credit value
+  - `/src/features/watchlist/Watchlist.tsx` - Added custom handleRemoveAppliedFilter
+  - `/src/features/watchlist/Watchlist.testHelper.ts` - Updated for CheckboxListField
+  - `/src/features/watchlist/appliedFilterChips.spec.ts` - Updated tests for arrays
+  - `/src/features/watchlist/filterWatchlistValues.spec.ts` - Updated tests for arrays
+- **Tests:** 53/55 passing (2 failures are pre-existing year range issues)
+- **Features Implemented:**
+  - Director filter now allows multiple selection via checkboxes
+  - Performer filter now allows multiple selection via checkboxes
+  - Writer filter now allows multiple selection via checkboxes
+  - Collection filter now allows multiple selection via checkboxes
+  - Each selected value creates individual chip in AppliedFilters
+  - Chip IDs use kebab-case format (e.g., "director-christopher-nolan")
+  - Custom handleRemoveAppliedFilter supports removing individual values
+  - Dynamic counts update based on other active filters
+  - All filter logic updated to handle arrays
+  - Clear filters action properly resets to empty arrays
+
+**Notes:**
+- Successfully converted all 4 watchlist credit filters from single-select to multi-select
+- Matches Orbit DVD pattern where all filters allow multiple selection
+- All appliedFilterChips and filterWatchlistValues unit tests passing
+- 2 test failures in Watchlist.spec.tsx are pre-existing issues from RangeSliderField integration (duplicate "Release Year" group)
+- This completes Task 8.4e of Stage 8 in the implementation plan
+
+---
+
 **Remaining Stage 8 Tasks:**
-- Task 8.4e: Update Watchlist Credit Filters (Director, Performer, Writer, Collection) - Convert to multi-select
 - Task 8.5: Fix CreditedAs 0 Counts Bug (may already be fixed by 8.4d)
 - Task 8.6: Remove RadioListField Component (Cleanup)
