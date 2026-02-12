@@ -928,10 +928,44 @@ The codebase is now fully migrated to the new checkbox/radio-based filter UI.
 
 ---
 
+### Task 8.4b: Update Venue Filter (Viewings) ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** 70dd82913
+- **Files Modified:**
+  - `/src/features/viewings/ViewingsFilters.tsx` - Converted to CheckboxListField
+  - `/src/features/viewings/Viewings.reducer.ts` - Changed venue type to readonly string[]
+  - `/src/features/viewings/filterViewings.ts` - Updated createVenueFilter for array
+  - `/src/features/viewings/appliedFilterChips.ts` - Create chip per venue value
+  - `/src/features/viewings/appliedFilterChips.spec.ts` - Updated tests for arrays
+  - `/src/features/viewings/Viewings.testHelper.ts` - Updated venue helpers for checkboxes
+  - `/src/features/viewings/Viewings.spec.tsx` - Added waitFor for clear filters test
+  - `/src/components/fields/CheckboxListField.tsx` - Added useEffect to sync defaultValues changes
+  - `/src/components/fields/CheckboxListField.testHelper.ts` - Fixed to find sr-only legend fields
+- **Tests:** 44 viewings tests passing (2 pre-existing year range failures unrelated to venue)
+- **Features Implemented:**
+  - Venue filter now allows multiple selection via checkboxes
+  - Each selected venue creates individual chip in AppliedFilters
+  - Chip IDs use kebab-case format (e.g., "venue-home", "venue-theater")
+  - handleRemoveAppliedFilter supports removing individual venue values
+  - Dynamic counts update based on other active filters
+  - All filter logic updated to handle venue as array
+  - CheckboxListField now syncs when defaultValues prop changes (fixes clear all filters)
+
+**Notes:**
+- Successfully converted from single-select RadioListField to multi-select CheckboxListField
+- Matches Orbit DVD pattern where all filters allow multiple selection
+- Fixed critical bug where CheckboxListField didn't respond to defaultValues changes
+- Updated test helper to properly find CheckboxListField with sr-only legends
+- Two year range filter tests failing due to pre-existing issue from Task 8.3 (RangeSliderField creates duplicate "Release Year" groups)
+- This completes Task 8.4b of Stage 8 in the implementation plan
+
+---
+
 ## Implementation Status
 
 **Stages 1-7:** ✅ Complete
-**Stage 8:** In Progress (Tasks 8.1, 8.2, 8.3, and 8.4a complete)
+**Stage 8:** In Progress (Tasks 8.1, 8.2, 8.3, 8.4a, and 8.4b complete)
 
 All 7 filterable pages successfully converted to new checkbox/radio-based filter UI:
 1. ✅ Reviews
@@ -939,7 +973,7 @@ All 7 filterable pages successfully converted to new checkbox/radio-based filter
 3. ✅ Underrated Reviews
 4. ✅ Underseen Reviews
 5. ✅ Watchlist
-6. ✅ Viewings (Medium filter now multi-select)
+6. ✅ Viewings (Medium and Venue filters now multi-select)
 7. ✅ Cast & Crew
 8. ✅ Cast & Crew Member Titles
 9. ✅ Collections
@@ -948,7 +982,6 @@ All 7 filterable pages successfully converted to new checkbox/radio-based filter
 **Current Status:** Continuing with Stage 8.4 - Converting remaining RadioListField filters to CheckboxListField
 
 **Remaining Stage 8 Tasks:**
-- Task 8.4b: Update Venue Filter (Viewings) - Convert to multi-select
 - Task 8.4c: Update Reviewed Status Filter (Collection/Cast & Crew Member Titles) - Convert to multi-select
 - Task 8.4d: Update Credited As Filter (Cast & Crew Member Titles) - Convert to multi-select
 - Task 8.4e: Update Watchlist Credit Filters (Director, Performer, Writer, Collection) - Convert to multi-select
