@@ -1183,6 +1183,28 @@ All filters now allow multiple selection matching Orbit DVD behavior:
 
 ---
 
+## Post-Stage 8 Cleanup
+
+### TypeScript Fixes ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** 3516cee79
+- **Issues Fixed:**
+  - Exported RemoveAppliedFilterAction type from filtersReducer
+  - Re-exported through titleFiltersReducer and reviewedTitleFiltersReducer
+  - Made watchlist credit filter fields optional (collection, director, performer, writer)
+  - Updated create*Filter functions to accept optional arrays
+  - Updated calculate*Counts to use undefined instead of empty arrays
+- **TypeScript Check:** ✅ Passing (0 errors)
+
+**Notes:**
+- These errors were introduced when converting RadioListField to CheckboxListField in Stage 8
+- Filter field values are now properly optional (matching other filter patterns)
+- Using undefined (not empty arrays) to exclude filters from count calculations
+
+---
+
 **Remaining Work:**
-- None! All Stage 8 tasks are complete
-- Filter UI redesign is fully implemented and matches Orbit DVD reference
+- Fix linting errors (65 errors, mostly auto-fixable)
+- Fix failing tests (28 failed, mostly snapshot updates needed)
+- Run final quality checks (lint, format, build)
