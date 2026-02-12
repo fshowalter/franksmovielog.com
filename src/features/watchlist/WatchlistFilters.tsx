@@ -1,6 +1,6 @@
-import type { RadioListFieldOption } from "~/components/fields/RadioListField";
+import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
 
-import { RadioListField } from "~/components/fields/RadioListField";
+import { CheckboxListField } from "~/components/fields/CheckboxListField";
 import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
 
@@ -66,42 +66,38 @@ export function WatchlistFilters({
   const writerCounts = calculateWriterCounts([...values], filterValues);
   const collectionCounts = calculateCollectionCounts([...values], filterValues);
 
-  // Build options with counts for RadioListField
-  const directorOptions: RadioListFieldOption[] = [
-    { count: values.length, label: "All", value: "All" },
-    ...distinctDirectors.map((director) => ({
+  // Build options with counts for CheckboxListField
+  const directorOptions: CheckboxListFieldOption[] = distinctDirectors.map(
+    (director) => ({
       count: directorCounts.get(director) ?? 0,
       label: director,
       value: director,
-    })),
-  ];
+    }),
+  );
 
-  const performerOptions: RadioListFieldOption[] = [
-    { count: values.length, label: "All", value: "All" },
-    ...distinctPerformers.map((performer) => ({
+  const performerOptions: CheckboxListFieldOption[] = distinctPerformers.map(
+    (performer) => ({
       count: performerCounts.get(performer) ?? 0,
       label: performer,
       value: performer,
-    })),
-  ];
+    }),
+  );
 
-  const writerOptions: RadioListFieldOption[] = [
-    { count: values.length, label: "All", value: "All" },
-    ...distinctWriters.map((writer) => ({
+  const writerOptions: CheckboxListFieldOption[] = distinctWriters.map(
+    (writer) => ({
       count: writerCounts.get(writer) ?? 0,
       label: writer,
       value: writer,
-    })),
-  ];
+    }),
+  );
 
-  const collectionOptions: RadioListFieldOption[] = [
-    { count: values.length, label: "All", value: "All" },
-    ...distinctCollections.map((collection) => ({
+  const collectionOptions: CheckboxListFieldOption[] = distinctCollections.map(
+    (collection) => ({
       count: collectionCounts.get(collection) ?? 0,
       label: collection,
       value: collection,
-    })),
-  ];
+    }),
+  );
 
   return (
     <>
@@ -124,54 +120,63 @@ export function WatchlistFilters({
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
-      <FilterSection defaultOpen={!!filterValues.director} title="Director">
-        <RadioListField
-          defaultValue={filterValues.director ?? "All"}
+      <FilterSection
+        defaultOpen={filterValues.director.length > 0}
+        title="Director"
+      >
+        <CheckboxListField
+          defaultValues={filterValues.director}
           label="Director"
-          onChange={(value) =>
-            dispatch(createWatchlistFilterChangedAction("director", value))
+          onChange={(values) =>
+            dispatch(createWatchlistFilterChangedAction("director", values))
           }
           onClear={() =>
-            dispatch(createWatchlistFilterChangedAction("director", "All"))
+            dispatch(createWatchlistFilterChangedAction("director", []))
           }
           options={directorOptions}
         />
       </FilterSection>
-      <FilterSection defaultOpen={!!filterValues.performer} title="Performer">
-        <RadioListField
-          defaultValue={filterValues.performer ?? "All"}
+      <FilterSection
+        defaultOpen={filterValues.performer.length > 0}
+        title="Performer"
+      >
+        <CheckboxListField
+          defaultValues={filterValues.performer}
           label="Performer"
-          onChange={(value) =>
-            dispatch(createWatchlistFilterChangedAction("performer", value))
+          onChange={(values) =>
+            dispatch(createWatchlistFilterChangedAction("performer", values))
           }
           onClear={() =>
-            dispatch(createWatchlistFilterChangedAction("performer", "All"))
+            dispatch(createWatchlistFilterChangedAction("performer", []))
           }
           options={performerOptions}
         />
       </FilterSection>
-      <FilterSection defaultOpen={!!filterValues.writer} title="Writer">
-        <RadioListField
-          defaultValue={filterValues.writer ?? "All"}
+      <FilterSection defaultOpen={filterValues.writer.length > 0} title="Writer">
+        <CheckboxListField
+          defaultValues={filterValues.writer}
           label="Writer"
-          onChange={(value) =>
-            dispatch(createWatchlistFilterChangedAction("writer", value))
+          onChange={(values) =>
+            dispatch(createWatchlistFilterChangedAction("writer", values))
           }
           onClear={() =>
-            dispatch(createWatchlistFilterChangedAction("writer", "All"))
+            dispatch(createWatchlistFilterChangedAction("writer", []))
           }
           options={writerOptions}
         />
       </FilterSection>
-      <FilterSection defaultOpen={!!filterValues.collection} title="Collection">
-        <RadioListField
-          defaultValue={filterValues.collection ?? "All"}
+      <FilterSection
+        defaultOpen={filterValues.collection.length > 0}
+        title="Collection"
+      >
+        <CheckboxListField
+          defaultValues={filterValues.collection}
           label="Collection"
-          onChange={(value) =>
-            dispatch(createWatchlistFilterChangedAction("collection", value))
+          onChange={(values) =>
+            dispatch(createWatchlistFilterChangedAction("collection", values))
           }
           onClear={() =>
-            dispatch(createWatchlistFilterChangedAction("collection", "All"))
+            dispatch(createWatchlistFilterChangedAction("collection", []))
           }
           options={collectionOptions}
         />

@@ -18,7 +18,7 @@ export function calculateCollectionCounts(
   // Apply all filters EXCEPT collection to get the base set
   const filtersWithoutCollection: WatchlistFiltersValues = {
     ...currentFilters,
-    collection: undefined,
+    collection: [],
   };
   const filteredValues = filterWatchlistValues(
     values,
@@ -50,7 +50,7 @@ export function calculateDirectorCounts(
   // Apply all filters EXCEPT director to get the base set
   const filtersWithoutDirector: WatchlistFiltersValues = {
     ...currentFilters,
-    director: undefined,
+    director: [],
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutDirector);
 
@@ -108,7 +108,7 @@ export function calculatePerformerCounts(
   // Apply all filters EXCEPT performer to get the base set
   const filtersWithoutPerformer: WatchlistFiltersValues = {
     ...currentFilters,
-    performer: undefined,
+    performer: [],
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutPerformer);
 
@@ -137,7 +137,7 @@ export function calculateWriterCounts(
   // Apply all filters EXCEPT writer to get the base set
   const filtersWithoutWriter: WatchlistFiltersValues = {
     ...currentFilters,
-    writer: undefined,
+    writer: [],
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutWriter);
 
@@ -171,30 +171,42 @@ export function filterWatchlistValues(
   return filterTitles(filterValues, sortedValues, extraFilters);
 }
 
-function createCollectionFilter(filterValue?: string) {
-  if (!filterValue) return;
+function createCollectionFilter(filterValues: readonly string[]) {
+  if (!filterValues || filterValues.length === 0) return;
   return (value: WatchlistValue) => {
-    return value.watchlistCollectionNames.includes(filterValue);
+    // Title matches if it has at least one of the selected collections
+    return filterValues.some((collection) =>
+      value.watchlistCollectionNames.includes(collection),
+    );
   };
 }
 
-function createDirectorFilter(filterValue?: string) {
-  if (!filterValue) return;
+function createDirectorFilter(filterValues: readonly string[]) {
+  if (!filterValues || filterValues.length === 0) return;
   return (value: WatchlistValue) => {
-    return value.watchlistDirectorNames.includes(filterValue);
+    // Title matches if it has at least one of the selected directors
+    return filterValues.some((director) =>
+      value.watchlistDirectorNames.includes(director),
+    );
   };
 }
 
-function createPerformerFilter(filterValue?: string) {
-  if (!filterValue) return;
+function createPerformerFilter(filterValues: readonly string[]) {
+  if (!filterValues || filterValues.length === 0) return;
   return (value: WatchlistValue) => {
-    return value.watchlistPerformerNames.includes(filterValue);
+    // Title matches if it has at least one of the selected performers
+    return filterValues.some((performer) =>
+      value.watchlistPerformerNames.includes(performer),
+    );
   };
 }
 
-function createWriterFilter(filterValue?: string) {
-  if (!filterValue) return;
+function createWriterFilter(filterValues: readonly string[]) {
+  if (!filterValues || filterValues.length === 0) return;
   return (value: WatchlistValue) => {
-    return value.watchlistWriterNames.includes(filterValue);
+    // Title matches if it has at least one of the selected writers
+    return filterValues.some((writer) =>
+      value.watchlistWriterNames.includes(writer),
+    );
   };
 }

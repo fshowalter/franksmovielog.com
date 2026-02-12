@@ -68,7 +68,7 @@ describe("filterWatchlistValues", () => {
 
     it("respects director filter when counting genres", () => {
       const filters: WatchlistFiltersValues = {
-        director: "Director A",
+        director: ["Director A"],
         genres: [],
       };
       const counts = calculateGenreCounts(mockValues, filters);
@@ -96,7 +96,7 @@ describe("filterWatchlistValues", () => {
 
     it("returns empty map when no values match filters", () => {
       const filters: WatchlistFiltersValues = {
-        director: "Nonexistent Director",
+        director: ["Nonexistent Director"],
         genres: [],
       };
       const counts = calculateGenreCounts(mockValues, filters);
@@ -132,7 +132,7 @@ describe("filterWatchlistValues", () => {
 
     it("respects collection filter when counting directors", () => {
       const filters: WatchlistFiltersValues = {
-        collection: "Collection A",
+        collection: ["Collection A"],
         genres: [],
       };
       const counts = calculateDirectorCounts(mockValues, filters);
@@ -163,7 +163,7 @@ describe("filterWatchlistValues", () => {
 
     it("respects director filter when counting performers", () => {
       const filters: WatchlistFiltersValues = {
-        director: "Director A",
+        director: ["Director A"],
         genres: [],
       };
       const counts = calculatePerformerCounts(mockValues, filters);
@@ -210,7 +210,7 @@ describe("filterWatchlistValues", () => {
     it("respects performer filter when counting writers", () => {
       const filters: WatchlistFiltersValues = {
         genres: [],
-        performer: "Actor B",
+        performer: ["Actor B"],
       };
       const counts = calculateWriterCounts(mockValues, filters);
 
@@ -243,7 +243,7 @@ describe("filterWatchlistValues", () => {
 
     it("respects director filter when counting collections", () => {
       const filters: WatchlistFiltersValues = {
-        director: "Director A",
+        director: ["Director A"],
         genres: [],
       };
       const counts = calculateCollectionCounts(mockValues, filters);
@@ -256,7 +256,7 @@ describe("filterWatchlistValues", () => {
 
     it("respects multiple filters when counting collections", () => {
       const filters: WatchlistFiltersValues = {
-        director: "Director A",
+        director: ["Director A"],
         genres: ["Horror"],
       };
       const counts = calculateCollectionCounts(mockValues, filters);

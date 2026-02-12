@@ -55,40 +55,48 @@ export function buildAppliedFilterChips(
     });
   }
 
-  // Director chip (single-select)
-  if (filterValues.director) {
-    chips.push({
-      category: "Director",
-      id: "director",
-      label: filterValues.director,
-    });
+  // Director chips (multi-select)
+  if (filterValues.director && filterValues.director.length > 0) {
+    for (const director of filterValues.director) {
+      chips.push({
+        category: "Director",
+        id: `director-${director.toLowerCase().replaceAll(" ", "-")}`,
+        label: director,
+      });
+    }
   }
 
-  // Performer chip (single-select)
-  if (filterValues.performer) {
-    chips.push({
-      category: "Performer",
-      id: "performer",
-      label: filterValues.performer,
-    });
+  // Performer chips (multi-select)
+  if (filterValues.performer && filterValues.performer.length > 0) {
+    for (const performer of filterValues.performer) {
+      chips.push({
+        category: "Performer",
+        id: `performer-${performer.toLowerCase().replaceAll(" ", "-")}`,
+        label: performer,
+      });
+    }
   }
 
-  // Writer chip (single-select)
-  if (filterValues.writer) {
-    chips.push({
-      category: "Writer",
-      id: "writer",
-      label: filterValues.writer,
-    });
+  // Writer chips (multi-select)
+  if (filterValues.writer && filterValues.writer.length > 0) {
+    for (const writer of filterValues.writer) {
+      chips.push({
+        category: "Writer",
+        id: `writer-${writer.toLowerCase().replaceAll(" ", "-")}`,
+        label: writer,
+      });
+    }
   }
 
-  // Collection chip (single-select)
-  if (filterValues.collection) {
-    chips.push({
-      category: "Collection",
-      id: "collection",
-      label: filterValues.collection,
-    });
+  // Collection chips (multi-select)
+  if (filterValues.collection && filterValues.collection.length > 0) {
+    for (const collection of filterValues.collection) {
+      chips.push({
+        category: "Collection",
+        id: `collection-${collection.toLowerCase().replaceAll(" ", "-")}`,
+        label: collection,
+      });
+    }
   }
 
   // Title search chip

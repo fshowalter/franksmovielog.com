@@ -63,60 +63,72 @@ describe("buildAppliedFilterChips", () => {
 
   it("builds director chip when director selected", () => {
     const filterValues: WatchlistFiltersValues = {
-      director: "Christopher Nolan",
+      collection: [],
+      director: ["Christopher Nolan"],
       genres: [],
+      performer: [],
+      writer: [],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
       category: "Director",
-      id: "director",
+      id: "director-christopher-nolan",
       label: "Christopher Nolan",
     });
   });
 
   it("builds performer chip when performer selected", () => {
     const filterValues: WatchlistFiltersValues = {
+      collection: [],
+      director: [],
       genres: [],
-      performer: "Tom Hanks",
+      performer: ["Tom Hanks"],
+      writer: [],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
       category: "Performer",
-      id: "performer",
+      id: "performer-tom-hanks",
       label: "Tom Hanks",
     });
   });
 
   it("builds writer chip when writer selected", () => {
     const filterValues: WatchlistFiltersValues = {
+      collection: [],
+      director: [],
       genres: [],
-      writer: "Aaron Sorkin",
+      performer: [],
+      writer: ["Aaron Sorkin"],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
       category: "Writer",
-      id: "writer",
+      id: "writer-aaron-sorkin",
       label: "Aaron Sorkin",
     });
   });
 
   it("builds collection chip when collection selected", () => {
     const filterValues: WatchlistFiltersValues = {
-      collection: "Criterion Collection",
+      collection: ["Criterion Collection"],
+      director: [],
       genres: [],
+      performer: [],
+      writer: [],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
       category: "Collection",
-      id: "collection",
+      id: "collection-criterion-collection",
       label: "Criterion Collection",
     });
   });
@@ -158,13 +170,13 @@ describe("buildAppliedFilterChips", () => {
 
   it("builds multiple chips for multiple filters", () => {
     const filterValues: WatchlistFiltersValues = {
-      collection: "Criterion Collection",
-      director: "Christopher Nolan",
+      collection: ["Criterion Collection"],
+      director: ["Christopher Nolan"],
       genres: ["Horror", "Action"],
-      performer: "Tom Hanks",
+      performer: ["Tom Hanks"],
       releaseYear: ["1980", "1989"],
       title: "dark knight",
-      writer: "Aaron Sorkin",
+      writer: ["Aaron Sorkin"],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
