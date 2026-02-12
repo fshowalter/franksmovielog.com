@@ -16,16 +16,18 @@ import type { ViewingsFiltersValues } from "./Viewings.reducer";
  * buildAppliedFilterChips({
  *   releaseYear: ["1980", "1989"],
  *   reviewedStatus: "Reviewed",
- *   medium: "Blu-ray",
- *   venue: "Home",
+ *   medium: ["Blu-ray", "4K UHD"],
+ *   venue: ["Home", "Theater"],
  *   title: "alien"
  * })
  * // Returns:
  * // [
  * //   { id: "releaseYear", category: "Release Year", label: "1980-1989" },
  * //   { id: "reviewedStatus", category: "Reviewed Status", label: "Reviewed" },
- * //   { id: "medium", category: "Medium", label: "Blu-ray" },
- * //   { id: "venue", category: "Venue", label: "Home" },
+ * //   { id: "medium-blu-ray", category: "Medium", label: "Blu-ray" },
+ * //   { id: "medium-4k-uhd", category: "Medium", label: "4K UHD" },
+ * //   { id: "venue-home", category: "Venue", label: "Home" },
+ * //   { id: "venue-theater", category: "Venue", label: "Theater" },
  * //   { id: "title", category: "Search", label: "alien" }
  * // ]
  * ```
@@ -77,13 +79,15 @@ export function buildAppliedFilterChips(
     }
   }
 
-  // Venue chip (single-select, exclude "All")
-  if (filterValues.venue && filterValues.venue !== "All") {
-    chips.push({
-      category: "Venue",
-      id: "venue",
-      label: filterValues.venue,
-    });
+  // Venue chips (multi-select, one chip per venue)
+  if (filterValues.venue && filterValues.venue.length > 0) {
+    for (const venue of filterValues.venue) {
+      chips.push({
+        category: "Venue",
+        id: `venue-${venue.toLowerCase().replaceAll(" ", "-")}`,
+        label: venue,
+      });
+    }
   }
 
   // Title search chip

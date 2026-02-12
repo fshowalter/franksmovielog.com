@@ -55,21 +55,27 @@ export async function clickCheckboxListOption(
   fieldLabel: string,
   optionValue: string,
 ) {
-  // Find all groups and filter for the one with the matching VISIBLE legend (not sr-only)
-  const groups = screen.queryAllByRole("group");
-  const targetGroup = groups.find((group) => {
-    const legend = group.querySelector("legend");
-    // Check if legend exists, includes fieldLabel, and is not sr-only
-    if (!legend || !legend.textContent?.includes(fieldLabel)) {
-      return false;
-    }
-    // Exclude sr-only legends (RangeSliderField uses sr-only legends)
-    const isSrOnly = legend.classList.contains("sr-only");
-    return !isSrOnly;
+  // Find the fieldset with matching legend that contains a group (CheckboxListField pattern)
+  const fieldsets = screen.queryAllByRole("group").map((group) => {
+    // Check if this group is inside a fieldset
+    const fieldset = group.closest("fieldset");
+    return fieldset;
+  }).filter(Boolean);
+
+  const targetFieldset = fieldsets.find((fieldset) => {
+    const legend = fieldset?.querySelector("legend");
+    return legend?.textContent?.includes(fieldLabel);
   });
 
-  if (!targetGroup) {
+  if (!targetFieldset) {
     throw new Error(`Unable to find checkbox list field with label "${fieldLabel}"`);
+  }
+
+  // Get the group inside the fieldset
+  const targetGroup = targetFieldset.querySelector('[role="group"]');
+
+  if (!targetGroup) {
+    throw new Error(`Unable to find group inside checkbox list field with label "${fieldLabel}"`);
   }
 
   // Try to find the checkbox - it might be hidden behind "Show more"

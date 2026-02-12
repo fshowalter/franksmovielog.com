@@ -3,7 +3,6 @@ import type { UserEvent } from "@testing-library/user-event";
 import { screen } from "@testing-library/react";
 
 import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
-import { clickRadioListOption } from "~/components/fields/RadioListField.testHelper";
 import { fillYearField } from "~/components/fields/YearField.testHelper";
 
 /**
@@ -73,12 +72,12 @@ export async function clickPreviousMonthButton(user: UserEvent) {
 }
 
 /**
- * Clicks a venue filter option in tests.
+ * Clicks a venue filter option (checkbox) in tests.
  * @param user - User event instance
  * @param value - Filter value to select
  */
 export async function clickVenueFilterOption(user: UserEvent, value: string) {
-  await clickRadioListOption(user, "Venue", value);
+  await clickCheckboxListOption(user, "Venue", value);
 }
 
 /**
@@ -122,6 +121,32 @@ export function getMediumFilter(): { values: string[] } {
 
   // Find all checked checkboxes
   const checkboxes = mediumGroup.querySelectorAll('input[type="checkbox"]');
+  const checkedValues = [...checkboxes]
+    .filter((checkbox) => (checkbox as HTMLInputElement).checked)
+    .map((checkbox) => (checkbox as HTMLInputElement).value);
+
+  return { values: checkedValues };
+}
+
+/**
+ * Gets the selected venue filter values (as array).
+ * @returns Object with values property containing the selected venue values
+ */
+export function getVenueFilter(): { values: string[] } {
+  // Find all groups and filter for the one with Venue in the legend
+  const groups = screen.queryAllByRole("group");
+  const venueGroup = groups.find((group) => {
+    const legend = group.querySelector("legend");
+    return legend?.textContent?.includes("Venue");
+  });
+
+  if (!venueGroup) {
+    // If group not found, return empty array as default (filter section may be closed)
+    return { values: [] };
+  }
+
+  // Find all checked checkboxes
+  const checkboxes = venueGroup.querySelectorAll('input[type="checkbox"]');
   const checkedValues = [...checkboxes]
     .filter((checkbox) => (checkbox as HTMLInputElement).checked)
     .map((checkbox) => (checkbox as HTMLInputElement).value);

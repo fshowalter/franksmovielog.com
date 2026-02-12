@@ -47,7 +47,7 @@ import type { ViewingsValue } from "./Viewings";
 export type ViewingsFiltersValues = Omit<TitleFiltersValues, "genres"> & {
   medium?: readonly string[];
   reviewedStatus?: string;
-  venue?: string;
+  venue?: readonly string[];
   viewingYear?: [string, string];
 };
 
@@ -73,7 +73,7 @@ type ReviewedStatusFilterChangedAction = {
 
 type VenueFilterChangedAction = {
   type: "viewings/venueChanged";
-  value: string;
+  values: readonly string[];
 };
 
 /**
@@ -166,13 +166,13 @@ export function createReviewedStatusFilterChangedAction(
 
 /**
  * Creates an action for changing the venue filter.
- * @param value - The venue value to filter by
+ * @param values - The venue values to filter by
  * @returns Venue filter changed action
  */
 export function createVenueFilterChangedAction(
-  value: string,
+  values: readonly string[],
 ): VenueFilterChangedAction {
-  return { type: "viewings/venueChanged", value };
+  return { type: "viewings/venueChanged", values };
 }
 
 /**
@@ -274,6 +274,26 @@ function handleRemoveAppliedFilter(
     };
   }
 
+  // Handle removal of individual venue values (e.g., "venue-home")
+  if (action.filterKey.startsWith("venue-")) {
+    const venueValue = action.filterKey
+      .replace(/^venue-/, "")
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    const currentVenue = state.pendingFilterValues.venue ?? [];
+    const newVenue = currentVenue.filter((v) => v !== venueValue);
+
+    return {
+      ...state,
+      pendingFilterValues: {
+        ...state.pendingFilterValues,
+        venue: newVenue.length === 0 ? undefined : newVenue,
+      },
+    };
+  }
+
   // For all other filters, use the default behavior (remove entire filter)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { [action.filterKey]: _removed, ...remainingFilters } =
@@ -326,7 +346,7 @@ function handleVenueFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      venue: action.value === "All" ? undefined : action.value,
+      venue: action.values.length === 0 ? undefined : action.values,
     },
   };
 }

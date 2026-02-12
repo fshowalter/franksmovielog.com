@@ -136,10 +136,10 @@ function createMediumFilter(filterValue?: readonly string[]) {
   };
 }
 
-function createVenueFilter(filterValue?: string) {
-  if (!filterValue) return;
+function createVenueFilter(filterValue?: readonly string[]) {
+  if (!filterValue || filterValue.length === 0) return;
   return (value: ViewingsValue) => {
-    return value.venue === filterValue;
+    return filterValue.includes(value.venue);
   };
 }
 

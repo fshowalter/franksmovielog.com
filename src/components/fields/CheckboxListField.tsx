@@ -104,6 +104,12 @@ export function CheckboxListField({
     }
   };
 
+  // AIDEV-NOTE: Sync selectedValues when defaultValues changes from parent
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Intentionally syncing controlled state from props
+    setSelectedValues(defaultValues ? [...defaultValues] : []);
+  }, [defaultValues]);
+
   // AIDEV-NOTE: Listen for form reset events and clear selections when form is reset
   useEffect(() => {
     // Find the parent form element

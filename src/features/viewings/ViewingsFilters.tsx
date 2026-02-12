@@ -71,16 +71,14 @@ export function ViewingsFilters({
       value: medium,
     }));
 
-  const venueOptions: RadioListFieldOption[] = [
-    { count: values.length, label: "All", value: "All" },
-    ...distinctVenues
-      .filter((venue) => venue !== "All")
-      .map((venue) => ({
-        count: venueCounts.get(venue) ?? 0,
-        label: venue,
-        value: venue,
-      })),
-  ];
+  // Filter out "All" from distinct arrays since CheckboxListField doesn't need it
+  const venueOptions: CheckboxListFieldOption[] = distinctVenues
+    .filter((venue) => venue !== "All")
+    .map((venue) => ({
+      count: venueCounts.get(venue) ?? 0,
+      label: venue,
+      value: venue,
+    }));
 
   const reviewedStatusOptions: RadioListFieldOption[] = [
     {
@@ -153,14 +151,14 @@ export function ViewingsFilters({
         />
       </FilterSection>
       <FilterSection
-        defaultOpen={!!filterValues.venue && filterValues.venue !== "All"}
+        defaultOpen={!!filterValues.venue && filterValues.venue.length > 0}
         title="Venue"
       >
-        <RadioListField
-          defaultValue={filterValues.venue ?? "All"}
+        <CheckboxListField
+          defaultValues={filterValues.venue ?? []}
           label="Venue"
-          onChange={(value) => dispatch(createVenueFilterChangedAction(value))}
-          onClear={() => dispatch(createVenueFilterChangedAction("All"))}
+          onChange={(values) => dispatch(createVenueFilterChangedAction(values))}
+          onClear={() => dispatch(createVenueFilterChangedAction([]))}
           options={venueOptions}
         />
       </FilterSection>

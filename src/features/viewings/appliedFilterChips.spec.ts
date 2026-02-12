@@ -125,24 +125,29 @@ describe("buildAppliedFilterChips", () => {
     expect(chips).toEqual([]);
   });
 
-  it("creates chip for venue when not All", () => {
+  it("creates chips for each venue value", () => {
     const filterValues: ViewingsFiltersValues = {
-      venue: "Home",
+      venue: ["Home", "Theater"],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
     expect(chips).toEqual([
       {
         category: "Venue",
-        id: "venue",
+        id: "venue-home",
         label: "Home",
+      },
+      {
+        category: "Venue",
+        id: "venue-theater",
+        label: "Theater",
       },
     ]);
   });
 
-  it("excludes venue chip when value is All", () => {
+  it("excludes venue chips when array is empty", () => {
     const filterValues: ViewingsFiltersValues = {
-      venue: "All",
+      venue: [],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
@@ -179,7 +184,7 @@ describe("buildAppliedFilterChips", () => {
       releaseYear: ["2020", "2023"],
       reviewedStatus: "Not Reviewed",
       title: "dark knight",
-      venue: "Theater",
+      venue: ["Theater"],
       viewingYear: ["2024", "2024"],
     };
     const chips = buildAppliedFilterChips(filterValues);
@@ -207,7 +212,7 @@ describe("buildAppliedFilterChips", () => {
       },
       {
         category: "Venue",
-        id: "venue",
+        id: "venue-theater",
         label: "Theater",
       },
       {
@@ -225,7 +230,7 @@ describe("buildAppliedFilterChips", () => {
       releaseYear: ["2020", "2022"],
       reviewedStatus: "Reviewed",
       title: "test",
-      venue: "Home",
+      venue: ["Home"],
       viewingYear: ["2023", "2024"],
     };
     const chips = buildAppliedFilterChips(filterValues);
@@ -236,7 +241,7 @@ describe("buildAppliedFilterChips", () => {
       "reviewedStatus",
       "viewingYear",
       "medium-streaming",
-      "venue",
+      "venue-home",
       "title",
     ]);
   });
