@@ -42,9 +42,9 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 **Elements:**
 
 - **Heading:** "Applied Filters:" (or just "Active Filters:")
-- **Filter chips:** Rounded pills with filter label + value + remove button (×)
+- **Filter chips:** Rounded pills with filter label + remove button (×)
   - Color: Subtle background (canvas or stripe)
-  - Text: Filter category + value (e.g., "Horror", "Grade: A- to B+")
+  - Text: Value only for simple filters (e.g., "Horror", "DVD"), Category + value for ranges (e.g., "Grade: A- to B+", "Year: 1980-1989")
   - Remove: × icon on right, clickable
 - **Clear all link:** Text link below chips, removes all active filters
 - **Animation:** Chips fade in/out when added/removed
@@ -107,8 +107,8 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 #### Summary (Always Visible)
 
-- **Disclosure triangle:** ▶ when closed, ▼ when open
 - **Section title:** Filter category name (e.g., "Genres", "Release Year")
+- **Disclosure triangle:** ▶ when closed, ▼ when open (positioned on far right side)
 
 #### Details (Collapsible Content)
 
@@ -130,9 +130,10 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 **Default State:**
 
-- **Open or closed?** Sections with active selections open, others closed
+- **Open or closed?** All sections open by default (matching Orbit DVD pattern for better discoverability)
 - **Initial limit:** Show first 3 items, hide rest behind "Show more"
 - **After expanding:** All items visible (stays expanded until section collapsed)
+- **State persistence:** User's open/closed state does NOT persist (resets on page load)
 
 **Selection Behavior:**
 
@@ -146,31 +147,24 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 ### 3. Special Filter Types
 
-#### A. Single-Select Filters (Radio Buttons)
+#### A. Multi-Select Filters (Checkboxes)
 
-For filters like "Reviewed Status" (All / Reviewed / Not Reviewed):
+ALL filters allow multiple selection using checkboxes, matching the Orbit DVD pattern.
 
-```
-┌─────────────────────────────────────┐
-│ ▼ Reviewed Status           Clear   │
-├─────────────────────────────────────┤
-│ ⦿ All (512)                         │  ← Selected (filled circle)
-│ ○ Reviewed (298)                    │
-│ ○ Not Reviewed (214)                │
-└─────────────────────────────────────┘
-```
+Examples:
+- **Genres:** Horror, Action, Drama (select multiple)
+- **Medium:** DVD, Blu-ray, 4K UHD (select multiple)
+- **Venue:** Theater, Home (select multiple)
+- **Reviewed Status:** Reviewed, Not Reviewed (select multiple)
+- **Credited As:** Director, Performer, Writer (select multiple)
 
-**Differences from Multi-Select:**
-
-- Use radio buttons (○/⦿) instead of checkboxes (☐/☑)
-- Only one option can be selected at a time
-- "All" is the default selection
-- Clear link resets to "All"
-- No "Show more" needed (usually < 5 options)
+Users can select any combination of values. No "All" option needed - empty selection means "All".
 
 #### B. Range Filters (Year, Grade)
 
-Dual controls: Dropdowns + sliders (both usable):
+Dual controls: Dropdowns + sliders (both usable and REQUIRED):
+
+**IMPORTANT:** Range sliders MUST be rendered beneath Year/Grade dropdowns on all pages. The RangeSliderField component is built and tested - it MUST be integrated, not optional.
 
 ```
 ┌─────────────────────────────────────┐
@@ -306,9 +300,9 @@ Clicking × on chip clears the search field.
 
 **Default state:**
 
-- Sections with active selections: Open
-- Sections with no selections: Closed (to reduce clutter)
-- User's open/closed state persists during session (optional)
+- All sections: Open by default (matching Orbit DVD pattern for better discoverability)
+- User can collapse any section via summary click
+- User's open/closed state does NOT persist (resets on page load)
 
 ### 4. Applying Filters
 
@@ -398,12 +392,15 @@ text-sm text-accent hover:underline focus:underline
 /* Details element */
 border-b border-default last:border-0
 
-/* Summary */
+/* Summary - triangle on RIGHT */
 flex items-center justify-between py-3 px-4 cursor-pointer
 hover:bg-stripe focus:bg-stripe
 
-/* Section title */
+/* Section title - LEFT aligned */
 flex items-center gap-2 text-base font-medium text-default
+
+/* Disclosure triangle - RIGHT aligned */
+ml-auto size-3 transition-transform [[open]>&]:rotate-90
 
 /* Clear link */
 text-sm text-accent hover:underline focus:underline
@@ -445,15 +442,17 @@ text-sm text-accent hover:underline focus:underline pt-3 pb-2
 
 ### New Components
 
-1. **`CheckboxListField.tsx`** (replaces MultiSelectField)
+1. **`CheckboxListField.tsx`** (replaces MultiSelectField AND SelectField)
    - Props: `label`, `options`, `defaultValues`, `onChange`, `showMoreThreshold`, `onClear`
    - Handles: checkbox list, show more (no "show less"), selection ordering, clear link beneath
    - No dropdown, all items inline
    - Counts update dynamically
+   - **Used for ALL filters** (genres, medium, venue, reviewed status, credited as, credits, collections)
 
-2. **`RadioListField.tsx`** (replaces SelectField for single-select)
-   - Props: `label`, `options`, `defaultValue`, `onChange`, `onClear`
-   - Handles: radio buttons, single selection, clear link beneath
+2. **`RadioListField.tsx`** (DEPRECATED - not needed)
+   - Originally created for single-select filters
+   - Orbit DVD uses checkboxes for all filters, allowing multiple selection
+   - This component should be removed after all conversions to CheckboxListField
 
 3. **`FilterSection.tsx`** (wrapper for details/summary)
    - Props: `title`, `children`, `defaultOpen`, `selectionCount`
@@ -476,12 +475,13 @@ text-sm text-accent hover:underline focus:underline pt-3 pb-2
 
 2. **All `*Filters.tsx` components** (7 files)
    - Replace MultiSelectField → CheckboxListField
-   - Replace SelectField → RadioListField (for single-select)
-   - Wrap each filter in FilterSection
+   - Replace SelectField → CheckboxListField (allow multiple selection for all filters)
+   - Wrap each filter in FilterSection (all sections open by default, triangle on right)
    - Calculate **dynamic counts** for each option (updates when other filters change)
-   - Add RangeSliderField beneath YearField/GradeField
+   - **REQUIRED:** Add RangeSliderField beneath YearField/GradeField (must be integrated)
    - Add text search to Applied Filters
    - Clear links moved inside field components (beneath options)
+   - Applied filter chips show value only (not "Category: Value")
 
 ### Enhanced Components
 
@@ -560,13 +560,16 @@ Each filter option needs a count of matching items. For example:
 1. **"Show more" threshold:** 3 items (matching Orbit DVD pattern)
 2. **Sort order for unselected items:** Alphabetical (matching Orbit DVD)
 3. **Dynamic counts:** Yes - update when other filters change (matching Orbit DVD)
-4. **Default section state:** Sections with active selections open, others closed
+4. **Default section state:** All sections open by default (matching Orbit DVD for better discoverability)
 5. **Range filters:** Dual dropdowns + sliders beneath (both usable)
 6. **Text search chip:** Yes - show "Search: [query]" in applied filters
 7. **Clear link position:** Beneath filter options, not in summary header (matching Orbit DVD)
 8. **Show less:** Omit - users can collapse the section instead (matching Orbit DVD)
 9. **Animations:** Subtle fade/slide (Phase 7)
 10. **Remember section state:** No - reset on page load (can revisit later)
+11. **Filter selection model:** All filters allow multiple selection (checkboxes) - no single-select filters
+12. **Disclosure triangle position:** Far right side of summary bar (matching Orbit DVD)
+13. **Applied filter chips:** Show value only for simple filters, "Category: Value" for ranges
 
 ---
 

@@ -264,6 +264,7 @@ interface RangeSliderFieldProps {
   - [x] Verify Clear link beneath options
 - [x] RadioListField.tsx created and tested
   - [x] Verify Clear link beneath options
+  - **NOTE:** RadioListField will be deprecated in Stage 8 - Orbit DVD uses checkboxes for all filters (multi-select)
 - [x] FilterSection.tsx created and tested
   - [x] Verify NO "(n selected)" text in summary
   - [x] Verify disclosure triangle rotates correctly
@@ -956,6 +957,232 @@ grep -r "MultiSelectField" src/
 
 ---
 
+## Stage 8: Corrections Based on Orbit DVD Reference
+
+**Goal:** Correct implementation to match Orbit DVD reference behavior
+
+**Success Criteria:**
+- All filter sections open by default
+- Disclosure triangle on far right
+- Range sliders integrated beneath Year/Grade fields
+- Applied filter chips show value only (not "Category: Value")
+- All filters allow multiple selection (RadioListField → CheckboxListField)
+- CreditedAs counts show non-zero values
+- All tests passing
+- Matches Orbit DVD behavior
+
+**Reference:** https://www.orbitdvd.com/collections/all-recently-added
+
+### Tasks
+
+#### 8.1 Fix FilterSection Default State and Triangle Position
+
+**Files:**
+- `/src/components/filter-and-sort/FilterSection.tsx`
+- `/src/components/filter-and-sort/FilterSection.spec.tsx`
+
+**Changes:**
+- Change `defaultOpen = false` to `defaultOpen = true`
+- Move disclosure triangle to far right (after title, use flexbox justify-between)
+- Update tests for new default state
+- Update snapshots for triangle position
+
+**Tests:** FilterSection unit tests + all page snapshots
+
+**Estimated Complexity:** Low
+
+---
+
+#### 8.2 Fix AppliedFilters Chip Display Format
+
+**Files:**
+- `/src/components/filter-and-sort/AppliedFilters.tsx`
+- `/src/components/filter-and-sort/AppliedFilters.spec.tsx`
+
+**Changes:**
+- Update display logic: show just `label` for simple filters
+- Keep `"${category}: ${label}"` for range filters (Grade, Year)
+- Update tests for new format
+
+**Tests:** AppliedFilters unit tests
+
+**Estimated Complexity:** Low
+
+---
+
+#### 8.3 Integrate Range Sliders with Year/Grade Fields
+
+**Files:**
+- `/src/components/fields/YearField.tsx`
+- `/src/components/fields/GradeField.tsx`
+- `/src/components/fields/YearField.spec.tsx` (create)
+- `/src/components/fields/GradeField.spec.tsx` (create)
+- All filter components using these fields
+
+**Changes:**
+- Import and render RangeSliderField beneath dropdown selects
+- Wire onChange to sync slider ↔ dropdowns bidirectionally
+- Add Clear handler that resets both slider and dropdowns
+- Create comprehensive tests for both components
+- Verify on all pages using year/grade filters
+
+**Tests:** YearField + GradeField unit tests + all page integration tests
+
+**Estimated Complexity:** Medium
+
+---
+
+#### 8.4 Convert RadioListField to CheckboxListField
+
+**Goal:** Allow multiple selection for all filters (Medium, Venue, ReviewedStatus, CreditedAs, Credits)
+
+This is the largest change, broken into sub-tasks:
+
+##### 8.4a Update Medium Filter (Viewings)
+
+**Files:**
+- `/src/features/viewings/ViewingsFilters.tsx`
+- `/src/features/viewings/Viewings.reducer.ts`
+- `/src/features/viewings/filterViewings.ts`
+- `/src/features/viewings/appliedFilterChips.ts`
+- `/src/features/viewings/Viewings.spec.tsx`
+
+**Changes:**
+1. Replace RadioListField with CheckboxListField in ViewingsFilters
+2. Update reducer: `medium: string` → `medium: readonly string[]`
+3. Update filterViewings to filter by array of mediums
+4. Update calculateMediumCounts to handle array
+5. Update appliedFilterChips to create one chip per medium value
+6. Update all tests
+
+**Estimated Complexity:** Medium
+
+##### 8.4b Update Venue Filter (Viewings)
+
+**Same files as 8.4a**
+
+**Changes:**
+Similar to 8.4a for venue filter
+
+**Estimated Complexity:** Medium
+
+##### 8.4c Update Reviewed Status Filter (Collection Titles, Cast & Crew Member Titles)
+
+**Files:**
+- `/src/components/filter-and-sort/MaybeReviewedTitleFilters.tsx`
+- `/src/reducers/maybeReviewedTitleFiltersReducer.ts`
+- `/src/features/collection-titles/filterCollectionTitles.ts`
+- `/src/features/collection-titles/appliedFilterChips.ts`
+- `/src/features/cast-and-crew-member-titles/filterCastAndCrewMemberTitles.ts`
+- `/src/features/cast-and-crew-member-titles/appliedFilterChips.ts`
+- All affected test files
+
+**Changes:**
+1. Replace RadioListField with CheckboxListField
+2. Update reducer: `reviewedStatus: string` → `reviewedStatus: readonly string[]`
+3. Update filterers to handle array
+4. Update calculateReviewedStatusCounts functions
+5. Update appliedFilterChips builders (one chip per status)
+6. Update all tests
+
+**Estimated Complexity:** High (affects multiple pages)
+
+##### 8.4d Update Credited As Filter (Cast & Crew Member Titles)
+
+**Files:**
+- `/src/components/filter-and-sort/CreditedAsFilter.tsx`
+- `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.reducer.ts`
+- `/src/features/cast-and-crew-member-titles/filterCastAndCrewMemberTitles.ts`
+- `/src/features/cast-and-crew-member-titles/appliedFilterChips.ts`
+- All affected test files
+
+**Changes:**
+1. Replace RadioListField with CheckboxListField
+2. Update reducer: `creditedAs: string` → `creditedAs: readonly string[]`
+3. Update filterer to handle array of credits
+4. Update calculateCreditedAsCounts (may fix 0 counts bug)
+5. Update appliedFilterChips (one chip per credit)
+6. Update all tests
+
+**Estimated Complexity:** Medium
+
+##### 8.4e Update Watchlist Credit Filters (Director, Performer, Writer, Collection)
+
+**Files:**
+- `/src/features/watchlist/WatchlistFilters.tsx`
+- `/src/features/watchlist/Watchlist.reducer.ts`
+- `/src/features/watchlist/filterWatchlistValues.ts`
+- `/src/features/watchlist/appliedFilterChips.ts`
+- All affected test files
+
+**Changes:**
+1. Replace all 4 RadioListFields with CheckboxListFields
+2. Update reducer: all credit fields `string` → `readonly string[]`
+3. Update filterer to handle arrays for all credits
+4. Update all calculate*Counts functions
+5. Update appliedFilterChips (one chip per credit value)
+6. Update all tests
+
+**Estimated Complexity:** High (4 filters affected)
+
+---
+
+#### 8.5 Fix CreditedAs 0 Counts Bug
+
+**Files:**
+- `/src/features/cast-and-crew/filterCastAndCrew.ts`
+- `/src/features/cast-and-crew/filterCastAndCrew.spec.ts`
+
+**Changes:**
+- Debug calculateCreditedAsCounts function
+- Add tests verifying non-zero counts
+- May be resolved by 8.4d if related to RadioListField
+
+**Estimated Complexity:** Low-Medium
+
+---
+
+#### 8.6 Remove RadioListField Component (Cleanup)
+
+**Files:**
+- `/src/components/fields/RadioListField.tsx`
+- `/src/components/fields/RadioListField.spec.tsx`
+- `/src/components/fields/RadioListField.testHelper.ts`
+
+**Changes:**
+- Verify zero usage with `npm run knip`
+- Delete component files
+- Update any import references
+- Document in progress.txt
+
+**Estimated Complexity:** Low
+
+**IMPORTANT:** Only complete after all conversions in 8.4 are done and tested
+
+---
+
+### Stage 8 Status: Not Started
+
+**Completion Checklist:**
+
+- [ ] FilterSection opens by default, triangle on right
+- [ ] AppliedFilters shows value only (not "Category: Value")
+- [ ] Year/Grade fields have range sliders integrated
+- [ ] Medium filter uses checkboxes (multi-select)
+- [ ] Venue filter uses checkboxes (multi-select)
+- [ ] Reviewed Status filter uses checkboxes (multi-select)
+- [ ] Credited As filter uses checkboxes (multi-select)
+- [ ] Watchlist credit filters use checkboxes (multi-select)
+- [ ] CreditedAs counts show non-zero values
+- [ ] RadioListField component removed
+- [ ] All tests passing (589+)
+- [ ] All quality checks passing (lint, check, knip, format)
+- [ ] Visual comparison with Orbit DVD confirms matching behavior
+
+**Estimated Duration:** 15-22 hours
+
+---
+
 ## Testing Strategy
 
 ### Per-Stage Testing
@@ -1132,6 +1359,7 @@ grep -r "MultiSelectField" src/
 - [ ] Full keyboard navigation works
 - [ ] Screen reader accessible (WCAG 2.1 AA)
 - [ ] No regressions in functionality
+- [ ] **Matches Orbit DVD reference behavior**
 
 ### Should Have (Important)
 
@@ -1140,11 +1368,14 @@ grep -r "MultiSelectField" src/
 - [ ] Consistent UX across all pages
 - [ ] Clear visual hierarchy
 - [ ] Responsive on all breakpoints
+- [ ] **All sections open by default**
+- [ ] **Range sliders integrated beneath Year/Grade fields**
+- [ ] **All filters allow multiple selection**
 
 ### Nice to Have (Optional)
 
-- [ ] Dynamic counts (update when other filters change)
-- [ ] Range sliders for Year/Grade
+- [x] Dynamic counts (update when other filters change) - **DONE**
+- [ ] Range sliders for Year/Grade - **REQUIRED in Stage 8, not optional**
 - [ ] Virtualization for very long lists
 - [ ] Remember section open/closed state (localStorage)
 
