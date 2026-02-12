@@ -13,7 +13,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filt
     class="mb-3 flex flex-wrap gap-2"
   >
     <button
-      aria-label="Remove Genre: Horror filter"
+      aria-label="Remove Horror filter"
       class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 text-sm text-default transition-colors
@@ -23,7 +23,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filt
       type="button"
     >
       <span>
-        Genre: Horror
+        Horror
       </span>
       <span
         aria-hidden="true"
@@ -32,7 +32,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filt
       </span>
     </button>
     <button
-      aria-label="Remove Genre: Action filter"
+      aria-label="Remove Action filter"
       class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 text-sm text-default transition-colors
@@ -42,7 +42,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filt
       type="button"
     >
       <span>
-        Genre: Action
+        Action
       </span>
       <span
         aria-hidden="true"
@@ -141,7 +141,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with single filter
     class="mb-3 flex flex-wrap gap-2"
   >
     <button
-      aria-label="Remove Genre: Horror filter"
+      aria-label="Remove Horror filter"
       class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 text-sm text-default transition-colors
@@ -151,7 +151,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with single filter
       type="button"
     >
       <span>
-        Genre: Horror
+        Horror
       </span>
       <span
         aria-hidden="true"

@@ -38,10 +38,18 @@ export function AppliedFilters({
 
       <div className="mb-3 flex flex-wrap gap-2">
         {filters.map((filter) => {
-          const displayText =
-            filter.category === filter.label
-              ? filter.label
-              : `${filter.category}: ${filter.label}`;
+          // AIDEV-NOTE: Per FILTER_REDESIGN_SPEC.md Task 8.2:
+          // - Simple filters (Genre, Medium, Venue, etc.) show value only: "Horror"
+          // - Range filters (Grade, Year) show "Category: Value": "Grade: A- to B+"
+          // - Search filters show "Search: query": "Search: alien"
+          const isRangeOrSearch =
+            filter.category.includes("Grade") ||
+            filter.category.includes("Year") ||
+            filter.category === "Search";
+
+          const displayText = isRangeOrSearch
+            ? `${filter.category}: ${filter.label}`
+            : filter.label;
 
           return (
             <button

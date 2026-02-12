@@ -524,8 +524,9 @@ describe("FilterAndSortContainer", () => {
       await clickToggleFilters(user);
 
       expect(screen.getByText("Applied Filters:")).toBeInTheDocument();
-      expect(screen.getByText("Genre: Horror")).toBeInTheDocument();
-      expect(screen.getByText("Genre: Action")).toBeInTheDocument();
+      // Simple filters (Genre) show value only
+      expect(screen.getByText("Horror")).toBeInTheDocument();
+      expect(screen.getByText("Action")).toBeInTheDocument();
     });
 
     it("calls onRemoveFilter when a filter chip is removed", async ({
@@ -549,8 +550,9 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
+      // Simple filters (Genre) show value only: "Horror"
       const removeButton = screen.getByRole("button", {
-        name: "Remove Genre: Horror filter",
+        name: "Remove Horror filter",
       });
       await user.click(removeButton);
 
