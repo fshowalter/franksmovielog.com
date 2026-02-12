@@ -2,16 +2,50 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
+import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
 import { clickRadioListOption } from "~/components/fields/RadioListField.testHelper";
 import { fillYearField } from "~/components/fields/YearField.testHelper";
 
 /**
- * Clicks a medium filter option in tests.
+ * Clicks a medium filter option (checkbox) in tests.
  * @param user - User event instance
  * @param value - Filter value to select
  */
 export async function clickMediumFilterOption(user: UserEvent, value: string) {
-  await clickRadioListOption(user, "Medium", value);
+  // Medium filter uses CheckboxListField, so find by checkbox value directly
+  // First expand "Show more" if needed
+  const showMoreButtons = screen.queryAllByRole("button", {
+    name: /\+ Show more/,
+  });
+
+  // Look for the checkbox
+  let checkbox = screen.queryByRole("checkbox", { name: new RegExp(value) });
+
+  // If not found and there's a "Show more" button, click it
+  if (!checkbox && showMoreButtons.length > 0) {
+    // Find the Medium section first
+    const mediumDetails = screen.getAllByRole("group").find((group) => {
+      const summary = group.previousElementSibling;
+      return summary?.textContent?.includes("Medium");
+    });
+
+    if (mediumDetails) {
+      const showMore = within(mediumDetails as HTMLElement).queryByRole("button", {
+        name: /\+ Show more/,
+      });
+      if (showMore) {
+        await user.click(showMore);
+      }
+    }
+
+    checkbox = screen.queryByRole("checkbox", { name: new RegExp(value) });
+  }
+
+  if (!checkbox) {
+    throw new Error(`Unable to find checkbox for medium "${value}"`);
+  }
+
+  await user.click(checkbox);
 }
 
 /**
@@ -70,34 +104,29 @@ export function getCalendar() {
 }
 
 /**
- * Gets the selected medium filter value.
- * @returns Object with value property containing the selected medium value
+ * Gets the selected medium filter values (as array).
+ * @returns Object with values property containing the selected medium values
  */
-export function getMediumFilter(): { value: string } {
-  // Find all radiogroups and filter for the one with Medium in the legend
-  const radiogroups = screen.queryAllByRole("radiogroup");
-  const mediumGroup = radiogroups.find((group) => {
+export function getMediumFilter(): { values: string[] } {
+  // Find all groups and filter for the one with Medium in the legend
+  const groups = screen.queryAllByRole("group");
+  const mediumGroup = groups.find((group) => {
     const legend = group.querySelector("legend");
     return legend?.textContent?.includes("Medium");
   });
 
   if (!mediumGroup) {
-    // If radiogroup not found, return "All" as default (filter section may be closed)
-    return { value: "All" };
+    // If group not found, return empty array as default (filter section may be closed)
+    return { values: [] };
   }
 
-  // Find the checked radio button
-  const radios = mediumGroup.querySelectorAll('input[type="radio"]');
-  const checkedRadio = [...radios].find(
-    (radio) => (radio as HTMLInputElement).checked,
-  );
+  // Find all checked checkboxes
+  const checkboxes = mediumGroup.querySelectorAll('input[type="checkbox"]');
+  const checkedValues = [...checkboxes]
+    .filter((checkbox) => (checkbox as HTMLInputElement).checked)
+    .map((checkbox) => (checkbox as HTMLInputElement).value);
 
-  if (checkedRadio) {
-    return { value: (checkedRadio as HTMLInputElement).value };
-  }
-
-  // Default to "All" if no radio is checked
-  return { value: "All" };
+  return { values: checkedValues };
 }
 
 /**

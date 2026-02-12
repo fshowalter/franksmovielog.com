@@ -45,7 +45,7 @@ import type { ViewingsValue } from "./Viewings";
  * Filter values for viewings.
  */
 export type ViewingsFiltersValues = Omit<TitleFiltersValues, "genres"> & {
-  medium?: string;
+  medium?: readonly string[];
   reviewedStatus?: string;
   venue?: string;
   viewingYear?: [string, string];
@@ -53,7 +53,7 @@ export type ViewingsFiltersValues = Omit<TitleFiltersValues, "genres"> & {
 
 type MediumFilterChangedAction = {
   type: "viewings/mediumChanged";
-  value: string;
+  values: readonly string[];
 };
 
 type NextMonthClickedAction = {
@@ -122,13 +122,13 @@ export function createInitialState({
 
 /**
  * Creates an action for changing the medium filter.
- * @param value - The medium value to filter by
+ * @param values - The medium values to filter by
  * @returns Medium filter changed action
  */
 export function createMediumFilterChangedAction(
-  value: string,
+  values: readonly string[],
 ): MediumFilterChangedAction {
-  return { type: "viewings/mediumChanged", value };
+  return { type: "viewings/mediumChanged", values };
 }
 
 /**
@@ -202,6 +202,9 @@ export function reducer(state: ViewingsState, action: ViewingsAction) {
         selectedMonthDate: undefined,
       };
     }
+    case "filters/removeAppliedFilter": {
+      return handleRemoveAppliedFilter(state, action);
+    }
     case "sort/sort": {
       const newState = sortReducer(state, action);
 
@@ -242,8 +245,43 @@ function handleMediumFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      medium: action.value === "All" ? undefined : action.value,
+      medium: action.values.length === 0 ? undefined : action.values,
     },
+  };
+}
+
+function handleRemoveAppliedFilter(
+  state: ViewingsState,
+  action: { filterKey: string; type: "filters/removeAppliedFilter" },
+): ViewingsState {
+  // Handle removal of individual medium values (e.g., "medium-blu-ray")
+  if (action.filterKey.startsWith("medium-")) {
+    const mediumValue = action.filterKey
+      .replace(/^medium-/, "")
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    const currentMedium = state.pendingFilterValues.medium ?? [];
+    const newMedium = currentMedium.filter((m) => m !== mediumValue);
+
+    return {
+      ...state,
+      pendingFilterValues: {
+        ...state.pendingFilterValues,
+        medium: newMedium.length === 0 ? undefined : newMedium,
+      },
+    };
+  }
+
+  // For all other filters, use the default behavior (remove entire filter)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { [action.filterKey]: _removed, ...remainingFilters } =
+    state.pendingFilterValues;
+
+  return {
+    ...state,
+    pendingFilterValues: remainingFilters,
   };
 }
 

@@ -96,24 +96,29 @@ describe("buildAppliedFilterChips", () => {
     ]);
   });
 
-  it("creates chip for medium when not All", () => {
+  it("creates chips for each medium value", () => {
     const filterValues: ViewingsFiltersValues = {
-      medium: "Blu-ray",
+      medium: ["Blu-ray", "DVD"],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
     expect(chips).toEqual([
       {
         category: "Medium",
-        id: "medium",
+        id: "medium-blu-ray",
         label: "Blu-ray",
+      },
+      {
+        category: "Medium",
+        id: "medium-dvd",
+        label: "DVD",
       },
     ]);
   });
 
-  it("excludes medium chip when value is All", () => {
+  it("excludes medium chips when array is empty", () => {
     const filterValues: ViewingsFiltersValues = {
-      medium: "All",
+      medium: [],
     };
     const chips = buildAppliedFilterChips(filterValues);
 
@@ -170,7 +175,7 @@ describe("buildAppliedFilterChips", () => {
 
   it("creates multiple chips for multiple active filters", () => {
     const filterValues: ViewingsFiltersValues = {
-      medium: "4K UHD",
+      medium: ["4K UHD"],
       releaseYear: ["2020", "2023"],
       reviewedStatus: "Not Reviewed",
       title: "dark knight",
@@ -197,7 +202,7 @@ describe("buildAppliedFilterChips", () => {
       },
       {
         category: "Medium",
-        id: "medium",
+        id: "medium-4k-uhd",
         label: "4K UHD",
       },
       {
@@ -216,7 +221,7 @@ describe("buildAppliedFilterChips", () => {
   it("maintains consistent chip ordering", () => {
     // Test with filters added in different order
     const filterValues: ViewingsFiltersValues = {
-      medium: "Streaming",
+      medium: ["Streaming"],
       releaseYear: ["2020", "2022"],
       reviewedStatus: "Reviewed",
       title: "test",
@@ -230,7 +235,7 @@ describe("buildAppliedFilterChips", () => {
       "releaseYear",
       "reviewedStatus",
       "viewingYear",
-      "medium",
+      "medium-streaming",
       "venue",
       "title",
     ]);

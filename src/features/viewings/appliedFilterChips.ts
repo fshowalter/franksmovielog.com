@@ -66,13 +66,15 @@ export function buildAppliedFilterChips(
     });
   }
 
-  // Medium chip (single-select, exclude "All")
-  if (filterValues.medium && filterValues.medium !== "All") {
-    chips.push({
-      category: "Medium",
-      id: "medium",
-      label: filterValues.medium,
-    });
+  // Medium chips (multi-select, one chip per medium)
+  if (filterValues.medium && filterValues.medium.length > 0) {
+    for (const medium of filterValues.medium) {
+      chips.push({
+        category: "Medium",
+        id: `medium-${medium.toLowerCase().replaceAll(" ", "-")}`,
+        label: medium,
+      });
+    }
   }
 
   // Venue chip (single-select, exclude "All")

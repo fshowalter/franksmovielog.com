@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { LabelText } from "./LabelText";
+import { RangeSliderField } from "./RangeSliderField";
 import { SelectInput } from "./SelectInput";
 
 const gradeOptions = [
@@ -45,13 +46,34 @@ const gradeOptions = [
   </option>,
 ];
 
+// AIDEV-NOTE: Grade number to letter mapping for slider display
+const gradeToLetter = (grade: number): string => {
+  const gradeMap: Record<number, string> = {
+    13: "A+",
+    12: "A",
+    11: "A-",
+    10: "B+",
+    9: "B",
+    8: "B-",
+    7: "C+",
+    6: "C",
+    5: "C-",
+    4: "D+",
+    3: "D",
+    2: "D-",
+    1: "F",
+  };
+  return gradeMap[grade] || grade.toString();
+};
+
 /**
- * Grade range selector with from/to letter grade dropdowns.
+ * Grade range selector with from/to letter grade dropdowns and range slider.
+ * AIDEV-NOTE: Spec requires BOTH dropdowns and slider - dual control pattern
  * @param props - Component props
  * @param props.defaultValues - Default [min, max] grade values
  * @param props.label - Field label text
  * @param props.onGradeChange - Handler for grade range changes
- * @returns Grade range selector with two dropdowns
+ * @returns Grade range selector with dropdowns and slider
  */
 export function GradeField({
   defaultValues,
@@ -87,34 +109,62 @@ export function GradeField({
     }
   };
 
+  // AIDEV-NOTE: Handle slider changes - updates dropdowns bidirectionally
+  const handleSliderChange = (from: number, to: number): void => {
+    setMinValue(from);
+    setMaxValue(to);
+    onGradeChange([from, to]);
+  };
+
+  // AIDEV-NOTE: Clear resets to full range (F to A+)
+  const handleClear = (): void => {
+    setMinValue(1);
+    setMaxValue(13);
+    onGradeChange([1, 13]);
+  };
+
   return (
-    <fieldset className="text-subtle">
-      <LabelText as="legend" value={label} />
-      <div className="flex flex-wrap items-baseline">
-        <label className="flex flex-1 items-center gap-x-[.5ch]">
-          <span className="min-w-10 text-left text-sm tracking-serif-wide">
-            From
-          </span>
-          <SelectInput
-            defaultValue={defaultMinValue(defaultValues)}
-            onChange={(e) => handleMinChange(e.target.value)}
-          >
-            {[...gradeOptions].reverse()}
-          </SelectInput>
-        </label>
-        <label className="flex flex-1 items-center">
-          <span className="min-w-10 text-center text-sm tracking-serif-wide">
-            to
-          </span>
-          <SelectInput
-            defaultValue={defaultMaxValue(defaultValues)}
-            onChange={(e) => handleMaxChange(e.target.value)}
-          >
-            {[...gradeOptions]}
-          </SelectInput>
-        </label>
-      </div>
-    </fieldset>
+    <div className="flex flex-col gap-4">
+      <fieldset className="text-subtle">
+        <LabelText as="legend" value={label} />
+        <div className="flex flex-wrap items-baseline">
+          <label className="flex flex-1 items-center gap-x-[.5ch]">
+            <span className="min-w-10 text-left text-sm tracking-serif-wide">
+              From
+            </span>
+            <SelectInput
+              defaultValue={defaultMinValue(defaultValues)}
+              onChange={(e) => handleMinChange(e.target.value)}
+            >
+              {[...gradeOptions].reverse()}
+            </SelectInput>
+          </label>
+          <label className="flex flex-1 items-center">
+            <span className="min-w-10 text-center text-sm tracking-serif-wide">
+              to
+            </span>
+            <SelectInput
+              defaultValue={defaultMaxValue(defaultValues)}
+              onChange={(e) => handleMaxChange(e.target.value)}
+            >
+              {[...gradeOptions]}
+            </SelectInput>
+          </label>
+        </div>
+      </fieldset>
+
+      {/* AIDEV-NOTE: Range slider beneath dropdowns - syncs bidirectionally */}
+      <RangeSliderField
+        formatValue={gradeToLetter}
+        fromValue={minValue}
+        label={label}
+        max={13}
+        min={1}
+        onChange={handleSliderChange}
+        onClear={handleClear}
+        toValue={maxValue}
+      />
+    </div>
   );
 }
 

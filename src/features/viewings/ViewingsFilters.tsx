@@ -1,5 +1,7 @@
+import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
 import type { RadioListFieldOption } from "~/components/fields/RadioListField";
 
+import { CheckboxListField } from "~/components/fields/CheckboxListField";
 import { RadioListField } from "~/components/fields/RadioListField";
 import { YearField } from "~/components/fields/YearField";
 import { FilterSection } from "~/components/filter-and-sort/FilterSection";
@@ -59,18 +61,15 @@ export function ViewingsFilters({
     filterValues,
   );
 
-  // Build options with counts for RadioListField
-  // Filter out "All" from distinct arrays to avoid duplicate keys
-  const mediumOptions: RadioListFieldOption[] = [
-    { count: values.length, label: "All", value: "All" },
-    ...distinctMedia
-      .filter((medium) => medium !== "All")
-      .map((medium) => ({
-        count: mediumCounts.get(medium) ?? 0,
-        label: medium,
-        value: medium,
-      })),
-  ];
+  // Build options with counts
+  // Filter out "All" from distinct arrays since CheckboxListField doesn't need it
+  const mediumOptions: CheckboxListFieldOption[] = distinctMedia
+    .filter((medium) => medium !== "All")
+    .map((medium) => ({
+      count: mediumCounts.get(medium) ?? 0,
+      label: medium,
+      value: medium,
+    }));
 
   const venueOptions: RadioListFieldOption[] = [
     { count: values.length, label: "All", value: "All" },
@@ -142,14 +141,14 @@ export function ViewingsFilters({
         years={distinctViewingYears}
       />
       <FilterSection
-        defaultOpen={!!filterValues.medium && filterValues.medium !== "All"}
+        defaultOpen={!!filterValues.medium && filterValues.medium.length > 0}
         title="Medium"
       >
-        <RadioListField
-          defaultValue={filterValues.medium ?? "All"}
+        <CheckboxListField
+          defaultValues={filterValues.medium ?? []}
           label="Medium"
-          onChange={(value) => dispatch(createMediumFilterChangedAction(value))}
-          onClear={() => dispatch(createMediumFilterChangedAction("All"))}
+          onChange={(values) => dispatch(createMediumFilterChangedAction(values))}
+          onClear={() => dispatch(createMediumFilterChangedAction([]))}
           options={mediumOptions}
         />
       </FilterSection>

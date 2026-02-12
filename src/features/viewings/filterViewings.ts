@@ -129,10 +129,10 @@ export function filterViewings(
   return filterSortedValues({ filters, sortedValues });
 }
 
-function createMediumFilter(filterValue?: string) {
-  if (!filterValue) return;
+function createMediumFilter(filterValue?: readonly string[]) {
+  if (!filterValue || filterValue.length === 0) return;
   return (value: ViewingsValue) => {
-    return value.medium === filterValue;
+    return filterValue.includes(value.medium);
   };
 }
 

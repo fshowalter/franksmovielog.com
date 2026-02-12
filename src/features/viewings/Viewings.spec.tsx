@@ -536,7 +536,7 @@ describe("Viewings", () => {
       await clickClearFilters(user);
 
       expect(getTitleFilter()).toHaveValue("");
-      expect(getMediumFilter().value).toBe("All");
+      expect(getMediumFilter().values).toEqual([]);
 
       await clickViewResults(user);
 
