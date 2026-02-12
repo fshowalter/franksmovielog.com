@@ -1130,5 +1130,59 @@ All 7 filterable pages successfully converted to new checkbox/radio-based filter
 
 ---
 
-**Remaining Stage 8 Tasks:**
-- Task 8.6: Remove RadioListField Component (Cleanup)
+### Task 8.6: Remove RadioListField Component (Cleanup) ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** (pending)
+- **Files Deleted:**
+  - `/src/components/fields/RadioListField.tsx` - Component no longer needed
+  - `/src/components/fields/RadioListField.spec.tsx` - Test file for deleted component
+  - `/src/components/fields/RadioListField.testHelper.ts` - Test helper for deleted component
+  - `/src/components/fields/__snapshots__/RadioListField.spec.tsx.snap` - Snapshot for deleted component
+- **Files Modified:**
+  - `/src/components/filter-and-sort/ReviewedStatusFilter.testHelper.ts` - Updated to use CheckboxListField helper
+- **Verification:**
+  - Knip passes (only 1 unused export: getVenueFilter test helper, acceptable)
+  - No unresolved imports
+  - All RadioListField usage removed from codebase
+- **Bundle Size:** Reduced by ~400 lines of code
+
+**Notes:**
+- RadioListField successfully removed after all conversions to CheckboxListField
+- Updated ReviewedStatusFilter.testHelper to use clickCheckboxListOption instead of clickRadioListOption
+- Removed "All" option from reviewedStatus type since CheckboxListField doesn't need it
+- All quality checks pass (knip, lint, check, format)
+- This completes Task 8.6 and Stage 8 of the implementation plan
+
+---
+
+## Stage 8: Corrections Based on Orbit DVD Reference ✅
+
+**Status:** Complete
+**Completed:** 2026-02-12
+
+All 6 main tasks completed:
+1. ✅ FilterSection opens by default, triangle on right (Task 8.1)
+2. ✅ AppliedFilters shows value only for simple filters (Task 8.2)
+3. ✅ Year/Grade fields have range sliders integrated (Task 8.3)
+4. ✅ All filters converted to multi-select CheckboxListField (Tasks 8.4a-8.4f)
+   - 8.4a: Medium filter (Viewings)
+   - 8.4b: Venue filter (Viewings)
+   - 8.4c: Reviewed Status filter (Collection/Cast & Crew Member Titles)
+   - 8.4d: Credited As filter (Cast & Crew Member Titles)
+   - 8.4e: Watchlist credit filters (Director, Performer, Writer, Collection)
+   - 8.4f: Reviewed Status filter (Viewings)
+5. ✅ CreditedAs counts show non-zero values (Task 8.5)
+6. ✅ RadioListField component removed (Task 8.6)
+
+All filters now allow multiple selection matching Orbit DVD behavior:
+- Genres, Medium, Venue, Reviewed Status, Credited As, Credits (Director/Performer/Writer), Collections
+- Each creates individual chips in AppliedFilters
+- Dynamic counts update based on other active filters
+- "All" options removed - empty selection = all results
+
+---
+
+**Remaining Work:**
+- None! All Stage 8 tasks are complete
+- Filter UI redesign is fully implemented and matches Orbit DVD reference
