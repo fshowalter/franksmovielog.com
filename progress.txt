@@ -848,10 +848,35 @@ The codebase is now fully migrated to the new checkbox/radio-based filter UI.
 
 ---
 
+### Task 8.2: Fix AppliedFilters Chip Display Format ✅
+
+- **Completed:** 2026-02-11
+- **Commit:** 36aa1ceca
+- **Files Modified:**
+  - `/src/components/filter-and-sort/AppliedFilters.tsx` - Updated chip display logic
+  - `/src/components/filter-and-sort/AppliedFilters.spec.tsx` - Updated tests for new format
+  - `/src/components/filter-and-sort/FilterAndSortContainer.spec.tsx` - Updated tests for new format
+- **Snapshots Updated:** 2 AppliedFilters snapshots
+- **Tests:** 472/472 component and feature tests passing
+- **Features Implemented:**
+  - Simple filters (Genre, Medium, Venue, etc.) show value only: "Horror"
+  - Range filters (Grade, Year) show "Category: Value": "Grade: A- to B+"
+  - Search filters show "Search: query": "Search: alien"
+  - Updated display logic to determine filter type based on category name
+  - Updated all tests to match new chip format expectations
+
+**Notes:**
+- Matches Orbit DVD reference pattern where simple multi-select filters display just the value
+- Range filters and search retain the "Category: Value" format for clarity
+- All linting and TypeScript checks pass
+- This completes Task 8.2 of Stage 8 in the implementation plan
+
+---
+
 ## Implementation Status
 
 **Stages 1-7:** ✅ Complete
-**Stage 8:** In Progress (Task 8.1 complete)
+**Stage 8:** In Progress (Tasks 8.1 and 8.2 complete)
 
 All 7 filterable pages successfully converted to new checkbox/radio-based filter UI:
 1. ✅ Reviews
@@ -868,7 +893,6 @@ All 7 filterable pages successfully converted to new checkbox/radio-based filter
 **Current Status:** Continuing with Stage 8 corrections to match Orbit DVD reference
 
 **Remaining Stage 8 Tasks:**
-- Task 8.2: Fix AppliedFilters Chip Display Format
 - Task 8.3: Integrate Range Sliders with Year/Grade Fields
 - Task 8.4: Convert RadioListField to CheckboxListField (all filters multi-select)
 - Task 8.5: Fix CreditedAs 0 Counts Bug
