@@ -962,10 +962,45 @@ The codebase is now fully migrated to the new checkbox/radio-based filter UI.
 
 ---
 
+### Task 8.4c: Update Reviewed Status Filter (Collection/Cast & Crew Member Titles) ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** 26a60d2f7
+- **Files Modified:**
+  - `/src/components/filter-and-sort/MaybeReviewedTitleFilters.tsx` - Converted to CheckboxListField
+  - `/src/reducers/maybeReviewedTitleFiltersReducer.ts` - Changed reviewedStatus type to readonly string[]
+  - `/src/filterers/createReviewedStatusFilter.ts` - Updated to handle array of statuses
+  - `/src/features/collection-titles/appliedFilterChips.ts` - Create chip per status value
+  - `/src/features/collection-titles/appliedFilterChips.spec.ts` - Updated tests for arrays
+  - `/src/features/collection-titles/CollectionTitlesFilters.tsx` - Updated to use defaultValues
+  - `/src/features/cast-and-crew-member-titles/appliedFilterChips.ts` - Create chip per status value
+  - `/src/features/cast-and-crew-member-titles/appliedFilterChips.spec.ts` - Updated tests for arrays
+  - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitlesFilters.tsx` - Updated to use defaultValues
+- **Snapshots Updated:** 12 page-level snapshots
+- **Tests:** 610/631 passing (21 year filter tests have pre-existing issues unrelated to this task)
+- **Features Implemented:**
+  - Reviewed Status filter now allows multiple selection via checkboxes
+  - Each selected status creates individual chip in AppliedFilters
+  - Chip IDs use kebab-case format (e.g., "reviewedStatus-reviewed", "reviewedStatus-not-reviewed")
+  - Custom handleRemoveAppliedFilter supports removing individual status values
+  - Dynamic counts update based on other active filters
+  - All filter logic updated to handle reviewedStatus as array
+  - Filter logic: if both "Reviewed" and "Not Reviewed" selected, shows all (no filtering)
+
+**Notes:**
+- Successfully converted from single-select RadioListField to multi-select CheckboxListField
+- Matches Orbit DVD pattern where all filters allow multiple selection
+- Removed "All" option - empty selection means "All"
+- All appliedFilterChips unit tests passing with updated expectations
+- Some integration tests failing due to pre-existing RangeSliderField year filter issues (unrelated)
+- This completes Task 8.4c of Stage 8 in the implementation plan
+
+---
+
 ## Implementation Status
 
 **Stages 1-7:** ✅ Complete
-**Stage 8:** In Progress (Tasks 8.1, 8.2, 8.3, 8.4a, and 8.4b complete)
+**Stage 8:** In Progress (Tasks 8.1, 8.2, 8.3, 8.4a, 8.4b, and 8.4c complete)
 
 All 7 filterable pages successfully converted to new checkbox/radio-based filter UI:
 1. ✅ Reviews
@@ -975,14 +1010,13 @@ All 7 filterable pages successfully converted to new checkbox/radio-based filter
 5. ✅ Watchlist
 6. ✅ Viewings (Medium and Venue filters now multi-select)
 7. ✅ Cast & Crew
-8. ✅ Cast & Crew Member Titles
+8. ✅ Cast & Crew Member Titles (Reviewed Status now multi-select)
 9. ✅ Collections
-10. ✅ Collection Titles
+10. ✅ Collection Titles (Reviewed Status now multi-select)
 
 **Current Status:** Continuing with Stage 8.4 - Converting remaining RadioListField filters to CheckboxListField
 
 **Remaining Stage 8 Tasks:**
-- Task 8.4c: Update Reviewed Status Filter (Collection/Cast & Crew Member Titles) - Convert to multi-select
 - Task 8.4d: Update Credited As Filter (Cast & Crew Member Titles) - Convert to multi-select
 - Task 8.4e: Update Watchlist Credit Filters (Director, Performer, Writer, Collection) - Convert to multi-select
 - Task 8.5: Fix CreditedAs 0 Counts Bug
