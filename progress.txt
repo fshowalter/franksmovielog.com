@@ -1322,3 +1322,67 @@ All filters now allow multiple selection matching Orbit DVD behavior:
 - FilterSection.tsx correctly defaults to `defaultOpen={true}`, but filter components were overriding with conditional logic
 - Fixed null checks in Watchlist.tsx for optional filter arrays (director, performer, writer, collection)
 - This completes Issue 1 of Stage 9 in the implementation plan
+
+---
+
+### Issue 3: Year/Grade Range Chips Persist After Clearing ✅
+
+- **Completed:** 2026-02-13
+- **Commit:** 3e6f82f5e
+- **Problem:** Clicking "Clear" on year/grade range filters resets to full range but chip remains visible in AppliedFilters
+- **Root Cause:** `buildAppliedFilterChips()` functions create chips for ALL year ranges, without checking if range equals full default range
+- **Files Modified:**
+  - All 5 appliedFilterChips.ts files:
+    1. `/src/features/reviews/appliedFilterChips.ts` - releaseYear, reviewYear
+    2. `/src/features/viewings/appliedFilterChips.ts` - releaseYear, viewingYear
+    3. `/src/features/watchlist/appliedFilterChips.ts` - releaseYear
+    4. `/src/features/collection-titles/appliedFilterChips.ts` - releaseYear, reviewYear
+    5. `/src/features/cast-and-crew-member-titles/appliedFilterChips.ts` - releaseYear, reviewYear
+  - All 8 page components that call `buildAppliedFilterChips()`:
+    - `/src/features/reviews/AllReviews.tsx`, `Overrated.tsx`, `Underrated.tsx`, `Underseen.tsx`
+    - `/src/features/viewings/Viewings.tsx`
+    - `/src/features/watchlist/Watchlist.tsx`
+    - `/src/features/collection-titles/CollectionTitles.tsx`
+    - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.tsx`
+  - All 5 appliedFilterChips.spec.ts test files
+- **Tests:** 625/625 passing (100%)
+- **Solution Implemented:**
+  1. Updated `buildAppliedFilterChips()` signatures to accept optional context with available years
+  2. Added full-range checks for releaseYear and reviewYear filters (matching grade filter pattern)
+  3. Chips only display when range is partially restricted (not showing all available values)
+  4. Updated all callers to pass distinctReleaseYears/distinctReviewYears context
+  5. Updated all test files with new context parameter and full-range exclusion tests
+- **Example Logic:**
+  ```typescript
+  if (filterValues.releaseYear && context?.distinctReleaseYears) {
+    const [minYear, maxYear] = filterValues.releaseYear;
+    const availableMin = context.distinctReleaseYears[0];
+    const availableMax = context.distinctReleaseYears[context.distinctReleaseYears.length - 1];
+
+    // Only show chip if not full range
+    if (minYear !== availableMin || maxYear !== availableMax) {
+      chips.push({...});
+    }
+  }
+  ```
+
+**Notes:**
+- Followed same pattern as grade filter (lines 66-80 in reviews/appliedFilterChips.ts)
+- Year ranges are dynamic (vary by page), so full range must be passed as context
+- Grade filter already had full-range check `if (minGrade !== 1 || maxGrade !== 13)`
+- Year filters now have equivalent check using distinctReleaseYears/distinctReviewYears arrays
+- This completes Issue 3 of Stage 9 in the implementation plan
+
+---
+
+## Stage 9: Post-Implementation Corrections ✅
+
+**Status:** Complete
+**Completed:** 2026-02-13
+
+All 3 issues fixed:
+1. ✅ Issue 2: Arrow direction (down when open, up when closed, rotates 180°)
+2. ✅ Issue 1: Sections starting closed (removed conditional defaultOpen logic)
+3. ✅ Issue 3: Year range chips persist after clearing (added full-range checks)
+
+All FilterSections now open by default, disclosure triangles point correctly, and year/grade range chips only show when range is partially restricted. All 625 tests passing with comprehensive coverage of the full-range exclusion logic.
