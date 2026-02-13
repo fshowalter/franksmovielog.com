@@ -73,8 +73,7 @@ export function buildAppliedFilterChips(
   if (filterValues.releaseYear && context?.distinctReleaseYears) {
     const [minYear, maxYear] = filterValues.releaseYear;
     const availableMin = context.distinctReleaseYears[0];
-    const availableMax =
-      context.distinctReleaseYears.at(-1)!;
+    const availableMax = context.distinctReleaseYears.at(-1)!;
 
     // Only show chip if not full range
     if (minYear !== availableMin || maxYear !== availableMax) {
@@ -91,8 +90,7 @@ export function buildAppliedFilterChips(
   if (filterValues.reviewYear && context?.distinctReviewYears) {
     const [minYear, maxYear] = filterValues.reviewYear;
     const availableMin = context.distinctReviewYears[0];
-    const availableMax =
-      context.distinctReviewYears.at(-1)!;
+    const availableMax = context.distinctReviewYears.at(-1)!;
 
     // Only show chip if not full range
     if (minYear !== availableMin || maxYear !== availableMax) {

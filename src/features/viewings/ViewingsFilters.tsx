@@ -129,7 +129,9 @@ export function ViewingsFilters({
         <CheckboxListField
           defaultValues={filterValues.medium ?? []}
           label="Medium"
-          onChange={(values) => dispatch(createMediumFilterChangedAction(values))}
+          onChange={(values) =>
+            dispatch(createMediumFilterChangedAction(values))
+          }
           onClear={() => dispatch(createMediumFilterChangedAction([]))}
           options={mediumOptions}
         />
@@ -138,7 +140,9 @@ export function ViewingsFilters({
         <CheckboxListField
           defaultValues={filterValues.venue ?? []}
           label="Venue"
-          onChange={(values) => dispatch(createVenueFilterChangedAction(values))}
+          onChange={(values) =>
+            dispatch(createVenueFilterChangedAction(values))
+          }
           onClear={() => dispatch(createVenueFilterChangedAction([]))}
           options={venueOptions}
         />

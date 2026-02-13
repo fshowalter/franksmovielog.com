@@ -962,6 +962,7 @@ grep -r "MultiSelectField" src/
 **Goal:** Correct implementation to match Orbit DVD reference behavior
 
 **Success Criteria:**
+
 - All filter sections open by default
 - Disclosure triangle on far right
 - Range sliders integrated beneath Year/Grade fields
@@ -978,10 +979,12 @@ grep -r "MultiSelectField" src/
 #### 8.1 Fix FilterSection Default State and Triangle Position
 
 **Files:**
+
 - `/src/components/filter-and-sort/FilterSection.tsx`
 - `/src/components/filter-and-sort/FilterSection.spec.tsx`
 
 **Changes:**
+
 - Change `defaultOpen = false` to `defaultOpen = true`
 - Move disclosure triangle to far right (after title, use flexbox justify-between)
 - Update tests for new default state
@@ -996,10 +999,12 @@ grep -r "MultiSelectField" src/
 #### 8.2 Fix AppliedFilters Chip Display Format
 
 **Files:**
+
 - `/src/components/filter-and-sort/AppliedFilters.tsx`
 - `/src/components/filter-and-sort/AppliedFilters.spec.tsx`
 
 **Changes:**
+
 - Update display logic: show just `label` for simple filters
 - Keep `"${category}: ${label}"` for range filters (Grade, Year)
 - Update tests for new format
@@ -1013,6 +1018,7 @@ grep -r "MultiSelectField" src/
 #### 8.3 Integrate Range Sliders with Year/Grade Fields
 
 **Files:**
+
 - `/src/components/fields/YearField.tsx`
 - `/src/components/fields/GradeField.tsx`
 - `/src/components/fields/YearField.spec.tsx` (create)
@@ -1020,6 +1026,7 @@ grep -r "MultiSelectField" src/
 - All filter components using these fields
 
 **Changes:**
+
 - Import and render RangeSliderField beneath dropdown selects
 - Wire onChange to sync slider ↔ dropdowns bidirectionally
 - Add Clear handler that resets both slider and dropdowns
@@ -1041,6 +1048,7 @@ This is the largest change, broken into sub-tasks:
 ##### 8.4a Update Medium Filter (Viewings)
 
 **Files:**
+
 - `/src/features/viewings/ViewingsFilters.tsx`
 - `/src/features/viewings/Viewings.reducer.ts`
 - `/src/features/viewings/filterViewings.ts`
@@ -1048,6 +1056,7 @@ This is the largest change, broken into sub-tasks:
 - `/src/features/viewings/Viewings.spec.tsx`
 
 **Changes:**
+
 1. Replace RadioListField with CheckboxListField in ViewingsFilters
 2. Update reducer: `medium: string` → `medium: readonly string[]`
 3. Update filterViewings to filter by array of mediums
@@ -1069,6 +1078,7 @@ Similar to 8.4a for venue filter
 ##### 8.4c Update Reviewed Status Filter (Collection Titles, Cast & Crew Member Titles)
 
 **Files:**
+
 - `/src/components/filter-and-sort/MaybeReviewedTitleFilters.tsx`
 - `/src/reducers/maybeReviewedTitleFiltersReducer.ts`
 - `/src/features/collection-titles/filterCollectionTitles.ts`
@@ -1078,6 +1088,7 @@ Similar to 8.4a for venue filter
 - All affected test files
 
 **Changes:**
+
 1. Replace RadioListField with CheckboxListField
 2. Update reducer: `reviewedStatus: string` → `reviewedStatus: readonly string[]`
 3. Update filterers to handle array
@@ -1090,6 +1101,7 @@ Similar to 8.4a for venue filter
 ##### 8.4d Update Credited As Filter (Cast & Crew Member Titles)
 
 **Files:**
+
 - `/src/components/filter-and-sort/CreditedAsFilter.tsx`
 - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.reducer.ts`
 - `/src/features/cast-and-crew-member-titles/filterCastAndCrewMemberTitles.ts`
@@ -1097,6 +1109,7 @@ Similar to 8.4a for venue filter
 - All affected test files
 
 **Changes:**
+
 1. Replace RadioListField with CheckboxListField
 2. Update reducer: `creditedAs: string` → `creditedAs: readonly string[]`
 3. Update filterer to handle array of credits
@@ -1109,6 +1122,7 @@ Similar to 8.4a for venue filter
 ##### 8.4e Update Watchlist Credit Filters (Director, Performer, Writer, Collection)
 
 **Files:**
+
 - `/src/features/watchlist/WatchlistFilters.tsx`
 - `/src/features/watchlist/Watchlist.reducer.ts`
 - `/src/features/watchlist/filterWatchlistValues.ts`
@@ -1116,10 +1130,11 @@ Similar to 8.4a for venue filter
 - All affected test files
 
 **Changes:**
+
 1. Replace all 4 RadioListFields with CheckboxListFields
 2. Update reducer: all credit fields `string` → `readonly string[]`
 3. Update filterer to handle arrays for all credits
-4. Update all calculate*Counts functions
+4. Update all calculate\*Counts functions
 5. Update appliedFilterChips (one chip per credit value)
 6. Update all tests
 
@@ -1130,10 +1145,12 @@ Similar to 8.4a for venue filter
 #### 8.5 Fix CreditedAs 0 Counts Bug
 
 **Files:**
+
 - `/src/features/cast-and-crew/filterCastAndCrew.ts`
 - `/src/features/cast-and-crew/filterCastAndCrew.spec.ts`
 
 **Changes:**
+
 - Debug calculateCreditedAsCounts function
 - Add tests verifying non-zero counts
 - May be resolved by 8.4d if related to RadioListField
@@ -1145,11 +1162,13 @@ Similar to 8.4a for venue filter
 #### 8.6 Remove RadioListField Component (Cleanup)
 
 **Files:**
+
 - `/src/components/fields/RadioListField.tsx`
 - `/src/components/fields/RadioListField.spec.tsx`
 - `/src/components/fields/RadioListField.testHelper.ts`
 
 **Changes:**
+
 - Verify zero usage with `npm run knip`
 - Delete component files
 - Update any import references
@@ -1201,6 +1220,7 @@ Similar to 8.4a for venue filter
 **Goal:** Fix three issues discovered during Stage 8 implementation that don't match Orbit DVD reference
 
 **Success Criteria:**
+
 - All FilterSections open by default (no conditional logic)
 - Disclosure triangle points down (▼) when open, up (▲) when closed
 - Clearing year/grade ranges removes chips from AppliedFilters
@@ -1216,6 +1236,7 @@ Similar to 8.4a for venue filter
 **Root Cause:** FilterSection correctly defaults to `defaultOpen={true}`, but filter components override with conditional logic.
 
 **Files Affected:**
+
 - `/src/components/filter-and-sort/TitleFilters.tsx`
 - `/src/features/viewings/ViewingsFilters.tsx`
 - Any other filter components with `defaultOpen={` pattern
@@ -1229,16 +1250,19 @@ Similar to 8.4a for venue filter
 **Problem:** Disclosure triangle points right (→) when closed and rotates 90° to point down (↓) when opened. Should point down (▼) when open and up (▲) when closed (matching Orbit DVD).
 
 **Current Implementation:**
+
 - SVG path draws right-pointing triangle
 - Rotates 90° on open
 - `viewBox="0 0 8 12"`
 
 **Required Implementation:**
+
 - SVG path draws down-pointing triangle by default
 - Rotates 180° on open (to point up)
 - `viewBox="0 0 12 8"` (swapped dimensions)
 
 **Files Affected:**
+
 - `/src/components/filter-and-sort/FilterSection.tsx` (lines 45-55)
 - `/src/components/filter-and-sort/FilterSection.spec.tsx` (update tests/snapshots)
 
@@ -1258,6 +1282,7 @@ Similar to 8.4a for venue filter
 
 **Files Affected:**
 All 7 `appliedFilterChips.ts` files:
+
 1. `/src/features/reviews/appliedFilterChips.ts` - releaseYear, reviewYear
 2. `/src/features/viewings/appliedFilterChips.ts` - releaseYear, viewingYear
 3. `/src/features/watchlist/appliedFilterChips.ts` - releaseYear
@@ -1267,6 +1292,7 @@ All 7 `appliedFilterChips.ts` files:
 7. `/src/features/collections/appliedFilterChips.ts` - (no year filters)
 
 Plus all page components that call `buildAppliedFilterChips()`:
+
 - `/src/features/reviews/AllReviews.tsx`
 - `/src/features/reviews/Overrated.tsx`
 - `/src/features/reviews/Underrated.tsx`
@@ -1277,6 +1303,7 @@ Plus all page components that call `buildAppliedFilterChips()`:
 - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.tsx`
 
 **Solution:**
+
 1. Update `buildAppliedFilterChips()` signatures to accept optional context with available years
 2. Add full-range checks before creating year chips
 3. Update all callers to pass available years

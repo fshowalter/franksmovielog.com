@@ -156,6 +156,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 ALL filters allow multiple selection using checkboxes, matching the Orbit DVD pattern.
 
 Examples:
+
 - **Genres:** Horror, Action, Drama (select multiple)
 - **Medium:** DVD, Blu-ray, 4K UHD (select multiple)
 - **Venue:** Theater, Home (select multiple)
@@ -538,6 +539,7 @@ Each filter option needs a count of matching items. For example:
 - Example: If user has selected 1980-1989, DO show chip as "Release Year: 1980-1989"
 
 **Implementation:**
+
 - Pass available years/grades context to `buildAppliedFilterChips()` functions
 - Add full-range checks before creating year/grade chips
 - See grade filter for correct pattern (already has full-range check)

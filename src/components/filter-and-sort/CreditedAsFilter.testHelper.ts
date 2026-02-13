@@ -12,7 +12,13 @@ import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.t
  */
 export async function clickCreditedAsFilterOption(
   user: UserEvent,
-  value: "director" | "Director" | "performer" | "Performer" | "writer" | "Writer",
+  value:
+    | "director"
+    | "Director"
+    | "performer"
+    | "Performer"
+    | "writer"
+    | "Writer",
 ) {
   await clickCheckboxListOption(user, "Credited As", value);
 }

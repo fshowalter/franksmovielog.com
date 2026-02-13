@@ -218,9 +218,7 @@ describe("GradeField", () => {
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
       await user.selectOptions(fromSelect, "8");
 
-      const fromSlider = screen.getByLabelText(
-        "Grade minimum value",
-      );
+      const fromSlider = screen.getByLabelText("Grade minimum value");
 
       expect((fromSlider as HTMLInputElement).value).toBe("8");
     });
@@ -363,9 +361,7 @@ describe("GradeField", () => {
       );
 
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
-      const fromSlider = screen.getByLabelText(
-        "Grade minimum value",
-      );
+      const fromSlider = screen.getByLabelText("Grade minimum value");
 
       await user.selectOptions(fromSelect, "8");
 

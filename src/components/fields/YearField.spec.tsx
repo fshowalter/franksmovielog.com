@@ -232,9 +232,7 @@ describe("YearField", () => {
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
       await user.selectOptions(fromSelect, "2022");
 
-      const fromSlider = screen.getByLabelText(
-        "Release Year minimum value",
-      );
+      const fromSlider = screen.getByLabelText("Release Year minimum value");
 
       expect((fromSlider as HTMLInputElement).value).toBe("2022");
     });
@@ -350,9 +348,7 @@ describe("YearField", () => {
       );
 
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
-      const fromSlider = screen.getByLabelText(
-        "Release Year minimum value",
-      );
+      const fromSlider = screen.getByLabelText("Release Year minimum value");
 
       await user.selectOptions(fromSelect, "2022");
 

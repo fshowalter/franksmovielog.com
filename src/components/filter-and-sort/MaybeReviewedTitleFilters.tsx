@@ -57,7 +57,9 @@ export function MaybeReviewedTitleFilters({
           defaultValues={reviewedStatus.defaultValues ?? []}
           label="Reviewed Status"
           onChange={reviewedStatus.onChange}
-          onClear={reviewedStatus.onClear ?? ((): void => reviewedStatus.onChange([]))}
+          onClear={
+            reviewedStatus.onClear ?? ((): void => reviewedStatus.onChange([]))
+          }
           options={reviewedStatusOptions}
         />
       </FilterSection>

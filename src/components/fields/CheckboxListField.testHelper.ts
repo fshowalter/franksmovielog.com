@@ -14,11 +14,14 @@ export async function clickCheckboxListOption(
   optionValue: string,
 ) {
   // Find the fieldset with matching legend that contains a group (CheckboxListField pattern)
-  const fieldsets = screen.queryAllByRole("group").map((group) => {
-    // Check if this group is inside a fieldset
-    const fieldset = group.closest("fieldset");
-    return fieldset;
-  }).filter(Boolean);
+  const fieldsets = screen
+    .queryAllByRole("group")
+    .map((group) => {
+      // Check if this group is inside a fieldset
+      const fieldset = group.closest("fieldset");
+      return fieldset;
+    })
+    .filter(Boolean);
 
   const targetFieldset = fieldsets.find((fieldset) => {
     const legend = fieldset?.querySelector("legend");
@@ -26,14 +29,18 @@ export async function clickCheckboxListOption(
   });
 
   if (!targetFieldset) {
-    throw new Error(`Unable to find checkbox list field with label "${fieldLabel}"`);
+    throw new Error(
+      `Unable to find checkbox list field with label "${fieldLabel}"`,
+    );
   }
 
   // Get the group inside the fieldset
   const targetGroup = targetFieldset.querySelector('[role="group"]');
 
   if (!targetGroup) {
-    throw new Error(`Unable to find group inside checkbox list field with label "${fieldLabel}"`);
+    throw new Error(
+      `Unable to find group inside checkbox list field with label "${fieldLabel}"`,
+    );
   }
 
   // Try to find the checkbox - it might be hidden behind "Show more"
@@ -44,9 +51,12 @@ export async function clickCheckboxListOption(
 
   // If not found, try clicking "Show more" button
   if (!checkbox) {
-    const showMoreButton = within(targetGroup as HTMLElement).queryByRole("button", {
-      name: /\+ Show more/,
-    });
+    const showMoreButton = within(targetGroup as HTMLElement).queryByRole(
+      "button",
+      {
+        name: /\+ Show more/,
+      },
+    );
 
     if (showMoreButton) {
       await user.click(showMoreButton);

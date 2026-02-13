@@ -16,7 +16,10 @@ export function calculateCreditedAsCounts(
 ): Map<string, number> {
   // Apply all filters EXCEPT creditedAs
   const filtersWithoutCreditedAs = { ...filterValues, creditedAs: undefined };
-  const filtered = filterCastAndCrewMemberTitles(values, filtersWithoutCreditedAs);
+  const filtered = filterCastAndCrewMemberTitles(
+    values,
+    filtersWithoutCreditedAs,
+  );
 
   // Count occurrences of each credit role
   const counts = new Map<string, number>();

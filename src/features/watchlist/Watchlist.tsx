@@ -167,7 +167,9 @@ export function Watchlist({
         state.pendingFilterValues.collection?.filter(
           (c) => c !== collectionName,
         ) ?? [];
-      dispatch(createWatchlistFilterChangedAction("collection", newCollections));
+      dispatch(
+        createWatchlistFilterChangedAction("collection", newCollections),
+      );
     } else {
       // For other filters (genres, releaseYear, title), use the standard removal
       dispatch(createRemoveAppliedFilterAction(filterId));
