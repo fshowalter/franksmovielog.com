@@ -1204,7 +1204,26 @@ All filters now allow multiple selection matching Orbit DVD behavior:
 
 ---
 
+### Linting and Test Fixes ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** 93aac5999
+- **Issues Fixed:**
+  - Fixed function ordering in CheckboxListField.testHelper (alphabetical)
+  - Removed unused act import from GradeField.spec.tsx
+  - Added missing return type to handleRemoveAppliedFilter
+  - Fixed export-from pattern in titleFiltersReducer and reviewedTitleFiltersReducer
+  - Simplified clickMediumFilterOption to use clickCheckboxListOption helper
+  - Fixed RangeSliderField to use div instead of fieldset (avoids duplicate groups with YearField/GradeField)
+  - Updated YearField and GradeField tests to expect single group
+  - Fixed creditedAs test expectations to use arrays instead of strings
+  - Updated mock data expectations to match lowercase credited as values
+  - Removed obsolete getDirectorFilter import from Watchlist.spec.tsx
+  - Updated 16 snapshots for new UI structure
+- **Linting:** ✅ Passing (0 errors)
+- **Tests:** 602/605 passing (99.5%)
+- **TypeScript:** ✅ Passing (0 errors)
+
 **Remaining Work:**
-- Fix linting errors (65 errors, mostly auto-fixable)
-- Fix failing tests (28 failed, mostly snapshot updates needed)
-- Run final quality checks (lint, format, build)
+- Fix 3 integration test failures (CastAndCrewMemberTitles and CastAndCrew clear filters tests)
+- Run final quality checks (format, build)
