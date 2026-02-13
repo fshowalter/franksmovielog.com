@@ -7,7 +7,9 @@ import { buildAppliedFilterChips } from "./appliedFilterChips";
 describe("buildAppliedFilterChips", () => {
   it("returns empty array when no filters applied", () => {
     const filterValues: WatchlistFiltersValues = { genres: [] };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toEqual([]);
   });
@@ -16,7 +18,9 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: WatchlistFiltersValues = {
       genres: ["Horror", "Action"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(2);
     expect(chips[0]).toEqual({
@@ -36,7 +40,9 @@ describe("buildAppliedFilterChips", () => {
       genres: [],
       releaseYear: ["2020", "2020"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
@@ -51,7 +57,9 @@ describe("buildAppliedFilterChips", () => {
       genres: [],
       releaseYear: ["1980", "1989"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
@@ -59,6 +67,28 @@ describe("buildAppliedFilterChips", () => {
       id: "releaseYear",
       label: "1980-1989",
     });
+  });
+
+  it("does not build release year chip for full default range", () => {
+    const filterValues: WatchlistFiltersValues = {
+      genres: [],
+      releaseYear: ["1920", "2024"],
+    };
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
+
+    expect(chips).toHaveLength(0);
+  });
+
+  it("does not build release year chip when context missing", () => {
+    const filterValues: WatchlistFiltersValues = {
+      genres: [],
+      releaseYear: ["1980", "1989"],
+    };
+    const chips = buildAppliedFilterChips(filterValues);
+
+    expect(chips).toHaveLength(0);
   });
 
   it("builds director chip when director selected", () => {
@@ -69,7 +99,9 @@ describe("buildAppliedFilterChips", () => {
       performer: [],
       writer: [],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
@@ -87,7 +119,9 @@ describe("buildAppliedFilterChips", () => {
       performer: ["Tom Hanks"],
       writer: [],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
@@ -105,7 +139,9 @@ describe("buildAppliedFilterChips", () => {
       performer: [],
       writer: ["Aaron Sorkin"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
@@ -123,7 +159,9 @@ describe("buildAppliedFilterChips", () => {
       performer: [],
       writer: [],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
@@ -138,7 +176,9 @@ describe("buildAppliedFilterChips", () => {
       genres: [],
       title: "dark knight",
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
@@ -153,7 +193,9 @@ describe("buildAppliedFilterChips", () => {
       genres: [],
       title: "",
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(0);
   });
@@ -163,7 +205,9 @@ describe("buildAppliedFilterChips", () => {
       genres: [],
       title: "   ",
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(0);
   });
@@ -178,7 +222,9 @@ describe("buildAppliedFilterChips", () => {
       title: "dark knight",
       writer: ["Aaron Sorkin"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(8);
     // Verify order: genres, releaseYear, director, performer, writer, collection, title
@@ -198,7 +244,9 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: WatchlistFiltersValues = {
       genres: ["Science Fiction"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
@@ -213,7 +261,9 @@ describe("buildAppliedFilterChips", () => {
       genres: [],
       releaseYear: undefined,
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toHaveLength(0);
   });

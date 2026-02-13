@@ -16,7 +16,9 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: ViewingsFiltersValues = {
       releaseYear: ["2020", "2023"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toEqual([
       {
@@ -31,7 +33,9 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: ViewingsFiltersValues = {
       releaseYear: ["2022", "2022"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
 
     expect(chips).toEqual([
       {
@@ -40,6 +44,26 @@ describe("buildAppliedFilterChips", () => {
         label: "2022",
       },
     ]);
+  });
+
+  it("does not create chip for release year full default range", () => {
+    const filterValues: ViewingsFiltersValues = {
+      releaseYear: ["1920", "2024"],
+    };
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+    });
+
+    expect(chips).toEqual([]);
+  });
+
+  it("does not create chip for release year when context missing", () => {
+    const filterValues: ViewingsFiltersValues = {
+      releaseYear: ["2020", "2023"],
+    };
+    const chips = buildAppliedFilterChips(filterValues);
+
+    expect(chips).toEqual([]);
   });
 
   it("creates chip for each reviewed status value", () => {
@@ -70,7 +94,9 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: ViewingsFiltersValues = {
       viewingYear: ["2023", "2024"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctViewingYears: ["2020", "2024"],
+    });
 
     expect(chips).toEqual([
       {
@@ -85,7 +111,9 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: ViewingsFiltersValues = {
       viewingYear: ["2024", "2024"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctViewingYears: ["2020", "2024"],
+    });
 
     expect(chips).toEqual([
       {
@@ -94,6 +122,26 @@ describe("buildAppliedFilterChips", () => {
         label: "2024",
       },
     ]);
+  });
+
+  it("does not create chip for viewing year full default range", () => {
+    const filterValues: ViewingsFiltersValues = {
+      viewingYear: ["2020", "2024"],
+    };
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctViewingYears: ["2020", "2024"],
+    });
+
+    expect(chips).toEqual([]);
+  });
+
+  it("does not create chip for viewing year when context missing", () => {
+    const filterValues: ViewingsFiltersValues = {
+      viewingYear: ["2023", "2024"],
+    };
+    const chips = buildAppliedFilterChips(filterValues);
+
+    expect(chips).toEqual([]);
   });
 
   it("creates chips for each medium value", () => {
@@ -187,7 +235,10 @@ describe("buildAppliedFilterChips", () => {
       venue: ["Theater"],
       viewingYear: ["2024", "2024"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctViewingYears: ["2020", "2024"],
+    });
 
     expect(chips).toEqual([
       {
@@ -233,7 +284,10 @@ describe("buildAppliedFilterChips", () => {
       venue: ["Home"],
       viewingYear: ["2023", "2024"],
     };
-    const chips = buildAppliedFilterChips(filterValues);
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctViewingYears: ["2020", "2024"],
+    });
 
     // Expect consistent order: releaseYear, reviewedStatus, viewingYear, medium, venue, title
     expect(chips.map((chip) => chip.id)).toEqual([
@@ -243,6 +297,32 @@ describe("buildAppliedFilterChips", () => {
       "medium-streaming",
       "venue-home",
       "title",
+    ]);
+  });
+
+  it("excludes default year ranges from combined filters", () => {
+    const filterValues: ViewingsFiltersValues = {
+      medium: ["DVD"],
+      releaseYear: ["1920", "2024"], // Full range
+      venue: ["Home"],
+      viewingYear: ["2020", "2024"], // Full range
+    };
+    const chips = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctViewingYears: ["2020", "2024"],
+    });
+
+    expect(chips).toEqual([
+      {
+        category: "Medium",
+        id: "medium-dvd",
+        label: "DVD",
+      },
+      {
+        category: "Venue",
+        id: "venue-home",
+        label: "Home",
+      },
     ]);
   });
 });

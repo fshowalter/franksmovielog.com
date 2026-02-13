@@ -7,7 +7,10 @@ import { buildAppliedFilterChips } from "./appliedFilterChips";
 describe("buildAppliedFilterChips", () => {
   it("returns empty array when no filters applied", () => {
     const filterValues: CollectionTitlesFiltersValues = {};
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([]);
   });
 
@@ -15,7 +18,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       genres: ["Horror", "Action"],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Genre",
@@ -34,7 +40,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       genres: ["Science Fiction"],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Genre",
@@ -48,7 +57,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       gradeValue: [11, 11], // A-
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Grade",
@@ -62,7 +74,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       gradeValue: [8, 10], // B- to B+
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Grade",
@@ -76,7 +91,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       gradeValue: [1, 13],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([]);
   });
 
@@ -84,7 +102,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       releaseYear: ["1980", "1980"],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Release Year",
@@ -98,7 +119,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       releaseYear: ["1980", "1989"],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Release Year",
@@ -112,7 +136,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       reviewYear: ["2020", "2020"],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Review Year",
@@ -126,7 +153,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       reviewYear: ["2020", "2023"],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Review Year",
@@ -136,11 +166,45 @@ describe("buildAppliedFilterChips", () => {
     ]);
   });
 
+  it("does not build release year chip for full default range", () => {
+    const filterValues: CollectionTitlesFiltersValues = {
+      releaseYear: ["1920", "2024"],
+    };
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
+    expect(result).toEqual([]);
+  });
+
+  it("does not build review year chip for full default range", () => {
+    const filterValues: CollectionTitlesFiltersValues = {
+      reviewYear: ["2018", "2024"],
+    };
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
+    expect(result).toEqual([]);
+  });
+
+  it("does not build year chips when context missing", () => {
+    const filterValues: CollectionTitlesFiltersValues = {
+      releaseYear: ["2020", "2023"],
+      reviewYear: ["2020", "2023"],
+    };
+    const result = buildAppliedFilterChips(filterValues);
+    expect(result).toEqual([]);
+  });
+
   it("builds chip for each selected reviewed status", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       reviewedStatus: ["Reviewed"],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Reviewed Status",
@@ -154,7 +218,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       reviewedStatus: ["Reviewed", "Not Reviewed"],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Reviewed Status",
@@ -173,7 +240,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       reviewedStatus: [],
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([]);
   });
 
@@ -181,7 +251,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       title: "alien",
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Search",
@@ -195,7 +268,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       title: "",
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([]);
   });
 
@@ -203,7 +279,10 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       title: "   ",
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([]);
   });
 
@@ -216,7 +295,10 @@ describe("buildAppliedFilterChips", () => {
       reviewYear: ["2020", "2023"],
       title: "night",
     };
-    const result = buildAppliedFilterChips(filterValues);
+    const result = buildAppliedFilterChips(filterValues, {
+      distinctReleaseYears: ["1920", "2024"],
+      distinctReviewYears: ["2018", "2024"],
+    });
     expect(result).toEqual([
       {
         category: "Genre",

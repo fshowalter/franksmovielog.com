@@ -112,7 +112,9 @@ export function Watchlist({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
-  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues, {
+    distinctReleaseYears,
+  });
 
   /**
    * Handles removal of individual filter chips.

@@ -111,7 +111,10 @@ export function Viewings({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
-  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues, {
+    distinctReleaseYears,
+    distinctViewingYears,
+  });
 
   const [previousMonthDate, currentMonthDate, nextMonthDate] =
     useMonthNavigation(filteredValues, state.sort, state.selectedMonthDate);

@@ -26,10 +26,17 @@ const GRADE_MAP: Record<number, string> = {
  * into a flat array of chips that can be displayed in the AppliedFilters component.
  *
  * @param filterValues - Current active filter values
+ * @param context - Optional context with available years for full-range checks
+ * @param context.distinctReleaseYears - Available release years
+ * @param context.distinctReviewYears - Available review years
  * @returns Array of FilterChip objects representing active filters
  */
 export function buildAppliedFilterChips(
   filterValues: CastAndCrewMemberTitlesFiltersValues,
+  context?: {
+    distinctReleaseYears?: readonly string[];
+    distinctReviewYears?: readonly string[];
+  },
 ): FilterChip[] {
   const chips: FilterChip[] = [];
 
@@ -62,23 +69,39 @@ export function buildAppliedFilterChips(
   }
 
   // Release Year chip (range)
-  if (filterValues.releaseYear) {
+  // AIDEV-NOTE: Only show chip if range is not full default (FILTER_REDESIGN_SPEC.md Issue 3)
+  if (filterValues.releaseYear && context?.distinctReleaseYears) {
     const [minYear, maxYear] = filterValues.releaseYear;
-    chips.push({
-      category: "Release Year",
-      id: "releaseYear",
-      label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
-    });
+    const availableMin = context.distinctReleaseYears[0];
+    const availableMax =
+      context.distinctReleaseYears[context.distinctReleaseYears.length - 1];
+
+    // Only show chip if not full range
+    if (minYear !== availableMin || maxYear !== availableMax) {
+      chips.push({
+        category: "Release Year",
+        id: "releaseYear",
+        label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
+      });
+    }
   }
 
   // Review Year chip (range)
-  if (filterValues.reviewYear) {
+  // AIDEV-NOTE: Only show chip if range is not full default (FILTER_REDESIGN_SPEC.md Issue 3)
+  if (filterValues.reviewYear && context?.distinctReviewYears) {
     const [minYear, maxYear] = filterValues.reviewYear;
-    chips.push({
-      category: "Review Year",
-      id: "reviewYear",
-      label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
-    });
+    const availableMin = context.distinctReviewYears[0];
+    const availableMax =
+      context.distinctReviewYears[context.distinctReviewYears.length - 1];
+
+    // Only show chip if not full range
+    if (minYear !== availableMin || maxYear !== availableMax) {
+      chips.push({
+        category: "Review Year",
+        id: "reviewYear",
+        label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
+      });
+    }
   }
 
   // Reviewed Status chips (multi-select)

@@ -9,6 +9,9 @@ import type { ViewingsFiltersValues } from "./Viewings.reducer";
  * into a flat array of chips that can be displayed in the AppliedFilters component.
  *
  * @param filterValues - Current active filter values
+ * @param context - Optional context with available years for full-range checks
+ * @param context.distinctReleaseYears - Available release years
+ * @param context.distinctViewingYears - Available viewing years
  * @returns Array of FilterChip objects representing active filters
  *
  * @example
@@ -19,6 +22,9 @@ import type { ViewingsFiltersValues } from "./Viewings.reducer";
  *   medium: ["Blu-ray", "4K UHD"],
  *   venue: ["Home", "Theater"],
  *   title: "alien"
+ * }, {
+ *   distinctReleaseYears: ["1920", "2024"],
+ *   distinctViewingYears: ["2018", "2024"]
  * })
  * // Returns:
  * // [
@@ -34,19 +40,35 @@ import type { ViewingsFiltersValues } from "./Viewings.reducer";
  */
 export function buildAppliedFilterChips(
   filterValues: ViewingsFiltersValues,
+  context?: {
+    distinctReleaseYears?: readonly string[];
+    distinctViewingYears?: readonly string[];
+  },
 ): FilterChip[] {
   const chips: FilterChip[] = [];
 
   // Release Year chip (range)
-  if (filterValues.releaseYear && filterValues.releaseYear.length > 0) {
+  // AIDEV-NOTE: Only show chip if range is not full default (FILTER_REDESIGN_SPEC.md Issue 3)
+  if (
+    filterValues.releaseYear &&
+    filterValues.releaseYear.length > 0 &&
+    context?.distinctReleaseYears
+  ) {
     const years = filterValues.releaseYear;
     const minYear = years[0];
     const maxYear = years.at(-1);
-    chips.push({
-      category: "Release Year",
-      id: "releaseYear",
-      label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
-    });
+    const availableMin = context.distinctReleaseYears[0];
+    const availableMax =
+      context.distinctReleaseYears[context.distinctReleaseYears.length - 1];
+
+    // Only show chip if not full range
+    if (minYear !== availableMin || maxYear !== availableMax) {
+      chips.push({
+        category: "Release Year",
+        id: "releaseYear",
+        label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
+      });
+    }
   }
 
   // Reviewed Status chips (multi-select, one chip per status)
@@ -61,13 +83,25 @@ export function buildAppliedFilterChips(
   }
 
   // Viewing Year chip (range)
-  if (filterValues.viewingYear && filterValues.viewingYear.length > 0) {
+  // AIDEV-NOTE: Only show chip if range is not full default (FILTER_REDESIGN_SPEC.md Issue 3)
+  if (
+    filterValues.viewingYear &&
+    filterValues.viewingYear.length > 0 &&
+    context?.distinctViewingYears
+  ) {
     const [minYear, maxYear] = filterValues.viewingYear;
-    chips.push({
-      category: "Viewing Year",
-      id: "viewingYear",
-      label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
-    });
+    const availableMin = context.distinctViewingYears[0];
+    const availableMax =
+      context.distinctViewingYears[context.distinctViewingYears.length - 1];
+
+    // Only show chip if not full range
+    if (minYear !== availableMin || maxYear !== availableMax) {
+      chips.push({
+        category: "Viewing Year",
+        id: "viewingYear",
+        label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
+      });
+    }
   }
 
   // Medium chips (multi-select, one chip per medium)

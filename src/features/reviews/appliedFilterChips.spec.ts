@@ -201,7 +201,9 @@ describe("buildAppliedFilterChips", () => {
         releaseYear: ["1980", "1980"],
       };
 
-      const result = buildAppliedFilterChips(filterValues);
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReleaseYears: ["1920", "2024"],
+      });
 
       expect(result).toEqual([
         {
@@ -217,7 +219,9 @@ describe("buildAppliedFilterChips", () => {
         releaseYear: ["1980", "1989"],
       };
 
-      const result = buildAppliedFilterChips(filterValues);
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReleaseYears: ["1920", "2024"],
+      });
 
       expect(result).toEqual([
         {
@@ -227,6 +231,28 @@ describe("buildAppliedFilterChips", () => {
         },
       ]);
     });
+
+    it("does not create chip for full default range", () => {
+      const filterValues: ReviewsFiltersValues = {
+        releaseYear: ["1920", "2024"],
+      };
+
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReleaseYears: ["1920", "2024"],
+      });
+
+      expect(result).toEqual([]);
+    });
+
+    it("does not create chip when context is missing", () => {
+      const filterValues: ReviewsFiltersValues = {
+        releaseYear: ["1980", "1989"],
+      };
+
+      const result = buildAppliedFilterChips(filterValues);
+
+      expect(result).toEqual([]);
+    });
   });
 
   describe("review year filter", () => {
@@ -235,7 +261,9 @@ describe("buildAppliedFilterChips", () => {
         reviewYear: ["2020", "2020"],
       };
 
-      const result = buildAppliedFilterChips(filterValues);
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReviewYears: ["2018", "2024"],
+      });
 
       expect(result).toEqual([
         {
@@ -251,7 +279,9 @@ describe("buildAppliedFilterChips", () => {
         reviewYear: ["2020", "2024"],
       };
 
-      const result = buildAppliedFilterChips(filterValues);
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReviewYears: ["2018", "2024"],
+      });
 
       expect(result).toEqual([
         {
@@ -260,6 +290,28 @@ describe("buildAppliedFilterChips", () => {
           label: "2020-2024",
         },
       ]);
+    });
+
+    it("does not create chip for full default range", () => {
+      const filterValues: ReviewsFiltersValues = {
+        reviewYear: ["2018", "2024"],
+      };
+
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReviewYears: ["2018", "2024"],
+      });
+
+      expect(result).toEqual([]);
+    });
+
+    it("does not create chip when context is missing", () => {
+      const filterValues: ReviewsFiltersValues = {
+        reviewYear: ["2020", "2024"],
+      };
+
+      const result = buildAppliedFilterChips(filterValues);
+
+      expect(result).toEqual([]);
     });
   });
 
@@ -327,7 +379,10 @@ describe("buildAppliedFilterChips", () => {
         title: "alien",
       };
 
-      const result = buildAppliedFilterChips(filterValues);
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReleaseYears: ["1920", "2024"],
+        distinctReviewYears: ["2018", "2024"],
+      });
 
       expect(result).toEqual([
         {
@@ -370,7 +425,9 @@ describe("buildAppliedFilterChips", () => {
         releaseYear: ["1980", "1989"],
       };
 
-      const result = buildAppliedFilterChips(filterValues);
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReleaseYears: ["1920", "2024"],
+      });
 
       expect(result).toEqual([
         {
@@ -393,7 +450,9 @@ describe("buildAppliedFilterChips", () => {
         title: "",
       };
 
-      const result = buildAppliedFilterChips(filterValues);
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReleaseYears: ["1920", "2024"],
+      });
 
       expect(result).toEqual([
         {
@@ -405,6 +464,27 @@ describe("buildAppliedFilterChips", () => {
           category: "Release Year",
           id: "releaseYear",
           label: "1980-1989",
+        },
+      ]);
+    });
+
+    it("excludes default year ranges from combined filters", () => {
+      const filterValues: ReviewsFiltersValues = {
+        genres: ["Horror"],
+        releaseYear: ["1920", "2024"], // Full range
+        reviewYear: ["2018", "2024"], // Full range
+      };
+
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReleaseYears: ["1920", "2024"],
+        distinctReviewYears: ["2018", "2024"],
+      });
+
+      expect(result).toEqual([
+        {
+          category: "Genre",
+          id: "genre-horror",
+          label: "Horror",
         },
       ]);
     });
@@ -420,7 +500,10 @@ describe("buildAppliedFilterChips", () => {
         title: "test",
       };
 
-      const result = buildAppliedFilterChips(filterValues);
+      const result = buildAppliedFilterChips(filterValues, {
+        distinctReleaseYears: ["1920", "2024"],
+        distinctReviewYears: ["2010", "2024"],
+      });
 
       expect(result.map((chip) => chip.category)).toEqual([
         "Genre",

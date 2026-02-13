@@ -9,6 +9,8 @@ import type { WatchlistFiltersValues } from "./Watchlist.reducer";
  * into a flat array of chips that can be displayed in the AppliedFilters component.
  *
  * @param filterValues - Current active filter values
+ * @param context - Optional context with available years for full-range checks
+ * @param context.distinctReleaseYears - Available release years
  * @returns Array of FilterChip objects representing active filters
  *
  * @example
@@ -18,6 +20,8 @@ import type { WatchlistFiltersValues } from "./Watchlist.reducer";
  *   releaseYear: ["1980", "1989"],
  *   director: "Christopher Nolan",
  *   title: "dark knight"
+ * }, {
+ *   distinctReleaseYears: ["1920", "2024"]
  * })
  * // Returns:
  * // [
@@ -31,6 +35,9 @@ import type { WatchlistFiltersValues } from "./Watchlist.reducer";
  */
 export function buildAppliedFilterChips(
   filterValues: WatchlistFiltersValues,
+  context?: {
+    distinctReleaseYears?: readonly string[];
+  },
 ): FilterChip[] {
   const chips: FilterChip[] = [];
 
@@ -46,13 +53,25 @@ export function buildAppliedFilterChips(
   }
 
   // Release Year chip (range)
-  if (filterValues.releaseYear && filterValues.releaseYear.length === 2) {
+  // AIDEV-NOTE: Only show chip if range is not full default (FILTER_REDESIGN_SPEC.md Issue 3)
+  if (
+    filterValues.releaseYear &&
+    filterValues.releaseYear.length === 2 &&
+    context?.distinctReleaseYears
+  ) {
     const [minYear, maxYear] = filterValues.releaseYear;
-    chips.push({
-      category: "Release Year",
-      id: "releaseYear",
-      label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
-    });
+    const availableMin = context.distinctReleaseYears[0];
+    const availableMax =
+      context.distinctReleaseYears[context.distinctReleaseYears.length - 1];
+
+    // Only show chip if not full range
+    if (minYear !== availableMin || maxYear !== availableMax) {
+      chips.push({
+        category: "Release Year",
+        id: "releaseYear",
+        label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
+      });
+    }
   }
 
   // Director chips (multi-select)

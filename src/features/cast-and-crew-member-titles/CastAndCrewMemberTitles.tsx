@@ -110,7 +110,10 @@ export function CastAndCrewMemberTitles({
   // AIDEV-NOTE: Spec compliance - AppliedFilters must show pending filters for real-time updates
   return (
     <FilterAndSortContainer
-      activeFilters={buildAppliedFilterChips(state.pendingFilterValues)}
+      activeFilters={buildAppliedFilterChips(state.pendingFilterValues, {
+        distinctReleaseYears,
+        distinctReviewYears,
+      })}
       filters={
         <CastAndCrewMemberTitlesFilters
           dispatch={dispatch}

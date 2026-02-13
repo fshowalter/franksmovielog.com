@@ -101,7 +101,10 @@ export function CollectionTitles({
   const hasPendingFilters = selectHasPendingFilters(state);
 
   // AIDEV-NOTE: Spec compliance - AppliedFilters must show pending filters for real-time updates
-  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues, {
+    distinctReleaseYears,
+    distinctReviewYears,
+  });
 
   return (
     <FilterAndSortContainer
