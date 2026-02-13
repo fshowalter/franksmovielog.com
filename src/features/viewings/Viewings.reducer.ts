@@ -337,11 +337,11 @@ function handleRemoveAppliedFilter(
   // For all other filters, use the default behavior (remove entire filter)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { [action.filterKey]: _removed, ...remainingFilters } =
-    state.pendingFilterValues;
+    state.pendingFilterValues as Record<string, unknown>;
 
   return {
     ...state,
-    pendingFilterValues: remainingFilters,
+    pendingFilterValues: remainingFilters as ViewingsFiltersValues,
   };
 }
 

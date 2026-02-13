@@ -30,7 +30,7 @@ export function YearField({
 
   // AIDEV-NOTE: Convert year strings to numbers for slider
   const minYearNum = Number.parseInt(years[0], 10);
-  const maxYearNum = Number.parseInt(years.at(-1), 10);
+  const maxYearNum = Number.parseInt(years.at(-1)!, 10);
   const currentMinNum = Number.parseInt(minYear, 10);
   const currentMaxNum = Number.parseInt(maxYear, 10);
 
@@ -68,7 +68,7 @@ export function YearField({
   // AIDEV-NOTE: Clear resets to full range
   const handleClear = (): void => {
     const fullMin = years[0];
-    const fullMax = years.at(-1);
+    const fullMax = years.at(-1)!;
     setMinYear(fullMin);
     setMaxYear(fullMax);
     onYearChange([fullMin, fullMax]);

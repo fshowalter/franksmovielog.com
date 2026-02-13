@@ -132,14 +132,14 @@ export function filterViewings(
 function createMediumFilter(filterValue?: readonly string[]) {
   if (!filterValue || filterValue.length === 0) return;
   return (value: ViewingsValue) => {
-    return filterValue.includes(value.medium);
+    return value.medium ? filterValue.includes(value.medium) : false;
   };
 }
 
 function createVenueFilter(filterValue?: readonly string[]) {
   if (!filterValue || filterValue.length === 0) return;
   return (value: ViewingsValue) => {
-    return filterValue.includes(value.venue);
+    return value.venue ? filterValue.includes(value.venue) : false;
   };
 }
 

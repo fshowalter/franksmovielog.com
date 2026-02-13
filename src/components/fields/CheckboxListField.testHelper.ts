@@ -37,14 +37,14 @@ export async function clickCheckboxListOption(
   }
 
   // Try to find the checkbox - it might be hidden behind "Show more"
-  let checkboxes = within(targetGroup).getAllByRole("checkbox");
+  let checkboxes = within(targetGroup as HTMLElement).getAllByRole("checkbox");
   let checkbox = checkboxes.find(
     (cb) => (cb as HTMLInputElement).value === optionValue,
   );
 
   // If not found, try clicking "Show more" button
   if (!checkbox) {
-    const showMoreButton = within(targetGroup).queryByRole("button", {
+    const showMoreButton = within(targetGroup as HTMLElement).queryByRole("button", {
       name: /\+ Show more/,
     });
 
@@ -52,7 +52,7 @@ export async function clickCheckboxListOption(
       await user.click(showMoreButton);
 
       // Try finding the checkbox again
-      checkboxes = within(targetGroup).getAllByRole("checkbox");
+      checkboxes = within(targetGroup as HTMLElement).getAllByRole("checkbox");
       checkbox = checkboxes.find(
         (cb) => (cb as HTMLInputElement).value === optionValue,
       );

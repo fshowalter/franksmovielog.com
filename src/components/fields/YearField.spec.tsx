@@ -73,8 +73,8 @@ describe("YearField", () => {
         name: /to/i,
       });
 
-      expect(fromSelect.value).toBe("2020");
-      expect(toSelect.value).toBe("2024");
+      expect((fromSelect as HTMLSelectElement).value).toBe("2020");
+      expect((toSelect as HTMLSelectElement).value).toBe("2024");
     });
 
     it("uses provided default values", () => {
@@ -94,8 +94,8 @@ describe("YearField", () => {
         name: /to/i,
       });
 
-      expect(fromSelect.value).toBe("2021");
-      expect(toSelect.value).toBe("2023");
+      expect((fromSelect as HTMLSelectElement).value).toBe("2021");
+      expect((toSelect as HTMLSelectElement).value).toBe("2023");
     });
   });
 
@@ -236,7 +236,7 @@ describe("YearField", () => {
         "Release Year minimum value",
       );
 
-      expect(fromSlider.value).toBe("2022");
+      expect((fromSlider as HTMLInputElement).value).toBe("2022");
     });
   });
 
@@ -356,7 +356,7 @@ describe("YearField", () => {
 
       await user.selectOptions(fromSelect, "2022");
 
-      expect(fromSlider.value).toBe("2022");
+      expect((fromSlider as HTMLInputElement).value).toBe("2022");
     });
   });
 });

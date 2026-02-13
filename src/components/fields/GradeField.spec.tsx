@@ -67,8 +67,8 @@ describe("GradeField", () => {
         name: /to/i,
       });
 
-      expect(fromSelect.value).toBe("1"); // F
-      expect(toSelect.value).toBe("13"); // A+
+      expect((fromSelect as HTMLSelectElement).value).toBe("1"); // F
+      expect((toSelect as HTMLSelectElement).value).toBe("13"); // A+
     });
 
     it("uses provided default values", () => {
@@ -87,8 +87,8 @@ describe("GradeField", () => {
         name: /to/i,
       });
 
-      expect(fromSelect.value).toBe("8"); // B-
-      expect(toSelect.value).toBe("11"); // A-
+      expect((fromSelect as HTMLSelectElement).value).toBe("8"); // B-
+      expect((toSelect as HTMLSelectElement).value).toBe("11"); // A-
     });
   });
 
@@ -222,7 +222,7 @@ describe("GradeField", () => {
         "Grade minimum value",
       );
 
-      expect(fromSlider.value).toBe("8");
+      expect((fromSlider as HTMLInputElement).value).toBe("8");
     });
 
     it("displays grade letters in slider range display", () => {
@@ -369,7 +369,7 @@ describe("GradeField", () => {
 
       await user.selectOptions(fromSelect, "8");
 
-      expect(fromSlider.value).toBe("8");
+      expect((fromSlider as HTMLInputElement).value).toBe("8");
     });
   });
 

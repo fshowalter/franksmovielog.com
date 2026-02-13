@@ -128,7 +128,7 @@ describe("calculateGenreCounts", () => {
 
   it("counts genres while respecting reviewed status filter", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
     };
     const counts = calculateGenreCounts(mockValues, filterValues);
 
@@ -313,7 +313,7 @@ describe("calculateReviewedStatusCounts", () => {
 
   it("ignores reviewed status filter when calculating counts", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      reviewedStatus: "Reviewed", // This should be ignored
+      reviewedStatus: ["Reviewed"], // This should be ignored
     };
     const counts = calculateReviewedStatusCounts(mockValues, filterValues);
 

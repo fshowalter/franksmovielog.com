@@ -43,7 +43,7 @@ export function CastAndCrewFilters({
       />
       <CreditedAsFilter
         counts={creditedAsCounts}
-        defaultValue={filterValues.creditedAs}
+        defaultValues={filterValues.creditedAs ?? []}
         onChange={(value) =>
           dispatch(createCreditedAsFilterChangedAction(value))
         }

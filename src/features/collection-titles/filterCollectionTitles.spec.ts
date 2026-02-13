@@ -100,7 +100,7 @@ describe("calculateGenreCounts", () => {
       mockTitle({ genres: ["Drama"], slug: "drama-movie" }),
     ];
     const filterValues: CollectionTitlesFiltersValues = {
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
     };
     const result = calculateGenreCounts(titles, filterValues);
 
@@ -150,7 +150,7 @@ describe("calculateGenreCounts", () => {
     const filterValues: CollectionTitlesFiltersValues = {
       gradeValue: [10, 13], // B+ to A+
       releaseYear: ["1980", "1989"],
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
     };
     const result = calculateGenreCounts(titles, filterValues);
 
@@ -216,7 +216,7 @@ describe("calculateReviewedStatusCounts", () => {
       mockTitle({ slug: undefined }),
     ];
     const filterValues: CollectionTitlesFiltersValues = {
-      reviewedStatus: "Reviewed", // This should be excluded from calculation
+      reviewedStatus: ["Reviewed"], // This should be excluded from calculation
     };
     const result = calculateReviewedStatusCounts(titles, filterValues);
 

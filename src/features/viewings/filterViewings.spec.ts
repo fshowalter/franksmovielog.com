@@ -82,7 +82,7 @@ describe("calculateMediumCounts", () => {
 
   it("respects venue filter when calculating medium counts", () => {
     const filterValues: ViewingsFiltersValues = {
-      venue: "Home",
+      venue: ["Home"],
     };
     const counts = calculateMediumCounts(values, filterValues);
 
@@ -105,7 +105,7 @@ describe("calculateMediumCounts", () => {
 
   it("respects reviewed status filter when calculating medium counts", () => {
     const filterValues: ViewingsFiltersValues = {
-      reviewedStatus: "Reviewed",
+      reviewedStatus: ["Reviewed"],
     };
     const counts = calculateMediumCounts(values, filterValues);
 
@@ -116,7 +116,7 @@ describe("calculateMediumCounts", () => {
 
   it("returns empty map when no viewings match filters", () => {
     const filterValues: ViewingsFiltersValues = {
-      venue: "Nonexistent",
+      venue: ["Nonexistent"],
     };
     const counts = calculateMediumCounts(values, filterValues);
 
@@ -189,7 +189,7 @@ describe("calculateVenueCounts", () => {
 
   it("respects medium filter when calculating venue counts", () => {
     const filterValues: ViewingsFiltersValues = {
-      medium: "Blu-ray",
+      medium: ["Blu-ray"],
     };
     const counts = calculateVenueCounts(values, filterValues);
 
@@ -293,7 +293,7 @@ describe("calculateReviewedStatusCounts", () => {
 
   it("respects medium filter when calculating reviewed status counts", () => {
     const filterValues: ViewingsFiltersValues = {
-      medium: "Blu-ray",
+      medium: ["Blu-ray"],
     };
     const counts = calculateReviewedStatusCounts(values, filterValues);
 
@@ -304,7 +304,7 @@ describe("calculateReviewedStatusCounts", () => {
 
   it("respects venue filter when calculating reviewed status counts", () => {
     const filterValues: ViewingsFiltersValues = {
-      venue: "Theater",
+      venue: ["Theater"],
     };
     const counts = calculateReviewedStatusCounts(values, filterValues);
 
@@ -326,7 +326,7 @@ describe("calculateReviewedStatusCounts", () => {
 
   it("returns zero counts when no viewings match filters", () => {
     const filterValues: ViewingsFiltersValues = {
-      medium: "Nonexistent",
+      medium: ["Nonexistent"],
     };
     const counts = calculateReviewedStatusCounts(values, filterValues);
 
