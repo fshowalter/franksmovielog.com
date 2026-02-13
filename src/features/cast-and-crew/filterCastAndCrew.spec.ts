@@ -61,7 +61,7 @@ describe("filterCastAndCrew", () => {
 
     it("filters by creditedAs = director", () => {
       const filterValues: CastAndCrewFiltersValues = {
-        creditedAs: "director",
+        creditedAs: ["director"],
       };
       const result = filterCastAndCrew(mockValues, filterValues);
 
@@ -75,7 +75,7 @@ describe("filterCastAndCrew", () => {
 
     it("filters by creditedAs = performer", () => {
       const filterValues: CastAndCrewFiltersValues = {
-        creditedAs: "performer",
+        creditedAs: ["performer"],
       };
       const result = filterCastAndCrew(mockValues, filterValues);
 
@@ -88,7 +88,7 @@ describe("filterCastAndCrew", () => {
 
     it("filters by creditedAs = writer", () => {
       const filterValues: CastAndCrewFiltersValues = {
-        creditedAs: "writer",
+        creditedAs: ["writer"],
       };
       const result = filterCastAndCrew(mockValues, filterValues);
 
@@ -96,6 +96,22 @@ describe("filterCastAndCrew", () => {
       expect(result.map((v) => v.name)).toEqual([
         "Christopher Nolan",
         "Aaron Sorkin",
+      ]);
+    });
+
+    it("filters by multiple creditedAs values", () => {
+      const filterValues: CastAndCrewFiltersValues = {
+        creditedAs: ["director", "writer"],
+      };
+      const result = filterCastAndCrew(mockValues, filterValues);
+
+      // Should match anyone who has director OR writer
+      expect(result).toHaveLength(4);
+      expect(result.map((v) => v.name)).toEqual([
+        "Christopher Nolan",
+        "Denis Villeneuve",
+        "Aaron Sorkin",
+        "Clint Eastwood",
       ]);
     });
 
@@ -111,7 +127,7 @@ describe("filterCastAndCrew", () => {
 
     it("filters by creditedAs and name", () => {
       const filterValues: CastAndCrewFiltersValues = {
-        creditedAs: "director",
+        creditedAs: ["director"],
         name: "nolan",
       };
       const result = filterCastAndCrew(mockValues, filterValues);
@@ -176,7 +192,7 @@ describe("calculateCreditedAsCounts", () => {
 
   it("excludes creditedAs filter when calculating counts", () => {
     const filterValues: CastAndCrewFiltersValues = {
-      creditedAs: "director",
+      creditedAs: ["director"],
     };
     const counts = calculateCreditedAsCounts(mockValues, filterValues);
 

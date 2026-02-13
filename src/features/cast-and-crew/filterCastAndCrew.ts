@@ -50,9 +50,10 @@ export function filterCastAndCrew(
   return filterCollections(filterValues, sortedValues, extraFilters);
 }
 
-function createCreditedAsFilter(filterValue?: string) {
-  if (!filterValue) return;
+function createCreditedAsFilter(filterValues?: readonly string[]) {
+  if (!filterValues || filterValues.length === 0) return;
   return (value: CastAndCrewValue) => {
-    return value.creditedAs.includes(filterValue);
+    // Match if the member has at least one of the selected credits
+    return filterValues.some((credit) => value.creditedAs.includes(credit));
   };
 }

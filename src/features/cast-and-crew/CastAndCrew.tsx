@@ -15,6 +15,7 @@ import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
+  createCreditedAsFilterChangedAction,
   createInitialState,
   createRemoveAppliedFilterAction,
   createResetFiltersAction,
@@ -86,6 +87,20 @@ export function CastAndCrew({
 
   const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
 
+  // Custom handler for removing individual creditedAs values
+  function handleRemoveAppliedFilter(filterId: string): void {
+    if (filterId.startsWith("creditedAs-")) {
+      const roleToRemove = filterId.replace("creditedAs-", "");
+      const currentRoles = state.pendingFilterValues.creditedAs || [];
+      const updatedRoles = currentRoles.filter(
+        (role) => role.toLowerCase() !== roleToRemove,
+      );
+      dispatch(createCreditedAsFilterChangedAction(updatedRoles));
+    } else {
+      dispatch(createRemoveAppliedFilterAction(filterId));
+    }
+  }
+
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
@@ -102,9 +117,7 @@ export function CastAndCrew({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={(filterKey) => {
-        dispatch(createRemoveAppliedFilterAction(filterKey));
-      }}
+      onRemoveFilter={handleRemoveAppliedFilter}
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}

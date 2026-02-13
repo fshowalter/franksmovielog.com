@@ -680,7 +680,7 @@ describe("CastAndCrewMemberTitles", () => {
       await clickClearFilters(user);
 
       expect(getTitleFilter()).toHaveValue("");
-      expect(getCreditedAsFilter()).toBe("All");
+      expect(getCreditedAsFilter()).toEqual([]);
 
       await clickViewResults(user);
 

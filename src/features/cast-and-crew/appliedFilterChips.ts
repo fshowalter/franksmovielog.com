@@ -38,17 +38,17 @@ export function buildAppliedFilterChips(
     });
   }
 
-  // Credited As chip (single-select)
-  if (filterValues.creditedAs && filterValues.creditedAs !== "All") {
-    // Capitalize the role (director -> Director, performer -> Performer, writer -> Writer)
-    const label =
-      filterValues.creditedAs.charAt(0).toUpperCase() +
-      filterValues.creditedAs.slice(1);
-    chips.push({
-      category: "Credited As",
-      id: "creditedAs",
-      label,
-    });
+  // Credited As chips (multi-select)
+  if (filterValues.creditedAs && filterValues.creditedAs.length > 0) {
+    for (const role of filterValues.creditedAs) {
+      // Capitalize the role (director -> Director, performer -> Performer, writer -> Writer)
+      const label = role.charAt(0).toUpperCase() + role.slice(1);
+      chips.push({
+        category: "Credited As",
+        id: `creditedAs-${role.toLowerCase()}`,
+        label,
+      });
+    }
   }
 
   return chips;

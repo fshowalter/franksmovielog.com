@@ -41,7 +41,7 @@ export type CastAndCrewAction =
  * Filter values for cast and crew.
  */
 export type CastAndCrewFiltersValues = CollectionFiltersValues & {
-  creditedAs?: string;
+  creditedAs?: readonly string[];
 };
 
 /**
@@ -58,18 +58,18 @@ type CastAndCrewState = Omit<
 
 type CreditedAsFilterChangedAction = {
   type: "castAndCrew/creditedAsFilterChanged";
-  value: string;
+  values: readonly string[];
 };
 
 /**
  * Creates an action for changing the credited-as filter.
- * @param value - The credited role to filter by
+ * @param values - The credited roles to filter by
  * @returns Credited-as filter changed action
  */
 export function createCreditedAsFilterChangedAction(
-  value: string,
+  values: readonly string[],
 ): CreditedAsFilterChangedAction {
-  return { type: "castAndCrew/creditedAsFilterChanged", value };
+  return { type: "castAndCrew/creditedAsFilterChanged", values };
 }
 
 /**
@@ -125,7 +125,7 @@ function handleCreditedAsFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      creditedAs: action.value === "All" ? undefined : action.value,
+      creditedAs: action.values.length === 0 ? undefined : action.values,
     },
   };
 }

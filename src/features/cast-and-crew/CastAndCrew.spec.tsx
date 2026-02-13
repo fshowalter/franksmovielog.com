@@ -262,7 +262,7 @@ describe("CastAndCrew", () => {
 
       // Check that all filters are cleared
       expect(getNameFilter()).toHaveValue("");
-      expect(getCreditedAsFilter()).toBe("All");
+      expect(getCreditedAsFilter()).toEqual([]);
 
       await clickViewResults(user);
 

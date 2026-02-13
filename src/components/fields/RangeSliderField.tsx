@@ -2,8 +2,6 @@ import type { ChangeEvent, KeyboardEvent } from "react";
 
 import { useEffect, useRef, useState } from "react";
 
-import { LabelText } from "./LabelText";
-
 export type FormatValueFunction = (value: number) => string;
 
 export type RangeSliderFieldProps = {
