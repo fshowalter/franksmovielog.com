@@ -1224,6 +1224,44 @@ All filters now allow multiple selection matching Orbit DVD behavior:
 - **Tests:** 602/605 passing (99.5%)
 - **TypeScript:** ✅ Passing (0 errors)
 
-**Remaining Work:**
-- Fix 3 integration test failures (CastAndCrewMemberTitles and CastAndCrew clear filters tests)
-- Run final quality checks (format, build)
+**Completed:**
+- Fixed CastAndCrew CreditedAs filter conversion (was missed in Stage 8)
+- All 607 tests passing
+- All quality checks passing (lint, check)
+- Formatting issues identified (need format:fix approval)
+
+
+---
+
+### CastAndCrew CreditedAs Multi-Select Conversion ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** 13789721b
+- **Issue:** CastAndCrew page CreditedAs filter was not converted to multi-select in Stage 8
+- **Files Modified:**
+  - `/src/features/cast-and-crew/CastAndCrew.reducer.ts` - Changed creditedAs to readonly string[]
+  - `/src/features/cast-and-crew/CastAndCrew.tsx` - Added handleRemoveAppliedFilter for individual removal
+  - `/src/features/cast-and-crew/appliedFilterChips.ts` - Create chip per creditedAs value
+  - `/src/features/cast-and-crew/appliedFilterChips.spec.ts` - Updated tests for arrays
+  - `/src/features/cast-and-crew/filterCastAndCrew.ts` - Updated filter to handle arrays
+  - `/src/features/cast-and-crew/filterCastAndCrew.spec.ts` - Updated tests for arrays
+  - `/src/features/cast-and-crew/CastAndCrew.spec.tsx` - Updated clear filters test
+  - `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.spec.tsx` - Updated clear filters test
+  - `/src/components/fields/RangeSliderField.tsx` - Removed unused LabelText import
+- **Tests:** 607/607 passing (100%)
+- **Features Implemented:**
+  - CreditedAs filter now allows multiple selection via checkboxes
+  - Each selected credit creates individual chip in AppliedFilters
+  - Chip IDs use kebab-case format (e.g., "creditedAs-director")
+  - Custom handleRemoveAppliedFilter supports removing individual creditedAs values
+  - Dynamic counts update based on other active filters
+  - All filter logic updated to handle creditedAs as array
+  - Filter logic: member matches if they have at least one of the selected credits
+  - Added test case for filtering by multiple creditedAs values simultaneously
+
+**Notes:**
+- This was an oversight from Stage 8 - CastAndCrew page was converted to RadioListField in Stage 5 but not updated to CheckboxListField in Stage 8
+- Successfully converted from single-select to multi-select matching Orbit DVD pattern
+- All tests now passing after updating expectations from "All" string to [] empty array
+- This completes ALL conversions from RadioListField to CheckboxListField across the entire codebase
+- RadioListField component was already removed in Stage 8, so this was the last usage
