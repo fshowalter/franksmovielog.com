@@ -1183,6 +1183,33 @@ All filters now allow multiple selection matching Orbit DVD behavior:
 
 ---
 
+## Stage 9: Post-Implementation Corrections
+
+### Issue 2: Arrow Direction Incorrect ✅
+
+- **Completed:** 2026-02-12
+- **Commit:** 37740cbe9
+- **Files Modified:**
+  - `/src/components/filter-and-sort/FilterSection.tsx` - Updated SVG to point down, rotate 180°
+  - `/src/components/filter-and-sort/__snapshots__/FilterSection.spec.tsx.snap` - Updated snapshots
+  - 13 page-level snapshots updated
+- **Tests:** 607/607 passing
+- **Features Implemented:**
+  - Disclosure triangle now points down (▼) when section is open
+  - Triangle points up (▲) when section is closed
+  - Rotates 180° when toggling (was 90°)
+  - Changed viewBox from "0 0 8 12" (portrait) to "0 0 12 8" (landscape)
+  - Updated SVG path to draw down-pointing triangle
+  - Matches Orbit DVD reference pattern
+
+**Notes:**
+- This was the highest-leverage task from Stage 9 (isolated, no dependencies)
+- SVG now correctly shows down/up arrows instead of right/down
+- All visual details match the spec and Orbit DVD reference
+- All linting passes, format warnings are pre-existing from Stage 8
+
+---
+
 ## Post-Stage 8 Cleanup
 
 ### TypeScript Fixes ✅
