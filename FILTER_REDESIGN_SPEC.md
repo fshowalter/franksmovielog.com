@@ -63,7 +63,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 ```
 ┌─────────────────────────────────────┐
-│ ▼ Genres                            │  ← Summary (clickable)
+│ Genres                            ▼ │  ← Summary (clickable)
 ├─────────────────────────────────────┤
 │ ☐ Action (127)                      │
 │ ☐ Comedy (98)                       │
@@ -74,7 +74,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 (After expanding)
 ┌─────────────────────────────────────┐
-│ ▼ Genres                            │
+│ Genres                            ▼ │
 ├─────────────────────────────────────┤
 │ ☐ Action (127)                      │
 │ ☐ Comedy (98)                       │
@@ -87,7 +87,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 (After selection, collapsed view)
 ┌─────────────────────────────────────┐
-│ ▼ Genres                            │
+│ Genres                            ▼ │
 ├─────────────────────────────────────┤
 │ ☑ Horror (156)                      │  ← Selected items at top
 │ ☐ Action (127)                      │
@@ -99,7 +99,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 (When collapsed)
 ┌─────────────────────────────────────┐
-│ ▶ Genres                            │
+│ Genres                            ▲ │
 └─────────────────────────────────────┘
 ```
 
@@ -108,7 +108,8 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 #### Summary (Always Visible)
 
 - **Section title:** Filter category name (e.g., "Genres", "Release Year")
-- **Disclosure triangle:** ▶ when closed, ▼ when open (positioned on far right side)
+- **Disclosure triangle:** Points down (▼) when section is open, points up (▲) when section is closed (positioned on far right side)
+  - **IMPORTANT:** Arrow rotates 180° (not 90°) when toggling between open/closed states
 
 #### Details (Collapsible Content)
 
@@ -131,6 +132,9 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 **Default State:**
 
 - **Open or closed?** All sections open by default (matching Orbit DVD pattern for better discoverability)
+  - **CRITICAL:** Do NOT conditionally set `defaultOpen` based on filter state or existing selections
+  - FilterSection component defaults to `defaultOpen={true}` - filter components should NOT override this
+  - All sections should be open on page load regardless of whether filters are active
 - **Initial limit:** Show first 3 items, hide rest behind "Show more"
 - **After expanding:** All items visible (stays expanded until section collapsed)
 - **State persistence:** User's open/closed state does NOT persist (resets on page load)
@@ -399,8 +403,8 @@ hover:bg-stripe focus:bg-stripe
 /* Section title - LEFT aligned */
 flex items-center gap-2 text-base font-medium text-default
 
-/* Disclosure triangle - RIGHT aligned */
-ml-auto size-3 transition-transform [[open]>&]:rotate-90
+/* Disclosure triangle - RIGHT aligned, points down when open, up when closed */
+ml-auto size-3 transition-transform [[open]>&]:rotate-180
 
 /* Clear link */
 text-sm text-accent hover:underline focus:underline
@@ -522,6 +526,21 @@ Each filter option needs a count of matching items. For example:
 - `filteredReviews.ts` → add `calculateGenreCounts()` helper
 - `filteredWatchlist.ts` → add `calculateDirectorCounts()` helper
 - etc.
+
+### Range Filter Chips
+
+**CRITICAL:** Range filters (Year, Grade) should NOT display chips when set to full/default range.
+
+- Year ranges and grade ranges have dynamic min/max values that vary by page
+- Applied filter chip builders must check if current range equals full available range before creating chips
+- Only create chips when range is partially restricted (not showing all available values)
+- Example: If available years are 1920-2024 and user has selected 1920-2024, do NOT show chip
+- Example: If user has selected 1980-1989, DO show chip as "Release Year: 1980-1989"
+
+**Implementation:**
+- Pass available years/grades context to `buildAppliedFilterChips()` functions
+- Add full-range checks before creating year/grade chips
+- See grade filter for correct pattern (already has full-range check)
 
 ---
 

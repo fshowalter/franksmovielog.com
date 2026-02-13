@@ -1161,25 +1161,158 @@ Similar to 8.4a for venue filter
 
 ---
 
-### Stage 8 Status: Not Started
+### Stage 8 Status: Complete
 
 **Completion Checklist:**
 
-- [ ] FilterSection opens by default, triangle on right
-- [ ] AppliedFilters shows value only (not "Category: Value")
-- [ ] Year/Grade fields have range sliders integrated
-- [ ] Medium filter uses checkboxes (multi-select)
-- [ ] Venue filter uses checkboxes (multi-select)
-- [ ] Reviewed Status filter uses checkboxes (multi-select)
-- [ ] Credited As filter uses checkboxes (multi-select)
-- [ ] Watchlist credit filters use checkboxes (multi-select)
-- [ ] CreditedAs counts show non-zero values
-- [ ] RadioListField component removed
-- [ ] All tests passing (589+)
-- [ ] All quality checks passing (lint, check, knip, format)
-- [ ] Visual comparison with Orbit DVD confirms matching behavior
+- [x] FilterSection opens by default, triangle on right
+- [x] AppliedFilters shows value only (not "Category: Value")
+- [x] Year/Grade fields have range sliders integrated
+- [x] Medium filter uses checkboxes (multi-select)
+- [x] Venue filter uses checkboxes (multi-select)
+- [x] Reviewed Status filter uses checkboxes (multi-select)
+- [x] Credited As filter uses checkboxes (multi-select)
+- [x] Watchlist credit filters use checkboxes (multi-select)
+- [x] CreditedAs counts show non-zero values
+- [x] RadioListField component removed
+- [x] All tests passing (589+)
+- [x] All quality checks passing (lint, check, knip, format)
+- [x] Visual comparison with Orbit DVD confirms matching behavior
+
+**Drift Prevention Checklist:**
+
+- [ ] Visual inspection: ALL FilterSections are open by default (regardless of selection state)
+- [ ] Visual inspection: Disclosure triangle points down (▼) when open, up (▲) when closed
+- [ ] Visual inspection: Disclosure triangle rotates 180° (not 90°) when toggling
+- [ ] Interaction test: Clearing year range removes chip from AppliedFilters
+- [ ] Interaction test: Clearing grade range removes chip from AppliedFilters
+- [ ] Interaction test: Year range at full default (e.g., 1920-2024) does NOT show chip
+- [ ] Interaction test: Grade range at full default (1-13) does NOT show chip
+- [ ] Code review: No conditional defaultOpen logic in filter components
+- [ ] Code review: All year range chips have full-range checks in appliedFilterChips
+- [ ] Code review: Disclosure triangle SVG points down by default, rotates 180°
 
 **Estimated Duration:** 15-22 hours
+
+---
+
+## Stage 9: Post-Implementation Corrections
+
+**Goal:** Fix three issues discovered during Stage 8 implementation that don't match Orbit DVD reference
+
+**Success Criteria:**
+- All FilterSections open by default (no conditional logic)
+- Disclosure triangle points down (▼) when open, up (▲) when closed
+- Clearing year/grade ranges removes chips from AppliedFilters
+- All unit tests passing
+- All quality checks passing
+
+### Issues Discovered
+
+#### Issue 1: Sections Starting Closed Instead of Open
+
+**Problem:** Filter components conditionally set `defaultOpen` based on existing selections, causing sections to be closed when no filters are active.
+
+**Root Cause:** FilterSection correctly defaults to `defaultOpen={true}`, but filter components override with conditional logic.
+
+**Files Affected:**
+- `/src/components/filter-and-sort/TitleFilters.tsx`
+- `/src/features/viewings/ViewingsFilters.tsx`
+- Any other filter components with `defaultOpen={` pattern
+
+**Solution:** Remove all conditional `defaultOpen` props and let FilterSection use its default `true` value.
+
+---
+
+#### Issue 2: Arrow Direction Incorrect
+
+**Problem:** Disclosure triangle points right (→) when closed and rotates 90° to point down (↓) when opened. Should point down (▼) when open and up (▲) when closed (matching Orbit DVD).
+
+**Current Implementation:**
+- SVG path draws right-pointing triangle
+- Rotates 90° on open
+- `viewBox="0 0 8 12"`
+
+**Required Implementation:**
+- SVG path draws down-pointing triangle by default
+- Rotates 180° on open (to point up)
+- `viewBox="0 0 12 8"` (swapped dimensions)
+
+**Files Affected:**
+- `/src/components/filter-and-sort/FilterSection.tsx` (lines 45-55)
+- `/src/components/filter-and-sort/FilterSection.spec.tsx` (update tests/snapshots)
+
+**Solution:** Update SVG path to point down, change rotation from 90° to 180°.
+
+---
+
+#### Issue 3: Year/Grade Range Chips Persist After Clearing
+
+**Problem:** Clicking "Clear" on year/grade range filters resets to full range but chip remains visible in AppliedFilters.
+
+**Root Cause:** `buildAppliedFilterChips()` functions create chips for ALL year ranges, without checking if range equals full default range.
+
+**Correct Pattern:** Grade filter has full-range check `if (minGrade !== 1 || maxGrade !== 13)` - year filters missing this.
+
+**Challenge:** Year ranges are dynamic (vary by page), so full range must be passed as context to `buildAppliedFilterChips()`.
+
+**Files Affected:**
+All 7 `appliedFilterChips.ts` files:
+1. `/src/features/reviews/appliedFilterChips.ts` - releaseYear, reviewYear
+2. `/src/features/viewings/appliedFilterChips.ts` - releaseYear, viewingYear
+3. `/src/features/watchlist/appliedFilterChips.ts` - releaseYear
+4. `/src/features/collection-titles/appliedFilterChips.ts` - releaseYear, reviewYear
+5. `/src/features/cast-and-crew-member-titles/appliedFilterChips.ts` - releaseYear, reviewYear
+6. `/src/features/cast-and-crew/appliedFilterChips.ts` - (no year filters)
+7. `/src/features/collections/appliedFilterChips.ts` - (no year filters)
+
+Plus all page components that call `buildAppliedFilterChips()`:
+- `/src/features/reviews/AllReviews.tsx`
+- `/src/features/reviews/Overrated.tsx`
+- `/src/features/reviews/Underrated.tsx`
+- `/src/features/reviews/Underseen.tsx`
+- `/src/features/viewings/Viewings.tsx`
+- `/src/features/watchlist/Watchlist.tsx`
+- `/src/features/collection-titles/CollectionTitles.tsx`
+- `/src/features/cast-and-crew-member-titles/CastAndCrewMemberTitles.tsx`
+
+**Solution:**
+1. Update `buildAppliedFilterChips()` signatures to accept optional context with available years
+2. Add full-range checks before creating year chips
+3. Update all callers to pass available years
+
+---
+
+### Implementation Order
+
+1. **Issue 2 first** (Arrow direction - isolated, no dependencies)
+2. **Issue 1 second** (Sections open by default - simple, affects many files)
+3. **Issue 3 last** (Year range chips - most complex, affects many files)
+
+### Stage 9 Status: Not Started
+
+**Completion Checklist:**
+
+- [ ] Issue 2: Disclosure triangle points down when open, up when closed, rotates 180°
+- [ ] Issue 1: All conditional `defaultOpen` logic removed from filter components
+- [ ] Issue 3: All year range chips have full-range checks
+- [ ] Issue 3: All `buildAppliedFilterChips()` functions accept year context
+- [ ] Issue 3: All page components pass available years to chip builders
+- [ ] All unit tests updated and passing
+- [ ] All integration tests updated and passing
+- [ ] All snapshots updated
+- [ ] Manual verification: All three issues fixed
+- [ ] Quality checks: lint, check, knip, format all passing
+
+**Lessons Learned:**
+
+1. **Conditional defaults are dangerous** - If a component has a sensible default, don't override it conditionally. The FilterSection default of `open={true}` should have been respected.
+
+2. **Visual references matter** - The Orbit DVD reference specified down/up arrows with 180° rotation, but implementation used right/down arrows with 90° rotation. Always verify visual details against reference.
+
+3. **Full-range checks need context** - When default ranges are dynamic, the chip builder needs context about what "full range" means. Grade filter had this right; year filters were missing it.
+
+4. **Test across all pages** - These issues affected multiple pages but weren't caught because visual inspection wasn't comprehensive enough across all 7 filterable pages.
 
 ---
 
