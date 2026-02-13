@@ -41,17 +41,17 @@ export function FilterSection({
       >
         {/* Section title on left */}
         <span className="flex items-center gap-2">{title}</span>
-        {/* Disclosure triangle on far right - rotates based on open/closed state */}
+        {/* Disclosure triangle on far right - points down when open, up when closed, rotates 180° */}
         <svg
           aria-hidden="true"
           className="
             ml-auto size-3 transition-transform
-            [[open]>&]:rotate-90
+            [[open]>&]:rotate-180
           "
           fill="currentColor"
-          viewBox="0 0 8 12"
+          viewBox="0 0 12 8"
         >
-          <path d="M1.5 0L0 1.5 4.5 6 0 10.5 1.5 12 7.5 6z" />
+          <path d="M0 1.5L1.5 0 6 4.5 10.5 0 12 1.5 6 7.5z" />
         </svg>
       </summary>
       {/* Content area for filter fields */}
