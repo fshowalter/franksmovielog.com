@@ -10,11 +10,8 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
   >
     <summary
       class="
-          flex cursor-pointer items-center justify-between px-4 py-3 text-base
-          font-medium text-default
-          focus-within:bg-stripe
-          hover:bg-stripe
-          focus:outline-none
+          flex cursor-pointer items-center justify-between py-6 font-sans
+          text-base font-semibold tracking-normal text-subtle
         "
     >
       <span
@@ -37,7 +34,7 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
       </svg>
     </summary>
     <div
-      class="px-4 pb-3"
+      class="pb-6"
     >
       <div>
         Filter content here
@@ -58,11 +55,8 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
   >
     <summary
       class="
-          flex cursor-pointer items-center justify-between px-4 py-3 text-base
-          font-medium text-default
-          focus-within:bg-stripe
-          hover:bg-stripe
-          focus:outline-none
+          flex cursor-pointer items-center justify-between py-6 font-sans
+          text-base font-semibold tracking-normal text-subtle
         "
     >
       <span
@@ -85,7 +79,7 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
       </svg>
     </summary>
     <div
-      class="px-4 pb-3"
+      class="pb-6"
     >
       <div>
         Filter content here

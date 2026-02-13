@@ -541,7 +541,7 @@
             </div>
           </header>
           <astro-island
-            uid="K3dGH"
+            uid="Z1kNq7g"
             prefix="r1"
             component-url="~/features/collections/Collections"
             component-export="Collections"
@@ -1005,7 +1005,7 @@
                     id="filters"
                   >
                     <form
-                      class="flex size-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
+                      class="flex size-full flex-col text-sm tablet:text-base"
                     >
                       <button
                         aria-label="Close filters"
@@ -1027,23 +1027,41 @@
                           ></path>
                         </svg>
                       </button>
-                      <fieldset
-                        class="mt-0 flex grow flex-col gap-5 px-container py-10 tablet:gap-8 tablet-landscape:grow-0 tablet-landscape:gap-10 tablet-landscape:px-12"
-                      >
+                      <fieldset class="mt-0 flex grow-0 flex-col">
                         <legend
-                          class="block w-full pt-10 pb-8 font-sans text-sm font-bold tracking-wide text-subtle uppercase shadow-bottom"
+                          class="mb-0 block w-full px-container py-7 font-sans text-base/10 font-bold tracking-wide text-subtle uppercase shadow-bottom tablet-landscape:px-12"
                         >
                           Filter
                         </legend>
-                        <label class="flex flex-col text-subtle"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Name</span
-                          ><input
-                            class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
-                            placeholder="Enter all or part of a name"
-                            type="text"
-                        /></label>
+                        <div class="px-container tablet-landscape:px-12">
+                          <details
+                            class="group border-b border-default last:border-0"
+                            open=""
+                          >
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                            >
+                              <span class="flex items-center gap-2">Name</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div class="pb-6">
+                              <input
+                                class="w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
+                                placeholder="Enter all or part of a name"
+                                type="text"
+                              />
+                            </div>
+                          </details>
+                        </div>
                       </fieldset>
                       <div
                         class="sticky bottom-0 z-filter-footer mt-auto w-full border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"
