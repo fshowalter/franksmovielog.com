@@ -1461,3 +1461,38 @@ All FilterSections now open by default, disclosure triangles point correctly, an
 - Force-pushed after rebase (used --force-with-lease for safety)
 - All critical spec requirements verified and documented in PR description
 - Ready for user review and merge
+
+---
+
+## Post-PR Fixes
+
+### Arrow Rotation Fix ✅
+
+- **Completed:** 2026-02-13
+- **Issue:** FilterSection disclosure triangles were not rotating when sections were collapsed/expanded
+- **Root Cause:** Invalid Tailwind CSS syntax `[[open]>&]:rotate-180` was not working
+- **Files Modified:**
+  - `/src/components/filter-and-sort/FilterSection.tsx` - Fixed arrow rotation logic
+  - `/src/components/filter-and-sort/__snapshots__/FilterSection.spec.tsx.snap` - Updated snapshots
+  - 13 page-level snapshots updated
+- **Tests:** 625/625 passing (100%)
+- **Quality Checks:** All passing (lint, check, format)
+
+**Solution Implemented:**
+1. Added `group` class to `<details>` element to enable group-based state targeting
+2. Changed invalid `[[open]>&]:rotate-180` to valid `group-open:rotate-180`
+3. Flipped SVG path to point UP by default (instead of down)
+4. SVG now rotates 180° when section is OPEN to point down
+5. When section is CLOSED, SVG remains in default up-pointing state
+
+**Behavior:**
+- Section OPEN → Arrow points DOWN (▼) - SVG rotated 180° from default
+- Section CLOSED → Arrow points UP (▲) - SVG in default state
+- Smooth transition between states using `transition-transform`
+- Matches Orbit DVD reference pattern exactly
+
+**Notes:**
+- Previous implementation in Issue 2 (Stage 9) had the correct concept but used invalid Tailwind syntax
+- The `[[open]>&]` syntax was not recognized by Tailwind CSS v4
+- Using `group` + `group-open:` modifier is the correct Tailwind pattern for parent state selectors
+- Added AIDEV-NOTE comment explaining the inverted logic (SVG points up, rotates to point down)

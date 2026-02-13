@@ -25,7 +25,7 @@ export function FilterSection({
   return (
     <details
       className="
-        border-b border-default
+        group border-b border-default
         last:border-0
       "
       open={defaultOpen}
@@ -41,17 +41,19 @@ export function FilterSection({
       >
         {/* Section title on left */}
         <span className="flex items-center gap-2">{title}</span>
-        {/* Disclosure triangle on far right - points down when open, up when closed, rotates 180° */}
+        {/* Disclosure triangle on far right - points up when closed, rotates 180° to point down when open */}
+        {/* AIDEV-NOTE: SVG points UP by default, then rotates 180° when details[open] to point DOWN */}
         <svg
           aria-hidden="true"
           className="
             ml-auto size-3 transition-transform
-            [[open]>&]:rotate-180
+            group-open:rotate-180
           "
           fill="currentColor"
           viewBox="0 0 12 8"
         >
-          <path d="M0 1.5L1.5 0 6 4.5 10.5 0 12 1.5 6 7.5z" />
+          {/* Path draws UP-pointing triangle (inverted from down-pointing) */}
+          <path d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z" />
         </svg>
       </summary>
       {/* Content area for filter fields */}
