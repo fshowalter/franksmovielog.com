@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import { LabelText } from "./LabelText";
+import { FilterSection } from "~/components/filter-and-sort/FilterSection";
+
 import { RangeSliderField } from "./RangeSliderField";
 import { SelectInput } from "./SelectInput";
 
@@ -75,58 +76,59 @@ export function YearField({
   };
 
   return (
-    <div className="flex flex-col gap-4">
-      <fieldset className="text-subtle">
-        <LabelText as="legend" value={label} />
-        <div className="flex items-baseline">
-          <label className="flex flex-1 items-center gap-x-[.5ch]">
-            <span className="min-w-10 text-left text-sm tracking-serif-wide">
-              From
-            </span>
-            <SelectInput
-              defaultValue={defaultMinValue(years, defaultValues)}
-              onChange={(e) => handleMinChange(e.target.value)}
-            >
-              {years.map((year) => {
-                return (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                );
-              })}
-            </SelectInput>
-          </label>
-          <label className="flex flex-1 items-center">
-            <span className="min-w-10 text-center text-sm tracking-serif-wide">
-              to
-            </span>
-            <SelectInput
-              defaultValue={defaultMaxValue(years, defaultValues)}
-              onChange={(e) => handleMaxChange(e.target.value)}
-            >
-              {[...years].reverse().map((year) => {
-                return (
-                  <option key={year} value={year}>
-                    {year}
-                  </option>
-                );
-              })}
-            </SelectInput>
-          </label>
-        </div>
-      </fieldset>
+    <FilterSection title={label}>
+      <div className="flex flex-col gap-4">
+        <fieldset className="text-subtle">
+          <div className="flex items-baseline">
+            <label className="flex flex-1 items-center gap-x-[.5ch]">
+              <span className="min-w-10 text-left text-sm tracking-serif-wide">
+                From
+              </span>
+              <SelectInput
+                defaultValue={defaultMinValue(years, defaultValues)}
+                onChange={(e) => handleMinChange(e.target.value)}
+              >
+                {years.map((year) => {
+                  return (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  );
+                })}
+              </SelectInput>
+            </label>
+            <label className="flex flex-1 items-center">
+              <span className="min-w-10 text-center text-sm tracking-serif-wide">
+                to
+              </span>
+              <SelectInput
+                defaultValue={defaultMaxValue(years, defaultValues)}
+                onChange={(e) => handleMaxChange(e.target.value)}
+              >
+                {[...years].reverse().map((year) => {
+                  return (
+                    <option key={year} value={year}>
+                      {year}
+                    </option>
+                  );
+                })}
+              </SelectInput>
+            </label>
+          </div>
+        </fieldset>
 
-      {/* AIDEV-NOTE: Range slider beneath dropdowns - syncs bidirectionally */}
-      <RangeSliderField
-        fromValue={currentMinNum}
-        label={label}
-        max={maxYearNum}
-        min={minYearNum}
-        onChange={handleSliderChange}
-        onClear={handleClear}
-        toValue={currentMaxNum}
-      />
-    </div>
+        {/* AIDEV-NOTE: Range slider beneath dropdowns - syncs bidirectionally */}
+        <RangeSliderField
+          fromValue={currentMinNum}
+          label={label}
+          max={maxYearNum}
+          min={minYearNum}
+          onChange={handleSliderChange}
+          onClear={handleClear}
+          toValue={currentMaxNum}
+        />
+      </div>
+    </FilterSection>
   );
 }
 

@@ -134,7 +134,7 @@ export function CheckboxListField({
   return (
     <fieldset
       aria-describedby={hasSelections ? `${fieldsetId}-count` : undefined}
-      className="text-left"
+      className="text-left font-sans"
     >
       {/* Visually hidden legend for screen readers */}
       <legend className="sr-only">
@@ -156,7 +156,8 @@ export function CheckboxListField({
             return (
               <label
                 className={`
-                  flex cursor-pointer items-center gap-3 rounded-sm py-2
+                  flex cursor-pointer items-center gap-3 rounded-sm pb-2
+                  last-of-type:pb-0
                   focus-within:bg-stripe
                   hover:bg-stripe
                 `}
@@ -174,34 +175,30 @@ export function CheckboxListField({
                   type="checkbox"
                   value={option.value}
                 />
-                <span className="flex-1 text-sm text-default">
+                <span className="flex-1 text-base text-default">
                   {option.label}
                 </span>
-                <span className="text-sm text-subtle">({option.count})</span>
+                <span className="text-base text-subtle">({option.count})</span>
               </label>
             );
           })}
         </div>
 
         {/* Show more and Clear links */}
-        <div className="flex items-center gap-2 pt-1">
+        <div className="flex items-center gap-2">
           {shouldShowMore && !showAll && hiddenCount > 0 && (
             <>
               <button
                 aria-expanded={showAll}
-                className={`
-                  text-sm text-accent
-                  hover:underline
-                  focus:underline focus:outline-none
-                `}
+                className={`mt-2 font-sans text-sm text-accent underline`}
                 onClick={handleShowMore}
                 type="button"
               >
                 {/* AIDEV-NOTE: Spec compliance - "Show more" text must have no count */}
-                + Show more
+                Show more
               </button>
               {hasSelections && (
-                <span aria-hidden="true" className="text-sm text-subtle">
+                <span aria-hidden="true" className="mt-2 text-sm text-subtle">
                   |
                 </span>
               )}
@@ -210,11 +207,7 @@ export function CheckboxListField({
           {hasSelections && (
             <button
               aria-label={`Clear all ${label} selections`}
-              className={`
-                text-sm text-accent
-                hover:underline
-                focus:underline focus:outline-none
-              `}
+              className={`mt-2 font-sans text-sm text-accent underline`}
               onClick={handleClear}
               type="button"
             >

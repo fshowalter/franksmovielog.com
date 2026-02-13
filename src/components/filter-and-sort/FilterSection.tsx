@@ -32,11 +32,8 @@ export function FilterSection({
     >
       <summary
         className={`
-          flex cursor-pointer items-center justify-between px-4 py-3 text-base
-          font-medium text-default
-          focus-within:bg-stripe
-          hover:bg-stripe
-          focus:outline-none
+          flex cursor-pointer items-center justify-between py-6 font-sans
+          text-base font-semibold tracking-normal text-subtle
         `}
       >
         {/* Section title on left */}
@@ -57,7 +54,7 @@ export function FilterSection({
         </svg>
       </summary>
       {/* Content area for filter fields */}
-      <div className="px-4 pb-3">{children}</div>
+      <div className="pb-6">{children}</div>
     </details>
   );
 }

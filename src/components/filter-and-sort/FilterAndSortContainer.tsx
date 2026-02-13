@@ -220,7 +220,6 @@ export function FilterAndSortContainer<T extends string>({
               className={`
                 flex size-full flex-col text-sm
                 tablet:text-base
-                [@media(min-height:815px)]:pt-12
               `}
               ref={formRef}
             >
@@ -254,30 +253,32 @@ export function FilterAndSortContainer<T extends string>({
                   />
                 </svg>
               </button>
-              <fieldset
-                className={`
-                  mt-0 flex grow flex-col gap-5 px-container py-10
-                  tablet:gap-8
-                  tablet-landscape:grow-0 tablet-landscape:gap-10
-                  tablet-landscape:px-12
-                `}
-              >
+              <fieldset className={`mt-0 flex grow-0 flex-col`}>
                 <legend
                   className={`
-                    block w-full pt-10 pb-8 font-sans text-sm font-bold
-                    tracking-wide text-subtle uppercase shadow-bottom
+                    mb-0 block w-full px-container py-7 font-sans text-base/10
+                    font-bold tracking-wide text-subtle uppercase shadow-bottom
+                    tablet-landscape:px-12
                   `}
                 >
                   Filter
                 </legend>
-                {activeFilters && onRemoveFilter && (
-                  <AppliedFilters
-                    filters={activeFilters}
-                    onClearAll={onClearFilters}
-                    onRemove={onRemoveFilter}
-                  />
-                )}
-                {filters}
+
+                <div
+                  className="
+                    px-container
+                    tablet-landscape:px-12
+                  "
+                >
+                  {activeFilters && onRemoveFilter && (
+                    <AppliedFilters
+                      filters={activeFilters}
+                      onClearAll={onClearFilters}
+                      onRemove={onRemoveFilter}
+                    />
+                  )}
+                  {filters}
+                </div>
               </fieldset>
               <div
                 className={`

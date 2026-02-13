@@ -186,23 +186,12 @@ export function RangeSliderField({
           />
         </div>
 
-        {/* Current range display */}
-        <div className="flex items-center justify-between text-xs text-subtle">
-          <span>{formatValue(fromValue)}</span>
-          <span className="text-[10px]">—</span>
-          <span>{formatValue(toValue)}</span>
-        </div>
-
         {/* Clear link */}
         {!isFullRange && (
           <div className="pt-1">
             <button
               aria-label={`Reset ${label} to full range`}
-              className={`
-                text-sm text-accent
-                hover:underline
-                focus:underline focus:outline-none
-              `}
+              className={`font-sans text-sm text-accent underline`}
               onClick={handleClear}
               type="button"
             >

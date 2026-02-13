@@ -1,3 +1,5 @@
+import { FilterSection } from "./FilterSection";
+
 /**
  * AppliedFilters component displays active filters as removable chips
  * with a "Clear all" option. Hidden when no filters are active.
@@ -33,9 +35,7 @@ export function AppliedFilters({
   }
 
   return (
-    <div className="mb-4 rounded-sm border border-default bg-stripe p-4">
-      <h3 className="mb-2 text-sm font-medium text-subtle">Applied Filters:</h3>
-
+    <FilterSection title="Applied Filters">
       <div className="mb-3 flex flex-wrap gap-2">
         {filters.map((filter) => {
           // AIDEV-NOTE: Per FILTER_REDESIGN_SPEC.md Task 8.2:
@@ -56,7 +56,8 @@ export function AppliedFilters({
               aria-label={`Remove ${displayText} filter`}
               className="
                 inline-flex items-center gap-2 rounded-sm border border-default
-                bg-canvas px-3 py-1.5 text-sm text-default transition-colors
+                bg-canvas px-3 py-1.5 font-sans text-sm text-default
+                transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
@@ -72,16 +73,12 @@ export function AppliedFilters({
       </div>
 
       <button
-        className="
-          text-sm text-accent
-          hover:underline
-          focus:underline focus:outline-none
-        "
+        className="font-sans text-sm text-accent underline"
         onClick={onClearAll}
         type="button"
       >
         Clear all
       </button>
-    </div>
+    </FilterSection>
   );
 }

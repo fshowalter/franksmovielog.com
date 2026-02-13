@@ -1,6 +1,5 @@
+import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 import { debounceOnChange } from "~/utils/debounce";
-
-import { LabelText } from "./LabelText";
 
 /**
  * Debounce delay for text filter input in milliseconds.
@@ -40,11 +39,10 @@ export function TextField({
   };
 
   return (
-    <label className="flex flex-col text-subtle">
-      <LabelText value={label} />
+    <FilterSection title={label}>
       <input
         className={`
-          border-0 bg-default px-4 py-2 text-base text-default shadow-all
+          w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all
           outline-accent
           placeholder:text-default placeholder:opacity-50
         `}
@@ -53,6 +51,6 @@ export function TextField({
         placeholder={placeholder}
         type="text"
       />
-    </label>
+    </FilterSection>
   );
 }

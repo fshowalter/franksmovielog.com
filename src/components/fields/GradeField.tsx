@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import { LabelText } from "./LabelText";
+import { FilterSection } from "~/components/filter-and-sort/FilterSection";
+
 import { RangeSliderField } from "./RangeSliderField";
 import { SelectInput } from "./SelectInput";
 
@@ -124,47 +125,48 @@ export function GradeField({
   };
 
   return (
-    <div className="flex flex-col gap-4">
-      <fieldset className="text-subtle">
-        <LabelText as="legend" value={label} />
-        <div className="flex flex-wrap items-baseline">
-          <label className="flex flex-1 items-center gap-x-[.5ch]">
-            <span className="min-w-10 text-left text-sm tracking-serif-wide">
-              From
-            </span>
-            <SelectInput
-              defaultValue={defaultMinValue(defaultValues)}
-              onChange={(e) => handleMinChange(e.target.value)}
-            >
-              {[...gradeOptions].reverse()}
-            </SelectInput>
-          </label>
-          <label className="flex flex-1 items-center">
-            <span className="min-w-10 text-center text-sm tracking-serif-wide">
-              to
-            </span>
-            <SelectInput
-              defaultValue={defaultMaxValue(defaultValues)}
-              onChange={(e) => handleMaxChange(e.target.value)}
-            >
-              {[...gradeOptions]}
-            </SelectInput>
-          </label>
-        </div>
-      </fieldset>
+    <FilterSection title={label}>
+      <div className="flex flex-col gap-4">
+        <fieldset className="text-subtle">
+          <div className="flex flex-wrap items-baseline">
+            <label className="flex flex-1 items-center gap-x-[.5ch]">
+              <span className="min-w-10 text-left text-sm tracking-serif-wide">
+                From
+              </span>
+              <SelectInput
+                defaultValue={defaultMinValue(defaultValues)}
+                onChange={(e) => handleMinChange(e.target.value)}
+              >
+                {[...gradeOptions].reverse()}
+              </SelectInput>
+            </label>
+            <label className="flex flex-1 items-center">
+              <span className="min-w-10 text-center text-sm tracking-serif-wide">
+                to
+              </span>
+              <SelectInput
+                defaultValue={defaultMaxValue(defaultValues)}
+                onChange={(e) => handleMaxChange(e.target.value)}
+              >
+                {[...gradeOptions]}
+              </SelectInput>
+            </label>
+          </div>
+        </fieldset>
 
-      {/* AIDEV-NOTE: Range slider beneath dropdowns - syncs bidirectionally */}
-      <RangeSliderField
-        formatValue={gradeToLetter}
-        fromValue={minValue}
-        label={label}
-        max={13}
-        min={1}
-        onChange={handleSliderChange}
-        onClear={handleClear}
-        toValue={maxValue}
-      />
-    </div>
+        {/* AIDEV-NOTE: Range slider beneath dropdowns - syncs bidirectionally */}
+        <RangeSliderField
+          formatValue={gradeToLetter}
+          fromValue={minValue}
+          label={label}
+          max={13}
+          min={1}
+          onChange={handleSliderChange}
+          onClear={handleClear}
+          toValue={maxValue}
+        />
+      </div>
+    </FilterSection>
   );
 }
 
