@@ -128,9 +128,9 @@ export function Watchlist({
         .split(" ")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
-      const newDirectors = state.pendingFilterValues.director.filter(
-        (d) => d !== directorName,
-      );
+      const newDirectors =
+        state.pendingFilterValues.director?.filter((d) => d !== directorName) ??
+        [];
       dispatch(createWatchlistFilterChangedAction("director", newDirectors));
     } else if (filterId.startsWith("performer-")) {
       const performerName = filterId
@@ -139,9 +139,10 @@ export function Watchlist({
         .split(" ")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
-      const newPerformers = state.pendingFilterValues.performer.filter(
-        (p) => p !== performerName,
-      );
+      const newPerformers =
+        state.pendingFilterValues.performer?.filter(
+          (p) => p !== performerName,
+        ) ?? [];
       dispatch(createWatchlistFilterChangedAction("performer", newPerformers));
     } else if (filterId.startsWith("writer-")) {
       const writerName = filterId
@@ -150,9 +151,8 @@ export function Watchlist({
         .split(" ")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
-      const newWriters = state.pendingFilterValues.writer.filter(
-        (w) => w !== writerName,
-      );
+      const newWriters =
+        state.pendingFilterValues.writer?.filter((w) => w !== writerName) ?? [];
       dispatch(createWatchlistFilterChangedAction("writer", newWriters));
     } else if (filterId.startsWith("collection-")) {
       const collectionName = filterId
@@ -161,9 +161,10 @@ export function Watchlist({
         .split(" ")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(" ");
-      const newCollections = state.pendingFilterValues.collection.filter(
-        (c) => c !== collectionName,
-      );
+      const newCollections =
+        state.pendingFilterValues.collection?.filter(
+          (c) => c !== collectionName,
+        ) ?? [];
       dispatch(createWatchlistFilterChangedAction("collection", newCollections));
     } else {
       // For other filters (genres, releaseYear, title), use the standard removal

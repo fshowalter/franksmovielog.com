@@ -106,13 +106,7 @@ export function ViewingsFilters({
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
-      <FilterSection
-        defaultOpen={
-          !!filterValues.reviewedStatus &&
-          filterValues.reviewedStatus.length > 0
-        }
-        title="Reviewed Status"
-      >
+      <FilterSection title="Reviewed Status">
         <CheckboxListField
           defaultValues={filterValues.reviewedStatus ?? []}
           label="Reviewed Status"
@@ -131,10 +125,7 @@ export function ViewingsFilters({
         }
         years={distinctViewingYears}
       />
-      <FilterSection
-        defaultOpen={!!filterValues.medium && filterValues.medium.length > 0}
-        title="Medium"
-      >
+      <FilterSection title="Medium">
         <CheckboxListField
           defaultValues={filterValues.medium ?? []}
           label="Medium"
@@ -143,10 +134,7 @@ export function ViewingsFilters({
           options={mediumOptions}
         />
       </FilterSection>
-      <FilterSection
-        defaultOpen={!!filterValues.venue && filterValues.venue.length > 0}
-        title="Venue"
-      >
+      <FilterSection title="Venue">
         <CheckboxListField
           defaultValues={filterValues.venue ?? []}
           label="Venue"

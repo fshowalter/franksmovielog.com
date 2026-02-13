@@ -50,13 +50,7 @@ export function TitleFilters({
         years={releaseYear.values}
       />
       {genres && (
-        <FilterSection
-          defaultOpen={
-            genres.defaultValues !== undefined &&
-            genres.defaultValues.length > 0
-          }
-          title="Genres"
-        >
+        <FilterSection title="Genres">
           <CheckboxListField
             defaultValues={genres.defaultValues}
             label="Genres"

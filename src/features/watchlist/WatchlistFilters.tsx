@@ -120,10 +120,7 @@ export function WatchlistFilters({
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
-      <FilterSection
-        defaultOpen={filterValues.director.length > 0}
-        title="Director"
-      >
+      <FilterSection title="Director">
         <CheckboxListField
           defaultValues={filterValues.director}
           label="Director"
@@ -136,10 +133,7 @@ export function WatchlistFilters({
           options={directorOptions}
         />
       </FilterSection>
-      <FilterSection
-        defaultOpen={filterValues.performer.length > 0}
-        title="Performer"
-      >
+      <FilterSection title="Performer">
         <CheckboxListField
           defaultValues={filterValues.performer}
           label="Performer"
@@ -152,7 +146,7 @@ export function WatchlistFilters({
           options={performerOptions}
         />
       </FilterSection>
-      <FilterSection defaultOpen={filterValues.writer.length > 0} title="Writer">
+      <FilterSection title="Writer">
         <CheckboxListField
           defaultValues={filterValues.writer}
           label="Writer"
@@ -165,10 +159,7 @@ export function WatchlistFilters({
           options={writerOptions}
         />
       </FilterSection>
-      <FilterSection
-        defaultOpen={filterValues.collection.length > 0}
-        title="Collection"
-      >
+      <FilterSection title="Collection">
         <CheckboxListField
           defaultValues={filterValues.collection}
           label="Collection"
