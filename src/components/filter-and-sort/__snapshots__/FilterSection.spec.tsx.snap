@@ -4,8 +4,7 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
 <div>
   <details
     class="
-        group
-        border-b border-default
+        group border-b border-default
         last:border-0
       "
   >
@@ -52,8 +51,7 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
 <div>
   <details
     class="
-        group
-        border-b border-default
+        group border-b border-default
         last:border-0
       "
     open=""
