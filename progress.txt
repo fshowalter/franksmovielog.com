@@ -1386,3 +1386,33 @@ All 3 issues fixed:
 3. ✅ Issue 3: Year range chips persist after clearing (added full-range checks)
 
 All FilterSections now open by default, disclosure triangles point correctly, and year/grade range chips only show when range is partially restricted. All 625 tests passing with comprehensive coverage of the full-range exclusion logic.
+
+---
+
+## Post-Stage 9 Quality Fixes
+
+### TypeScript Error Resolution ✅
+
+- **Completed:** 2026-02-13
+- **Commit:** c60101d7f
+- **Issues Fixed:**
+  - Type assertion errors in test helpers (CheckboxListField.testHelper.ts - cast Element to HTMLElement)
+  - Test spec type errors (YearField.spec.tsx, GradeField.spec.tsx - cast to HTMLSelectElement/HTMLInputElement)
+  - YearField.tsx undefined handling (use .at(-1)! with non-null assertion per linter)
+  - Test data type mismatches (filterViewings.spec.ts - ViewingsValue expects strings not arrays)
+  - Test filter value types (reviewedStatus: ["Reviewed"] arrays in cast-and-crew and collection specs)
+  - Component prop name errors (CastAndCrewFilters.tsx - defaultValue → defaultValues)
+  - Null safety in filter functions (filterViewings.ts - check value.medium/venue before includes())
+  - Dynamic key access (Viewings.reducer.ts - type assertion for destructuring)
+- **Tests:** 625/625 passing (100%)
+- **TypeScript Check:** 0 errors
+- **Linter:** 0 errors (warnings only)
+- **Status:** All TypeScript errors resolved, ready for format:fix approval
+
+**Notes:**
+- All Stage 8 conversion type errors systematically fixed
+- Test data updated to match actual type definitions (ViewingsValue has optional string fields, not arrays)
+- Filter values updated to use arrays for multi-select (reviewedStatus, medium, venue, creditedAs)
+- Proper null checks added for optional fields in filter functions
+- Non-null assertions used where linter requires .at(-1) over [array.length - 1]
+- Format:fix needs user approval to fix 16 files
