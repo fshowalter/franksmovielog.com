@@ -1292,3 +1292,33 @@ All filters now allow multiple selection matching Orbit DVD behavior:
 - All tests now passing after updating expectations from "All" string to [] empty array
 - This completes ALL conversions from RadioListField to CheckboxListField across the entire codebase
 - RadioListField component was already removed in Stage 8, so this was the last usage
+
+---
+
+## Stage 9: Post-Implementation Corrections (Continued)
+
+### Issue 1: Sections Starting Closed Instead of Open ✅
+
+- **Completed:** 2026-02-13
+- **Commit:** b5eb58c1a
+- **Problem:** Filter components conditionally set `defaultOpen` based on existing selections, causing sections to be closed when no filters are active
+- **Files Modified:**
+  - `/src/components/filter-and-sort/TitleFilters.tsx` - Removed conditional defaultOpen for genres
+  - `/src/features/watchlist/WatchlistFilters.tsx` - Removed conditional defaultOpen for director, performer, writer, collection
+  - `/src/features/viewings/ViewingsFilters.tsx` - Removed conditional defaultOpen for reviewedStatus, medium, venue
+  - `/src/features/watchlist/Watchlist.tsx` - Added null checks for optional filter arrays
+- **Snapshots Updated:** 12 page-level snapshots
+- **Tests:** 607/607 passing (100%)
+- **Features Implemented:**
+  - All FilterSections now open by default (matching Orbit DVD pattern)
+  - Removed all conditional `defaultOpen` logic from filter components
+  - FilterSection component's default `defaultOpen={true}` is now respected everywhere
+  - Better discoverability - users can see all filter options immediately
+  - Users can still collapse sections via summary click
+
+**Notes:**
+- This matches the Orbit DVD reference pattern for better user experience
+- All sections showing by default improves discoverability
+- FilterSection.tsx correctly defaults to `defaultOpen={true}`, but filter components were overriding with conditional logic
+- Fixed null checks in Watchlist.tsx for optional filter arrays (director, performer, writer, collection)
+- This completes Issue 1 of Stage 9 in the implementation plan
