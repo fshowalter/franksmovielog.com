@@ -6,63 +6,71 @@ import { RangeSliderField } from "./RangeSliderField";
 import { SelectInput } from "./SelectInput";
 
 const gradeOptions = [
-  <option key={13} value={13}>
+  <option key={16} value={16}>
     A+
   </option>,
-  <option key={12} value={12}>
+  <option key={15} value={15}>
     A
   </option>,
-  <option key={11} value={11}>
+  <option key={14} value={14}>
     A-
   </option>,
-  <option key={10} value={10}>
+  <option key={13} value={13}>
     B+
   </option>,
-  <option key={9} value={9}>
+  <option key={12} value={12}>
     B
   </option>,
-  <option key={8} value={8}>
+  <option key={11} value={11}>
     B-
   </option>,
-  <option key={7} value={7}>
+  <option key={10} value={10}>
     C+
   </option>,
-  <option key={6} value={6}>
+  <option key={9} value={9}>
     C
   </option>,
-  <option key={5} value={5}>
+  <option key={8} value={8}>
     C-
   </option>,
-  <option key={4} value={4}>
+  <option key={7} value={7}>
     D+
   </option>,
-  <option key={3} value={3}>
+  <option key={6} value={6}>
     D
   </option>,
-  <option key={2} value={2}>
+  <option key={5} value={5}>
     D-
   </option>,
-  <option key={1} value={1}>
+  <option key={4} value={4}>
+    F+
+  </option>,
+  <option key={3} value={3}>
     F
+  </option>,
+  <option key={2} value={2}>
+    F-
   </option>,
 ];
 
 // AIDEV-NOTE: Grade number to letter mapping for slider display
 const gradeToLetter = (grade: number): string => {
   const gradeMap: Record<number, string> = {
-    1: "F",
-    2: "D-",
-    3: "D",
-    4: "D+",
-    5: "C-",
-    6: "C",
-    7: "C+",
-    8: "B-",
-    9: "B",
-    10: "B+",
-    11: "A-",
-    12: "A",
-    13: "A+",
+    2: "F-",
+    3: "F",
+    4: "F+",
+    5: "D-",
+    6: "D",
+    7: "D+",
+    8: "C-",
+    9: "C",
+    10: "C+",
+    11: "B-",
+    12: "B",
+    13: "B+",
+    14: "A-",
+    15: "A",
+    16: "A+",
   };
   return gradeMap[grade] || grade.toString();
 };
@@ -119,9 +127,9 @@ export function GradeField({
 
   // AIDEV-NOTE: Clear resets to full range (F to A+)
   const handleClear = (): void => {
-    setMinValue(1);
-    setMaxValue(13);
-    onGradeChange([1, 13]);
+    setMinValue(2);
+    setMaxValue(16);
+    onGradeChange([2, 16]);
   };
 
   return (
@@ -159,8 +167,8 @@ export function GradeField({
           formatValue={gradeToLetter}
           fromValue={minValue}
           label={label}
-          max={13}
-          min={1}
+          max={16}
+          min={2}
           onChange={handleSliderChange}
           onClear={handleClear}
           toValue={maxValue}
@@ -171,9 +179,9 @@ export function GradeField({
 }
 
 function defaultMaxValue(selectedValues?: [number, number]): number {
-  return selectedValues ? selectedValues[1] : 13;
+  return selectedValues ? selectedValues[1] : 16;
 }
 
 function defaultMinValue(selectedValues?: [number, number]): number {
-  return selectedValues ? selectedValues[0] : 1;
+  return selectedValues ? selectedValues[0] : 2;
 }
