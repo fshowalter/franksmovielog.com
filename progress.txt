@@ -1416,3 +1416,23 @@ All FilterSections now open by default, disclosure triangles point correctly, an
 - Proper null checks added for optional fields in filter functions
 - Non-null assertions used where linter requires .at(-1) over [array.length - 1]
 - Format:fix needs user approval to fix 16 files
+
+---
+
+## Final Pre-PR Tasks
+
+### Rebase on Origin/Main ✅
+
+- **Completed:** 2026-02-13
+- **Branch:** new-filters
+- **Rebased:** 85 commits onto origin/main (dac942228..2e0e88c00)
+- **Tests After Rebase:** 625/625 passing (100%)
+- **Quality Checks:** All passing (lint, check, knip, format)
+- **Status:** Ready for PR creation
+
+**Notes:**
+- Successfully rebased all filter redesign commits onto latest main
+- No conflicts during rebase
+- All tests still passing after rebase
+- All quality checks passing (lint: ✅, check: ✅, knip: 1 unused export acceptable, format: ✅)
+- Ready to create pull request per CLAUDE.md workflow
