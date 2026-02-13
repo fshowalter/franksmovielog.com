@@ -35,7 +35,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 │ [Grade: A- to B+ ×]                  │
 │ [Year: 1980-1989 ×]                  │
 │                                      │
-│ [Clear all]                          │
+│ Clear all                            │
 └─────────────────────────────────────┘
 ```
 
@@ -69,7 +69,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 │ ☐ Comedy (98)                       │
 │ ☐ Drama (215)                       │
 │ ... (showing 3 of 24)               │
-│ [+ Show 21 more]                    │  ← Show more link
+│ Show more                           │  ← Show more link
 └─────────────────────────────────────┘
 
 (After expanding)
@@ -82,7 +82,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 │ ☑ Horror (156)                      │  ← Checked
 │ ☐ Romance (67)                      │
 │ ... (showing all 24)                │
-│ [Clear]                             │  ← Clear link beneath options
+│ Clear                               │  ← Clear link beneath options
 └─────────────────────────────────────┘
 
 (After selection, collapsed view)
@@ -93,8 +93,7 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 │ ☐ Action (127)                      │
 │ ☐ Comedy (98)                       │
 │ ... (showing 3 of 24)               │
-│ [+ Show 21 more]                    │
-│ [Clear]                             │  ← Clear link visible when selected
+│ Show more | Clear                   │  ← Both on same line
 └─────────────────────────────────────┘
 
 (When collapsed)
@@ -155,6 +154,8 @@ Redesign all filter UI components from dropdown-based selects to checkbox-based 
 
 ALL filters allow multiple selection using checkboxes, matching the Orbit DVD pattern.
 
+**IMPORTANT:** Each multi-select filter MUST be wrapped in a FilterSection component with collapsible details/summary.
+
 Examples:
 
 - **Genres:** Horror, Action, Drama (select multiple)
@@ -169,19 +170,19 @@ Users can select any combination of values. No "All" option needed - empty selec
 
 Dual controls: Dropdowns + sliders (both usable and REQUIRED):
 
-**IMPORTANT:** Range sliders MUST be rendered beneath Year/Grade dropdowns on all pages. The RangeSliderField component is built and tested - it MUST be integrated, not optional.
+**IMPORTANT:**
+- Range sliders MUST be rendered beneath Year/Grade dropdowns on all pages. The RangeSliderField component is built and tested - it MUST be integrated, not optional.
+- Each range filter MUST be wrapped in a FilterSection component with collapsible details/summary.
 
 ```
 ┌─────────────────────────────────────┐
-│ ▼ Release Year                      │
+│ Release Year                      ▼ │
 ├─────────────────────────────────────┤
-│ From: [1980 ▼]                      │
-│ To:   [1989 ▼]                      │
+│ From: [1980 ▼]  To: [1989 ▼]        │
 │                                      │
 │ 1920  ●━━━━━━━━━━━●  2026          │  ← Range slider
-│       1980      1989                │
 │                                      │
-│ [Clear]                             │
+│ Clear                               │
 └─────────────────────────────────────┘
 ```
 
@@ -200,11 +201,13 @@ Dual controls: Dropdowns + sliders (both usable and REQUIRED):
 
 #### C. Text Search (Title, Name)
 
+**IMPORTANT:** Text search fields MUST be wrapped in a FilterSection component with collapsible details/summary.
+
 Keep existing TextField component, but add to Applied Filters:
 
 ```
 ┌─────────────────────────────────────┐
-│ Title                               │
+│ Title                             ▼ │
 ├─────────────────────────────────────┤
 │ [Search by title...             🔍] │
 └─────────────────────────────────────┘
@@ -266,11 +269,11 @@ Clicking × on chip clears the search field.
 
 **Show More:**
 
-- Text format: MUST be "+ Show more" (no count, for consistent width)
+- Text format: MUST be "Show more" (no plus sign, no brackets, no count, for consistent width)
 - Clicking expands to show all items
 - Stays expanded until section is collapsed via summary
 - Selected items remain visible even when showing limited items (always at top)
-- When both "Show more" and "Clear" links visible, they appear on same line: "[Show more] | [Clear]"
+- When both "Show more" and "Clear" links visible, they appear on same line with separator: "Show more | Clear"
 
 ### 2. Clearing Filters
 
@@ -301,7 +304,7 @@ Clicking × on chip clears the search field.
 
 - Click anywhere on summary bar → toggles open/closed
 - Keyboard: Tab to focus summary, Enter/Space to toggle
-- Disclosure triangle rotates: ▶ (closed) ↔ ▼ (open)
+- Disclosure triangle (on right side) rotates: ▲ (closed) ↔ ▼ (open) - 180° rotation
 
 **Default state:**
 
@@ -481,7 +484,8 @@ text-sm text-accent hover:underline focus:underline pt-3 pb-2
 2. **All `*Filters.tsx` components** (7 files)
    - Replace MultiSelectField → CheckboxListField
    - Replace SelectField → CheckboxListField (allow multiple selection for all filters)
-   - Wrap each filter in FilterSection (all sections open by default, triangle on right)
+   - **CRITICAL:** Wrap EVERY filter field in FilterSection component (checkboxes, ranges, text search - ALL fields)
+   - All FilterSection components default to open (defaultOpen={true}), triangle on right
    - Calculate **dynamic counts** for each option (updates when other filters change)
    - **REQUIRED:** Add RangeSliderField beneath YearField/GradeField (must be integrated)
    - Add text search to Applied Filters
@@ -628,7 +632,7 @@ These requirements MUST be verified during implementation to prevent drift:
 
 ### Visual Text Strings
 
-- [ ] "Show more" button text is EXACTLY "+ Show more" (no count, no variation)
+- [ ] "Show more" button text is EXACTLY "Show more" (no plus sign, no count, no variation)
 - [ ] No "(n selected)" text appears anywhere in filter UI
 - [ ] Applied filter chips use format: "Category: Value" or just "Value" when category equals value
 - [ ] "Clear all" link text is EXACTLY "Clear all"
@@ -653,7 +657,9 @@ These requirements MUST be verified during implementation to prevent drift:
 
 - [ ] AppliedFilters section appears at very top of drawer (before all filter sections)
 - [ ] AppliedFilters has distinct background color (bg-stripe) to stand out
+- [ ] EVERY filter field wrapped in FilterSection component (checkboxes, ranges, text search - no exceptions)
 - [ ] Filter sections use native details/summary with disclosure triangle
+- [ ] All filter sections default to open (defaultOpen={true})
 - [ ] Counts appear in parentheses after each option label
 
 ---

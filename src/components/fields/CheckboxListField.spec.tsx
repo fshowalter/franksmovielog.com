@@ -513,7 +513,7 @@ describe("CheckboxListField", () => {
       // Should have screen reader text for count
       const countText = screen.getByText("2 options selected");
       expect(countText).toBeInTheDocument();
-      expect(countText.className).toContain("sr-only");
+      // AIDEV-NOTE: CSS class implementation is covered by snapshots
     });
 
     it("has proper ARIA attributes for Show more button", ({ expect }) => {

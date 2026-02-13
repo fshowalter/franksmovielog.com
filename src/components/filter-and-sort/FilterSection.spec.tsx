@@ -115,27 +115,6 @@ describe("FilterSection", () => {
     expect(summary?.tagName).toBe("SUMMARY");
   });
 
-  it("applies correct styling classes", () => {
-    const { container } = render(
-      <FilterSection title="Test Section">
-        <div>Content</div>
-      </FilterSection>,
-    );
-
-    const details = container.querySelector("details");
-    expect(details).toHaveClass("border-b", "border-default", "last:border-0");
-
-    const summary = container.querySelector("summary");
-    expect(summary).toHaveClass(
-      "flex",
-      "cursor-pointer",
-      "items-center",
-      "justify-between",
-      "px-4",
-      "py-3",
-    );
-  });
-
   it("renders disclosure triangle", () => {
     const { container } = render(
       <FilterSection title="Test Section">

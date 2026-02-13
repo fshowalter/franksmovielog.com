@@ -148,14 +148,11 @@ function handleRemoveAppliedFilter(
   // Handle removal of individual creditedAs values (e.g., "creditedAs-director")
   if (action.filterKey.startsWith("creditedAs-")) {
     const creditValue = action.filterKey.replace(/^creditedAs-/, "");
-    // Capitalize first letter to match data format
-    const formattedCredit =
-      creditValue.charAt(0).toUpperCase() + creditValue.slice(1);
+    // AIDEV-NOTE: Credit values in data are lowercase ("director", "performer", "writer")
+    // Do NOT capitalize - use as-is to match actual data format
 
     const currentCreditedAs = state.pendingFilterValues.creditedAs ?? [];
-    const newCreditedAs = currentCreditedAs.filter(
-      (c) => c !== formattedCredit,
-    );
+    const newCreditedAs = currentCreditedAs.filter((c) => c !== creditValue);
 
     return {
       ...state,
