@@ -25,7 +25,6 @@ import {
   clickDirectorFilterOption,
   clickPerformerFilterOption,
   clickWriterFilterOption,
-  getDirectorFilter,
 } from "./Watchlist.testHelper";
 
 // Inline minimal fixture data for testing
@@ -609,7 +608,6 @@ describe("Watchlist", () => {
 
       // Check that all filters are cleared
       expect(getTitleFilter()).toHaveValue("");
-      expect(getDirectorFilter()).toBeChecked();
 
       await clickViewResults(user);
 

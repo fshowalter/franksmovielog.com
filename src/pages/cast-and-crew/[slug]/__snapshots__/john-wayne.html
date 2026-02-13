@@ -551,7 +551,7 @@
             </div>
           </header>
           <astro-island
-            uid="1HUqVC"
+            uid="Z1R7Axv"
             prefix="r1"
             component-url="~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles"
             component-export="CastAndCrewMemberTitles"
@@ -10105,7 +10105,10 @@
                         >
                           Filter
                         </legend>
-                        <details class="border-b border-default last:border-0">
+                        <details
+                          class="border-b border-default last:border-0"
+                          open=""
+                        >
                           <summary
                             class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
@@ -10135,53 +10138,37 @@
                                   aria-live="polite"
                                   aria-relevant="additions removals"
                                   class="flex flex-col"
-                                  role="radiogroup"
+                                  role="group"
                                 >
                                   <label
                                     class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-credited-as-All"
+                                    for="checkbox-list-credited-as-director"
                                     ><input
                                       class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-credited-as-All"
-                                      type="radio"
-                                      name="radio-list-credited-as"
-                                      checked=""
-                                      value="All"
-                                    /><span class="flex-1 text-sm text-default"
-                                      >All</span
-                                    ><span class="text-sm text-subtle"
-                                      >(<!-- -->0<!-- -->)</span
-                                    ></label
-                                  ><label
-                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-credited-as-performer"
-                                    ><input
-                                      class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-credited-as-performer"
-                                      type="radio"
-                                      name="radio-list-credited-as"
-                                      value="performer"
-                                    /><span class="flex-1 text-sm text-default"
-                                      >Performer</span
-                                    ><span class="text-sm text-subtle"
-                                      >(<!-- -->0<!-- -->)</span
-                                    ></label
-                                  ><label
-                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-credited-as-director"
-                                    ><input
-                                      class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-credited-as-director"
-                                      type="radio"
-                                      name="radio-list-credited-as"
+                                      id="checkbox-list-credited-as-director"
+                                      type="checkbox"
                                       value="director"
                                     /><span class="flex-1 text-sm text-default"
                                       >Director</span
                                     ><span class="text-sm text-subtle"
-                                      >(<!-- -->0<!-- -->)</span
+                                      >(<!-- -->2<!-- -->)</span
+                                    ></label
+                                  ><label
+                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
+                                    for="checkbox-list-credited-as-performer"
+                                    ><input
+                                      class="size-4 cursor-pointer accent-accent"
+                                      id="checkbox-list-credited-as-performer"
+                                      type="checkbox"
+                                      value="performer"
+                                    /><span class="flex-1 text-sm text-default"
+                                      >Performer</span
+                                    ><span class="text-sm text-subtle"
+                                      >(<!-- -->146<!-- -->)</span
                                     ></label
                                   >
                                 </div>
+                                <div class="flex items-center gap-2 pt-1"></div>
                               </div>
                             </fieldset>
                           </div>
@@ -10319,13 +10306,7 @@
                               >
                             </div>
                           </fieldset>
-                          <fieldset class="text-left">
-                            <legend class="sr-only">
-                              <span
-                                class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                                >Release Year</span
-                              >
-                            </legend>
+                          <div class="text-left">
                             <div class="flex flex-col gap-4 px-2 py-3">
                               <div class="relative h-6">
                                 <div
@@ -10379,7 +10360,7 @@
                               to
                               <!-- -->1976
                             </div>
-                          </fieldset>
+                          </div>
                         </div>
                         <details class="border-b border-default last:border-0">
                           <summary
@@ -10520,13 +10501,7 @@
                               >
                             </div>
                           </fieldset>
-                          <fieldset class="text-left">
-                            <legend class="sr-only">
-                              <span
-                                class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                                >Grade</span
-                              >
-                            </legend>
+                          <div class="text-left">
                             <div class="flex flex-col gap-4 px-2 py-3">
                               <div class="relative h-6">
                                 <div
@@ -10579,7 +10554,7 @@
                               to
                               <!-- -->A+
                             </div>
-                          </fieldset>
+                          </div>
                         </div>
                         <div class="flex flex-col gap-4">
                           <fieldset class="text-subtle">
@@ -10637,13 +10612,7 @@
                               >
                             </div>
                           </fieldset>
-                          <fieldset class="text-left">
-                            <legend class="sr-only">
-                              <span
-                                class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                                >Review Year</span
-                              >
-                            </legend>
+                          <div class="text-left">
                             <div class="flex flex-col gap-4 px-2 py-3">
                               <div class="relative h-6">
                                 <div
@@ -10697,7 +10666,7 @@
                               to
                               <!-- -->2025
                             </div>
-                          </fieldset>
+                          </div>
                         </div>
                         <details
                           class="border-b border-default last:border-0"

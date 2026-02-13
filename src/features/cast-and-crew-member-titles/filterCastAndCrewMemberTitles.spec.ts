@@ -142,7 +142,7 @@ describe("calculateGenreCounts", () => {
 
   it("counts genres while respecting credited as filter", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      creditedAs: "director",
+      creditedAs: ["director"],
     };
     const counts = calculateGenreCounts(mockValues, filterValues);
 
@@ -170,7 +170,7 @@ describe("calculateGenreCounts", () => {
 
   it("counts genres while respecting multiple filters", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      creditedAs: "director",
+      creditedAs: ["director"],
       gradeValue: [10, 13], // B+ to A+
       releaseYear: ["1980", "1985"],
     };
@@ -301,7 +301,7 @@ describe("calculateReviewedStatusCounts", () => {
 
   it("counts statuses while respecting credited as filter", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      creditedAs: "director",
+      creditedAs: ["director"],
     };
     const counts = calculateReviewedStatusCounts(mockValues, filterValues);
 

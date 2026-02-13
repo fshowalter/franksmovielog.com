@@ -94,30 +94,17 @@ export function maybeReviewedTitleFiltersReducer<
   TState extends MaybeReviewedTitleFiltersState<TValue>,
 >(state: TState, action: MaybeReviewedTitleFiltersAction): TState {
   switch (action.type) {
-    case "maybeReviewedTitleFilters/reviewedStatusFilterChanged": {
-      return handleReviewedStatusFilterChanged<TValue, TState>(state, action);
-    }
     case "filters/removeAppliedFilter": {
       return handleRemoveAppliedFilter<TValue, TState>(state, action);
+    }
+    case "maybeReviewedTitleFilters/reviewedStatusFilterChanged": {
+      return handleReviewedStatusFilterChanged<TValue, TState>(state, action);
     }
 
     default: {
       return reviewedTitleFiltersReducer<TValue, TState>(state, action);
     }
   }
-}
-
-function handleReviewedStatusFilterChanged<
-  TValue,
-  TState extends MaybeReviewedTitleFiltersState<TValue>,
->(state: TState, action: ReviewedStatusFilterChangedAction): TState {
-  return {
-    ...state,
-    pendingFilterValues: {
-      ...state.pendingFilterValues,
-      reviewedStatus: action.values,
-    },
-  };
 }
 
 function handleRemoveAppliedFilter<
@@ -146,4 +133,17 @@ function handleRemoveAppliedFilter<
 
   // For all other filters, use the default behavior from reviewedTitleFiltersReducer
   return reviewedTitleFiltersReducer<TValue, TState>(state, action);
+}
+
+function handleReviewedStatusFilterChanged<
+  TValue,
+  TState extends MaybeReviewedTitleFiltersState<TValue>,
+>(state: TState, action: ReviewedStatusFilterChangedAction): TState {
+  return {
+    ...state,
+    pendingFilterValues: {
+      ...state.pendingFilterValues,
+      reviewedStatus: action.values,
+    },
+  };
 }

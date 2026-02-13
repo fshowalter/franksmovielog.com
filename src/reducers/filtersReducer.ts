@@ -16,6 +16,11 @@ export type FiltersState<TValue> = {
   values: TValue[];
 };
 
+export type RemoveAppliedFilterAction = {
+  filterKey: string;
+  type: "filters/removeAppliedFilter";
+};
+
 /**
  * Base Action Type Definitions
  */
@@ -25,11 +30,6 @@ type ApplyFiltersAction = {
 
 type ClearFiltersAction = {
   type: "filters/cleared";
-};
-
-export type RemoveAppliedFilterAction = {
-  filterKey: string;
-  type: "filters/removeAppliedFilter";
 };
 
 type ResetFiltersAction = {

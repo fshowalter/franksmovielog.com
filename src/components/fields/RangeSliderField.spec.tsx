@@ -128,16 +128,6 @@ describe("RangeSliderField", () => {
       ).toBeInTheDocument();
     });
 
-    it("includes legend for accessibility", ({ expect }) => {
-      const props = createDefaultProps();
-      render(<RangeSliderField {...props} />);
-
-      // Legend should be present but visually hidden (sr-only)
-      const legend = screen.getByText("Release Year", {
-        selector: "legend span",
-      });
-      expect(legend).toBeInTheDocument();
-    });
   });
 
   describe("interaction", () => {

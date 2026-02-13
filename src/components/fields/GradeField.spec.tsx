@@ -1,7 +1,6 @@
-import { describe, expect, it, vi } from "vitest";
-
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { describe, expect, it, vi } from "vitest";
 
 import { GradeField } from "./GradeField";
 
@@ -16,8 +15,8 @@ describe("GradeField", () => {
         />,
       );
 
-      const groups = screen.getAllByRole("group", { name: "Grade" });
-      expect(groups).toHaveLength(2); // Dropdowns fieldset + slider fieldset
+      const group = screen.getByRole("group", { name: "Grade" });
+      expect(group).toBeInTheDocument();
     });
 
     it("renders from and to dropdowns", () => {
@@ -63,10 +62,10 @@ describe("GradeField", () => {
 
       const fromSelect = screen.getByRole("combobox", {
         name: /from/i,
-      }) as HTMLSelectElement;
+      });
       const toSelect = screen.getByRole("combobox", {
         name: /to/i,
-      }) as HTMLSelectElement;
+      });
 
       expect(fromSelect.value).toBe("1"); // F
       expect(toSelect.value).toBe("13"); // A+
@@ -83,10 +82,10 @@ describe("GradeField", () => {
 
       const fromSelect = screen.getByRole("combobox", {
         name: /from/i,
-      }) as HTMLSelectElement;
+      });
       const toSelect = screen.getByRole("combobox", {
         name: /to/i,
-      }) as HTMLSelectElement;
+      });
 
       expect(fromSelect.value).toBe("8"); // B-
       expect(toSelect.value).toBe("11"); // A-
@@ -221,7 +220,7 @@ describe("GradeField", () => {
 
       const fromSlider = screen.getByLabelText(
         "Grade minimum value",
-      ) as HTMLInputElement;
+      );
 
       expect(fromSlider.value).toBe("8");
     });
@@ -366,7 +365,7 @@ describe("GradeField", () => {
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
       const fromSlider = screen.getByLabelText(
         "Grade minimum value",
-      ) as HTMLInputElement;
+      );
 
       await user.selectOptions(fromSelect, "8");
 
@@ -377,22 +376,22 @@ describe("GradeField", () => {
   describe("Grade Letter Mapping", () => {
     it("displays correct letter grades for all values", () => {
       const testCases = [
-        { value: 1, letter: "F" },
-        { value: 2, letter: "D-" },
-        { value: 3, letter: "D" },
-        { value: 4, letter: "D+" },
-        { value: 5, letter: "C-" },
-        { value: 6, letter: "C" },
-        { value: 7, letter: "C+" },
-        { value: 8, letter: "B-" },
-        { value: 9, letter: "B" },
-        { value: 10, letter: "B+" },
-        { value: 11, letter: "A-" },
-        { value: 12, letter: "A" },
-        { value: 13, letter: "A+" },
+        { letter: "F", value: 1 },
+        { letter: "D-", value: 2 },
+        { letter: "D", value: 3 },
+        { letter: "D+", value: 4 },
+        { letter: "C-", value: 5 },
+        { letter: "C", value: 6 },
+        { letter: "C+", value: 7 },
+        { letter: "B-", value: 8 },
+        { letter: "B", value: 9 },
+        { letter: "B+", value: 10 },
+        { letter: "A-", value: 11 },
+        { letter: "A", value: 12 },
+        { letter: "A+", value: 13 },
       ];
 
-      testCases.forEach(({ value, letter }) => {
+      for (const { letter, value } of testCases) {
         const { unmount } = render(
           <GradeField
             defaultValues={[value, value]}
@@ -405,7 +404,7 @@ describe("GradeField", () => {
         expect(fromSlider).toHaveAttribute("aria-valuetext", letter);
 
         unmount();
-      });
+      }
     });
   });
 });

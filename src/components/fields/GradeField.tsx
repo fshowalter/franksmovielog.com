@@ -49,19 +49,19 @@ const gradeOptions = [
 // AIDEV-NOTE: Grade number to letter mapping for slider display
 const gradeToLetter = (grade: number): string => {
   const gradeMap: Record<number, string> = {
-    13: "A+",
-    12: "A",
-    11: "A-",
-    10: "B+",
-    9: "B",
-    8: "B-",
-    7: "C+",
-    6: "C",
-    5: "C-",
-    4: "D+",
-    3: "D",
-    2: "D-",
     1: "F",
+    2: "D-",
+    3: "D",
+    4: "D+",
+    5: "C-",
+    6: "C",
+    7: "C+",
+    8: "B-",
+    9: "B",
+    10: "B+",
+    11: "A-",
+    12: "A",
+    13: "A+",
   };
   return gradeMap[grade] || grade.toString();
 };

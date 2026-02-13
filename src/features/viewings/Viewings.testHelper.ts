@@ -11,40 +11,7 @@ import { fillYearField } from "~/components/fields/YearField.testHelper";
  * @param value - Filter value to select
  */
 export async function clickMediumFilterOption(user: UserEvent, value: string) {
-  // Medium filter uses CheckboxListField, so find by checkbox value directly
-  // First expand "Show more" if needed
-  const showMoreButtons = screen.queryAllByRole("button", {
-    name: /\+ Show more/,
-  });
-
-  // Look for the checkbox
-  let checkbox = screen.queryByRole("checkbox", { name: new RegExp(value) });
-
-  // If not found and there's a "Show more" button, click it
-  if (!checkbox && showMoreButtons.length > 0) {
-    // Find the Medium section first
-    const mediumDetails = screen.getAllByRole("group").find((group) => {
-      const summary = group.previousElementSibling;
-      return summary?.textContent?.includes("Medium");
-    });
-
-    if (mediumDetails) {
-      const showMore = within(mediumDetails as HTMLElement).queryByRole("button", {
-        name: /\+ Show more/,
-      });
-      if (showMore) {
-        await user.click(showMore);
-      }
-    }
-
-    checkbox = screen.queryByRole("checkbox", { name: new RegExp(value) });
-  }
-
-  if (!checkbox) {
-    throw new Error(`Unable to find checkbox for medium "${value}"`);
-  }
-
-  await user.click(checkbox);
+  await clickCheckboxListOption(user, "Medium", value);
 }
 
 /**

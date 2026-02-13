@@ -1,7 +1,6 @@
-import { describe, expect, it, vi } from "vitest";
-
 import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { describe, expect, it, vi } from "vitest";
 
 import { YearField } from "./YearField";
 
@@ -19,8 +18,8 @@ describe("YearField", () => {
         />,
       );
 
-      const groups = screen.getAllByRole("group", { name: "Release Year" });
-      expect(groups).toHaveLength(2); // Dropdowns fieldset + slider fieldset
+      const group = screen.getByRole("group", { name: "Release Year" });
+      expect(group).toBeInTheDocument();
     });
 
     it("renders from and to dropdowns", () => {
@@ -69,10 +68,10 @@ describe("YearField", () => {
 
       const fromSelect = screen.getByRole("combobox", {
         name: /from/i,
-      }) as HTMLSelectElement;
+      });
       const toSelect = screen.getByRole("combobox", {
         name: /to/i,
-      }) as HTMLSelectElement;
+      });
 
       expect(fromSelect.value).toBe("2020");
       expect(toSelect.value).toBe("2024");
@@ -90,10 +89,10 @@ describe("YearField", () => {
 
       const fromSelect = screen.getByRole("combobox", {
         name: /from/i,
-      }) as HTMLSelectElement;
+      });
       const toSelect = screen.getByRole("combobox", {
         name: /to/i,
-      }) as HTMLSelectElement;
+      });
 
       expect(fromSelect.value).toBe("2021");
       expect(toSelect.value).toBe("2023");
@@ -235,7 +234,7 @@ describe("YearField", () => {
 
       const fromSlider = screen.getByLabelText(
         "Release Year minimum value",
-      ) as HTMLInputElement;
+      );
 
       expect(fromSlider.value).toBe("2022");
     });
@@ -353,7 +352,7 @@ describe("YearField", () => {
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
       const fromSlider = screen.getByLabelText(
         "Release Year minimum value",
-      ) as HTMLInputElement;
+      );
 
       await user.selectOptions(fromSelect, "2022");
 

@@ -126,12 +126,7 @@ export function RangeSliderField({
   const fieldsetId = `range-slider-${label.toLowerCase().replaceAll(/\s+/g, "-")}`;
 
   return (
-    <fieldset className="text-left">
-      {/* Visually hidden legend for screen readers */}
-      <legend className="sr-only">
-        <LabelText as="span" value={label} />
-      </legend>
-
+    <div className="text-left">
       <div className="flex flex-col gap-4 px-2 py-3">
         {/* Slider container */}
         <div className="relative h-6" ref={sliderRef}>
@@ -223,6 +218,6 @@ export function RangeSliderField({
       <div aria-atomic="true" aria-live="polite" className="sr-only">
         Range: {formatValue(fromValue)} to {formatValue(toValue)}
       </div>
-    </fieldset>
+    </div>
   );
 }

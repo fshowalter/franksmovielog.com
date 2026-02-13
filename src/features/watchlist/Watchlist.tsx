@@ -119,7 +119,7 @@ export function Watchlist({
    * For director/performer/writer/collection, removes specific value from array.
    * For other filters, removes entire filter key.
    */
-  function handleRemoveAppliedFilter(filterId: string) {
+  function handleRemoveAppliedFilter(filterId: string): void {
     // Parse the filter ID to determine type and value
     if (filterId.startsWith("director-")) {
       const directorName = filterId

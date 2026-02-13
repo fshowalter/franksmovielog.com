@@ -133,11 +133,11 @@ describe("buildAppliedFilterChips", () => {
 
   it("creates chip for credited as", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      creditedAs: "director",
+      creditedAs: ["director"],
     };
     const chips = buildAppliedFilterChips(filterValues);
     expect(chips).toEqual([
-      { category: "Credited As", id: "creditedAs", label: "director" },
+      { category: "Credited As", id: "creditedAs-director", label: "director" },
     ]);
   });
 
@@ -177,7 +177,7 @@ describe("buildAppliedFilterChips", () => {
 
   it("combines multiple active filters", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      creditedAs: "director",
+      creditedAs: ["director"],
       genres: ["Horror", "Sci-Fi"],
       gradeValue: [11, 10],
       releaseYear: ["1980", "1989"],
@@ -197,7 +197,7 @@ describe("buildAppliedFilterChips", () => {
         id: "reviewedStatus-not-reviewed",
         label: "Not Reviewed",
       },
-      { category: "Credited As", id: "creditedAs", label: "director" },
+      { category: "Credited As", id: "creditedAs-director", label: "director" },
       { category: "Search", id: "title", label: "alien" },
     ]);
   });

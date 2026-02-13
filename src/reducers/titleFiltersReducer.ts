@@ -1,10 +1,6 @@
-import type {
-  FiltersAction,
-  FiltersState,
-  RemoveAppliedFilterAction,
-} from "./filtersReducer";
+import type { FiltersAction, FiltersState } from "./filtersReducer";
 
-export type { RemoveAppliedFilterAction };
+export type { RemoveAppliedFilterAction } from "./filtersReducer";
 
 export {
   createApplyFiltersAction,

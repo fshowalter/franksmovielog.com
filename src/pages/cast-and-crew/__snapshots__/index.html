@@ -544,7 +544,7 @@
             </div>
           </header>
           <astro-island
-            uid="Z23itYY"
+            uid="Z1lf9Bi"
             prefix="r1"
             component-url="~/features/cast-and-crew/CastAndCrew"
             component-export="CastAndCrew"
@@ -5226,7 +5226,10 @@
                             placeholder="Enter all or part of a name"
                             type="text"
                         /></label>
-                        <details class="border-b border-default last:border-0">
+                        <details
+                          class="border-b border-default last:border-0"
+                          open=""
+                        >
                           <summary
                             class="flex cursor-pointer items-center justify-between px-4 py-3 text-base font-medium text-default focus-within:bg-stripe hover:bg-stripe focus:outline-none"
                           >
@@ -5256,31 +5259,15 @@
                                   aria-live="polite"
                                   aria-relevant="additions removals"
                                   class="flex flex-col"
-                                  role="radiogroup"
+                                  role="group"
                                 >
                                   <label
                                     class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-credited-as-All"
+                                    for="checkbox-list-credited-as-director"
                                     ><input
                                       class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-credited-as-All"
-                                      type="radio"
-                                      name="radio-list-credited-as"
-                                      checked=""
-                                      value="All"
-                                    /><span class="flex-1 text-sm text-default"
-                                      >All</span
-                                    ><span class="text-sm text-subtle"
-                                      >(<!-- -->155<!-- -->)</span
-                                    ></label
-                                  ><label
-                                    class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-credited-as-director"
-                                    ><input
-                                      class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-credited-as-director"
-                                      type="radio"
-                                      name="radio-list-credited-as"
+                                      id="checkbox-list-credited-as-director"
+                                      type="checkbox"
                                       value="director"
                                     /><span class="flex-1 text-sm text-default"
                                       >Director</span
@@ -5289,12 +5276,11 @@
                                     ></label
                                   ><label
                                     class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-credited-as-performer"
+                                    for="checkbox-list-credited-as-performer"
                                     ><input
                                       class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-credited-as-performer"
-                                      type="radio"
-                                      name="radio-list-credited-as"
+                                      id="checkbox-list-credited-as-performer"
+                                      type="checkbox"
                                       value="performer"
                                     /><span class="flex-1 text-sm text-default"
                                       >Performer</span
@@ -5303,12 +5289,11 @@
                                     ></label
                                   ><label
                                     class="flex cursor-pointer items-center gap-3 rounded-sm py-2 focus-within:bg-stripe hover:bg-stripe"
-                                    for="radio-list-credited-as-writer"
+                                    for="checkbox-list-credited-as-writer"
                                     ><input
                                       class="size-4 cursor-pointer accent-accent"
-                                      id="radio-list-credited-as-writer"
-                                      type="radio"
-                                      name="radio-list-credited-as"
+                                      id="checkbox-list-credited-as-writer"
+                                      type="checkbox"
                                       value="writer"
                                     /><span class="flex-1 text-sm text-default"
                                       >Writer</span
@@ -5317,6 +5302,7 @@
                                     ></label
                                   >
                                 </div>
+                                <div class="flex items-center gap-2 pt-1"></div>
                               </div>
                             </fieldset>
                           </div>

@@ -26,5 +26,5 @@ export function getCreditedAsFilter(): string[] {
   const checkedBoxes = filterSection.querySelectorAll<HTMLInputElement>(
     'input[type="checkbox"]:checked',
   );
-  return Array.from(checkedBoxes).map((checkbox) => checkbox.value);
+  return [...checkedBoxes].map((checkbox) => checkbox.value);
 }

@@ -4,6 +4,32 @@ import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type { CastAndCrewMemberTitlesFiltersValues } from "./CastAndCrewMemberTitles.reducer";
 
 /**
+ * Calculates the count of titles for each credited role.
+ * Excludes creditedAs filter when calculating counts (shows how many match OTHER active filters).
+ * @param values - Array of cast/crew member titles
+ * @param filterValues - Active filter values
+ * @returns Map of credited role to count
+ */
+export function calculateCreditedAsCounts(
+  values: CastAndCrewMemberTitlesValue[],
+  filterValues: CastAndCrewMemberTitlesFiltersValues,
+): Map<string, number> {
+  // Apply all filters EXCEPT creditedAs
+  const filtersWithoutCreditedAs = { ...filterValues, creditedAs: undefined };
+  const filtered = filterCastAndCrewMemberTitles(values, filtersWithoutCreditedAs);
+
+  // Count occurrences of each credit role
+  const counts = new Map<string, number>();
+  for (const value of filtered) {
+    for (const credit of value.creditedAs) {
+      counts.set(credit, (counts.get(credit) || 0) + 1);
+    }
+  }
+
+  return counts;
+}
+
+/**
  * Calculates the count of titles for each genre.
  * Excludes genre filter when calculating counts (shows how many match OTHER active filters).
  * @param values - Array of cast/crew member titles
@@ -59,32 +85,6 @@ export function calculateReviewedStatusCounts(
     ["Not Reviewed", notReviewedCount],
     ["Reviewed", reviewedCount],
   ]);
-}
-
-/**
- * Calculates the count of titles for each credited role.
- * Excludes creditedAs filter when calculating counts (shows how many match OTHER active filters).
- * @param values - Array of cast/crew member titles
- * @param filterValues - Active filter values
- * @returns Map of credited role to count
- */
-export function calculateCreditedAsCounts(
-  values: CastAndCrewMemberTitlesValue[],
-  filterValues: CastAndCrewMemberTitlesFiltersValues,
-): Map<string, number> {
-  // Apply all filters EXCEPT creditedAs
-  const filtersWithoutCreditedAs = { ...filterValues, creditedAs: undefined };
-  const filtered = filterCastAndCrewMemberTitles(values, filtersWithoutCreditedAs);
-
-  // Count occurrences of each credit role
-  const counts = new Map<string, number>();
-  for (const value of filtered) {
-    for (const credit of value.creditedAs) {
-      counts.set(credit, (counts.get(credit) || 0) + 1);
-    }
-  }
-
-  return counts;
 }
 
 /**

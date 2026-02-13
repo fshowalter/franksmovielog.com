@@ -18,6 +18,7 @@ import {
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
 
+export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
 export {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -30,7 +31,6 @@ export {
   createTitleFilterChangedAction,
   selectHasPendingFilters,
 } from "~/reducers/maybeReviewedTitleFiltersReducer";
-export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
 
 /**
  * Union type of all actions for cast and crew member titles state management.

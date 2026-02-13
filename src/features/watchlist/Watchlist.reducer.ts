@@ -139,20 +139,6 @@ export function createWatchlistFilterChangedAction(
  */
 export function reducer(state: WatchlistState, action: WatchlistAction) {
   switch (action.type) {
-    case "showMore/showMore": {
-      return showMoreReducer(state, action);
-    }
-    case "sort/sort": {
-      const newState = sortReducer(state, action);
-      // Reset pagination when sort changes
-      return {
-        ...newState,
-        ...createInitialShowMoreState(),
-      };
-    }
-    case "watchlist/filterChanged": {
-      return handleWatchlistFilterChanged(state, action);
-    }
     case "filters/cleared": {
       // Handle clear filters - ensure watchlist fields are empty arrays
       const newState = titleFiltersReducer(state, action);
@@ -166,6 +152,20 @@ export function reducer(state: WatchlistState, action: WatchlistAction) {
           writer: [],
         },
       };
+    }
+    case "showMore/showMore": {
+      return showMoreReducer(state, action);
+    }
+    case "sort/sort": {
+      const newState = sortReducer(state, action);
+      // Reset pagination when sort changes
+      return {
+        ...newState,
+        ...createInitialShowMoreState(),
+      };
+    }
+    case "watchlist/filterChanged": {
+      return handleWatchlistFilterChanged(state, action);
     }
     default: {
       return titleFiltersReducer(state, action);

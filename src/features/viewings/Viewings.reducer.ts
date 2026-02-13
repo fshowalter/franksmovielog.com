@@ -250,6 +250,26 @@ function handleMediumFilterChanged(
   };
 }
 
+function handleNextMonthClicked(
+  state: ViewingsState,
+  action: NextMonthClickedAction,
+) {
+  return {
+    ...state,
+    selectedMonthDate: action.value,
+  };
+}
+
+function handlePreviousMonthClicked(
+  state: ViewingsState,
+  action: PreviousMonthClickedAction,
+) {
+  return {
+    ...state,
+    selectedMonthDate: action.value,
+  };
+}
+
 function handleRemoveAppliedFilter(
   state: ViewingsState,
   action: { filterKey: string; type: "filters/removeAppliedFilter" },
@@ -322,26 +342,6 @@ function handleRemoveAppliedFilter(
   return {
     ...state,
     pendingFilterValues: remainingFilters,
-  };
-}
-
-function handleNextMonthClicked(
-  state: ViewingsState,
-  action: NextMonthClickedAction,
-) {
-  return {
-    ...state,
-    selectedMonthDate: action.value,
-  };
-}
-
-function handlePreviousMonthClicked(
-  state: ViewingsState,
-  action: PreviousMonthClickedAction,
-) {
-  return {
-    ...state,
-    selectedMonthDate: action.value,
   };
 }
 
