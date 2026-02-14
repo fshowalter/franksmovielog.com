@@ -13,6 +13,12 @@ type FilterSectionProps = {
  * AIDEV-NOTE: Spec compliance - NO selection count shown in summary (removed per spec)
  * AIDEV-NOTE: Spec compliance - All sections open by default (matching Orbit DVD)
  * AIDEV-NOTE: Spec compliance - Disclosure triangle on far right (matching Orbit DVD)
+ * AIDEV-NOTE: Transition implementation matches Orbit DVD's DetailsDisclosure web component:
+ * - Prevents default toggle and manually controls open attribute for smooth animations
+ * - Opening: height 0 → open=true → height scrollHeight
+ * - Closing: height scrollHeight → is-closing class → height 0 → open=false on transitionend
+ * - Uses direct DOM manipulation (classList, open attribute) to avoid React re-render conflicts
+ * - Opacity transitions handled by CSS based on [open] and .is-closing states
  * @param props - Component props
  * @param props.children - Filter field content to render in details
  * @param props.defaultOpen - Whether section should be open by default (default: true)
@@ -26,73 +32,115 @@ export function FilterSection({
 }: FilterSectionProps): React.JSX.Element {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const transitionsEnabledRef = useRef<boolean | null>(null);
 
-  // AIDEV-NOTE: Smooth height/opacity transitions for filter sections
-  // - Uses JavaScript to measure scrollHeight (CSS can't transition height:auto except Chrome 129+)
-  // - Duration: 300ms with cubic-bezier(0.2,0.6,0.4,1) (matching Orbit DVD)
-  // - Properties: height (0 ↔ scrollHeight) and opacity (0 ↔ 1)
-  // - Performance: transform-gpu class moves animation to GPU layer
-  // - Accessibility: Preserves native details/summary behavior completely
-  // - Opening: Temporarily sets height:auto to measure, then animates from 0
-  // - Closing: Forces reflow after setting pixel height to ensure smooth transition
+  // AIDEV-NOTE: Smooth height/opacity transitions matching Orbit DVD
+  // - Duration: 300ms with cubic-bezier(0.2,0.6,0.4,1)
+  // - Height: JavaScript-measured scrollHeight (CSS can't transition height:auto)
+  // - Opacity: CSS-based on [open] attribute and .is-closing class
+  // - Uses direct DOM manipulation to avoid React controlled/uncontrolled conflicts
   useEffect(() => {
     const details = detailsRef.current;
     const content = contentRef.current;
     if (!details || !content) return;
 
-    const handleToggle = (): void => {
-      const isOpening = details.open;
+    const summary = details.querySelector("summary");
+    if (!summary) return;
 
-      if (isOpening) {
-        // Opening: Measure height first (while at 0), then animate to full height
-        // Temporarily remove height restriction to measure content
-        content.style.height = "auto";
-        const endHeight = content.scrollHeight;
+    /**
+     * Check if transitions are enabled (matching Orbit's checkTransitionsEnabled)
+     * Lazy check on first click to ensure styles are computed
+     */
+    const checkTransitionsEnabled = (): boolean => {
+      if (transitionsEnabledRef.current === null) {
+        transitionsEnabledRef.current =
+          window.getComputedStyle(content).transitionDuration !== "0s";
+      }
+      return transitionsEnabledRef.current;
+    };
 
-        // Start from 0
-        content.style.height = "0px";
-        content.style.opacity = "0";
+    /**
+     * Handles summary click - prevents default and manually controls open state
+     * (matching Orbit's handleToggle)
+     */
+    const handleClick = (evt: MouseEvent): void => {
+      if (!checkTransitionsEnabled()) return; // Let native behavior work if no transitions
 
-        requestAnimationFrame((): void => {
-          content.style.height = `${endHeight}px`;
-          content.style.opacity = "1";
-        });
+      evt.preventDefault();
+
+      if (!details.open) {
+        openDetails();
       } else {
-        // Closing: Get current height, set to pixels, force reflow, then animate to 0
-        const startHeight = content.scrollHeight;
-        content.style.height = `${startHeight}px`;
-
-        // Force reflow so browser registers the pixel height before animating
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        content.offsetHeight;
-
-        requestAnimationFrame((): void => {
-          content.style.height = "0px";
-          content.style.opacity = "0";
-        });
+        closeDetails();
       }
     };
 
-    const handleTransitionEnd = (e: TransitionEvent): void => {
-      if (e.target !== content || e.propertyName !== "height") return;
-      // Set to auto after opening (allows dynamic content growth)
-      if (details.open) content.style.height = "auto";
+    /**
+     * Opens the details element with animation
+     * (matching Orbit's open method)
+     */
+    const openDetails = (): void => {
+      // Set height to 0 before opening
+      content.style.height = "0px";
+
+      // Open the details element
+      details.open = true;
+
+      // Set height to scrollHeight to trigger transition
+      // Use requestAnimationFrame to ensure browser has painted the open state
+      requestAnimationFrame(() => {
+        content.style.height = `${content.scrollHeight}px`;
+      });
+    };
+
+    /**
+     * Closes the details element with animation
+     * (matching Orbit's close method)
+     */
+    const closeDetails = (): void => {
+      // Set height to current scrollHeight first
+      content.style.height = `${content.scrollHeight}px`;
+
+      // Add is-closing class for styling during transition
+      // AIDEV-NOTE: Using direct classList manipulation instead of React state
+      // to avoid re-render conflicts with manual open attribute control
+      details.classList.add("is-closing");
+
+      // Animate to 0 after a slight delay (matching Orbit's setTimeout)
+      setTimeout(() => {
+        content.style.height = "0px";
+      }, 1); // Minimal delay to ensure scrollHeight is applied
+    };
+
+    /**
+     * Handles transition end - cleanup after closing animation
+     * (matching Orbit's handleTransitionEnd)
+     */
+    const handleTransitionEnd = (evt: TransitionEvent): void => {
+      if (evt.target !== content) return;
+
+      if (details.classList.contains("is-closing")) {
+        details.classList.remove("is-closing");
+        details.open = false;
+      }
+
+      // Remove inline height after transition (allows content to grow naturally when open)
+      content.style.height = "";
     };
 
     // Set initial state (no animation on mount)
+    details.open = defaultOpen;
     if (defaultOpen) {
-      content.style.height = "auto";
-      content.style.opacity = "1";
+      content.style.height = "";
     } else {
       content.style.height = "0px";
-      content.style.opacity = "0";
     }
 
-    details.addEventListener("toggle", handleToggle);
+    summary.addEventListener("click", handleClick);
     content.addEventListener("transitionend", handleTransitionEnd);
 
     return (): void => {
-      details.removeEventListener("toggle", handleToggle);
+      summary.removeEventListener("click", handleClick);
       content.removeEventListener("transitionend", handleTransitionEnd);
     };
   }, [defaultOpen]);
@@ -103,7 +151,6 @@ export function FilterSection({
         group border-b border-default
         last:border-0
       "
-      open={defaultOpen}
       ref={detailsRef}
     >
       <summary
@@ -129,15 +176,29 @@ export function FilterSection({
           <path d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z" />
         </svg>
       </summary>
-      {/* Content area for filter fields */}
+      {/* Panel: handles height transition (matching Orbit's .disclosure__panel) */}
       <div
-        className="
-          transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-300 ease-[cubic-bezier(0.2,0.6,0.4,1)]
-        "
+        className="overflow-hidden"
+        style={{
+          transition: "height 300ms cubic-bezier(0.2, 0.6, 0.4, 1)",
+        }}
         ref={contentRef}
       >
-        {children}
+        {/* Content: handles opacity transition (matching Orbit's .disclosure__content) */}
+        {/* AIDEV-NOTE: Opacity transitions:
+            - When open (not closing): opacity 1 with 0.1s delay (fade in after height starts)
+            - When closing: opacity 0 with no delay (fade out immediately)
+            - Pattern matches Orbit's .disclosure[open]:not(.is-closing) .disclosure__content
+        */}
+        <div
+          className="
+            pb-6 opacity-0 transition-opacity duration-300
+            [[open]:not(.is-closing)_&]:opacity-100
+            [[open]:not(.is-closing)_&]:delay-100
+          "
+        >
+          {children}
+        </div>
       </div>
     </details>
   );

@@ -555,7 +555,7 @@
             </div>
           </header>
           <astro-island
-            uid="26WIoi"
+            uid="Z15WCLx"
             prefix="r1"
             component-url="~/features/collection-titles/CollectionTitles"
             component-export="CollectionTitles"
@@ -1036,7 +1036,6 @@
                         <div class="px-container tablet-landscape:px-12">
                           <details
                             class="group border-b border-default last:border-0"
-                            open=""
                           >
                             <summary
                               class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
@@ -1044,7 +1043,7 @@
                               <span class="flex items-center gap-2">Title</span
                               ><svg
                                 aria-hidden="true"
-                                class="ml-auto size-3 transition-transform duration-200 group-open:rotate-180"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
                                 fill="currentColor"
                                 viewBox="0 0 12 8"
                               >
@@ -1054,19 +1053,26 @@
                               </svg>
                             </summary>
                             <div
-                              class="transform-gpu overflow-hidden pb-6 transition-[height,opacity] duration-200 ease-in-out"
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
-                              <input
-                                aria-label="Title"
-                                class="w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
-                                placeholder="Enter all or part of a title"
-                                type="text"
-                              />
+                              <div
+                                class="pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <input
+                                  aria-label="Title"
+                                  class="w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
+                                  placeholder="Enter all or part of a title"
+                                  type="text"
+                                />
+                              </div>
                             </div>
                           </details>
                           <details
                             class="group border-b border-default last:border-0"
-                            open=""
                           >
                             <summary
                               class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
@@ -1075,7 +1081,7 @@
                                 >Release Year</span
                               ><svg
                                 aria-hidden="true"
-                                class="ml-auto size-3 transition-transform duration-200 group-open:rotate-180"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
                                 fill="currentColor"
                                 viewBox="0 0 12 8"
                               >
@@ -1085,92 +1091,100 @@
                               </svg>
                             </summary>
                             <div
-                              class="transform-gpu overflow-hidden pb-6 transition-[height,opacity] duration-200 ease-in-out"
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
-                              <div class="flex flex-col gap-4">
-                                <fieldset
-                                  aria-label="Release Year"
-                                  class="text-subtle"
-                                >
-                                  <div class="flex items-baseline">
-                                    <label
-                                      class="flex flex-1 items-center gap-x-[.5ch]"
-                                      ><span
-                                        class="min-w-10 text-left text-sm tracking-serif-wide"
-                                        >From</span
-                                      ><select
-                                        class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                                      >
-                                        <option value="2006" selected="">
-                                          2006
-                                        </option>
-                                        <option value="2010">2010</option>
-                                        <option value="2013">2013</option>
-                                        <option value="2017">2017</option>
-                                      </select></label
-                                    ><label class="flex flex-1 items-center"
-                                      ><span
-                                        class="min-w-10 text-center text-sm tracking-serif-wide"
-                                        >to</span
-                                      ><select
-                                        class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                                      >
-                                        <option value="2017" selected="">
-                                          2017
-                                        </option>
-                                        <option value="2013">2013</option>
-                                        <option value="2010">2010</option>
-                                        <option value="2006">2006</option>
-                                      </select></label
-                                    >
-                                  </div>
-                                </fieldset>
-                                <div class="text-left">
-                                  <div class="flex flex-col gap-4 px-2 py-3">
-                                    <div class="relative h-6">
-                                      <div
-                                        class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
-                                      ></div>
-                                      <div
-                                        class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
-                                        style="left: 0%; right: 0%"
-                                      ></div>
-                                      <input
-                                        aria-label="Release Year minimum value"
-                                        aria-valuemax="2017"
-                                        aria-valuemin="2006"
-                                        aria-valuenow="2006"
-                                        aria-valuetext="2006"
-                                        class="range-input"
-                                        id="range-slider-release-year-from"
-                                        max="2017"
-                                        min="2006"
-                                        type="range"
-                                        value="2006"
-                                      /><input
-                                        aria-label="Release Year maximum value"
-                                        aria-valuemax="2017"
-                                        aria-valuemin="2006"
-                                        aria-valuenow="2017"
-                                        aria-valuetext="2017"
-                                        class="range-input"
-                                        id="range-slider-release-year-to"
-                                        max="2017"
-                                        min="2006"
-                                        type="range"
-                                        value="2017"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div
-                                    aria-atomic="true"
-                                    aria-live="polite"
-                                    class="sr-only"
+                              <div
+                                class="pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <div class="flex flex-col gap-4">
+                                  <fieldset
+                                    aria-label="Release Year"
+                                    class="text-subtle"
                                   >
-                                    Range:
-                                    <!-- -->2006<!-- -->
-                                    to
-                                    <!-- -->2017
+                                    <div class="flex items-baseline">
+                                      <label
+                                        class="flex flex-1 items-center gap-x-[.5ch]"
+                                        ><span
+                                          class="min-w-10 text-left text-sm tracking-serif-wide"
+                                          >From</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="2006" selected="">
+                                            2006
+                                          </option>
+                                          <option value="2010">2010</option>
+                                          <option value="2013">2013</option>
+                                          <option value="2017">2017</option>
+                                        </select></label
+                                      ><label class="flex flex-1 items-center"
+                                        ><span
+                                          class="min-w-10 text-center text-sm tracking-serif-wide"
+                                          >to</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="2017" selected="">
+                                            2017
+                                          </option>
+                                          <option value="2013">2013</option>
+                                          <option value="2010">2010</option>
+                                          <option value="2006">2006</option>
+                                        </select></label
+                                      >
+                                    </div>
+                                  </fieldset>
+                                  <div class="text-left">
+                                    <div class="flex flex-col gap-4 px-2 py-3">
+                                      <div class="relative h-6">
+                                        <div
+                                          class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                        ></div>
+                                        <div
+                                          class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                          style="left: 0%; right: 0%"
+                                        ></div>
+                                        <input
+                                          aria-label="Release Year minimum value"
+                                          aria-valuemax="2017"
+                                          aria-valuemin="2006"
+                                          aria-valuenow="2006"
+                                          aria-valuetext="2006"
+                                          class="range-input"
+                                          id="range-slider-release-year-from"
+                                          max="2017"
+                                          min="2006"
+                                          type="range"
+                                          value="2006"
+                                        /><input
+                                          aria-label="Release Year maximum value"
+                                          aria-valuemax="2017"
+                                          aria-valuemin="2006"
+                                          aria-valuenow="2017"
+                                          aria-valuetext="2017"
+                                          class="range-input"
+                                          id="range-slider-release-year-to"
+                                          max="2017"
+                                          min="2006"
+                                          type="range"
+                                          value="2017"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="sr-only"
+                                    >
+                                      Range:
+                                      <!-- -->2006<!-- -->
+                                      to
+                                      <!-- -->2017
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1178,7 +1192,6 @@
                           </details>
                           <details
                             class="group border-b border-default last:border-0"
-                            open=""
                           >
                             <summary
                               class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
@@ -1186,7 +1199,7 @@
                               <span class="flex items-center gap-2">Genres</span
                               ><svg
                                 aria-hidden="true"
-                                class="ml-auto size-3 transition-transform duration-200 group-open:rotate-180"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
                                 fill="currentColor"
                                 viewBox="0 0 12 8"
                               >
@@ -1196,82 +1209,89 @@
                               </svg>
                             </summary>
                             <div
-                              class="transform-gpu overflow-hidden pb-6 transition-[height,opacity] duration-200 ease-in-out"
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
-                              <fieldset class="text-left font-sans">
-                                <legend class="sr-only">
-                                  <span
-                                    class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
-                                    >Genres</span
-                                  >
-                                </legend>
-                                <div class="flex flex-col gap-2">
-                                  <div
-                                    aria-live="polite"
-                                    aria-relevant="additions removals"
-                                    class="flex flex-col"
-                                    role="group"
-                                  >
-                                    <label
-                                      class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
-                                      for="checkbox-list-genres-Action"
-                                      ><input
-                                        class="size-4 cursor-pointer accent-accent"
-                                        id="checkbox-list-genres-Action"
-                                        type="checkbox"
-                                        value="Action"
-                                      /><span
-                                        class="flex-1 text-base text-default"
-                                        >Action</span
-                                      ><span class="text-base text-subtle"
-                                        >(<!-- -->3<!-- -->)</span
-                                      ></label
-                                    ><label
-                                      class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
-                                      for="checkbox-list-genres-Comedy"
-                                      ><input
-                                        class="size-4 cursor-pointer accent-accent"
-                                        id="checkbox-list-genres-Comedy"
-                                        type="checkbox"
-                                        value="Comedy"
-                                      /><span
-                                        class="flex-1 text-base text-default"
-                                        >Comedy</span
-                                      ><span class="text-base text-subtle"
-                                        >(<!-- -->4<!-- -->)</span
-                                      ></label
-                                    ><label
-                                      class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
-                                      for="checkbox-list-genres-Horror"
-                                      ><input
-                                        class="size-4 cursor-pointer accent-accent"
-                                        id="checkbox-list-genres-Horror"
-                                        type="checkbox"
-                                        value="Horror"
-                                      /><span
-                                        class="flex-1 text-base text-default"
-                                        >Horror</span
-                                      ><span class="text-base text-subtle"
-                                        >(<!-- -->4<!-- -->)</span
-                                      ></label
+                              <div
+                                class="pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <fieldset class="text-left font-sans">
+                                  <legend class="sr-only">
+                                    <span
+                                      class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
+                                      >Genres</span
                                     >
-                                  </div>
-                                  <div class="flex items-center gap-2">
-                                    <button
-                                      aria-expanded="false"
-                                      class="mt-2 font-sans text-sm text-accent underline"
-                                      type="button"
+                                  </legend>
+                                  <div class="flex flex-col gap-2">
+                                    <div
+                                      aria-live="polite"
+                                      aria-relevant="additions removals"
+                                      class="flex flex-col"
+                                      role="group"
                                     >
-                                      Show more
-                                    </button>
+                                      <label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-genres-Action"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-genres-Action"
+                                          type="checkbox"
+                                          value="Action"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Action</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->3<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-genres-Comedy"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-genres-Comedy"
+                                          type="checkbox"
+                                          value="Comedy"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Comedy</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->4<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-genres-Horror"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-genres-Horror"
+                                          type="checkbox"
+                                          value="Horror"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Horror</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->4<!-- -->)</span
+                                        ></label
+                                      >
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                      <button
+                                        aria-expanded="false"
+                                        class="mt-2 font-sans text-sm text-accent underline"
+                                        type="button"
+                                      >
+                                        Show more
+                                      </button>
+                                    </div>
                                   </div>
-                                </div>
-                              </fieldset>
+                                </fieldset>
+                              </div>
                             </div>
                           </details>
                           <details
                             class="group border-b border-default last:border-0"
-                            open=""
                           >
                             <summary
                               class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
@@ -1279,7 +1299,7 @@
                               <span class="flex items-center gap-2">Grade</span
                               ><svg
                                 aria-hidden="true"
-                                class="ml-auto size-3 transition-transform duration-200 group-open:rotate-180"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
                                 fill="currentColor"
                                 viewBox="0 0 12 8"
                               >
@@ -1289,114 +1309,122 @@
                               </svg>
                             </summary>
                             <div
-                              class="transform-gpu overflow-hidden pb-6 transition-[height,opacity] duration-200 ease-in-out"
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
-                              <div class="flex flex-col gap-4">
-                                <fieldset
-                                  aria-label="Grade"
-                                  class="text-subtle"
-                                >
-                                  <div class="flex flex-wrap items-baseline">
-                                    <label
-                                      class="flex flex-1 items-center gap-x-[.5ch]"
-                                      ><span
-                                        class="min-w-10 text-left text-sm tracking-serif-wide"
-                                        >From</span
-                                      ><select
-                                        class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                                      >
-                                        <option value="2" selected="">
-                                          F-
-                                        </option>
-                                        <option value="3">F</option>
-                                        <option value="4">F+</option>
-                                        <option value="5">D-</option>
-                                        <option value="6">D</option>
-                                        <option value="7">D+</option>
-                                        <option value="8">C-</option>
-                                        <option value="9">C</option>
-                                        <option value="10">C+</option>
-                                        <option value="11">B-</option>
-                                        <option value="12">B</option>
-                                        <option value="13">B+</option>
-                                        <option value="14">A-</option>
-                                        <option value="15">A</option>
-                                        <option value="16">A+</option>
-                                      </select></label
-                                    ><label class="flex flex-1 items-center"
-                                      ><span
-                                        class="min-w-10 text-center text-sm tracking-serif-wide"
-                                        >to</span
-                                      ><select
-                                        class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                                      >
-                                        <option value="16" selected="">
-                                          A+
-                                        </option>
-                                        <option value="15">A</option>
-                                        <option value="14">A-</option>
-                                        <option value="13">B+</option>
-                                        <option value="12">B</option>
-                                        <option value="11">B-</option>
-                                        <option value="10">C+</option>
-                                        <option value="9">C</option>
-                                        <option value="8">C-</option>
-                                        <option value="7">D+</option>
-                                        <option value="6">D</option>
-                                        <option value="5">D-</option>
-                                        <option value="4">F+</option>
-                                        <option value="3">F</option>
-                                        <option value="2">F-</option>
-                                      </select></label
-                                    >
-                                  </div>
-                                </fieldset>
-                                <div class="text-left">
-                                  <div class="flex flex-col gap-4 px-2 py-3">
-                                    <div class="relative h-6">
-                                      <div
-                                        class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
-                                      ></div>
-                                      <div
-                                        class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
-                                        style="left: 0%; right: 0%"
-                                      ></div>
-                                      <input
-                                        aria-label="Grade minimum value"
-                                        aria-valuemax="16"
-                                        aria-valuemin="2"
-                                        aria-valuenow="2"
-                                        aria-valuetext="F-"
-                                        class="range-input"
-                                        id="range-slider-grade-from"
-                                        max="16"
-                                        min="2"
-                                        type="range"
-                                        value="2"
-                                      /><input
-                                        aria-label="Grade maximum value"
-                                        aria-valuemax="16"
-                                        aria-valuemin="2"
-                                        aria-valuenow="16"
-                                        aria-valuetext="A+"
-                                        class="range-input"
-                                        id="range-slider-grade-to"
-                                        max="16"
-                                        min="2"
-                                        type="range"
-                                        value="16"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div
-                                    aria-atomic="true"
-                                    aria-live="polite"
-                                    class="sr-only"
+                              <div
+                                class="pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <div class="flex flex-col gap-4">
+                                  <fieldset
+                                    aria-label="Grade"
+                                    class="text-subtle"
                                   >
-                                    Range:
-                                    <!-- -->F-<!-- -->
-                                    to
-                                    <!-- -->A+
+                                    <div class="flex flex-wrap items-baseline">
+                                      <label
+                                        class="flex flex-1 items-center gap-x-[.5ch]"
+                                        ><span
+                                          class="min-w-10 text-left text-sm tracking-serif-wide"
+                                          >From</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="2" selected="">
+                                            F-
+                                          </option>
+                                          <option value="3">F</option>
+                                          <option value="4">F+</option>
+                                          <option value="5">D-</option>
+                                          <option value="6">D</option>
+                                          <option value="7">D+</option>
+                                          <option value="8">C-</option>
+                                          <option value="9">C</option>
+                                          <option value="10">C+</option>
+                                          <option value="11">B-</option>
+                                          <option value="12">B</option>
+                                          <option value="13">B+</option>
+                                          <option value="14">A-</option>
+                                          <option value="15">A</option>
+                                          <option value="16">A+</option>
+                                        </select></label
+                                      ><label class="flex flex-1 items-center"
+                                        ><span
+                                          class="min-w-10 text-center text-sm tracking-serif-wide"
+                                          >to</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="16" selected="">
+                                            A+
+                                          </option>
+                                          <option value="15">A</option>
+                                          <option value="14">A-</option>
+                                          <option value="13">B+</option>
+                                          <option value="12">B</option>
+                                          <option value="11">B-</option>
+                                          <option value="10">C+</option>
+                                          <option value="9">C</option>
+                                          <option value="8">C-</option>
+                                          <option value="7">D+</option>
+                                          <option value="6">D</option>
+                                          <option value="5">D-</option>
+                                          <option value="4">F+</option>
+                                          <option value="3">F</option>
+                                          <option value="2">F-</option>
+                                        </select></label
+                                      >
+                                    </div>
+                                  </fieldset>
+                                  <div class="text-left">
+                                    <div class="flex flex-col gap-4 px-2 py-3">
+                                      <div class="relative h-6">
+                                        <div
+                                          class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                        ></div>
+                                        <div
+                                          class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                          style="left: 0%; right: 0%"
+                                        ></div>
+                                        <input
+                                          aria-label="Grade minimum value"
+                                          aria-valuemax="16"
+                                          aria-valuemin="2"
+                                          aria-valuenow="2"
+                                          aria-valuetext="F-"
+                                          class="range-input"
+                                          id="range-slider-grade-from"
+                                          max="16"
+                                          min="2"
+                                          type="range"
+                                          value="2"
+                                        /><input
+                                          aria-label="Grade maximum value"
+                                          aria-valuemax="16"
+                                          aria-valuemin="2"
+                                          aria-valuenow="16"
+                                          aria-valuetext="A+"
+                                          class="range-input"
+                                          id="range-slider-grade-to"
+                                          max="16"
+                                          min="2"
+                                          type="range"
+                                          value="16"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="sr-only"
+                                    >
+                                      Range:
+                                      <!-- -->F-<!-- -->
+                                      to
+                                      <!-- -->A+
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1404,7 +1432,6 @@
                           </details>
                           <details
                             class="group border-b border-default last:border-0"
-                            open=""
                           >
                             <summary
                               class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
@@ -1413,7 +1440,7 @@
                                 >Review Year</span
                               ><svg
                                 aria-hidden="true"
-                                class="ml-auto size-3 transition-transform duration-200 group-open:rotate-180"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
                                 fill="currentColor"
                                 viewBox="0 0 12 8"
                               >
@@ -1423,88 +1450,96 @@
                               </svg>
                             </summary>
                             <div
-                              class="transform-gpu overflow-hidden pb-6 transition-[height,opacity] duration-200 ease-in-out"
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
-                              <div class="flex flex-col gap-4">
-                                <fieldset
-                                  aria-label="Review Year"
-                                  class="text-subtle"
-                                >
-                                  <div class="flex items-baseline">
-                                    <label
-                                      class="flex flex-1 items-center gap-x-[.5ch]"
-                                      ><span
-                                        class="min-w-10 text-left text-sm tracking-serif-wide"
-                                        >From</span
-                                      ><select
-                                        class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                                      >
-                                        <option value="2020" selected="">
-                                          2020
-                                        </option>
-                                        <option value="2021">2021</option>
-                                      </select></label
-                                    ><label class="flex flex-1 items-center"
-                                      ><span
-                                        class="min-w-10 text-center text-sm tracking-serif-wide"
-                                        >to</span
-                                      ><select
-                                        class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                                      >
-                                        <option value="2021" selected="">
-                                          2021
-                                        </option>
-                                        <option value="2020">2020</option>
-                                      </select></label
-                                    >
-                                  </div>
-                                </fieldset>
-                                <div class="text-left">
-                                  <div class="flex flex-col gap-4 px-2 py-3">
-                                    <div class="relative h-6">
-                                      <div
-                                        class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
-                                      ></div>
-                                      <div
-                                        class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
-                                        style="left: 0%; right: 0%"
-                                      ></div>
-                                      <input
-                                        aria-label="Review Year minimum value"
-                                        aria-valuemax="2021"
-                                        aria-valuemin="2020"
-                                        aria-valuenow="2020"
-                                        aria-valuetext="2020"
-                                        class="range-input"
-                                        id="range-slider-review-year-from"
-                                        max="2021"
-                                        min="2020"
-                                        type="range"
-                                        value="2020"
-                                      /><input
-                                        aria-label="Review Year maximum value"
-                                        aria-valuemax="2021"
-                                        aria-valuemin="2020"
-                                        aria-valuenow="2021"
-                                        aria-valuetext="2021"
-                                        class="range-input"
-                                        id="range-slider-review-year-to"
-                                        max="2021"
-                                        min="2020"
-                                        type="range"
-                                        value="2021"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div
-                                    aria-atomic="true"
-                                    aria-live="polite"
-                                    class="sr-only"
+                              <div
+                                class="pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <div class="flex flex-col gap-4">
+                                  <fieldset
+                                    aria-label="Review Year"
+                                    class="text-subtle"
                                   >
-                                    Range:
-                                    <!-- -->2020<!-- -->
-                                    to
-                                    <!-- -->2021
+                                    <div class="flex items-baseline">
+                                      <label
+                                        class="flex flex-1 items-center gap-x-[.5ch]"
+                                        ><span
+                                          class="min-w-10 text-left text-sm tracking-serif-wide"
+                                          >From</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="2020" selected="">
+                                            2020
+                                          </option>
+                                          <option value="2021">2021</option>
+                                        </select></label
+                                      ><label class="flex flex-1 items-center"
+                                        ><span
+                                          class="min-w-10 text-center text-sm tracking-serif-wide"
+                                          >to</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="2021" selected="">
+                                            2021
+                                          </option>
+                                          <option value="2020">2020</option>
+                                        </select></label
+                                      >
+                                    </div>
+                                  </fieldset>
+                                  <div class="text-left">
+                                    <div class="flex flex-col gap-4 px-2 py-3">
+                                      <div class="relative h-6">
+                                        <div
+                                          class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                        ></div>
+                                        <div
+                                          class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                          style="left: 0%; right: 0%"
+                                        ></div>
+                                        <input
+                                          aria-label="Review Year minimum value"
+                                          aria-valuemax="2021"
+                                          aria-valuemin="2020"
+                                          aria-valuenow="2020"
+                                          aria-valuetext="2020"
+                                          class="range-input"
+                                          id="range-slider-review-year-from"
+                                          max="2021"
+                                          min="2020"
+                                          type="range"
+                                          value="2020"
+                                        /><input
+                                          aria-label="Review Year maximum value"
+                                          aria-valuemax="2021"
+                                          aria-valuemin="2020"
+                                          aria-valuenow="2021"
+                                          aria-valuetext="2021"
+                                          class="range-input"
+                                          id="range-slider-review-year-to"
+                                          max="2021"
+                                          min="2020"
+                                          type="range"
+                                          value="2021"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="sr-only"
+                                    >
+                                      Range:
+                                      <!-- -->2020<!-- -->
+                                      to
+                                      <!-- -->2021
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1512,7 +1547,6 @@
                           </details>
                           <details
                             class="group border-b border-default last:border-0"
-                            open=""
                           >
                             <summary
                               class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
@@ -1521,7 +1555,7 @@
                                 >Reviewed Status</span
                               ><svg
                                 aria-hidden="true"
-                                class="ml-auto size-3 transition-transform duration-200 group-open:rotate-180"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
                                 fill="currentColor"
                                 viewBox="0 0 12 8"
                               >
@@ -1531,55 +1565,63 @@
                               </svg>
                             </summary>
                             <div
-                              class="transform-gpu overflow-hidden pb-6 transition-[height,opacity] duration-200 ease-in-out"
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
-                              <fieldset class="text-left font-sans">
-                                <legend class="sr-only">
-                                  <span
-                                    class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
-                                    >Reviewed Status</span
-                                  >
-                                </legend>
-                                <div class="flex flex-col gap-2">
-                                  <div
-                                    aria-live="polite"
-                                    aria-relevant="additions removals"
-                                    class="flex flex-col"
-                                    role="group"
-                                  >
-                                    <label
-                                      class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
-                                      for="checkbox-list-reviewed-status-Not Reviewed"
-                                      ><input
-                                        class="size-4 cursor-pointer accent-accent"
-                                        id="checkbox-list-reviewed-status-Not Reviewed"
-                                        type="checkbox"
-                                        value="Not Reviewed"
-                                      /><span
-                                        class="flex-1 text-base text-default"
-                                        >Not Reviewed</span
-                                      ><span class="text-base text-subtle"
-                                        >(<!-- -->0<!-- -->)</span
-                                      ></label
-                                    ><label
-                                      class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
-                                      for="checkbox-list-reviewed-status-Reviewed"
-                                      ><input
-                                        class="size-4 cursor-pointer accent-accent"
-                                        id="checkbox-list-reviewed-status-Reviewed"
-                                        type="checkbox"
-                                        value="Reviewed"
-                                      /><span
-                                        class="flex-1 text-base text-default"
-                                        >Reviewed</span
-                                      ><span class="text-base text-subtle"
-                                        >(<!-- -->4<!-- -->)</span
-                                      ></label
+                              <div
+                                class="pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <fieldset class="text-left font-sans">
+                                  <legend class="sr-only">
+                                    <span
+                                      class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
+                                      >Reviewed Status</span
                                     >
+                                  </legend>
+                                  <div class="flex flex-col gap-2">
+                                    <div
+                                      aria-live="polite"
+                                      aria-relevant="additions removals"
+                                      class="flex flex-col"
+                                      role="group"
+                                    >
+                                      <label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-reviewed-status-Not Reviewed"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-reviewed-status-Not Reviewed"
+                                          type="checkbox"
+                                          value="Not Reviewed"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Not Reviewed</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->0<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-reviewed-status-Reviewed"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-reviewed-status-Reviewed"
+                                          type="checkbox"
+                                          value="Reviewed"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Reviewed</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->4<!-- -->)</span
+                                        ></label
+                                      >
+                                    </div>
+                                    <div class="flex items-center gap-2"></div>
                                   </div>
-                                  <div class="flex items-center gap-2"></div>
-                                </div>
-                              </fieldset>
+                                </fieldset>
+                              </div>
                             </div>
                           </details>
                         </div>

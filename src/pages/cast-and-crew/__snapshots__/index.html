@@ -544,7 +544,7 @@
             </div>
           </header>
           <astro-island
-            uid="2lXRbG"
+            uid="1osAcT"
             prefix="r1"
             component-url="~/features/cast-and-crew/CastAndCrew"
             component-export="CastAndCrew"
@@ -5218,7 +5218,6 @@
                         <div class="px-container tablet-landscape:px-12">
                           <details
                             class="group border-b border-default last:border-0"
-                            open=""
                           >
                             <summary
                               class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
@@ -5226,7 +5225,7 @@
                               <span class="flex items-center gap-2">Name</span
                               ><svg
                                 aria-hidden="true"
-                                class="ml-auto size-3 transition-transform duration-200 group-open:rotate-180"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
                                 fill="currentColor"
                                 viewBox="0 0 12 8"
                               >
@@ -5236,19 +5235,26 @@
                               </svg>
                             </summary>
                             <div
-                              class="transform-gpu overflow-hidden pb-6 transition-[height,opacity] duration-200 ease-in-out"
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
-                              <input
-                                aria-label="Name"
-                                class="w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
-                                placeholder="Enter all or part of a name"
-                                type="text"
-                              />
+                              <div
+                                class="pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <input
+                                  aria-label="Name"
+                                  class="w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
+                                  placeholder="Enter all or part of a name"
+                                  type="text"
+                                />
+                              </div>
                             </div>
                           </details>
                           <details
                             class="group border-b border-default last:border-0"
-                            open=""
                           >
                             <summary
                               class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
@@ -5257,7 +5263,7 @@
                                 >Credited As</span
                               ><svg
                                 aria-hidden="true"
-                                class="ml-auto size-3 transition-transform duration-200 group-open:rotate-180"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
                                 fill="currentColor"
                                 viewBox="0 0 12 8"
                               >
@@ -5267,69 +5273,77 @@
                               </svg>
                             </summary>
                             <div
-                              class="transform-gpu overflow-hidden pb-6 transition-[height,opacity] duration-200 ease-in-out"
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
-                              <fieldset class="text-left font-sans">
-                                <legend class="sr-only">
-                                  <span
-                                    class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
-                                    >Credited As</span
-                                  >
-                                </legend>
-                                <div class="flex flex-col gap-2">
-                                  <div
-                                    aria-live="polite"
-                                    aria-relevant="additions removals"
-                                    class="flex flex-col"
-                                    role="group"
-                                  >
-                                    <label
-                                      class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
-                                      for="checkbox-list-credited-as-director"
-                                      ><input
-                                        class="size-4 cursor-pointer accent-accent"
-                                        id="checkbox-list-credited-as-director"
-                                        type="checkbox"
-                                        value="director"
-                                      /><span
-                                        class="flex-1 text-base text-default"
-                                        >Director</span
-                                      ><span class="text-base text-subtle"
-                                        >(<!-- -->49<!-- -->)</span
-                                      ></label
-                                    ><label
-                                      class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
-                                      for="checkbox-list-credited-as-performer"
-                                      ><input
-                                        class="size-4 cursor-pointer accent-accent"
-                                        id="checkbox-list-credited-as-performer"
-                                        type="checkbox"
-                                        value="performer"
-                                      /><span
-                                        class="flex-1 text-base text-default"
-                                        >Performer</span
-                                      ><span class="text-base text-subtle"
-                                        >(<!-- -->57<!-- -->)</span
-                                      ></label
-                                    ><label
-                                      class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
-                                      for="checkbox-list-credited-as-writer"
-                                      ><input
-                                        class="size-4 cursor-pointer accent-accent"
-                                        id="checkbox-list-credited-as-writer"
-                                        type="checkbox"
-                                        value="writer"
-                                      /><span
-                                        class="flex-1 text-base text-default"
-                                        >Writer</span
-                                      ><span class="text-base text-subtle"
-                                        >(<!-- -->49<!-- -->)</span
-                                      ></label
+                              <div
+                                class="pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <fieldset class="text-left font-sans">
+                                  <legend class="sr-only">
+                                    <span
+                                      class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
+                                      >Credited As</span
                                     >
+                                  </legend>
+                                  <div class="flex flex-col gap-2">
+                                    <div
+                                      aria-live="polite"
+                                      aria-relevant="additions removals"
+                                      class="flex flex-col"
+                                      role="group"
+                                    >
+                                      <label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-credited-as-director"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-credited-as-director"
+                                          type="checkbox"
+                                          value="director"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Director</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->49<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-credited-as-performer"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-credited-as-performer"
+                                          type="checkbox"
+                                          value="performer"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Performer</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->57<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-credited-as-writer"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-credited-as-writer"
+                                          type="checkbox"
+                                          value="writer"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Writer</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->49<!-- -->)</span
+                                        ></label
+                                      >
+                                    </div>
+                                    <div class="flex items-center gap-2"></div>
                                   </div>
-                                  <div class="flex items-center gap-2"></div>
-                                </div>
-                              </fieldset>
+                                </fieldset>
+                              </div>
                             </div>
                           </details>
                         </div>

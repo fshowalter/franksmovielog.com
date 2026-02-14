@@ -378,22 +378,10 @@ describe("GradeField", () => {
       );
 
       // Verify initial state
-      expect(
-        (screen.getByRole("combobox", { name: /from/i }))
-          .value,
-      ).toBe("8");
-      expect(
-        (screen.getByRole("combobox", { name: /to/i }))
-          .value,
-      ).toBe("11");
-      expect(
-        (screen.getByLabelText("Grade minimum value"))
-          .value,
-      ).toBe("8");
-      expect(
-        (screen.getByLabelText("Grade maximum value"))
-          .value,
-      ).toBe("11");
+      expect(screen.getByRole("combobox", { name: /from/i }).value).toBe("8");
+      expect(screen.getByRole("combobox", { name: /to/i }).value).toBe("11");
+      expect(screen.getByLabelText("Grade minimum value").value).toBe("8");
+      expect(screen.getByLabelText("Grade maximum value").value).toBe("11");
 
       // Simulate clearing filter via applied filters section
       rerender(
@@ -406,25 +394,13 @@ describe("GradeField", () => {
 
       // Wait for useEffect to run and state to update - query fresh elements after rerender
       await waitFor(() => {
-        expect(
-          (screen.getByRole("combobox", { name: /from/i }))
-            .value,
-        ).toBe("2"); // F-
+        expect(screen.getByRole("combobox", { name: /from/i }).value).toBe("2"); // F-
       });
 
       // Verify full state resets to full range - query fresh elements
-      expect(
-        (screen.getByRole("combobox", { name: /to/i }))
-          .value,
-      ).toBe("16"); // A+
-      expect(
-        (screen.getByLabelText("Grade minimum value"))
-          .value,
-      ).toBe("2");
-      expect(
-        (screen.getByLabelText("Grade maximum value"))
-          .value,
-      ).toBe("16");
+      expect(screen.getByRole("combobox", { name: /to/i }).value).toBe("16"); // A+
+      expect(screen.getByLabelText("Grade minimum value").value).toBe("2");
+      expect(screen.getByLabelText("Grade maximum value").value).toBe("16");
 
       // Clear button should not be visible at full range
       const clearButton = screen.queryByRole("button", {

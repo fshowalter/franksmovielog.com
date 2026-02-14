@@ -366,28 +366,16 @@ describe("YearField", () => {
       );
 
       // Verify initial state
-      expect(
-        (screen.getByRole("combobox", { name: /from/i }))
-          .value,
-      ).toBe("2021");
-      expect(
-        (screen.getByRole("combobox", { name: /to/i }))
-          .value,
-      ).toBe("2023");
-      expect(
-        (
-          screen.getByLabelText(
-            "Release Year minimum value",
-          )
-        ).value,
-      ).toBe("2021");
-      expect(
-        (
-          screen.getByLabelText(
-            "Release Year maximum value",
-          )
-        ).value,
-      ).toBe("2023");
+      expect(screen.getByRole("combobox", { name: /from/i }).value).toBe(
+        "2021",
+      );
+      expect(screen.getByRole("combobox", { name: /to/i }).value).toBe("2023");
+      expect(screen.getByLabelText("Release Year minimum value").value).toBe(
+        "2021",
+      );
+      expect(screen.getByLabelText("Release Year maximum value").value).toBe(
+        "2023",
+      );
 
       // Simulate clearing filter via applied filters section
       rerender(
@@ -401,31 +389,19 @@ describe("YearField", () => {
 
       // Wait for useEffect to run and state to update - query fresh elements after rerender
       await waitFor(() => {
-        expect(
-          (screen.getByRole("combobox", { name: /from/i }))
-            .value,
-        ).toBe("2020");
+        expect(screen.getByRole("combobox", { name: /from/i }).value).toBe(
+          "2020",
+        );
       });
 
       // Verify full state resets to full range - query fresh elements
-      expect(
-        (screen.getByRole("combobox", { name: /to/i }))
-          .value,
-      ).toBe("2024");
-      expect(
-        (
-          screen.getByLabelText(
-            "Release Year minimum value",
-          )
-        ).value,
-      ).toBe("2020");
-      expect(
-        (
-          screen.getByLabelText(
-            "Release Year maximum value",
-          )
-        ).value,
-      ).toBe("2024");
+      expect(screen.getByRole("combobox", { name: /to/i }).value).toBe("2024");
+      expect(screen.getByLabelText("Release Year minimum value").value).toBe(
+        "2020",
+      );
+      expect(screen.getByLabelText("Release Year maximum value").value).toBe(
+        "2024",
+      );
 
       // Clear button should not be visible at full range
       const clearButton = screen.queryByRole("button", {

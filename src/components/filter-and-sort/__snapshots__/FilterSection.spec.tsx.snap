@@ -34,14 +34,19 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
       </svg>
     </summary>
     <div
-      class="
-          transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-300 ease-[cubic-bezier(0.2,0.6,0.4,1)]
-        "
-      style="height: 0px; opacity: 0;"
+      class="overflow-hidden"
+      style="transition: height 300ms cubic-bezier(0.2, 0.6, 0.4, 1); height: 0px;"
     >
-      <div>
-        Filter content here
+      <div
+        class="
+            pb-6 opacity-0 transition-opacity duration-300
+            [[open]:not(.is-closing)_&]:opacity-100
+            [[open]:not(.is-closing)_&]:delay-100
+          "
+      >
+        <div>
+          Filter content here
+        </div>
       </div>
     </div>
   </details>
@@ -83,14 +88,19 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
       </svg>
     </summary>
     <div
-      class="
-          transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-300 ease-[cubic-bezier(0.2,0.6,0.4,1)]
-        "
-      style="height: auto; opacity: 1;"
+      class="overflow-hidden"
+      style="transition: height 300ms cubic-bezier(0.2, 0.6, 0.4, 1);"
     >
-      <div>
-        Filter content here
+      <div
+        class="
+            pb-6 opacity-0 transition-opacity duration-300
+            [[open]:not(.is-closing)_&]:opacity-100
+            [[open]:not(.is-closing)_&]:delay-100
+          "
+      >
+        <div>
+          Filter content here
+        </div>
       </div>
     </div>
   </details>

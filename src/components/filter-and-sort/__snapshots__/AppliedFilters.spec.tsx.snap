@@ -22,7 +22,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filt
     <svg
       aria-hidden="true"
       class="
-            ml-auto size-3 transition-transform duration-200
+            ml-auto size-3 transition-transform duration-300
             group-open:rotate-180
           "
       fill="currentColor"
@@ -34,82 +34,87 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filt
     </svg>
   </summary>
   <div
-    class="
-          transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-200 ease-in-out
-        "
-    style="height: auto; opacity: 1;"
+    class="overflow-hidden"
+    style="transition: height 300ms cubic-bezier(0.2, 0.6, 0.4, 1);"
   >
     <div
-      class="mb-3 flex flex-wrap gap-2"
+      class="
+            pb-6 opacity-0 transition-opacity duration-300
+            [[open]:not(.is-closing)_&]:opacity-100
+            [[open]:not(.is-closing)_&]:delay-100
+          "
     >
-      <button
-        aria-label="Remove Horror filter"
-        class="
+      <div
+        class="mb-3 flex flex-wrap gap-2"
+      >
+        <button
+          aria-label="Remove Horror filter"
+          class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
-        type="button"
-      >
-        <span>
-          Horror
-        </span>
-        <span
-          aria-hidden="true"
+          type="button"
         >
-          ×
-        </span>
-      </button>
-      <button
-        aria-label="Remove Action filter"
-        class="
+          <span>
+            Horror
+          </span>
+          <span
+            aria-hidden="true"
+          >
+            ×
+          </span>
+        </button>
+        <button
+          aria-label="Remove Action filter"
+          class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
-        type="button"
-      >
-        <span>
-          Action
-        </span>
-        <span
-          aria-hidden="true"
+          type="button"
         >
-          ×
-        </span>
-      </button>
-      <button
-        aria-label="Remove Search: alien filter"
-        class="
+          <span>
+            Action
+          </span>
+          <span
+            aria-hidden="true"
+          >
+            ×
+          </span>
+        </button>
+        <button
+          aria-label="Remove Search: alien filter"
+          class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
+          type="button"
+        >
+          <span>
+            Search: alien
+          </span>
+          <span
+            aria-hidden="true"
+          >
+            ×
+          </span>
+        </button>
+      </div>
+      <button
+        class="font-sans text-sm text-accent underline"
         type="button"
       >
-        <span>
-          Search: alien
-        </span>
-        <span
-          aria-hidden="true"
-        >
-          ×
-        </span>
+        Clear all
       </button>
     </div>
-    <button
-      class="font-sans text-sm text-accent underline"
-      type="button"
-    >
-      Clear all
-    </button>
   </div>
 </details>
 `;
@@ -136,7 +141,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with search filter
     <svg
       aria-hidden="true"
       class="
-            ml-auto size-3 transition-transform duration-200
+            ml-auto size-3 transition-transform duration-300
             group-open:rotate-180
           "
       fill="currentColor"
@@ -148,42 +153,47 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with search filter
     </svg>
   </summary>
   <div
-    class="
-          transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-200 ease-in-out
-        "
-    style="height: auto; opacity: 1;"
+    class="overflow-hidden"
+    style="transition: height 300ms cubic-bezier(0.2, 0.6, 0.4, 1);"
   >
     <div
-      class="mb-3 flex flex-wrap gap-2"
+      class="
+            pb-6 opacity-0 transition-opacity duration-300
+            [[open]:not(.is-closing)_&]:opacity-100
+            [[open]:not(.is-closing)_&]:delay-100
+          "
     >
-      <button
-        aria-label="Remove Search: alien filter"
-        class="
+      <div
+        class="mb-3 flex flex-wrap gap-2"
+      >
+        <button
+          aria-label="Remove Search: alien filter"
+          class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
+          type="button"
+        >
+          <span>
+            Search: alien
+          </span>
+          <span
+            aria-hidden="true"
+          >
+            ×
+          </span>
+        </button>
+      </div>
+      <button
+        class="font-sans text-sm text-accent underline"
         type="button"
       >
-        <span>
-          Search: alien
-        </span>
-        <span
-          aria-hidden="true"
-        >
-          ×
-        </span>
+        Clear all
       </button>
     </div>
-    <button
-      class="font-sans text-sm text-accent underline"
-      type="button"
-    >
-      Clear all
-    </button>
   </div>
 </details>
 `;
@@ -210,7 +220,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with single filter
     <svg
       aria-hidden="true"
       class="
-            ml-auto size-3 transition-transform duration-200
+            ml-auto size-3 transition-transform duration-300
             group-open:rotate-180
           "
       fill="currentColor"
@@ -222,42 +232,47 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with single filter
     </svg>
   </summary>
   <div
-    class="
-          transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-200 ease-in-out
-        "
-    style="height: auto; opacity: 1;"
+    class="overflow-hidden"
+    style="transition: height 300ms cubic-bezier(0.2, 0.6, 0.4, 1);"
   >
     <div
-      class="mb-3 flex flex-wrap gap-2"
+      class="
+            pb-6 opacity-0 transition-opacity duration-300
+            [[open]:not(.is-closing)_&]:opacity-100
+            [[open]:not(.is-closing)_&]:delay-100
+          "
     >
-      <button
-        aria-label="Remove Horror filter"
-        class="
+      <div
+        class="mb-3 flex flex-wrap gap-2"
+      >
+        <button
+          aria-label="Remove Horror filter"
+          class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
+          type="button"
+        >
+          <span>
+            Horror
+          </span>
+          <span
+            aria-hidden="true"
+          >
+            ×
+          </span>
+        </button>
+      </div>
+      <button
+        class="font-sans text-sm text-accent underline"
         type="button"
       >
-        <span>
-          Horror
-        </span>
-        <span
-          aria-hidden="true"
-        >
-          ×
-        </span>
+        Clear all
       </button>
     </div>
-    <button
-      class="font-sans text-sm text-accent underline"
-      type="button"
-    >
-      Clear all
-    </button>
   </div>
 </details>
 `;
