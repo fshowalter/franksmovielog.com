@@ -30,7 +30,7 @@ describe("buildAppliedFilterChips", () => {
 
   it("creates chip for grade range", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      gradeValue: [11, 10], // Min: A-, Max: B+
+      gradeValue: [14, 13], // Min: A-, Max: B+
     };
     const chips = buildAppliedFilterChips(filterValues, {
       distinctReleaseYears: ["1920", "2024"],
@@ -43,7 +43,7 @@ describe("buildAppliedFilterChips", () => {
 
   it("creates chip for single grade", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      gradeValue: [11, 11], // A- only
+      gradeValue: [14, 14], // A- only
     };
     const chips = buildAppliedFilterChips(filterValues, {
       distinctReleaseYears: ["1920", "2024"],
@@ -54,9 +54,9 @@ describe("buildAppliedFilterChips", () => {
     ]);
   });
 
-  it("excludes full grade range (1-13)", () => {
+  it("excludes full grade range (2-16)", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      gradeValue: [1, 13], // Full range (F to A+)
+      gradeValue: [2, 16], // Full range (F- to A+)
     };
     const chips = buildAppliedFilterChips(filterValues, {
       distinctReleaseYears: ["1920", "2024"],
@@ -261,7 +261,7 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
       creditedAs: ["director"],
       genres: ["Horror", "Sci-Fi"],
-      gradeValue: [11, 10],
+      gradeValue: [14, 13],
       releaseYear: ["1980", "1989"],
       reviewedStatus: ["Not Reviewed"],
       reviewYear: ["2020", "2025"],

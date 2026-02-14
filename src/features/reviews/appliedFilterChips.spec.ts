@@ -104,7 +104,7 @@ describe("buildAppliedFilterChips", () => {
   describe("grade filter", () => {
     it("creates a chip for a single grade (min === max)", () => {
       const filterValues: ReviewsFiltersValues = {
-        gradeValue: [11, 11], // A-
+        gradeValue: [14, 14], // A-
       };
 
       const result = buildAppliedFilterChips(filterValues);
@@ -120,7 +120,7 @@ describe("buildAppliedFilterChips", () => {
 
     it("creates a chip for a grade range", () => {
       const filterValues: ReviewsFiltersValues = {
-        gradeValue: [11, 10], // A- to B+
+        gradeValue: [14, 13], // A- to B+
       };
 
       const result = buildAppliedFilterChips(filterValues);
@@ -134,9 +134,9 @@ describe("buildAppliedFilterChips", () => {
       ]);
     });
 
-    it("handles full grade range (A+ to F)", () => {
+    it("handles full grade range (A+ to F-)", () => {
       const filterValues: ReviewsFiltersValues = {
-        gradeValue: [13, 1], // A+ to F
+        gradeValue: [16, 2], // A+ to F-
       };
 
       const result = buildAppliedFilterChips(filterValues);
@@ -145,14 +145,14 @@ describe("buildAppliedFilterChips", () => {
         {
           category: "Grade",
           id: "gradeValue",
-          label: "F to A+",
+          label: "F- to A+",
         },
       ]);
     });
 
-    it("does not create chip for default full range (F to A+)", () => {
+    it("does not create chip for default full range (F- to A+)", () => {
       const filterValues: ReviewsFiltersValues = {
-        gradeValue: [1, 13], // F to A+ (default)
+        gradeValue: [2, 16], // F- to A+ (default)
       };
 
       const result = buildAppliedFilterChips(filterValues);
@@ -162,19 +162,21 @@ describe("buildAppliedFilterChips", () => {
 
     it("handles all grade values correctly", () => {
       const grades = [
-        [13, "A+"],
-        [12, "A"],
-        [11, "A-"],
-        [10, "B+"],
-        [9, "B"],
-        [8, "B-"],
-        [7, "C+"],
-        [6, "C"],
-        [5, "C-"],
-        [4, "D+"],
-        [3, "D"],
-        [2, "D-"],
-        [1, "F"],
+        [16, "A+"],
+        [15, "A"],
+        [14, "A-"],
+        [13, "B+"],
+        [12, "B"],
+        [11, "B-"],
+        [10, "C+"],
+        [9, "C"],
+        [8, "C-"],
+        [7, "D+"],
+        [6, "D"],
+        [5, "D-"],
+        [4, "F+"],
+        [3, "F"],
+        [2, "F-"],
       ] as const;
 
       for (const [gradeNumber, gradeLetter] of grades) {
@@ -373,7 +375,7 @@ describe("buildAppliedFilterChips", () => {
     it("creates chips for all active filters", () => {
       const filterValues: ReviewsFiltersValues = {
         genres: ["Horror", "Action"],
-        gradeValue: [11, 10], // A- to B+
+        gradeValue: [14, 13], // A- to B+
         releaseYear: ["1980", "1989"],
         reviewYear: ["2020", "2024"],
         title: "alien",
@@ -421,7 +423,7 @@ describe("buildAppliedFilterChips", () => {
     it("excludes default grade range from combined filters", () => {
       const filterValues: ReviewsFiltersValues = {
         genres: ["Horror"],
-        gradeValue: [1, 13], // Default full range
+        gradeValue: [2, 16], // Default full range
         releaseYear: ["1980", "1989"],
       };
 
