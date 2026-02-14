@@ -20,6 +20,7 @@ import {
 import {
   createGenresFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createTitleFilterChangedAction,
   createWatchlistFilterChangedAction,
 } from "./Watchlist.reducer";
@@ -107,12 +108,15 @@ export function WatchlistFilters({
           defaultValues: filterValues.genres,
           onChange: (values) =>
             dispatch(createGenresFilterChangedAction(values)),
+          onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
           values: distinctGenres,
         }}
         releaseYear={{
           defaultValues: filterValues.releaseYear,
           onChange: (values) =>
             dispatch(createReleaseYearFilterChangedAction(values)),
+          onClear: () =>
+            dispatch(createRemoveAppliedFilterAction("releaseYear")),
           values: distinctReleaseYears,
         }}
         title={{

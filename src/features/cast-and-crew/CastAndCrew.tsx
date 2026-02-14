@@ -85,7 +85,8 @@ export function CastAndCrew({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
-  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+  // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   // Custom handler for removing individual creditedAs values
   function handleRemoveAppliedFilter(filterId: string): void {

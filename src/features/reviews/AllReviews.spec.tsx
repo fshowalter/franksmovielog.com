@@ -1,4 +1,4 @@
-import { render, within } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
@@ -423,6 +423,130 @@ describe("AllReviews", () => {
 
       await clickToggleFilters(user);
       expect(getTitleFilter()).toHaveValue("Halloween");
+    });
+  });
+
+  describe("applied filters", () => {
+    it("removes genre filter when clicking genre chip", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({
+          genres: ["Horror"],
+          title: "The Exorcist",
+        }),
+        createReviewValue({
+          genres: ["Horror", "Sci-Fi"],
+          title: "Alien",
+        }),
+        createReviewValue({
+          genres: ["Action"],
+          title: "Die Hard",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<AllReviews {...baseProps} values={reviews} />);
+
+      // Apply Horror filter
+      await clickToggleFilters(user);
+      await clickGenresFilterOption(user, "Horror");
+      await clickViewResults(user);
+
+      // Verify filter is applied
+      let posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("The Exorcist")).toBeInTheDocument();
+      expect(within(posterList).getByText("Alien")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Die Hard"),
+      ).not.toBeInTheDocument();
+
+      // Click the Horror chip in applied filters to remove it
+      await clickToggleFilters(user);
+      const horrorChip = screen.getByLabelText("Remove Horror filter");
+      await user.click(horrorChip);
+
+      // Apply the change
+      await clickViewResults(user);
+
+      // Verify the chip is removed from the UI after applying
+      expect(
+        screen.queryByLabelText("Remove Horror filter"),
+      ).not.toBeInTheDocument();
+
+      // Verify all movies are now shown
+      posterList = getGroupedPosterList();
+      expect(within(posterList).getByText("The Exorcist")).toBeInTheDocument();
+      expect(within(posterList).getByText("Alien")).toBeInTheDocument();
+      expect(within(posterList).getByText("Die Hard")).toBeInTheDocument();
+    });
+
+    it("removes individual genre when multiple genres are selected", async ({
+      expect,
+    }) => {
+      const reviews = [
+        createReviewValue({
+          genres: ["Horror"],
+          title: "The Exorcist",
+        }),
+        createReviewValue({
+          genres: ["Horror", "Sci-Fi"],
+          title: "Alien",
+        }),
+        createReviewValue({
+          genres: ["Sci-Fi"],
+          title: "Star Wars",
+        }),
+        createReviewValue({
+          genres: ["Action"],
+          title: "Die Hard",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(<AllReviews {...baseProps} values={reviews} />);
+
+      // Apply both Horror and Sci-Fi filters (AND logic - must have both)
+      await clickToggleFilters(user);
+      await clickGenresFilterOption(user, "Horror");
+      await clickGenresFilterOption(user, "Sci-Fi");
+      await clickViewResults(user);
+
+      // Verify both filters are applied - only "Alien" has both genres
+      let posterList = getGroupedPosterList();
+      expect(
+        within(posterList).queryByText("The Exorcist"),
+      ).not.toBeInTheDocument();
+      expect(within(posterList).getByText("Alien")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Star Wars"),
+      ).not.toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Die Hard"),
+      ).not.toBeInTheDocument();
+
+      // Remove only the Horror chip
+      await clickToggleFilters(user);
+      const horrorChip = screen.getByLabelText("Remove Horror filter");
+      await user.click(horrorChip);
+
+      // Apply the change
+      await clickViewResults(user);
+
+      // Verify Horror chip is removed but Sci-Fi remains after applying
+      expect(
+        screen.queryByLabelText("Remove Horror filter"),
+      ).not.toBeInTheDocument();
+      expect(screen.getByLabelText("Remove Sci-Fi filter")).toBeInTheDocument();
+
+      // Verify only Sci-Fi filter is still active (shows movies with Sci-Fi)
+      posterList = getGroupedPosterList();
+      expect(
+        within(posterList).queryByText("The Exorcist"),
+      ).not.toBeInTheDocument();
+      expect(within(posterList).getByText("Alien")).toBeInTheDocument();
+      expect(within(posterList).getByText("Star Wars")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Die Hard"),
+      ).not.toBeInTheDocument();
     });
   });
 

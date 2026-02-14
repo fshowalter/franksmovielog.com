@@ -274,6 +274,8 @@ function handleRemoveAppliedFilter(
   state: ViewingsState,
   action: { filterKey: string; type: "filters/removeAppliedFilter" },
 ): ViewingsState {
+  // AIDEV-NOTE: Updates BOTH pendingFilterValues and activeFilterValues to ensure UI updates
+
   // Handle removal of individual medium values (e.g., "medium-blu-ray")
   if (action.filterKey.startsWith("medium-")) {
     const mediumValue = action.filterKey
@@ -287,6 +289,10 @@ function handleRemoveAppliedFilter(
 
     return {
       ...state,
+      activeFilterValues: {
+        ...state.activeFilterValues,
+        medium: newMedium.length === 0 ? undefined : newMedium,
+      },
       pendingFilterValues: {
         ...state.pendingFilterValues,
         medium: newMedium.length === 0 ? undefined : newMedium,
@@ -307,6 +313,10 @@ function handleRemoveAppliedFilter(
 
     return {
       ...state,
+      activeFilterValues: {
+        ...state.activeFilterValues,
+        venue: newVenue.length === 0 ? undefined : newVenue,
+      },
       pendingFilterValues: {
         ...state.pendingFilterValues,
         venue: newVenue.length === 0 ? undefined : newVenue,
@@ -327,6 +337,10 @@ function handleRemoveAppliedFilter(
 
     return {
       ...state,
+      activeFilterValues: {
+        ...state.activeFilterValues,
+        reviewedStatus: newStatus.length === 0 ? undefined : newStatus,
+      },
       pendingFilterValues: {
         ...state.pendingFilterValues,
         reviewedStatus: newStatus.length === 0 ? undefined : newStatus,
@@ -334,14 +348,18 @@ function handleRemoveAppliedFilter(
     };
   }
 
-  // For all other filters, use the default behavior (remove entire filter)
+  // For all other filters, use the default behavior (remove entire filter from both)
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { [action.filterKey]: _removed, ...remainingFilters } =
+  const { [action.filterKey]: _removedPending, ...remainingPendingFilters } =
     state.pendingFilterValues as Record<string, unknown>;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { [action.filterKey]: _removedActive, ...remainingActiveFilters } =
+    state.activeFilterValues as Record<string, unknown>;
 
   return {
     ...state,
-    pendingFilterValues: remainingFilters as ViewingsFiltersValues,
+    activeFilterValues: remainingActiveFilters as ViewingsFiltersValues,
+    pendingFilterValues: remainingPendingFilters as ViewingsFiltersValues,
   };
 }
 

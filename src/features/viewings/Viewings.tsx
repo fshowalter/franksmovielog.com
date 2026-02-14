@@ -111,7 +111,8 @@ export function Viewings({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
-  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues, {
+  // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
     distinctReleaseYears,
     distinctViewingYears,
   });

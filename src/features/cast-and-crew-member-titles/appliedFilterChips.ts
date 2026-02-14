@@ -101,10 +101,12 @@ export function buildAppliedFilterChips(
   // Credited As chips (multi-select)
   if (filterValues.creditedAs && filterValues.creditedAs.length > 0) {
     for (const credit of filterValues.creditedAs) {
+      // Capitalize the credit (director -> Director, performer -> Performer, writer -> Writer)
+      const label = credit.charAt(0).toUpperCase() + credit.slice(1);
       chips.push({
         category: "Credited As",
         id: `creditedAs-${credit.toLowerCase()}`,
-        label: credit,
+        label,
       });
     }
   }

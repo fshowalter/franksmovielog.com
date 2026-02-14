@@ -10,6 +10,7 @@ import { capitalize } from "~/utils/capitalize";
  * @param props - Component props
  * @param props.defaultValues - Currently selected credit values
  * @param props.onChange - Handler for when selection changes
+ * @param props.onClear - Optional handler for clear action
  * @param props.values - List of available credit values
  * @param props.counts - Optional map of credit values to their counts
  * @returns Credited as filter with checkbox list
@@ -18,11 +19,13 @@ export function CreditedAsFilter({
   counts,
   defaultValues,
   onChange,
+  onClear,
   values,
 }: {
   counts?: Map<string, number>;
   defaultValues: readonly string[];
   onChange: (values: string[]) => void;
+  onClear?: () => void;
   values: readonly string[];
 }): React.JSX.Element {
   // Build options with counts (no "All" option - empty selection means all)
@@ -38,7 +41,7 @@ export function CreditedAsFilter({
         defaultValues={defaultValues}
         label="Credited As"
         onChange={onChange}
-        onClear={() => onChange([])}
+        onClear={onClear || ((): void => onChange([]))}
         options={options}
       />
     </FilterSection>

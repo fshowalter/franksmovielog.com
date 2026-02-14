@@ -55,17 +55,20 @@ export function ReviewsFilters({
       grade={{
         defaultValues: filterValues.gradeValue,
         onChange: (values) => dispatch(createGradeFilterChangedAction(values)),
+        onClear: () => dispatch(createRemoveAppliedFilterAction("gradeValue")),
       }}
       releaseYear={{
         defaultValues: filterValues.releaseYear,
         onChange: (values) =>
           dispatch(createReleaseYearFilterChangedAction(values)),
+        onClear: () => dispatch(createRemoveAppliedFilterAction("releaseYear")),
         values: distinctReleaseYears,
       }}
       reviewYear={{
         defaultValues: filterValues.reviewYear,
         onChange: (values) =>
           dispatch(createReviewYearFilterChangedAction(values)),
+        onClear: () => dispatch(createRemoveAppliedFilterAction("reviewYear")),
         values: distinctReviewYears,
       }}
       title={{

@@ -73,6 +73,9 @@ export function CastAndCrewMemberTitlesFilters({
           onChange={(values) =>
             dispatch(createCreditedAsFilterChangedAction(values))
           }
+          onClear={() =>
+            dispatch(createRemoveAppliedFilterAction("creditedAs"))
+          }
           values={distinctCreditKinds}
         />
       )}
@@ -89,11 +92,15 @@ export function CastAndCrewMemberTitlesFilters({
           defaultValues: filterValues.gradeValue,
           onChange: (values) =>
             dispatch(createGradeFilterChangedAction(values)),
+          onClear: () =>
+            dispatch(createRemoveAppliedFilterAction("gradeValue")),
         }}
         releaseYear={{
           defaultValues: filterValues.releaseYear,
           onChange: (values) =>
             dispatch(createReleaseYearFilterChangedAction(values)),
+          onClear: () =>
+            dispatch(createRemoveAppliedFilterAction("releaseYear")),
           values: distinctReleaseYears,
         }}
         reviewedStatus={{
@@ -108,6 +115,8 @@ export function CastAndCrewMemberTitlesFilters({
           defaultValues: filterValues.reviewYear,
           onChange: (values) =>
             dispatch(createReviewYearFilterChangedAction(values)),
+          onClear: () =>
+            dispatch(createRemoveAppliedFilterAction("reviewYear")),
           values: distinctReviewYears,
         }}
         title={{

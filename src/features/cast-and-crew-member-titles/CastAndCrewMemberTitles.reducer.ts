@@ -146,6 +146,7 @@ function handleRemoveAppliedFilter(
   action: { filterKey: string; type: "filters/removeAppliedFilter" },
 ): CastAndCrewMemberTitlesState {
   // Handle removal of individual creditedAs values (e.g., "creditedAs-director")
+  // Updates BOTH pendingFilterValues and activeFilterValues to ensure UI updates.
   if (action.filterKey.startsWith("creditedAs-")) {
     const creditValue = action.filterKey.replace(/^creditedAs-/, "");
     // AIDEV-NOTE: Credit values in data are lowercase ("director", "performer", "writer")
@@ -156,6 +157,10 @@ function handleRemoveAppliedFilter(
 
     return {
       ...state,
+      activeFilterValues: {
+        ...state.activeFilterValues,
+        creditedAs: newCreditedAs.length === 0 ? undefined : newCreditedAs,
+      },
       pendingFilterValues: {
         ...state.pendingFilterValues,
         creditedAs: newCreditedAs.length === 0 ? undefined : newCreditedAs,

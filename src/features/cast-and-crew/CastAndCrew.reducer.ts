@@ -121,8 +121,14 @@ function handleCreditedAsFilterChanged(
   state: CastAndCrewState,
   action: CreditedAsFilterChangedAction,
 ): CastAndCrewState {
+  // AIDEV-NOTE: Update both activeFilterValues and pendingFilterValues to ensure
+  // chips disappear immediately when clicked (not just when "Apply" is clicked).
   return {
     ...state,
+    activeFilterValues: {
+      ...state.activeFilterValues,
+      creditedAs: action.values.length === 0 ? undefined : action.values,
+    },
     pendingFilterValues: {
       ...state.pendingFilterValues,
       creditedAs: action.values.length === 0 ? undefined : action.values,

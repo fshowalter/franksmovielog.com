@@ -1,4 +1,8 @@
-import type { FiltersAction, FiltersState } from "./filtersReducer";
+import type {
+  FiltersAction,
+  FiltersState,
+  RemoveAppliedFilterAction,
+} from "./filtersReducer";
 
 export type { RemoveAppliedFilterAction } from "./filtersReducer";
 
@@ -118,6 +122,12 @@ export function titleFiltersReducer<
   TState extends TitleFiltersState<TValue>,
 >(state: TState, action: TitleFiltersAction): TState {
   switch (action.type) {
+    // AIDEV-NOTE: Override removeAppliedFilter for genre filters
+    // Genre chips have IDs like "genre-horror" but need to remove from genres array
+    case "filters/removeAppliedFilter": {
+      return handleRemoveAppliedFilter<TValue, TState>(state, action);
+    }
+
     case "titleFilters/genresFilterChanged": {
       return handleGenresFilterChanged<TValue, TState>(state, action);
     }
@@ -129,6 +139,7 @@ export function titleFiltersReducer<
     case "titleFilters/titleFilterChanged": {
       return handleTitleFilterChanged<TValue, TState>(state, action);
     }
+
     default: {
       return filtersReducer<TValue, TState>(state, action);
     }
@@ -165,6 +176,66 @@ function handleReleaseYearFilterChanged<
       releaseYear: action.values,
     },
   };
+}
+
+/**
+ * Handle removing applied filters - special case for genre filters
+ * AIDEV-NOTE: Genre chips have IDs like "genre-horror" but we need to remove
+ * that specific genre from the genres array, not delete the whole genres key.
+ * Updates BOTH pendingFilterValues and activeFilterValues to ensure UI updates.
+ */
+function handleRemoveAppliedFilter<
+  TValue,
+  TState extends TitleFiltersState<TValue>,
+>(state: TState, action: RemoveAppliedFilterAction): TState {
+  // Handle genre filters which have IDs like "genre-horror"
+  if (action.filterKey.startsWith("genre-")) {
+    const genreToRemove = action.filterKey
+      .replace("genre-", "")
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+    const currentGenres = state.pendingFilterValues.genres;
+    if (Array.isArray(currentGenres)) {
+      const updatedGenres = currentGenres.filter(
+        (g) =>
+          String(g).toLowerCase().replaceAll(" ", "-") !==
+          genreToRemove.toLowerCase().replaceAll(" ", "-"),
+      );
+
+      // If no genres left, remove the genres key entirely from both pending and active
+      if (updatedGenres.length === 0) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { genres: _removedPending, ...remainingPendingFilters } =
+          state.pendingFilterValues;
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { genres: _removedActive, ...remainingActiveFilters } =
+          state.activeFilterValues;
+        return {
+          ...state,
+          activeFilterValues: remainingActiveFilters,
+          pendingFilterValues: remainingPendingFilters,
+        };
+      }
+
+      // Update both pending and active filter values
+      return {
+        ...state,
+        activeFilterValues: {
+          ...state.activeFilterValues,
+          genres: updatedGenres,
+        },
+        pendingFilterValues: {
+          ...state.pendingFilterValues,
+          genres: updatedGenres,
+        },
+      };
+    }
+  }
+
+  // For other filters (title, releaseYear), delegate to base filtersReducer
+  return filtersReducer<TValue, TState>(state, action);
 }
 
 /**

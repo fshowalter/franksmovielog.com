@@ -16,6 +16,7 @@ import {
 import {
   createMediumFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createReviewedStatusFilterChangedAction,
   createTitleFilterChangedAction,
   createVenueFilterChangedAction,
@@ -99,6 +100,8 @@ export function ViewingsFilters({
           defaultValues: filterValues.releaseYear,
           onChange: (values) =>
             dispatch(createReleaseYearFilterChangedAction(values)),
+          onClear: () =>
+            dispatch(createRemoveAppliedFilterAction("releaseYear")),
           values: distinctReleaseYears,
         }}
         title={{
@@ -120,6 +123,7 @@ export function ViewingsFilters({
       <YearField
         defaultValues={filterValues.viewingYear}
         label="Viewing Year"
+        onClear={() => dispatch(createRemoveAppliedFilterAction("viewingYear"))}
         onYearChange={(values) =>
           dispatch(createViewingYearFilterChangedAction(values))
         }
