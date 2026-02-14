@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
 import type { ReactNode } from "react";
+
+import { useEffect, useRef } from "react";
 
 type FilterSectionProps = {
   children: ReactNode;
@@ -37,7 +38,7 @@ export function FilterSection({
     const content = contentRef.current;
     if (!details || !content) return;
 
-    const handleToggle = () => {
+    const handleToggle = (): void => {
       const isOpening = details.open;
 
       if (isOpening) {
@@ -46,7 +47,7 @@ export function FilterSection({
         content.style.opacity = "0";
         const endHeight = content.scrollHeight;
 
-        requestAnimationFrame(() => {
+        requestAnimationFrame((): void => {
           content.style.height = `${endHeight}px`;
           content.style.opacity = "1";
         });
@@ -55,14 +56,14 @@ export function FilterSection({
         const startHeight = content.scrollHeight;
         content.style.height = `${startHeight}px`;
 
-        requestAnimationFrame(() => {
+        requestAnimationFrame((): void => {
           content.style.height = "0px";
           content.style.opacity = "0";
         });
       }
     };
 
-    const handleTransitionEnd = (e: TransitionEvent) => {
+    const handleTransitionEnd = (e: TransitionEvent): void => {
       if (e.target !== content || e.propertyName !== "height") return;
       // Set to auto after opening (allows dynamic content growth)
       if (details.open) content.style.height = "auto";
@@ -80,7 +81,7 @@ export function FilterSection({
     details.addEventListener("toggle", handleToggle);
     content.addEventListener("transitionend", handleTransitionEnd);
 
-    return () => {
+    return (): void => {
       details.removeEventListener("toggle", handleToggle);
       content.removeEventListener("transitionend", handleTransitionEnd);
     };
@@ -88,12 +89,12 @@ export function FilterSection({
 
   return (
     <details
-      ref={detailsRef}
       className="
         group border-b border-default
         last:border-0
       "
       open={defaultOpen}
+      ref={detailsRef}
     >
       <summary
         className={`
@@ -120,11 +121,11 @@ export function FilterSection({
       </summary>
       {/* Content area for filter fields */}
       <div
-        ref={contentRef}
         className="
-          transform-gpu overflow-hidden pb-6
-          transition-[height,opacity] duration-200 ease-in-out
+          transform-gpu overflow-hidden pb-6 transition-[height,opacity]
+          duration-200 ease-in-out
         "
+        ref={contentRef}
       >
         {children}
       </div>
