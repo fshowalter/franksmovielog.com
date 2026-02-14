@@ -1,23 +1,8 @@
 import type { FilterChip } from "~/components/filter-and-sort/AppliedFilters";
 
-import type { CollectionTitlesFiltersValues } from "./CollectionTitles.reducer";
+import { gradeToLetter } from "~/utils/grades";
 
-// Grade number to letter mapping
-const GRADE_MAP: Record<number, string> = {
-  1: "F",
-  2: "D-",
-  3: "D",
-  4: "D+",
-  5: "C-",
-  6: "C",
-  7: "C+",
-  8: "B-",
-  9: "B",
-  10: "B+",
-  11: "A-",
-  12: "A",
-  13: "A+",
-};
+import type { CollectionTitlesFiltersValues } from "./CollectionTitles.reducer";
 
 /**
  * Builds an array of FilterChip objects from active filter values for the Collection Titles page.
@@ -54,11 +39,11 @@ export function buildAppliedFilterChips(
   // Grade chip (range)
   if (filterValues.gradeValue) {
     const [minGrade, maxGrade] = filterValues.gradeValue;
-    const minLetter = gradeNumberToLetter(minGrade);
-    const maxLetter = gradeNumberToLetter(maxGrade);
+    const minLetter = gradeToLetter(minGrade);
+    const maxLetter = gradeToLetter(maxGrade);
 
-    // Only show if not the full range (1-13)
-    if (minGrade !== 1 || maxGrade !== 13) {
+    // Only show if not the full range (2-16)
+    if (minGrade !== 2 || maxGrade !== 16) {
       chips.push({
         category: "Grade",
         id: "gradeValue",
@@ -123,13 +108,4 @@ export function buildAppliedFilterChips(
   }
 
   return chips;
-}
-
-/**
- * Converts a grade number (1-13) to a letter grade (F to A+).
- * @param gradeNumber - Grade as a number (1-13)
- * @returns Letter grade (e.g., "A+", "B-", "F")
- */
-function gradeNumberToLetter(gradeNumber: number): string {
-  return GRADE_MAP[gradeNumber] || "?";
 }

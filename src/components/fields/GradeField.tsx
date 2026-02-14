@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { FilterSection } from "~/components/filter-and-sort/FilterSection";
+import { gradeToLetter } from "~/utils/grades";
 
 import { RangeSliderField } from "./RangeSliderField";
 import { SelectInput } from "./SelectInput";
@@ -52,28 +53,6 @@ const gradeOptions = [
     F-
   </option>,
 ];
-
-// AIDEV-NOTE: Grade number to letter mapping for slider display
-const gradeToLetter = (grade: number): string => {
-  const gradeMap: Record<number, string> = {
-    2: "F-",
-    3: "F",
-    4: "F+",
-    5: "D-",
-    6: "D",
-    7: "D+",
-    8: "C-",
-    9: "C",
-    10: "C+",
-    11: "B-",
-    12: "B",
-    13: "B+",
-    14: "A-",
-    15: "A",
-    16: "A+",
-  };
-  return gradeMap[grade] || grade.toString();
-};
 
 /**
  * Grade range selector with from/to letter grade dropdowns and range slider.
