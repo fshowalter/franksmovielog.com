@@ -10,7 +10,7 @@ export function SubNav({
   children: React.ReactNode;
 }): React.JSX.Element {
   return (
-    <nav className={`sticky top-0 z-nav-menu bg-footer`}>
+    <nav className={`sticky top-0 z-nav-menu bg-inverse`}>
       <div
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
