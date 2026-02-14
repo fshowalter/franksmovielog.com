@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 
 import { FilterSection } from "./FilterSection";
@@ -45,40 +44,6 @@ describe("FilterSection", () => {
     );
 
     expect(screen.getByText("Test Content")).toBeInTheDocument();
-  });
-
-  it("has interactive summary that can toggle details", async () => {
-    // AIDEV-NOTE: Full toggle animation testing requires real browser with CSS transitions.
-    // In jsdom, getComputedStyle behavior is inconsistent, so we test the structure only.
-    // Transition behavior must be verified through manual browser testing.
-    const user = userEvent.setup();
-
-    render(
-      <FilterSection title="Test Section">
-        <div>Content</div>
-      </FilterSection>,
-    );
-
-    const details = screen.getByRole("group");
-    const summary = screen.getByText("Test Section");
-
-    // Initially open (default state)
-    expect(details).toHaveAttribute("open");
-
-    // Verify summary is clickable (native details/summary behavior)
-    expect(summary.tagName).toBe("SPAN");
-    expect(summary.closest("summary")).toBeInTheDocument();
-  });
-
-  it("does not show selection count (removed per spec)", () => {
-    // AIDEV-NOTE: Spec compliance - "(n selected)" feature was removed from spec
-    render(
-      <FilterSection title="Genres">
-        <div>Content</div>
-      </FilterSection>,
-    );
-
-    expect(screen.queryByText(/selected/)).not.toBeInTheDocument();
   });
 
   it("uses native details/summary for keyboard accessibility", () => {

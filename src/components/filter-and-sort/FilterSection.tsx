@@ -54,7 +54,7 @@ export function FilterSection({
     const checkTransitionsEnabled = (): boolean => {
       if (transitionsEnabledRef.current === null) {
         transitionsEnabledRef.current =
-          window.getComputedStyle(content).transitionDuration !== "0s";
+          globalThis.getComputedStyle(content).transitionDuration !== "0s";
       }
       return transitionsEnabledRef.current;
     };
@@ -68,10 +68,10 @@ export function FilterSection({
 
       evt.preventDefault();
 
-      if (!details.open) {
-        openDetails();
-      } else {
+      if (details.open) {
         closeDetails();
+      } else {
+        openDetails();
       }
     };
 
@@ -130,11 +130,7 @@ export function FilterSection({
 
     // Set initial state (no animation on mount)
     details.open = defaultOpen;
-    if (defaultOpen) {
-      content.style.height = "";
-    } else {
-      content.style.height = "0px";
-    }
+    content.style.height = defaultOpen ? "" : "0px";
 
     summary.addEventListener("click", handleClick);
     content.addEventListener("transitionend", handleTransitionEnd);
@@ -179,10 +175,10 @@ export function FilterSection({
       {/* Panel: handles height transition (matching Orbit's .disclosure__panel) */}
       <div
         className="overflow-hidden"
+        ref={contentRef}
         style={{
           transition: "height 300ms cubic-bezier(0.2, 0.6, 0.4, 1)",
         }}
-        ref={contentRef}
       >
         {/* Content: handles opacity transition (matching Orbit's .disclosure__content) */}
         {/* AIDEV-NOTE: Opacity transitions:
