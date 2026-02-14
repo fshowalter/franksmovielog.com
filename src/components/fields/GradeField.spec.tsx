@@ -379,19 +379,19 @@ describe("GradeField", () => {
 
       // Verify initial state
       expect(
-        (screen.getByRole("combobox", { name: /from/i }) as HTMLSelectElement)
+        (screen.getByRole("combobox", { name: /from/i }))
           .value,
       ).toBe("8");
       expect(
-        (screen.getByRole("combobox", { name: /to/i }) as HTMLSelectElement)
+        (screen.getByRole("combobox", { name: /to/i }))
           .value,
       ).toBe("11");
       expect(
-        (screen.getByLabelText("Grade minimum value") as HTMLInputElement)
+        (screen.getByLabelText("Grade minimum value"))
           .value,
       ).toBe("8");
       expect(
-        (screen.getByLabelText("Grade maximum value") as HTMLInputElement)
+        (screen.getByLabelText("Grade maximum value"))
           .value,
       ).toBe("11");
 
@@ -407,22 +407,22 @@ describe("GradeField", () => {
       // Wait for useEffect to run and state to update - query fresh elements after rerender
       await waitFor(() => {
         expect(
-          (screen.getByRole("combobox", { name: /from/i }) as HTMLSelectElement)
+          (screen.getByRole("combobox", { name: /from/i }))
             .value,
         ).toBe("2"); // F-
       });
 
       // Verify full state resets to full range - query fresh elements
       expect(
-        (screen.getByRole("combobox", { name: /to/i }) as HTMLSelectElement)
+        (screen.getByRole("combobox", { name: /to/i }))
           .value,
       ).toBe("16"); // A+
       expect(
-        (screen.getByLabelText("Grade minimum value") as HTMLInputElement)
+        (screen.getByLabelText("Grade minimum value"))
           .value,
       ).toBe("2");
       expect(
-        (screen.getByLabelText("Grade maximum value") as HTMLInputElement)
+        (screen.getByLabelText("Grade maximum value"))
           .value,
       ).toBe("16");
 

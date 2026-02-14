@@ -33,7 +33,7 @@ const ufs = new Union();
 
 // Add real filesystem first (lower priority)
 // Wrap realFs to avoid Node 24+ deprecation warnings
-ufs.use(wrapFsForUnionfs(realFs) as typeof realFs);
+ufs.use(wrapFsForUnionfs(realFs));
 
 // Add memfs second (higher priority - will override real fs for matching paths)
 
