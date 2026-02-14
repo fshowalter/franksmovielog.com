@@ -38,6 +38,7 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
           transform-gpu overflow-hidden pb-6
           transition-[height,opacity] duration-200 ease-in-out
         "
+      style="height: 0px; opacity: 0;"
     >
       <div>
         Filter content here
@@ -86,6 +87,7 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
           transform-gpu overflow-hidden pb-6
           transition-[height,opacity] duration-200 ease-in-out
         "
+      style="height: auto; opacity: 1;"
     >
       <div>
         Filter content here

@@ -26,6 +26,66 @@ export function FilterSection({
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
+  // AIDEV-NOTE: Smooth height/opacity transitions for filter sections
+  // - Uses JavaScript to measure scrollHeight (CSS can't transition height:auto except Chrome 129+)
+  // - Duration: 200ms (matching FilterAndSortContainer drawer)
+  // - Properties: height (0 ↔ scrollHeight) and opacity (0 ↔ 1)
+  // - Performance: transform-gpu class moves animation to GPU layer
+  // - Accessibility: Preserves native details/summary behavior completely
+  useEffect(() => {
+    const details = detailsRef.current;
+    const content = contentRef.current;
+    if (!details || !content) return;
+
+    const handleToggle = () => {
+      const isOpening = details.open;
+
+      if (isOpening) {
+        // Opening: Start at 0, expand to measured height
+        content.style.height = "0px";
+        content.style.opacity = "0";
+        const endHeight = content.scrollHeight;
+
+        requestAnimationFrame(() => {
+          content.style.height = `${endHeight}px`;
+          content.style.opacity = "1";
+        });
+      } else {
+        // Closing: Start at current height, collapse to 0
+        const startHeight = content.scrollHeight;
+        content.style.height = `${startHeight}px`;
+
+        requestAnimationFrame(() => {
+          content.style.height = "0px";
+          content.style.opacity = "0";
+        });
+      }
+    };
+
+    const handleTransitionEnd = (e: TransitionEvent) => {
+      if (e.target !== content || e.propertyName !== "height") return;
+      // Set to auto after opening (allows dynamic content growth)
+      if (details.open) content.style.height = "auto";
+    };
+
+    // Set initial state (no animation on mount)
+    if (defaultOpen) {
+      content.style.height = "auto";
+      content.style.opacity = "1";
+    } else {
+      content.style.height = "0px";
+      content.style.opacity = "0";
+    }
+
+    details.addEventListener("toggle", handleToggle);
+    content.addEventListener("transitionend", handleTransitionEnd);
+
+    return () => {
+      details.removeEventListener("toggle", handleToggle);
+      content.removeEventListener("transitionend", handleTransitionEnd);
+    };
+  }, [defaultOpen]);
+
   return (
     <details
       ref={detailsRef}
