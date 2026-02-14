@@ -128,22 +128,6 @@ describe("FilterSection", () => {
     expect(svg).toHaveAttribute("aria-hidden", "true");
   });
 
-  it("applies transition classes to content wrapper", () => {
-    const { container } = render(
-      <FilterSection title="Test Section">
-        <div>Content</div>
-      </FilterSection>,
-    );
-
-    // Verify transition classes for smooth animation
-    const contentWrapper = container.querySelector(".transform-gpu");
-    expect(contentWrapper).toBeInTheDocument();
-    expect(contentWrapper).toHaveClass("overflow-hidden");
-    expect(contentWrapper).toHaveClass("transition-[height,opacity]");
-    expect(contentWrapper).toHaveClass("duration-200");
-    expect(contentWrapper).toHaveClass("ease-in-out");
-  });
-
   it("sets initial height and opacity for open state", () => {
     const { container } = render(
       <FilterSection defaultOpen={true} title="Test Section">

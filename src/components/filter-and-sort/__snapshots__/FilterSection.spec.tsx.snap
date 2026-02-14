@@ -22,7 +22,7 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
       <svg
         aria-hidden="true"
         class="
-            ml-auto size-3 transition-transform duration-200
+            ml-auto size-3 transition-transform duration-300
             group-open:rotate-180
           "
         fill="currentColor"
@@ -36,7 +36,7 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
     <div
       class="
           transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-200 ease-in-out
+          duration-300 ease-[cubic-bezier(0.2,0.6,0.4,1)]
         "
       style="height: 0px; opacity: 0;"
     >
@@ -71,7 +71,7 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
       <svg
         aria-hidden="true"
         class="
-            ml-auto size-3 transition-transform duration-200
+            ml-auto size-3 transition-transform duration-300
             group-open:rotate-180
           "
         fill="currentColor"
@@ -85,7 +85,7 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
     <div
       class="
           transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-200 ease-in-out
+          duration-300 ease-[cubic-bezier(0.2,0.6,0.4,1)]
         "
       style="height: auto; opacity: 1;"
     >

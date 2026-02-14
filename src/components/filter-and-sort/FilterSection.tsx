@@ -29,10 +29,12 @@ export function FilterSection({
 
   // AIDEV-NOTE: Smooth height/opacity transitions for filter sections
   // - Uses JavaScript to measure scrollHeight (CSS can't transition height:auto except Chrome 129+)
-  // - Duration: 200ms (matching FilterAndSortContainer drawer)
+  // - Duration: 300ms with cubic-bezier(0.2,0.6,0.4,1) (matching Orbit DVD)
   // - Properties: height (0 ↔ scrollHeight) and opacity (0 ↔ 1)
   // - Performance: transform-gpu class moves animation to GPU layer
   // - Accessibility: Preserves native details/summary behavior completely
+  // - Opening: Temporarily sets height:auto to measure, then animates from 0
+  // - Closing: Forces reflow after setting pixel height to ensure smooth transition
   useEffect(() => {
     const details = detailsRef.current;
     const content = contentRef.current;
@@ -42,19 +44,27 @@ export function FilterSection({
       const isOpening = details.open;
 
       if (isOpening) {
-        // Opening: Start at 0, expand to measured height
+        // Opening: Measure height first (while at 0), then animate to full height
+        // Temporarily remove height restriction to measure content
+        content.style.height = "auto";
+        const endHeight = content.scrollHeight;
+
+        // Start from 0
         content.style.height = "0px";
         content.style.opacity = "0";
-        const endHeight = content.scrollHeight;
 
         requestAnimationFrame((): void => {
           content.style.height = `${endHeight}px`;
           content.style.opacity = "1";
         });
       } else {
-        // Closing: Start at current height, collapse to 0
+        // Closing: Get current height, set to pixels, force reflow, then animate to 0
         const startHeight = content.scrollHeight;
         content.style.height = `${startHeight}px`;
+
+        // Force reflow so browser registers the pixel height before animating
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        content.offsetHeight;
 
         requestAnimationFrame((): void => {
           content.style.height = "0px";
@@ -109,7 +119,7 @@ export function FilterSection({
         <svg
           aria-hidden="true"
           className="
-            ml-auto size-3 transition-transform duration-200
+            ml-auto size-3 transition-transform duration-300
             group-open:rotate-180
           "
           fill="currentColor"
@@ -123,7 +133,7 @@ export function FilterSection({
       <div
         className="
           transform-gpu overflow-hidden pb-6 transition-[height,opacity]
-          duration-200 ease-in-out
+          duration-300 ease-[cubic-bezier(0.2,0.6,0.4,1)]
         "
         ref={contentRef}
       >
