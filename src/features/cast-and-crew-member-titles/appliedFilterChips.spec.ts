@@ -207,7 +207,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Credited As", id: "creditedAs-director", label: "director" },
+      { category: "Credited As", id: "creditedAs-director", label: "Director" },
     ]);
   });
 
@@ -282,7 +282,7 @@ describe("buildAppliedFilterChips", () => {
         id: "reviewedStatus-not-reviewed",
         label: "Not Reviewed",
       },
-      { category: "Credited As", id: "creditedAs-director", label: "director" },
+      { category: "Credited As", id: "creditedAs-director", label: "Director" },
       { category: "Search", id: "title", label: "alien" },
     ]);
   });
