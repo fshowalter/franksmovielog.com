@@ -14,6 +14,7 @@ type TitleFiltersProps = {
   releaseYear: {
     defaultValues?: [string, string];
     onChange: (values: [string, string]) => void;
+    onClear?: () => void;
     values: readonly string[];
   };
   title: {
@@ -46,6 +47,7 @@ export function TitleFilters({
       <YearField
         defaultValues={releaseYear.defaultValues}
         label="Release Year"
+        onClear={releaseYear.onClear}
         onYearChange={releaseYear.onChange}
         years={releaseYear.values}
       />

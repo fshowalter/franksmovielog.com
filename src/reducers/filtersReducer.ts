@@ -143,31 +143,41 @@ function applyFilters<TValue, TState extends FiltersState<TValue>>(
 }
 
 /**
- * Clear all pending filters
+ * Clear all filters (both pending and active)
+ * AIDEV-NOTE: Clears both pending and active to provide immediate feedback
+ * when user explicitly clears filters via "Clear all" button
  */
 function clearFilters<TValue, TState extends FiltersState<TValue>>(
   state: TState,
 ): TState {
   return {
     ...state,
+    activeFilterValues: {},
     pendingFilterValues: {},
   };
 }
 
 /**
- * Remove a specific filter from pending filters
+ * Remove a specific filter from both pending and active filters
+ * AIDEV-NOTE: Removes from both pending and active to provide immediate feedback
+ * when user explicitly removes a filter via chip click
  */
 function removeAppliedFilter<TValue, TState extends FiltersState<TValue>>(
   state: TState,
   action: RemoveAppliedFilterAction,
 ): TState {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { [action.filterKey]: _removed, ...remainingFilters } =
+  const { [action.filterKey]: _removedPending, ...remainingPendingFilters } =
     state.pendingFilterValues;
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { [action.filterKey]: _removedActive, ...remainingActiveFilters } =
+    state.activeFilterValues;
 
   return {
     ...state,
-    pendingFilterValues: remainingFilters,
+    activeFilterValues: remainingActiveFilters,
+    pendingFilterValues: remainingPendingFilters,
   };
 }
 

@@ -10,6 +10,7 @@ import type {
 import {
   createCreditedAsFilterChangedAction,
   createNameFilterChangedAction,
+  createRemoveAppliedFilterAction,
 } from "./CastAndCrew.reducer";
 import { calculateCreditedAsCounts } from "./filterCastAndCrew";
 
@@ -47,6 +48,7 @@ export function CastAndCrewFilters({
         onChange={(value) =>
           dispatch(createCreditedAsFilterChangedAction(value))
         }
+        onClear={() => dispatch(createRemoveAppliedFilterAction("creditedAs"))}
         values={["director", "performer", "writer"]}
       />
     </>

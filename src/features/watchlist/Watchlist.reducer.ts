@@ -140,10 +140,17 @@ export function createWatchlistFilterChangedAction(
 export function reducer(state: WatchlistState, action: WatchlistAction) {
   switch (action.type) {
     case "filters/cleared": {
-      // Handle clear filters - ensure watchlist fields are empty arrays
+      // Handle clear filters - ensure watchlist fields are empty arrays in both active and pending
       const newState = titleFiltersReducer(state, action);
       return {
         ...newState,
+        activeFilterValues: {
+          ...newState.activeFilterValues,
+          collection: [],
+          director: [],
+          performer: [],
+          writer: [],
+        },
         pendingFilterValues: {
           ...newState.pendingFilterValues,
           collection: [],
@@ -177,8 +184,15 @@ function handleWatchlistFilterChanged(
   state: WatchlistState,
   action: WatchlistFilterChangedAction,
 ): WatchlistState {
+  // AIDEV-NOTE: When this action is dispatched from handleRemoveAppliedFilter (chip click),
+  // we need to update both activeFilterValues and pendingFilterValues for immediate feedback.
+  // This ensures the chip disappears from the UI immediately.
   return {
     ...state,
+    activeFilterValues: {
+      ...state.activeFilterValues,
+      [action.filter]: action.value,
+    },
     pendingFilterValues: {
       ...state.pendingFilterValues,
       [action.filter]: action.value,

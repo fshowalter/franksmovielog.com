@@ -66,10 +66,12 @@ const gradeOptions = [
 export function GradeField({
   defaultValues,
   label,
+  onClear,
   onGradeChange,
 }: {
   defaultValues: [number, number] | undefined;
   label: string;
+  onClear?: () => void;
   onGradeChange: (values: [number, number]) => void;
 }): React.JSX.Element {
   const [minValue, setMinValue] = useState(defaultMinValue(defaultValues));
@@ -110,11 +112,16 @@ export function GradeField({
     onGradeChange([from, to]);
   };
 
-  // AIDEV-NOTE: Clear resets to full range (F- to A+)
+  // AIDEV-NOTE: Clear resets to full range (F- to A+) AND calls onClear callback
+  // The onClear callback dispatches removeAppliedFilter to immediately update
+  // the Applied Filters section (removes the filter from both pending and active)
   const handleClear = (): void => {
     setMinValue(2);
     setMaxValue(16);
     onGradeChange([2, 16]);
+    if (onClear) {
+      onClear();
+    }
   };
 
   return (

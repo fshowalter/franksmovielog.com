@@ -464,13 +464,13 @@ describe("AllReviews", () => {
       const horrorChip = screen.getByLabelText("Remove Horror filter");
       await user.click(horrorChip);
 
-      // Verify the chip is removed from the UI
+      // Apply the change
+      await clickViewResults(user);
+
+      // Verify the chip is removed from the UI after applying
       expect(
         screen.queryByLabelText("Remove Horror filter"),
       ).not.toBeInTheDocument();
-
-      // Apply the change
-      await clickViewResults(user);
 
       // Verify all movies are now shown
       posterList = getGroupedPosterList();
@@ -528,14 +528,14 @@ describe("AllReviews", () => {
       const horrorChip = screen.getByLabelText("Remove Horror filter");
       await user.click(horrorChip);
 
-      // Verify Horror chip is removed but Sci-Fi remains
+      // Apply the change
+      await clickViewResults(user);
+
+      // Verify Horror chip is removed but Sci-Fi remains after applying
       expect(
         screen.queryByLabelText("Remove Horror filter"),
       ).not.toBeInTheDocument();
       expect(screen.getByLabelText("Remove Sci-Fi filter")).toBeInTheDocument();
-
-      // Apply the change
-      await clickViewResults(user);
 
       // Verify only Sci-Fi filter is still active (shows movies with Sci-Fi)
       posterList = getGroupedPosterList();

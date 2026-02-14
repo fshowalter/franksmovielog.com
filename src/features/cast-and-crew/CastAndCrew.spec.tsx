@@ -222,6 +222,67 @@ describe("CastAndCrew", () => {
   });
 
   describe("when clearing filters", () => {
+    it("clears credited as filter section and updates applied filters immediately", async ({
+      expect,
+    }) => {
+      const members = [
+        createCastAndCrewMember({
+          creditedAs: ["director"],
+          name: "Steven Spielberg",
+        }),
+        createCastAndCrewMember({
+          creditedAs: ["performer"],
+          name: "Tom Hanks",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      const { container } = render(
+        <CastAndCrew {...baseProps} values={members} />,
+      );
+
+      // Apply a credited as filter
+      await clickToggleFilters(user);
+      await clickCreditedAsFilterOption(user, "director");
+      await clickViewResults(user);
+
+      // Verify filter is applied - only director shown
+      let avatarList = getGroupedAvatarList();
+      expect(
+        within(avatarList).getByText("Steven Spielberg"),
+      ).toBeInTheDocument();
+      expect(
+        within(avatarList).queryByText("Tom Hanks"),
+      ).not.toBeInTheDocument();
+
+      // Verify applied filter chip is shown
+      expect(
+        container.querySelector('[aria-label="Remove Director filter"]'),
+      ).toBeInTheDocument();
+
+      // Open filter drawer and click clear on the Credited As section
+      await clickToggleFilters(user);
+      const clearButton = container.querySelector(
+        'button[aria-label="Clear all Credited As selections"]',
+      ) as HTMLButtonElement;
+      await user.click(clearButton);
+
+      // Applied filter chip should be removed immediately (even while drawer is still open)
+      expect(
+        container.querySelector('[aria-label="Remove Director filter"]'),
+      ).not.toBeInTheDocument();
+
+      // Close drawer
+      await clickCloseFilters(user);
+
+      // All members should be visible
+      avatarList = getGroupedAvatarList();
+      expect(
+        within(avatarList).getByText("Steven Spielberg"),
+      ).toBeInTheDocument();
+      expect(within(avatarList).getByText("Tom Hanks")).toBeInTheDocument();
+    });
+
     it("clears all filters with clear button", async ({ expect }) => {
       const members = [
         createCastAndCrewMember({

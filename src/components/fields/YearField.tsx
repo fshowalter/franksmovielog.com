@@ -18,11 +18,13 @@ import { SelectInput } from "./SelectInput";
 export function YearField({
   defaultValues,
   label,
+  onClear,
   onYearChange,
   years,
 }: {
   defaultValues: [string, string] | undefined;
   label: string;
+  onClear?: () => void;
   onYearChange: (values: [string, string]) => void;
   years: readonly string[];
 }): React.JSX.Element {
@@ -73,13 +75,18 @@ export function YearField({
     onYearChange([fromStr, toStr]);
   };
 
-  // AIDEV-NOTE: Clear resets to full range
+  // AIDEV-NOTE: Clear resets to full range AND calls onClear callback
+  // The onClear callback dispatches removeAppliedFilter to immediately update
+  // the Applied Filters section (removes the filter from both pending and active)
   const handleClear = (): void => {
     const fullMin = years[0];
     const fullMax = years.at(-1)!;
     setMinYear(fullMin);
     setMaxYear(fullMax);
     onYearChange([fullMin, fullMax]);
+    if (onClear) {
+      onClear();
+    }
   };
 
   return (

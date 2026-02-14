@@ -181,7 +181,8 @@ function handleReleaseYearFilterChanged<
 /**
  * Handle removing applied filters - special case for genre filters
  * AIDEV-NOTE: Genre chips have IDs like "genre-horror" but we need to remove
- * that specific genre from the genres array, not delete the whole genres key
+ * that specific genre from the genres array, not delete the whole genres key.
+ * Updates BOTH pendingFilterValues and activeFilterValues to ensure UI updates.
  */
 function handleRemoveAppliedFilter<
   TValue,
@@ -203,19 +204,28 @@ function handleRemoveAppliedFilter<
           genreToRemove.toLowerCase().replaceAll(" ", "-"),
       );
 
-      // If no genres left, remove the genres key entirely
+      // If no genres left, remove the genres key entirely from both pending and active
       if (updatedGenres.length === 0) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const { genres: _removed, ...remainingFilters } =
+        const { genres: _removedPending, ...remainingPendingFilters } =
           state.pendingFilterValues;
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { genres: _removedActive, ...remainingActiveFilters } =
+          state.activeFilterValues;
         return {
           ...state,
-          pendingFilterValues: remainingFilters,
+          activeFilterValues: remainingActiveFilters,
+          pendingFilterValues: remainingPendingFilters,
         };
       }
 
+      // Update both pending and active filter values
       return {
         ...state,
+        activeFilterValues: {
+          ...state.activeFilterValues,
+          genres: updatedGenres,
+        },
         pendingFilterValues: {
           ...state.pendingFilterValues,
           genres: updatedGenres,
