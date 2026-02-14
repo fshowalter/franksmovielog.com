@@ -478,7 +478,7 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      expect(screen.queryByText("Applied Filters:")).not.toBeInTheDocument();
+      expect(screen.queryByText("Applied Filters")).not.toBeInTheDocument();
     });
 
     it("does not render AppliedFilters when activeFilters is empty", async ({
@@ -498,7 +498,7 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      expect(screen.queryByText("Applied Filters:")).not.toBeInTheDocument();
+      expect(screen.queryByText("Applied Filters")).not.toBeInTheDocument();
     });
 
     it("renders AppliedFilters when activeFilters contains filters", async ({
@@ -523,7 +523,7 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      expect(screen.getByText("Applied Filters:")).toBeInTheDocument();
+      expect(screen.getByText("Applied Filters")).toBeInTheDocument();
       // Simple filters (Genre) show value only
       expect(screen.getByText("Horror")).toBeInTheDocument();
       expect(screen.getByText("Action")).toBeInTheDocument();
@@ -605,7 +605,7 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      expect(screen.queryByText("Applied Filters:")).not.toBeInTheDocument();
+      expect(screen.queryByText("Applied Filters")).not.toBeInTheDocument();
     });
   });
 });

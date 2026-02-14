@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 
@@ -28,6 +28,12 @@ export function YearField({
 }): React.JSX.Element {
   const [minYear, setMinYear] = useState(defaultMinValue(years, defaultValues));
   const [maxYear, setMaxYear] = useState(defaultMaxValue(years, defaultValues));
+
+  // AIDEV-NOTE: Sync internal state when defaultValues changes (e.g., when cleared via applied filters)
+  useEffect(() => {
+    setMinYear(defaultMinValue(years, defaultValues));
+    setMaxYear(defaultMaxValue(years, defaultValues));
+  }, [defaultValues, years]);
 
   // AIDEV-NOTE: Convert year strings to numbers for slider
   const minYearNum = Number.parseInt(years[0], 10);

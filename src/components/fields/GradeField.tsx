@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 
@@ -95,6 +95,12 @@ export function GradeField({
 }): React.JSX.Element {
   const [minValue, setMinValue] = useState(defaultMinValue(defaultValues));
   const [maxValue, setMaxValue] = useState(defaultMaxValue(defaultValues));
+
+  // AIDEV-NOTE: Sync internal state when defaultValues changes (e.g., when cleared via applied filters)
+  useEffect(() => {
+    setMinValue(defaultMinValue(defaultValues));
+    setMaxValue(defaultMaxValue(defaultValues));
+  }, [defaultValues]);
 
   const handleMinChange = (value: string): void => {
     const newMin = Number.parseInt(value, 10);

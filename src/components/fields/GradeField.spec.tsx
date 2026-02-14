@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 
@@ -366,6 +366,71 @@ describe("GradeField", () => {
       await user.selectOptions(fromSelect, "8");
 
       expect((fromSlider as HTMLInputElement).value).toBe("8");
+    });
+
+    it("resets internal state when defaultValues changes to undefined", async () => {
+      const { rerender } = render(
+        <GradeField
+          defaultValues={[8, 11]}
+          label="Grade"
+          onGradeChange={vi.fn()}
+        />,
+      );
+
+      // Verify initial state
+      expect(
+        (screen.getByRole("combobox", { name: /from/i }) as HTMLSelectElement)
+          .value,
+      ).toBe("8");
+      expect(
+        (screen.getByRole("combobox", { name: /to/i }) as HTMLSelectElement)
+          .value,
+      ).toBe("11");
+      expect(
+        (screen.getByLabelText("Grade minimum value") as HTMLInputElement)
+          .value,
+      ).toBe("8");
+      expect(
+        (screen.getByLabelText("Grade maximum value") as HTMLInputElement)
+          .value,
+      ).toBe("11");
+
+      // Simulate clearing filter via applied filters section
+      rerender(
+        <GradeField
+          defaultValues={undefined}
+          label="Grade"
+          onGradeChange={vi.fn()}
+        />,
+      );
+
+      // Wait for useEffect to run and state to update - query fresh elements after rerender
+      await waitFor(() => {
+        expect(
+          (screen.getByRole("combobox", { name: /from/i }) as HTMLSelectElement)
+            .value,
+        ).toBe("2"); // F-
+      });
+
+      // Verify full state resets to full range - query fresh elements
+      expect(
+        (screen.getByRole("combobox", { name: /to/i }) as HTMLSelectElement)
+          .value,
+      ).toBe("16"); // A+
+      expect(
+        (screen.getByLabelText("Grade minimum value") as HTMLInputElement)
+          .value,
+      ).toBe("2");
+      expect(
+        (screen.getByLabelText("Grade maximum value") as HTMLInputElement)
+          .value,
+      ).toBe("16");
+
+      // Clear button should not be visible at full range
+      const clearButton = screen.queryByRole("button", {
+        name: /reset grade to full range/i,
+      });
+      expect(clearButton).not.toBeInTheDocument();
     });
   });
 

@@ -1,167 +1,251 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filters 1`] = `
-<div
-  class="mb-4 rounded-sm border border-default bg-stripe p-4"
+<details
+  class="
+        group border-b border-default
+        last:border-0
+      "
+  open=""
 >
-  <h2
-    class="mb-2 font-sans text-sm font-medium text-subtle"
+  <summary
+    class="
+          flex cursor-pointer items-center justify-between py-6 font-sans
+          text-base font-semibold tracking-normal text-subtle
+        "
   >
-    Applied Filters:
-  </h2>
+    <span
+      class="flex items-center gap-2"
+    >
+      Applied Filters
+    </span>
+    <svg
+      aria-hidden="true"
+      class="
+            ml-auto size-3 transition-transform
+            group-open:rotate-180
+          "
+      fill="currentColor"
+      viewBox="0 0 12 8"
+    >
+      <path
+        d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+      />
+    </svg>
+  </summary>
   <div
-    class="mb-3 flex flex-wrap gap-2"
+    class="pb-6"
   >
-    <button
-      aria-label="Remove Horror filter"
-      class="
+    <div
+      class="mb-3 flex flex-wrap gap-2"
+    >
+      <button
+        aria-label="Remove Horror filter"
+        class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
-      type="button"
-    >
-      <span>
-        Horror
-      </span>
-      <span
-        aria-hidden="true"
+        type="button"
       >
-        ×
-      </span>
-    </button>
-    <button
-      aria-label="Remove Action filter"
-      class="
+        <span>
+          Horror
+        </span>
+        <span
+          aria-hidden="true"
+        >
+          ×
+        </span>
+      </button>
+      <button
+        aria-label="Remove Action filter"
+        class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
-      type="button"
-    >
-      <span>
-        Action
-      </span>
-      <span
-        aria-hidden="true"
+        type="button"
       >
-        ×
-      </span>
-    </button>
-    <button
-      aria-label="Remove Search: alien filter"
-      class="
+        <span>
+          Action
+        </span>
+        <span
+          aria-hidden="true"
+        >
+          ×
+        </span>
+      </button>
+      <button
+        aria-label="Remove Search: alien filter"
+        class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
+        type="button"
+      >
+        <span>
+          Search: alien
+        </span>
+        <span
+          aria-hidden="true"
+        >
+          ×
+        </span>
+      </button>
+    </div>
+    <button
+      class="font-sans text-sm text-accent underline"
       type="button"
     >
-      <span>
-        Search: alien
-      </span>
-      <span
-        aria-hidden="true"
-      >
-        ×
-      </span>
+      Clear all
     </button>
   </div>
-  <button
-    class="font-sans text-sm text-accent underline"
-    type="button"
-  >
-    Clear all
-  </button>
-</div>
+</details>
 `;
 
 exports[`AppliedFilters > Visual Rendering > matches snapshot with search filter 1`] = `
-<div
-  class="mb-4 rounded-sm border border-default bg-stripe p-4"
+<details
+  class="
+        group border-b border-default
+        last:border-0
+      "
+  open=""
 >
-  <h2
-    class="mb-2 font-sans text-sm font-medium text-subtle"
+  <summary
+    class="
+          flex cursor-pointer items-center justify-between py-6 font-sans
+          text-base font-semibold tracking-normal text-subtle
+        "
   >
-    Applied Filters:
-  </h2>
-  <div
-    class="mb-3 flex flex-wrap gap-2"
-  >
-    <button
-      aria-label="Remove Search: alien filter"
+    <span
+      class="flex items-center gap-2"
+    >
+      Applied Filters
+    </span>
+    <svg
+      aria-hidden="true"
       class="
+            ml-auto size-3 transition-transform
+            group-open:rotate-180
+          "
+      fill="currentColor"
+      viewBox="0 0 12 8"
+    >
+      <path
+        d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+      />
+    </svg>
+  </summary>
+  <div
+    class="pb-6"
+  >
+    <div
+      class="mb-3 flex flex-wrap gap-2"
+    >
+      <button
+        aria-label="Remove Search: alien filter"
+        class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
+        type="button"
+      >
+        <span>
+          Search: alien
+        </span>
+        <span
+          aria-hidden="true"
+        >
+          ×
+        </span>
+      </button>
+    </div>
+    <button
+      class="font-sans text-sm text-accent underline"
       type="button"
     >
-      <span>
-        Search: alien
-      </span>
-      <span
-        aria-hidden="true"
-      >
-        ×
-      </span>
+      Clear all
     </button>
   </div>
-  <button
-    class="font-sans text-sm text-accent underline"
-    type="button"
-  >
-    Clear all
-  </button>
-</div>
+</details>
 `;
 
 exports[`AppliedFilters > Visual Rendering > matches snapshot with single filter 1`] = `
-<div
-  class="mb-4 rounded-sm border border-default bg-stripe p-4"
+<details
+  class="
+        group border-b border-default
+        last:border-0
+      "
+  open=""
 >
-  <h2
-    class="mb-2 font-sans text-sm font-medium text-subtle"
+  <summary
+    class="
+          flex cursor-pointer items-center justify-between py-6 font-sans
+          text-base font-semibold tracking-normal text-subtle
+        "
   >
-    Applied Filters:
-  </h2>
-  <div
-    class="mb-3 flex flex-wrap gap-2"
-  >
-    <button
-      aria-label="Remove Horror filter"
+    <span
+      class="flex items-center gap-2"
+    >
+      Applied Filters
+    </span>
+    <svg
+      aria-hidden="true"
       class="
+            ml-auto size-3 transition-transform
+            group-open:rotate-180
+          "
+      fill="currentColor"
+      viewBox="0 0 12 8"
+    >
+      <path
+        d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+      />
+    </svg>
+  </summary>
+  <div
+    class="pb-6"
+  >
+    <div
+      class="mb-3 flex flex-wrap gap-2"
+    >
+      <button
+        aria-label="Remove Horror filter"
+        class="
                 inline-flex items-center gap-2 rounded-sm border border-default
                 bg-canvas px-3 py-1.5 font-sans text-sm text-default
                 transition-colors
                 hover:border-accent hover:bg-accent
                 focus:border-accent focus:bg-accent focus:outline-none
               "
+        type="button"
+      >
+        <span>
+          Horror
+        </span>
+        <span
+          aria-hidden="true"
+        >
+          ×
+        </span>
+      </button>
+    </div>
+    <button
+      class="font-sans text-sm text-accent underline"
       type="button"
     >
-      <span>
-        Horror
-      </span>
-      <span
-        aria-hidden="true"
-      >
-        ×
-      </span>
+      Clear all
     </button>
   </div>
-  <button
-    class="font-sans text-sm text-accent underline"
-    type="button"
-  >
-    Clear all
-  </button>
-</div>
+</details>
 `;

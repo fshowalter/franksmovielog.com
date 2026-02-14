@@ -231,6 +231,7 @@ export function FilterAndSortContainer<T extends string>({
                   cursor-pointer items-center justify-center rounded-full
                   bg-canvas text-default drop-shadow-sm transition-transform
                   hover:scale-105 hover:drop-shadow-md
+                  tablet:right-[34px]
                 `}
                 onClick={() => {
                   handleCloseDrawer();

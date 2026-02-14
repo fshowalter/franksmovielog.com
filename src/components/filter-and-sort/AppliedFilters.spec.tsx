@@ -41,7 +41,7 @@ describe("AppliedFilters", () => {
           onRemove={mockOnRemove}
         />,
       );
-      expect(screen.getByText("Applied Filters:")).toBeInTheDocument();
+      expect(screen.getByText("Applied Filters")).toBeInTheDocument();
     });
   });
 
