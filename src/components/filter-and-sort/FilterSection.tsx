@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import type { ReactNode } from "react";
 
 type FilterSectionProps = {
@@ -22,8 +23,12 @@ export function FilterSection({
   defaultOpen = true,
   title,
 }: FilterSectionProps): React.JSX.Element {
+  const detailsRef = useRef<HTMLDetailsElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
   return (
     <details
+      ref={detailsRef}
       className="
         group border-b border-default
         last:border-0
@@ -43,7 +48,7 @@ export function FilterSection({
         <svg
           aria-hidden="true"
           className="
-            ml-auto size-3 transition-transform
+            ml-auto size-3 transition-transform duration-200
             group-open:rotate-180
           "
           fill="currentColor"
@@ -54,7 +59,15 @@ export function FilterSection({
         </svg>
       </summary>
       {/* Content area for filter fields */}
-      <div className="pb-6">{children}</div>
+      <div
+        ref={contentRef}
+        className="
+          transform-gpu overflow-hidden pb-6
+          transition-[height,opacity] duration-200 ease-in-out
+        "
+      >
+        {children}
+      </div>
     </details>
   );
 }

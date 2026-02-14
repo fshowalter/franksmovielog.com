@@ -22,7 +22,7 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
       <svg
         aria-hidden="true"
         class="
-            ml-auto size-3 transition-transform
+            ml-auto size-3 transition-transform duration-200
             group-open:rotate-180
           "
         fill="currentColor"
@@ -34,7 +34,10 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
       </svg>
     </summary>
     <div
-      class="pb-6"
+      class="
+          transform-gpu overflow-hidden pb-6
+          transition-[height,opacity] duration-200 ease-in-out
+        "
     >
       <div>
         Filter content here
@@ -67,7 +70,7 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
       <svg
         aria-hidden="true"
         class="
-            ml-auto size-3 transition-transform
+            ml-auto size-3 transition-transform duration-200
             group-open:rotate-180
           "
         fill="currentColor"
@@ -79,7 +82,10 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
       </svg>
     </summary>
     <div
-      class="pb-6"
+      class="
+          transform-gpu overflow-hidden pb-6
+          transition-[height,opacity] duration-200 ease-in-out
+        "
     >
       <div>
         Filter content here
