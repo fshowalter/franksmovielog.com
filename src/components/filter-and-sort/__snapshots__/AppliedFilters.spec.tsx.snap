@@ -22,7 +22,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filt
     <svg
       aria-hidden="true"
       class="
-            ml-auto size-3 transition-transform
+            ml-auto size-3 transition-transform duration-200
             group-open:rotate-180
           "
       fill="currentColor"
@@ -34,7 +34,11 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with multiple filt
     </svg>
   </summary>
   <div
-    class="pb-6"
+    class="
+          transform-gpu overflow-hidden pb-6
+          transition-[height,opacity] duration-200 ease-in-out
+        "
+    style="height: auto; opacity: 1;"
   >
     <div
       class="mb-3 flex flex-wrap gap-2"
@@ -132,7 +136,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with search filter
     <svg
       aria-hidden="true"
       class="
-            ml-auto size-3 transition-transform
+            ml-auto size-3 transition-transform duration-200
             group-open:rotate-180
           "
       fill="currentColor"
@@ -144,7 +148,11 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with search filter
     </svg>
   </summary>
   <div
-    class="pb-6"
+    class="
+          transform-gpu overflow-hidden pb-6
+          transition-[height,opacity] duration-200 ease-in-out
+        "
+    style="height: auto; opacity: 1;"
   >
     <div
       class="mb-3 flex flex-wrap gap-2"
@@ -202,7 +210,7 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with single filter
     <svg
       aria-hidden="true"
       class="
-            ml-auto size-3 transition-transform
+            ml-auto size-3 transition-transform duration-200
             group-open:rotate-180
           "
       fill="currentColor"
@@ -214,7 +222,11 @@ exports[`AppliedFilters > Visual Rendering > matches snapshot with single filter
     </svg>
   </summary>
   <div
-    class="pb-6"
+    class="
+          transform-gpu overflow-hidden pb-6
+          transition-[height,opacity] duration-200 ease-in-out
+        "
+    style="height: auto; opacity: 1;"
   >
     <div
       class="mb-3 flex flex-wrap gap-2"

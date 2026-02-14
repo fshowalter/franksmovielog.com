@@ -128,6 +128,56 @@ describe("FilterSection", () => {
     expect(svg).toHaveAttribute("aria-hidden", "true");
   });
 
+  it("applies transition classes to content wrapper", () => {
+    const { container } = render(
+      <FilterSection title="Test Section">
+        <div>Content</div>
+      </FilterSection>,
+    );
+
+    // Verify transition classes for smooth animation
+    const contentWrapper = container.querySelector(".transform-gpu");
+    expect(contentWrapper).toBeInTheDocument();
+    expect(contentWrapper).toHaveClass("overflow-hidden");
+    expect(contentWrapper).toHaveClass("transition-[height,opacity]");
+    expect(contentWrapper).toHaveClass("duration-200");
+    expect(contentWrapper).toHaveClass("ease-in-out");
+  });
+
+  it("sets initial height and opacity for open state", () => {
+    const { container } = render(
+      <FilterSection defaultOpen={true} title="Test Section">
+        <div>Content</div>
+      </FilterSection>,
+    );
+
+    const contentWrapper = container.querySelector(
+      ".transform-gpu",
+    ) as HTMLElement;
+    expect(contentWrapper).toBeInTheDocument();
+    expect(contentWrapper?.style.height).toBe("auto");
+    expect(contentWrapper?.style.opacity).toBe("1");
+  });
+
+  it("sets initial height and opacity for closed state", () => {
+    const { container } = render(
+      <FilterSection defaultOpen={false} title="Test Section">
+        <div>Content</div>
+      </FilterSection>,
+    );
+
+    const contentWrapper = container.querySelector(
+      ".transform-gpu",
+    ) as HTMLElement;
+    expect(contentWrapper).toBeInTheDocument();
+    expect(contentWrapper?.style.height).toBe("0px");
+    expect(contentWrapper?.style.opacity).toBe("0");
+  });
+
+  // AIDEV-NOTE: Animation behavior (toggle transitions, height changes) cannot be tested
+  // in jsdom as it doesn't support CSS transitions or the TransitionEvent API.
+  // These animations must be verified through manual browser testing.
+
   it("snapshot test - open state (default)", () => {
     const { container } = render(
       <FilterSection title="Genres">
