@@ -77,7 +77,7 @@ describe("CheckboxListField", () => {
 
       // Should show "Show more" button
       expect(
-        screen.getByRole("button", { name: "+ Show more" }),
+        screen.getByRole("button", { name: "Show more" }),
       ).toBeInTheDocument();
     });
 
@@ -118,7 +118,7 @@ describe("CheckboxListField", () => {
       expect(queryCheckboxByLabel("Horror")).not.toBeInTheDocument();
 
       // Click Show more
-      await user.click(screen.getByRole("button", { name: "+ Show more" }));
+      await user.click(screen.getByRole("button", { name: "Show more" }));
 
       // Should now show all options
       expect(getCheckboxByLabel("Horror")).toBeInTheDocument();
@@ -134,7 +134,7 @@ describe("CheckboxListField", () => {
       });
       render(<CheckboxListField {...props} />);
 
-      await user.click(screen.getByRole("button", { name: "+ Show more" }));
+      await user.click(screen.getByRole("button", { name: "Show more" }));
 
       // Show more button should be gone
       expect(
@@ -155,7 +155,7 @@ describe("CheckboxListField", () => {
       render(<CheckboxListField {...props} />);
 
       // Select items that would normally be hidden
-      await user.click(screen.getByRole("button", { name: "+ Show more" }));
+      await user.click(screen.getByRole("button", { name: "Show more" }));
       await user.click(getCheckboxByLabel("Horror"));
       await user.click(getCheckboxByLabel("Romance"));
       await user.click(getCheckboxByLabel("Sci-Fi"));
@@ -364,7 +364,7 @@ describe("CheckboxListField", () => {
 
       // Should show both links with separator
       expect(
-        screen.getByRole("button", { name: "+ Show more" }),
+        screen.getByRole("button", { name: "Show more" }),
       ).toBeInTheDocument();
       expect(
         screen.getByRole("button", { name: "Clear all Test Label selections" }),
@@ -372,7 +372,7 @@ describe("CheckboxListField", () => {
       expect(screen.getByText("|")).toBeInTheDocument();
 
       // After expanding, only Clear should show
-      await user.click(screen.getByRole("button", { name: "+ Show more" }));
+      await user.click(screen.getByRole("button", { name: "Show more" }));
 
       expect(
         screen.queryByRole("button", { name: /Show more/i }),
@@ -460,7 +460,7 @@ describe("CheckboxListField", () => {
       );
 
       // Expand the list
-      await user.click(screen.getByRole("button", { name: "+ Show more" }));
+      await user.click(screen.getByRole("button", { name: "Show more" }));
       expect(getCheckboxByLabel("Horror")).toBeInTheDocument();
 
       // Reset the form
@@ -472,7 +472,7 @@ describe("CheckboxListField", () => {
       // Should collapse back to limited view
       expect(queryCheckboxByLabel("Horror")).not.toBeInTheDocument();
       expect(
-        screen.getByRole("button", { name: "+ Show more" }),
+        screen.getByRole("button", { name: "Show more" }),
       ).toBeInTheDocument();
     });
   });
@@ -523,7 +523,7 @@ describe("CheckboxListField", () => {
       render(<CheckboxListField {...props} />);
 
       const showMoreButton = screen.getByRole("button", {
-        name: "+ Show more",
+        name: "Show more",
       });
       expect(showMoreButton).toHaveAttribute("aria-expanded", "false");
     });
@@ -550,7 +550,7 @@ describe("CheckboxListField", () => {
 
       // Should show Show more for remaining 2
       expect(
-        screen.getByRole("button", { name: "+ Show more" }),
+        screen.getByRole("button", { name: "Show more" }),
       ).toBeInTheDocument();
     });
 

@@ -125,7 +125,7 @@ export function GradeField({
     onGradeChange([from, to]);
   };
 
-  // AIDEV-NOTE: Clear resets to full range (F to A+)
+  // AIDEV-NOTE: Clear resets to full range (F- to A+)
   const handleClear = (): void => {
     setMinValue(2);
     setMaxValue(16);
@@ -135,7 +135,7 @@ export function GradeField({
   return (
     <FilterSection title={label}>
       <div className="flex flex-col gap-4">
-        <fieldset className="text-subtle">
+        <fieldset aria-label={label} className="text-subtle">
           <div className="flex flex-wrap items-baseline">
             <label className="flex flex-1 items-center gap-x-[.5ch]">
               <span className="min-w-10 text-left text-sm tracking-serif-wide">

@@ -67,8 +67,8 @@ describe("GradeField", () => {
         name: /to/i,
       });
 
-      expect((fromSelect as HTMLSelectElement).value).toBe("1"); // F
-      expect((toSelect as HTMLSelectElement).value).toBe("13"); // A+
+      expect((fromSelect as HTMLSelectElement).value).toBe("2"); // F-
+      expect((toSelect as HTMLSelectElement).value).toBe("16"); // A+
     });
 
     it("uses provided default values", () => {
@@ -106,9 +106,9 @@ describe("GradeField", () => {
       );
 
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
-      await user.selectOptions(fromSelect, "8"); // B-
+      await user.selectOptions(fromSelect, "8"); // C-
 
-      expect(onGradeChange).toHaveBeenCalledWith([8, 13]);
+      expect(onGradeChange).toHaveBeenCalledWith([8, 16]);
     });
 
     it("calls onGradeChange when to dropdown changes", async () => {
@@ -124,9 +124,9 @@ describe("GradeField", () => {
       );
 
       const toSelect = screen.getByRole("combobox", { name: /to/i });
-      await user.selectOptions(toSelect, "11"); // A-
+      await user.selectOptions(toSelect, "14"); // A-
 
-      expect(onGradeChange).toHaveBeenCalledWith([1, 11]);
+      expect(onGradeChange).toHaveBeenCalledWith([2, 14]);
     });
 
     it("swaps values when from exceeds to", async () => {
@@ -182,7 +182,7 @@ describe("GradeField", () => {
 
       fireEvent.change(fromSlider, { target: { value: "8" } });
 
-      expect(onGradeChange).toHaveBeenCalledWith([8, 13]);
+      expect(onGradeChange).toHaveBeenCalledWith([8, 16]);
     });
 
     it("calls onGradeChange when to slider changes", () => {
@@ -198,9 +198,9 @@ describe("GradeField", () => {
 
       const toSlider = screen.getByLabelText("Grade maximum value");
 
-      fireEvent.change(toSlider, { target: { value: "11" } });
+      fireEvent.change(toSlider, { target: { value: "14" } });
 
-      expect(onGradeChange).toHaveBeenCalledWith([1, 11]);
+      expect(onGradeChange).toHaveBeenCalledWith([2, 14]);
     });
 
     it("syncs slider with dropdown changes", async () => {
@@ -226,14 +226,14 @@ describe("GradeField", () => {
     it("displays grade letters in slider range display", () => {
       render(
         <GradeField
-          defaultValues={[8, 11]}
+          defaultValues={[11, 14]}
           label="Grade"
           onGradeChange={vi.fn()}
         />,
       );
 
       // RangeSliderField shows current range with grade letters
-      const rangeDisplay = screen.getByText(/—/); // The dash between range values
+      const rangeDisplay = screen.getByText(/Range: B- to A-/);
       expect(rangeDisplay).toBeInTheDocument();
       // Both grades appear multiple times (in dropdowns and slider display)
       expect(screen.getAllByText("B-").length).toBeGreaterThan(0);
@@ -292,7 +292,7 @@ describe("GradeField", () => {
 
       await user.click(clearButton);
 
-      expect(onGradeChange).toHaveBeenCalledWith([1, 13]);
+      expect(onGradeChange).toHaveBeenCalledWith([2, 16]);
     });
   });
 
@@ -309,16 +309,16 @@ describe("GradeField", () => {
       const fromSlider = screen.getByLabelText("Grade minimum value");
       const toSlider = screen.getByLabelText("Grade maximum value");
 
-      expect(fromSlider).toHaveAttribute("aria-valuemin", "1");
-      expect(fromSlider).toHaveAttribute("aria-valuemax", "13");
-      expect(toSlider).toHaveAttribute("aria-valuemin", "1");
-      expect(toSlider).toHaveAttribute("aria-valuemax", "13");
+      expect(fromSlider).toHaveAttribute("aria-valuemin", "2");
+      expect(fromSlider).toHaveAttribute("aria-valuemax", "16");
+      expect(toSlider).toHaveAttribute("aria-valuemin", "2");
+      expect(toSlider).toHaveAttribute("aria-valuemax", "16");
     });
 
     it("announces current range to screen readers with letter grades", () => {
       render(
         <GradeField
-          defaultValues={[8, 11]}
+          defaultValues={[11, 14]}
           label="Grade"
           onGradeChange={vi.fn()}
         />,
@@ -334,7 +334,7 @@ describe("GradeField", () => {
     it("uses letter grade in aria-valuetext", () => {
       render(
         <GradeField
-          defaultValues={[8, 11]}
+          defaultValues={[11, 14]}
           label="Grade"
           onGradeChange={vi.fn()}
         />,
@@ -372,19 +372,21 @@ describe("GradeField", () => {
   describe("Grade Letter Mapping", () => {
     it("displays correct letter grades for all values", () => {
       const testCases = [
-        { letter: "F", value: 1 },
-        { letter: "D-", value: 2 },
-        { letter: "D", value: 3 },
-        { letter: "D+", value: 4 },
-        { letter: "C-", value: 5 },
-        { letter: "C", value: 6 },
-        { letter: "C+", value: 7 },
-        { letter: "B-", value: 8 },
-        { letter: "B", value: 9 },
-        { letter: "B+", value: 10 },
-        { letter: "A-", value: 11 },
-        { letter: "A", value: 12 },
-        { letter: "A+", value: 13 },
+        { letter: "F-", value: 2 },
+        { letter: "F", value: 3 },
+        { letter: "F+", value: 4 },
+        { letter: "D-", value: 5 },
+        { letter: "D", value: 6 },
+        { letter: "D+", value: 7 },
+        { letter: "C-", value: 8 },
+        { letter: "C", value: 9 },
+        { letter: "C+", value: 10 },
+        { letter: "B-", value: 11 },
+        { letter: "B", value: 12 },
+        { letter: "B+", value: 13 },
+        { letter: "A-", value: 14 },
+        { letter: "A", value: 15 },
+        { letter: "A+", value: 16 },
       ];
 
       for (const { letter, value } of testCases) {

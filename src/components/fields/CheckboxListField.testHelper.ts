@@ -54,7 +54,7 @@ export async function clickCheckboxListOption(
     const showMoreButton = within(targetGroup as HTMLElement).queryByRole(
       "button",
       {
-        name: /\+ Show more/,
+        name: /Show more/,
       },
     );
 
@@ -96,7 +96,7 @@ export async function toggleCheckboxListOption(
   // If not found, try clicking "Show more" button
   if (!checkbox) {
     const showMoreButtons = screen.queryAllByRole("button", {
-      name: /\+ Show more/,
+      name: /Show more/,
     });
 
     if (showMoreButtons.length > 0) {

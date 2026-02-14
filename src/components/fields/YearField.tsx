@@ -78,7 +78,7 @@ export function YearField({
   return (
     <FilterSection title={label}>
       <div className="flex flex-col gap-4">
-        <fieldset className="text-subtle">
+        <fieldset aria-label={label} className="text-subtle">
           <div className="flex items-baseline">
             <label className="flex flex-1 items-center gap-x-[.5ch]">
               <span className="min-w-10 text-left text-sm tracking-serif-wide">

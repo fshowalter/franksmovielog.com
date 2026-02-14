@@ -192,13 +192,13 @@ describe("CollectionTitles", () => {
       const titles = [
         createCollectionTitle({
           grade: "C-",
-          gradeValue: 5,
+          gradeValue: 8,
           title: "Die Another Day",
         }),
-        createCollectionTitle({ grade: "B", gradeValue: 9, title: "Dr. No" }),
+        createCollectionTitle({ grade: "B", gradeValue: 12, title: "Dr. No" }),
         createCollectionTitle({
           grade: "A",
-          gradeValue: 12,
+          gradeValue: 15,
           title: "Goldfinger",
         }),
       ];

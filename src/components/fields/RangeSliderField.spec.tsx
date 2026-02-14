@@ -68,8 +68,7 @@ describe("RangeSliderField", () => {
       });
       render(<RangeSliderField {...props} />);
 
-      expect(screen.getByText("1980")).toBeInTheDocument();
-      expect(screen.getByText("1989")).toBeInTheDocument();
+      expect(screen.getByText(/Range: 1980 to 1989/)).toBeInTheDocument();
     });
 
     it("uses formatValue function when provided", ({ expect }) => {
@@ -82,8 +81,7 @@ describe("RangeSliderField", () => {
       });
       render(<RangeSliderField {...props} />);
 
-      expect(screen.getByText("B-")).toBeInTheDocument();
-      expect(screen.getByText("A-")).toBeInTheDocument();
+      expect(screen.getByText(/Range: B- to A-/)).toBeInTheDocument();
     });
 
     it("does not show Clear link when range is full", ({ expect }) => {

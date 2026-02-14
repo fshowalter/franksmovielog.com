@@ -41,6 +41,7 @@ export function TextField({
   return (
     <FilterSection title={label}>
       <input
+        aria-label={label}
         className={`
           w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all
           outline-accent

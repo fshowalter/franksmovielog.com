@@ -211,19 +211,19 @@ describe("CastAndCrewMemberTitles", () => {
       const titles = [
         createTitle({
           grade: "C-",
-          gradeValue: 5,
+          gradeValue: 8,
           releaseYear: "1953",
           title: "I Confess",
         }),
         createTitle({
           grade: "B",
-          gradeValue: 9,
+          gradeValue: 12,
           releaseYear: "1954",
           title: "Dial M for Murder",
         }),
         createTitle({
           grade: "A",
-          gradeValue: 12,
+          gradeValue: 15,
           releaseYear: "1959",
           title: "North by Northwest",
         }),

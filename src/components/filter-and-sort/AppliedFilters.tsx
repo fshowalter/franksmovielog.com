@@ -1,8 +1,12 @@
-import { FilterSection } from "./FilterSection";
-
 /**
  * AppliedFilters component displays active filters as removable chips
  * with a "Clear all" option. Hidden when no filters are active.
+ *
+ * AIDEV-NOTE: Per FILTER_REDESIGN_SPEC.md lines 25-50 and 377-395:
+ * - This is NOT a collapsible FilterSection - it's a standalone section at top
+ * - Has distinct bg-stripe background to stand out
+ * - Heading should include colon: "Applied Filters:"
+ * - Only shown when one or more filters are active
  *
  * Features:
  * - Individual chip removal via × button
@@ -35,10 +39,16 @@ export function AppliedFilters({
   }
 
   return (
-    <FilterSection title="Applied Filters">
+    <div className="mb-4 rounded-sm border border-default bg-stripe p-4">
+      {/* Heading with colon per spec */}
+      <h2 className="mb-2 font-sans text-sm font-medium text-subtle">
+        Applied Filters:
+      </h2>
+
+      {/* Filter chips */}
       <div className="mb-3 flex flex-wrap gap-2">
         {filters.map((filter) => {
-          // AIDEV-NOTE: Per FILTER_REDESIGN_SPEC.md Task 8.2:
+          // AIDEV-NOTE: Per FILTER_REDESIGN_SPEC.md line 46-47:
           // - Simple filters (Genre, Medium, Venue, etc.) show value only: "Horror"
           // - Range filters (Grade, Year) show "Category: Value": "Grade: A- to B+"
           // - Search filters show "Search: query": "Search: alien"
@@ -72,6 +82,7 @@ export function AppliedFilters({
         })}
       </div>
 
+      {/* Clear all link */}
       <button
         className="font-sans text-sm text-accent underline"
         onClick={onClearAll}
@@ -79,6 +90,6 @@ export function AppliedFilters({
       >
         Clear all
       </button>
-    </FilterSection>
+    </div>
   );
 }
