@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export type FilterSectionProps = {
+type FilterSectionProps = {
   children: ReactNode;
   defaultOpen?: boolean;
   title: string;

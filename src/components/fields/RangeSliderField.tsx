@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export type FormatValueFunction = (value: number) => string;
 
-export type RangeSliderFieldProps = {
+type RangeSliderFieldProps = {
   formatValue?: FormatValueFunction;
   fromValue: number;
   label: string;

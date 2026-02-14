@@ -10,7 +10,7 @@ export type CheckboxListFieldOption = {
   value: string;
 };
 
-export type CheckboxListFieldProps = {
+type CheckboxListFieldProps = {
   defaultValues?: readonly string[];
   label: string;
   onChange: (values: string[]) => void;

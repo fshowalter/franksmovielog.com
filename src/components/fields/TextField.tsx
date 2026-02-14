@@ -33,7 +33,7 @@ export function TextField({
     TEXT_FILTER_DEBOUNCE_MS,
   );
 
-  const handleChange = (e: React.FormEvent<HTMLInputElement>): void => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newValue = (e.target as HTMLInputElement).value;
     debouncedHandleChange(newValue); // Debounce the callback
   };
