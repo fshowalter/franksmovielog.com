@@ -60,15 +60,15 @@ describe("GradeField", () => {
         />,
       );
 
-      const fromSelect = screen.getByRole("combobox", {
+      const fromSelect = screen.getByRole<HTMLSelectElement>("combobox", {
         name: /from/i,
       });
-      const toSelect = screen.getByRole("combobox", {
+      const toSelect = screen.getByRole<HTMLSelectElement>("combobox", {
         name: /to/i,
       });
 
-      expect((fromSelect as HTMLSelectElement).value).toBe("2"); // F-
-      expect((toSelect as HTMLSelectElement).value).toBe("16"); // A+
+      expect(fromSelect.value).toBe("2"); // F-
+      expect(toSelect.value).toBe("16"); // A+
     });
 
     it("uses provided default values", () => {
@@ -80,15 +80,15 @@ describe("GradeField", () => {
         />,
       );
 
-      const fromSelect = screen.getByRole("combobox", {
+      const fromSelect = screen.getByRole<HTMLSelectElement>("combobox", {
         name: /from/i,
       });
-      const toSelect = screen.getByRole("combobox", {
+      const toSelect = screen.getByRole<HTMLSelectElement>("combobox", {
         name: /to/i,
       });
 
-      expect((fromSelect as HTMLSelectElement).value).toBe("8"); // B-
-      expect((toSelect as HTMLSelectElement).value).toBe("11"); // A-
+      expect(fromSelect.value).toBe("8"); // B-
+      expect(toSelect.value).toBe("11"); // A-
     });
   });
 
@@ -218,9 +218,11 @@ describe("GradeField", () => {
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
       await user.selectOptions(fromSelect, "8");
 
-      const fromSlider = screen.getByLabelText("Grade minimum value");
+      const fromSlider = screen.getByLabelText<HTMLInputElement>(
+        "Grade minimum value",
+      );
 
-      expect((fromSlider as HTMLInputElement).value).toBe("8");
+      expect(fromSlider.value).toBe("8");
     });
 
     it("displays grade letters in slider range display", () => {
@@ -361,11 +363,13 @@ describe("GradeField", () => {
       );
 
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
-      const fromSlider = screen.getByLabelText("Grade minimum value");
+      const fromSlider = screen.getByLabelText<HTMLInputElement>(
+        "Grade minimum value",
+      );
 
       await user.selectOptions(fromSelect, "8");
 
-      expect((fromSlider as HTMLInputElement).value).toBe("8");
+      expect(fromSlider.value).toBe("8");
     });
 
     it("resets internal state when defaultValues changes to undefined", async () => {
@@ -378,10 +382,19 @@ describe("GradeField", () => {
       );
 
       // Verify initial state
-      expect(screen.getByRole("combobox", { name: /from/i }).value).toBe("8");
-      expect(screen.getByRole("combobox", { name: /to/i }).value).toBe("11");
-      expect(screen.getByLabelText("Grade minimum value").value).toBe("8");
-      expect(screen.getByLabelText("Grade maximum value").value).toBe("11");
+      expect(
+        screen.getByRole<HTMLSelectElement>("combobox", { name: /from/i })
+          .value,
+      ).toBe("8");
+      expect(
+        screen.getByRole<HTMLSelectElement>("combobox", { name: /to/i }).value,
+      ).toBe("11");
+      expect(
+        screen.getByLabelText<HTMLInputElement>("Grade minimum value").value,
+      ).toBe("8");
+      expect(
+        screen.getByLabelText<HTMLInputElement>("Grade maximum value").value,
+      ).toBe("11");
 
       // Simulate clearing filter via applied filters section
       rerender(
@@ -394,13 +407,22 @@ describe("GradeField", () => {
 
       // Wait for useEffect to run and state to update - query fresh elements after rerender
       await waitFor(() => {
-        expect(screen.getByRole("combobox", { name: /from/i }).value).toBe("2"); // F-
+        expect(
+          screen.getByRole<HTMLSelectElement>("combobox", { name: /from/i })
+            .value,
+        ).toBe("2"); // F-
       });
 
       // Verify full state resets to full range - query fresh elements
-      expect(screen.getByRole("combobox", { name: /to/i }).value).toBe("16"); // A+
-      expect(screen.getByLabelText("Grade minimum value").value).toBe("2");
-      expect(screen.getByLabelText("Grade maximum value").value).toBe("16");
+      expect(
+        screen.getByRole<HTMLSelectElement>("combobox", { name: /to/i }).value,
+      ).toBe("16"); // A+
+      expect(
+        screen.getByLabelText<HTMLInputElement>("Grade minimum value").value,
+      ).toBe("2");
+      expect(
+        screen.getByLabelText<HTMLInputElement>("Grade maximum value").value,
+      ).toBe("16");
 
       // Clear button should not be visible at full range
       const clearButton = screen.queryByRole("button", {

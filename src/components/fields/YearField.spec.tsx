@@ -66,15 +66,15 @@ describe("YearField", () => {
         />,
       );
 
-      const fromSelect = screen.getByRole("combobox", {
+      const fromSelect = screen.getByRole<HTMLSelectElement>("combobox", {
         name: /from/i,
       });
-      const toSelect = screen.getByRole("combobox", {
+      const toSelect = screen.getByRole<HTMLSelectElement>("combobox", {
         name: /to/i,
       });
 
-      expect((fromSelect as HTMLSelectElement).value).toBe("2020");
-      expect((toSelect as HTMLSelectElement).value).toBe("2024");
+      expect(fromSelect.value).toBe("2020");
+      expect(toSelect.value).toBe("2024");
     });
 
     it("uses provided default values", () => {
@@ -87,15 +87,15 @@ describe("YearField", () => {
         />,
       );
 
-      const fromSelect = screen.getByRole("combobox", {
+      const fromSelect = screen.getByRole<HTMLSelectElement>("combobox", {
         name: /from/i,
       });
-      const toSelect = screen.getByRole("combobox", {
+      const toSelect = screen.getByRole<HTMLSelectElement>("combobox", {
         name: /to/i,
       });
 
-      expect((fromSelect as HTMLSelectElement).value).toBe("2021");
-      expect((toSelect as HTMLSelectElement).value).toBe("2023");
+      expect(fromSelect.value).toBe("2021");
+      expect(toSelect.value).toBe("2023");
     });
   });
 
@@ -232,9 +232,11 @@ describe("YearField", () => {
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
       await user.selectOptions(fromSelect, "2022");
 
-      const fromSlider = screen.getByLabelText("Release Year minimum value");
+      const fromSlider = screen.getByLabelText<HTMLInputElement>(
+        "Release Year minimum value",
+      );
 
-      expect((fromSlider as HTMLInputElement).value).toBe("2022");
+      expect(fromSlider.value).toBe("2022");
     });
   });
 
@@ -348,11 +350,13 @@ describe("YearField", () => {
       );
 
       const fromSelect = screen.getByRole("combobox", { name: /from/i });
-      const fromSlider = screen.getByLabelText("Release Year minimum value");
+      const fromSlider = screen.getByLabelText<HTMLInputElement>(
+        "Release Year minimum value",
+      );
 
       await user.selectOptions(fromSelect, "2022");
 
-      expect((fromSlider as HTMLInputElement).value).toBe("2022");
+      expect(fromSlider.value).toBe("2022");
     });
 
     it("resets internal state when defaultValues changes to undefined", async () => {
@@ -366,16 +370,21 @@ describe("YearField", () => {
       );
 
       // Verify initial state
-      expect(screen.getByRole("combobox", { name: /from/i }).value).toBe(
-        "2021",
-      );
-      expect(screen.getByRole("combobox", { name: /to/i }).value).toBe("2023");
-      expect(screen.getByLabelText("Release Year minimum value").value).toBe(
-        "2021",
-      );
-      expect(screen.getByLabelText("Release Year maximum value").value).toBe(
-        "2023",
-      );
+      expect(
+        screen.getByRole<HTMLSelectElement>("combobox", { name: /from/i })
+          .value,
+      ).toBe("2021");
+      expect(
+        screen.getByRole<HTMLSelectElement>("combobox", { name: /to/i }).value,
+      ).toBe("2023");
+      expect(
+        screen.getByLabelText<HTMLInputElement>("Release Year minimum value")
+          .value,
+      ).toBe("2021");
+      expect(
+        screen.getByLabelText<HTMLInputElement>("Release Year maximum value")
+          .value,
+      ).toBe("2023");
 
       // Simulate clearing filter via applied filters section
       rerender(
@@ -389,19 +398,24 @@ describe("YearField", () => {
 
       // Wait for useEffect to run and state to update - query fresh elements after rerender
       await waitFor(() => {
-        expect(screen.getByRole("combobox", { name: /from/i }).value).toBe(
-          "2020",
-        );
+        expect(
+          screen.getByRole<HTMLSelectElement>("combobox", { name: /from/i })
+            .value,
+        ).toBe("2020");
       });
 
       // Verify full state resets to full range - query fresh elements
-      expect(screen.getByRole("combobox", { name: /to/i }).value).toBe("2024");
-      expect(screen.getByLabelText("Release Year minimum value").value).toBe(
-        "2020",
-      );
-      expect(screen.getByLabelText("Release Year maximum value").value).toBe(
-        "2024",
-      );
+      expect(
+        screen.getByRole<HTMLSelectElement>("combobox", { name: /to/i }).value,
+      ).toBe("2024");
+      expect(
+        screen.getByLabelText<HTMLInputElement>("Release Year minimum value")
+          .value,
+      ).toBe("2020");
+      expect(
+        screen.getByLabelText<HTMLInputElement>("Release Year maximum value")
+          .value,
+      ).toBe("2024");
 
       // Clear button should not be visible at full range
       const clearButton = screen.queryByRole("button", {
