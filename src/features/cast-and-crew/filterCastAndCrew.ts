@@ -4,6 +4,36 @@ import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewFiltersValues } from "./CastAndCrew.reducer";
 
 /**
+ * Calculates counts for each credited role, excluding the creditedAs filter.
+ * @param values - Array of cast/crew members
+ * @param filterValues - Current filter values (creditedAs filter is excluded from counting)
+ * @returns Map of credit role to count
+ */
+export function calculateCreditedAsCounts(
+  values: CastAndCrewValue[],
+  filterValues: CastAndCrewFiltersValues,
+): Map<string, number> {
+  // Apply all filters except creditedAs
+  const filtersWithoutCreditedAs: CastAndCrewFiltersValues = {
+    ...filterValues,
+    creditedAs: undefined,
+  };
+
+  const filtered = filterCastAndCrew(values, filtersWithoutCreditedAs);
+
+  // Count how many cast/crew members have each credited role
+  const counts = new Map<string, number>();
+
+  for (const value of filtered) {
+    for (const credit of value.creditedAs) {
+      counts.set(credit, (counts.get(credit) ?? 0) + 1);
+    }
+  }
+
+  return counts;
+}
+
+/**
  * Filters cast and crew members based on credited role and name.
  * @param sortedValues - Array of cast/crew members to filter
  * @param filterValues - Object containing filter values including creditedAs and name
@@ -20,9 +50,10 @@ export function filterCastAndCrew(
   return filterCollections(filterValues, sortedValues, extraFilters);
 }
 
-function createCreditedAsFilter(filterValue?: string) {
-  if (!filterValue) return;
+function createCreditedAsFilter(filterValues?: readonly string[]) {
+  if (!filterValues || filterValues.length === 0) return;
   return (value: CastAndCrewValue) => {
-    return value.creditedAs.includes(filterValue);
+    // Match if the member has at least one of the selected credits
+    return filterValues.some((credit) => value.creditedAs.includes(credit));
   };
 }

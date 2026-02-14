@@ -7,12 +7,33 @@ import path from "node:path";
 import { Union } from "unionfs";
 import { beforeEach, vi } from "vitest";
 
+// AIDEV-NOTE: Workaround for unionfs issue #809
+// unionfs accesses deprecated fs constants (F_OK, R_OK, etc.) directly
+// instead of using fs.constants.F_OK. This proxy redirects those accesses.
+// See: https://github.com/streamich/unionfs/issues/809
+function wrapFsForUnionfs(originalFs: typeof realFs) {
+  return new Proxy(originalFs, {
+    get(target, prop) {
+      if (
+        prop === "F_OK" ||
+        prop === "R_OK" ||
+        prop === "W_OK" ||
+        prop === "X_OK"
+      ) {
+        return target.constants[prop as keyof typeof target.constants];
+      }
+      return target[prop as keyof typeof target];
+    },
+  });
+}
+
 // Create a union filesystem that overlays memfs on top of the real filesystem
 // This allows cache operations to go to memory while other operations go to disk
 const ufs = new Union();
 
 // Add real filesystem first (lower priority)
-ufs.use(realFs);
+// Wrap realFs to avoid Node 24+ deprecation warnings
+ufs.use(wrapFsForUnionfs(realFs));
 
 // Add memfs second (higher priority - will override real fs for matching paths)
 

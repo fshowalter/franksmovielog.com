@@ -11,10 +11,13 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 import { AlphabetSubNav } from "./AlphabetSubNav";
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
+  createCreditedAsFilterChangedAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createSortAction,
   reducer,
@@ -82,12 +85,30 @@ export function CastAndCrew({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues);
+
+  // Custom handler for removing individual creditedAs values
+  function handleRemoveAppliedFilter(filterId: string): void {
+    if (filterId.startsWith("creditedAs-")) {
+      const roleToRemove = filterId.replace("creditedAs-", "");
+      const currentRoles = state.pendingFilterValues.creditedAs || [];
+      const updatedRoles = currentRoles.filter(
+        (role) => role.toLowerCase() !== roleToRemove,
+      );
+      dispatch(createCreditedAsFilterChangedAction(updatedRoles));
+    } else {
+      dispatch(createRemoveAppliedFilterAction(filterId));
+    }
+  }
+
   return (
     <FilterAndSortContainer
+      activeFilters={activeFilters}
       filters={
         <CastAndCrewFilters
           dispatch={dispatch}
           filterValues={state.pendingFilterValues}
+          values={values}
         />
       }
       hasPendingFilters={hasPendingFilters}
@@ -96,6 +117,7 @@ export function CastAndCrew({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={handleRemoveAppliedFilter}
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}

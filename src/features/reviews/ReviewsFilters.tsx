@@ -2,11 +2,14 @@ import { ReviewedTitleFilters } from "~/components/filter-and-sort/ReviewedTitle
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
 import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
+import type { ReviewsValue } from "./ReviewsListItem";
 
+import { calculateGenreCounts } from "./filteredReviews";
 import {
   createGenresFilterChangedAction,
   createGradeFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,
 } from "./reducer";
@@ -19,6 +22,7 @@ import {
  * @param props.distinctReleaseYears - Available release years for filtering
  * @param props.distinctReviewYears - Available review years for filtering
  * @param props.filterValues - Current active filter values
+ * @param props.values - All review values for calculating counts
  * @returns Filter input components for reviews
  */
 export function ReviewsFilters({
@@ -27,18 +31,25 @@ export function ReviewsFilters({
   distinctReleaseYears,
   distinctReviewYears,
   filterValues,
+  values,
 }: {
   dispatch: React.Dispatch<ReviewsAction>;
   distinctGenres: readonly string[];
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: ReviewsFiltersValues;
+  values: ReviewsValue[];
 }): React.JSX.Element {
+  // Calculate dynamic counts for genre filter options
+  const genreCounts = calculateGenreCounts(values, filterValues);
+
   return (
     <ReviewedTitleFilters
       genres={{
+        counts: genreCounts,
         defaultValues: filterValues.genres,
         onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
+        onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
         values: distinctGenres,
       }}
       grade={{

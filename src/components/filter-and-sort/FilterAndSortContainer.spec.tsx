@@ -2,6 +2,8 @@ import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+import type { FilterChip } from "./AppliedFilters";
+
 import { FilterAndSortContainer } from "./FilterAndSortContainer";
 import {
   clickCloseFilters,
@@ -16,11 +18,13 @@ if (!Element.prototype.scrollIntoView) {
 
 // Test helpers
 type MockProps = {
+  activeFilters?: FilterChip[];
   filters: React.ReactElement;
   hasPendingFilters: boolean;
   onApplyFilters: ReturnType<typeof vi.fn>;
   onClearFilters: ReturnType<typeof vi.fn>;
   onFilterDrawerOpen: ReturnType<typeof vi.fn>;
+  onRemoveFilter?: ReturnType<typeof vi.fn>;
   onResetFilters: ReturnType<typeof vi.fn>;
   pendingFilteredCount: number;
   sortProps: {
@@ -458,6 +462,150 @@ describe("FilterAndSortContainer", () => {
       await clickToggleFilters(user);
 
       expect(document.body.classList.contains("overflow-hidden")).toBe(false);
+    });
+  });
+
+  describe("applied filters", () => {
+    it("does not render AppliedFilters when activeFilters prop is not provided", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      render(
+        <FilterAndSortContainer {...mockProps}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      expect(screen.queryByText("Applied Filters")).not.toBeInTheDocument();
+    });
+
+    it("does not render AppliedFilters when activeFilters is empty", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const onRemoveFilter = vi.fn();
+      render(
+        <FilterAndSortContainer
+          {...mockProps}
+          activeFilters={[]}
+          onRemoveFilter={onRemoveFilter}
+        >
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      expect(screen.queryByText("Applied Filters")).not.toBeInTheDocument();
+    });
+
+    it("renders AppliedFilters when activeFilters contains filters", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const onRemoveFilter = vi.fn();
+      const activeFilters: FilterChip[] = [
+        { category: "Genre", id: "genre-horror", label: "Horror" },
+        { category: "Genre", id: "genre-action", label: "Action" },
+      ];
+
+      render(
+        <FilterAndSortContainer
+          {...mockProps}
+          activeFilters={activeFilters}
+          onRemoveFilter={onRemoveFilter}
+        >
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      expect(screen.getByText("Applied Filters")).toBeInTheDocument();
+      // Simple filters (Genre) show value only
+      expect(screen.getByText("Horror")).toBeInTheDocument();
+      expect(screen.getByText("Action")).toBeInTheDocument();
+    });
+
+    it("calls onRemoveFilter when a filter chip is removed", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const onRemoveFilter = vi.fn();
+      const activeFilters: FilterChip[] = [
+        { category: "Genre", id: "genre-horror", label: "Horror" },
+      ];
+
+      render(
+        <FilterAndSortContainer
+          {...mockProps}
+          activeFilters={activeFilters}
+          onRemoveFilter={onRemoveFilter}
+        >
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      // Simple filters (Genre) show value only: "Horror"
+      const removeButton = screen.getByRole("button", {
+        name: "Remove Horror filter",
+      });
+      await user.click(removeButton);
+
+      expect(onRemoveFilter).toHaveBeenCalledWith("genre-horror");
+    });
+
+    it("calls onClearFilters when Clear all button is clicked", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const onRemoveFilter = vi.fn();
+      const activeFilters: FilterChip[] = [
+        { category: "Genre", id: "genre-horror", label: "Horror" },
+        { category: "Genre", id: "genre-action", label: "Action" },
+      ];
+
+      render(
+        <FilterAndSortContainer
+          {...mockProps}
+          activeFilters={activeFilters}
+          onRemoveFilter={onRemoveFilter}
+        >
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      const clearAllButton = screen.getByRole("button", {
+        name: "Clear all",
+      });
+      await user.click(clearAllButton);
+
+      expect(mockProps.onClearFilters).toHaveBeenCalled();
+    });
+
+    it("does not render AppliedFilters when onRemoveFilter is not provided", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const activeFilters: FilterChip[] = [
+        { category: "Genre", id: "genre-horror", label: "Horror" },
+      ];
+
+      render(
+        <FilterAndSortContainer {...mockProps} activeFilters={activeFilters}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      expect(screen.queryByText("Applied Filters")).not.toBeInTheDocument();
     });
   });
 });

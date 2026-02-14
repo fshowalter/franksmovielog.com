@@ -8,6 +8,7 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { ViewingsSort } from "./sortViewings";
 
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { CalendarMonth } from "./CalendarMonth";
 import { filterViewings } from "./filterViewings";
 import { MonthNavigationHeader } from "./MonthNavigationHeader";
@@ -17,6 +18,7 @@ import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createSortAction,
   reducer,
@@ -109,11 +111,17 @@ export function Viewings({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues, {
+    distinctReleaseYears,
+    distinctViewingYears,
+  });
+
   const [previousMonthDate, currentMonthDate, nextMonthDate] =
     useMonthNavigation(filteredValues, state.sort, state.selectedMonthDate);
 
   return (
     <FilterAndSortContainer
+      activeFilters={activeFilters}
       filters={
         <ViewingsFilters
           dispatch={dispatch}
@@ -122,6 +130,7 @@ export function Viewings({
           distinctVenues={distinctVenues}
           distinctViewingYears={distinctViewingYears}
           filterValues={state.pendingFilterValues}
+          values={values}
         />
       }
       hasPendingFilters={hasPendingFilters}
@@ -132,6 +141,9 @@ export function Viewings({
       }}
       onFilterDrawerOpen={() => {
         dispatch(createResetFiltersAction());
+      }}
+      onRemoveFilter={(filterKey) => {
+        dispatch(createRemoveAppliedFilterAction(filterKey));
       }}
       onResetFilters={() => dispatch(createResetFiltersAction())}
       pendingFilteredCount={pendingFilteredCount}

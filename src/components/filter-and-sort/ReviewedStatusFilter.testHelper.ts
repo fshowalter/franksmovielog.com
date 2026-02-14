@@ -1,6 +1,6 @@
 import type { UserEvent } from "@testing-library/user-event";
 
-import { clickSelectFieldOption } from "~/components/fields/SelectField.testHelper";
+import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
 
 /**
  * Test helper to select a reviewed status filter option.
@@ -9,7 +9,7 @@ import { clickSelectFieldOption } from "~/components/fields/SelectField.testHelp
  */
 export async function clickReviewedStatusFilterOption(
   user: UserEvent,
-  reviewedStatus: "All" | "Not Reviewed" | "Reviewed",
+  reviewedStatus: "Not Reviewed" | "Reviewed",
 ) {
-  await clickSelectFieldOption(user, "Reviewed Status", reviewedStatus);
+  await clickCheckboxListOption(user, "Reviewed Status", reviewedStatus);
 }

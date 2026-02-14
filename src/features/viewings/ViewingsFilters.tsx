@@ -1,11 +1,18 @@
-import { SelectField } from "~/components/fields/SelectField";
-import { SelectOptions } from "~/components/fields/SelectOptions";
+import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
+
+import { CheckboxListField } from "~/components/fields/CheckboxListField";
 import { YearField } from "~/components/fields/YearField";
-import { ReviewedStatusFilter } from "~/components/filter-and-sort/ReviewedStatusFilter";
+import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
 
+import type { ViewingsValue } from "./Viewings";
 import type { ViewingsAction, ViewingsFiltersValues } from "./Viewings.reducer";
 
+import {
+  calculateMediumCounts,
+  calculateReviewedStatusCounts,
+  calculateVenueCounts,
+} from "./filterViewings";
 import {
   createMediumFilterChangedAction,
   createReleaseYearFilterChangedAction,
@@ -24,6 +31,7 @@ import {
  * @param props.distinctVenues - Available venues for filtering
  * @param props.distinctViewingYears - Available viewing years for filtering
  * @param props.filterValues - Current active filter values
+ * @param props.values - All viewing values (for dynamic count calculation)
  * @returns Filter input components for viewings
  */
 export function ViewingsFilters({
@@ -33,6 +41,7 @@ export function ViewingsFilters({
   distinctVenues,
   distinctViewingYears,
   filterValues,
+  values,
 }: {
   dispatch: React.Dispatch<ViewingsAction>;
   distinctMedia: readonly string[];
@@ -40,7 +49,49 @@ export function ViewingsFilters({
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
   filterValues: ViewingsFiltersValues;
+  values: readonly ViewingsValue[];
 }): React.JSX.Element {
+  // Calculate dynamic counts for each filter
+  const mediumCounts = calculateMediumCounts([...values], filterValues);
+  const venueCounts = calculateVenueCounts([...values], filterValues);
+  const reviewedStatusCounts = calculateReviewedStatusCounts(
+    [...values],
+    filterValues,
+  );
+
+  // Build options with counts
+  // Filter out "All" from distinct arrays since CheckboxListField doesn't need it
+  const mediumOptions: CheckboxListFieldOption[] = distinctMedia
+    .filter((medium) => medium !== "All")
+    .map((medium) => ({
+      count: mediumCounts.get(medium) ?? 0,
+      label: medium,
+      value: medium,
+    }));
+
+  // Filter out "All" from distinct arrays since CheckboxListField doesn't need it
+  const venueOptions: CheckboxListFieldOption[] = distinctVenues
+    .filter((venue) => venue !== "All")
+    .map((venue) => ({
+      count: venueCounts.get(venue) ?? 0,
+      label: venue,
+      value: venue,
+    }));
+
+  // Filter out "All" from distinct arrays since CheckboxListField doesn't need it
+  const reviewedStatusOptions: CheckboxListFieldOption[] = [
+    {
+      count: reviewedStatusCounts.get("Reviewed") ?? 0,
+      label: "Reviewed",
+      value: "Reviewed",
+    },
+    {
+      count: reviewedStatusCounts.get("Not Reviewed") ?? 0,
+      label: "Not Reviewed",
+      value: "Not Reviewed",
+    },
+  ];
+
   return (
     <>
       <TitleFilters
@@ -55,12 +106,17 @@ export function ViewingsFilters({
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
-      <ReviewedStatusFilter
-        defaultValue={filterValues.reviewedStatus}
-        onChange={(value) =>
-          dispatch(createReviewedStatusFilterChangedAction(value))
-        }
-      />
+      <FilterSection title="Reviewed Status">
+        <CheckboxListField
+          defaultValues={filterValues.reviewedStatus ?? []}
+          label="Reviewed Status"
+          onChange={(values) =>
+            dispatch(createReviewedStatusFilterChangedAction(values))
+          }
+          onClear={() => dispatch(createReviewedStatusFilterChangedAction([]))}
+          options={reviewedStatusOptions}
+        />
+      </FilterSection>
       <YearField
         defaultValues={filterValues.viewingYear}
         label="Viewing Year"
@@ -69,20 +125,28 @@ export function ViewingsFilters({
         }
         years={distinctViewingYears}
       />
-      <SelectField
-        defaultValue={filterValues.medium}
-        label="Medium"
-        onChange={(value) => dispatch(createMediumFilterChangedAction(value))}
-      >
-        <SelectOptions options={distinctMedia} />
-      </SelectField>
-      <SelectField
-        defaultValue={filterValues.venue}
-        label="Venue"
-        onChange={(value) => dispatch(createVenueFilterChangedAction(value))}
-      >
-        <SelectOptions options={distinctVenues} />
-      </SelectField>
+      <FilterSection title="Medium">
+        <CheckboxListField
+          defaultValues={filterValues.medium ?? []}
+          label="Medium"
+          onChange={(values) =>
+            dispatch(createMediumFilterChangedAction(values))
+          }
+          onClear={() => dispatch(createMediumFilterChangedAction([]))}
+          options={mediumOptions}
+        />
+      </FilterSection>
+      <FilterSection title="Venue">
+        <CheckboxListField
+          defaultValues={filterValues.venue ?? []}
+          label="Venue"
+          onChange={(values) =>
+            dispatch(createVenueFilterChangedAction(values))
+          }
+          onClear={() => dispatch(createVenueFilterChangedAction([]))}
+          options={venueOptions}
+        />
+      </FilterSection>
     </>
   );
 }

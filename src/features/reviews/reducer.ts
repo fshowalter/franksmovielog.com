@@ -26,6 +26,7 @@ export {
   createGenresFilterChangedAction,
   createGradeFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createReviewYearFilterChangedAction,
   createTitleFilterChangedAction,

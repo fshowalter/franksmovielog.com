@@ -4,15 +4,24 @@ type FilterableMaybeReviewedTitle = {
 
 /**
  * Creates a filter function for reviewed/unreviewed status.
- * @param filterValue - Filter value ("Reviewed" or "Unreviewed")
- * @returns Filter function or undefined if no filter value
+ * @param filterValues - Filter values (e.g., ["Reviewed"], ["Not Reviewed"], or both)
+ * @returns Filter function or undefined if no filter values
  */
 export function createReviewedStatusFilter<
   TValue extends FilterableMaybeReviewedTitle,
->(filterValue?: string) {
-  if (!filterValue) return;
+>(filterValues?: readonly string[]) {
+  if (!filterValues || filterValues.length === 0) return;
+
+  // If both "Reviewed" and "Not Reviewed" are selected, show all
+  if (
+    filterValues.includes("Reviewed") &&
+    filterValues.includes("Not Reviewed")
+  ) {
+    return;
+  }
+
   return (value: TValue): boolean => {
-    if (filterValue === "Reviewed") {
+    if (filterValues.includes("Reviewed")) {
       return !!value.slug;
     }
 

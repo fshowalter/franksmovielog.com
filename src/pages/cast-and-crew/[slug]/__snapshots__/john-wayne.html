@@ -551,7 +551,7 @@
             </div>
           </header>
           <astro-island
-            uid="Z1DkufC"
+            uid="lQ4GA"
             prefix="r1"
             component-url="~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles"
             component-export="CastAndCrewMemberTitles"
@@ -10075,11 +10075,11 @@
                     id="filters"
                   >
                     <form
-                      class="flex size-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
+                      class="flex size-full flex-col text-sm tablet:text-base"
                     >
                       <button
                         aria-label="Close filters"
-                        class="absolute top-7 right-4 z-10 flex size-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
+                        class="absolute top-7 right-4 z-10 flex size-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md tablet:right-[34px]"
                         type="button"
                       >
                         <svg
@@ -10097,313 +10097,795 @@
                           ></path>
                         </svg>
                       </button>
-                      <fieldset
-                        class="mt-0 flex grow flex-col gap-5 px-container py-10 tablet:gap-8 tablet-landscape:grow-0 tablet-landscape:gap-10 tablet-landscape:px-12"
-                      >
+                      <fieldset class="mt-0 flex grow-0 flex-col">
                         <legend
-                          class="block w-full pt-10 pb-8 font-sans text-sm font-bold tracking-wide text-subtle uppercase shadow-bottom"
+                          class="mb-0 block w-full px-container py-7 font-sans text-base/10 font-bold tracking-wide text-subtle uppercase shadow-bottom tablet-landscape:px-12"
                         >
                           Filter
                         </legend>
-                        <label class="flex flex-col"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Credited As</span
-                          ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                        <div class="px-container tablet-landscape:px-12">
+                          <details
+                            class="group border-b border-default last:border-0"
                           >
-                            <option value="All">All</option>
-                            <option value="performer">Performer</option>
-                            <option value="director">Director</option>
-                          </select></label
-                        ><label class="flex flex-col text-subtle"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Title</span
-                          ><input
-                            class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
-                            placeholder="Enter all or part of a title"
-                            type="text"
-                        /></label>
-                        <fieldset class="text-subtle">
-                          <legend
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                          >
-                            Release Year
-                          </legend>
-                          <div class="flex items-baseline">
-                            <label class="flex flex-1 items-center gap-x-[.5ch]"
-                              ><span
-                                class="min-w-10 text-left text-sm tracking-serif-wide"
-                                >From</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="1929" selected="">1929</option>
-                                <option value="1930">1930</option>
-                                <option value="1931">1931</option>
-                                <option value="1932">1932</option>
-                                <option value="1933">1933</option>
-                                <option value="1934">1934</option>
-                                <option value="1935">1935</option>
-                                <option value="1936">1936</option>
-                                <option value="1937">1937</option>
-                                <option value="1938">1938</option>
-                                <option value="1939">1939</option>
-                                <option value="1940">1940</option>
-                                <option value="1941">1941</option>
-                                <option value="1942">1942</option>
-                                <option value="1943">1943</option>
-                                <option value="1944">1944</option>
-                                <option value="1945">1945</option>
-                                <option value="1946">1946</option>
-                                <option value="1947">1947</option>
-                                <option value="1948">1948</option>
-                                <option value="1949">1949</option>
-                                <option value="1950">1950</option>
-                                <option value="1951">1951</option>
-                                <option value="1952">1952</option>
-                                <option value="1953">1953</option>
-                                <option value="1954">1954</option>
-                                <option value="1955">1955</option>
-                                <option value="1956">1956</option>
-                                <option value="1957">1957</option>
-                                <option value="1958">1958</option>
-                                <option value="1959">1959</option>
-                                <option value="1960">1960</option>
-                                <option value="1961">1961</option>
-                                <option value="1962">1962</option>
-                                <option value="1963">1963</option>
-                                <option value="1964">1964</option>
-                                <option value="1965">1965</option>
-                                <option value="1966">1966</option>
-                                <option value="1967">1967</option>
-                                <option value="1968">1968</option>
-                                <option value="1969">1969</option>
-                                <option value="1970">1970</option>
-                                <option value="1971">1971</option>
-                                <option value="1972">1972</option>
-                                <option value="1973">1973</option>
-                                <option value="1974">1974</option>
-                                <option value="1975">1975</option>
-                                <option value="1976">1976</option>
-                              </select></label
-                            ><label class="flex flex-1 items-center"
-                              ><span
-                                class="min-w-10 text-center text-sm tracking-serif-wide"
-                                >to</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="1976" selected="">1976</option>
-                                <option value="1975">1975</option>
-                                <option value="1974">1974</option>
-                                <option value="1973">1973</option>
-                                <option value="1972">1972</option>
-                                <option value="1971">1971</option>
-                                <option value="1970">1970</option>
-                                <option value="1969">1969</option>
-                                <option value="1968">1968</option>
-                                <option value="1967">1967</option>
-                                <option value="1966">1966</option>
-                                <option value="1965">1965</option>
-                                <option value="1964">1964</option>
-                                <option value="1963">1963</option>
-                                <option value="1962">1962</option>
-                                <option value="1961">1961</option>
-                                <option value="1960">1960</option>
-                                <option value="1959">1959</option>
-                                <option value="1958">1958</option>
-                                <option value="1957">1957</option>
-                                <option value="1956">1956</option>
-                                <option value="1955">1955</option>
-                                <option value="1954">1954</option>
-                                <option value="1953">1953</option>
-                                <option value="1952">1952</option>
-                                <option value="1951">1951</option>
-                                <option value="1950">1950</option>
-                                <option value="1949">1949</option>
-                                <option value="1948">1948</option>
-                                <option value="1947">1947</option>
-                                <option value="1946">1946</option>
-                                <option value="1945">1945</option>
-                                <option value="1944">1944</option>
-                                <option value="1943">1943</option>
-                                <option value="1942">1942</option>
-                                <option value="1941">1941</option>
-                                <option value="1940">1940</option>
-                                <option value="1939">1939</option>
-                                <option value="1938">1938</option>
-                                <option value="1937">1937</option>
-                                <option value="1936">1936</option>
-                                <option value="1935">1935</option>
-                                <option value="1934">1934</option>
-                                <option value="1933">1933</option>
-                                <option value="1932">1932</option>
-                                <option value="1931">1931</option>
-                                <option value="1930">1930</option>
-                                <option value="1929">1929</option>
-                              </select></label
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
                             >
-                          </div>
-                        </fieldset>
-                        <div class="flex flex-col text-left text-subtle">
-                          <label
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            for="button-genres"
-                            >Genres</label
-                          >
-                          <div class="relative">
-                            <button
-                              aria-expanded="false"
-                              aria-haspopup="listbox"
-                              aria-label="Genres"
-                              class="relative w-full cursor-default scroll-mt-(--control-scroll-offset,0) rounded-sm border border-default bg-default pr-10 pl-3 text-left text-base text-subtle focus:border-[rgb(38,132,255)] focus:shadow-[0px_0px_0px_1px_rgb(38,132,255)] focus:outline-none"
-                              id="button-genres"
-                              type="button"
+                              <span class="flex items-center gap-2"
+                                >Credited As</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
                             >
                               <div
-                                class="flex min-h-9 flex-wrap items-center gap-1 py-2 pr-10"
+                                class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
                               >
-                                <span class="text-subtle">Select...</span>
+                                <fieldset class="text-left font-sans">
+                                  <legend class="sr-only">
+                                    <span
+                                      class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
+                                      >Credited As</span
+                                    >
+                                  </legend>
+                                  <div class="flex flex-col gap-2">
+                                    <div
+                                      aria-live="polite"
+                                      aria-relevant="additions removals"
+                                      class="flex flex-col"
+                                      role="group"
+                                    >
+                                      <label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-credited-as-director"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-credited-as-director"
+                                          type="checkbox"
+                                          value="director"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Director</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->2<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-credited-as-performer"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-credited-as-performer"
+                                          type="checkbox"
+                                          value="performer"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Performer</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->146<!-- -->)</span
+                                        ></label
+                                      >
+                                    </div>
+                                    <div class="flex items-center gap-2"></div>
+                                  </div>
+                                </fieldset>
                               </div>
-                              <span
-                                class="absolute top-1/2 right-0 flex -translate-y-1/2 items-center pr-2"
-                                ><svg
-                                  aria-hidden="true"
-                                  class="pointer-events-none size-5 text-subtle"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    d="M19 9l-7 7-7-7"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                  ></path></svg
-                              ></span>
-                            </button>
-                          </div>
+                            </div>
+                          </details>
+                          <details
+                            class="group border-b border-default last:border-0"
+                          >
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                            >
+                              <span class="flex items-center gap-2">Title</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
+                            >
+                              <div
+                                class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <input
+                                  aria-label="Title"
+                                  class="w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
+                                  placeholder="Enter all or part of a title"
+                                  type="text"
+                                />
+                              </div>
+                            </div>
+                          </details>
+                          <details
+                            class="group border-b border-default last:border-0"
+                          >
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                            >
+                              <span class="flex items-center gap-2"
+                                >Release Year</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
+                            >
+                              <div
+                                class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <div class="flex flex-col gap-4">
+                                  <fieldset
+                                    aria-label="Release Year"
+                                    class="text-subtle"
+                                  >
+                                    <div class="flex items-baseline">
+                                      <label
+                                        class="flex flex-1 items-center gap-x-[.5ch]"
+                                        ><span
+                                          class="min-w-10 text-left text-sm tracking-serif-wide"
+                                          >From</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="1929" selected="">
+                                            1929
+                                          </option>
+                                          <option value="1930">1930</option>
+                                          <option value="1931">1931</option>
+                                          <option value="1932">1932</option>
+                                          <option value="1933">1933</option>
+                                          <option value="1934">1934</option>
+                                          <option value="1935">1935</option>
+                                          <option value="1936">1936</option>
+                                          <option value="1937">1937</option>
+                                          <option value="1938">1938</option>
+                                          <option value="1939">1939</option>
+                                          <option value="1940">1940</option>
+                                          <option value="1941">1941</option>
+                                          <option value="1942">1942</option>
+                                          <option value="1943">1943</option>
+                                          <option value="1944">1944</option>
+                                          <option value="1945">1945</option>
+                                          <option value="1946">1946</option>
+                                          <option value="1947">1947</option>
+                                          <option value="1948">1948</option>
+                                          <option value="1949">1949</option>
+                                          <option value="1950">1950</option>
+                                          <option value="1951">1951</option>
+                                          <option value="1952">1952</option>
+                                          <option value="1953">1953</option>
+                                          <option value="1954">1954</option>
+                                          <option value="1955">1955</option>
+                                          <option value="1956">1956</option>
+                                          <option value="1957">1957</option>
+                                          <option value="1958">1958</option>
+                                          <option value="1959">1959</option>
+                                          <option value="1960">1960</option>
+                                          <option value="1961">1961</option>
+                                          <option value="1962">1962</option>
+                                          <option value="1963">1963</option>
+                                          <option value="1964">1964</option>
+                                          <option value="1965">1965</option>
+                                          <option value="1966">1966</option>
+                                          <option value="1967">1967</option>
+                                          <option value="1968">1968</option>
+                                          <option value="1969">1969</option>
+                                          <option value="1970">1970</option>
+                                          <option value="1971">1971</option>
+                                          <option value="1972">1972</option>
+                                          <option value="1973">1973</option>
+                                          <option value="1974">1974</option>
+                                          <option value="1975">1975</option>
+                                          <option value="1976">1976</option>
+                                        </select></label
+                                      ><label class="flex flex-1 items-center"
+                                        ><span
+                                          class="min-w-10 text-center text-sm tracking-serif-wide"
+                                          >to</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="1976" selected="">
+                                            1976
+                                          </option>
+                                          <option value="1975">1975</option>
+                                          <option value="1974">1974</option>
+                                          <option value="1973">1973</option>
+                                          <option value="1972">1972</option>
+                                          <option value="1971">1971</option>
+                                          <option value="1970">1970</option>
+                                          <option value="1969">1969</option>
+                                          <option value="1968">1968</option>
+                                          <option value="1967">1967</option>
+                                          <option value="1966">1966</option>
+                                          <option value="1965">1965</option>
+                                          <option value="1964">1964</option>
+                                          <option value="1963">1963</option>
+                                          <option value="1962">1962</option>
+                                          <option value="1961">1961</option>
+                                          <option value="1960">1960</option>
+                                          <option value="1959">1959</option>
+                                          <option value="1958">1958</option>
+                                          <option value="1957">1957</option>
+                                          <option value="1956">1956</option>
+                                          <option value="1955">1955</option>
+                                          <option value="1954">1954</option>
+                                          <option value="1953">1953</option>
+                                          <option value="1952">1952</option>
+                                          <option value="1951">1951</option>
+                                          <option value="1950">1950</option>
+                                          <option value="1949">1949</option>
+                                          <option value="1948">1948</option>
+                                          <option value="1947">1947</option>
+                                          <option value="1946">1946</option>
+                                          <option value="1945">1945</option>
+                                          <option value="1944">1944</option>
+                                          <option value="1943">1943</option>
+                                          <option value="1942">1942</option>
+                                          <option value="1941">1941</option>
+                                          <option value="1940">1940</option>
+                                          <option value="1939">1939</option>
+                                          <option value="1938">1938</option>
+                                          <option value="1937">1937</option>
+                                          <option value="1936">1936</option>
+                                          <option value="1935">1935</option>
+                                          <option value="1934">1934</option>
+                                          <option value="1933">1933</option>
+                                          <option value="1932">1932</option>
+                                          <option value="1931">1931</option>
+                                          <option value="1930">1930</option>
+                                          <option value="1929">1929</option>
+                                        </select></label
+                                      >
+                                    </div>
+                                  </fieldset>
+                                  <div class="text-left">
+                                    <div class="flex flex-col gap-4 px-2 py-3">
+                                      <div class="relative h-6">
+                                        <div
+                                          class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                        ></div>
+                                        <div
+                                          class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                          style="left: 0%; right: 0%"
+                                        ></div>
+                                        <input
+                                          aria-label="Release Year minimum value"
+                                          aria-valuemax="1976"
+                                          aria-valuemin="1929"
+                                          aria-valuenow="1929"
+                                          aria-valuetext="1929"
+                                          class="range-input"
+                                          id="range-slider-release-year-from"
+                                          max="1976"
+                                          min="1929"
+                                          type="range"
+                                          value="1929"
+                                        /><input
+                                          aria-label="Release Year maximum value"
+                                          aria-valuemax="1976"
+                                          aria-valuemin="1929"
+                                          aria-valuenow="1976"
+                                          aria-valuetext="1976"
+                                          class="range-input"
+                                          id="range-slider-release-year-to"
+                                          max="1976"
+                                          min="1929"
+                                          type="range"
+                                          value="1976"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="sr-only"
+                                    >
+                                      Range:
+                                      <!-- -->1929<!-- -->
+                                      to
+                                      <!-- -->1976
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </details>
+                          <details
+                            class="group border-b border-default last:border-0"
+                          >
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                            >
+                              <span class="flex items-center gap-2">Genres</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
+                            >
+                              <div
+                                class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <fieldset class="text-left font-sans">
+                                  <legend class="sr-only">
+                                    <span
+                                      class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
+                                      >Genres</span
+                                    >
+                                  </legend>
+                                  <div class="flex flex-col gap-2">
+                                    <div
+                                      aria-live="polite"
+                                      aria-relevant="additions removals"
+                                      class="flex flex-col"
+                                      role="group"
+                                    >
+                                      <label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-genres-Action"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-genres-Action"
+                                          type="checkbox"
+                                          value="Action"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Action</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->33<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-genres-Adventure"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-genres-Adventure"
+                                          type="checkbox"
+                                          value="Adventure"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Adventure</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->38<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-genres-Biography"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-genres-Biography"
+                                          type="checkbox"
+                                          value="Biography"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Biography</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->4<!-- -->)</span
+                                        ></label
+                                      >
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                      <button
+                                        aria-expanded="false"
+                                        class="mt-2 font-sans text-sm text-accent underline"
+                                        type="button"
+                                      >
+                                        Show more
+                                      </button>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </details>
+                          <details
+                            class="group border-b border-default last:border-0"
+                          >
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                            >
+                              <span class="flex items-center gap-2">Grade</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
+                            >
+                              <div
+                                class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <div class="flex flex-col gap-4">
+                                  <fieldset
+                                    aria-label="Grade"
+                                    class="text-subtle"
+                                  >
+                                    <div class="flex flex-wrap items-baseline">
+                                      <label
+                                        class="flex flex-1 items-center gap-x-[.5ch]"
+                                        ><span
+                                          class="min-w-10 text-left text-sm tracking-serif-wide"
+                                          >From</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="2" selected="">
+                                            F-
+                                          </option>
+                                          <option value="3">F</option>
+                                          <option value="4">F+</option>
+                                          <option value="5">D-</option>
+                                          <option value="6">D</option>
+                                          <option value="7">D+</option>
+                                          <option value="8">C-</option>
+                                          <option value="9">C</option>
+                                          <option value="10">C+</option>
+                                          <option value="11">B-</option>
+                                          <option value="12">B</option>
+                                          <option value="13">B+</option>
+                                          <option value="14">A-</option>
+                                          <option value="15">A</option>
+                                          <option value="16">A+</option>
+                                        </select></label
+                                      ><label class="flex flex-1 items-center"
+                                        ><span
+                                          class="min-w-10 text-center text-sm tracking-serif-wide"
+                                          >to</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="16" selected="">
+                                            A+
+                                          </option>
+                                          <option value="15">A</option>
+                                          <option value="14">A-</option>
+                                          <option value="13">B+</option>
+                                          <option value="12">B</option>
+                                          <option value="11">B-</option>
+                                          <option value="10">C+</option>
+                                          <option value="9">C</option>
+                                          <option value="8">C-</option>
+                                          <option value="7">D+</option>
+                                          <option value="6">D</option>
+                                          <option value="5">D-</option>
+                                          <option value="4">F+</option>
+                                          <option value="3">F</option>
+                                          <option value="2">F-</option>
+                                        </select></label
+                                      >
+                                    </div>
+                                  </fieldset>
+                                  <div class="text-left">
+                                    <div class="flex flex-col gap-4 px-2 py-3">
+                                      <div class="relative h-6">
+                                        <div
+                                          class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                        ></div>
+                                        <div
+                                          class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                          style="left: 0%; right: 0%"
+                                        ></div>
+                                        <input
+                                          aria-label="Grade minimum value"
+                                          aria-valuemax="16"
+                                          aria-valuemin="2"
+                                          aria-valuenow="2"
+                                          aria-valuetext="F-"
+                                          class="range-input"
+                                          id="range-slider-grade-from"
+                                          max="16"
+                                          min="2"
+                                          type="range"
+                                          value="2"
+                                        /><input
+                                          aria-label="Grade maximum value"
+                                          aria-valuemax="16"
+                                          aria-valuemin="2"
+                                          aria-valuenow="16"
+                                          aria-valuetext="A+"
+                                          class="range-input"
+                                          id="range-slider-grade-to"
+                                          max="16"
+                                          min="2"
+                                          type="range"
+                                          value="16"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="sr-only"
+                                    >
+                                      Range:
+                                      <!-- -->F-<!-- -->
+                                      to
+                                      <!-- -->A+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </details>
+                          <details
+                            class="group border-b border-default last:border-0"
+                          >
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                            >
+                              <span class="flex items-center gap-2"
+                                >Review Year</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
+                            >
+                              <div
+                                class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <div class="flex flex-col gap-4">
+                                  <fieldset
+                                    aria-label="Review Year"
+                                    class="text-subtle"
+                                  >
+                                    <div class="flex items-baseline">
+                                      <label
+                                        class="flex flex-1 items-center gap-x-[.5ch]"
+                                        ><span
+                                          class="min-w-10 text-left text-sm tracking-serif-wide"
+                                          >From</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="2003" selected="">
+                                            2003
+                                          </option>
+                                          <option value="2004">2004</option>
+                                          <option value="2007">2007</option>
+                                          <option value="2008">2008</option>
+                                          <option value="2009">2009</option>
+                                          <option value="2012">2012</option>
+                                          <option value="2015">2015</option>
+                                          <option value="2016">2016</option>
+                                          <option value="2020">2020</option>
+                                          <option value="2021">2021</option>
+                                          <option value="2022">2022</option>
+                                          <option value="2023">2023</option>
+                                          <option value="2024">2024</option>
+                                          <option value="2025">2025</option>
+                                        </select></label
+                                      ><label class="flex flex-1 items-center"
+                                        ><span
+                                          class="min-w-10 text-center text-sm tracking-serif-wide"
+                                          >to</span
+                                        ><select
+                                          class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
+                                        >
+                                          <option value="2025" selected="">
+                                            2025
+                                          </option>
+                                          <option value="2024">2024</option>
+                                          <option value="2023">2023</option>
+                                          <option value="2022">2022</option>
+                                          <option value="2021">2021</option>
+                                          <option value="2020">2020</option>
+                                          <option value="2016">2016</option>
+                                          <option value="2015">2015</option>
+                                          <option value="2012">2012</option>
+                                          <option value="2009">2009</option>
+                                          <option value="2008">2008</option>
+                                          <option value="2007">2007</option>
+                                          <option value="2004">2004</option>
+                                          <option value="2003">2003</option>
+                                        </select></label
+                                      >
+                                    </div>
+                                  </fieldset>
+                                  <div class="text-left">
+                                    <div class="flex flex-col gap-4 px-2 py-3">
+                                      <div class="relative h-6">
+                                        <div
+                                          class="absolute top-1/2 right-0 left-0 h-1 -translate-y-1/2 rounded-full bg-stripe"
+                                        ></div>
+                                        <div
+                                          class="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-accent"
+                                          style="left: 0%; right: 0%"
+                                        ></div>
+                                        <input
+                                          aria-label="Review Year minimum value"
+                                          aria-valuemax="2025"
+                                          aria-valuemin="2003"
+                                          aria-valuenow="2003"
+                                          aria-valuetext="2003"
+                                          class="range-input"
+                                          id="range-slider-review-year-from"
+                                          max="2025"
+                                          min="2003"
+                                          type="range"
+                                          value="2003"
+                                        /><input
+                                          aria-label="Review Year maximum value"
+                                          aria-valuemax="2025"
+                                          aria-valuemin="2003"
+                                          aria-valuenow="2025"
+                                          aria-valuetext="2025"
+                                          class="range-input"
+                                          id="range-slider-review-year-to"
+                                          max="2025"
+                                          min="2003"
+                                          type="range"
+                                          value="2025"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div
+                                      aria-atomic="true"
+                                      aria-live="polite"
+                                      class="sr-only"
+                                    >
+                                      Range:
+                                      <!-- -->2003<!-- -->
+                                      to
+                                      <!-- -->2025
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </details>
+                          <details
+                            class="group border-b border-default last:border-0"
+                          >
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                            >
+                              <span class="flex items-center gap-2"
+                                >Reviewed Status</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
+                            >
+                              <div
+                                class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <fieldset class="text-left font-sans">
+                                  <legend class="sr-only">
+                                    <span
+                                      class="inline-block h-6 text-left font-sans text-base leading-none font-semibold tracking-normal text-subtle"
+                                      >Reviewed Status</span
+                                    >
+                                  </legend>
+                                  <div class="flex flex-col gap-2">
+                                    <div
+                                      aria-live="polite"
+                                      aria-relevant="additions removals"
+                                      class="flex flex-col"
+                                      role="group"
+                                    >
+                                      <label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-reviewed-status-Not Reviewed"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-reviewed-status-Not Reviewed"
+                                          type="checkbox"
+                                          value="Not Reviewed"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Not Reviewed</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->57<!-- -->)</span
+                                        ></label
+                                      ><label
+                                        class="flex cursor-pointer items-center gap-3 rounded-sm pb-2 last-of-type:pb-0 focus-within:bg-stripe hover:bg-stripe"
+                                        for="checkbox-list-reviewed-status-Reviewed"
+                                        ><input
+                                          class="size-4 cursor-pointer accent-accent"
+                                          id="checkbox-list-reviewed-status-Reviewed"
+                                          type="checkbox"
+                                          value="Reviewed"
+                                        /><span
+                                          class="flex-1 text-base text-default"
+                                          >Reviewed</span
+                                        ><span class="text-base text-subtle"
+                                          >(<!-- -->89<!-- -->)</span
+                                        ></label
+                                      >
+                                    </div>
+                                    <div class="flex items-center gap-2"></div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                          </details>
                         </div>
-                        <fieldset class="text-subtle">
-                          <legend
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                          >
-                            Grade
-                          </legend>
-                          <div class="flex flex-wrap items-baseline">
-                            <label class="flex flex-1 items-center gap-x-[.5ch]"
-                              ><span
-                                class="min-w-10 text-left text-sm tracking-serif-wide"
-                                >From</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="1" selected="">F</option>
-                                <option value="2">D-</option>
-                                <option value="3">D</option>
-                                <option value="4">D+</option>
-                                <option value="5">C-</option>
-                                <option value="6">C</option>
-                                <option value="7">C+</option>
-                                <option value="8">B-</option>
-                                <option value="9">B</option>
-                                <option value="10">B+</option>
-                                <option value="11">A-</option>
-                                <option value="12">A</option>
-                                <option value="13">A+</option>
-                              </select></label
-                            ><label class="flex flex-1 items-center"
-                              ><span
-                                class="min-w-10 text-center text-sm tracking-serif-wide"
-                                >to</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="13" selected="">A+</option>
-                                <option value="12">A</option>
-                                <option value="11">A-</option>
-                                <option value="10">B+</option>
-                                <option value="9">B</option>
-                                <option value="8">B-</option>
-                                <option value="7">C+</option>
-                                <option value="6">C</option>
-                                <option value="5">C-</option>
-                                <option value="4">D+</option>
-                                <option value="3">D</option>
-                                <option value="2">D-</option>
-                                <option value="1">F</option>
-                              </select></label
-                            >
-                          </div>
-                        </fieldset>
-                        <fieldset class="text-subtle">
-                          <legend
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                          >
-                            Review Year
-                          </legend>
-                          <div class="flex items-baseline">
-                            <label class="flex flex-1 items-center gap-x-[.5ch]"
-                              ><span
-                                class="min-w-10 text-left text-sm tracking-serif-wide"
-                                >From</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="2003" selected="">2003</option>
-                                <option value="2004">2004</option>
-                                <option value="2007">2007</option>
-                                <option value="2008">2008</option>
-                                <option value="2009">2009</option>
-                                <option value="2012">2012</option>
-                                <option value="2015">2015</option>
-                                <option value="2016">2016</option>
-                                <option value="2020">2020</option>
-                                <option value="2021">2021</option>
-                                <option value="2022">2022</option>
-                                <option value="2023">2023</option>
-                                <option value="2024">2024</option>
-                                <option value="2025">2025</option>
-                              </select></label
-                            ><label class="flex flex-1 items-center"
-                              ><span
-                                class="min-w-10 text-center text-sm tracking-serif-wide"
-                                >to</span
-                              ><select
-                                class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                              >
-                                <option value="2025" selected="">2025</option>
-                                <option value="2024">2024</option>
-                                <option value="2023">2023</option>
-                                <option value="2022">2022</option>
-                                <option value="2021">2021</option>
-                                <option value="2020">2020</option>
-                                <option value="2016">2016</option>
-                                <option value="2015">2015</option>
-                                <option value="2012">2012</option>
-                                <option value="2009">2009</option>
-                                <option value="2008">2008</option>
-                                <option value="2007">2007</option>
-                                <option value="2004">2004</option>
-                                <option value="2003">2003</option>
-                              </select></label
-                            >
-                          </div>
-                        </fieldset>
-                        <label class="flex flex-col"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Reviewed Status</span
-                          ><select
-                            class="w-full appearance-none border-none bg-default py-2 pr-8 pl-4 text-base/6 text-subtle shadow-all outline-accent"
-                          >
-                            <option value="All">All</option>
-                            <option value="Reviewed">Reviewed</option>
-                            <option value="Not Reviewed">Not Reviewed</option>
-                          </select></label
-                        >
                       </fieldset>
                       <div
                         class="sticky bottom-0 z-filter-footer mt-auto w-full border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"

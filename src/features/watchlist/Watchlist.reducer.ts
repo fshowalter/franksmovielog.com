@@ -27,6 +27,7 @@ export {
   createClearFiltersAction,
   createGenresFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createTitleFilterChangedAction,
   selectHasPendingFilters,
@@ -51,16 +52,16 @@ export type WatchlistFiltersValues = ExtraWatchlistFiltersValues &
   TitleFiltersValues;
 
 type ExtraWatchlistFiltersValues = {
-  collection?: string;
-  director?: string;
-  performer?: string;
-  writer?: string;
+  collection?: readonly string[];
+  director?: readonly string[];
+  performer?: readonly string[];
+  writer?: readonly string[];
 };
 
 type WatchlistFilterChangedAction = {
   filter: keyof ExtraWatchlistFiltersValues;
   type: "watchlist/filterChanged";
-  value: string;
+  value: readonly string[];
 };
 
 /**
@@ -100,18 +101,32 @@ export function createInitialState({
     ...titleFilterState,
     ...showMoreState,
     ...sortState,
+    activeFilterValues: {
+      ...titleFilterState.activeFilterValues,
+      collection: [],
+      director: [],
+      performer: [],
+      writer: [],
+    },
+    pendingFilterValues: {
+      ...titleFilterState.pendingFilterValues,
+      collection: [],
+      director: [],
+      performer: [],
+      writer: [],
+    },
   };
 }
 
 /**
  * Creates an action for changing watchlist-specific filters.
  * @param filter - The filter to change
- * @param value - The new filter value
+ * @param value - The new filter values (array for multi-select)
  * @returns Watchlist filter changed action
  */
 export function createWatchlistFilterChangedAction(
   filter: keyof ExtraWatchlistFiltersValues,
-  value: string,
+  value: readonly string[],
 ): WatchlistFilterChangedAction {
   return { filter, type: "watchlist/filterChanged", value };
 }
@@ -124,6 +139,20 @@ export function createWatchlistFilterChangedAction(
  */
 export function reducer(state: WatchlistState, action: WatchlistAction) {
   switch (action.type) {
+    case "filters/cleared": {
+      // Handle clear filters - ensure watchlist fields are empty arrays
+      const newState = titleFiltersReducer(state, action);
+      return {
+        ...newState,
+        pendingFilterValues: {
+          ...newState.pendingFilterValues,
+          collection: [],
+          director: [],
+          performer: [],
+          writer: [],
+        },
+      };
+    }
     case "showMore/showMore": {
       return showMoreReducer(state, action);
     }
@@ -152,7 +181,7 @@ function handleWatchlistFilterChanged(
     ...state,
     pendingFilterValues: {
       ...state.pendingFilterValues,
-      [action.filter]: action.value === "All" ? undefined : action.value,
+      [action.filter]: action.value,
     },
   };
 }

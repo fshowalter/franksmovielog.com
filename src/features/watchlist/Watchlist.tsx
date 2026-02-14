@@ -10,6 +10,7 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
 
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterWatchlistValues } from "./filterWatchlistValues";
 import { groupWatchlistValues } from "./groupWatchlistValues";
 import { sortWatchlistValues } from "./sortWatchlistValues";
@@ -17,9 +18,11 @@ import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
+  createWatchlistFilterChangedAction,
   reducer,
   selectHasPendingFilters,
 } from "./Watchlist.reducer";
@@ -109,8 +112,73 @@ export function Watchlist({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues, {
+    distinctReleaseYears,
+  });
+
+  /**
+   * Handles removal of individual filter chips.
+   * For director/performer/writer/collection, removes specific value from array.
+   * For other filters, removes entire filter key.
+   */
+  function handleRemoveAppliedFilter(filterId: string): void {
+    // Parse the filter ID to determine type and value
+    if (filterId.startsWith("director-")) {
+      const directorName = filterId
+        .replace("director-", "")
+        .replaceAll("-", " ")
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+      const newDirectors =
+        state.pendingFilterValues.director?.filter((d) => d !== directorName) ??
+        [];
+      dispatch(createWatchlistFilterChangedAction("director", newDirectors));
+    } else if (filterId.startsWith("performer-")) {
+      const performerName = filterId
+        .replace("performer-", "")
+        .replaceAll("-", " ")
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+      const newPerformers =
+        state.pendingFilterValues.performer?.filter(
+          (p) => p !== performerName,
+        ) ?? [];
+      dispatch(createWatchlistFilterChangedAction("performer", newPerformers));
+    } else if (filterId.startsWith("writer-")) {
+      const writerName = filterId
+        .replace("writer-", "")
+        .replaceAll("-", " ")
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+      const newWriters =
+        state.pendingFilterValues.writer?.filter((w) => w !== writerName) ?? [];
+      dispatch(createWatchlistFilterChangedAction("writer", newWriters));
+    } else if (filterId.startsWith("collection-")) {
+      const collectionName = filterId
+        .replace("collection-", "")
+        .replaceAll("-", " ")
+        .split(" ")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+      const newCollections =
+        state.pendingFilterValues.collection?.filter(
+          (c) => c !== collectionName,
+        ) ?? [];
+      dispatch(
+        createWatchlistFilterChangedAction("collection", newCollections),
+      );
+    } else {
+      // For other filters (genres, releaseYear, title), use the standard removal
+      dispatch(createRemoveAppliedFilterAction(filterId));
+    }
+  }
+
   return (
     <FilterAndSortContainer
+      activeFilters={activeFilters}
       filters={
         <WatchlistFilters
           dispatch={dispatch}
@@ -121,6 +189,7 @@ export function Watchlist({
           distinctReleaseYears={distinctReleaseYears}
           distinctWriters={distinctWriters}
           filterValues={state.pendingFilterValues}
+          values={values}
         />
       }
       hasPendingFilters={hasPendingFilters}
@@ -130,6 +199,7 @@ export function Watchlist({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={handleRemoveAppliedFilter}
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}

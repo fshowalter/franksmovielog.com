@@ -2,16 +2,16 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { clickSelectFieldOption } from "~/components/fields/SelectField.testHelper";
+import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
 import { fillYearField } from "~/components/fields/YearField.testHelper";
 
 /**
- * Clicks a medium filter option in tests.
+ * Clicks a medium filter option (checkbox) in tests.
  * @param user - User event instance
  * @param value - Filter value to select
  */
 export async function clickMediumFilterOption(user: UserEvent, value: string) {
-  await clickSelectFieldOption(user, "Medium", value);
+  await clickCheckboxListOption(user, "Medium", value);
 }
 
 /**
@@ -39,12 +39,12 @@ export async function clickPreviousMonthButton(user: UserEvent) {
 }
 
 /**
- * Clicks a venue filter option in tests.
+ * Clicks a venue filter option (checkbox) in tests.
  * @param user - User event instance
  * @param value - Filter value to select
  */
 export async function clickVenueFilterOption(user: UserEvent, value: string) {
-  await clickSelectFieldOption(user, "Venue", value);
+  await clickCheckboxListOption(user, "Venue", value);
 }
 
 /**
@@ -70,11 +70,29 @@ export function getCalendar() {
 }
 
 /**
- * Gets the medium filter element.
- * @returns Medium filter element
+ * Gets the selected medium filter values (as array).
+ * @returns Object with values property containing the selected medium values
  */
-export function getMediumFilter() {
-  return screen.getByLabelText("Medium");
+export function getMediumFilter(): { values: string[] } {
+  // Find all groups and filter for the one with Medium in the legend
+  const groups = screen.queryAllByRole("group");
+  const mediumGroup = groups.find((group) => {
+    const legend = group.querySelector("legend");
+    return legend?.textContent?.includes("Medium");
+  });
+
+  if (!mediumGroup) {
+    // If group not found, return empty array as default (filter section may be closed)
+    return { values: [] };
+  }
+
+  // Find all checked checkboxes
+  const checkboxes = mediumGroup.querySelectorAll('input[type="checkbox"]');
+  const checkedValues = [...checkboxes]
+    .filter((checkbox) => (checkbox as HTMLInputElement).checked)
+    .map((checkbox) => (checkbox as HTMLInputElement).value);
+
+  return { values: checkedValues };
 }
 
 /**

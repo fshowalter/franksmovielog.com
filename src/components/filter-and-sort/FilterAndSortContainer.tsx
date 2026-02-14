@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import type { FilterChip } from "./AppliedFilters";
+
+import { AppliedFilters } from "./AppliedFilters";
 import { FilterAndSortHeader } from "./FilterAndSortHeader";
 
 /**
@@ -12,6 +15,7 @@ export type SortProps<T extends string> = {
 };
 
 type Props<T extends string> = {
+  activeFilters?: FilterChip[];
   children: React.ReactNode;
   className?: string;
   filters: React.ReactNode;
@@ -20,6 +24,7 @@ type Props<T extends string> = {
   onApplyFilters: () => void;
   onClearFilters: () => void;
   onFilterDrawerOpen: () => void;
+  onRemoveFilter?: (id: string) => void;
   onResetFilters: () => void;
   pendingFilteredCount: number;
   sortProps: SortProps<T>;
@@ -35,6 +40,7 @@ type Props<T extends string> = {
  * @returns Filter and sort container with drawer and header controls
  */
 export function FilterAndSortContainer<T extends string>({
+  activeFilters,
   children,
   className,
   filters,
@@ -43,6 +49,7 @@ export function FilterAndSortContainer<T extends string>({
   onApplyFilters,
   onClearFilters,
   onFilterDrawerOpen,
+  onRemoveFilter,
   onResetFilters,
   pendingFilteredCount,
   sortProps,
@@ -213,7 +220,6 @@ export function FilterAndSortContainer<T extends string>({
               className={`
                 flex size-full flex-col text-sm
                 tablet:text-base
-                [@media(min-height:815px)]:pt-12
               `}
               ref={formRef}
             >
@@ -225,6 +231,7 @@ export function FilterAndSortContainer<T extends string>({
                   cursor-pointer items-center justify-center rounded-full
                   bg-canvas text-default drop-shadow-sm transition-transform
                   hover:scale-105 hover:drop-shadow-md
+                  tablet:right-[34px]
                 `}
                 onClick={() => {
                   handleCloseDrawer();
@@ -247,23 +254,32 @@ export function FilterAndSortContainer<T extends string>({
                   />
                 </svg>
               </button>
-              <fieldset
-                className={`
-                  mt-0 flex grow flex-col gap-5 px-container py-10
-                  tablet:gap-8
-                  tablet-landscape:grow-0 tablet-landscape:gap-10
-                  tablet-landscape:px-12
-                `}
-              >
+              <fieldset className={`mt-0 flex grow-0 flex-col`}>
                 <legend
                   className={`
-                    block w-full pt-10 pb-8 font-sans text-sm font-bold
-                    tracking-wide text-subtle uppercase shadow-bottom
+                    mb-0 block w-full px-container py-7 font-sans text-base/10
+                    font-bold tracking-wide text-subtle uppercase shadow-bottom
+                    tablet-landscape:px-12
                   `}
                 >
                   Filter
                 </legend>
-                {filters}
+
+                <div
+                  className="
+                    px-container
+                    tablet-landscape:px-12
+                  "
+                >
+                  {activeFilters && onRemoveFilter && (
+                    <AppliedFilters
+                      filters={activeFilters}
+                      onClearAll={onClearFilters}
+                      onRemove={onRemoveFilter}
+                    />
+                  )}
+                  {filters}
+                </div>
               </fieldset>
               <div
                 className={`

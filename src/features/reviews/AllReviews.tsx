@@ -8,12 +8,14 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 import type { ReviewsValue } from "./ReviewsListItem";
 import type { ReviewsSort } from "./sortReviews";
 
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterReviews } from "./filteredReviews";
 import { groupReviews } from "./groupReviews";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
@@ -78,9 +80,15 @@ export function AllReviews({
   );
 
   const hasPendingFilters = selectHasPendingFilters(state);
+  // AIDEV-NOTE: Spec compliance - AppliedFilters must show pending filters for real-time updates
+  const activeFilters = buildAppliedFilterChips(state.pendingFilterValues, {
+    distinctReleaseYears,
+    distinctReviewYears,
+  });
 
   return (
     <FilterAndSortContainer
+      activeFilters={activeFilters}
       filters={
         <ReviewsFilters
           dispatch={dispatch}
@@ -88,6 +96,7 @@ export function AllReviews({
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
+          values={values}
         />
       }
       hasPendingFilters={hasPendingFilters}
@@ -96,6 +105,7 @@ export function AllReviews({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={(id) => dispatch(createRemoveAppliedFilterAction(id))}
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}

@@ -541,7 +541,7 @@
             </div>
           </header>
           <astro-island
-            uid="K3dGH"
+            uid="25B5gy"
             prefix="r1"
             component-url="~/features/collections/Collections"
             component-export="Collections"
@@ -1005,11 +1005,11 @@
                     id="filters"
                   >
                     <form
-                      class="flex size-full flex-col text-sm tablet:text-base [@media(min-height:815px)]:pt-12"
+                      class="flex size-full flex-col text-sm tablet:text-base"
                     >
                       <button
                         aria-label="Close filters"
-                        class="absolute top-7 right-4 z-10 flex size-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md"
+                        class="absolute top-7 right-4 z-10 flex size-10 transform-gpu cursor-pointer items-center justify-center rounded-full bg-canvas text-default drop-shadow-sm transition-transform hover:scale-105 hover:drop-shadow-md tablet:right-[34px]"
                         type="button"
                       >
                         <svg
@@ -1027,23 +1027,51 @@
                           ></path>
                         </svg>
                       </button>
-                      <fieldset
-                        class="mt-0 flex grow flex-col gap-5 px-container py-10 tablet:gap-8 tablet-landscape:grow-0 tablet-landscape:gap-10 tablet-landscape:px-12"
-                      >
+                      <fieldset class="mt-0 flex grow-0 flex-col">
                         <legend
-                          class="block w-full pt-10 pb-8 font-sans text-sm font-bold tracking-wide text-subtle uppercase shadow-bottom"
+                          class="mb-0 block w-full px-container py-7 font-sans text-base/10 font-bold tracking-wide text-subtle uppercase shadow-bottom tablet-landscape:px-12"
                         >
                           Filter
                         </legend>
-                        <label class="flex flex-col text-subtle"
-                          ><span
-                            class="inline-block h-6 text-left font-sans text-xs leading-none font-semibold tracking-wide text-subtle uppercase"
-                            >Name</span
-                          ><input
-                            class="border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
-                            placeholder="Enter all or part of a name"
-                            type="text"
-                        /></label>
+                        <div class="px-container tablet-landscape:px-12">
+                          <details
+                            class="group border-b border-default last:border-0"
+                          >
+                            <summary
+                              class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                            >
+                              <span class="flex items-center gap-2">Name</span
+                              ><svg
+                                aria-hidden="true"
+                                class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                fill="currentColor"
+                                viewBox="0 0 12 8"
+                              >
+                                <path
+                                  d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                ></path>
+                              </svg>
+                            </summary>
+                            <div
+                              class="overflow-hidden"
+                              style="
+                                transition: height 300ms
+                                  cubic-bezier(0.2, 0.6, 0.4, 1);
+                              "
+                            >
+                              <div
+                                class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                              >
+                                <input
+                                  aria-label="Name"
+                                  class="w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all outline-accent placeholder:text-default placeholder:opacity-50"
+                                  placeholder="Enter all or part of a name"
+                                  type="text"
+                                />
+                              </div>
+                            </div>
+                          </details>
+                        </div>
                       </fieldset>
                       <div
                         class="sticky bottom-0 z-filter-footer mt-auto w-full border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl tablet-landscape:px-12"

@@ -14,10 +14,12 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
 
+import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
   createInitialState,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createSortAction,
   reducer,
@@ -105,8 +107,13 @@ export function CastAndCrewMemberTitles({
 
   const hasPendingFilters = selectHasPendingFilters(state);
 
+  // AIDEV-NOTE: Spec compliance - AppliedFilters must show pending filters for real-time updates
   return (
     <FilterAndSortContainer
+      activeFilters={buildAppliedFilterChips(state.pendingFilterValues, {
+        distinctReleaseYears,
+        distinctReviewYears,
+      })}
       filters={
         <CastAndCrewMemberTitlesFilters
           dispatch={dispatch}
@@ -115,6 +122,7 @@ export function CastAndCrewMemberTitles({
           distinctReleaseYears={distinctReleaseYears}
           distinctReviewYears={distinctReviewYears}
           filterValues={state.pendingFilterValues}
+          values={values}
         />
       }
       hasPendingFilters={hasPendingFilters}
@@ -123,6 +131,9 @@ export function CastAndCrewMemberTitles({
         dispatch(createClearFiltersAction());
       }}
       onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
+      onRemoveFilter={(filterId) =>
+        dispatch(createRemoveAppliedFilterAction(filterId))
+      }
       onResetFilters={() => {
         dispatch(createResetFiltersAction());
       }}

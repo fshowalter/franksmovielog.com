@@ -4,11 +4,14 @@ import type {
   TitleFiltersValues,
 } from "./titleFiltersReducer";
 
+export type { RemoveAppliedFilterAction } from "./titleFiltersReducer";
+
 export {
   createApplyFiltersAction,
   createClearFiltersAction,
   createGenresFilterChangedAction,
   createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   createTitleFilterChangedAction,
   selectHasPendingFilters,

@@ -2,24 +2,34 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { clickSelectFieldOption } from "~/components/fields/SelectField.testHelper";
+import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
 
 /**
  * Test helper to select a credited-as filter option.
  * @param user - UserEvent instance for interactions
- * @param value - The credited-as option to select
+ * @param value - The credited-as option to select (supports both lowercase and capitalized forms)
  */
 export async function clickCreditedAsFilterOption(
   user: UserEvent,
-  value: "All" | "Director" | "Performer" | "Writer",
+  value:
+    | "director"
+    | "Director"
+    | "performer"
+    | "Performer"
+    | "writer"
+    | "Writer",
 ) {
-  await clickSelectFieldOption(user, "Credited As", value);
+  await clickCheckboxListOption(user, "Credited As", value);
 }
 
 /**
- * Test helper to get the credited-as filter element.
- * @returns Credited-as filter DOM element
+ * Test helper to get the credited-as filter current values.
+ * @returns Array of currently selected credited-as values
  */
-export function getCreditedAsFilter() {
-  return screen.getByLabelText("Credited As");
+export function getCreditedAsFilter(): string[] {
+  const filterSection = screen.getByRole("group", { name: /Credited As/i });
+  const checkedBoxes = filterSection.querySelectorAll<HTMLInputElement>(
+    'input[type="checkbox"]:checked',
+  );
+  return [...checkedBoxes].map((checkbox) => checkbox.value);
 }

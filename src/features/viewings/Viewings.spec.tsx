@@ -1,4 +1,4 @@
-import { render, within } from "@testing-library/react";
+import { render, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import {
@@ -535,8 +535,10 @@ describe("Viewings", () => {
       await clickToggleFilters(user);
       await clickClearFilters(user);
 
-      expect(getTitleFilter()).toHaveValue("");
-      expect(getMediumFilter()).toHaveValue("All");
+      await waitFor(() => {
+        expect(getTitleFilter()).toHaveValue("");
+        expect(getMediumFilter().values).toEqual([]);
+      });
 
       await clickViewResults(user);
 

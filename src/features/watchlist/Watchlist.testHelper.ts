@@ -1,8 +1,6 @@
 import type { UserEvent } from "@testing-library/user-event";
 
-import { screen } from "@testing-library/react";
-
-import { clickSelectFieldOption } from "~/components/fields/SelectField.testHelper";
+import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
 
 /**
  * Clicks a collection filter option in tests.
@@ -13,7 +11,7 @@ export async function clickCollectionFilterOption(
   user: UserEvent,
   value: string,
 ) {
-  await clickSelectFieldOption(user, "Collection", value);
+  await clickCheckboxListOption(user, "Collection", value);
 }
 
 /**
@@ -25,7 +23,7 @@ export async function clickDirectorFilterOption(
   user: UserEvent,
   value: string,
 ) {
-  await clickSelectFieldOption(user, "Director", value);
+  await clickCheckboxListOption(user, "Director", value);
 }
 
 /**
@@ -37,7 +35,7 @@ export async function clickPerformerFilterOption(
   user: UserEvent,
   value: string,
 ) {
-  await clickSelectFieldOption(user, "Performer", value);
+  await clickCheckboxListOption(user, "Performer", value);
 }
 
 /**
@@ -46,13 +44,5 @@ export async function clickPerformerFilterOption(
  * @param value - Filter value to select
  */
 export async function clickWriterFilterOption(user: UserEvent, value: string) {
-  await clickSelectFieldOption(user, "Writer", value);
-}
-
-/**
- * Gets the director filter element.
- * @returns Director filter element
- */
-export function getDirectorFilter() {
-  return screen.getByLabelText("Director");
+  await clickCheckboxListOption(user, "Writer", value);
 }

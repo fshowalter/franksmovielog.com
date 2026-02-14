@@ -1,8 +1,11 @@
 import type { FiltersAction, FiltersState } from "./filtersReducer";
 
+export type { RemoveAppliedFilterAction } from "./filtersReducer";
+
 export {
   createApplyFiltersAction,
   createClearFiltersAction,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   selectHasPendingFilters,
 } from "./filtersReducer";

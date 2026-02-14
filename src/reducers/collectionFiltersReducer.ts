@@ -3,6 +3,7 @@ import type { FiltersAction, FiltersState } from "./filtersReducer";
 export {
   createApplyFiltersAction,
   createClearFiltersAction,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
   selectHasPendingFilters,
 } from "./filtersReducer";
