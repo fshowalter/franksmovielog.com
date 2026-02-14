@@ -142,7 +142,7 @@ export function GradeField({
                 From
               </span>
               <SelectInput
-                defaultValue={defaultMinValue(defaultValues)}
+                defaultValue={minValue}
                 onChange={(e) => handleMinChange(e.target.value)}
               >
                 {[...gradeOptions].reverse()}
@@ -153,7 +153,7 @@ export function GradeField({
                 to
               </span>
               <SelectInput
-                defaultValue={defaultMaxValue(defaultValues)}
+                defaultValue={maxValue}
                 onChange={(e) => handleMaxChange(e.target.value)}
               >
                 {[...gradeOptions]}

@@ -171,6 +171,7 @@ Users can select any combination of values. No "All" option needed - empty selec
 Dual controls: Dropdowns + sliders (both usable and REQUIRED):
 
 **IMPORTANT:**
+
 - Range sliders MUST be rendered beneath Year/Grade dropdowns on all pages. The RangeSliderField component is built and tested - it MUST be integrated, not optional.
 - Each range filter MUST be wrapped in a FilterSection component with collapsible details/summary.
 

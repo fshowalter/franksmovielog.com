@@ -57,10 +57,11 @@ export function YearField({
     }
   };
 
-  // AIDEV-NOTE: Handle slider changes - convert numbers back to strings
+  // AIDEV-NOTE: Handle slider changes - snap to nearest valid year in array
   const handleSliderChange = (from: number, to: number): void => {
-    const fromStr = from.toString();
-    const toStr = to.toString();
+    // Find closest valid year in the years array
+    const fromStr = findClosestYear(years, from);
+    const toStr = findClosestYear(years, to);
     setMinYear(fromStr);
     setMaxYear(toStr);
     onYearChange([fromStr, toStr]);
@@ -85,7 +86,7 @@ export function YearField({
                 From
               </span>
               <SelectInput
-                defaultValue={defaultMinValue(years, defaultValues)}
+                defaultValue={minYear}
                 onChange={(e) => handleMinChange(e.target.value)}
               >
                 {years.map((year) => {
@@ -102,7 +103,7 @@ export function YearField({
                 to
               </span>
               <SelectInput
-                defaultValue={defaultMaxValue(years, defaultValues)}
+                defaultValue={maxYear}
                 onChange={(e) => handleMaxChange(e.target.value)}
               >
                 {[...years].reverse().map((year) => {
@@ -144,4 +145,28 @@ function defaultMinValue(
   selectedValues?: [string, string],
 ): string {
   return selectedValues ? selectedValues[0] : allValues[0];
+}
+
+/**
+ * Find the closest year in the years array to the target year.
+ * This handles sparse year arrays (e.g., ["1930", "1943", "1978"]) where
+ * the slider might select intermediate values that don't exist in the array.
+ * @param years - Available years array
+ * @param target - Target year number from slider
+ * @returns Closest year string from the array
+ */
+function findClosestYear(years: readonly string[], target: number): string {
+  let closest = years[0];
+  let minDiff = Math.abs(Number.parseInt(years[0], 10) - target);
+
+  for (const year of years) {
+    const yearNum = Number.parseInt(year, 10);
+    const diff = Math.abs(yearNum - target);
+    if (diff < minDiff) {
+      minDiff = diff;
+      closest = year;
+    }
+  }
+
+  return closest;
 }
