@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { FilterSection } from "./FilterSection";
 
 describe("FilterSection", () => {
-  it("renders open by default (matching Orbit DVD pattern)", () => {
+  it("renders open by default", () => {
     render(
       <FilterSection title="Test Section">
         <div>Content</div>

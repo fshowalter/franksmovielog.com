@@ -39,7 +39,7 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
     >
       <div
         class="
-            pb-6 opacity-0 transition-opacity duration-300
+            px-px pt-px pb-6 opacity-0 transition-opacity duration-300
             [[open]:not(.is-closing)_&]:opacity-100
             [[open]:not(.is-closing)_&]:delay-100
           "
@@ -93,7 +93,7 @@ exports[`FilterSection > snapshot test - open state (default) 1`] = `
     >
       <div
         class="
-            pb-6 opacity-0 transition-opacity duration-300
+            px-px pt-px pb-6 opacity-0 transition-opacity duration-300
             [[open]:not(.is-closing)_&]:opacity-100
             [[open]:not(.is-closing)_&]:delay-100
           "

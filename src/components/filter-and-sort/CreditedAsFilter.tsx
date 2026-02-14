@@ -6,7 +6,7 @@ import { capitalize } from "~/utils/capitalize";
 
 /**
  * Filter component for selecting credited roles (e.g., director, writer, performer).
- * Supports multiple selection via checkboxes (matching Orbit DVD pattern).
+ * Supports multiple selection via checkboxes.
  * @param props - Component props
  * @param props.defaultValues - Currently selected credit values
  * @param props.onChange - Handler for when selection changes

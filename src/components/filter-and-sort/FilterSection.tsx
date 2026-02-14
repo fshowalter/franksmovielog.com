@@ -10,10 +10,6 @@ type FilterSectionProps = {
 
 /**
  * Collapsible filter section wrapper using native details/summary.
- * AIDEV-NOTE: Spec compliance - NO selection count shown in summary (removed per spec)
- * AIDEV-NOTE: Spec compliance - All sections open by default (matching Orbit DVD)
- * AIDEV-NOTE: Spec compliance - Disclosure triangle on far right (matching Orbit DVD)
- * AIDEV-NOTE: Transition implementation matches Orbit DVD's DetailsDisclosure web component:
  * - Prevents default toggle and manually controls open attribute for smooth animations
  * - Opening: height 0 → open=true → height scrollHeight
  * - Closing: height scrollHeight → is-closing class → height 0 → open=false on transitionend
@@ -34,7 +30,7 @@ export function FilterSection({
   const contentRef = useRef<HTMLDivElement>(null);
   const transitionsEnabledRef = useRef<boolean | null>(null);
 
-  // AIDEV-NOTE: Smooth height/opacity transitions matching Orbit DVD
+  // AIDEV-NOTE: Smooth height/opacity transitions
   // - Duration: 300ms with cubic-bezier(0.2,0.6,0.4,1)
   // - Height: JavaScript-measured scrollHeight (CSS can't transition height:auto)
   // - Opacity: CSS-based on [open] attribute and .is-closing class
@@ -48,7 +44,7 @@ export function FilterSection({
     if (!summary) return;
 
     /**
-     * Check if transitions are enabled (matching Orbit's checkTransitionsEnabled)
+     * Check if transitions are enabled
      * Lazy check on first click to ensure styles are computed
      */
     const checkTransitionsEnabled = (): boolean => {
@@ -61,7 +57,6 @@ export function FilterSection({
 
     /**
      * Handles summary click - prevents default and manually controls open state
-     * (matching Orbit's handleToggle)
      */
     const handleClick = (evt: MouseEvent): void => {
       if (!checkTransitionsEnabled()) return; // Let native behavior work if no transitions
@@ -77,7 +72,6 @@ export function FilterSection({
 
     /**
      * Opens the details element with animation
-     * (matching Orbit's open method)
      */
     const openDetails = (): void => {
       // Set height to 0 before opening
@@ -95,7 +89,6 @@ export function FilterSection({
 
     /**
      * Closes the details element with animation
-     * (matching Orbit's close method)
      */
     const closeDetails = (): void => {
       // Set height to current scrollHeight first
@@ -106,7 +99,7 @@ export function FilterSection({
       // to avoid re-render conflicts with manual open attribute control
       details.classList.add("is-closing");
 
-      // Animate to 0 after a slight delay (matching Orbit's setTimeout)
+      // Animate to 0 after a slight delay
       setTimeout(() => {
         content.style.height = "0px";
       }, 1); // Minimal delay to ensure scrollHeight is applied
@@ -114,7 +107,6 @@ export function FilterSection({
 
     /**
      * Handles transition end - cleanup after closing animation
-     * (matching Orbit's handleTransitionEnd)
      */
     const handleTransitionEnd = (evt: TransitionEvent): void => {
       if (evt.target !== content) return;
@@ -172,7 +164,7 @@ export function FilterSection({
           <path d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z" />
         </svg>
       </summary>
-      {/* Panel: handles height transition (matching Orbit's .disclosure__panel) */}
+      {/* Panel: handles height transition  */}
       <div
         className="overflow-hidden"
         ref={contentRef}
@@ -180,15 +172,13 @@ export function FilterSection({
           transition: "height 300ms cubic-bezier(0.2, 0.6, 0.4, 1)",
         }}
       >
-        {/* Content: handles opacity transition (matching Orbit's .disclosure__content) */}
         {/* AIDEV-NOTE: Opacity transitions:
             - When open (not closing): opacity 1 with 0.1s delay (fade in after height starts)
             - When closing: opacity 0 with no delay (fade out immediately)
-            - Pattern matches Orbit's .disclosure[open]:not(.is-closing) .disclosure__content
         */}
         <div
           className="
-            pb-6 opacity-0 transition-opacity duration-300
+            px-px pt-px pb-6 opacity-0 transition-opacity duration-300
             [[open]:not(.is-closing)_&]:opacity-100
             [[open]:not(.is-closing)_&]:delay-100
           "

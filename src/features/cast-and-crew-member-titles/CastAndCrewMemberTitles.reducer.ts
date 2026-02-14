@@ -67,7 +67,7 @@ type CreditedAsFilterChangedAction = {
 
 /**
  * Creates an action for changing the credited-as filter.
- * Supports multiple selection (matching Orbit DVD pattern).
+ * Supports multiple selection.
  * @param values - The credited roles to filter by
  * @returns Credited-as filter changed action
  */

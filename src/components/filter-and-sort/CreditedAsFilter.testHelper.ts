@@ -6,7 +6,6 @@ import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.t
 
 /**
  * Test helper to select a credited-as filter option.
- * Now uses checkboxes for multi-select (matching Orbit DVD pattern).
  * @param user - UserEvent instance for interactions
  * @param value - The credited-as option to select (supports both lowercase and capitalized forms)
  */
