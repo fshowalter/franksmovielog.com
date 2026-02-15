@@ -1,4 +1,4 @@
-import { SubNav, SubNavLink } from "~/components/sub-nav/SubNav";
+import { SideNav, SideNavLink } from "~/components/side-nav/SideNav";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
@@ -10,7 +10,7 @@ import type { CastAndCrewSort } from "./sortCastAndCrew";
  * @param props.sortValue - Current sort configuration
  * @returns Alphabet navigation component or false if not sorting by name
  */
-export function AlphabetSubNav({
+export function AlphabetSideNav({
   groupedValues,
   sortValue,
 }: {
@@ -27,10 +27,10 @@ export function AlphabetSubNav({
   }
 
   return (
-    <SubNav>
+    <SideNav>
       {letters.map((letter) => {
         return (
-          <SubNavLink
+          <SideNavLink
             key={letter}
             linkFunc={
               groupedValues.has(letter)
@@ -41,6 +41,6 @@ export function AlphabetSubNav({
           />
         );
       })}
-    </SubNav>
+    </SideNav>
   );
 }
