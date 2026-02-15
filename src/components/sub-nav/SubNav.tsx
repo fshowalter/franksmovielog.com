@@ -10,7 +10,9 @@ export function SubNav({
   children: React.ReactNode;
 }): React.JSX.Element {
   return (
-    <nav className={`sticky top-0 z-nav-menu bg-inverse`}>
+    <nav
+      className={`sticky top-0 z-nav-menu border-y border-y-slight bg-[#e3e2e2]`}
+    >
       <div
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
@@ -20,8 +22,11 @@ export function SubNav({
       >
         <h3
           className={`
-            snap-start p-4 pr-2 font-sans text-base tracking-normal
-            whitespace-nowrap text-grey
+            shrink-0 snap-start p-4 py-5 pl-container font-sans text-xs
+            font-normal tracking-wide whitespace-nowrap text-subtle uppercase
+            tablet:pl-0
+            laptop:pl-container
+            desktop:pl-0
           `}
         >
           Jump to:
@@ -50,15 +55,15 @@ export function SubNavLink({
   return (
     <li
       className={`
-        snap-start text-center font-sans
-        ${linkFunc ? "text-white" : `text-grey`}
+        snap-start text-center font-light
+        ${linkFunc ? "text-default" : `text-grey`}
       `}
     >
       {linkFunc ? (
         <a
           className={`
-            block transform-gpu p-4 transition-all
-            hover:scale-105 hover:bg-canvas hover:text-default
+            group/item block transform-gpu p-4 transition-all
+            hover:text-accent
           `}
           href={linkFunc(value)}
         >

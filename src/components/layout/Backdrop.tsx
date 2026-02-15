@@ -73,7 +73,7 @@ function Breadcrumb({
   }
 
   return (
-    <p className="mb-2">
+    <p className="tablet:mb-1">
       <a
         className={`
           relative inline-block font-sans text-sm/relaxed font-bold
@@ -102,9 +102,10 @@ function Deck({
   return (
     <p
       className={`
-        mt-1 font-sans text-base font-semibold text-white/90
-        mix-blend-hard-light [text-shadow:1px_1px_2px_black]
-        laptop:my-2 laptop:text-xl
+        text-base font-normal text-white/90 mix-blend-hard-light
+        [text-shadow:1px_1px_2px_black]
+        tablet:mt-1
+        laptop:text-xl
         ${center ? `text-center` : ""}
       `}
     >

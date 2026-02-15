@@ -530,7 +530,7 @@
             <div
               class="z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:size-full after:bg-(image:--hero-gradient)"
             >
-              <p class="mb-2">
+              <p class="tablet:mb-1">
                 <a
                   class="relative inline-block font-sans text-sm/relaxed font-bold tracking-wide text-white/85 uppercase transition-all duration-500 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:text-accent hover:after:scale-x-100"
                   href="/cast-and-crew/"
@@ -544,14 +544,14 @@
                 John Wayne
               </h1>
               <p
-                class="mt-1 font-sans text-base font-semibold text-white/90 mix-blend-hard-light [text-shadow:1px_1px_2px_black] laptop:my-2 laptop:text-xl"
+                class="text-base font-normal text-white/90 mix-blend-hard-light [text-shadow:1px_1px_2px_black] tablet:mt-1 laptop:text-xl"
               >
                 Performer and director with 89 reviewed and 57 watchlist titles.
               </p>
             </div>
           </header>
           <astro-island
-            uid="EubwJ"
+            uid="C1FdQ"
             prefix="r1"
             component-url="~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles"
             component-export="CastAndCrewMemberTitles"
@@ -572,7 +572,7 @@
                   class="sticky top-[calc(0px+var(--scroll-offset,0px))] z-15 scroll-mt-[calc(0px+var(--scroll-offset,0px))] border-default bg-default text-xs tablet:col-span-full"
                 >
                   <div
-                    class="mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-5 px-container py-7 font-sans font-medium tracking-wide text-subtle uppercase tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7 tablet:py-10 tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto] desktop:grid-cols-[auto_auto_1fr_calc(33%-96px)_auto]"
+                    class="mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-5 px-container py-7 font-sans font-medium tracking-wide text-subtle uppercase tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7 tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto] desktop:grid-cols-[auto_auto_1fr_calc(33%-96px)_auto]"
                   >
                     <span class="text-nowrap"
                       ><span class="text-sm font-bold text-default">146</span
@@ -621,54 +621,68 @@
                       Filter
                     </button>
                   </div>
-                  <nav class="sticky top-0 z-nav-menu bg-inverse">
+                  <nav
+                    class="sticky top-0 z-nav-menu border-y border-y-slight bg-[#e3e2e2]"
+                  >
                     <div
                       class="mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x overflow-x-auto px-container text-md font-semibold tracking-wide laptop:justify-center"
                     >
                       <h3
-                        class="snap-start p-4 pr-2 font-sans text-base tracking-normal whitespace-nowrap text-grey"
+                        class="shrink-0 snap-start p-4 py-5 pl-container font-sans text-xs font-normal tracking-wide whitespace-nowrap text-subtle uppercase tablet:pl-0 laptop:pl-container desktop:pl-0"
                       >
                         Jump to:
                       </h3>
                       <ul class="contents">
-                        <li class="snap-start text-center font-sans text-white">
+                        <li
+                          class="snap-start text-center font-light text-default"
+                        >
                           <a
-                            class="block transform-gpu p-4 transition-all hover:scale-105 hover:bg-canvas hover:text-default"
+                            class="group/item block transform-gpu p-4 transition-all hover:text-accent"
                             href="#1920s"
                             >1920s</a
                           >
                         </li>
-                        <li class="snap-start text-center font-sans text-white">
+                        <li
+                          class="snap-start text-center font-light text-default"
+                        >
                           <a
-                            class="block transform-gpu p-4 transition-all hover:scale-105 hover:bg-canvas hover:text-default"
+                            class="group/item block transform-gpu p-4 transition-all hover:text-accent"
                             href="#1930s"
                             >1930s</a
                           >
                         </li>
-                        <li class="snap-start text-center font-sans text-white">
+                        <li
+                          class="snap-start text-center font-light text-default"
+                        >
                           <a
-                            class="block transform-gpu p-4 transition-all hover:scale-105 hover:bg-canvas hover:text-default"
+                            class="group/item block transform-gpu p-4 transition-all hover:text-accent"
                             href="#1940s"
                             >1940s</a
                           >
                         </li>
-                        <li class="snap-start text-center font-sans text-white">
+                        <li
+                          class="snap-start text-center font-light text-default"
+                        >
                           <a
-                            class="block transform-gpu p-4 transition-all hover:scale-105 hover:bg-canvas hover:text-default"
+                            class="group/item block transform-gpu p-4 transition-all hover:text-accent"
                             href="#1950s"
                             >1950s</a
                           >
                         </li>
-                        <li class="snap-start text-center font-sans text-white">
+                        <li
+                          class="snap-start text-center font-light text-default"
+                        >
                           <a
-                            class="block transform-gpu p-4 transition-all hover:scale-105 hover:bg-canvas hover:text-default"
+                            class="group/item block transform-gpu p-4 transition-all hover:text-accent"
                             href="#1960s"
                             >1960s</a
                           >
                         </li>
-                        <li class="snap-start text-center font-sans text-white">
+                        <li
+                          class="snap-start text-center font-light text-default"
+                        >
                           <a
-                            class="block transform-gpu p-4 transition-all hover:scale-105 hover:bg-canvas hover:text-default"
+                            class="group/item block transform-gpu p-4 transition-all hover:text-accent"
                             href="#1970s"
                             >1970s</a
                           >
@@ -681,7 +695,7 @@
                   class="mx-auto max-w-(--breakpoint-desktop) tablet:px-container"
                 >
                   <div
-                    class="mx-auto max-w-(--breakpoint-desktop) grow scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))] pb-10 [--filter-and-sort-container-scroll-offset:204px] tablet:[--filter-and-sort-container-scroll-offset:176px]"
+                    class="mx-auto max-w-(--breakpoint-desktop) grow scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))] pb-10 [--filter-and-sort-container-scroll-offset:204px] tablet:[--filter-and-sort-container-scroll-offset:152px]"
                     id="list"
                   >
                     <ol data-testid="grouped-review-card-list">
