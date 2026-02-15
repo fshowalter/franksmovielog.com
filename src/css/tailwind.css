@@ -25,13 +25,14 @@
   --background-color-footer: #2b292b;
   --background-color-inverse: light-dark(rgb(0 0 0 / 75%), #322f2f);
   --background-color-progress: light-dark(#14bd41, #379634);
+  --background-color-silver: light-dark(#e3e2e2, #312f2f);
   --background-color-stripe: light-dark(#fcfcfc, #3c393a);
   --background-color-subtle: light-dark(#f9f7f4, #3e3d3c);
   --background-color-white: #fff;
 
   --border-color-*: initial;
   --border-color-default: var(--color-border);
-  --border-color-slight: light-dark(#c2c1c1, rgb(255 255 255 / 5%));
+  --border-color-slight: light-dark(#c2c1c1, #2a2828);
 
   --color-*: initial;
   --color-accent: light-dark(#bf8a00, #bf8a00);

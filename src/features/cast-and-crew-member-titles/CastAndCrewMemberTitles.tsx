@@ -6,10 +6,11 @@ import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSo
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { ListItemWatchlistReason } from "~/components/list-item-watchlist-reason/ListItemWatchlistReason";
 import { PlaceholderCard } from "~/components/placeholder-card/PlaceholderCard";
-import { GroupedReviewCardList } from "~/components/review-card-list/GroupedReviewCardList";
-import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
+import {
+  ReviewCardList,
+  ReviewCardListImageConfig,
+} from "~/components/review-card-list/ReviewCardList";
 import { ReviewCard } from "~/components/review-card/ReviewCard";
-import { useGroupedValues } from "~/hooks/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
@@ -26,9 +27,7 @@ import {
   selectHasPendingFilters,
 } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
-import { CastAndCrewMemberTitlesSubNav } from "./CastAndCrewMemberTitlesSubNav";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
-import { groupCastAndCrewMemberTitles } from "./groupCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
 
 /**
@@ -90,12 +89,9 @@ export function CastAndCrewMemberTitles({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = useGroupedValues(
-    sortCastAndCrewMemberTitles,
-    filterCastAndCrewMemberTitles,
-    groupCastAndCrewMemberTitles,
-    state.values,
-    state.sort,
+  const sortedValues = sortCastAndCrewMemberTitles(state.values, state.sort);
+  const filteredValues = filterCastAndCrewMemberTitles(
+    sortedValues,
     state.activeFilterValues,
   );
 
@@ -146,65 +142,58 @@ export function CastAndCrewMemberTitles({
           ),
         sortOptions: <ReviewedTitleSortOptions />,
       }}
-      subNav={
-        <CastAndCrewMemberTitlesSubNav
-          groupedValues={groupedValues}
-          sortValue={state.sort}
-        />
-      }
-      totalCount={totalCount}
+      totalCount={filteredValues.length}
     >
-      <GroupedReviewCardList
-        groupedValues={groupedValues}
-        groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)] tablet:scroll-mt-[calc(24px_+_var(--filter-and-sort-container-scroll-offset,0px))]`}
-      >
-        {(value) => {
-          if (value.slug && value.grade && value.excerpt) {
+      <div className="pt-20">
+        <ReviewCardList>
+          {[...filteredValues].map((value) => {
+            if (value.slug && value.grade && value.excerpt) {
+              return (
+                <ReviewCard
+                  as="li"
+                  excerpt={value.excerpt}
+                  eyebrow={value.creditedAs.join(", ")}
+                  footer={
+                    <>
+                      <div className="mb-2 text-accent">
+                        {value.reviewDisplayDate}
+                      </div>
+                      {value.genres.join(", ")}
+                    </>
+                  }
+                  grade={value.grade}
+                  key={value.imdbId}
+                  releaseYear={value.releaseYear}
+                  slug={value.slug}
+                  stillImageConfig={ReviewCardListImageConfig}
+                  stillImageProps={value.stillImageProps}
+                  title={value.title}
+                />
+              );
+            }
             return (
-              <ReviewCard
+              <PlaceholderCard
                 as="li"
-                excerpt={value.excerpt}
-                eyebrow={value.creditedAs.join(", ")}
-                footer={
-                  <>
-                    <div className="mb-2 text-accent">
-                      {value.reviewDisplayDate}
-                    </div>
-                    {value.genres.join(", ")}
-                  </>
+                bodyText={
+                  <ListItemWatchlistReason
+                    collectionNames={value.watchlistCollectionNames}
+                    directorNames={value.watchlistDirectorNames}
+                    performerNames={value.watchlistPerformerNames}
+                    writerNames={value.watchlistWriterNames}
+                  />
                 }
-                grade={value.grade}
+                eyebrow={value.creditedAs.join(", ")}
+                footer={value.genres.join(", ")}
                 key={value.imdbId}
                 releaseYear={value.releaseYear}
-                slug={value.slug}
                 stillImageConfig={ReviewCardListImageConfig}
                 stillImageProps={value.stillImageProps}
                 title={value.title}
               />
             );
-          }
-          return (
-            <PlaceholderCard
-              as="li"
-              bodyText={
-                <ListItemWatchlistReason
-                  collectionNames={value.watchlistCollectionNames}
-                  directorNames={value.watchlistDirectorNames}
-                  performerNames={value.watchlistPerformerNames}
-                  writerNames={value.watchlistWriterNames}
-                />
-              }
-              eyebrow={value.creditedAs.join(", ")}
-              footer={value.genres.join(", ")}
-              key={value.imdbId}
-              releaseYear={value.releaseYear}
-              stillImageConfig={ReviewCardListImageConfig}
-              stillImageProps={value.stillImageProps}
-              title={value.title}
-            />
-          );
-        }}
-      </GroupedReviewCardList>
+          })}
+        </ReviewCardList>
+      </div>
     </FilterAndSortContainer>
   );
 }

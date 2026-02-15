@@ -30,6 +30,7 @@ export function ReviewCardList({
         laptop:gap-y-[3vw] laptop:[--card-width:31.33%]
         desktop:gap-y-14
       `}
+      data-testid="review-card-list"
     >
       {children}
     </ul>

@@ -7,3 +7,7 @@ import { screen } from "@testing-library/react";
 export function getGroupedReviewCardList() {
   return screen.getByTestId("grouped-review-card-list");
 }
+
+export function getReviewCardList() {
+  return screen.getByTestId("review-card-list");
+}
