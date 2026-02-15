@@ -4,8 +4,7 @@ import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
-import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
-import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { PosterList } from "~/components/poster-list/PosterList";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionTitlesSort } from "./sortCollectionTitles";
@@ -24,7 +23,6 @@ import {
 import { CollectionTitlesFilters } from "./CollectionTitlesFilters";
 import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
 import { filterCollectionTitles } from "./filterCollectionTitles";
-import { groupCollectionTitles } from "./groupCollectionTitles";
 import { sortCollectionTitles } from "./sortCollectionTitles";
 
 /**
@@ -83,12 +81,10 @@ export function CollectionTitles({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = useGroupedValues(
-    sortCollectionTitles,
-    filterCollectionTitles,
-    groupCollectionTitles,
-    state.values,
-    state.sort,
+  const sortedValues = sortCollectionTitles(state.values, state.sort);
+
+  const filteredValues = filterCollectionTitles(
+    sortedValues,
     state.activeFilterValues,
   );
 
@@ -138,17 +134,17 @@ export function CollectionTitles({
           dispatch(createSortAction(e.target.value as CollectionTitlesSort)),
         sortOptions: <ReviewedTitleSortOptions />,
       }}
-      totalCount={totalCount}
+      totalCount={filteredValues.length}
     >
-      <GroupedPosterList
-        groupedValues={groupedValues}
-        totalCount={totalCount}
-        visibleCount={totalCount}
-      >
-        {(value) => {
-          return <CollectionTitlesListItem key={value.imdbId} value={value} />;
-        }}
-      </GroupedPosterList>
+      <div className="tablet:pt-10">
+        <PosterList>
+          {[...filteredValues].map((value) => {
+            return (
+              <CollectionTitlesListItem key={value.imdbId} value={value} />
+            );
+          })}
+        </PosterList>
+      </div>
     </FilterAndSortContainer>
   );
 }

@@ -541,7 +541,7 @@
             </div>
           </header>
           <astro-island
-            uid="27V48Q"
+            uid="1fIqoa"
             prefix="r1"
             component-url="~/features/watchlist/Watchlist"
             component-export="Watchlist"
@@ -559,7 +559,7 @@
             >
               <div class="group/list-with-filters mx-auto bg-subtle">
                 <div
-                  class="sticky top-[calc(0px+var(--scroll-offset,0px))] z-15 scroll-mt-[calc(0px+var(--scroll-offset,0px))] border-default bg-default text-xs tablet:col-span-full border-b"
+                  class="sticky top-[calc(0px+var(--scroll-offset,0px))] z-15 scroll-mt-[calc(0px+var(--scroll-offset,0px))] border-b border-default bg-default text-xs tablet:col-span-full"
                 >
                   <div
                     class="mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto] items-baseline gap-y-5 px-container py-7 font-sans font-medium tracking-wide text-subtle uppercase tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7 tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto] desktop:grid-cols-[auto_auto_1fr_calc(33%-96px)_auto]"
@@ -616,11 +616,9 @@
                     </button>
                   </div>
                 </div>
-                <div
-                  class="mx-auto max-w-(--breakpoint-desktop) tablet:px-container"
-                >
+                <div class="flex flex-row-reverse">
                   <div
-                    class="mx-auto max-w-(--breakpoint-desktop) grow scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))] pb-10 [--filter-and-sort-container-scroll-offset:148px] tablet:[--filter-and-sort-container-scroll-offset:97px]"
+                    class="mx-auto max-w-(--breakpoint-desktop) grow scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))] pb-10 [--filter-and-sort-container-scroll-offset:148px] tablet:px-container tablet:[--filter-and-sort-container-scroll-offset:97px]"
                     id="list"
                   >
                     <div class="@container/list">
@@ -638,6 +636,7 @@
                               <div class="@container/poster-list">
                                 <ol
                                   class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px*2)+1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]"
+                                  data-testid="poster-list"
                                 >
                                   <li
                                     class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-transparent"
@@ -1501,6 +1500,7 @@
                               <div class="@container/poster-list">
                                 <ol
                                   class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px*2)+1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]"
+                                  data-testid="poster-list"
                                 >
                                   <li
                                     class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-transparent"
@@ -5559,6 +5559,7 @@
                               <div class="@container/poster-list">
                                 <ol
                                   class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px*2)+1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]"
+                                  data-testid="poster-list"
                                 >
                                   <li
                                     class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-transparent"

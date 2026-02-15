@@ -17,3 +17,11 @@ export async function clickShowMore(user: UserEvent) {
 export function getGroupedPosterList() {
   return screen.getByTestId("grouped-poster-list");
 }
+
+/**
+ * Test helper to get the poster list element.
+ * @returns Grouped poster list DOM element
+ */
+export function getPosterList() {
+  return screen.getByTestId("poster-list");
+}

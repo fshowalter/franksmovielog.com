@@ -11,22 +11,17 @@ export function SubNav({
 }): React.JSX.Element {
   return (
     <nav
-      className={`sticky top-0 z-nav-menu border-y border-y-slight bg-[#e3e2e2]`}
+      className={`
+        sticky top-[148px] z-nav-menu float-right scrollbar-hidden
+        h-[calc(100vh-148px)] overflow-y-auto bg-silver
+        tablet:top-24 tablet:h-[calc(100vh-96px)] tablet:px-4
+      `}
     >
-      <div
-        className={`
-          mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
-          overflow-x-auto px-container text-md font-semibold tracking-wide
-          laptop:justify-center
-        `}
-      >
+      <div className={`flex flex-col text-md font-semibold tracking-wide`}>
         <h3
           className={`
-            shrink-0 snap-start p-4 py-5 pl-container font-sans text-xs
-            font-normal tracking-wide whitespace-nowrap text-subtle uppercase
-            tablet:pl-0
-            laptop:pl-container
-            desktop:pl-0
+            sr-only shrink-0 snap-start px-4 py-4 font-sans text-xs font-normal
+            tracking-wide whitespace-nowrap text-subtle uppercase
           `}
         >
           Jump to:
@@ -56,13 +51,15 @@ export function SubNavLink({
     <li
       className={`
         snap-start text-center font-light
+        first-of-type:pt-6
+        last-of-type:pb-6
         ${linkFunc ? "text-default" : `text-grey`}
       `}
     >
       {linkFunc ? (
         <a
           className={`
-            group/item block transform-gpu p-4 transition-all
+            group/item block transform-gpu px-4 py-3 transition-all
             hover:text-accent
           `}
           href={linkFunc(value)}
@@ -70,14 +67,7 @@ export function SubNavLink({
           {value}
         </a>
       ) : (
-        <div
-          className={`
-            p-4
-            laptop:py-4
-          `}
-        >
-          {value}
-        </div>
+        <div className={`px-4 py-3`}>{value}</div>
       )}
     </li>
   );

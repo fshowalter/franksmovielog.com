@@ -30,6 +30,7 @@ export function PosterList({
           @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]
           ${className}
         `}
+        data-testid="poster-list"
       >
         {children}
       </ol>
