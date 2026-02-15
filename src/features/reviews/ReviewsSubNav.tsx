@@ -22,7 +22,7 @@ export function ReviewsSubNav({
   active: keyof typeof items;
 }): React.JSX.Element {
   return (
-    <nav className="bg-footer">
+    <nav className="border-t border-[#222] bg-footer">
       <ul
         className={`
           mx-auto flex scrollbar-hidden max-w-(--breakpoint-desktop) snap-x
