@@ -33,7 +33,7 @@ export function SideNav({
 }
 
 /**
- * Link component for navigation items in the SubNav.
+ * Link component for navigation items in the SideNav.
  * Displays as an active link if linkFunc is provided, otherwise as inactive text.
  * @param props - Component props
  * @param props.linkFunc - Optional function to generate href from value
@@ -60,7 +60,7 @@ export function SideNavLink({
         <a
           className={`
             group/item block transform-gpu px-4 py-3 transition-all
-            hover:text-accent
+            hover:scale-110 hover:text-emphasis
           `}
           href={linkFunc(value)}
         >

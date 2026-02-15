@@ -38,6 +38,7 @@
   --color-accent: light-dark(#bf8a00, #bf8a00);
   --color-border: light-dark(#e9e7e0, #484745);
   --color-default: light-dark(#252525, rgb(255 255 255 / 75%));
+  --color-emphasis: light-dark(#000, #fff);
   --color-grey: #b0b0b0;
   --color-inherit: inherit;
   --color-muted: light-dark(#4a4a4a, rgb(255 255 255 / 65%));
