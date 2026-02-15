@@ -144,7 +144,12 @@ export function CastAndCrewMemberTitles({
       }}
       totalCount={filteredValues.length}
     >
-      <div className="pt-20">
+      <div
+        className="
+          tablet:pt-10
+          laptop:pt-14
+        "
+      >
         <ReviewCardList>
           {[...filteredValues].map((value) => {
             if (value.slug && value.grade && value.excerpt) {

@@ -151,24 +151,19 @@ export function FilterAndSortContainer<T extends string>({
         </div>
         <div className="flex flex-row-reverse">
           {subNav && subNav}
+
           <div
             className={`
               mx-auto max-w-(--breakpoint-desktop) grow
+              scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))]
+              pb-10 [--filter-and-sort-container-scroll-offset:148px]
               tablet:px-container
+              tablet:[--filter-and-sort-container-scroll-offset:97px]
             `}
+            id="list"
+            ref={listRef}
           >
-            <div
-              className={`
-                mx-auto max-w-(--breakpoint-desktop) grow
-                scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))]
-                pb-10 [--filter-and-sort-container-scroll-offset:148px]
-                tablet:[--filter-and-sort-container-scroll-offset:97px]
-              `}
-              id="list"
-              ref={listRef}
-            >
-              {children}
-            </div>
+            {children}
           </div>
 
           {/* Backdrop for filters */}

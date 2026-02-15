@@ -555,7 +555,7 @@
             </div>
           </header>
           <astro-island
-            uid="zSKfW"
+            uid="Lfw6a"
             prefix="r1"
             component-url="~/features/collection-titles/CollectionTitles"
             component-export="CollectionTitles"
@@ -628,373 +628,300 @@
                 </div>
                 <div class="flex flex-row-reverse">
                   <div
-                    class="mx-auto max-w-(--breakpoint-desktop) grow tablet:px-container"
+                    class="mx-auto max-w-(--breakpoint-desktop) grow scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))] pb-10 [--filter-and-sort-container-scroll-offset:148px] tablet:px-container tablet:[--filter-and-sort-container-scroll-offset:97px]"
+                    id="list"
                   >
-                    <div
-                      class="mx-auto max-w-(--breakpoint-desktop) grow scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))] pb-10 [--filter-and-sort-container-scroll-offset:148px] tablet:[--filter-and-sort-container-scroll-offset:97px]"
-                      id="list"
-                    >
-                      <ol data-testid="grouped-poster-list">
-                        <li class="block first-of-type:pt-4" id="2006">
-                          <div class="pt-0 text-md">
+                    <div class="tablet:pt-10">
+                      <div class="@container/poster-list">
+                        <ol
+                          class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px*2)+1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]"
+                          data-testid="poster-list"
+                        >
+                          <li
+                            class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-default tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                          >
                             <div
-                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
+                              class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                             >
-                              2006
+                              <img
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
+                                "
+                                alt=""
+                                height="375"
+                                sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                                width="250"
+                                class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                                decoding="async"
+                                loading="lazy"
+                              />
                             </div>
-                          </div>
-                          <div class="bg-subtle">
-                            <div class="tablet:-mx-6">
-                              <div class="@container/poster-list">
-                                <ol
-                                  class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px*2)+1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]"
+                            <div
+                              class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                            >
+                              <a
+                                class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                href="/reviews/hatchet-2006/"
+                                >Hatchet<!-- -->  <span
+                                  class="text-xxs leading-none font-light text-subtle"
+                                  >2006</span
+                                ></a
+                              ><picture
+                                ><source
+                                  media="(prefers-color-scheme: dark)"
+                                  srcset="/svg/3-stars-dark.svg" />
+                                <img
+                                  alt="C: 3 stars (out of 5)"
+                                  class="-mt-0.5 pb-[3px]"
+                                  height="15"
+                                  src="/svg/3-stars.svg"
+                                  width="75"
+                              /></picture>
+                              <div
+                                class="font-sans text-[13px]/4 tracking-prose text-subtle"
+                              >
+                                Sep 19, 2020
+                              </div>
+                              <div
+                                class="font-sans text-xs/4 tracking-prose text-subtle"
+                              >
+                                <span>Comedy</span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Horror</span
+                                  ></span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Thriller</span
+                                  ></span
                                 >
-                                  <li
-                                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-default tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                                  >
-                                    <div
-                                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                    >
-                                      <img
-                                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                        srcset="
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-2006.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                        "
-                                        alt=""
-                                        height="375"
-                                        sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                        width="250"
-                                        class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                        decoding="async"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                    <div
-                                      class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                    >
-                                      <a
-                                        class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
-                                        href="/reviews/hatchet-2006/"
-                                        >Hatchet<!-- -->  <span
-                                          class="text-xxs leading-none font-light text-subtle"
-                                          >2006</span
-                                        ></a
-                                      ><picture
-                                        ><source
-                                          media="(prefers-color-scheme: dark)"
-                                          srcset="/svg/3-stars-dark.svg" />
-                                        <img
-                                          alt="C: 3 stars (out of 5)"
-                                          class="-mt-0.5 pb-[3px]"
-                                          height="15"
-                                          src="/svg/3-stars.svg"
-                                          width="75"
-                                      /></picture>
-                                      <div
-                                        class="font-sans text-[13px]/4 tracking-prose text-subtle"
-                                      >
-                                        Sep 19, 2020
-                                      </div>
-                                      <div
-                                        class="font-sans text-xs/4 tracking-prose text-subtle"
-                                      >
-                                        <span>Comedy</span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Horror</span
-                                          ></span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Thriller</span
-                                          ></span
-                                        >
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ol>
                               </div>
                             </div>
-                          </div>
-                        </li>
-                        <li class="block first-of-type:pt-4" id="2010">
-                          <div class="pt-0 text-md">
+                          </li>
+                          <li
+                            class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-default tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                          >
                             <div
-                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
+                              class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                             >
-                              2010
+                              <img
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
+                                "
+                                alt=""
+                                height="375"
+                                sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                                width="250"
+                                class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                                decoding="async"
+                                loading="lazy"
+                              />
                             </div>
-                          </div>
-                          <div class="bg-subtle">
-                            <div class="tablet:-mx-6">
-                              <div class="@container/poster-list">
-                                <ol
-                                  class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px*2)+1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]"
+                            <div
+                              class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                            >
+                              <a
+                                class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                href="/reviews/hatchet-ii-2010/"
+                                >Hatchet II<!-- -->  <span
+                                  class="text-xxs leading-none font-light text-subtle"
+                                  >2010</span
+                                ></a
+                              ><picture
+                                ><source
+                                  media="(prefers-color-scheme: dark)"
+                                  srcset="/svg/2-half-stars-dark.svg" />
+                                <img
+                                  alt="C-: 2.5 stars (out of 5)"
+                                  class="-mt-0.5 pb-[3px]"
+                                  height="15"
+                                  src="/svg/2-half-stars.svg"
+                                  width="75"
+                              /></picture>
+                              <div
+                                class="font-sans text-[13px]/4 tracking-prose text-subtle"
+                              >
+                                Oct 15, 2020
+                              </div>
+                              <div
+                                class="font-sans text-xs/4 tracking-prose text-subtle"
+                              >
+                                <span>Action</span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Comedy</span
+                                  ></span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Horror</span
+                                  ></span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Thriller</span
+                                  ></span
                                 >
-                                  <li
-                                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-default tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                                  >
-                                    <div
-                                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                    >
-                                      <img
-                                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                        srcset="
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-ii-2010.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                        "
-                                        alt=""
-                                        height="375"
-                                        sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                        width="250"
-                                        class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                        decoding="async"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                    <div
-                                      class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                    >
-                                      <a
-                                        class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
-                                        href="/reviews/hatchet-ii-2010/"
-                                        >Hatchet II<!-- -->  <span
-                                          class="text-xxs leading-none font-light text-subtle"
-                                          >2010</span
-                                        ></a
-                                      ><picture
-                                        ><source
-                                          media="(prefers-color-scheme: dark)"
-                                          srcset="/svg/2-half-stars-dark.svg" />
-                                        <img
-                                          alt="C-: 2.5 stars (out of 5)"
-                                          class="-mt-0.5 pb-[3px]"
-                                          height="15"
-                                          src="/svg/2-half-stars.svg"
-                                          width="75"
-                                      /></picture>
-                                      <div
-                                        class="font-sans text-[13px]/4 tracking-prose text-subtle"
-                                      >
-                                        Oct 15, 2020
-                                      </div>
-                                      <div
-                                        class="font-sans text-xs/4 tracking-prose text-subtle"
-                                      >
-                                        <span>Action</span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Comedy</span
-                                          ></span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Horror</span
-                                          ></span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Thriller</span
-                                          ></span
-                                        >
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ol>
                               </div>
                             </div>
-                          </div>
-                        </li>
-                        <li class="block first-of-type:pt-4" id="2013">
-                          <div class="pt-0 text-md">
+                          </li>
+                          <li
+                            class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-default tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                          >
                             <div
-                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
+                              class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                             >
-                              2013
+                              <img
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
+                                "
+                                alt=""
+                                height="375"
+                                sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                                width="250"
+                                class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                                decoding="async"
+                                loading="lazy"
+                              />
                             </div>
-                          </div>
-                          <div class="bg-subtle">
-                            <div class="tablet:-mx-6">
-                              <div class="@container/poster-list">
-                                <ol
-                                  class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px*2)+1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]"
+                            <div
+                              class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                            >
+                              <a
+                                class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                href="/reviews/hatchet-iii-2013/"
+                                >Hatchet III<!-- -->  <span
+                                  class="text-xxs leading-none font-light text-subtle"
+                                  >2013</span
+                                ></a
+                              ><picture
+                                ><source
+                                  media="(prefers-color-scheme: dark)"
+                                  srcset="/svg/3-stars-dark.svg" />
+                                <img
+                                  alt="C+: 3 stars (out of 5)"
+                                  class="-mt-0.5 pb-[3px]"
+                                  height="15"
+                                  src="/svg/3-stars.svg"
+                                  width="75"
+                              /></picture>
+                              <div
+                                class="font-sans text-[13px]/4 tracking-prose text-subtle"
+                              >
+                                Nov 19, 2020
+                              </div>
+                              <div
+                                class="font-sans text-xs/4 tracking-prose text-subtle"
+                              >
+                                <span>Action</span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Comedy</span
+                                  ></span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Horror</span
+                                  ></span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Thriller</span
+                                  ></span
                                 >
-                                  <li
-                                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-default tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                                  >
-                                    <div
-                                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                    >
-                                      <img
-                                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                        srcset="
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fhatchet-iii-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                        "
-                                        alt=""
-                                        height="375"
-                                        sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                        width="250"
-                                        class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                        decoding="async"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                    <div
-                                      class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                    >
-                                      <a
-                                        class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
-                                        href="/reviews/hatchet-iii-2013/"
-                                        >Hatchet III<!-- -->  <span
-                                          class="text-xxs leading-none font-light text-subtle"
-                                          >2013</span
-                                        ></a
-                                      ><picture
-                                        ><source
-                                          media="(prefers-color-scheme: dark)"
-                                          srcset="/svg/3-stars-dark.svg" />
-                                        <img
-                                          alt="C+: 3 stars (out of 5)"
-                                          class="-mt-0.5 pb-[3px]"
-                                          height="15"
-                                          src="/svg/3-stars.svg"
-                                          width="75"
-                                      /></picture>
-                                      <div
-                                        class="font-sans text-[13px]/4 tracking-prose text-subtle"
-                                      >
-                                        Nov 19, 2020
-                                      </div>
-                                      <div
-                                        class="font-sans text-xs/4 tracking-prose text-subtle"
-                                      >
-                                        <span>Action</span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Comedy</span
-                                          ></span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Horror</span
-                                          ></span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Thriller</span
-                                          ></span
-                                        >
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ol>
                               </div>
                             </div>
-                          </div>
-                        </li>
-                        <li class="block first-of-type:pt-4" id="2017">
-                          <div class="pt-0 text-md">
+                          </li>
+                          <li
+                            class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-default tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                          >
                             <div
-                              class="max-w-(--breakpoint-desktop) bg-subtle px-container py-4 text-xl/8 tablet:px-1"
+                              class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
                             >
-                              2017
+                              <img
+                                src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
+                                  /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
+                                "
+                                alt=""
+                                height="375"
+                                sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
+                                width="250"
+                                class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                                decoding="async"
+                                loading="lazy"
+                              />
                             </div>
-                          </div>
-                          <div class="bg-subtle">
-                            <div class="tablet:-mx-6">
-                              <div class="@container/poster-list">
-                                <ol
-                                  class="[--poster-list-item-width:50%] tablet:flex tablet:flex-wrap @min-[calc((250px*2)+1px)]/poster-list:[--poster-list-item-width:33.33%] @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%] @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%] @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]"
+                            <div
+                              class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                            >
+                              <a
+                                class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
+                                href="/reviews/victor-crowley-2017/"
+                                >Victor Crowley<!-- -->  <span
+                                  class="text-xxs leading-none font-light text-subtle"
+                                  >2017</span
+                                ></a
+                              ><picture
+                                ><source
+                                  media="(prefers-color-scheme: dark)"
+                                  srcset="/svg/2-stars-dark.svg" />
+                                <img
+                                  alt="D+: 2 stars (out of 5)"
+                                  class="-mt-0.5 pb-[3px]"
+                                  height="15"
+                                  src="/svg/2-stars.svg"
+                                  width="75"
+                              /></picture>
+                              <div
+                                class="font-sans text-[13px]/4 tracking-prose text-subtle"
+                              >
+                                Jan 16, 2021
+                              </div>
+                              <div
+                                class="font-sans text-xs/4 tracking-prose text-subtle"
+                              >
+                                <span>Action</span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Comedy</span
+                                  ></span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Horror</span
+                                  ></span
+                                ><span
+                                  >,
+                                  <span class="whitespace-nowrap"
+                                    >Thriller</span
+                                  ></span
                                 >
-                                  <li
-                                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform duration-500 tablet:w-(--poster-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 bg-default tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                                  >
-                                    <div
-                                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                                    >
-                                      <img
-                                        src="/_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif"
-                                        srcset="
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=63&amp;h=95&amp;q=80&amp;f=avif    63w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=125&amp;h=188&amp;q=80&amp;f=avif 125w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=250&amp;h=375&amp;q=80&amp;f=avif 250w,
-                                          /_image/?href=%2Fcontent%2Fassets%2Fposters%2Fvictor-crowley-2017.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=500&amp;h=750&amp;q=80&amp;f=avif 500w
-                                        "
-                                        alt=""
-                                        height="375"
-                                        sizes="(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)"
-                                        width="250"
-                                        class="aspect-poster w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                                        decoding="async"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                    <div
-                                      class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                                    >
-                                      <a
-                                        class="text-base/5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-sticky after:size-full after:opacity-0 hover:text-accent"
-                                        href="/reviews/victor-crowley-2017/"
-                                        >Victor Crowley<!-- -->  <span
-                                          class="text-xxs leading-none font-light text-subtle"
-                                          >2017</span
-                                        ></a
-                                      ><picture
-                                        ><source
-                                          media="(prefers-color-scheme: dark)"
-                                          srcset="/svg/2-stars-dark.svg" />
-                                        <img
-                                          alt="D+: 2 stars (out of 5)"
-                                          class="-mt-0.5 pb-[3px]"
-                                          height="15"
-                                          src="/svg/2-stars.svg"
-                                          width="75"
-                                      /></picture>
-                                      <div
-                                        class="font-sans text-[13px]/4 tracking-prose text-subtle"
-                                      >
-                                        Jan 16, 2021
-                                      </div>
-                                      <div
-                                        class="font-sans text-xs/4 tracking-prose text-subtle"
-                                      >
-                                        <span>Action</span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Comedy</span
-                                          ></span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Horror</span
-                                          ></span
-                                        ><span
-                                          >,
-                                          <span class="whitespace-nowrap"
-                                            >Thriller</span
-                                          ></span
-                                        >
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ol>
                               </div>
                             </div>
-                          </div>
-                        </li>
-                      </ol>
+                          </li>
+                        </ol>
+                      </div>
                     </div>
                   </div>
                   <div

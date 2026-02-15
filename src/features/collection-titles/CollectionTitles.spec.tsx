@@ -17,7 +17,7 @@ import {
   fillTitleFilter,
   getTitleFilter,
 } from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
-import { getGroupedPosterList } from "~/components/poster-list/PosterList.testHelper";
+import { getPosterList } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type {
@@ -100,7 +100,7 @@ describe("CollectionTitles", () => {
       await fillTitleFilter(user, "Goldfinger");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Goldfinger")).toBeInTheDocument();
       expect(within(posterList).queryByText("Dr. No")).not.toBeInTheDocument();
       expect(
@@ -131,7 +131,7 @@ describe("CollectionTitles", () => {
       await clickGenresFilterOption(user, "Thriller");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Goldfinger"),
@@ -158,7 +158,7 @@ describe("CollectionTitles", () => {
       await fillReleaseYearFilter(user, "1962", "1965");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(within(posterList).getByText("Goldfinger")).toBeInTheDocument();
       expect(
@@ -180,7 +180,7 @@ describe("CollectionTitles", () => {
       await fillReviewYearFilter(user, "2022", "2023");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(within(posterList).getByText("Goldfinger")).toBeInTheDocument();
       expect(
@@ -210,7 +210,7 @@ describe("CollectionTitles", () => {
       await fillGradeFilter(user, "B-", "B+");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Die Another Day"),
@@ -248,7 +248,7 @@ describe("CollectionTitles", () => {
       await clickReviewedStatusFilterOption(user, "Reviewed");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(within(posterList).getByText("Goldfinger")).toBeInTheDocument();
       expect(
@@ -284,7 +284,7 @@ describe("CollectionTitles", () => {
       await clickReviewedStatusFilterOption(user, "Not Reviewed");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).queryByText("Dr. No")).not.toBeInTheDocument();
       expect(within(posterList).getByText("Thunderball")).toBeInTheDocument();
       expect(
@@ -309,7 +309,7 @@ describe("CollectionTitles", () => {
 
       await clickSortOption(user, "Title (A → Z)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const drNoIndex = allText.indexOf("Dr. No");
       const moonrakerIndex = allText.indexOf("Moonraker");
@@ -334,7 +334,7 @@ describe("CollectionTitles", () => {
 
       await clickSortOption(user, "Title (Z → A)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const spyIndex = allText.indexOf("The Spy Who Loved Me");
       const moonrakerIndex = allText.indexOf("Moonraker");
@@ -368,7 +368,7 @@ describe("CollectionTitles", () => {
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const drNoIndex = allText.indexOf("Dr. No");
       const livingIndex = allText.indexOf("The Living Daylights");
@@ -402,7 +402,7 @@ describe("CollectionTitles", () => {
 
       await clickSortOption(user, "Release Date (Newest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const goldIndex = allText.indexOf("GoldenEye");
       const livingIndex = allText.indexOf("The Living Daylights");
@@ -432,7 +432,7 @@ describe("CollectionTitles", () => {
 
       await clickSortOption(user, "Grade (Best First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const goldfingerIndex = allText.indexOf("Goldfinger");
       const drNoIndex = allText.indexOf("Dr. No");
@@ -462,7 +462,7 @@ describe("CollectionTitles", () => {
 
       await clickSortOption(user, "Grade (Worst First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const dieIndex = allText.indexOf("Die Another Day");
       const drNoIndex = allText.indexOf("Dr. No");
@@ -484,7 +484,7 @@ describe("CollectionTitles", () => {
 
       await clickSortOption(user, "Review Date (Oldest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const drNoIndex = allText.indexOf("Dr. No");
       const skyfallIndex = allText.indexOf("Skyfall");
@@ -506,7 +506,7 @@ describe("CollectionTitles", () => {
 
       await clickSortOption(user, "Review Date (Newest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const casinoIndex = allText.indexOf("Casino Royale");
       const skyfallIndex = allText.indexOf("Skyfall");
@@ -532,7 +532,7 @@ describe("CollectionTitles", () => {
       await clickGenresFilterOption(user, "Action");
       await clickViewResults(user);
 
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Goldfinger"),
@@ -545,7 +545,7 @@ describe("CollectionTitles", () => {
 
       await clickViewResults(user);
 
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(within(posterList).getByText("Goldfinger")).toBeInTheDocument();
     });
@@ -565,7 +565,7 @@ describe("CollectionTitles", () => {
       await fillTitleFilter(user, "Dr. No");
       await clickViewResults(user);
 
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Goldfinger"),
@@ -575,7 +575,7 @@ describe("CollectionTitles", () => {
       await fillTitleFilter(user, "Different");
       await clickCloseFilters(user);
 
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("Dr. No")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Goldfinger"),
