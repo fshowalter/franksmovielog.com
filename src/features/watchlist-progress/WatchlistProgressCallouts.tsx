@@ -149,7 +149,7 @@ function ProgressRing({
         d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
-        fill={"none" as const}
+        fill={"var(--background-color-default" as const}
         stroke="var(--background-color-canvas)"
         strokeWidth={1.8}
       />
