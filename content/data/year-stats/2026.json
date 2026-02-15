@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 14,
-  "viewingCount": 26,
-  "titleCount": 26,
+  "newTitleCount": 15,
+  "viewingCount": 27,
+  "titleCount": 27,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 10
+      "count": 11
     },
     {
       "name": "4k UHD Blu-ray",
@@ -57,7 +57,7 @@
     },
     {
       "name": "1980s",
-      "count": 4
+      "count": 5
     },
     {
       "name": "1990s",
@@ -190,6 +190,75 @@
           "viewingDate": "2026-02-08",
           "viewingSequence": 3012,
           "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Wei-Ho Tu",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "imdbId": "tt0085840",
+          "title": "Mercenaries from Hong Kong",
+          "sortTitle": "mercenaries-from-hong-kong-1982",
+          "releaseYear": "1982",
+          "releaseDate": "1982-12-22",
+          "genres": [
+            "Action",
+            "Drama"
+          ],
+          "slug": "mercenaries-from-hong-kong-1982",
+          "grade": "C+",
+          "gradeValue": 10,
+          "reviewDate": "2026-02-01",
+          "reviewSequence": 3005,
+          "viewingDate": "2026-02-01",
+          "viewingSequence": 3005,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0067009",
+          "title": "One-Armed Boxer",
+          "sortTitle": "one-armed-boxer-1972",
+          "releaseYear": "1972",
+          "releaseDate": "1972-08-02",
+          "genres": [
+            "Action",
+            "Drama",
+            "Fantasy"
+          ],
+          "slug": "one-armed-boxer-1972",
+          "grade": "B+",
+          "gradeValue": 13,
+          "reviewDate": "2026-02-04",
+          "reviewSequence": 3007,
+          "viewingDate": "2026-02-04",
+          "viewingSequence": 3007,
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0085163",
+          "title": "Men from the Gutter",
+          "sortTitle": "men-from-the-gutter-1983",
+          "releaseYear": "1983",
+          "releaseDate": "1983-10-14",
+          "genres": [
+            "Action",
+            "Drama",
+            "Thriller"
+          ],
+          "slug": "men-from-the-gutter-1983",
+          "grade": "B+",
+          "gradeValue": 13,
+          "reviewDate": "2026-02-12",
+          "reviewSequence": 3015,
+          "viewingDate": "2026-02-12",
+          "viewingSequence": 3015,
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -574,53 +643,6 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Fei Ai",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0076519",
-          "title": "Jade Tiger",
-          "sortTitle": "jade-tiger-1977",
-          "releaseYear": "1977",
-          "releaseDate": "1977-05-07",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": "jade-tiger-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2026-01-27",
-          "reviewSequence": 3000,
-          "viewingDate": "2026-01-27",
-          "viewingSequence": 3000,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0085840",
-          "title": "Mercenaries from Hong Kong",
-          "sortTitle": "mercenaries-from-hong-kong-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-12-22",
-          "genres": [
-            "Action",
-            "Drama"
-          ],
-          "slug": "mercenaries-from-hong-kong-1982",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2026-02-01",
-          "reviewSequence": 3005,
-          "viewingDate": "2026-02-01",
-          "viewingSequence": 3005,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
@@ -674,5 +696,5 @@
       ]
     }
   ],
-  "reviewCount": 26
+  "reviewCount": 27
 }
