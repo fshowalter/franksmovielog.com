@@ -10,7 +10,7 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
-import { AlphabetSubNav } from "./AlphabetSubNav";
+import { AlphabetSideNav } from "./AlphabetSideNav";
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
   createApplyFiltersAction,
@@ -123,15 +123,15 @@ export function CastAndCrew({
         dispatch(createResetFiltersAction());
       }}
       pendingFilteredCount={pendingFilteredCount}
+      sideNav={
+        <AlphabetSideNav groupedValues={groupedValues} sortValue={state.sort} />
+      }
       sortProps={{
         currentSortValue: state.sort,
         onSortChange: (e) =>
           dispatch(createSortAction(e.target.value as CastAndCrewSort)),
         sortOptions: <CollectionSortOptions />,
       }}
-      subNav={
-        <AlphabetSubNav groupedValues={groupedValues} sortValue={state.sort} />
-      }
       totalCount={totalCount}
     >
       <GroupedAvatarList

@@ -4,7 +4,7 @@
  * @param props.children - SubNavLink components to display
  * @returns Sticky navigation bar with jump links
  */
-export function SubNav({
+export function SideNav({
   children,
 }: {
   children: React.ReactNode;
@@ -12,8 +12,8 @@ export function SubNav({
   return (
     <nav
       className={`
-        sticky top-[148px] z-nav-menu float-right scrollbar-hidden
-        h-[calc(100vh-148px)] overflow-y-auto bg-silver
+        sticky top-[148px] z-nav-menu scrollbar-hidden h-[calc(100vh-148px)]
+        overflow-y-auto bg-sidenav
         tablet:top-24 tablet:h-[calc(100vh-96px)] tablet:px-4
       `}
     >
@@ -40,7 +40,7 @@ export function SubNav({
  * @param props.value - Display text and link parameter
  * @returns Navigation link or text element
  */
-export function SubNavLink({
+export function SideNavLink({
   linkFunc,
   value,
 }: {

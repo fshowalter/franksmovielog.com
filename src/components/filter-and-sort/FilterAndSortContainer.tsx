@@ -27,8 +27,8 @@ type Props<T extends string> = {
   onRemoveFilter?: (id: string) => void;
   onResetFilters: () => void;
   pendingFilteredCount: number;
+  sideNav?: React.ReactNode;
   sortProps: SortProps<T>;
-  subNav?: React.ReactNode;
   topNav?: React.ReactNode;
   totalCount: number;
 };
@@ -52,8 +52,8 @@ export function FilterAndSortContainer<T extends string>({
   onRemoveFilter,
   onResetFilters,
   pendingFilteredCount,
+  sideNav,
   sortProps,
-  subNav,
   topNav,
   totalCount,
 }: Props<T>): React.JSX.Element {
@@ -150,7 +150,7 @@ export function FilterAndSortContainer<T extends string>({
           />
         </div>
         <div className="flex flex-row-reverse">
-          {subNav && subNav}
+          {sideNav && sideNav}
 
           <div
             className={`
