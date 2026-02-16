@@ -74,7 +74,7 @@ describe("buildAppliedFilterChips", () => {
       ]);
     });
 
-    it("handles genres with mixed case", () => {
+    it("handles genres with hyphens (Sci-Fi)", () => {
       const filterValues: ReviewsFiltersValues = {
         genres: ["Sci-Fi"],
       };
@@ -86,6 +86,22 @@ describe("buildAppliedFilterChips", () => {
           category: "Genre",
           id: "genre-sci-fi",
           label: "Sci-Fi",
+        },
+      ]);
+    });
+
+    it("handles genres with hyphens (Film-Noir)", () => {
+      const filterValues: ReviewsFiltersValues = {
+        genres: ["Film-Noir"],
+      };
+
+      const result = buildAppliedFilterChips(filterValues);
+
+      expect(result).toEqual([
+        {
+          category: "Genre",
+          id: "genre-film-noir",
+          label: "Film-Noir",
         },
       ]);
     });

@@ -235,32 +235,30 @@ describe("CheckboxListField", () => {
   });
 
   describe("selection ordering", () => {
-    it("moves checked items to top of list", async ({ expect }) => {
-      const user = userEvent.setup();
+    it("moves checked items to top of list when show more is needed", ({
+      expect,
+    }) => {
       const props = createDefaultProps({
-        showMoreThreshold: 10, // Show all
+        defaultValues: ["horror"],
+        showMoreThreshold: 3, // Show more needed (7 options > 3 threshold)
       });
       render(<CheckboxListField {...props} />);
 
-      // Initially alphabetical order
-      let checkboxes = screen.getAllByRole("checkbox");
-      expect((checkboxes[0] as HTMLInputElement).value).toBe("action");
-      expect((checkboxes[1] as HTMLInputElement).value).toBe("comedy");
-
-      // Select Horror (4th item alphabetically)
-      await user.click(getCheckboxByLabel("Horror"));
-
-      // Horror should now be first
-      checkboxes = screen.getAllByRole("checkbox");
+      // Horror should be first (selected) when show more hasn't been clicked
+      const checkboxes = screen.getAllByRole("checkbox");
       expect((checkboxes[0] as HTMLInputElement).value).toBe("horror");
+      expect((checkboxes[0] as HTMLInputElement).checked).toBe(true);
+      // Followed by alphabetical unselected items
+      expect((checkboxes[1] as HTMLInputElement).value).toBe("action");
+      expect((checkboxes[2] as HTMLInputElement).value).toBe("comedy");
     });
 
-    it("shows selected items in reverse selection order", async ({
+    it("shows selected items in reverse selection order when show more is needed", async ({
       expect,
     }) => {
       const user = userEvent.setup();
       const props = createDefaultProps({
-        showMoreThreshold: 10,
+        showMoreThreshold: 3, // Show more needed (7 options > 3 threshold)
       });
       render(<CheckboxListField {...props} />);
 
@@ -270,33 +268,105 @@ describe("CheckboxListField", () => {
       await user.click(getCheckboxByLabel("Drama"));
 
       const checkboxes = screen.getAllByRole("checkbox");
-      // Should be in reverse selection order (newest first)
+      // Should be in reverse selection order (newest first) when show more hasn't been clicked
       expect((checkboxes[0] as HTMLInputElement).value).toBe("drama");
       expect((checkboxes[1] as HTMLInputElement).value).toBe("comedy");
       expect((checkboxes[2] as HTMLInputElement).value).toBe("action");
     });
 
-    it("returns unchecked items to alphabetical order", async ({ expect }) => {
+    it("returns unchecked items to alphabetical order when show more is needed", async ({
+      expect,
+    }) => {
       const user = userEvent.setup();
       const props = createDefaultProps({
         defaultValues: ["horror"],
-        showMoreThreshold: 10,
+        showMoreThreshold: 3, // Show more needed (7 options > 3 threshold)
       });
       render(<CheckboxListField {...props} />);
 
-      // Horror should be first (selected)
+      // Horror should be first (selected) when show more hasn't been clicked
       let checkboxes = screen.getAllByRole("checkbox");
       expect((checkboxes[0] as HTMLInputElement).value).toBe("horror");
 
       // Uncheck Horror
       await user.click(getCheckboxByLabel("Horror"));
 
-      // Should return to alphabetical position (4th)
+      // Should return to alphabetical position - only first 3 visible now (no selections)
       checkboxes = screen.getAllByRole("checkbox");
+      expect(checkboxes).toHaveLength(3);
+      expect((checkboxes[0] as HTMLInputElement).value).toBe("action");
+      expect((checkboxes[1] as HTMLInputElement).value).toBe("comedy");
+      expect((checkboxes[2] as HTMLInputElement).value).toBe("drama");
+      // Horror is no longer visible (it's 4th alphabetically, but only 3 shown)
+      expect(queryCheckboxByLabel("Horror")).not.toBeInTheDocument();
+    });
+
+    it("maintains alphabetical order after show more is clicked", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const props = createDefaultProps({
+        showMoreThreshold: 3, // Show more needed (7 options > 3 threshold)
+      });
+      render(<CheckboxListField {...props} />);
+
+      // Click "Show more" to expand the list
+      const showMoreButton = screen.getByRole("button", { name: /Show more/i });
+      await user.click(showMoreButton);
+
+      // Now select Horror (4th item alphabetically)
+      await user.click(getCheckboxByLabel("Horror"));
+
+      // Should remain in alphabetical order (not moved to top)
+      const checkboxes = screen.getAllByRole("checkbox");
       expect((checkboxes[0] as HTMLInputElement).value).toBe("action");
       expect((checkboxes[1] as HTMLInputElement).value).toBe("comedy");
       expect((checkboxes[2] as HTMLInputElement).value).toBe("drama");
       expect((checkboxes[3] as HTMLInputElement).value).toBe("horror");
+      expect((checkboxes[3] as HTMLInputElement).checked).toBe(true);
+    });
+
+    it("does not re-sort when selections change after show more is clicked", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const props = createDefaultProps({
+        defaultValues: ["horror"],
+        showMoreThreshold: 3, // Show more needed (7 options > 3 threshold)
+      });
+      render(<CheckboxListField {...props} />);
+
+      // Horror should be first (selected) initially
+      let checkboxes = screen.getAllByRole("checkbox");
+      expect((checkboxes[0] as HTMLInputElement).value).toBe("horror");
+
+      // Click "Show more" to expand the list
+      const showMoreButton = screen.getByRole("button", { name: /Show more/i });
+      await user.click(showMoreButton);
+
+      // After show more, should be in alphabetical order
+      checkboxes = screen.getAllByRole("checkbox");
+      expect((checkboxes[0] as HTMLInputElement).value).toBe("action");
+      expect((checkboxes[3] as HTMLInputElement).value).toBe("horror");
+      expect((checkboxes[3] as HTMLInputElement).checked).toBe(true);
+
+      // Uncheck Horror
+      await user.click(getCheckboxByLabel("Horror"));
+
+      // Should remain in alphabetical order (not re-sort)
+      checkboxes = screen.getAllByRole("checkbox");
+      expect((checkboxes[0] as HTMLInputElement).value).toBe("action");
+      expect((checkboxes[3] as HTMLInputElement).value).toBe("horror");
+      expect((checkboxes[3] as HTMLInputElement).checked).toBe(false);
+
+      // Check Drama
+      await user.click(getCheckboxByLabel("Drama"));
+
+      // Should still remain in alphabetical order
+      checkboxes = screen.getAllByRole("checkbox");
+      expect((checkboxes[0] as HTMLInputElement).value).toBe("action");
+      expect((checkboxes[2] as HTMLInputElement).value).toBe("drama");
+      expect((checkboxes[2] as HTMLInputElement).checked).toBe(true);
     });
   });
 

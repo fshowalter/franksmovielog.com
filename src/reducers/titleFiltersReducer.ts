@@ -180,28 +180,30 @@ function handleReleaseYearFilterChanged<
 
 /**
  * Handle removing applied filters - special case for genre filters
- * AIDEV-NOTE: Genre chips have IDs like "genre-horror" but we need to remove
- * that specific genre from the genres array, not delete the whole genres key.
+ * AIDEV-NOTE: Genre chips have IDs like "genre-horror" or "genre-film-noir" but we need
+ * to remove that specific genre from the genres array, not delete the whole genres key.
  * Updates BOTH pendingFilterValues and activeFilterValues to ensure UI updates.
+ *
+ * AIDEV-NOTE: Normalization logic handles all genre formats correctly:
+ * - "Film-Noir" (from data) → "film-noir" (normalized)
+ * - "Science Fiction" → "science-fiction" (normalized)
+ * - "Horror" → "horror" (normalized)
+ * Both chip ID slug and genre value are normalized to lowercase-with-dashes for comparison.
  */
 function handleRemoveAppliedFilter<
   TValue,
   TState extends TitleFiltersState<TValue>,
 >(state: TState, action: RemoveAppliedFilterAction): TState {
-  // Handle genre filters which have IDs like "genre-horror"
+  // Handle genre filters which have IDs like "genre-horror" or "genre-film-noir"
   if (action.filterKey.startsWith("genre-")) {
-    const genreToRemove = action.filterKey
-      .replace("genre-", "")
-      .split("-")
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
+    // Extract slug from chip ID: "genre-horror" → "horror"
+    const genreSlug = action.filterKey.replace("genre-", "");
 
     const currentGenres = state.pendingFilterValues.genres;
     if (Array.isArray(currentGenres)) {
+      // Normalize both sides to lowercase-with-dashes for case-insensitive comparison
       const updatedGenres = currentGenres.filter(
-        (g) =>
-          String(g).toLowerCase().replaceAll(" ", "-") !==
-          genreToRemove.toLowerCase().replaceAll(" ", "-"),
+        (g) => String(g).toLowerCase().replaceAll(" ", "-") !== genreSlug,
       );
 
       // If no genres left, remove the genres key entirely from both pending and active
