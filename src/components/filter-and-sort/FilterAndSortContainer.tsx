@@ -67,11 +67,6 @@ export function FilterAndSortContainer<T extends string>({
   totalCount,
 }: Props<T>): React.JSX.Element {
   const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
-  // AIDEV-NOTE: pendingSortValue tracks the sort selection within the mobile drawer.
-  // It's only applied when "View Results" is clicked, not on change.
-  const [pendingSortValue, setPendingSortValue] = useState<T>(
-    sortProps.currentSortValue,
-  );
   const filtersRef = useRef<HTMLDivElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
   const prevSortValueRef = useRef<T>(sortProps.currentSortValue);
@@ -86,12 +81,10 @@ export function FilterAndSortContainer<T extends string>({
       setFilterDrawerVisible(false);
       if (shouldResetFilters) {
         onResetFilters();
-        // Reset pending sort back to active sort when closing without applying
-        setPendingSortValue(sortProps.currentSortValue);
         formRef?.current?.reset();
       }
     },
-    [onResetFilters, formRef, sortProps.currentSortValue],
+    [onResetFilters, formRef],
   );
 
   const onFilterClick = useCallback(
@@ -105,8 +98,6 @@ export function FilterAndSortContainer<T extends string>({
           document.body.classList.add("overflow-hidden");
         }
         setFilterDrawerVisible(true);
-        // Sync pending sort with current sort when drawer opens
-        setPendingSortValue(sortProps.currentSortValue);
         // Call onFilterDrawerOpen when opening
         onFilterDrawerOpen();
         // Focus first focusable element after drawer opens
@@ -122,7 +113,6 @@ export function FilterAndSortContainer<T extends string>({
       filterDrawerVisible,
       handleCloseDrawer,
       onFilterDrawerOpen,
-      sortProps.currentSortValue,
     ],
   );
 
@@ -288,7 +278,7 @@ export function FilterAndSortContainer<T extends string>({
                     />
                   )}
                   {/* AIDEV-NOTE: Sort section in mobile drawer only (<640px).
-                      Uses pendingSortValue to defer sort application until "View Results" is clicked.
+                      Uncontrolled radios — value read from form on "View Results" click.
                       Desktop dropdown in header applies sort immediately. */}
                   <div className="tablet:hidden">
                     <FilterSection defaultOpen={true} title="Sort by">
@@ -299,13 +289,11 @@ export function FilterAndSortContainer<T extends string>({
                             key={value}
                           >
                             <input
-                              checked={pendingSortValue === value}
                               className="size-4 cursor-pointer accent-accent"
+                              defaultChecked={
+                                sortProps.currentSortValue === value
+                              }
                               name="sort"
-                              onChange={(e) => {
-                                // Only update pending sort; actual sort applied on "View Results"
-                                setPendingSortValue(e.target.value as T);
-                              }}
                               type="radio"
                               value={value}
                             />
@@ -368,7 +356,9 @@ export function FilterAndSortContainer<T extends string>({
                     `}
                     disabled={pendingFilteredCount === 0 ? true : false}
                     onClick={() => {
-                      sortProps.onSortChange(pendingSortValue);
+                      const formData = new FormData(formRef.current!);
+                      const sortValue = formData.get("sort") as T;
+                      sortProps.onSortChange(sortValue);
                       onApplyFilters();
                       handleCloseDrawer(false); // Don't reset filters/sort when applying
                       listRef.current?.scrollIntoView();
