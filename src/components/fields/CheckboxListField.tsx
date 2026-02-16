@@ -44,24 +44,34 @@ export function CheckboxListField({
   );
   const [showAll, setShowAll] = useState(false);
 
-  // AIDEV-NOTE: Sort options - selected items first (in selection order), then unselected alphabetically
-  const sortedOptions = [...options].toSorted((a, b) => {
-    const aSelected = selectedValues.includes(a.value);
-    const bSelected = selectedValues.includes(b.value);
+  // Determine if we need show more functionality
+  const shouldShowMore = options.length > showMoreThreshold;
 
-    if (aSelected && !bSelected) return -1;
-    if (!aSelected && bSelected) return 1;
-    if (aSelected && bSelected) {
-      // Both selected - maintain selection order (most recent first)
-      return selectedValues.indexOf(b.value) - selectedValues.indexOf(a.value);
+  // AIDEV-NOTE: Sort options - selected items first only if show more is needed AND hasn't been clicked
+  // Once "show more" is clicked, maintain alphabetical order to prevent re-sorting on selection changes
+  const sortedOptions = [...options].toSorted((a, b) => {
+    const shouldSortSelectedFirst = shouldShowMore && !showAll;
+
+    if (shouldSortSelectedFirst) {
+      const aSelected = selectedValues.includes(a.value);
+      const bSelected = selectedValues.includes(b.value);
+
+      if (aSelected && !bSelected) return -1;
+      if (!aSelected && bSelected) return 1;
+      if (aSelected && bSelected) {
+        // Both selected - maintain selection order (most recent first)
+        return (
+          selectedValues.indexOf(b.value) - selectedValues.indexOf(a.value)
+        );
+      }
     }
-    // Both unselected - alphabetical order
+
+    // Both unselected (or showAll is true) - alphabetical order
     return a.label.localeCompare(b.label);
   });
 
   // Determine which options to display
   // AIDEV-NOTE: Always show all selected items + up to showMoreThreshold unselected items
-  const shouldShowMore = options.length > showMoreThreshold;
   const selectedCount = selectedValues.length;
   const visibleCount = showAll
     ? sortedOptions.length

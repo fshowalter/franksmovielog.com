@@ -548,6 +548,68 @@ describe("AllReviews", () => {
         within(posterList).queryByText("Die Hard"),
       ).not.toBeInTheDocument();
     });
+
+    it("removes Film-Noir genre with hyphen correctly", async ({ expect }) => {
+      const reviews = [
+        createReviewValue({
+          genres: ["Film-Noir"],
+          title: "Double Indemnity",
+        }),
+        createReviewValue({
+          genres: ["Film-Noir", "Thriller"],
+          title: "Touch of Evil",
+        }),
+        createReviewValue({
+          genres: ["Horror"],
+          title: "Halloween",
+        }),
+      ];
+
+      const user = getUserWithFakeTimers();
+      render(
+        <AllReviews
+          {...baseProps}
+          distinctGenres={[...baseProps.distinctGenres, "Film-Noir"]}
+          values={reviews}
+        />,
+      );
+
+      // Apply Film-Noir filter
+      await clickToggleFilters(user);
+      await clickGenresFilterOption(user, "Film-Noir");
+      await clickViewResults(user);
+
+      // Verify filter is applied
+      let posterList = getGroupedPosterList();
+      expect(
+        within(posterList).getByText("Double Indemnity"),
+      ).toBeInTheDocument();
+      expect(within(posterList).getByText("Touch of Evil")).toBeInTheDocument();
+      expect(
+        within(posterList).queryByText("Halloween"),
+      ).not.toBeInTheDocument();
+
+      // Click the Film-Noir chip to remove it
+      await clickToggleFilters(user);
+      const filmNoirChip = screen.getByLabelText("Remove Film-Noir filter");
+      await user.click(filmNoirChip);
+
+      // Apply the change
+      await clickViewResults(user);
+
+      // Verify the chip is removed from the UI after applying
+      expect(
+        screen.queryByLabelText("Remove Film-Noir filter"),
+      ).not.toBeInTheDocument();
+
+      // Verify all movies are now shown
+      posterList = getGroupedPosterList();
+      expect(
+        within(posterList).getByText("Double Indemnity"),
+      ).toBeInTheDocument();
+      expect(within(posterList).getByText("Touch of Evil")).toBeInTheDocument();
+      expect(within(posterList).getByText("Halloween")).toBeInTheDocument();
+    });
   });
 
   describe("pagination", () => {
