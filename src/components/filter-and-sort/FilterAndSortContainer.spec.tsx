@@ -579,11 +579,11 @@ describe("FilterAndSortContainer", () => {
       const onSortChange = vi.fn();
       const onApplyFilters = vi.fn();
       const props = createMockProps({
+        onApplyFilters,
         sortProps: {
           ...mockProps.sortProps,
           onSortChange,
         },
-        onApplyFilters,
       });
 
       const { container } = render(
@@ -612,13 +612,7 @@ describe("FilterAndSortContainer", () => {
       await user.click(viewResultsButton);
 
       expect(onSortChange).toHaveBeenCalledTimes(1);
-      expect(onSortChange).toHaveBeenCalledWith(
-        expect.objectContaining({
-          target: expect.objectContaining({
-            value: "title-desc",
-          }) as { value: string },
-        }),
-      );
+      expect(onSortChange).toHaveBeenCalledWith("title-desc");
       expect(onApplyFilters).toHaveBeenCalledTimes(1);
     });
 
@@ -677,11 +671,10 @@ describe("FilterAndSortContainer", () => {
       );
       const titleDescRadio = [...radioButtons].find(
         (radio) => radio.value === "title-desc",
-      );
-      if (titleDescRadio) {
-        await user.click(titleDescRadio);
-        expect(titleDescRadio.checked).toBe(true);
-      }
+      )!;
+
+      await user.click(titleDescRadio);
+      expect(titleDescRadio.checked).toBe(true);
 
       // Close drawer by clicking close button
       const closeButton = screen.getByRole("button", { name: "Close filters" });

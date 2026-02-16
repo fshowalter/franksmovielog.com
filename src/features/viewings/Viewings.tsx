@@ -156,8 +156,7 @@ export function Viewings({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as ViewingsSort)),
+        onSortChange: (value) => dispatch(createSortAction(value)),
         sortOptions: VIEWINGS_SORT_OPTIONS,
       }}
       totalCount={filteredValues.length}

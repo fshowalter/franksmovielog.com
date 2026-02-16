@@ -107,8 +107,7 @@ export function Collections({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as CollectionsSort)),
+        onSortChange: (value) => dispatch(createSortAction(value)),
         sortOptions: COLLECTION_SORT_OPTIONS,
       }}
       totalCount={filteredValues.length}

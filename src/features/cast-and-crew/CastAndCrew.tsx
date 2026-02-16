@@ -128,8 +128,7 @@ export function CastAndCrew({
       }
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as CastAndCrewSort)),
+        onSortChange: (value) => dispatch(createSortAction(value)),
         sortOptions: COLLECTION_SORT_OPTIONS,
       }}
       totalCount={totalCount}

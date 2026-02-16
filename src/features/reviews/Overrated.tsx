@@ -112,8 +112,7 @@ export function Overrated({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as ReviewsSort)),
+        onSortChange: (value) => dispatch(createSortAction(value)),
         sortOptions: SORT_OPTIONS,
       }}
       totalCount={totalCount}

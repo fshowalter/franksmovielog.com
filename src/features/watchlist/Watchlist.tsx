@@ -207,8 +207,7 @@ export function Watchlist({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as WatchlistSort)),
+        onSortChange: (value) => dispatch(createSortAction(value)),
         sortOptions: TITLE_SORT_OPTIONS,
       }}
       totalCount={totalCount}

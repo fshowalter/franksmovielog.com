@@ -136,10 +136,7 @@ export function CastAndCrewMemberTitles({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(
-            createSortAction(e.target.value as CastAndCrewMemberTitlesSort),
-          ),
+        onSortChange: (value) => dispatch(createSortAction(value)),
         sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
       }}
       totalCount={filteredValues.length}

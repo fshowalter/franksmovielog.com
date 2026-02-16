@@ -70,7 +70,7 @@ export function FilterAndSortHeader<T extends string>({
               font-serif text-base font-normal tracking-normal text-ellipsis
               text-default shadow-all outline-accent
             `}
-            onChange={onSortChange}
+            onChange={(e) => onSortChange(e.target.value as T)}
             value={currentSortValue}
           >
             {sortOptions.map(({ label, value }) => (

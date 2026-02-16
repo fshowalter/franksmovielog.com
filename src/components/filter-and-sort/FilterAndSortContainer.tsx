@@ -19,7 +19,7 @@ export type SortOption = {
  */
 export type SortProps<T extends string> = {
   currentSortValue: T;
-  onSortChange: React.ChangeEventHandler<HTMLSelectElement>;
+  onSortChange: (value: T) => void;
   sortOptions: readonly SortOption[];
 };
 
@@ -368,14 +368,7 @@ export function FilterAndSortContainer<T extends string>({
                     `}
                     disabled={pendingFilteredCount === 0 ? true : false}
                     onClick={() => {
-                      // Apply pending sort if changed
-                      if (pendingSortValue !== sortProps.currentSortValue) {
-                        const syntheticEvent = {
-                          target: { value: pendingSortValue },
-                        } as React.ChangeEvent<HTMLSelectElement>;
-                        sortProps.onSortChange(syntheticEvent);
-                      }
-                      // Apply pending filters
+                      sortProps.onSortChange(pendingSortValue);
                       onApplyFilters();
                       handleCloseDrawer(false); // Don't reset filters/sort when applying
                       listRef.current?.scrollIntoView();
