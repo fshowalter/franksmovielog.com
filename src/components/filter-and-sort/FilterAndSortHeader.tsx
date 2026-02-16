@@ -49,10 +49,11 @@ export function FilterAndSortHeader<T extends string>({
         </span>
       </span>
       <div>{headerLink && <HeaderLink {...headerLink} />}</div>
+      {/* AIDEV-NOTE: Per SPEC.md Stage 1 - Hide sort dropdown on mobile (<640px), show on desktop (≥640px) */}
       <div
         className={`
-          col-span-full
-          tablet:col-span-1 tablet:col-start-4
+          col-span-full hidden
+          tablet:col-span-1 tablet:col-start-4 tablet:block
           desktop:pl-8
         `}
       >
@@ -76,6 +77,7 @@ export function FilterAndSortHeader<T extends string>({
           </select>
         </label>
       </div>
+      {/* AIDEV-NOTE: Per SPEC.md Stage 1 - Show "Filter & Sort" on mobile (<640px), "Filter" on desktop (≥640px) */}
       <button
         aria-controls="filters"
         aria-expanded={filterDrawerVisible}
@@ -92,7 +94,15 @@ export function FilterAndSortHeader<T extends string>({
         ref={toggleButtonRef}
         type="button"
       >
-        Filter
+        <span className="tablet:hidden">Filter & Sort</span>
+        <span
+          className="
+            hidden
+            tablet:inline
+          "
+        >
+          Filter
+        </span>
       </button>
     </div>
   );

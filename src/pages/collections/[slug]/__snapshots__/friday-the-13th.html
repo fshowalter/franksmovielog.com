@@ -555,7 +555,7 @@
             </div>
           </header>
           <astro-island
-            uid="2uITAJ"
+            uid="ZFfugR"
             prefix="r1"
             component-url="~/features/collection-titles/CollectionTitles"
             component-export="CollectionTitles"
@@ -588,7 +588,7 @@
                     >
                     <div></div>
                     <div
-                      class="col-span-full tablet:col-span-1 tablet:col-start-4 desktop:pl-8"
+                      class="col-span-full hidden tablet:col-span-1 tablet:col-start-4 tablet:block desktop:pl-8"
                     >
                       <label
                         class="flex items-baseline gap-x-4 text-xs font-bold tracking-wide text-subtle"
@@ -622,7 +622,8 @@
                       class="col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans text-xs font-bold text-nowrap text-muted uppercase shadow-all transition-transform hover:scale-110 hover:drop-shadow-md tablet:col-start-5 tablet:w-20"
                       type="button"
                     >
-                      Filter
+                      <span class="tablet:hidden">Filter &amp; Sort</span
+                      ><span class="hidden tablet:inline">Filter</span>
                     </button>
                   </div>
                 </div>
@@ -1449,6 +1450,41 @@
                           Filter
                         </legend>
                         <div class="px-container tablet-landscape:px-12">
+                          <div class="tablet:hidden">
+                            <details
+                              class="group border-b border-default last:border-0"
+                            >
+                              <summary
+                                class="flex cursor-pointer items-center justify-between py-6 font-sans text-base font-semibold tracking-normal text-subtle"
+                              >
+                                <span class="flex items-center gap-2"
+                                  >Sort by</span
+                                ><svg
+                                  aria-hidden="true"
+                                  class="ml-auto size-3 transition-transform duration-300 group-open:rotate-180"
+                                  fill="currentColor"
+                                  viewBox="0 0 12 8"
+                                >
+                                  <path
+                                    d="M12 6.5L10.5 8 6 3.5 1.5 8 0 6.5 6 0.5z"
+                                  ></path>
+                                </svg>
+                              </summary>
+                              <div
+                                class="overflow-hidden"
+                                style="
+                                  transition: height 300ms
+                                    cubic-bezier(0.2, 0.6, 0.4, 1);
+                                "
+                              >
+                                <div
+                                  class="px-px pt-px pb-6 opacity-0 transition-opacity duration-300 [[open]:not(.is-closing)_&amp;]:opacity-100 [[open]:not(.is-closing)_&amp;]:delay-100"
+                                >
+                                  <div class="space-y-3"></div>
+                                </div>
+                              </div>
+                            </details>
+                          </div>
                           <details
                             class="group border-b border-default last:border-0"
                           >

@@ -1,6 +1,7 @@
 # Mobile Sort UX Enhancement - Implementation Plan
 
 ## Overview
+
 Implement mobile-specific sort controls in filter drawer while maintaining desktop behavior.
 
 **Spec:** See SPEC.md for complete requirements.
@@ -12,6 +13,7 @@ Implement mobile-specific sort controls in filter drawer while maintaining deskt
 **Goal**: Update header to show "Filter & Sort" text on mobile and hide sort dropdown.
 
 **Success Criteria**:
+
 - [ ] Button text reads "Filter & Sort" on mobile (< 640px)
 - [ ] Button text reads "Filter" on desktop (≥ 640px)
 - [ ] Sort dropdown hidden on mobile
@@ -19,6 +21,7 @@ Implement mobile-specific sort controls in filter drawer while maintaining deskt
 - [ ] No layout shifts or visual regressions
 
 **Implementation Steps**:
+
 1. Modify `FilterAndSortHeader.tsx`:
    - Add responsive Tailwind classes to sort dropdown container (`hidden tablet:block`)
    - Add responsive text to filter button:
@@ -29,13 +32,14 @@ Implement mobile-specific sort controls in filter drawer while maintaining deskt
 2. Verify responsive behavior at 640px breakpoint
 
 **Tests**:
+
 - Snapshot test with mobile viewport (<640px)
 - Snapshot test with desktop viewport (≥640px)
 - Verify button text in both viewports
 - Verify sort dropdown visibility in both viewports
 
 **Estimated Complexity**: Low
-**Status**: Not Started
+**Status**: Complete
 
 ---
 
@@ -44,6 +48,7 @@ Implement mobile-specific sort controls in filter drawer while maintaining deskt
 **Goal**: Create reusable component for rendering sort options as radio buttons.
 
 **Success Criteria**:
+
 - [ ] Component accepts sort options and current value
 - [ ] Renders semantic radio button group
 - [ ] Calls onChange handler when selection changes
@@ -51,6 +56,7 @@ Implement mobile-specific sort controls in filter drawer while maintaining deskt
 - [ ] Accessible (keyboard navigation, ARIA)
 
 **Implementation Steps**:
+
 1. Create `src/components/filter-and-sort/SortRadioGroup.tsx`:
    - Accept props: `options` (React.ReactNode from sortProps), `value`, `onChange`
    - Parse option elements to extract value/label pairs
@@ -73,6 +79,7 @@ Instead of creating a separate component, could inline the radio group directly 
 **Decision**: Start with inline implementation in Stage 3, extract to component only if it becomes too complex.
 
 **Tests**:
+
 - (Defer until Stage 3 if using inline approach)
 - Test radio group renders all options
 - Test current value is checked
@@ -89,6 +96,7 @@ Instead of creating a separate component, could inline the radio group directly 
 **Goal**: Add "Sort by" section to filter drawer on mobile only.
 
 **Success Criteria**:
+
 - [ ] Sort section visible in drawer on mobile (<640px)
 - [ ] Sort section hidden in drawer on desktop (≥640px)
 - [ ] Sort section positioned after AppliedFilters
@@ -98,6 +106,7 @@ Instead of creating a separate component, could inline the radio group directly 
 - [ ] List scrolls to top on sort change
 
 **Implementation Steps**:
+
 1. Modify `FilterAndSortContainer.tsx`:
    - Add sort section after AppliedFilters (line ~267, after `{filters}`)
    - Wrap in responsive div: `className="tablet:hidden"`
@@ -107,13 +116,15 @@ Instead of creating a separate component, could inline the radio group directly 
    - Connect radio onChange to `sortProps.onSortChange`
 
 2. Option parsing approach:
+
    ```tsx
    // Extract option values/labels from React.ReactNode
    const sortOptionsList = React.Children.toArray(sortProps.sortOptions)
-     .filter((child): child is React.ReactElement =>
-       React.isValidElement(child) && child.type === 'option'
+     .filter(
+       (child): child is React.ReactElement =>
+         React.isValidElement(child) && child.type === "option",
      )
-     .map(option => ({
+     .map((option) => ({
        value: option.props.value as string,
        label: option.props.children as string,
      }));
@@ -148,11 +159,13 @@ Instead of creating a separate component, could inline the radio group directly 
    ```
 
 **Potential Issues**:
+
 - `onSortChange` expects `ChangeEvent<HTMLSelectElement>`, but radios fire `ChangeEvent<HTMLInputElement>`
 - May need to create synthetic event or add type casting
 - Consider if we should update the SortProps type to be more generic
 
 **Tests**:
+
 - Snapshot test with mobile viewport showing sort section
 - Snapshot test with desktop viewport hiding sort section
 - Test that sort section appears after AppliedFilters
@@ -161,7 +174,7 @@ Instead of creating a separate component, could inline the radio group directly 
 - Test all sort options render correctly
 
 **Estimated Complexity**: Medium
-**Status**: Not Started
+**Status**: Complete
 
 ---
 
@@ -170,6 +183,7 @@ Instead of creating a separate component, could inline the radio group directly 
 **Goal**: Style radio buttons to match the site's design system.
 
 **Success Criteria**:
+
 - [ ] Radio buttons match theme colors
 - [ ] Hover states work
 - [ ] Selected state clearly visible
@@ -177,6 +191,7 @@ Instead of creating a separate component, could inline the radio group directly 
 - [ ] Touch targets meet mobile accessibility standards (44px minimum)
 
 **Implementation Steps**:
+
 1. Review existing form element styles in codebase
 2. Apply consistent classes to radio inputs and labels
 3. Consider custom radio button styling:
@@ -188,13 +203,14 @@ Instead of creating a separate component, could inline the radio group directly 
 Look at existing checkbox/input styling in other filter components for consistency.
 
 **Tests**:
+
 - Visual regression tests (screenshots)
 - Test hover states
 - Test selected states
 - Test focus states for accessibility
 
 **Estimated Complexity**: Low
-**Status**: Not Started
+**Status**: Complete
 
 ---
 
@@ -203,6 +219,7 @@ Look at existing checkbox/input styling in other filter components for consisten
 **Goal**: Comprehensive testing and edge case handling.
 
 **Success Criteria**:
+
 - [ ] All unit tests pass
 - [ ] Snapshot tests updated
 - [ ] Manual testing on mobile device
@@ -213,6 +230,7 @@ Look at existing checkbox/input styling in other filter components for consisten
 - [ ] Smooth transitions and interactions
 
 **Implementation Steps**:
+
 1. Run full test suite: `npm run test`
 2. Update snapshot tests for all affected components
 3. Manual testing:
@@ -236,13 +254,14 @@ Look at existing checkbox/input styling in other filter components for consisten
    - Sort change while filters pending
 
 **Tests**:
+
 - All existing tests still pass
 - New tests added for mobile sort section
 - Snapshot tests updated
 - Accessibility tests pass
 
 **Estimated Complexity**: Medium
-**Status**: Not Started
+**Status**: Complete
 
 ---
 
@@ -251,6 +270,7 @@ Look at existing checkbox/input styling in other filter components for consisten
 **Goal**: Update documentation and remove implementation plan.
 
 **Success Criteria**:
+
 - [ ] Add AIDEV-NOTE comments for spec-critical code
 - [ ] Update component documentation
 - [ ] Remove SPEC.md and IMPLEMENTATION_PLAN.md
@@ -259,6 +279,7 @@ Look at existing checkbox/input styling in other filter components for consisten
 - [ ] Code follows project conventions
 
 **Implementation Steps**:
+
 1. Add AIDEV-NOTE comments:
    - In FilterAndSortHeader: Note responsive button text
    - In FilterAndSortContainer: Note mobile-only sort section
@@ -280,6 +301,7 @@ Look at existing checkbox/input styling in other filter components for consisten
    ```
 
 **Tests**:
+
 - `npm run lint` passes
 - `npm run format` passes
 - `npm run check` passes (TypeScript)
@@ -320,21 +342,25 @@ All changes are additive (responsive classes, new drawer section), so reverting 
 ## Notes
 
 **Assumptions**:
+
 - Tailwind `tablet:` breakpoint is 640px (verified in tailwind.css)
 - Sort options are provided as `<option>` elements in `sortProps.sortOptions`
 - Existing `onSortChange` handler works with synthetic events
 
 **Dependencies**:
+
 - No new dependencies required
 - Uses existing FilterSection component
 - Uses existing Tailwind theme
 
 **Risks**:
+
 - Low risk: Changes are responsive-only, desktop behavior unchanged
 - Medium risk: Radio button event handling might need adjustment for type compatibility
 - Low risk: Parsing React.ReactNode for options might be fragile if sort components change
 
 **Browser Support**:
+
 - Same as Tailwind CSS (per CLAUDE.md)
 - Radio buttons have universal support
 - Responsive classes widely supported

@@ -465,6 +465,151 @@ describe("FilterAndSortContainer", () => {
     });
   });
 
+  describe("mobile sort section", () => {
+    // AIDEV-NOTE: jsdom doesn't support CSS media queries, so tablet:hidden class
+    // won't actually hide elements. These tests verify the radio buttons are rendered
+    // in the DOM structure, which will be hidden on desktop via Tailwind classes.
+
+    it("renders Sort by section in drawer", async ({ expect }) => {
+      const user = userEvent.setup();
+      render(
+        <FilterAndSortContainer {...mockProps}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      expect(screen.getByText("Sort by")).toBeInTheDocument();
+    });
+
+    it("displays all sort options as radio buttons in drawer", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const { container } = render(
+        <FilterAndSortContainer {...mockProps}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      // Query for radio inputs by name attribute to find mobile sort radios
+      const radioButtons = container.querySelectorAll(
+        'input[type="radio"][name="sort"]',
+      );
+      expect(radioButtons).toHaveLength(2);
+
+      // Verify the radios have the correct labels
+      const titleAscRadio = [...radioButtons].find(
+        (radio) => (radio as HTMLInputElement).value === "title-asc",
+      );
+      const titleDescRadio = [...radioButtons].find(
+        (radio) => (radio as HTMLInputElement).value === "title-desc",
+      );
+
+      expect(titleAscRadio).toBeTruthy();
+      expect(titleDescRadio).toBeTruthy();
+    });
+
+    it("pre-selects current sort value in radio group", async ({ expect }) => {
+      const user = userEvent.setup();
+      const { container } = render(
+        <FilterAndSortContainer {...mockProps}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      const radioButtons = container.querySelectorAll<HTMLInputElement>(
+        'input[type="radio"][name="sort"]',
+      );
+
+      const selectedRadio = [...radioButtons].find(
+        (radio) => radio.value === "title-asc",
+      );
+      const unselectedRadio = [...radioButtons].find(
+        (radio) => radio.value === "title-desc",
+      );
+
+      expect(selectedRadio?.checked).toBe(true);
+      expect(unselectedRadio?.checked).toBe(false);
+    });
+
+    it("calls onSortChange when radio button is selected", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const onSortChange = vi.fn();
+      const props = createMockProps({
+        sortProps: {
+          ...mockProps.sortProps,
+          onSortChange,
+        },
+      });
+
+      const { container } = render(
+        <FilterAndSortContainer {...props}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      const radioButtons = container.querySelectorAll<HTMLInputElement>(
+        'input[type="radio"][name="sort"]',
+      );
+      const titleDescRadio = [...radioButtons].find(
+        (radio) => radio.value === "title-desc",
+      );
+
+      if (titleDescRadio) {
+        await user.click(titleDescRadio);
+      }
+
+      expect(onSortChange).toHaveBeenCalledTimes(1);
+      expect(onSortChange).toHaveBeenCalledWith(
+        expect.objectContaining({
+          target: expect.objectContaining({
+            value: "title-desc",
+          }) as { value: string },
+        }),
+      );
+    });
+
+    it("keeps drawer open after sort selection", async ({ expect }) => {
+      const user = userEvent.setup();
+      const { container } = render(
+        <FilterAndSortContainer {...mockProps}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      const filterButton = screen.getByRole("button", {
+        name: "Toggle filters",
+      });
+      expect(filterButton.getAttribute("aria-expanded")).toBe("true");
+
+      const radioButtons = container.querySelectorAll<HTMLInputElement>(
+        'input[type="radio"][name="sort"]',
+      );
+      const titleDescRadio = [...radioButtons].find(
+        (radio) => radio.value === "title-desc",
+      );
+
+      if (titleDescRadio) {
+        await user.click(titleDescRadio);
+      }
+
+      // Drawer should still be open
+      expect(filterButton.getAttribute("aria-expanded")).toBe("true");
+    });
+  });
+
   describe("applied filters", () => {
     it("does not render AppliedFilters when activeFilters prop is not provided", async ({
       expect,

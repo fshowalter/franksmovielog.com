@@ -1,0 +1,521 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FilterAndSortHeader > Snapshot Tests > matches snapshot - basic render 1`] = `
+<div>
+  <div
+    class="
+        mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto]
+        items-baseline gap-y-5 px-container py-7 font-sans font-medium
+        tracking-wide text-subtle uppercase
+        tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7
+        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto]
+        desktop:grid-cols-[auto_auto_1fr_calc(33%-96px)_auto]
+      "
+  >
+    <span
+      class="text-nowrap"
+    >
+      <span
+        class="text-sm font-bold text-default"
+      >
+        100
+      </span>
+      <span
+        class="text-xs leading-none font-normal tracking-wide"
+      >
+         
+        Results
+      </span>
+    </span>
+    <div />
+    <div
+      class="
+          col-span-full hidden
+          tablet:col-span-1 tablet:col-start-4 tablet:block
+          desktop:pl-8
+        "
+    >
+      <label
+        class="
+            flex items-baseline gap-x-4 text-xs font-bold tracking-wide
+            text-subtle
+          "
+      >
+        Sort
+         
+        <select
+          class="
+              flex w-full appearance-none border-none bg-default px-4 py-2
+              font-serif text-base font-normal tracking-normal text-ellipsis
+              text-default shadow-all outline-accent
+            "
+        >
+          <option
+            value="title"
+          >
+            Title
+          </option>
+          <option
+            value="year"
+          >
+            Year
+          </option>
+          <option
+            value="grade"
+          >
+            Grade
+          </option>
+        </select>
+      </label>
+    </div>
+    <button
+      aria-controls="filters"
+      aria-expanded="false"
+      aria-label="Toggle filters"
+      class="
+          col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
+          justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans
+          text-xs font-bold text-nowrap text-muted uppercase shadow-all
+          transition-transform
+          hover:scale-110 hover:drop-shadow-md
+          tablet:col-start-5 tablet:w-20
+        "
+      type="button"
+    >
+      <span
+        class="tablet:hidden"
+      >
+        Filter & Sort
+      </span>
+      <span
+        class="
+            hidden
+            tablet:inline
+          "
+      >
+        Filter
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`FilterAndSortHeader > Snapshot Tests > matches snapshot - drawer visible 1`] = `
+<div>
+  <div
+    class="
+        mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto]
+        items-baseline gap-y-5 px-container py-7 font-sans font-medium
+        tracking-wide text-subtle uppercase
+        tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7
+        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto]
+        desktop:grid-cols-[auto_auto_1fr_calc(33%-96px)_auto]
+      "
+  >
+    <span
+      class="text-nowrap"
+    >
+      <span
+        class="text-sm font-bold text-default"
+      >
+        100
+      </span>
+      <span
+        class="text-xs leading-none font-normal tracking-wide"
+      >
+         
+        Results
+      </span>
+    </span>
+    <div />
+    <div
+      class="
+          col-span-full hidden
+          tablet:col-span-1 tablet:col-start-4 tablet:block
+          desktop:pl-8
+        "
+    >
+      <label
+        class="
+            flex items-baseline gap-x-4 text-xs font-bold tracking-wide
+            text-subtle
+          "
+      >
+        Sort
+         
+        <select
+          class="
+              flex w-full appearance-none border-none bg-default px-4 py-2
+              font-serif text-base font-normal tracking-normal text-ellipsis
+              text-default shadow-all outline-accent
+            "
+        >
+          <option
+            value="title"
+          >
+            Title
+          </option>
+          <option
+            value="year"
+          >
+            Year
+          </option>
+          <option
+            value="grade"
+          >
+            Grade
+          </option>
+        </select>
+      </label>
+    </div>
+    <button
+      aria-controls="filters"
+      aria-expanded="true"
+      aria-label="Toggle filters"
+      class="
+          col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
+          justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans
+          text-xs font-bold text-nowrap text-muted uppercase shadow-all
+          transition-transform
+          hover:scale-110 hover:drop-shadow-md
+          tablet:col-start-5 tablet:w-20
+        "
+      type="button"
+    >
+      <span
+        class="tablet:hidden"
+      >
+        Filter & Sort
+      </span>
+      <span
+        class="
+            hidden
+            tablet:inline
+          "
+      >
+        Filter
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`FilterAndSortHeader > Snapshot Tests > matches snapshot - large result count 1`] = `
+<div>
+  <div
+    class="
+        mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto]
+        items-baseline gap-y-5 px-container py-7 font-sans font-medium
+        tracking-wide text-subtle uppercase
+        tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7
+        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto]
+        desktop:grid-cols-[auto_auto_1fr_calc(33%-96px)_auto]
+      "
+  >
+    <span
+      class="text-nowrap"
+    >
+      <span
+        class="text-sm font-bold text-default"
+      >
+        123,456
+      </span>
+      <span
+        class="text-xs leading-none font-normal tracking-wide"
+      >
+         
+        Results
+      </span>
+    </span>
+    <div />
+    <div
+      class="
+          col-span-full hidden
+          tablet:col-span-1 tablet:col-start-4 tablet:block
+          desktop:pl-8
+        "
+    >
+      <label
+        class="
+            flex items-baseline gap-x-4 text-xs font-bold tracking-wide
+            text-subtle
+          "
+      >
+        Sort
+         
+        <select
+          class="
+              flex w-full appearance-none border-none bg-default px-4 py-2
+              font-serif text-base font-normal tracking-normal text-ellipsis
+              text-default shadow-all outline-accent
+            "
+        >
+          <option
+            value="title"
+          >
+            Title
+          </option>
+          <option
+            value="year"
+          >
+            Year
+          </option>
+          <option
+            value="grade"
+          >
+            Grade
+          </option>
+        </select>
+      </label>
+    </div>
+    <button
+      aria-controls="filters"
+      aria-expanded="false"
+      aria-label="Toggle filters"
+      class="
+          col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
+          justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans
+          text-xs font-bold text-nowrap text-muted uppercase shadow-all
+          transition-transform
+          hover:scale-110 hover:drop-shadow-md
+          tablet:col-start-5 tablet:w-20
+        "
+      type="button"
+    >
+      <span
+        class="tablet:hidden"
+      >
+        Filter & Sort
+      </span>
+      <span
+        class="
+            hidden
+            tablet:inline
+          "
+      >
+        Filter
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`FilterAndSortHeader > Snapshot Tests > matches snapshot - with header link 1`] = `
+<div>
+  <div
+    class="
+        mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto]
+        items-baseline gap-y-5 px-container py-7 font-sans font-medium
+        tracking-wide text-subtle uppercase
+        tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7
+        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto]
+        desktop:grid-cols-[auto_auto_1fr_calc(33%-96px)_auto]
+      "
+  >
+    <span
+      class="text-nowrap"
+    >
+      <span
+        class="text-sm font-bold text-default"
+      >
+        100
+      </span>
+      <span
+        class="text-xs leading-none font-normal tracking-wide"
+      >
+         
+        Results
+      </span>
+    </span>
+    <div>
+      <div
+        class="
+        flex items-start gap-x-4 bg-default px-4 font-sans text-[13px] font-bold
+        text-nowrap text-accent uppercase
+      "
+      >
+        <a
+          class="
+          relative inline-block transform-gpu py-1 transition-transform
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-center after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:after:scale-x-100
+        "
+          href="/watchlist"
+        >
+          View Watchlist
+        </a>
+      </div>
+    </div>
+    <div
+      class="
+          col-span-full hidden
+          tablet:col-span-1 tablet:col-start-4 tablet:block
+          desktop:pl-8
+        "
+    >
+      <label
+        class="
+            flex items-baseline gap-x-4 text-xs font-bold tracking-wide
+            text-subtle
+          "
+      >
+        Sort
+         
+        <select
+          class="
+              flex w-full appearance-none border-none bg-default px-4 py-2
+              font-serif text-base font-normal tracking-normal text-ellipsis
+              text-default shadow-all outline-accent
+            "
+        >
+          <option
+            value="title"
+          >
+            Title
+          </option>
+          <option
+            value="year"
+          >
+            Year
+          </option>
+          <option
+            value="grade"
+          >
+            Grade
+          </option>
+        </select>
+      </label>
+    </div>
+    <button
+      aria-controls="filters"
+      aria-expanded="false"
+      aria-label="Toggle filters"
+      class="
+          col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
+          justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans
+          text-xs font-bold text-nowrap text-muted uppercase shadow-all
+          transition-transform
+          hover:scale-110 hover:drop-shadow-md
+          tablet:col-start-5 tablet:w-20
+        "
+      type="button"
+    >
+      <span
+        class="tablet:hidden"
+      >
+        Filter & Sort
+      </span>
+      <span
+        class="
+            hidden
+            tablet:inline
+          "
+      >
+        Filter
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`FilterAndSortHeader > Snapshot Tests > matches snapshot - zero results 1`] = `
+<div>
+  <div
+    class="
+        mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto]
+        items-baseline gap-y-5 px-container py-7 font-sans font-medium
+        tracking-wide text-subtle uppercase
+        tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7
+        tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto]
+        desktop:grid-cols-[auto_auto_1fr_calc(33%-96px)_auto]
+      "
+  >
+    <span
+      class="text-nowrap"
+    >
+      <span
+        class="text-sm font-bold text-default"
+      >
+        0
+      </span>
+      <span
+        class="text-xs leading-none font-normal tracking-wide"
+      >
+         
+        Results
+      </span>
+    </span>
+    <div />
+    <div
+      class="
+          col-span-full hidden
+          tablet:col-span-1 tablet:col-start-4 tablet:block
+          desktop:pl-8
+        "
+    >
+      <label
+        class="
+            flex items-baseline gap-x-4 text-xs font-bold tracking-wide
+            text-subtle
+          "
+      >
+        Sort
+         
+        <select
+          class="
+              flex w-full appearance-none border-none bg-default px-4 py-2
+              font-serif text-base font-normal tracking-normal text-ellipsis
+              text-default shadow-all outline-accent
+            "
+        >
+          <option
+            value="title"
+          >
+            Title
+          </option>
+          <option
+            value="year"
+          >
+            Year
+          </option>
+          <option
+            value="grade"
+          >
+            Grade
+          </option>
+        </select>
+      </label>
+    </div>
+    <button
+      aria-controls="filters"
+      aria-expanded="false"
+      aria-label="Toggle filters"
+      class="
+          col-start-4 row-start-1 flex transform-gpu cursor-pointer items-center
+          justify-center gap-x-4 rounded-sm bg-canvas px-4 py-2 font-sans
+          text-xs font-bold text-nowrap text-muted uppercase shadow-all
+          transition-transform
+          hover:scale-110 hover:drop-shadow-md
+          tablet:col-start-5 tablet:w-20
+        "
+      type="button"
+    >
+      <span
+        class="tablet:hidden"
+      >
+        Filter & Sort
+      </span>
+      <span
+        class="
+            hidden
+            tablet:inline
+          "
+      >
+        Filter
+      </span>
+    </button>
+  </div>
+</div>
+`;
