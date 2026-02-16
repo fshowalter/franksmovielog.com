@@ -1,5 +1,4 @@
 import { ReviewedTitleFilters } from "~/components/filter-and-sort/ReviewedTitleFilters";
-import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
 import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
 import type { ReviewsValue } from "./ReviewsListItem";
@@ -80,9 +79,7 @@ export function ReviewsFilters({
 }
 
 /**
- * Sort options component for the reviews page.
- * @returns Reviewed title sort options component
+ * Sort options for the reviews page.
  */
-export function SortOptions(): React.JSX.Element {
-  return <ReviewedTitleSortOptions />;
-}
+
+export { REVIEWED_TITLE_SORT_OPTIONS as SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";

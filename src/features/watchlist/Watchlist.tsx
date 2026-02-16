@@ -3,7 +3,7 @@ import { useReducer } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { TitleSortOptions } from "~/components/filter-and-sort/TitleSortOptions";
+import { TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/TitleSortOptions";
 import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
 import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
@@ -207,9 +207,8 @@ export function Watchlist({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as WatchlistSort)),
-        sortOptions: <TitleSortOptions />,
+        onSortChange: (value) => dispatch(createSortAction(value)),
+        sortOptions: TITLE_SORT_OPTIONS,
       }}
       totalCount={totalCount}
     >

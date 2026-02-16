@@ -22,7 +22,7 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./reducer";
-import { ReviewsFilters, SortOptions } from "./ReviewsFilters";
+import { ReviewsFilters, SORT_OPTIONS } from "./ReviewsFilters";
 import { ReviewsListItem } from "./ReviewsListItem";
 import { sortReviews } from "./sortReviews";
 
@@ -112,9 +112,8 @@ export function Underrated({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as ReviewsSort)),
-        sortOptions: <SortOptions />,
+        onSortChange: (value) => dispatch(createSortAction(value)),
+        sortOptions: SORT_OPTIONS,
       }}
       totalCount={totalCount}
     >

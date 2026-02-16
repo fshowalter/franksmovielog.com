@@ -3,7 +3,7 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "~/api/avatars";
 
 import { AvatarList } from "~/components/avatar-list/AvatarList";
-import { CollectionSortOptions } from "~/components/filter-and-sort/CollectionSortOptions";
+import { COLLECTION_SORT_OPTIONS } from "~/components/filter-and-sort/CollectionSortOptions";
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { useFilteredValues } from "~/hooks/useFilteredValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
@@ -107,9 +107,8 @@ export function Collections({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as CollectionsSort)),
-        sortOptions: <CollectionSortOptions />,
+        onSortChange: (value) => dispatch(createSortAction(value)),
+        sortOptions: COLLECTION_SORT_OPTIONS,
       }}
       totalCount={filteredValues.length}
     >

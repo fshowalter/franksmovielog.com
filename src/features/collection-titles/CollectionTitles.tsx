@@ -3,7 +3,7 @@ import { useReducer } from "react";
 import type { PosterImageProps } from "~/api/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
+import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
@@ -130,9 +130,8 @@ export function CollectionTitles({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (e) =>
-          dispatch(createSortAction(e.target.value as CollectionTitlesSort)),
-        sortOptions: <ReviewedTitleSortOptions />,
+        onSortChange: (value) => dispatch(createSortAction(value)),
+        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
       }}
       totalCount={filteredValues.length}
     >

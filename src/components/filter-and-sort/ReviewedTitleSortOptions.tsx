@@ -1,17 +1,14 @@
-import { TitleSortOptions } from "./TitleSortOptions";
+import type { SortOption } from "./FilterAndSortContainer";
+
+import { TITLE_SORT_OPTIONS } from "./TitleSortOptions";
 
 /**
- * Component that renders sort options for reviewed title lists.
- * @returns Sort option elements including title and review-specific options
+ * Sort options for reviewed title lists.
  */
-export function ReviewedTitleSortOptions(): React.JSX.Element {
-  return (
-    <>
-      <TitleSortOptions />
-      <option value="grade-desc">Grade (Best First)</option>
-      <option value="grade-asc">Grade (Worst First)</option>
-      <option value="review-date-desc">Review Date (Newest First)</option>
-      <option value="review-date-asc">Review Date (Oldest First)</option>
-    </>
-  );
-}
+export const REVIEWED_TITLE_SORT_OPTIONS: readonly SortOption[] = [
+  ...TITLE_SORT_OPTIONS,
+  { label: "Grade (Best First)", value: "grade-desc" },
+  { label: "Grade (Worst First)", value: "grade-asc" },
+  { label: "Review Date (Newest First)", value: "review-date-desc" },
+  { label: "Review Date (Oldest First)", value: "review-date-asc" },
+] as const;
