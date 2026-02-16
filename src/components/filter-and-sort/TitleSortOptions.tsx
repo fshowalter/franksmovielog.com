@@ -1,14 +1,11 @@
+import type { SortOption } from "./FilterAndSortContainer";
+
 /**
- * Component that renders sort options for title lists.
- * @returns Sort option elements for title sorting
+ * Sort options for title lists.
  */
-export function TitleSortOptions(): React.JSX.Element {
-  return (
-    <>
-      <option value="title-asc">Title (A &rarr; Z)</option>
-      <option value="title-desc">Title (Z &rarr; A)</option>
-      <option value="release-date-desc">Release Date (Newest First)</option>
-      <option value="release-date-asc">Release Date (Oldest First)</option>
-    </>
-  );
-}
+export const TITLE_SORT_OPTIONS: readonly SortOption[] = [
+  { label: "Title (A → Z)", value: "title-asc" },
+  { label: "Title (Z → A)", value: "title-desc" },
+  { label: "Release Date (Newest First)", value: "release-date-desc" },
+  { label: "Release Date (Oldest First)", value: "release-date-asc" },
+] as const;

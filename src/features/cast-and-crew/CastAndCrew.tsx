@@ -3,7 +3,7 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "~/api/avatars";
 
 import { GroupedAvatarList } from "~/components/avatar-list/GroupedAvatarList";
-import { CollectionSortOptions } from "~/components/filter-and-sort/CollectionSortOptions";
+import { COLLECTION_SORT_OPTIONS } from "~/components/filter-and-sort/CollectionSortOptions";
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { useGroupedValues } from "~/hooks/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
@@ -130,7 +130,7 @@ export function CastAndCrew({
         currentSortValue: state.sort,
         onSortChange: (e) =>
           dispatch(createSortAction(e.target.value as CastAndCrewSort)),
-        sortOptions: <CollectionSortOptions />,
+        sortOptions: COLLECTION_SORT_OPTIONS,
       }}
       totalCount={totalCount}
     >

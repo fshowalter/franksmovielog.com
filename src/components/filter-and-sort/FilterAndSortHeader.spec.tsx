@@ -15,13 +15,11 @@ describe("FilterAndSortHeader", () => {
   const defaultSortProps: SortProps<string> = {
     currentSortValue: "title",
     onSortChange: vi.fn(),
-    sortOptions: (
-      <>
-        <option value="title">Title</option>
-        <option value="year">Year</option>
-        <option value="grade">Grade</option>
-      </>
-    ),
+    sortOptions: [
+      { label: "Title", value: "title" },
+      { label: "Year", value: "year" },
+      { label: "Grade", value: "grade" },
+    ],
   };
 
   beforeEach(() => {

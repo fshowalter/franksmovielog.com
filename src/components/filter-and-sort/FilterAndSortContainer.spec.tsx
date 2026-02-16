@@ -4,7 +4,10 @@ import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import type { FilterChip } from "./AppliedFilters";
 
-import { FilterAndSortContainer } from "./FilterAndSortContainer";
+import {
+  FilterAndSortContainer,
+  type SortOption,
+} from "./FilterAndSortContainer";
 import {
   clickCloseFilters,
   clickToggleFilters,
@@ -30,7 +33,7 @@ type MockProps = {
   sortProps: {
     currentSortValue: string;
     onSortChange: ReturnType<typeof vi.fn>;
-    sortOptions: React.ReactElement;
+    sortOptions: readonly SortOption[];
   };
   totalCount: number;
 };
@@ -51,12 +54,10 @@ const createMockProps = (overrides: Partial<MockProps> = {}): MockProps => ({
   sortProps: {
     currentSortValue: "title-asc",
     onSortChange: vi.fn(),
-    sortOptions: (
-      <>
-        <option value="title-asc">Title (A → Z)</option>
-        <option value="title-desc">Title (Z → A)</option>
-      </>
-    ),
+    sortOptions: [
+      { label: "Title (A → Z)", value: "title-asc" },
+      { label: "Title (Z → A)", value: "title-desc" },
+    ],
   },
   totalCount: 100,
   ...overrides,

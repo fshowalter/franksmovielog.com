@@ -3,7 +3,7 @@ import { useReducer } from "react";
 import type { StillImageProps } from "~/api/stills";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { ReviewedTitleSortOptions } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
+import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { ListItemWatchlistReason } from "~/components/list-item-watchlist-reason/ListItemWatchlistReason";
 import { PlaceholderCard } from "~/components/placeholder-card/PlaceholderCard";
 import {
@@ -140,7 +140,7 @@ export function CastAndCrewMemberTitles({
           dispatch(
             createSortAction(e.target.value as CastAndCrewMemberTitlesSort),
           ),
-        sortOptions: <ReviewedTitleSortOptions />,
+        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
       }}
       totalCount={filteredValues.length}
     >

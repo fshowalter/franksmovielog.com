@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import type { FilterChip } from "./AppliedFilters";
 
@@ -7,12 +7,20 @@ import { FilterAndSortHeader } from "./FilterAndSortHeader";
 import { FilterSection } from "./FilterSection";
 
 /**
+ * Sort option configuration.
+ */
+export type SortOption = {
+  label: string;
+  value: string;
+};
+
+/**
  * Props for sort functionality.
  */
 export type SortProps<T extends string> = {
   currentSortValue: T;
   onSortChange: React.ChangeEventHandler<HTMLSelectElement>;
-  sortOptions: React.ReactNode;
+  sortOptions: readonly SortOption[];
 };
 
 type Props<T extends string> = {
@@ -269,77 +277,33 @@ export function FilterAndSortContainer<T extends string>({
                   <div className="tablet:hidden">
                     <FilterSection defaultOpen={true} title="Sort by">
                       <div className="space-y-3">
-                        {((): React.ReactNode => {
-                          // Extract option elements from sortOptions (which may be a Fragment)
-                          let optionsArray: React.ReactNode[];
-                          if (React.isValidElement(sortProps.sortOptions)) {
-                            // If it's a Fragment, get its children
-                            if (sortProps.sortOptions.type === React.Fragment) {
-                              // AIDEV-NOTE: Type assertion needed for Fragment.props which has unknown type
-
-                              const fragmentProps = sortProps.sortOptions
-                                .props as { children: React.ReactNode };
-
-                              optionsArray = React.Children.toArray(
-                                fragmentProps.children,
-                              );
-                            } else {
-                              optionsArray = [sortProps.sortOptions];
-                            }
-                          } else {
-                            optionsArray = React.Children.toArray(
-                              sortProps.sortOptions,
-                            );
-                          }
-
-                          return optionsArray
-                            .filter(
-                              (child): child is React.ReactElement =>
-                                React.isValidElement(child) &&
-                                child.type === "option",
-                            )
-                            .map((option) => {
-                              // AIDEV-NOTE: Type assertion for option element props
-
-                              const optionProps = option.props as {
-                                children: string;
-                                value: string;
-                              };
-
-                              const value = optionProps.value;
-
-                              const label = optionProps.children;
-                              return (
-                                <label
-                                  className="
-                                    flex cursor-pointer items-center gap-3
-                                  "
-                                  key={value}
-                                >
-                                  <input
-                                    checked={
-                                      sortProps.currentSortValue === value
-                                    }
-                                    className="
-                                      size-4 cursor-pointer accent-accent
-                                    "
-                                    name="sort"
-                                    onChange={(e) => {
-                                      // Create synthetic event matching select's onChange signature
-                                      // AIDEV-NOTE: Cast input change event to select change event. Safe because handler only uses target.value.
-                                      const syntheticEvent = {
-                                        target: { value: e.target.value },
-                                      } as unknown as React.ChangeEvent<HTMLSelectElement>;
-                                      sortProps.onSortChange(syntheticEvent);
-                                    }}
-                                    type="radio"
-                                    value={value}
-                                  />
-                                  <span className="text-sm">{label}</span>
-                                </label>
-                              );
-                            });
-                        })()}
+                        {sortProps.sortOptions.map(({ value, label }) => (
+                          <label
+                            className="
+                              flex cursor-pointer items-center gap-3
+                            "
+                            key={value}
+                          >
+                            <input
+                              checked={sortProps.currentSortValue === value}
+                              className="
+                                size-4 cursor-pointer accent-accent
+                              "
+                              name="sort"
+                              onChange={(e) => {
+                                // Create synthetic event matching select's onChange signature
+                                // AIDEV-NOTE: Cast input change event to select change event. Safe because handler only uses target.value.
+                                const syntheticEvent = {
+                                  target: { value: e.target.value },
+                                } as unknown as React.ChangeEvent<HTMLSelectElement>;
+                                sortProps.onSortChange(syntheticEvent);
+                              }}
+                              type="radio"
+                              value={value}
+                            />
+                            <span className="text-sm">{label}</span>
+                          </label>
+                        ))}
                       </div>
                     </FilterSection>
                   </div>

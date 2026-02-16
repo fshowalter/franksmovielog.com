@@ -22,7 +22,7 @@ import {
   reducer,
   selectHasPendingFilters,
 } from "./reducer";
-import { ReviewsFilters, SortOptions } from "./ReviewsFilters";
+import { ReviewsFilters, SORT_OPTIONS } from "./ReviewsFilters";
 import { ReviewsListItem } from "./ReviewsListItem";
 import { sortReviews } from "./sortReviews";
 
@@ -114,7 +114,7 @@ export function AllReviews({
         currentSortValue: state.sort,
         onSortChange: (e) =>
           dispatch(createSortAction(e.target.value as ReviewsSort)),
-        sortOptions: <SortOptions />,
+        sortOptions: SORT_OPTIONS,
       }}
       totalCount={totalCount}
     >

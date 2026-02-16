@@ -1,14 +1,11 @@
+import type { SortOption } from "./FilterAndSortContainer";
+
 /**
- * Component that renders sort options for collections.
- * @returns Sort option elements for collection sorting
+ * Sort options for collections.
  */
-export function CollectionSortOptions(): React.JSX.Element {
-  return (
-    <>
-      <option value="name-asc">Name (A &rarr; Z)</option>
-      <option value="name-desc">Name (Z &rarr; A)</option>
-      <option value="review-count-desc">Review Count (Most First)</option>
-      <option value="review-count-asc">Review Count (Fewest First)</option>
-    </>
-  );
-}
+export const COLLECTION_SORT_OPTIONS: readonly SortOption[] = [
+  { label: "Name (A → Z)", value: "name-asc" },
+  { label: "Name (Z → A)", value: "name-desc" },
+  { label: "Review Count (Most First)", value: "review-count-desc" },
+  { label: "Review Count (Fewest First)", value: "review-count-asc" },
+] as const;
