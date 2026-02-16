@@ -82,5 +82,4 @@ export function ReviewsFilters({
  * Sort options for the reviews page.
  */
 
-
-export {REVIEWED_TITLE_SORT_OPTIONS as SORT_OPTIONS} from "~/components/filter-and-sort/ReviewedTitleSortOptions";
+export { REVIEWED_TITLE_SORT_OPTIONS as SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";

@@ -118,7 +118,12 @@ export function FilterAndSortContainer<T extends string>({
         });
       }
     },
-    [filterDrawerVisible, handleCloseDrawer, onFilterDrawerOpen, sortProps.currentSortValue],
+    [
+      filterDrawerVisible,
+      handleCloseDrawer,
+      onFilterDrawerOpen,
+      sortProps.currentSortValue,
+    ],
   );
 
   // Handle escape key
