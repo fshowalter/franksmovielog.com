@@ -277,18 +277,14 @@ export function FilterAndSortContainer<T extends string>({
                   <div className="tablet:hidden">
                     <FilterSection defaultOpen={true} title="Sort by">
                       <div className="space-y-3">
-                        {sortProps.sortOptions.map(({ value, label }) => (
+                        {sortProps.sortOptions.map(({ label, value }) => (
                           <label
-                            className="
-                              flex cursor-pointer items-center gap-3
-                            "
+                            className="flex cursor-pointer items-center gap-3"
                             key={value}
                           >
                             <input
                               checked={sortProps.currentSortValue === value}
-                              className="
-                                size-4 cursor-pointer accent-accent
-                              "
+                              className="size-4 cursor-pointer accent-accent"
                               name="sort"
                               onChange={(e) => {
                                 // Create synthetic event matching select's onChange signature

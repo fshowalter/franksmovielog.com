@@ -1,5 +1,4 @@
 import { ReviewedTitleFilters } from "~/components/filter-and-sort/ReviewedTitleFilters";
-import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 
 import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
 import type { ReviewsValue } from "./ReviewsListItem";
@@ -82,4 +81,6 @@ export function ReviewsFilters({
 /**
  * Sort options for the reviews page.
  */
-export const SORT_OPTIONS = REVIEWED_TITLE_SORT_OPTIONS;
+
+
+export {REVIEWED_TITLE_SORT_OPTIONS as SORT_OPTIONS} from "~/components/filter-and-sort/ReviewedTitleSortOptions";

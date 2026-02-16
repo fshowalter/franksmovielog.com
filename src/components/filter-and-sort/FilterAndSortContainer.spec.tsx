@@ -3,11 +3,9 @@ import { userEvent } from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import type { FilterChip } from "./AppliedFilters";
+import type { SortOption } from "./FilterAndSortContainer";
 
-import {
-  FilterAndSortContainer,
-  type SortOption,
-} from "./FilterAndSortContainer";
+import { FilterAndSortContainer } from "./FilterAndSortContainer";
 import {
   clickCloseFilters,
   clickToggleFilters,

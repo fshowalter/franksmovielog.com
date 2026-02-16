@@ -1,11 +1,9 @@
 import { useEffect, useReducer, useRef } from "react";
 
 import type { PosterImageProps } from "~/api/posters";
+import type { SortOption } from "~/components/filter-and-sort/FilterAndSortContainer";
 
-import {
-  FilterAndSortContainer,
-  type SortOption,
-} from "~/components/filter-and-sort/FilterAndSortContainer";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { useFilteredValues } from "~/hooks/useFilteredValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 

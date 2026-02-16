@@ -73,7 +73,7 @@ export function FilterAndSortHeader<T extends string>({
             onChange={onSortChange}
             value={currentSortValue}
           >
-            {sortOptions.map(({ value, label }) => (
+            {sortOptions.map(({ label, value }) => (
               <option key={value} value={value}>
                 {label}
               </option>

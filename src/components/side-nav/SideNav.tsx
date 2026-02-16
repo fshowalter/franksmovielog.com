@@ -20,7 +20,7 @@ export function SideNav({
       <div className={`flex flex-col text-md font-semibold tracking-wide`}>
         <h3
           className={`
-            sr-only shrink-0 snap-start px-4 py-4 font-sans text-xs font-normal
+            sr-only shrink-0 snap-start p-4 font-sans text-xs font-normal
             tracking-wide whitespace-nowrap text-subtle uppercase
           `}
         >
