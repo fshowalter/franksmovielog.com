@@ -9,12 +9,14 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 ## Current Behavior
 
 ### Mobile (< 640px)
+
 - "Filter" button in header
 - Sort dropdown visible in header between results count and filter button
 - Filter drawer contains applied filters and filter sections
 - Sort controls are separate from filters
 
 ### Desktop (≥ 640px)
+
 - "Filter" button in header
 - Sort dropdown visible in header
 - Filter drawer contains applied filters and filter sections
@@ -23,6 +25,7 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 ## Proposed Behavior
 
 ### Mobile (< 640px)
+
 1. **Header Changes:**
    - Change "Filter" button text to "Filter & Sort"
    - Hide the sort dropdown completely
@@ -36,6 +39,7 @@ Improve the mobile user experience for filtering and sorting by consolidating so
    - Apply immediately (no need for "View Results" button for sort-only changes)
 
 ### Desktop (≥ 640px)
+
 - No changes
 - Maintain existing header sort dropdown
 - Maintain existing "Filter" button text
@@ -44,6 +48,7 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 ## User Flows
 
 ### Mobile Sort Change
+
 1. User taps "Filter & Sort" button
 2. Drawer opens from right
 3. If filters are applied, they appear first as chips
@@ -54,6 +59,7 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 8. User can continue to adjust filters or close drawer
 
 ### Mobile Filter Change
+
 1. User taps "Filter & Sort" button
 2. Drawer opens
 3. User adjusts filters in various sections
@@ -62,6 +68,7 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 6. Filters apply, drawer closes, list updates
 
 ### Mobile Combined Filter + Sort
+
 1. User opens drawer
 2. User changes sort (applies immediately)
 3. User adjusts filters (pending)
@@ -71,12 +78,14 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 ## Critical Implementation Requirements
 
 ### 1. Responsive Behavior
+
 - **MUST** use `tablet:` breakpoint (640px) as the dividing line
 - **MUST** show "Filter & Sort" text only on mobile (< 640px)
 - **MUST** hide header sort dropdown only on mobile (< 640px)
 - **MUST** show drawer sort section only on mobile (< 640px)
 
 ### 2. Sort Section Structure
+
 - **MUST** use `FilterSection` component for consistency
 - **MUST** use radio inputs (native HTML radio buttons)
 - **MUST** display sort options in same order as dropdown
@@ -84,6 +93,7 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 - **MUST** position sort section after `AppliedFilters` but before other filter sections
 
 ### 3. Sort Interaction
+
 - **MUST** apply sort changes immediately (no delay)
 - **MUST** keep drawer open after sort selection
 - **MUST** scroll list to top when sort changes
@@ -91,6 +101,7 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 - **MUST** maintain existing `onSortChange` handler behavior
 
 ### 4. Accessibility
+
 - **MUST** use semantic radio button group with proper fieldset/legend
 - **MUST** provide clear labels for each sort option
 - **MUST** indicate current selection with `checked` attribute
@@ -98,12 +109,14 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 - **MUST** maintain focus management within drawer
 
 ### 5. Component API
+
 - **MUST NOT** break existing `FilterAndSortContainer` props
 - **MUST NOT** require changes to consumer components (pages using the container)
 - **SHOULD** keep `sortProps` prop structure unchanged
 - **MAY** add internal helpers for radio button rendering
 
 ### 6. Testing Requirements
+
 - **MUST** add tests for mobile vs desktop rendering
 - **MUST** verify "Filter & Sort" text appears only on mobile
 - **MUST** verify header dropdown hidden on mobile, visible on desktop
@@ -114,6 +127,7 @@ Improve the mobile user experience for filtering and sorting by consolidating so
 ## Visual Design Notes
 
 Based on the reference site, the sort section should:
+
 - Use the same `FilterSection` collapsible component as other filters
 - Title: "Sort by"
 - Default state: Open (like other filter sections)
@@ -123,6 +137,7 @@ Based on the reference site, the sort section should:
 ## Files to Modify
 
 ### Primary Changes
+
 1. `src/components/filter-and-sort/FilterAndSortHeader.tsx`
    - Add responsive class to hide sort dropdown on mobile
    - Change button text to "Filter & Sort" on mobile
@@ -133,11 +148,13 @@ Based on the reference site, the sort section should:
    - Render radio button list
 
 ### New Components (Optional)
+
 3. `src/components/filter-and-sort/SortSection.tsx` (if needed)
    - Encapsulate sort radio button logic
    - Reusable component for different sort option types
 
 ### Tests to Update
+
 4. `src/components/filter-and-sort/FilterAndSortHeader.spec.tsx`
    - Test responsive button text
    - Test responsive sort dropdown visibility
