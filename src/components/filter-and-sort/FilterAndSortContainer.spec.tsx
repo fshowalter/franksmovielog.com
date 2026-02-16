@@ -537,7 +537,7 @@ describe("FilterAndSortContainer", () => {
       expect(unselectedRadio?.checked).toBe(false);
     });
 
-    it("calls onSortChange when radio button is selected", async ({
+    it("does not call onSortChange immediately when radio button is selected", async ({
       expect,
     }) => {
       const user = userEvent.setup();
@@ -568,6 +568,49 @@ describe("FilterAndSortContainer", () => {
         await user.click(titleDescRadio);
       }
 
+      // Sort should NOT be applied immediately - only when "View Results" is clicked
+      expect(onSortChange).not.toHaveBeenCalled();
+    });
+
+    it("calls onSortChange when View Results is clicked after changing sort", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const onSortChange = vi.fn();
+      const onApplyFilters = vi.fn();
+      const props = createMockProps({
+        sortProps: {
+          ...mockProps.sortProps,
+          onSortChange,
+        },
+        onApplyFilters,
+      });
+
+      const { container } = render(
+        <FilterAndSortContainer {...props}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      await clickToggleFilters(user);
+
+      const radioButtons = container.querySelectorAll<HTMLInputElement>(
+        'input[type="radio"][name="sort"]',
+      );
+      const titleDescRadio = [...radioButtons].find(
+        (radio) => radio.value === "title-desc",
+      );
+
+      if (titleDescRadio) {
+        await user.click(titleDescRadio);
+      }
+
+      // Click "View Results" button
+      const viewResultsButton = screen.getByRole("button", {
+        name: /View \d+ Results/,
+      });
+      await user.click(viewResultsButton);
+
       expect(onSortChange).toHaveBeenCalledTimes(1);
       expect(onSortChange).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -576,6 +619,7 @@ describe("FilterAndSortContainer", () => {
           }) as { value: string },
         }),
       );
+      expect(onApplyFilters).toHaveBeenCalledTimes(1);
     });
 
     it("keeps drawer open after sort selection", async ({ expect }) => {
@@ -606,6 +650,55 @@ describe("FilterAndSortContainer", () => {
 
       // Drawer should still be open
       expect(filterButton.getAttribute("aria-expanded")).toBe("true");
+    });
+
+    it("resets sort selection when drawer is closed without clicking View Results", async ({
+      expect,
+    }) => {
+      const user = userEvent.setup();
+      const onSortChange = vi.fn();
+      const props = createMockProps({
+        sortProps: {
+          ...mockProps.sortProps,
+          onSortChange,
+        },
+      });
+
+      const { container } = render(
+        <FilterAndSortContainer {...props}>
+          <div>Test Content</div>
+        </FilterAndSortContainer>,
+      );
+
+      // Open drawer and change sort
+      await clickToggleFilters(user);
+      let radioButtons = container.querySelectorAll<HTMLInputElement>(
+        'input[type="radio"][name="sort"]',
+      );
+      const titleDescRadio = [...radioButtons].find(
+        (radio) => radio.value === "title-desc",
+      );
+      if (titleDescRadio) {
+        await user.click(titleDescRadio);
+        expect(titleDescRadio.checked).toBe(true);
+      }
+
+      // Close drawer by clicking close button
+      const closeButton = screen.getByRole("button", { name: "Close filters" });
+      await user.click(closeButton);
+
+      // onSortChange should not have been called
+      expect(onSortChange).not.toHaveBeenCalled();
+
+      // Re-open drawer - original sort should be selected again
+      await clickToggleFilters(user);
+      radioButtons = container.querySelectorAll<HTMLInputElement>(
+        'input[type="radio"][name="sort"]',
+      );
+      const titleAscRadio = [...radioButtons].find(
+        (radio) => radio.value === "title-asc",
+      );
+      expect(titleAscRadio?.checked).toBe(true);
     });
   });
 
