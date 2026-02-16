@@ -161,6 +161,24 @@ function clearFilters<TValue, TState extends FiltersState<TValue>>(
  * Remove a specific filter from both pending and active filters
  * AIDEV-NOTE: Removes from both pending and active to provide immediate feedback
  * when user explicitly removes a filter via chip click
+ *
+ * AIDEV-NOTE: Child reducers often override this behavior for domain-specific handling.
+ * Common scenarios that require overriding:
+ *
+ * 1. Array-valued filters (genres, medium, venue, etc.):
+ *    - Base implementation removes entire filter key
+ *    - But chips like "genre-horror" need to remove single value from genres array
+ *    - Child must extract value from filterKey and filter the array
+ *
+ * 2. Multi-select filters with kebab-case IDs:
+ *    - Chip IDs like "medium-blu-ray" need conversion to "Blu Ray"
+ *    - Then remove from array while preserving other values
+ *
+ * CRITICAL: When overriding, child reducers MUST:
+ * - Update BOTH activeFilterValues AND pendingFilterValues
+ * - Otherwise UI won't update immediately when chip is clicked
+ * - See titleFiltersReducer.ts, maybeReviewedTitleFiltersReducer.ts,
+ *   Viewings.reducer.ts for examples
  */
 function removeAppliedFilter<TValue, TState extends FiltersState<TValue>>(
   state: TState,
