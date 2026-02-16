@@ -70,6 +70,9 @@ export function FilterAndSortContainer<T extends string>({
   const filtersRef = useRef<HTMLDivElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
   const prevSortValueRef = useRef<T>(sortProps.currentSortValue);
+  // AIDEV-NOTE: Used to suppress the useEffect scroll when sort changes via the mobile drawer,
+  // since the drawer's "View Results" handler scrolls explicitly.
+  const suppressSortScrollRef = useRef(false);
   const formRef = useRef<HTMLFormElement | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
 
@@ -109,11 +112,7 @@ export function FilterAndSortContainer<T extends string>({
         });
       }
     },
-    [
-      filterDrawerVisible,
-      handleCloseDrawer,
-      onFilterDrawerOpen,
-    ],
+    [filterDrawerVisible, handleCloseDrawer, onFilterDrawerOpen],
   );
 
   // Handle escape key
@@ -129,11 +128,15 @@ export function FilterAndSortContainer<T extends string>({
     return (): void => document.removeEventListener("keydown", handleKeyDown);
   }, [filterDrawerVisible, handleCloseDrawer]);
 
-  // Scroll to top of list when sort changes
+  // Scroll to top of list when sort changes via desktop select
   useEffect(() => {
     if (prevSortValueRef.current !== sortProps.currentSortValue) {
       prevSortValueRef.current = sortProps.currentSortValue;
-      listRef.current?.scrollIntoView({ behavior: "smooth" });
+      if (suppressSortScrollRef.current) {
+        suppressSortScrollRef.current = false;
+      } else {
+        listRef.current?.scrollIntoView({ behavior: "smooth" });
+      }
     }
   }, [sortProps.currentSortValue]);
 
@@ -358,6 +361,7 @@ export function FilterAndSortContainer<T extends string>({
                     onClick={() => {
                       const formData = new FormData(formRef.current!);
                       const sortValue = formData.get("sort") as T;
+                      suppressSortScrollRef.current = true;
                       sortProps.onSortChange(sortValue);
                       onApplyFilters();
                       handleCloseDrawer(false); // Don't reset filters/sort when applying
