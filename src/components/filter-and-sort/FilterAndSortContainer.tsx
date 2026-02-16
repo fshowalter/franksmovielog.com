@@ -150,9 +150,8 @@ export function FilterAndSortContainer<T extends string>({
       <div className={`group/list-with-filters mx-auto bg-subtle`}>
         <div
           className={`
-            sticky top-[calc(0px+var(--scroll-offset,0px))] z-15
-            scroll-mt-[calc(0px+var(--scroll-offset,0px))] border-b
-            border-default bg-default text-xs
+            sticky top-0 z-15 scroll-mt-0 border-b border-default bg-default
+            text-xs
             tablet:col-span-full
           `}
         >
@@ -171,8 +170,8 @@ export function FilterAndSortContainer<T extends string>({
           <div
             className={`
               mx-auto max-w-(--breakpoint-desktop) grow
-              scroll-mt-[calc(var(--filter-and-sort-container-scroll-offset,0px)+var(--scroll-offset,0px))]
-              pb-10 [--filter-and-sort-container-scroll-offset:148px]
+              scroll-mt-(--filter-and-sort-container-scroll-offset,0px) pb-10
+              [--filter-and-sort-container-scroll-offset:89px]
               tablet:px-container
               tablet:[--filter-and-sort-container-scroll-offset:97px]
             `}
