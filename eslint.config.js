@@ -91,6 +91,12 @@ export default defineConfig(
     },
     rules: {
       ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
+      "better-tailwindcss/enforce-consistent-line-wrapping": [
+        "error",
+        {
+          strictness: "loose",
+        },
+      ],
       "better-tailwindcss/no-conflicting-classes": "error",
     },
     settings: {
