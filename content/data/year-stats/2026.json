@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 15,
-  "viewingCount": 32,
-  "titleCount": 32,
+  "viewingCount": 33,
+  "titleCount": 33,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -14,7 +14,7 @@
     },
     {
       "name": "Watch TCM",
-      "count": 6
+      "count": 7
     },
     {
       "name": "DVD",
@@ -41,7 +41,7 @@
     },
     {
       "name": "1940s",
-      "count": 3
+      "count": 4
     },
     {
       "name": "1950s",
@@ -259,6 +259,75 @@
           "viewingDate": "2026-02-12",
           "viewingSequence": 3015,
           "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Frank Sinatra",
+      "count": 3,
+      "slug": "frank-sinatra",
+      "viewings": [
+        {
+          "imdbId": "tt0037313",
+          "title": "Step Lively",
+          "sortTitle": "step-lively-1944",
+          "releaseYear": "1944",
+          "releaseDate": "1944-07-26",
+          "genres": [
+            "Comedy",
+            "Music",
+            "Romance"
+          ],
+          "slug": "step-lively-1944",
+          "grade": "D-",
+          "gradeValue": 5,
+          "reviewDate": "2026-02-14",
+          "reviewSequence": 3017,
+          "viewingDate": "2026-02-14",
+          "viewingSequence": 3017,
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0057071",
+          "title": "4 for Texas",
+          "sortTitle": "4-for-texas-1963",
+          "releaseYear": "1963",
+          "releaseDate": "1963-12-18",
+          "genres": [
+            "Comedy",
+            "Western"
+          ],
+          "slug": "4-for-texas-1963",
+          "grade": "D+",
+          "gradeValue": 7,
+          "reviewDate": "2026-02-16",
+          "reviewSequence": 3019,
+          "viewingDate": "2026-02-16",
+          "viewingSequence": 3019,
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "imdbId": "tt0040513",
+          "title": "The Kissing Bandit",
+          "sortTitle": "kissing-bandit-1948",
+          "releaseYear": "1948",
+          "releaseDate": "1948-11-18",
+          "genres": [
+            "Comedy",
+            "Musical",
+            "Western"
+          ],
+          "slug": "the-kissing-bandit-1948",
+          "grade": "F+",
+          "gradeValue": 4,
+          "reviewDate": "2026-02-18",
+          "reviewSequence": 3021,
+          "viewingDate": "2026-02-18",
+          "viewingSequence": 3021,
+          "medium": "Watch TCM",
           "venue": null
         }
       ]
@@ -596,53 +665,6 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Lo Lieh",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "imdbId": "tt0076519",
-          "title": "Jade Tiger",
-          "sortTitle": "jade-tiger-1977",
-          "releaseYear": "1977",
-          "releaseDate": "1977-05-07",
-          "genres": [
-            "Action",
-            "Adventure"
-          ],
-          "slug": "jade-tiger-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2026-01-27",
-          "reviewSequence": 3000,
-          "viewingDate": "2026-01-27",
-          "viewingSequence": 3000,
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "imdbId": "tt0085840",
-          "title": "Mercenaries from Hong Kong",
-          "sortTitle": "mercenaries-from-hong-kong-1982",
-          "releaseYear": "1982",
-          "releaseDate": "1982-12-22",
-          "genres": [
-            "Action",
-            "Drama"
-          ],
-          "slug": "mercenaries-from-hong-kong-1982",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2026-02-01",
-          "reviewSequence": 3005,
-          "viewingDate": "2026-02-01",
-          "viewingSequence": 3005,
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
@@ -696,5 +718,5 @@
       ]
     }
   ],
-  "reviewCount": 32
+  "reviewCount": 33
 }
