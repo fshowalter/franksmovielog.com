@@ -38,7 +38,7 @@ export function PosterListItem({
         transform-gpu flex-row gap-x-[5%] px-container py-4 transition-transform
         duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
-        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:bg-transparent tablet:p-6
         ${
           hasReview
             ? `
