@@ -6,9 +6,9 @@ import { Layout } from "~/components/layout/Layout";
 import { getYearStatsProps } from "~/features/stats/getStatsProps";
 import { YearStats } from "~/features/stats/YearStats";
 
-interface Props {
+type Props = {
   year: string;
-}
+};
 
 export async function getStaticPaths() {
   const statYears = await allStatYears();

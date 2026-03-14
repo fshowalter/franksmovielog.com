@@ -20,24 +20,24 @@ chokidar
       );
 
       if (/\/reviews\//.test(sourcePath)) {
-        dest = `${import.meta.dirname}/content/reviews/${name}`;
+        dest = `${import.meta.dirname}/../content/reviews/${name}`;
       }
 
       if (/\/viewings\//.test(sourcePath)) {
-        dest = `${import.meta.dirname}/content/viewings/${name}`;
+        dest = `${import.meta.dirname}/../content/viewings/${name}`;
       }
 
       if (/\/export\//.test(sourcePath)) {
-        dest = `${import.meta.dirname}/content/data/${name}`;
+        dest = `${import.meta.dirname}/../content/data/${name}`;
+      }
 
+      if (dest) {
         const destPath = path.parse(dest).dir;
 
         if (!fs.existsSync(destPath)) {
           fs.mkdirSync(destPath);
         }
-      }
 
-      if (dest) {
         fs.copyFileSync(sourcePath, dest);
       }
     }

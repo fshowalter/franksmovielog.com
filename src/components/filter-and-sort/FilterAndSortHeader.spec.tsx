@@ -1,3 +1,5 @@
+import type { ComponentProps } from "react";
+
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createRef } from "react";
@@ -8,8 +10,12 @@ import type { SortProps } from "./FilterAndSortContainer";
 import { FilterAndSortHeader } from "./FilterAndSortHeader";
 
 describe("FilterAndSortHeader", () => {
-  let mockOnFilterClick: ReturnType<typeof vi.fn>;
-  let mockOnSortChange: ReturnType<typeof vi.fn>;
+  let mockOnFilterClick: ComponentProps<
+    typeof FilterAndSortHeader
+  >["onFilterClick"];
+  let mockOnSortChange: ComponentProps<
+    typeof FilterAndSortHeader
+  >["sortProps"]["onSortChange"];
   let toggleButtonRef: React.RefObject<HTMLButtonElement | null>;
 
   const defaultSortProps: SortProps<string> = {

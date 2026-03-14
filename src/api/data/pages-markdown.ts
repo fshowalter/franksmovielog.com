@@ -1,6 +1,6 @@
+import { z } from "astro/zod";
 import matter from "gray-matter";
 import { promises as fs } from "node:fs";
-import { z } from "zod";
 
 import { perfLogger } from "~/utils/performanceLogger";
 

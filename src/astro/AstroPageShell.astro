@@ -23,9 +23,8 @@ const siteMeta = {
 };
 
 const { canonical, meta, openGraph, title } = Astro.props;
-let pageTitle;
 
-pageTitle = title.startsWith(siteMeta.title)
+const pageTitle = title.startsWith(siteMeta.title)
   ? title
   : `${title} - ${siteMeta.title}`;
 

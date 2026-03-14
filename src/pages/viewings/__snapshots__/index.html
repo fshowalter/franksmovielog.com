@@ -97,7 +97,7 @@
               8: (t) => new Uint8Array(t),
               9: (t) => new Uint16Array(t),
               10: (t) => new Uint32Array(t),
-              11: (t) => (1 / 0) * t,
+              11: (t) => Number.POSITIVE_INFINITY * t,
             },
             o = (t) => {
               let [l, e] = t;
