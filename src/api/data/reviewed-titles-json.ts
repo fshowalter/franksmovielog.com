@@ -1,5 +1,5 @@
+import { z } from "astro/zod";
 import { promises as fs } from "node:fs";
-import { z } from "zod";
 
 import { perfLogger } from "~/utils/performanceLogger";
 
@@ -115,7 +115,7 @@ const ReviewedTitleJsonSchema = z
     principalCastNames: z.array(z.string()),
     releaseDate: z.string(),
     releaseYear: z.string(),
-    reviewDate: z.date({ coerce: true }),
+    reviewDate: z.coerce.date(),
     reviewSequence: z.number(),
     runtimeMinutes: z.number(),
     slug: z.string(),

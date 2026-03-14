@@ -1,5 +1,5 @@
+import { z } from "astro/zod";
 import { promises as fs } from "node:fs";
-import { z } from "zod";
 
 import { perfLogger } from "~/utils/performanceLogger";
 
@@ -15,7 +15,7 @@ const OverratedJsonSchema = z
     imdbId: z.string(),
     releaseDate: z.string(),
     releaseYear: z.string(),
-    reviewDate: z.date({ coerce: true }),
+    reviewDate: z.coerce.date(),
     reviewSequence: z.number(),
     slug: z.string(),
     sortTitle: z.string(),
