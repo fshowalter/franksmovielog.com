@@ -5,7 +5,7 @@ import sharp from "sharp";
 /**
  * Props for backdrop images.
  */
-export type BackdropImageProps = {
+type BackdropImageProps = {
   src: string;
   srcSet: string;
 };

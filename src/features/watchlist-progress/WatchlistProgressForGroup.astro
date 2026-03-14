@@ -1,0 +1,137 @@
+---
+import type { WatchlistProgressDetail } from "~/collections/watchlistProgress";
+
+import Avatar from "~/components/avatar/Avatar.astro";
+import BarGradient from "~/components/bar-gradient/BarGradient.astro";
+
+type Props = {
+  class?: string;
+  label: string;
+  values: WatchlistProgressDetail[];
+  valueType: ValueType;
+};
+
+type ValueType = "collection" | "director" | "performer" | "writer";
+
+const { class: className, label, values, valueType } = Astro.props;
+
+const AvatarImageConfig = {
+  height: 48,
+  width: 48,
+};
+---
+
+<section
+  class:list={[
+    `
+      w-full
+      laptop:w-auto laptop:basis-[calc(50%-16px)]
+    `,
+    className,
+  ]}
+>
+  <h2
+    class={`
+      px-container py-8 font-sans text-xs font-bold tracking-wide text-muted
+      uppercase
+      laptop:px-8
+    `}
+  >
+    {label}
+  </h2>
+  <div
+    class={`
+      grid w-full
+      grid-cols-[var(--container-padding)_auto_24px_1fr_var(--container-padding)]
+      gap-y-1
+      tablet:whitespace-nowrap
+      laptop:grid-cols-[2rem_auto_24px_1fr_2rem]
+    `}
+  >
+    {
+      values.map((progressDetails) => {
+        return (
+          <div
+            class={`
+              group/list-item relative col-span-5 grid transform-gpu
+              grid-cols-subgrid grid-rows-[1fr_auto_auto_1fr] bg-default py-4
+              text-subtle transition-all duration-500
+              last-of-type:shadow-none
+              tablet-landscape:has-[a:hover]:z-hover
+              tablet-landscape:has-[a:hover]:scale-[102.5%]
+              tablet-landscape:has-[a:hover]:shadow-all
+              tablet-landscape:has-[a:hover]:drop-shadow-2xl
+            `}
+          >
+            <div
+              class={`
+                relative col-start-2 row-span-4 transition-all
+                after:absolute after:top-0 after:left-0
+                after:z-watchlist-overlay after:size-full after:overflow-hidden
+                after:rounded-full after:bg-default after:opacity-20
+                after:duration-500
+                group-has-[a:hover]/list-item:after:opacity-0
+              `}
+            >
+              <div class={`w-12 overflow-hidden rounded-full`}>
+                <Avatar
+                  class={`
+                    w-full transform-gpu transition-transform duration-500
+                    group-has-[a:hover]/list-item:scale-110
+                  `}
+                  imageConfig={AvatarImageConfig}
+                  loading="lazy"
+                  slug={progressDetails.slug}
+                />
+              </div>
+            </div>
+            <div
+              class={`col-start-4 row-start-2 flex items-center justify-between`}
+            >
+              {progressDetails.slug ? (
+                <span>
+                  <a
+                    class={`
+                      pb-1 text-base leading-none font-normal text-default
+                      transition-all duration-500
+                      after:absolute after:top-0 after:left-0 after:z-hover
+                      after:size-full after:opacity-0
+                      hover:text-accent
+                    `}
+                    href={
+                      valueType === "collection"
+                        ? `/collections/${progressDetails.slug}/`
+                        : `/cast-and-crew/${progressDetails.slug}/`
+                    }
+                  >
+                    {progressDetails.name}
+                  </a>
+                </span>
+              ) : (
+                <span
+                  class={`block pb-1 font-sans text-sm leading-none text-subtle`}
+                >
+                  {progressDetails.name}
+                </span>
+              )}
+              <div
+                class={`
+                  self-center pb-1 text-right font-sans text-xs leading-0
+                  text-nowrap
+                `}
+              >
+                {progressDetails.reviewCount} / {progressDetails.titleCount}
+              </div>
+            </div>
+            <div class="col-start-4 row-start-3 bg-subtle">
+              <BarGradient
+                maxValue={progressDetails.titleCount}
+                value={progressDetails.reviewCount}
+              />
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>

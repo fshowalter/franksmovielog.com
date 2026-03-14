@@ -1,16 +1,9 @@
 import { collator } from "~/utils/collator";
 
-import type { WatchlistProgressJson } from "./data/watchlist-progress-json";
 import type { WatchlistTitleJson } from "./data/watchlist-titles-json";
 
-import { watchlistProgressJson } from "./data/watchlist-progress-json";
 import { allWatchlistTitlesJson } from "./data/watchlist-titles-json";
 import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
-
-/**
- * Watchlist progress statistics.
- */
-export type WatchlistProgress = WatchlistProgressJson & {};
 
 type WatchlistTitle = WatchlistTitleJson & {};
 
@@ -75,12 +68,4 @@ export async function allWatchlistTitles(): Promise<WatchlistTitles> {
     ),
     watchlistTitles,
   };
-}
-
-/**
- * Retrieves watchlist progress statistics.
- * @returns Watchlist progress data including counts and completion metrics
- */
-export async function watchlistProgress(): Promise<WatchlistProgress> {
-  return await watchlistProgressJson();
 }
