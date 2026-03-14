@@ -1,4 +1,4 @@
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 import { getViteConfig } from "astro/config";
 
 export default getViteConfig({
@@ -6,7 +6,7 @@ export default getViteConfig({
     coverage: {
       exclude: ["src/api/data/utils/getContentPath.ts"],
       include: ["src/**"],
-      provider: "istanbul",
+      provider: "v8",
     },
     globals: true, // needed for testing-library teardown
     projects: [
