@@ -130,7 +130,7 @@ const ViewingSchema = z
     },
   );
 
-export const readings = defineCollection({
+export const viewings = defineCollection({
   loader: {
     load: (loaderContext) =>
       loadMarkdownDirectory({

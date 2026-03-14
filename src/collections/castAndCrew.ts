@@ -64,7 +64,7 @@ const CastAndCrewMemberSchema = z.object({
   titles: z.array(CastAndCrewMemberTitleSchema),
 });
 
-export const reviewedAuthors = defineCollection({
+export const castAndCrew = defineCollection({
   loader: {
     load: (loaderContext: LoaderContext) =>
       loadJsonDirectory({
