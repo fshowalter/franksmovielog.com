@@ -82,17 +82,7 @@
       "imdbId": "tt0051554",
       "title": "Horror of Dracula",
       "releaseYear": "1958",
-      "sortTitle": "horror-of-dracula-1958",
-      "releaseDate": "1958-05-08",
-      "genres": [
-        "Drama",
-        "Horror"
-      ],
-      "slug": "horror-of-dracula-1958",
-      "grade": "A-",
-      "gradeValue": 14,
-      "reviewDate": "2020-12-08",
-      "reviewSequence": 2061,
+      "reviewSlug": "horror-of-dracula-1958",
       "count": 2
     }
   ],
@@ -103,65 +93,26 @@
       "slug": "dario-argento",
       "viewings": [
         {
-          "imdbId": "tt1852770",
           "title": "Dracula 3D",
-          "sortTitle": "dracula-3d-2012",
           "releaseYear": "2012",
-          "releaseDate": "2012-05-15",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-02-01",
-          "viewingSequence": 1493,
+          "reviewSlug": null,
+          "date": "2014-02-01",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0065143",
           "title": "The Bird with the Crystal Plumage",
-          "sortTitle": "bird-with-the-crystal-plumage-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-02-27",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-bird-with-the-crystal-plumage-1970",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2021-01-22",
-          "reviewSequence": 2119,
-          "viewingDate": "2014-05-17",
-          "viewingSequence": 1513,
+          "reviewSlug": "the-bird-with-the-crystal-plumage-1970",
+          "date": "2014-05-17",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0080923",
           "title": "Inferno",
-          "sortTitle": "inferno-1980",
           "releaseYear": "1980",
-          "releaseDate": "1980-02-07",
-          "genres": [
-            "Horror"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-05-31",
-          "viewingSequence": 1518,
+          "reviewSlug": null,
+          "date": "2014-05-31",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -173,42 +124,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2458106",
           "title": "Ninja: Shadow of a Tear",
-          "sortTitle": "ninja-shadow-of-a-tear-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-09-18",
-          "genres": [
-            "Action",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-11",
-          "viewingSequence": 1485,
+          "reviewSlug": null,
+          "date": "2014-01-11",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt1182921",
           "title": "Ninja",
-          "sortTitle": "ninja-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-11-22",
-          "genres": [
-            "Action",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-27",
-          "viewingSequence": 1492,
+          "reviewSlug": null,
+          "date": "2014-01-27",
           "medium": "Amazon",
           "venue": null
         }
@@ -220,44 +147,18 @@
       "slug": "quentin-tarantino",
       "viewings": [
         {
-          "imdbId": "tt0266697",
           "title": "Kill Bill: Vol. 1",
-          "sortTitle": "kill-bill-vol-1-2003",
           "releaseYear": "2003",
-          "releaseDate": "2003-09-29",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "kill-bill-vol-1-2003",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2003-10-17",
-          "reviewSequence": 55,
-          "viewingDate": "2014-02-16",
-          "viewingSequence": 1497,
+          "reviewSlug": "kill-bill-vol-1-2003",
+          "date": "2014-02-16",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0378194",
           "title": "Kill Bill: Vol. 2",
-          "sortTitle": "kill-bill-vol-2-2004",
           "releaseYear": "2004",
-          "releaseDate": "2004-03-22",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "kill-bill-vol-2-2004",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2004-05-02",
-          "reviewSequence": 149,
-          "viewingDate": "2014-03-29",
-          "viewingSequence": 1503,
+          "reviewSlug": "kill-bill-vol-2-2004",
+          "date": "2014-03-29",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -269,42 +170,18 @@
       "slug": "terence-fisher",
       "viewings": [
         {
-          "imdbId": "tt0051554",
           "title": "Horror of Dracula",
-          "sortTitle": "horror-of-dracula-1958",
           "releaseYear": "1958",
-          "releaseDate": "1958-05-08",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "horror-of-dracula-1958",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2020-12-08",
-          "reviewSequence": 2061,
-          "viewingDate": "2014-08-16",
-          "viewingSequence": 1543,
+          "reviewSlug": "horror-of-dracula-1958",
+          "date": "2014-08-16",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0051554",
           "title": "Horror of Dracula",
-          "sortTitle": "horror-of-dracula-1958",
           "releaseYear": "1958",
-          "releaseDate": "1958-05-08",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "horror-of-dracula-1958",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2020-12-08",
-          "reviewSequence": 2061,
-          "viewingDate": "2014-12-20",
-          "viewingSequence": 1581,
+          "reviewSlug": "horror-of-dracula-1958",
+          "date": "2014-12-20",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -316,44 +193,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt1853739",
           "title": "You're Next",
-          "sortTitle": "youre-next-2011",
           "releaseYear": "2011",
-          "releaseDate": "2011-09-09",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-08-22",
-          "viewingSequence": 1545,
+          "reviewSlug": null,
+          "date": "2014-08-22",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt2450186",
           "title": "V/H/S/2",
-          "sortTitle": "v-h-s-2-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-01-16",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-25",
-          "viewingSequence": 1565,
+          "reviewSlug": null,
+          "date": "2014-10-25",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -365,44 +216,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0059162",
           "title": "The Face of Fu Manchu",
-          "sortTitle": "face-of-fu-manchu-1965",
           "releaseYear": "1965",
-          "releaseDate": "1965-08-06",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-18",
-          "viewingSequence": 1561,
+          "reviewSlug": null,
+          "date": "2014-10-18",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0060188",
           "title": "The Brides of Fu Manchu",
-          "sortTitle": "brides-of-fu-manchu-1966",
           "releaseYear": "1966",
-          "releaseDate": "1966-09-02",
-          "genres": [
-            "Adventure",
-            "Crime"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-18",
-          "viewingSequence": 1562,
+          "reviewSlug": null,
+          "date": "2014-10-18",
           "medium": "DVD",
           "venue": null
         }
@@ -414,44 +239,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2450186",
           "title": "V/H/S/2",
-          "sortTitle": "v-h-s-2-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-01-16",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-25",
-          "viewingSequence": 1565,
+          "reviewSlug": null,
+          "date": "2014-10-25",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt1988621",
           "title": "Exists",
-          "sortTitle": "exists-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-03-07",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-26",
-          "viewingSequence": 1566,
+          "reviewSlug": null,
+          "date": "2014-10-26",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -465,145 +264,58 @@
       "slug": "christopher-lee",
       "viewings": [
         {
-          "imdbId": "tt0057646",
           "title": "Horror Castle",
-          "sortTitle": "horror-castle-1963",
           "releaseYear": "1963",
-          "releaseDate": "1963-08-15",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "horror-castle-1963",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2008-09-17",
-          "reviewSequence": 845,
-          "viewingDate": "2014-07-03",
-          "viewingSequence": 1531,
+          "reviewSlug": "horror-castle-1963",
+          "date": "2014-07-03",
           "medium": "TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0064727",
           "title": "The Bloody Judge",
-          "sortTitle": "bloody-judge-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-02-05",
-          "genres": [
-            "Biography",
-            "Horror"
-          ],
-          "slug": "the-bloody-judge-1970",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2014-08-02",
-          "reviewSequence": 1539,
-          "viewingDate": "2014-08-02",
-          "viewingSequence": 1539,
+          "reviewSlug": "the-bloody-judge-1970",
+          "date": "2014-08-02",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0060865",
           "title": "Psycho-Circus",
-          "sortTitle": "psycho-circus-1966",
           "releaseYear": "1966",
-          "releaseDate": "1966-04-29",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "psycho-circus-1966",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2014-08-09",
-          "reviewSequence": 1541,
-          "viewingDate": "2014-08-09",
-          "viewingSequence": 1541,
+          "reviewSlug": "psycho-circus-1966",
+          "date": "2014-08-09",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0051554",
           "title": "Horror of Dracula",
-          "sortTitle": "horror-of-dracula-1958",
           "releaseYear": "1958",
-          "releaseDate": "1958-05-08",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "horror-of-dracula-1958",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2020-12-08",
-          "reviewSequence": 2061,
-          "viewingDate": "2014-08-16",
-          "viewingSequence": 1543,
+          "reviewSlug": "horror-of-dracula-1958",
+          "date": "2014-08-16",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0059162",
           "title": "The Face of Fu Manchu",
-          "sortTitle": "face-of-fu-manchu-1965",
           "releaseYear": "1965",
-          "releaseDate": "1965-08-06",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-18",
-          "viewingSequence": 1561,
+          "reviewSlug": null,
+          "date": "2014-10-18",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0060188",
           "title": "The Brides of Fu Manchu",
-          "sortTitle": "brides-of-fu-manchu-1966",
           "releaseYear": "1966",
-          "releaseDate": "1966-09-02",
-          "genres": [
-            "Adventure",
-            "Crime"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-18",
-          "viewingSequence": 1562,
+          "reviewSlug": null,
+          "date": "2014-10-18",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0051554",
           "title": "Horror of Dracula",
-          "sortTitle": "horror-of-dracula-1958",
           "releaseYear": "1958",
-          "releaseDate": "1958-05-08",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "horror-of-dracula-1958",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2020-12-08",
-          "reviewSequence": 2061,
-          "viewingDate": "2014-12-20",
-          "viewingSequence": 1581,
+          "reviewSlug": "horror-of-dracula-1958",
+          "date": "2014-12-20",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -615,66 +327,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt1800241",
           "title": "American Hustle",
-          "sortTitle": "american-hustle-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-12-13",
-          "genres": [
-            "Crime",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-02",
-          "viewingSequence": 1482,
+          "reviewSlug": null,
+          "date": "2014-01-02",
           "medium": null,
           "venue": "AMC Tysons Corner 16"
         },
         {
-          "imdbId": "tt1877832",
           "title": "X-Men: Days of Future Past",
-          "sortTitle": "x-men-days-of-future-past-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-05-07",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "x-men-days-of-future-past-2014",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2021-02-20",
-          "reviewSequence": 2149,
-          "viewingDate": "2014-05-22",
-          "viewingSequence": 1515,
+          "reviewSlug": "x-men-days-of-future-past-2014",
+          "date": "2014-05-22",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt1951265",
           "title": "The Hunger Games: Mockingjay - Part 1",
-          "sortTitle": "hunger-games-mockingjay-part-1-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-11-04",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "the-hunger-games-mockingjay-part-1-2014",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2014-12-03",
-          "reviewSequence": 1573,
-          "viewingDate": "2014-12-03",
-          "viewingSequence": 1573,
+          "reviewSlug": "the-hunger-games-mockingjay-part-1-2014",
+          "date": "2014-12-03",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -686,70 +358,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt1549920",
           "title": "The Last Stand",
-          "sortTitle": "last-stand-2013",
           "releaseYear": "2013",
-          "releaseDate": "2012-12-19",
-          "genres": [
-            "Action",
-            "Drama",
-            "Thriller",
-            "Western"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-11",
-          "viewingSequence": 1484,
+          "reviewSlug": null,
+          "date": "2014-01-11",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt1980209",
           "title": "Pain & Gain",
-          "sortTitle": "pain-and-gain-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-04-16",
-          "genres": [
-            "Action",
-            "Biography",
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Mystery"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-05-11",
-          "viewingSequence": 1512,
+          "reviewSlug": null,
+          "date": "2014-05-11",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt2294449",
           "title": "22 Jump Street",
-          "sortTitle": "22-jump-street-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-05-30",
-          "genres": [
-            "Action",
-            "Comedy",
-            "Crime",
-            "Mystery"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-06-19",
-          "viewingSequence": 1523,
+          "reviewSlug": null,
+          "date": "2014-06-19",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -761,64 +389,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2458106",
           "title": "Ninja: Shadow of a Tear",
-          "sortTitle": "ninja-shadow-of-a-tear-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-09-18",
-          "genres": [
-            "Action",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-11",
-          "viewingSequence": 1485,
+          "reviewSlug": null,
+          "date": "2014-01-11",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0266697",
           "title": "Kill Bill: Vol. 1",
-          "sortTitle": "kill-bill-vol-1-2003",
           "releaseYear": "2003",
-          "releaseDate": "2003-09-29",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "kill-bill-vol-1-2003",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2003-10-17",
-          "reviewSequence": 55,
-          "viewingDate": "2014-02-16",
-          "viewingSequence": 1497,
+          "reviewSlug": "kill-bill-vol-1-2003",
+          "date": "2014-02-16",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0378194",
           "title": "Kill Bill: Vol. 2",
-          "sortTitle": "kill-bill-vol-2-2004",
           "releaseYear": "2004",
-          "releaseDate": "2004-03-22",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "kill-bill-vol-2-2004",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2004-05-02",
-          "reviewSequence": 149,
-          "viewingDate": "2014-03-29",
-          "viewingSequence": 1503,
+          "reviewSlug": "kill-bill-vol-2-2004",
+          "date": "2014-03-29",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -830,62 +420,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt1901040",
           "title": "Wrong",
-          "sortTitle": "wrong-2012",
           "releaseYear": "2012",
-          "releaseDate": "2012-01-04",
-          "genres": [
-            "Comedy",
-            "Mystery"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-18",
-          "viewingSequence": 1488,
+          "reviewSlug": null,
+          "date": "2014-01-18",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt1560747",
           "title": "The Master",
-          "sortTitle": "master-2012",
           "releaseYear": "2012",
-          "releaseDate": "2012-08-21",
-          "genres": [
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-08-16",
-          "viewingSequence": 1542,
+          "reviewSlug": null,
+          "date": "2014-08-16",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt2872718",
           "title": "Nightcrawler",
-          "sortTitle": "nightcrawler-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-09-05",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": "nightcrawler-2014",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2021-01-04",
-          "reviewSequence": 2098,
-          "viewingDate": "2014-11-06",
-          "viewingSequence": 1569,
+          "reviewSlug": "nightcrawler-2014",
+          "date": "2014-11-06",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -897,67 +451,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0100740",
           "title": "Tales from the Darkside: The Movie",
-          "sortTitle": "tales-from-the-darkside-the-movie-1990",
           "releaseYear": "1990",
-          "releaseDate": "1990-05-04",
-          "genres": [
-            "Comedy",
-            "Fantasy",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-02-15",
-          "viewingSequence": 1496,
+          "reviewSlug": null,
+          "date": "2014-02-15",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt2229499",
           "title": "Don Jon",
-          "sortTitle": "don-jon-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-01-14",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Romance"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-04-26",
-          "viewingSequence": 1508,
+          "reviewSlug": null,
+          "date": "2014-04-26",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt1951265",
           "title": "The Hunger Games: Mockingjay - Part 1",
-          "sortTitle": "hunger-games-mockingjay-part-1-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-11-04",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "the-hunger-games-mockingjay-part-1-2014",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2014-12-03",
-          "reviewSequence": 1573,
-          "viewingDate": "2014-12-03",
-          "viewingSequence": 1573,
+          "reviewSlug": "the-hunger-games-mockingjay-part-1-2014",
+          "date": "2014-12-03",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -969,66 +482,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0266697",
           "title": "Kill Bill: Vol. 1",
-          "sortTitle": "kill-bill-vol-1-2003",
           "releaseYear": "2003",
-          "releaseDate": "2003-09-29",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "kill-bill-vol-1-2003",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2003-10-17",
-          "reviewSequence": 55,
-          "viewingDate": "2014-02-16",
-          "viewingSequence": 1497,
+          "reviewSlug": "kill-bill-vol-1-2003",
+          "date": "2014-02-16",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0072856",
           "title": "Death Race 2000",
-          "sortTitle": "death-race-2000-1975",
           "releaseYear": "1975",
-          "releaseDate": "1975-04-30",
-          "genres": [
-            "Action",
-            "Comedy",
-            "Sci-Fi",
-            "Sport"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-03-29",
-          "viewingSequence": 1502,
+          "reviewSlug": null,
+          "date": "2014-03-29",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0378194",
           "title": "Kill Bill: Vol. 2",
-          "sortTitle": "kill-bill-vol-2-2004",
           "releaseYear": "2004",
-          "releaseDate": "2004-03-22",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "kill-bill-vol-2-2004",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2004-05-02",
-          "reviewSequence": 149,
-          "viewingDate": "2014-03-29",
-          "viewingSequence": 1503,
+          "reviewSlug": "kill-bill-vol-2-2004",
+          "date": "2014-03-29",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1040,63 +513,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2016940",
           "title": "Man of Tai Chi",
-          "sortTitle": "man-of-tai-chi-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-07-05",
-          "genres": [
-            "Action",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-03-22",
-          "viewingSequence": 1500,
+          "reviewSlug": null,
+          "date": "2014-03-22",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0133093",
           "title": "The Matrix",
-          "sortTitle": "matrix-1999",
           "releaseYear": "1999",
-          "releaseDate": "1999-03-24",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-06-14",
-          "viewingSequence": 1520,
+          "reviewSlug": null,
+          "date": "2014-06-14",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt2911666",
           "title": "John Wick",
-          "sortTitle": "john-wick-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-10-08",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-11-06",
-          "viewingSequence": 1570,
+          "reviewSlug": null,
+          "date": "2014-11-06",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -1108,64 +544,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0378194",
           "title": "Kill Bill: Vol. 2",
-          "sortTitle": "kill-bill-vol-2-2004",
           "releaseYear": "2004",
-          "releaseDate": "2004-03-22",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "kill-bill-vol-2-2004",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2004-05-02",
-          "reviewSequence": 149,
-          "viewingDate": "2014-03-29",
-          "viewingSequence": 1503,
+          "reviewSlug": "kill-bill-vol-2-2004",
+          "date": "2014-03-29",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1706620",
           "title": "Snowpiercer",
-          "sortTitle": "snowpiercer-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-07-31",
-          "genres": [
-            "Action",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-07-17",
-          "viewingSequence": 1537,
+          "reviewSlug": null,
+          "date": "2014-07-17",
           "medium": null,
           "venue": "Angelika Film Center Mosaic"
         },
         {
-          "imdbId": "tt2562232",
           "title": "Birdman or (The Unexpected Virtue of Ignorance)",
-          "sortTitle": "birdman-or-the-unexpected-virtue-of-ignorance-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-08-04",
-          "genres": [
-            "Comedy",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-11-20",
-          "viewingSequence": 1572,
+          "reviewSlug": null,
+          "date": "2014-11-20",
           "medium": null,
           "venue": "Angelika Film Center Mosaic"
         }
@@ -1177,64 +575,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2278388",
           "title": "The Grand Budapest Hotel",
-          "sortTitle": "grand-budapest-hotel-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-01-26",
-          "genres": [
-            "Comedy",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-05-29",
-          "viewingSequence": 1517,
+          "reviewSlug": null,
+          "date": "2014-05-29",
           "medium": null,
           "venue": "Angelika Film Center Mosaic"
         },
         {
-          "imdbId": "tt1972571",
           "title": "A Most Wanted Man",
-          "sortTitle": "most-wanted-man-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-01-15",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-09-11",
-          "viewingSequence": 1550,
+          "reviewSlug": null,
+          "date": "2014-09-11",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt2911666",
           "title": "John Wick",
-          "sortTitle": "john-wick-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-10-08",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-11-06",
-          "viewingSequence": 1570,
+          "reviewSlug": null,
+          "date": "2014-11-06",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -1248,86 +608,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0064727",
           "title": "The Bloody Judge",
-          "sortTitle": "bloody-judge-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-02-05",
-          "genres": [
-            "Biography",
-            "Horror"
-          ],
-          "slug": "the-bloody-judge-1970",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2014-08-02",
-          "reviewSequence": 1539,
-          "viewingDate": "2014-08-02",
-          "viewingSequence": 1539,
+          "reviewSlug": "the-bloody-judge-1970",
+          "date": "2014-08-02",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0060865",
           "title": "Psycho-Circus",
-          "sortTitle": "psycho-circus-1966",
           "releaseYear": "1966",
-          "releaseDate": "1966-04-29",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "psycho-circus-1966",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2014-08-09",
-          "reviewSequence": 1541,
-          "viewingDate": "2014-08-09",
-          "viewingSequence": 1541,
+          "reviewSlug": "psycho-circus-1966",
+          "date": "2014-08-09",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0059162",
           "title": "The Face of Fu Manchu",
-          "sortTitle": "face-of-fu-manchu-1965",
           "releaseYear": "1965",
-          "releaseDate": "1965-08-06",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-18",
-          "viewingSequence": 1561,
+          "reviewSlug": null,
+          "date": "2014-10-18",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0060188",
           "title": "The Brides of Fu Manchu",
-          "sortTitle": "brides-of-fu-manchu-1966",
           "releaseYear": "1966",
-          "releaseDate": "1966-09-02",
-          "genres": [
-            "Adventure",
-            "Crime"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-10-18",
-          "viewingSequence": 1562,
+          "reviewSlug": null,
+          "date": "2014-10-18",
           "medium": "DVD",
           "venue": null
         }
@@ -1339,65 +647,26 @@
       "slug": "dario-argento",
       "viewings": [
         {
-          "imdbId": "tt1852770",
           "title": "Dracula 3D",
-          "sortTitle": "dracula-3d-2012",
           "releaseYear": "2012",
-          "releaseDate": "2012-05-15",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-02-01",
-          "viewingSequence": 1493,
+          "reviewSlug": null,
+          "date": "2014-02-01",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0065143",
           "title": "The Bird with the Crystal Plumage",
-          "sortTitle": "bird-with-the-crystal-plumage-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-02-27",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-bird-with-the-crystal-plumage-1970",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2021-01-22",
-          "reviewSequence": 2119,
-          "viewingDate": "2014-05-17",
-          "viewingSequence": 1513,
+          "reviewSlug": "the-bird-with-the-crystal-plumage-1970",
+          "date": "2014-05-17",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0080923",
           "title": "Inferno",
-          "sortTitle": "inferno-1980",
           "releaseYear": "1980",
-          "releaseDate": "1980-02-07",
-          "genres": [
-            "Horror"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-05-31",
-          "viewingSequence": 1518,
+          "reviewSlug": null,
+          "date": "2014-05-31",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1409,64 +678,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt1852770",
           "title": "Dracula 3D",
-          "sortTitle": "dracula-3d-2012",
           "releaseYear": "2012",
-          "releaseDate": "2012-05-15",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-02-01",
-          "viewingSequence": 1493,
+          "reviewSlug": null,
+          "date": "2014-02-01",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0051554",
           "title": "Horror of Dracula",
-          "sortTitle": "horror-of-dracula-1958",
           "releaseYear": "1958",
-          "releaseDate": "1958-05-08",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "horror-of-dracula-1958",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2020-12-08",
-          "reviewSequence": 2061,
-          "viewingDate": "2014-08-16",
-          "viewingSequence": 1543,
+          "reviewSlug": "horror-of-dracula-1958",
+          "date": "2014-08-16",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0051554",
           "title": "Horror of Dracula",
-          "sortTitle": "horror-of-dracula-1958",
           "releaseYear": "1958",
-          "releaseDate": "1958-05-08",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "horror-of-dracula-1958",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2020-12-08",
-          "reviewSequence": 2061,
-          "viewingDate": "2014-12-20",
-          "viewingSequence": 1581,
+          "reviewSlug": "horror-of-dracula-1958",
+          "date": "2014-12-20",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1478,70 +709,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
-          "sortTitle": "captain-america-the-winter-soldier-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-03-13",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-04-10",
-          "viewingSequence": 1504,
+          "reviewSlug": null,
+          "date": "2014-04-10",
           "medium": null,
           "venue": "AMC Tysons Corner 16"
         },
         {
-          "imdbId": "tt1980209",
           "title": "Pain & Gain",
-          "sortTitle": "pain-and-gain-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-04-16",
-          "genres": [
-            "Action",
-            "Biography",
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Mystery"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-05-11",
-          "viewingSequence": 1512,
+          "reviewSlug": null,
+          "date": "2014-05-11",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
-          "sortTitle": "thor-the-dark-world-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-10-03",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Fantasy",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-12-31",
-          "viewingSequence": 1587,
+          "reviewSlug": null,
+          "date": "2014-12-31",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1553,70 +740,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt1843866",
           "title": "Captain America: The Winter Soldier",
-          "sortTitle": "captain-america-the-winter-soldier-2014",
           "releaseYear": "2014",
-          "releaseDate": "2014-03-13",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-04-10",
-          "viewingSequence": 1504,
+          "reviewSlug": null,
+          "date": "2014-04-10",
           "medium": null,
           "venue": "AMC Tysons Corner 16"
         },
         {
-          "imdbId": "tt1980209",
           "title": "Pain & Gain",
-          "sortTitle": "pain-and-gain-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-04-16",
-          "genres": [
-            "Action",
-            "Biography",
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Mystery"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-05-11",
-          "viewingSequence": 1512,
+          "reviewSlug": null,
+          "date": "2014-05-11",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt1981115",
           "title": "Thor: The Dark World",
-          "sortTitle": "thor-the-dark-world-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-10-03",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Fantasy",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-12-31",
-          "viewingSequence": 1587,
+          "reviewSlug": null,
+          "date": "2014-12-31",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1628,42 +771,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2458106",
           "title": "Ninja: Shadow of a Tear",
-          "sortTitle": "ninja-shadow-of-a-tear-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-09-18",
-          "genres": [
-            "Action",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-11",
-          "viewingSequence": 1485,
+          "reviewSlug": null,
+          "date": "2014-01-11",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt1182921",
           "title": "Ninja",
-          "sortTitle": "ninja-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-11-22",
-          "genres": [
-            "Action",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-27",
-          "viewingSequence": 1492,
+          "reviewSlug": null,
+          "date": "2014-01-27",
           "medium": "Amazon",
           "venue": null
         }
@@ -1675,42 +794,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2458106",
           "title": "Ninja: Shadow of a Tear",
-          "sortTitle": "ninja-shadow-of-a-tear-2013",
           "releaseYear": "2013",
-          "releaseDate": "2013-09-18",
-          "genres": [
-            "Action",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-11",
-          "viewingSequence": 1485,
+          "reviewSlug": null,
+          "date": "2014-01-11",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt1182921",
           "title": "Ninja",
-          "sortTitle": "ninja-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-11-22",
-          "genres": [
-            "Action",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-01-27",
-          "viewingSequence": 1492,
+          "reviewSlug": null,
+          "date": "2014-01-27",
           "medium": "Amazon",
           "venue": null
         }
@@ -1722,43 +817,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0089907",
           "title": "The Return of the Living Dead",
-          "sortTitle": "return-of-the-living-dead-1985",
           "releaseYear": "1985",
-          "releaseDate": "1985-04-18",
-          "genres": [
-            "Comedy",
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": "the-return-of-the-living-dead-1985",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2008-09-12",
-          "reviewSequence": 843,
-          "viewingDate": "2014-01-25",
-          "viewingSequence": 1491,
+          "reviewSlug": "the-return-of-the-living-dead-1985",
+          "date": "2014-01-25",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0078748",
           "title": "Alien",
-          "sortTitle": "alien-1979",
           "releaseYear": "1979",
-          "releaseDate": "1979-05-25",
-          "genres": [
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-07-05",
-          "viewingSequence": 1533,
+          "reviewSlug": null,
+          "date": "2014-07-05",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1770,44 +840,18 @@
       "slug": "george-a-romero",
       "viewings": [
         {
-          "imdbId": "tt0088993",
           "title": "Day of the Dead",
-          "sortTitle": "day-of-the-dead-1985",
           "releaseYear": "1985",
-          "releaseDate": "1985-06-30",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "day-of-the-dead-1985",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2007-11-29",
-          "reviewSequence": 468,
-          "viewingDate": "2014-02-08",
-          "viewingSequence": 1494,
+          "reviewSlug": "day-of-the-dead-1985",
+          "date": "2014-02-08",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0100740",
           "title": "Tales from the Darkside: The Movie",
-          "sortTitle": "tales-from-the-darkside-the-movie-1990",
           "releaseYear": "1990",
-          "releaseDate": "1990-05-04",
-          "genres": [
-            "Comedy",
-            "Fantasy",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-02-15",
-          "viewingSequence": 1496,
+          "reviewSlug": null,
+          "date": "2014-02-15",
           "medium": "Netflix",
           "venue": null
         }
@@ -1819,45 +863,18 @@
       "slug": "stephen-king",
       "viewings": [
         {
-          "imdbId": "tt0100740",
           "title": "Tales from the Darkside: The Movie",
-          "sortTitle": "tales-from-the-darkside-the-movie-1990",
           "releaseYear": "1990",
-          "releaseDate": "1990-05-04",
-          "genres": [
-            "Comedy",
-            "Fantasy",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-02-15",
-          "viewingSequence": 1496,
+          "reviewSlug": null,
+          "date": "2014-02-15",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt0093894",
           "title": "The Running Man",
-          "sortTitle": "running-man-1987",
           "releaseYear": "1987",
-          "releaseDate": "1987-11-13",
-          "genres": [
-            "Action",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2014-05-10",
-          "viewingSequence": 1511,
+          "reviewSlug": null,
+          "date": "2014-05-10",
           "medium": "Netflix",
           "venue": null
         }

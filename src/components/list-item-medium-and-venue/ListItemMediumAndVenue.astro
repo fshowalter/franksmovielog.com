@@ -1,0 +1,18 @@
+---
+type Props = {
+  medium?: string | undefined;
+  venue?: string | undefined;
+};
+
+const { medium, venue } = Astro.props;
+
+const value = medium && venue ? `${medium} at ${venue}` : medium || venue;
+---
+
+{
+  value && (
+    <div class={`font-sans text-xs font-light tracking-prose text-subtle`}>
+      {value}
+    </div>
+  )
+}
