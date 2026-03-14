@@ -106,88 +106,35 @@
       "imdbId": "tt0098194",
       "title": "The Return of the Musketeers",
       "releaseYear": "1989",
-      "sortTitle": "return-of-the-musketeers-1989",
-      "releaseDate": "1989-04-19",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Romance"
-      ],
-      "slug": "the-return-of-the-musketeers-1989",
-      "grade": "D",
-      "gradeValue": 6,
-      "reviewDate": "2025-07-07",
-      "reviewSequence": 2908,
+      "reviewSlug": "the-return-of-the-musketeers-1989",
       "count": 2
     },
     {
       "imdbId": "tt0844479",
       "title": "The Collector",
       "releaseYear": "2009",
-      "sortTitle": "collector-2009",
-      "releaseDate": "2009-07-08",
-      "genres": [
-        "Horror",
-        "Thriller"
-      ],
-      "slug": "the-collector-2009",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2025-02-06",
-      "reviewSequence": 2842,
+      "reviewSlug": "the-collector-2009",
       "count": 2
     },
     {
       "imdbId": "tt5950044",
       "title": "Superman",
       "releaseYear": "2025",
-      "sortTitle": "superman-2025",
-      "releaseDate": "2025-07-02",
-      "genres": [
-        "Action",
-        "Adventure",
-        "Sci-Fi"
-      ],
-      "slug": "superman-2025",
-      "grade": "B",
-      "gradeValue": 12,
-      "reviewDate": "2025-07-20",
-      "reviewSequence": 2912,
+      "reviewSlug": "superman-2025",
       "count": 2
     },
     {
       "imdbId": "tt0098662",
       "title": "Witchtrap",
       "releaseYear": "1989",
-      "sortTitle": "witchtrap-1989",
-      "releaseDate": "1989-09-07",
-      "genres": [
-        "Action",
-        "Horror",
-        "Thriller"
-      ],
-      "slug": "witchtrap-1989",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2025-11-08",
-      "reviewSequence": 2956,
+      "reviewSlug": "witchtrap-1989",
       "count": 2
     },
     {
       "imdbId": "tt0086610",
       "title": "Xtro",
       "releaseYear": "1982",
-      "sortTitle": "xtro-1982",
-      "releaseDate": "1982-12-06",
-      "genres": [
-        "Horror",
-        "Sci-Fi"
-      ],
-      "slug": "xtro-1982",
-      "grade": "B",
-      "gradeValue": 12,
-      "reviewDate": "2025-10-28",
-      "reviewSequence": 2946,
+      "reviewSlug": "xtro-1982",
       "count": 2
     }
   ],
@@ -198,124 +145,50 @@
       "slug": "wes-craven",
       "viewings": [
         {
-          "imdbId": "tt0082245",
           "title": "Deadly Blessing",
-          "sortTitle": "deadly-blessing-1981",
           "releaseYear": "1981",
-          "releaseDate": "1981-08-14",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "deadly-blessing-1981",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-01-27",
-          "reviewSequence": 2841,
-          "viewingDate": "2025-01-27",
-          "viewingSequence": 2841,
+          "reviewSlug": "deadly-blessing-1981",
+          "date": "2025-01-27",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0117571",
           "title": "Scream",
-          "sortTitle": "scream-1996",
           "releaseYear": "1996",
-          "releaseDate": "1996-12-18",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-1996",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-05-06",
-          "reviewSequence": 2870,
-          "viewingDate": "2025-05-06",
-          "viewingSequence": 2870,
+          "reviewSlug": "scream-1996",
+          "date": "2025-05-06",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0105121",
           "title": "The People Under the Stairs",
-          "sortTitle": "people-under-the-stairs-1991",
           "releaseYear": "1991",
-          "releaseDate": "1991-11-01",
-          "genres": [
-            "Comedy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-people-under-the-stairs-1991",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2025-10-19",
-          "reviewSequence": 2937,
-          "viewingDate": "2025-10-19",
-          "viewingSequence": 2937,
+          "reviewSlug": "the-people-under-the-stairs-1991",
+          "date": "2025-10-19",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0120082",
           "title": "Scream 2",
-          "sortTitle": "scream-2-1997",
           "releaseYear": "1997",
-          "releaseDate": "1997-12-10",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-2-1997",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-10-25",
-          "reviewSequence": 2943,
-          "viewingDate": "2025-10-25",
-          "viewingSequence": 2943,
+          "reviewSlug": "scream-2-1997",
+          "date": "2025-10-25",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0134084",
           "title": "Scream 3",
-          "sortTitle": "scream-3-2000",
           "releaseYear": "2000",
-          "releaseDate": "2000-02-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-3-2000",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-10-30",
-          "reviewSequence": 2947,
-          "viewingDate": "2025-10-30",
-          "viewingSequence": 2947,
+          "reviewSlug": "scream-3-2000",
+          "date": "2025-10-30",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1262416",
           "title": "Scream 4",
-          "sortTitle": "scream-4-2011",
           "releaseYear": "2011",
-          "releaseDate": "2011-03-22",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-4-2011",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-01",
-          "reviewSequence": 2951,
-          "viewingDate": "2025-11-01",
-          "viewingSequence": 2951,
+          "reviewSlug": "scream-4-2011",
+          "date": "2025-11-01",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -327,86 +200,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0844479",
           "title": "The Collector",
-          "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-07-08",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collector-2009",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-02-06",
-          "reviewSequence": 2842,
-          "viewingDate": "2025-01-25",
-          "viewingSequence": 2840,
+          "reviewSlug": "the-collector-2009",
+          "date": "2025-01-25",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0844479",
           "title": "The Collector",
-          "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-07-08",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collector-2009",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-02-06",
-          "reviewSequence": 2842,
-          "viewingDate": "2025-02-06",
-          "viewingSequence": 2842,
+          "reviewSlug": "the-collector-2009",
+          "date": "2025-02-06",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1748227",
           "title": "The Collection",
-          "sortTitle": "collection-2012",
           "releaseYear": "2012",
-          "releaseDate": "2012-09-24",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collection-2012",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-08",
-          "reviewSequence": 2958,
-          "viewingDate": "2025-11-08",
-          "viewingSequence": 2958,
+          "reviewSlug": "the-collection-2012",
+          "date": "2025-11-08",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt11045340",
           "title": "Pilgrim",
-          "sortTitle": "pilgrim-2019",
           "releaseYear": "2019",
-          "releaseDate": "2019-11-01",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "pilgrim-2019",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-11-26",
-          "reviewSequence": 2973,
-          "viewingDate": "2025-11-26",
-          "viewingSequence": 2973,
+          "reviewSlug": "pilgrim-2019",
+          "date": "2025-11-26",
           "medium": "Hulu",
           "venue": null
         }
@@ -418,65 +239,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0093624",
           "title": "Night of the Demons",
-          "sortTitle": "night-of-the-demons-1988",
           "releaseYear": "1988",
-          "releaseDate": "1988-04-27",
-          "genres": [
-            "Comedy",
-            "Fantasy",
-            "Horror"
-          ],
-          "slug": "night-of-the-demons-1988",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-01-14",
-          "reviewSequence": 2834,
-          "viewingDate": "2025-01-14",
-          "viewingSequence": 2834,
+          "reviewSlug": "night-of-the-demons-1988",
+          "date": "2025-01-14",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0098662",
           "title": "Witchtrap",
-          "sortTitle": "witchtrap-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-09-07",
-          "genres": [
-            "Action",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "witchtrap-1989",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-08",
-          "reviewSequence": 2956,
-          "viewingDate": "2025-10-05",
-          "viewingSequence": 2929,
+          "reviewSlug": "witchtrap-1989",
+          "date": "2025-10-05",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0098662",
           "title": "Witchtrap",
-          "sortTitle": "witchtrap-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-09-07",
-          "genres": [
-            "Action",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "witchtrap-1989",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-08",
-          "reviewSequence": 2956,
-          "viewingDate": "2025-11-08",
-          "viewingSequence": 2956,
+          "reviewSlug": "witchtrap-1989",
+          "date": "2025-11-08",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -488,65 +270,26 @@
       "slug": "william-friedkin",
       "viewings": [
         {
-          "imdbId": "tt0070047",
           "title": "The Exorcist",
-          "sortTitle": "exorcist-1973",
           "releaseYear": "1973",
-          "releaseDate": "1973-12-26",
-          "genres": [
-            "Horror"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2025-02-18",
-          "viewingSequence": 2848,
+          "reviewSlug": null,
+          "date": "2025-02-18",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0067116",
           "title": "The French Connection",
-          "sortTitle": "french-connection-1971",
           "releaseYear": "1971",
-          "releaseDate": "1971-10-07",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": "the-french-connection-1971",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2025-07-14",
-          "reviewSequence": 2910,
-          "viewingDate": "2025-07-14",
-          "viewingSequence": 2910,
+          "reviewSlug": "the-french-connection-1971",
+          "date": "2025-07-14",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0080569",
           "title": "Cruising",
-          "sortTitle": "cruising-1980",
           "releaseYear": "1980",
-          "releaseDate": "1980-02-08",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "cruising-1980",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2025-10-22",
-          "reviewSequence": 2939,
-          "viewingDate": "2025-10-22",
-          "viewingSequence": 2939,
+          "reviewSlug": "cruising-1980",
+          "date": "2025-10-22",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -558,62 +301,26 @@
       "slug": "howard-hawks",
       "viewings": [
         {
-          "imdbId": "tt0053221",
           "title": "Rio Bravo",
-          "sortTitle": "rio-bravo-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-03-08",
-          "genres": [
-            "Western"
-          ],
-          "slug": "rio-bravo-1959",
-          "grade": "A+",
-          "gradeValue": 16,
-          "reviewDate": "2025-03-22",
-          "reviewSequence": 2861,
-          "viewingDate": "2025-03-22",
-          "viewingSequence": 2861,
+          "reviewSlug": "rio-bravo-1959",
+          "date": "2025-03-22",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0031762",
           "title": "Only Angels Have Wings",
-          "sortTitle": "only-angels-have-wings-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-05-12",
-          "genres": [
-            "Adventure",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "only-angels-have-wings-1939",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2025-06-15",
-          "reviewSequence": 2900,
-          "viewingDate": "2025-06-15",
-          "viewingSequence": 2900,
+          "reviewSlug": "only-angels-have-wings-1939",
+          "date": "2025-06-15",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0040724",
           "title": "Red River",
-          "sortTitle": "red-river-1948",
           "releaseYear": "1948",
-          "releaseDate": "1948-08-25",
-          "genres": [
-            "Drama",
-            "Western"
-          ],
-          "slug": "red-river-1948",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2025-06-15",
-          "reviewSequence": 2901,
-          "viewingDate": "2025-06-15",
-          "viewingSequence": 2901,
+          "reviewSlug": "red-river-1948",
+          "date": "2025-06-15",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -625,64 +332,26 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "imdbId": "tt0082307",
           "title": "The Beyond",
-          "sortTitle": "beyond-1981",
           "releaseYear": "1981",
-          "releaseDate": "1981-04-29",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-beyond-1981",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2015-06-23",
-          "reviewSequence": 1628,
-          "viewingDate": "2025-04-24",
-          "viewingSequence": 2865,
+          "reviewSlug": "the-beyond-1981",
+          "date": "2025-04-24",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0061074",
           "title": "Massacre Time",
-          "sortTitle": "massacre-time-1966",
           "releaseYear": "1966",
-          "releaseDate": "1966-08-10",
-          "genres": [
-            "Action",
-            "Drama",
-            "Thriller",
-            "Western"
-          ],
-          "slug": "massacre-time-1966",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2025-06-09",
-          "reviewSequence": 2895,
-          "viewingDate": "2025-06-09",
-          "viewingSequence": 2895,
+          "reviewSlug": "massacre-time-1966",
+          "date": "2025-06-09",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0096511",
           "title": "Zombie 3",
-          "sortTitle": "zombie-3-1988",
           "releaseYear": "1988",
-          "releaseDate": "1988-06-30",
-          "genres": [
-            "Action",
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": "zombie-3-1988",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2025-10-11",
-          "reviewSequence": 2933,
-          "viewingDate": "2025-10-11",
-          "viewingSequence": 2933,
+          "reviewSlug": "zombie-3-1988",
+          "date": "2025-10-11",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -694,62 +363,26 @@
       "slug": "terence-fisher",
       "viewings": [
         {
-          "imdbId": "tt0052905",
           "title": "The Hound of the Baskervilles",
-          "sortTitle": "hound-of-the-baskervilles-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-03-28",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "the-hound-of-the-baskervilles-1959",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2025-05-24",
-          "reviewSequence": 2884,
-          "viewingDate": "2025-05-24",
-          "viewingSequence": 2884,
+          "reviewSlug": "the-hound-of-the-baskervilles-1959",
+          "date": "2025-05-24",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0053041",
           "title": "The Man Who Could Cheat Death",
-          "sortTitle": "man-who-could-cheat-death-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-06-17",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": "the-man-who-could-cheat-death-1959",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2025-11-22",
-          "reviewSequence": 2966,
-          "viewingDate": "2025-11-22",
-          "viewingSequence": 2966,
+          "reviewSlug": "the-man-who-could-cheat-death-1959",
+          "date": "2025-11-22",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0054416",
           "title": "The Two Faces of Dr. Jekyll",
-          "sortTitle": "two-faces-of-dr-jekyll-1960",
           "releaseYear": "1960",
-          "releaseDate": "1960-08-18",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-two-faces-of-dr-jekyll-1960",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2025-11-25",
-          "reviewSequence": 2971,
-          "viewingDate": "2025-11-25",
-          "viewingSequence": 2971,
+          "reviewSlug": "the-two-faces-of-dr-jekyll-1960",
+          "date": "2025-11-25",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -761,44 +394,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0098194",
           "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
+          "reviewSlug": "the-return-of-the-musketeers-1989",
+          "date": "2025-01-11",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0098194",
           "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
+          "reviewSlug": "the-return-of-the-musketeers-1989",
+          "date": "2025-07-07",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -810,40 +417,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0061411",
           "title": "The Blood Beast Terror",
-          "sortTitle": "blood-beast-terror-1968",
           "releaseYear": "1968",
-          "releaseDate": "1968-01-31",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-blood-beast-terror-1968",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-02-11",
-          "reviewSequence": 2844,
-          "viewingDate": "2025-02-11",
-          "viewingSequence": 2844,
+          "reviewSlug": "the-blood-beast-terror-1968",
+          "date": "2025-02-11",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0062833",
           "title": "The Crimson Cult",
-          "sortTitle": "crimson-cult-1968",
           "releaseYear": "1968",
-          "releaseDate": "1968-12-31",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-crimson-cult-1968",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2025-05-03",
-          "reviewSequence": 2867,
-          "viewingDate": "2025-05-03",
-          "viewingSequence": 2867,
+          "reviewSlug": "the-crimson-cult-1968",
+          "date": "2025-05-03",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -855,45 +440,18 @@
       "slug": "john-sturges",
       "viewings": [
         {
-          "imdbId": "tt0051848",
           "title": "The Law and Jake Wade",
-          "sortTitle": "law-and-jake-wade-1958",
           "releaseYear": "1958",
-          "releaseDate": "1958-06-06",
-          "genres": [
-            "Drama",
-            "Western"
-          ],
-          "slug": "the-law-and-jake-wade-1958",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2025-02-28",
-          "reviewSequence": 2852,
-          "viewingDate": "2025-02-28",
-          "viewingSequence": 2852,
+          "reviewSlug": "the-law-and-jake-wade-1958",
+          "date": "2025-02-28",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0042771",
           "title": "Mystery Street",
-          "sortTitle": "mystery-street-1950",
           "releaseYear": "1950",
-          "releaseDate": "1950-06-23",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "mystery-street-1950",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-11-29",
-          "reviewSequence": 2975,
-          "viewingDate": "2025-11-29",
-          "viewingSequence": 2975,
+          "reviewSlug": "mystery-street-1950",
+          "date": "2025-11-29",
           "medium": "HBO Max",
           "venue": null
         }
@@ -907,210 +465,82 @@
       "slug": "christopher-lee",
       "viewings": [
         {
-          "imdbId": "tt0098194",
           "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
+          "reviewSlug": "the-return-of-the-musketeers-1989",
+          "date": "2025-01-11",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0276499",
           "title": "Challenge the Devil",
-          "sortTitle": "challenge-the-devil-1963",
           "releaseYear": "1963",
-          "releaseDate": "1963-06-09",
-          "genres": [
-            "Fantasy",
-            "Horror"
-          ],
-          "slug": "challenge-the-devil-1963",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2025-01-14",
-          "reviewSequence": 2835,
-          "viewingDate": "2025-01-14",
-          "viewingSequence": 2835,
+          "reviewSlug": "challenge-the-devil-1963",
+          "date": "2025-01-14",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0065569",
           "title": "Count Dracula",
-          "sortTitle": "count-dracula-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-04-03",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "count-dracula-1970",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-03-06",
-          "reviewSequence": 2855,
-          "viewingDate": "2025-03-06",
-          "viewingSequence": 2855,
+          "reviewSlug": "count-dracula-1970",
+          "date": "2025-03-06",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0062833",
           "title": "The Crimson Cult",
-          "sortTitle": "crimson-cult-1968",
           "releaseYear": "1968",
-          "releaseDate": "1968-12-31",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-crimson-cult-1968",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2025-05-03",
-          "reviewSequence": 2867,
-          "viewingDate": "2025-05-03",
-          "viewingSequence": 2867,
+          "reviewSlug": "the-crimson-cult-1968",
+          "date": "2025-05-03",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0052905",
           "title": "The Hound of the Baskervilles",
-          "sortTitle": "hound-of-the-baskervilles-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-03-28",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "the-hound-of-the-baskervilles-1959",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2025-05-24",
-          "reviewSequence": 2884,
-          "viewingDate": "2025-05-24",
-          "viewingSequence": 2884,
+          "reviewSlug": "the-hound-of-the-baskervilles-1959",
+          "date": "2025-05-24",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0064949",
           "title": "Scream and Scream Again",
-          "sortTitle": "scream-and-scream-again-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-01-31",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Horror",
-            "Mystery",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "scream-and-scream-again-1970",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-07-04",
-          "reviewSequence": 2906,
-          "viewingDate": "2025-07-04",
-          "viewingSequence": 2906,
+          "reviewSlug": "scream-and-scream-again-1970",
+          "date": "2025-07-04",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0098194",
           "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
+          "reviewSlug": "the-return-of-the-musketeers-1989",
+          "date": "2025-07-07",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0053041",
           "title": "The Man Who Could Cheat Death",
-          "sortTitle": "man-who-could-cheat-death-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-06-17",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": "the-man-who-could-cheat-death-1959",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2025-11-22",
-          "reviewSequence": 2966,
-          "viewingDate": "2025-11-22",
-          "viewingSequence": 2966,
+          "reviewSlug": "the-man-who-could-cheat-death-1959",
+          "date": "2025-11-22",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0044517",
           "title": "The Crimson Pirate",
-          "sortTitle": "crimson-pirate-1952",
           "releaseYear": "1952",
-          "releaseDate": "1952-08-27",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "the-crimson-pirate-1952",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-11-24",
-          "reviewSequence": 2970,
-          "viewingDate": "2025-11-24",
-          "viewingSequence": 2970,
+          "reviewSlug": "the-crimson-pirate-1952",
+          "date": "2025-11-24",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0054416",
           "title": "The Two Faces of Dr. Jekyll",
-          "sortTitle": "two-faces-of-dr-jekyll-1960",
           "releaseYear": "1960",
-          "releaseDate": "1960-08-18",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-two-faces-of-dr-jekyll-1960",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2025-11-25",
-          "reviewSequence": 2971,
-          "viewingDate": "2025-11-25",
-          "viewingSequence": 2971,
+          "reviewSlug": "the-two-faces-of-dr-jekyll-1960",
+          "date": "2025-11-25",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1122,156 +552,58 @@
       "slug": "vincent-price",
       "viewings": [
         {
-          "imdbId": "tt0096875",
           "title": "Catchfire",
-          "sortTitle": "catchfire-1990",
           "releaseYear": "1990",
-          "releaseDate": "1990-04-03",
-          "genres": [
-            "Action",
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": "catchfire-1990",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2025-05-20",
-          "reviewSequence": 2879,
-          "viewingDate": "2025-05-20",
-          "viewingSequence": 2879,
+          "reviewSlug": "catchfire-1990",
+          "date": "2025-05-20",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0053219",
           "title": "Return of the Fly",
-          "sortTitle": "return-of-the-fly-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-07-22",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": "return-of-the-fly-1959",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-05-28",
-          "reviewSequence": 2886,
-          "viewingDate": "2025-05-28",
-          "viewingSequence": 2886,
+          "reviewSlug": "return-of-the-fly-1959",
+          "date": "2025-05-28",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0044825",
           "title": "The Las Vegas Story",
-          "sortTitle": "las-vegas-story-1952",
           "releaseYear": "1952",
-          "releaseDate": "1952-01-27",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir"
-          ],
-          "slug": "the-las-vegas-story-1952",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-05-30",
-          "reviewSequence": 2887,
-          "viewingDate": "2025-05-30",
-          "viewingSequence": 2887,
+          "reviewSlug": "the-las-vegas-story-1952",
+          "date": "2025-05-30",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0043643",
           "title": "His Kind of Woman",
-          "sortTitle": "his-kind-of-woman-1951",
           "releaseYear": "1951",
-          "releaseDate": "1951-08-21",
-          "genres": [
-            "Action",
-            "Crime",
-            "Film-Noir",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": "his-kind-of-woman-1951",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2025-07-01",
-          "reviewSequence": 2904,
-          "viewingDate": "2025-07-01",
-          "viewingSequence": 2904,
+          "reviewSlug": "his-kind-of-woman-1951",
+          "date": "2025-07-01",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0064949",
           "title": "Scream and Scream Again",
-          "sortTitle": "scream-and-scream-again-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-01-31",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Horror",
-            "Mystery",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "scream-and-scream-again-1970",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-07-04",
-          "reviewSequence": 2906,
-          "viewingDate": "2025-07-04",
-          "viewingSequence": 2906,
+          "reviewSlug": "scream-and-scream-again-1970",
+          "date": "2025-07-04",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0052602",
           "title": "The Bat",
-          "sortTitle": "bat-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-08-09",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-bat-1959",
-          "grade": "F+",
-          "gradeValue": 4,
-          "reviewDate": "2025-11-22",
-          "reviewSequence": 2965,
-          "viewingDate": "2025-11-22",
-          "viewingSequence": 2965,
+          "reviewSlug": "the-bat-1959",
+          "date": "2025-11-22",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0052626",
           "title": "The Big Circus",
-          "sortTitle": "big-circus-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-07-05",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "the-big-circus-1959",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2025-12-02",
-          "reviewSequence": 2978,
-          "viewingDate": "2025-12-02",
-          "viewingSequence": 2978,
+          "reviewSlug": "the-big-circus-1959",
+          "date": "2025-12-02",
           "medium": "iTunes",
           "venue": null
         }
@@ -1283,123 +615,50 @@
       "slug": "peter-cushing",
       "viewings": [
         {
-          "imdbId": "tt0061411",
           "title": "The Blood Beast Terror",
-          "sortTitle": "blood-beast-terror-1968",
           "releaseYear": "1968",
-          "releaseDate": "1968-01-31",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-blood-beast-terror-1968",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-02-11",
-          "reviewSequence": 2844,
-          "viewingDate": "2025-02-11",
-          "viewingSequence": 2844,
+          "reviewSlug": "the-blood-beast-terror-1968",
+          "date": "2025-02-11",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0068230",
           "title": "Asylum",
-          "sortTitle": "asylum-1972",
           "releaseYear": "1972",
-          "releaseDate": "1972-07-06",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "asylum-1972",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-02-22",
-          "reviewSequence": 2851,
-          "viewingDate": "2025-02-22",
-          "viewingSequence": 2851,
+          "reviewSlug": "asylum-1972",
+          "date": "2025-02-22",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0065887",
           "title": "Blood Suckers",
-          "sortTitle": "blood-suckers-1971",
           "releaseYear": "1971",
-          "releaseDate": "1971-05-14",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "blood-suckers-1971",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-03-08",
-          "reviewSequence": 2856,
-          "viewingDate": "2025-03-08",
-          "viewingSequence": 2856,
+          "reviewSlug": "blood-suckers-1971",
+          "date": "2025-03-08",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0052905",
           "title": "The Hound of the Baskervilles",
-          "sortTitle": "hound-of-the-baskervilles-1959",
           "releaseYear": "1959",
-          "releaseDate": "1959-03-28",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "the-hound-of-the-baskervilles-1959",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2025-05-24",
-          "reviewSequence": 2884,
-          "viewingDate": "2025-05-24",
-          "viewingSequence": 2884,
+          "reviewSlug": "the-hound-of-the-baskervilles-1959",
+          "date": "2025-05-24",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0064949",
           "title": "Scream and Scream Again",
-          "sortTitle": "scream-and-scream-again-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-01-31",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Horror",
-            "Mystery",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "scream-and-scream-again-1970",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-07-04",
-          "reviewSequence": 2906,
-          "viewingDate": "2025-07-04",
-          "viewingSequence": 2906,
+          "reviewSlug": "scream-and-scream-again-1970",
+          "date": "2025-07-04",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0033221",
           "title": "Vigil in the Night",
-          "sortTitle": "vigil-in-the-night-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-02-08",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "vigil-in-the-night-1940",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2025-11-23",
-          "reviewSequence": 2968,
-          "viewingDate": "2025-11-23",
-          "viewingSequence": 2968,
+          "reviewSlug": "vigil-in-the-night-1940",
+          "date": "2025-11-23",
           "medium": "HBO Max",
           "venue": null
         }
@@ -1411,84 +670,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0093624",
           "title": "Night of the Demons",
-          "sortTitle": "night-of-the-demons-1988",
           "releaseYear": "1988",
-          "releaseDate": "1988-04-27",
-          "genres": [
-            "Comedy",
-            "Fantasy",
-            "Horror"
-          ],
-          "slug": "night-of-the-demons-1988",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-01-14",
-          "reviewSequence": 2834,
-          "viewingDate": "2025-01-14",
-          "viewingSequence": 2834,
+          "reviewSlug": "night-of-the-demons-1988",
+          "date": "2025-01-14",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0098662",
           "title": "Witchtrap",
-          "sortTitle": "witchtrap-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-09-07",
-          "genres": [
-            "Action",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "witchtrap-1989",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-08",
-          "reviewSequence": 2956,
-          "viewingDate": "2025-10-05",
-          "viewingSequence": 2929,
+          "reviewSlug": "witchtrap-1989",
+          "date": "2025-10-05",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0098662",
           "title": "Witchtrap",
-          "sortTitle": "witchtrap-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-09-07",
-          "genres": [
-            "Action",
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "witchtrap-1989",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-08",
-          "reviewSequence": 2956,
-          "viewingDate": "2025-11-08",
-          "viewingSequence": 2956,
+          "reviewSlug": "witchtrap-1989",
+          "date": "2025-11-08",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0095742",
           "title": "A Nightmare on Elm Street 4: The Dream Master",
-          "sortTitle": "nightmare-on-elm-street-4-the-dream-master-1988",
           "releaseYear": "1988",
-          "releaseDate": "1988-08-19",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "a-nightmare-on-elm-street-4-the-dream-master-1988",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-12-26",
-          "reviewSequence": 2984,
-          "viewingDate": "2025-12-26",
-          "viewingSequence": 2984,
+          "reviewSlug": "a-nightmare-on-elm-street-4-the-dream-master-1988",
+          "date": "2025-12-26",
           "medium": "4k UHD Blu-ray",
           "venue": null
         }
@@ -1500,81 +709,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0093629",
           "title": "A Nightmare on Elm Street 3: Dream Warriors",
-          "sortTitle": "nightmare-on-elm-street-3-dream-warriors-1987",
           "releaseYear": "1987",
-          "releaseDate": "1987-02-27",
-          "genres": [
-            "Fantasy",
-            "Horror"
-          ],
-          "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-03-01",
-          "reviewSequence": 2853,
-          "viewingDate": "2025-03-01",
-          "viewingSequence": 2853,
+          "reviewSlug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
+          "date": "2025-03-01",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0075268",
           "title": "Stay Hungry",
-          "sortTitle": "stay-hungry-1976",
           "releaseYear": "1976",
-          "releaseDate": "1976-04-25",
-          "genres": [
-            "Comedy",
-            "Drama"
-          ],
-          "slug": "stay-hungry-1976",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-07-26",
-          "reviewSequence": 2914,
-          "viewingDate": "2025-07-26",
-          "viewingSequence": 2914,
+          "reviewSlug": "stay-hungry-1976",
+          "date": "2025-07-26",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0074455",
           "title": "Eaten Alive",
-          "sortTitle": "eaten-alive-1976",
           "releaseYear": "1976",
-          "releaseDate": "1976-10-31",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "eaten-alive-1976",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-10-27",
-          "reviewSequence": 2945,
-          "viewingDate": "2025-10-27",
-          "viewingSequence": 2945,
+          "reviewSlug": "eaten-alive-1976",
+          "date": "2025-10-27",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0095742",
           "title": "A Nightmare on Elm Street 4: The Dream Master",
-          "sortTitle": "nightmare-on-elm-street-4-the-dream-master-1988",
           "releaseYear": "1988",
-          "releaseDate": "1988-08-19",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "a-nightmare-on-elm-street-4-the-dream-master-1988",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-12-26",
-          "reviewSequence": 2984,
-          "viewingDate": "2025-12-26",
-          "viewingSequence": 2984,
+          "reviewSlug": "a-nightmare-on-elm-street-4-the-dream-master-1988",
+          "date": "2025-12-26",
           "medium": "4k UHD Blu-ray",
           "venue": null
         }
@@ -1586,82 +748,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0117571",
           "title": "Scream",
-          "sortTitle": "scream-1996",
           "releaseYear": "1996",
-          "releaseDate": "1996-12-18",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-1996",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-05-06",
-          "reviewSequence": 2870,
-          "viewingDate": "2025-05-06",
-          "viewingSequence": 2870,
+          "reviewSlug": "scream-1996",
+          "date": "2025-05-06",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0120082",
           "title": "Scream 2",
-          "sortTitle": "scream-2-1997",
           "releaseYear": "1997",
-          "releaseDate": "1997-12-10",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-2-1997",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-10-25",
-          "reviewSequence": 2943,
-          "viewingDate": "2025-10-25",
-          "viewingSequence": 2943,
+          "reviewSlug": "scream-2-1997",
+          "date": "2025-10-25",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0134084",
           "title": "Scream 3",
-          "sortTitle": "scream-3-2000",
           "releaseYear": "2000",
-          "releaseDate": "2000-02-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-3-2000",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-10-30",
-          "reviewSequence": 2947,
-          "viewingDate": "2025-10-30",
-          "viewingSequence": 2947,
+          "reviewSlug": "scream-3-2000",
+          "date": "2025-10-30",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1262416",
           "title": "Scream 4",
-          "sortTitle": "scream-4-2011",
           "releaseYear": "2011",
-          "releaseDate": "2011-03-22",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-4-2011",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-01",
-          "reviewSequence": 2951,
-          "viewingDate": "2025-11-01",
-          "viewingSequence": 2951,
+          "reviewSlug": "scream-4-2011",
+          "date": "2025-11-01",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1673,82 +787,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0117571",
           "title": "Scream",
-          "sortTitle": "scream-1996",
           "releaseYear": "1996",
-          "releaseDate": "1996-12-18",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-1996",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-05-06",
-          "reviewSequence": 2870,
-          "viewingDate": "2025-05-06",
-          "viewingSequence": 2870,
+          "reviewSlug": "scream-1996",
+          "date": "2025-05-06",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0120082",
           "title": "Scream 2",
-          "sortTitle": "scream-2-1997",
           "releaseYear": "1997",
-          "releaseDate": "1997-12-10",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-2-1997",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-10-25",
-          "reviewSequence": 2943,
-          "viewingDate": "2025-10-25",
-          "viewingSequence": 2943,
+          "reviewSlug": "scream-2-1997",
+          "date": "2025-10-25",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0134084",
           "title": "Scream 3",
-          "sortTitle": "scream-3-2000",
           "releaseYear": "2000",
-          "releaseDate": "2000-02-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-3-2000",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-10-30",
-          "reviewSequence": 2947,
-          "viewingDate": "2025-10-30",
-          "viewingSequence": 2947,
+          "reviewSlug": "scream-3-2000",
+          "date": "2025-10-30",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1262416",
           "title": "Scream 4",
-          "sortTitle": "scream-4-2011",
           "releaseYear": "2011",
-          "releaseDate": "2011-03-22",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-4-2011",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-01",
-          "reviewSequence": 2951,
-          "viewingDate": "2025-11-01",
-          "viewingSequence": 2951,
+          "reviewSlug": "scream-4-2011",
+          "date": "2025-11-01",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1760,82 +826,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0117571",
           "title": "Scream",
-          "sortTitle": "scream-1996",
           "releaseYear": "1996",
-          "releaseDate": "1996-12-18",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-1996",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-05-06",
-          "reviewSequence": 2870,
-          "viewingDate": "2025-05-06",
-          "viewingSequence": 2870,
+          "reviewSlug": "scream-1996",
+          "date": "2025-05-06",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0120082",
           "title": "Scream 2",
-          "sortTitle": "scream-2-1997",
           "releaseYear": "1997",
-          "releaseDate": "1997-12-10",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-2-1997",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-10-25",
-          "reviewSequence": 2943,
-          "viewingDate": "2025-10-25",
-          "viewingSequence": 2943,
+          "reviewSlug": "scream-2-1997",
+          "date": "2025-10-25",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0134084",
           "title": "Scream 3",
-          "sortTitle": "scream-3-2000",
           "releaseYear": "2000",
-          "releaseDate": "2000-02-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-3-2000",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-10-30",
-          "reviewSequence": 2947,
-          "viewingDate": "2025-10-30",
-          "viewingSequence": 2947,
+          "reviewSlug": "scream-3-2000",
+          "date": "2025-10-30",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1262416",
           "title": "Scream 4",
-          "sortTitle": "scream-4-2011",
           "releaseYear": "2011",
-          "releaseDate": "2011-03-22",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-4-2011",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-01",
-          "reviewSequence": 2951,
-          "viewingDate": "2025-11-01",
-          "viewingSequence": 2951,
+          "reviewSlug": "scream-4-2011",
+          "date": "2025-11-01",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1847,82 +865,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0117571",
           "title": "Scream",
-          "sortTitle": "scream-1996",
           "releaseYear": "1996",
-          "releaseDate": "1996-12-18",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-1996",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-05-06",
-          "reviewSequence": 2870,
-          "viewingDate": "2025-05-06",
-          "viewingSequence": 2870,
+          "reviewSlug": "scream-1996",
+          "date": "2025-05-06",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0120082",
           "title": "Scream 2",
-          "sortTitle": "scream-2-1997",
           "releaseYear": "1997",
-          "releaseDate": "1997-12-10",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-2-1997",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-10-25",
-          "reviewSequence": 2943,
-          "viewingDate": "2025-10-25",
-          "viewingSequence": 2943,
+          "reviewSlug": "scream-2-1997",
+          "date": "2025-10-25",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0134084",
           "title": "Scream 3",
-          "sortTitle": "scream-3-2000",
           "releaseYear": "2000",
-          "releaseDate": "2000-02-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-3-2000",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-10-30",
-          "reviewSequence": 2947,
-          "viewingDate": "2025-10-30",
-          "viewingSequence": 2947,
+          "reviewSlug": "scream-3-2000",
+          "date": "2025-10-30",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1262416",
           "title": "Scream 4",
-          "sortTitle": "scream-4-2011",
           "releaseYear": "2011",
-          "releaseDate": "2011-03-22",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-4-2011",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-01",
-          "reviewSequence": 2951,
-          "viewingDate": "2025-11-01",
-          "viewingSequence": 2951,
+          "reviewSlug": "scream-4-2011",
+          "date": "2025-11-01",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1934,65 +904,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt5040012",
           "title": "Nosferatu",
-          "sortTitle": "nosferatu-2024",
           "releaseYear": "2024",
-          "releaseDate": "2024-11-07",
-          "genres": [
-            "Fantasy",
-            "Horror",
-            "Mystery"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2025-01-02",
-          "viewingSequence": 2828,
+          "reviewSlug": null,
+          "date": "2025-01-02",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt5950044",
           "title": "Superman",
-          "sortTitle": "superman-2025",
           "releaseYear": "2025",
-          "releaseDate": "2025-07-02",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "superman-2025",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2025-07-20",
-          "reviewSequence": 2912,
-          "viewingDate": "2025-07-16",
-          "viewingSequence": 2911,
+          "reviewSlug": "superman-2025",
+          "date": "2025-07-16",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt5950044",
           "title": "Superman",
-          "sortTitle": "superman-2025",
           "releaseYear": "2025",
-          "releaseDate": "2025-07-02",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Sci-Fi"
-          ],
-          "slug": "superman-2025",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2025-07-20",
-          "reviewSequence": 2912,
-          "viewingDate": "2025-07-20",
-          "viewingSequence": 2912,
+          "reviewSlug": "superman-2025",
+          "date": "2025-07-20",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -2006,86 +937,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0844479",
           "title": "The Collector",
-          "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-07-08",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collector-2009",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-02-06",
-          "reviewSequence": 2842,
-          "viewingDate": "2025-01-25",
-          "viewingSequence": 2840,
+          "reviewSlug": "the-collector-2009",
+          "date": "2025-01-25",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0844479",
           "title": "The Collector",
-          "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-07-08",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collector-2009",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-02-06",
-          "reviewSequence": 2842,
-          "viewingDate": "2025-02-06",
-          "viewingSequence": 2842,
+          "reviewSlug": "the-collector-2009",
+          "date": "2025-02-06",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1748227",
           "title": "The Collection",
-          "sortTitle": "collection-2012",
           "releaseYear": "2012",
-          "releaseDate": "2012-09-24",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collection-2012",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-08",
-          "reviewSequence": 2958,
-          "viewingDate": "2025-11-08",
-          "viewingSequence": 2958,
+          "reviewSlug": "the-collection-2012",
+          "date": "2025-11-08",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt11045340",
           "title": "Pilgrim",
-          "sortTitle": "pilgrim-2019",
           "releaseYear": "2019",
-          "releaseDate": "2019-11-01",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "pilgrim-2019",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-11-26",
-          "reviewSequence": 2973,
-          "viewingDate": "2025-11-26",
-          "viewingSequence": 2973,
+          "reviewSlug": "pilgrim-2019",
+          "date": "2025-11-26",
           "medium": "Hulu",
           "venue": null
         }
@@ -2097,86 +976,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0844479",
           "title": "The Collector",
-          "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-07-08",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collector-2009",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-02-06",
-          "reviewSequence": 2842,
-          "viewingDate": "2025-01-25",
-          "viewingSequence": 2840,
+          "reviewSlug": "the-collector-2009",
+          "date": "2025-01-25",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0844479",
           "title": "The Collector",
-          "sortTitle": "collector-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-07-08",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collector-2009",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-02-06",
-          "reviewSequence": 2842,
-          "viewingDate": "2025-02-06",
-          "viewingSequence": 2842,
+          "reviewSlug": "the-collector-2009",
+          "date": "2025-02-06",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1748227",
           "title": "The Collection",
-          "sortTitle": "collection-2012",
           "releaseYear": "2012",
-          "releaseDate": "2012-09-24",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-collection-2012",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-08",
-          "reviewSequence": 2958,
-          "viewingDate": "2025-11-08",
-          "viewingSequence": 2958,
+          "reviewSlug": "the-collection-2012",
+          "date": "2025-11-08",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt11045340",
           "title": "Pilgrim",
-          "sortTitle": "pilgrim-2019",
           "releaseYear": "2019",
-          "releaseDate": "2019-11-01",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "pilgrim-2019",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-11-26",
-          "reviewSequence": 2973,
-          "viewingDate": "2025-11-26",
-          "viewingSequence": 2973,
+          "reviewSlug": "pilgrim-2019",
+          "date": "2025-11-26",
           "medium": "Hulu",
           "venue": null
         }
@@ -2188,64 +1015,26 @@
       "slug": "wes-craven",
       "viewings": [
         {
-          "imdbId": "tt0082245",
           "title": "Deadly Blessing",
-          "sortTitle": "deadly-blessing-1981",
           "releaseYear": "1981",
-          "releaseDate": "1981-08-14",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "deadly-blessing-1981",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-01-27",
-          "reviewSequence": 2841,
-          "viewingDate": "2025-01-27",
-          "viewingSequence": 2841,
+          "reviewSlug": "deadly-blessing-1981",
+          "date": "2025-01-27",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0093629",
           "title": "A Nightmare on Elm Street 3: Dream Warriors",
-          "sortTitle": "nightmare-on-elm-street-3-dream-warriors-1987",
           "releaseYear": "1987",
-          "releaseDate": "1987-02-27",
-          "genres": [
-            "Fantasy",
-            "Horror"
-          ],
-          "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-03-01",
-          "reviewSequence": 2853,
-          "viewingDate": "2025-03-01",
-          "viewingSequence": 2853,
+          "reviewSlug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
+          "date": "2025-03-01",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0105121",
           "title": "The People Under the Stairs",
-          "sortTitle": "people-under-the-stairs-1991",
           "releaseYear": "1991",
-          "releaseDate": "1991-11-01",
-          "genres": [
-            "Comedy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-people-under-the-stairs-1991",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2025-10-19",
-          "reviewSequence": 2937,
-          "viewingDate": "2025-10-19",
-          "viewingSequence": 2937,
+          "reviewSlug": "the-people-under-the-stairs-1991",
+          "date": "2025-10-19",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2257,63 +1046,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0070047",
           "title": "The Exorcist",
-          "sortTitle": "exorcist-1973",
           "releaseYear": "1973",
-          "releaseDate": "1973-12-26",
-          "genres": [
-            "Horror"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2025-02-18",
-          "viewingSequence": 2848,
+          "reviewSlug": null,
+          "date": "2025-02-18",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0099528",
           "title": "The Exorcist III",
-          "sortTitle": "exorcist-iii-1990",
           "releaseYear": "1990",
-          "releaseDate": "1990-08-17",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "the-exorcist-iii-1990",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2025-11-12",
-          "reviewSequence": 2960,
-          "viewingDate": "2025-11-12",
-          "viewingSequence": 2960,
+          "reviewSlug": "the-exorcist-iii-1990",
+          "date": "2025-11-12",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt10045260",
           "title": "The Exorcist III: Legion",
-          "sortTitle": "exorcist-iii-legion-1990",
           "releaseYear": "1990",
-          "releaseDate": "1990-12-31",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-exorcist-iii-legion-1990",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2025-11-16",
-          "reviewSequence": 2963,
-          "viewingDate": "2025-11-16",
-          "viewingSequence": 2963,
+          "reviewSlug": "the-exorcist-iii-legion-1990",
+          "date": "2025-11-16",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2325,64 +1077,26 @@
       "slug": "lucio-fulci",
       "viewings": [
         {
-          "imdbId": "tt0082307",
           "title": "The Beyond",
-          "sortTitle": "beyond-1981",
           "releaseYear": "1981",
-          "releaseDate": "1981-04-29",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-beyond-1981",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2015-06-23",
-          "reviewSequence": 1628,
-          "viewingDate": "2025-04-24",
-          "viewingSequence": 2865,
+          "reviewSlug": "the-beyond-1981",
+          "date": "2025-04-24",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0061074",
           "title": "Massacre Time",
-          "sortTitle": "massacre-time-1966",
           "releaseYear": "1966",
-          "releaseDate": "1966-08-10",
-          "genres": [
-            "Action",
-            "Drama",
-            "Thriller",
-            "Western"
-          ],
-          "slug": "massacre-time-1966",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2025-06-09",
-          "reviewSequence": 2895,
-          "viewingDate": "2025-06-09",
-          "viewingSequence": 2895,
+          "reviewSlug": "massacre-time-1966",
+          "date": "2025-06-09",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0096511",
           "title": "Zombie 3",
-          "sortTitle": "zombie-3-1988",
           "releaseYear": "1988",
-          "releaseDate": "1988-06-30",
-          "genres": [
-            "Action",
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": "zombie-3-1988",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2025-10-11",
-          "reviewSequence": 2933,
-          "viewingDate": "2025-10-11",
-          "viewingSequence": 2933,
+          "reviewSlug": "zombie-3-1988",
+          "date": "2025-10-11",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2394,61 +1108,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0082307",
           "title": "The Beyond",
-          "sortTitle": "beyond-1981",
           "releaseYear": "1981",
-          "releaseDate": "1981-04-29",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-beyond-1981",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2015-06-23",
-          "reviewSequence": 1628,
-          "viewingDate": "2025-04-24",
-          "viewingSequence": 2865,
+          "reviewSlug": "the-beyond-1981",
+          "date": "2025-04-24",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0062833",
           "title": "The Crimson Cult",
-          "sortTitle": "crimson-cult-1968",
           "releaseYear": "1968",
-          "releaseDate": "1968-12-31",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "the-crimson-cult-1968",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2025-05-03",
-          "reviewSequence": 2867,
-          "viewingDate": "2025-05-03",
-          "viewingSequence": 2867,
+          "reviewSlug": "the-crimson-cult-1968",
+          "date": "2025-05-03",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0089885",
           "title": "Re-Animator",
-          "sortTitle": "re-animator-1985",
           "releaseYear": "1985",
-          "releaseDate": "1985-05-24",
-          "genres": [
-            "Comedy",
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2025-09-30",
-          "viewingSequence": 2926,
+          "reviewSlug": null,
+          "date": "2025-09-30",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -2460,62 +1139,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0117571",
           "title": "Scream",
-          "sortTitle": "scream-1996",
           "releaseYear": "1996",
-          "releaseDate": "1996-12-18",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-1996",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-05-06",
-          "reviewSequence": 2870,
-          "viewingDate": "2025-05-06",
-          "viewingSequence": 2870,
+          "reviewSlug": "scream-1996",
+          "date": "2025-05-06",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0120082",
           "title": "Scream 2",
-          "sortTitle": "scream-2-1997",
           "releaseYear": "1997",
-          "releaseDate": "1997-12-10",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-2-1997",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2025-10-25",
-          "reviewSequence": 2943,
-          "viewingDate": "2025-10-25",
-          "viewingSequence": 2943,
+          "reviewSlug": "scream-2-1997",
+          "date": "2025-10-25",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1262416",
           "title": "Scream 4",
-          "sortTitle": "scream-4-2011",
           "releaseYear": "2011",
-          "releaseDate": "2011-03-22",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "scream-4-2011",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2025-11-01",
-          "reviewSequence": 2951,
-          "viewingDate": "2025-11-01",
-          "viewingSequence": 2951,
+          "reviewSlug": "scream-4-2011",
+          "date": "2025-11-01",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2527,43 +1170,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt5040012",
           "title": "Nosferatu",
-          "sortTitle": "nosferatu-2024",
           "releaseYear": "2024",
-          "releaseDate": "2024-11-07",
-          "genres": [
-            "Fantasy",
-            "Horror",
-            "Mystery"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2025-01-02",
-          "viewingSequence": 2828,
+          "reviewSlug": null,
+          "date": "2025-01-02",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt0065569",
           "title": "Count Dracula",
-          "sortTitle": "count-dracula-1970",
           "releaseYear": "1970",
-          "releaseDate": "1970-04-03",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "count-dracula-1970",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-03-06",
-          "reviewSequence": 2855,
-          "viewingDate": "2025-03-06",
-          "viewingSequence": 2855,
+          "reviewSlug": "count-dracula-1970",
+          "date": "2025-03-06",
           "medium": "4k UHD Blu-ray",
           "venue": null
         }
@@ -2575,44 +1193,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0098194",
           "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
+          "reviewSlug": "the-return-of-the-musketeers-1989",
+          "date": "2025-01-11",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0098194",
           "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
+          "reviewSlug": "the-return-of-the-musketeers-1989",
+          "date": "2025-07-07",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2624,44 +1216,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0098194",
           "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-01-11",
-          "viewingSequence": 2833,
+          "reviewSlug": "the-return-of-the-musketeers-1989",
+          "date": "2025-01-11",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0098194",
           "title": "The Return of the Musketeers",
-          "sortTitle": "return-of-the-musketeers-1989",
           "releaseYear": "1989",
-          "releaseDate": "1989-04-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Romance"
-          ],
-          "slug": "the-return-of-the-musketeers-1989",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2025-07-07",
-          "reviewSequence": 2908,
-          "viewingDate": "2025-07-07",
-          "viewingSequence": 2908,
+          "reviewSlug": "the-return-of-the-musketeers-1989",
+          "date": "2025-07-07",
           "medium": "Blu-ray",
           "venue": null
         }

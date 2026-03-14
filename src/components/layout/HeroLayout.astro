@@ -1,0 +1,26 @@
+---
+import type { ComponentProps } from "astro/types";
+
+import BaseLayout from "./BaseLayout.astro";
+import Hero from "./Hero.astro";
+import Mast from "./Mast.astro";
+
+type Props = {
+  baseLayoutProps: Omit<ComponentProps<typeof BaseLayout>, "children">;
+  heroProps: ComponentProps<typeof Hero>;
+  hideLogo?: boolean;
+};
+
+const { baseLayoutProps, heroProps, hideLogo = false, ...rest } = Astro.props;
+---
+
+<BaseLayout {...baseLayoutProps} {...rest}>
+  <Mast
+    addGradient={false}
+    hasBackdrop={true}
+    hideLogo={hideLogo}
+    slot="mast"
+  />
+  <Hero {...heroProps} />
+  <slot />
+</BaseLayout>

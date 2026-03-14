@@ -66,37 +66,14 @@
       "imdbId": "tt4263482",
       "title": "The Witch",
       "releaseYear": "2015",
-      "sortTitle": "witch-2015",
-      "releaseDate": "2015-01-23",
-      "genres": [
-        "Drama",
-        "Fantasy",
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
-      "slug": "the-witch-2015",
-      "grade": "A",
-      "gradeValue": 15,
-      "reviewDate": "2022-08-04",
-      "reviewSequence": 2438,
+      "reviewSlug": "the-witch-2015",
       "count": 2
     },
     {
       "imdbId": "tt3498820",
       "title": "Captain America: Civil War",
       "releaseYear": "2016",
-      "sortTitle": "captain-america-civil-war-2016",
-      "releaseDate": "2016-04-30",
-      "genres": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "slug": "captain-america-civil-war-2016",
-      "grade": "B+",
-      "gradeValue": 13,
-      "reviewDate": "2020-07-25",
-      "reviewSequence": 1969,
+      "reviewSlug": "captain-america-civil-war-2016",
       "count": 2
     }
   ],
@@ -107,48 +84,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-03-10",
-          "viewingSequence": 1667,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-03-10",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-09-17",
-          "viewingSequence": 1684,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-09-17",
           "medium": "Amazon",
           "venue": null
         }
@@ -160,42 +107,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-05-12",
-          "viewingSequence": 1672,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-05-12",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-11-12",
-          "viewingSequence": 1694,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-11-12",
           "medium": "Amazon",
           "venue": null
         }
@@ -207,44 +130,18 @@
       "slug": "sam-peckinpah",
       "viewings": [
         {
-          "imdbId": "tt0068638",
           "title": "The Getaway",
-          "sortTitle": "getaway-1972",
           "releaseYear": "1972",
-          "releaseDate": "1972-12-13",
-          "genres": [
-            "Action",
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "the-getaway-1972",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2016-11-27",
-          "reviewSequence": 1696,
-          "viewingDate": "2016-11-27",
-          "viewingSequence": 1696,
+          "reviewSlug": "the-getaway-1972",
+          "date": "2016-11-27",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0067800",
           "title": "Straw Dogs",
-          "sortTitle": "straw-dogs-1971",
           "releaseYear": "1971",
-          "releaseDate": "1971-11-25",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": "straw-dogs-1971",
-          "grade": "A+",
-          "gradeValue": 16,
-          "reviewDate": "2016-12-02",
-          "reviewSequence": 1698,
-          "viewingDate": "2016-12-02",
-          "viewingSequence": 1698,
+          "reviewSlug": "straw-dogs-1971",
+          "date": "2016-12-02",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -258,86 +155,34 @@
       "slug": "john-wayne",
       "viewings": [
         {
-          "imdbId": "tt0022981",
           "title": "Haunted Gold",
-          "sortTitle": "haunted-gold-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-12-17",
-          "genres": [
-            "Drama",
-            "Mystery",
-            "Western"
-          ],
-          "slug": "haunted-gold-1932",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-06-19",
-          "reviewSequence": 2413,
-          "viewingDate": "2016-08-22",
-          "viewingSequence": 1680,
+          "reviewSlug": "haunted-gold-1932",
+          "date": "2016-08-22",
           "medium": "TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0023396",
           "title": "Ride Him, Cowboy",
-          "sortTitle": "ride-him-cowboy-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-08-27",
-          "genres": [
-            "Action",
-            "Drama",
-            "Romance",
-            "Western"
-          ],
-          "slug": "ride-him-cowboy-1932",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-06-19",
-          "reviewSequence": 2412,
-          "viewingDate": "2016-09-04",
-          "viewingSequence": 1683,
+          "reviewSlug": "ride-him-cowboy-1932",
+          "date": "2016-09-04",
           "medium": "TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0024500",
           "title": "Riders of Destiny",
-          "sortTitle": "riders-of-destiny-1933",
           "releaseYear": "1933",
-          "releaseDate": "1933-10-10",
-          "genres": [
-            "Music",
-            "Romance",
-            "Western"
-          ],
-          "slug": "riders-of-destiny-1933",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2016-09-17",
-          "reviewSequence": 1685,
-          "viewingDate": "2016-09-17",
-          "viewingSequence": 1685,
+          "reviewSlug": "riders-of-destiny-1933",
+          "date": "2016-09-17",
           "medium": "Amazon",
           "venue": null
         },
         {
-          "imdbId": "tt0024516",
           "title": "Sagebrush Trail",
-          "sortTitle": "sagebrush-trail-1933",
           "releaseYear": "1933",
-          "releaseDate": "1933-12-15",
-          "genres": [
-            "Drama",
-            "Western"
-          ],
-          "slug": "sagebrush-trail-1933",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2016-11-09",
-          "reviewSequence": 1693,
-          "viewingDate": "2016-11-09",
-          "viewingSequence": 1693,
+          "reviewSlug": "sagebrush-trail-1933",
+          "date": "2016-11-09",
           "medium": "Amazon",
           "venue": null
         }
@@ -349,62 +194,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2349144",
           "title": "Mississippi Grind",
-          "sortTitle": "mississippi-grind-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-19",
-          "genres": [
-            "Comedy",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2016-01-02",
-          "viewingSequence": 1663,
+          "reviewSlug": null,
+          "date": "2016-01-02",
           "medium": "Amazon",
           "venue": null
         },
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-05-12",
-          "viewingSequence": 1672,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-05-12",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-11-12",
-          "viewingSequence": 1694,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-11-12",
           "medium": "Amazon",
           "venue": null
         }
@@ -416,62 +225,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-05-12",
-          "viewingSequence": 1672,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-05-12",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-11-12",
-          "viewingSequence": 1694,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-11-12",
           "medium": "Amazon",
           "venue": null
         },
         {
-          "imdbId": "tt0496806",
           "title": "Ocean's Thirteen",
-          "sortTitle": "oceans-thirteen-2007",
           "releaseYear": "2007",
-          "releaseDate": "2007-05-08",
-          "genres": [
-            "Crime",
-            "Thriller"
-          ],
-          "slug": "oceans-thirteen-2007",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2016-11-27",
-          "reviewSequence": 1697,
-          "viewingDate": "2016-11-27",
-          "viewingSequence": 1697,
+          "reviewSlug": "oceans-thirteen-2007",
+          "date": "2016-11-27",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -483,43 +256,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt2349144",
           "title": "Mississippi Grind",
-          "sortTitle": "mississippi-grind-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-19",
-          "genres": [
-            "Comedy",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2016-01-02",
-          "viewingSequence": 1663,
+          "reviewSlug": null,
+          "date": "2016-01-02",
           "medium": "Amazon",
           "venue": null
         },
         {
-          "imdbId": "tt1431045",
           "title": "Deadpool",
-          "sortTitle": "deadpool-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-02-08",
-          "genres": [
-            "Action",
-            "Comedy",
-            "Sci-Fi"
-          ],
-          "slug": "deadpool-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2021-02-27",
-          "reviewSequence": 2158,
-          "viewingDate": "2016-03-10",
-          "viewingSequence": 1666,
+          "reviewSlug": "deadpool-2016",
+          "date": "2016-03-10",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         }
@@ -531,44 +279,18 @@
       "slug": "humphrey-bogart",
       "viewings": [
         {
-          "imdbId": "tt0042324",
           "title": "Chain Lightning",
-          "sortTitle": "chain-lightning-1950",
           "releaseYear": "1950",
-          "releaseDate": "1950-02-18",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Drama"
-          ],
-          "slug": "chain-lightning-1950",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-24",
-          "reviewSequence": 2486,
-          "viewingDate": "2016-01-21",
-          "viewingSequence": 1664,
+          "reviewSlug": "chain-lightning-1950",
+          "date": "2016-01-21",
           "medium": "TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0034583",
           "title": "Casablanca",
-          "sortTitle": "casablanca-1942",
           "releaseYear": "1942",
-          "releaseDate": "1942-11-26",
-          "genres": [
-            "Drama",
-            "Romance",
-            "War"
-          ],
-          "slug": "casablanca-1942",
-          "grade": "A+",
-          "gradeValue": 16,
-          "reviewDate": "2025-03-22",
-          "reviewSequence": 2860,
-          "viewingDate": "2016-02-28",
-          "viewingSequence": 1665,
+          "reviewSlug": "casablanca-1942",
+          "date": "2016-02-28",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -580,48 +302,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-03-10",
-          "viewingSequence": 1667,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-03-10",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-09-17",
-          "viewingSequence": 1684,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-09-17",
           "medium": "Amazon",
           "venue": null
         }
@@ -633,48 +325,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-03-10",
-          "viewingSequence": 1667,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-03-10",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-09-17",
-          "viewingSequence": 1684,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-09-17",
           "medium": "Amazon",
           "venue": null
         }
@@ -686,48 +348,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-03-10",
-          "viewingSequence": 1667,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-03-10",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-09-17",
-          "viewingSequence": 1684,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-09-17",
           "medium": "Amazon",
           "venue": null
         }
@@ -739,48 +371,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-03-10",
-          "viewingSequence": 1667,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-03-10",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-09-17",
-          "viewingSequence": 1684,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-09-17",
           "medium": "Amazon",
           "venue": null
         }
@@ -792,48 +394,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-03-10",
-          "viewingSequence": 1667,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-03-10",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-09-17",
-          "viewingSequence": 1684,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-09-17",
           "medium": "Amazon",
           "venue": null
         }
@@ -847,48 +419,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-03-10",
-          "viewingSequence": 1667,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-03-10",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt4263482",
           "title": "The Witch",
-          "sortTitle": "witch-2015",
           "releaseYear": "2015",
-          "releaseDate": "2015-01-23",
-          "genres": [
-            "Drama",
-            "Fantasy",
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "the-witch-2015",
-          "grade": "A",
-          "gradeValue": 15,
-          "reviewDate": "2022-08-04",
-          "reviewSequence": 2438,
-          "viewingDate": "2016-09-17",
-          "viewingSequence": 1684,
+          "reviewSlug": "the-witch-2015",
+          "date": "2016-09-17",
           "medium": "Amazon",
           "venue": null
         }
@@ -900,42 +442,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-05-12",
-          "viewingSequence": 1672,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-05-12",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-11-12",
-          "viewingSequence": 1694,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-11-12",
           "medium": "Amazon",
           "venue": null
         }
@@ -947,42 +465,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-05-12",
-          "viewingSequence": 1672,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-05-12",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-11-12",
-          "viewingSequence": 1694,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-11-12",
           "medium": "Amazon",
           "venue": null
         }
@@ -994,42 +488,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-05-12",
-          "viewingSequence": 1672,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-05-12",
           "medium": null,
           "venue": "Alamo Drafthouse Cinema - One Loudoun"
         },
         {
-          "imdbId": "tt3498820",
           "title": "Captain America: Civil War",
-          "sortTitle": "captain-america-civil-war-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-04-30",
-          "genres": [
-            "Action",
-            "Sci-Fi"
-          ],
-          "slug": "captain-america-civil-war-2016",
-          "grade": "B+",
-          "gradeValue": 13,
-          "reviewDate": "2020-07-25",
-          "reviewSequence": 1969,
-          "viewingDate": "2016-11-12",
-          "viewingSequence": 1694,
+          "reviewSlug": "captain-america-civil-war-2016",
+          "date": "2016-11-12",
           "medium": "Amazon",
           "venue": null
         }
