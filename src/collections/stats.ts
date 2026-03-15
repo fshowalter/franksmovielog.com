@@ -4,7 +4,7 @@ import path from "node:path";
 
 import { CONTENT_ROOT } from "./contentRoot";
 import { loadJsonDirectory } from "./utils/loadJsonDirectory";
-import { loadSingleJsonFile } from "./utils/loadSingleJsonFile";
+import { loadJsonFileAsSingleEntry } from "./utils/loadJsonFileAsSingleEntry";
 
 const MostWatchedTitleSchema = z
   .object({
@@ -118,7 +118,7 @@ export const yearStats = defineCollection({
 export const alltimeStats = defineCollection({
   loader: {
     load: (loaderContext) =>
-      loadSingleJsonFile({
+      loadJsonFileAsSingleEntry({
         filePath: path.join(CONTENT_ROOT, "data", "all-time-stats.json"),
         id: "alltimeStats",
         loaderContext,

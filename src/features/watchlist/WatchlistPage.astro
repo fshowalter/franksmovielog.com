@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+import { getWatchlistProps } from "~/features/watchlist/getWatchlistProps";
+import { Watchlist } from "~/features/watchlist/Watchlist";
+
+const title = "Watchlist";
+const deck = `"A man's got to know his limitations"`;
+const metaDescription =
+  "My to-review bucket list. See what I've yet to review. Sort or filter titles by reason, release date, or title.";
+
+const watchlistTitleEntries = await getCollection("watchlistTitles");
+const watchlistProps = await getWatchlistProps(
+  watchlistTitleEntries.map((e) => e.data),
+);
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: {
+      description: deck,
+      type: "website",
+    },
+    title,
+  }}
+  heroProps={{
+    backdropSlug: "watchlist",
+    deck,
+    title,
+  }}
+>
+  <Watchlist client:load {...watchlistProps} />
+</HeroLayout>

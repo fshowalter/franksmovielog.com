@@ -5,7 +5,7 @@ import { promises as fs } from "node:fs";
 import { watchFile } from "./watchFile";
 
 /** Load a single JSON object file as one store entry with a fixed id. */
-export function loadSingleJsonFile({
+export function loadJsonFileAsSingleEntry({
   filePath,
   id,
   loaderContext,

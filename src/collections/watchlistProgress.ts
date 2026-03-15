@@ -3,7 +3,7 @@ import { defineCollection } from "astro:content";
 import path from "node:path";
 
 import { CONTENT_ROOT } from "./contentRoot";
-import { loadSingleJsonFile } from "./utils/loadSingleJsonFile";
+import { loadJsonFileAsSingleEntry } from "./utils/loadJsonFileAsSingleEntry";
 
 const WatchlistProgressDetailSchema = z
   .object({
@@ -44,7 +44,7 @@ const WatchlistProgressSchema = z.object({
 export const watchlistProgress = defineCollection({
   loader: {
     load: (loaderContext) =>
-      loadSingleJsonFile({
+      loadJsonFileAsSingleEntry({
         filePath: path.join(CONTENT_ROOT, "data", "watchlist-progress.json"),
         id: "watchlistProgress",
         loaderContext,
