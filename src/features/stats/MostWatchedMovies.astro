@@ -1,0 +1,71 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import ListItemTitle from "~/components/list-item-title/ListItemTitle.astro";
+import PosterList from "~/components/poster-list/PosterList.astro";
+import PosterListItem from "~/components/poster-list/PosterListItem.astro";
+
+type MostWatchedMoviesListItemValue =
+  CollectionEntry<"alltimeStats">["data"]["mostWatchedTitles"][number];
+
+type Props = {
+  class?: string;
+  values: MostWatchedMoviesListItemValue[];
+};
+
+const { class: className, values } = Astro.props;
+---
+
+{
+  values.length > 0 && (
+    <section
+      class:list={[
+        `
+          max-w-[calc(250px*4)] pb-5
+          laptop:pb-10
+          desktop:max-w-[calc(298px*4)]
+        `,
+        className,
+      ]}
+    >
+      <h2
+        class={`
+          px-container py-4 text-xl font-medium
+          tablet:text-center tablet:text-2xl
+          laptop:py-8
+        `}
+      >
+        Most Watched Movies
+      </h2>
+      <PosterList class={`justify-center`}>
+        {values.map((value) => {
+          return (
+            <PosterListItem posterSlug={value.reviewSlug}>
+              <div
+                class={`
+                  flex flex-col justify-center
+                  tablet:mt-2 tablet:w-full tablet:text-center
+                `}
+              >
+                <ListItemTitle
+                  reviewSlug={value.reviewSlug}
+                  title={value.title}
+                  year={value.releaseYear}
+                />
+                <div
+                  class={`
+                    mt-1 flex justify-start font-sans text-[13px] font-normal
+                    text-subtle
+                    tablet:justify-center
+                  `}
+                >
+                  {value.count.toLocaleString()} times
+                </div>
+              </div>
+            </PosterListItem>
+          );
+        })}
+      </PosterList>
+    </section>
+  )
+}

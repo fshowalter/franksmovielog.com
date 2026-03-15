@@ -1,0 +1,114 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getEntry } from "astro:content";
+
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+
+import Callouts from "./Callouts.astro";
+import DecadeDistribution from "./DecadeDistribution.astro";
+import MediaDistribution from "./MediaDistribution.astro";
+import MostWatchedDirectors from "./MostWatchedDirectors.astro";
+import MostWatchedMovies from "./MostWatchedMovies.astro";
+import MostWatchedPerformers from "./MostWatchedPerformers.astro";
+import MostWatchedWriters from "./MostWatchedWriters.astro";
+import StatsNavigation from "./StatsNavigation.astro";
+import VenueDistribution from "./VenueDistribution.astro";
+
+type Props = {
+  stats: CollectionEntry<"yearStats">["data"];
+};
+
+const { stats } = Astro.props;
+const alltimeStats = await getEntry("alltimeStats", "alltimeStats");
+
+if (!alltimeStats) {
+  throw new Error("Error getting All-time stats.");
+}
+
+const allStatsYears = alltimeStats.data.statsYears.toSorted().reverse();
+
+const title = `${stats.year} Stats`;
+const deck =
+  allStatsYears[0] === stats.year
+    ? "A Year in Progress..."
+    : "A Year in Review";
+
+const metaDescription = `My ${stats.year} viewing stats. Includes my most-watched movies, directors, performers, and writers; as well as venue, release year, and media distributions.`;
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: {
+      description: deck,
+      type: "website",
+    },
+    title,
+  }}
+  heroProps={{
+    backdropSlug: "stats",
+    breadcrumb: {
+      href: "/viewings/",
+      text: "Viewing Log",
+    },
+    deck,
+    title: `${stats.year} Stats`,
+  }}
+>
+  <div class="flex flex-col items-center bg-subtle">
+    <StatsNavigation
+      class="mb-12 w-full"
+      currentYear={stats.year}
+      linkFunc={(year: string) => {
+        if (year === "all") {
+          return "/viewings/stats/";
+        }
+
+        return `/viewings/stats/${year}/`;
+      }}
+      years={allStatsYears}
+    />
+    <Callouts
+      stats={[
+        { label: "Viewings", value: stats.viewingCount },
+        { label: "Movies", value: stats.titleCount },
+        { label: "New Movies", value: stats.newTitleCount },
+        { label: "Reviews", value: stats.reviewCount },
+      ]}
+    />
+    <div
+      class={`
+        mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col items-stretch
+        gap-y-8 py-10
+        tablet:px-container
+      `}
+    >
+      <MostWatchedMovies
+        class="mx-auto w-full"
+        values={stats.mostWatchedTitles}
+      />
+      <div
+        class={`
+          mx-auto flex w-full max-w-popout grid-cols-2 flex-col items-start
+          gap-y-8
+          laptop:grid laptop:max-w-unset laptop:gap-x-8
+        `}
+      >
+        <DecadeDistribution values={stats.decadeDistribution} />
+        <MediaDistribution values={stats.mediaDistribution} />
+      </div>
+      <div class="mx-auto w-full max-w-popout">
+        <VenueDistribution values={stats.venueDistribution} />
+      </div>
+      <div class={`mx-auto flex w-full max-w-popout flex-col gap-y-8`}>
+        <MostWatchedDirectors values={stats.mostWatchedDirectors} />
+        <MostWatchedPerformers values={stats.mostWatchedPerformers} />
+        <MostWatchedWriters values={stats.mostWatchedWriters} />
+      </div>
+    </div>
+  </div>
+</HeroLayout>

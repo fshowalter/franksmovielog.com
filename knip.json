@@ -2,19 +2,9 @@
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "entry": [
     "src/pages/**/*.astro",
-    "src/astro/search.ts",
-    "src/astro/navDrawer.ts",
-    "src/pages/**/*.spec.ts"
+    "src/components/pagefind-search/pagefind-search.ts",
+    "src/components/nav-drawer/navDrawer.ts"
   ],
-  "project": [
-    "**/*",
-    "!src/**/__mocks__/**",
-    "!content/**",
-    "!public/**",
-    "!**/__snapshots__/**",
-    "!**/__image_snapshots__/**",
-    "!src/**/fixtures/**",
-    "!scripts/**"
-  ],
-  "ignoreDependencies": ["@prettier/plugin-xml", "babel-plugin-react-compiler"]
+  "project": ["**/*"],
+  "ignoreDependencies": ["babel-plugin-react-compiler"]
 }

@@ -1,0 +1,114 @@
+---
+import { getEntry } from "astro:content";
+
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+
+import WatchlistProgressCallouts from "./WatchlistProgressCallouts.astro";
+import WatchlistProgressForGroup from "./WatchlistProgressForGroup.astro";
+
+const watchlistProgress = await getEntry(
+  "watchlistProgress",
+  "watchlistProgress",
+);
+
+if (!watchlistProgress) {
+  throw new Error("Failed to load Watchlist progress.");
+}
+
+const progress = watchlistProgress.data;
+
+const deck = '"I find your lack of faith disturbing."';
+const metaDescription =
+  "My progress working through my to-review watchlist. Overall and individual percentage breakdowns by director, writer, performer, and collection.";
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: {
+      description: deck,
+      type: "website",
+    },
+    title: "Watchlist Progress",
+  }}
+  heroProps={{
+    backdropSlug: "watchlist-progress",
+    breadcrumb: {
+      href: "/watchlist/",
+      text: "Watchlist",
+    },
+    deck,
+    title: "Progress",
+  }}
+>
+  <div class="flex flex-col items-center bg-subtle">
+    <WatchlistProgressCallouts
+      callouts={[
+        {
+          label: "Total Progress",
+          reviewed: progress.reviewed,
+          total: progress.total,
+        },
+        {
+          label: "Director",
+          reviewed: progress.directorReviewed,
+          sublabel: "Titles",
+          total: progress.directorTotal,
+        },
+        {
+          label: "Performer",
+          reviewed: progress.performerReviewed,
+          sublabel: "Titles",
+          total: progress.performerTotal,
+        },
+        {
+          label: "Writer",
+          reviewed: progress.writerReviewed,
+          sublabel: "Titles",
+          total: progress.writerTotal,
+        },
+        {
+          label: "Collection",
+          reviewed: progress.collectionReviewed,
+          sublabel: "Titles",
+          total: progress.collectionTotal,
+        },
+      ]}
+    />
+    <div
+      class={`
+        mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col gap-x-8
+        gap-y-20 py-16
+        tablet:px-container
+        laptop:grid laptop:grid-cols-2
+      `}
+    >
+      <WatchlistProgressForGroup
+        class="col-start-1 row-span-3"
+        label="Directors"
+        values={progress.directorDetails}
+        valueType="director"
+      />
+      <WatchlistProgressForGroup
+        label="Performers"
+        values={progress.performerDetails}
+        valueType="performer"
+      />
+      <WatchlistProgressForGroup
+        class="col-start-2 row-start-2"
+        label="Writers"
+        values={progress.writerDetails}
+        valueType="writer"
+      />
+      <WatchlistProgressForGroup
+        class="col-start-2 row-start-3"
+        label="Collections"
+        values={progress.collectionDetails}
+        valueType="collection"
+      />
+    </div>
+  </div>
+</HeroLayout>
