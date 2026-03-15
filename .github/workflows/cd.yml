@@ -67,7 +67,7 @@ jobs:
             content-cache-v1-
 
       - name: install dependencies
-        run: npm install
+        run: npm ci
 
       - name: build
         run: npm run build
