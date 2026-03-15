@@ -1,5 +1,4 @@
 ---
-
 type Props = {
   class?: string;
   reviewSlug?: string;
@@ -8,8 +7,7 @@ type Props = {
 };
 
 const { class: className, reviewSlug, title, year } = Astro.props;
-// The HTML comments below are to prevent Astro from inserting newline whitespaces.
-const yearClasses = `text-xxs leading-none font-light text-subtle`
+const yearClasses = `text-xxs leading-none font-light text-subtle`;
 ---
 
 {
@@ -23,9 +21,8 @@ const yearClasses = `text-xxs leading-none font-light text-subtle`
       `}
       href={`/reviews/${reviewSlug}/`}
     >
-      {title}<!-- -->&#x202F;&#x202F;<span class={yearClasses}>
-  {year}
-</span>
+      {/* prettier-ignore */}
+      {title}&#x202F;&#x202F;<span class={yearClasses}>{year}</span>
     </a>
   ) : (
     <span
@@ -37,9 +34,8 @@ const yearClasses = `text-xxs leading-none font-light text-subtle`
         className,
       ]}
     >
-      {title}<!-- -->&#x202F;&#x202F;<span class={yearClasses}>
-  {year}
-</span>
+      {/* prettier-ignore */}
+      {title}&#x202F;&#x202F;<span class={yearClasses}>{year}</span>
     </span>
   )
 }
