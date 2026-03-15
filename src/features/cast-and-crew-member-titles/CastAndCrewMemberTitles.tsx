@@ -1,16 +1,10 @@
 import { useReducer } from "react";
 
-import type { StillImageProps } from "~/api/stills";
+import type { PosterImageProps } from "~/assets/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
-import { ListItemWatchlistReason } from "~/components/list-item-watchlist-reason/ListItemWatchlistReason";
-import { PlaceholderCard } from "~/components/placeholder-card/PlaceholderCard";
-import {
-  ReviewCardList,
-  ReviewCardListImageConfig,
-} from "~/components/review-card-list/ReviewCardList";
-import { ReviewCard } from "~/components/review-card/ReviewCard";
+import { PosterList } from "~/components/poster-list/PosterList";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
@@ -27,6 +21,7 @@ import {
   selectHasPendingFilters,
 } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
+import { CastAndCrewMemberTitlesListItem } from "./CastAndCrewMemberTitlesListItem";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
 
@@ -52,6 +47,7 @@ export type CastAndCrewMemberTitlesValue = {
   grade?: string;
   gradeValue?: number;
   imdbId: string;
+  posterImageProps: PosterImageProps;
   releaseSequence: number;
   releaseYear: string;
   reviewDisplayDate?: string;
@@ -59,7 +55,6 @@ export type CastAndCrewMemberTitlesValue = {
   reviewYear?: string;
   slug?: string;
   sortTitle: string;
-  stillImageProps: StillImageProps;
   title: string;
   watchlistCollectionNames: string[];
   watchlistDirectorNames: string[];
@@ -141,60 +136,17 @@ export function CastAndCrewMemberTitles({
       }}
       totalCount={filteredValues.length}
     >
-      <div
-        className="
-          tablet:pt-10
-          laptop:pt-14
-        "
-      >
-        <ReviewCardList>
+      <div className="tablet:-mx-6 tablet:pt-10">
+        <PosterList>
           {[...filteredValues].map((value) => {
-            if (value.slug && value.grade && value.excerpt) {
-              return (
-                <ReviewCard
-                  as="li"
-                  excerpt={value.excerpt}
-                  eyebrow={value.creditedAs.join(", ")}
-                  footer={
-                    <>
-                      <div className="mb-2 text-accent">
-                        {value.reviewDisplayDate}
-                      </div>
-                      {value.genres.join(", ")}
-                    </>
-                  }
-                  grade={value.grade}
-                  key={value.imdbId}
-                  releaseYear={value.releaseYear}
-                  slug={value.slug}
-                  stillImageConfig={ReviewCardListImageConfig}
-                  stillImageProps={value.stillImageProps}
-                  title={value.title}
-                />
-              );
-            }
             return (
-              <PlaceholderCard
-                as="li"
-                bodyText={
-                  <ListItemWatchlistReason
-                    collectionNames={value.watchlistCollectionNames}
-                    directorNames={value.watchlistDirectorNames}
-                    performerNames={value.watchlistPerformerNames}
-                    writerNames={value.watchlistWriterNames}
-                  />
-                }
-                eyebrow={value.creditedAs.join(", ")}
-                footer={value.genres.join(", ")}
+              <CastAndCrewMemberTitlesListItem
                 key={value.imdbId}
-                releaseYear={value.releaseYear}
-                stillImageConfig={ReviewCardListImageConfig}
-                stillImageProps={value.stillImageProps}
-                title={value.title}
+                value={value}
               />
             );
           })}
-        </ReviewCardList>
+        </PosterList>
       </div>
     </FilterAndSortContainer>
   );

@@ -31,37 +31,36 @@ import type {
 
 import { CastAndCrewMemberTitles } from "./CastAndCrewMemberTitles";
 
-// Inline minimal fixture data for testing
-let testIdCounter = 0;
-const createTitle = (
-  overrides: Partial<CastAndCrewMemberTitlesValue> = {},
-): CastAndCrewMemberTitlesValue => {
-  testIdCounter += 1;
-  return {
-    creditedAs: ["Director"],
-    excerpt: "test excerpt",
-    genres: ["Drama"],
-    grade: "B+",
-    gradeValue: 8,
-    imdbId: `tt${String(testIdCounter).padStart(7, "0")}`,
-    releaseSequence: testIdCounter,
-    releaseYear: "1960",
-    reviewDisplayDate: "Jan 1, 2020",
-    reviewSequence: testIdCounter,
-    reviewYear: "2020",
-    slug: `test-movie-${testIdCounter}`,
-    sortTitle: `Test Movie ${testIdCounter}`,
-    stillImageProps: {
-      src: "/still.jpg",
-      srcSet: "/still.jpg 1x",
-    },
-    title: `Test Movie ${testIdCounter}`,
-    watchlistCollectionNames: [],
-    watchlistDirectorNames: [],
-    watchlistPerformerNames: [],
-    watchlistWriterNames: [],
-    ...overrides,
-  };
+const createTitles = (
+  overrides: Partial<CastAndCrewMemberTitlesValue>[],
+): CastAndCrewMemberTitlesValue[] => {
+  return overrides.map((override, index) => {
+    return {
+      creditedAs: ["Director"],
+      excerpt: "test excerpt",
+      genres: ["Drama"],
+      grade: "B+",
+      gradeValue: 8,
+      imdbId: `tt${String(index).padStart(7, "0")}`,
+      posterImageProps: {
+        src: "/poster.jpg",
+        srcSet: "/poster.jpg 1x",
+      },
+      releaseSequence: index,
+      releaseYear: "1960",
+      reviewDisplayDate: "Jan 1, 2020",
+      reviewSequence: index.toLocaleString(),
+      reviewYear: "2020",
+      slug: `test-movie-${index}`,
+      sortTitle: `Test Movie ${index}`,
+      title: `Test Movie ${index}`,
+      watchlistCollectionNames: [],
+      watchlistDirectorNames: [],
+      watchlistPerformerNames: [],
+      watchlistWriterNames: [],
+      ...override,
+    };
+  });
 };
 
 const baseProps: CastAndCrewMemberTitlesProps = {
@@ -75,7 +74,6 @@ const baseProps: CastAndCrewMemberTitlesProps = {
 
 describe("CastAndCrewMemberTitles", () => {
   beforeEach(() => {
-    testIdCounter = 0;
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
@@ -86,11 +84,11 @@ describe("CastAndCrewMemberTitles", () => {
 
   describe("filtering", () => {
     it("filters by title", async ({ expect }) => {
-      const titles = [
-        createTitle({ releaseYear: "1960", title: "Psycho" }),
-        createTitle({ releaseYear: "1963", title: "The Birds" }),
-        createTitle({ releaseYear: "1958", title: "Vertigo" }),
-      ];
+      const titles = createTitles([
+        { releaseYear: "1960", title: "Psycho" },
+        { releaseYear: "1963", title: "The Birds" },
+        { releaseYear: "1958", title: "Vertigo" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -110,23 +108,23 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("filters by genres", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           genres: ["Horror", "Thriller"],
           releaseYear: "1960",
           title: "Psycho",
-        }),
-        createTitle({
+        },
+        {
           genres: ["Thriller", "Action"],
           releaseYear: "1959",
           title: "North by Northwest",
-        }),
-        createTitle({
+        },
+        {
           genres: ["Comedy"],
           releaseYear: "1955",
           title: "The Trouble with Harry",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -146,11 +144,11 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("filters by release year range", async ({ expect }) => {
-      const titles = [
-        createTitle({ releaseYear: "1950", title: "Stage Fright" }),
-        createTitle({ releaseYear: "1965", title: "Marnie" }),
-        createTitle({ releaseYear: "1975", title: "Family Plot" }),
-      ];
+      const titles = createTitles([
+        { releaseYear: "1950", title: "Stage Fright" },
+        { releaseYear: "1965", title: "Marnie" },
+        { releaseYear: "1975", title: "Family Plot" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -170,23 +168,23 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("filters by review year range", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseYear: "1954",
           reviewYear: "2019",
           title: "Rear Window",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1951",
           reviewYear: "2020",
           title: "Strangers on a Train",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1955",
           reviewYear: "2022",
           title: "To Catch a Thief",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -208,26 +206,26 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("filters by grade range", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           grade: "C-",
           gradeValue: 8,
           releaseYear: "1953",
           title: "I Confess",
-        }),
-        createTitle({
+        },
+        {
           grade: "B",
           gradeValue: 12,
           releaseYear: "1954",
           title: "Dial M for Murder",
-        }),
-        createTitle({
+        },
+        {
           grade: "A",
           gradeValue: 15,
           releaseYear: "1959",
           title: "North by Northwest",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -249,29 +247,29 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("filters by reviewed status - reviewed only", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseYear: "1960",
-          reviewSequence: 1,
+          reviewSequence: "1",
           reviewYear: "2020",
           slug: "psycho-1960",
           title: "Psycho",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1963",
-          reviewSequence: 2,
+          reviewSequence: "2",
           reviewYear: "2021",
           slug: "the-birds-1963",
           title: "The Birds",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1964",
           reviewSequence: undefined,
           reviewYear: undefined,
           slug: undefined,
           title: "Marnie",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -288,29 +286,29 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("filters by reviewed status - unreviewed only", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseYear: "1960",
-          reviewSequence: 1,
+          reviewSequence: "1",
           reviewYear: "2020",
           slug: "psycho-1960",
           title: "Psycho",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1964",
           reviewSequence: undefined,
           reviewYear: undefined,
           slug: undefined,
           title: "Marnie",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1966",
           reviewSequence: undefined,
           reviewYear: undefined,
           slug: undefined,
           title: "Torn Curtain",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -329,23 +327,23 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("filters by credited as", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           creditedAs: ["Director"],
           releaseYear: "1935",
           title: "The 39 Steps",
-        }),
-        createTitle({
+        },
+        {
           creditedAs: ["Writer"],
           releaseYear: "1929",
           title: "Blackmail",
-        }),
-        createTitle({
+        },
+        {
           creditedAs: ["Performer"],
           releaseYear: "1955",
           title: "To Catch a Thief",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -369,23 +367,23 @@ describe("CastAndCrewMemberTitles", () => {
 
   describe("sorting", () => {
     it("sorts by title A → Z", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseYear: "1958",
           sortTitle: "Vertigo",
           title: "Vertigo",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1963",
           sortTitle: "Birds",
           title: "The Birds",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1960",
           sortTitle: "Psycho",
           title: "Psycho",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -403,23 +401,23 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("sorts by title Z → A", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseYear: "1963",
           sortTitle: "Birds",
           title: "The Birds",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1960",
           sortTitle: "Psycho",
           title: "Psycho",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1958",
           sortTitle: "Vertigo",
           title: "Vertigo",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -437,23 +435,23 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("sorts by release date oldest first", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseSequence: 3,
           releaseYear: "1980",
           title: "Family Plot",
-        }),
-        createTitle({
+        },
+        {
           releaseSequence: 1,
           releaseYear: "1950",
           title: "Stage Fright",
-        }),
-        createTitle({
+        },
+        {
           releaseSequence: 2,
           releaseYear: "1965",
           title: "Marnie",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -471,23 +469,23 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("sorts by release date newest first", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseSequence: 1,
           releaseYear: "1950",
           title: "Stage Fright",
-        }),
-        createTitle({
+        },
+        {
           releaseSequence: 2,
           releaseYear: "1965",
           title: "Marnie",
-        }),
-        createTitle({
+        },
+        {
           releaseSequence: 3,
           releaseYear: "1980",
           title: "Family Plot",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -505,26 +503,26 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("sorts by grade best first", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           grade: "A",
           gradeValue: 12,
           releaseYear: "1954",
           title: "Rear Window",
-        }),
-        createTitle({
+        },
+        {
           grade: "C-",
           gradeValue: 5,
           releaseYear: "1953",
           title: "I Confess",
-        }),
-        createTitle({
+        },
+        {
           grade: "B",
           gradeValue: 7,
           releaseYear: "1956",
           title: "The Man Who Knew Too Much",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -542,26 +540,26 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("sorts by grade worst first", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           grade: "A",
           gradeValue: 12,
           releaseYear: "1954",
           title: "Rear Window",
-        }),
-        createTitle({
+        },
+        {
           grade: "B",
           gradeValue: 7,
           releaseYear: "1956",
           title: "The Man Who Knew Too Much",
-        }),
-        createTitle({
+        },
+        {
           grade: "C-",
           gradeValue: 5,
           releaseYear: "1953",
           title: "I Confess",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -579,23 +577,23 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("sorts by review date oldest first", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseYear: "1958",
-          reviewSequence: 3,
+          reviewSequence: "3",
           title: "Vertigo",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1960",
-          reviewSequence: 1,
+          reviewSequence: "1",
           title: "Psycho",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1959",
-          reviewSequence: 2,
+          reviewSequence: "2",
           title: "North by Northwest",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -613,23 +611,23 @@ describe("CastAndCrewMemberTitles", () => {
     });
 
     it("sorts by review date newest first", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           releaseYear: "1960",
-          reviewSequence: 1,
+          reviewSequence: "1",
           title: "Psycho",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1959",
-          reviewSequence: 2,
+          reviewSequence: "2",
           title: "North by Northwest",
-        }),
-        createTitle({
+        },
+        {
           releaseYear: "1958",
-          reviewSequence: 3,
+          reviewSequence: "3",
           title: "Vertigo",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -649,18 +647,18 @@ describe("CastAndCrewMemberTitles", () => {
 
   describe("when clearing filters", () => {
     it("clears all filters with clear button", async ({ expect }) => {
-      const titles = [
-        createTitle({
+      const titles = createTitles([
+        {
           creditedAs: ["Director"],
           releaseYear: "1946",
           title: "Notorious",
-        }),
-        createTitle({
+        },
+        {
           creditedAs: ["Writer"],
           releaseYear: "1943",
           title: "Shadow of a Doubt",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
@@ -694,10 +692,10 @@ describe("CastAndCrewMemberTitles", () => {
 
   describe("when closing filter drawer without applying", () => {
     it("resets pending filter changes", async ({ expect }) => {
-      const titles = [
-        createTitle({ releaseYear: "1960", title: "Psycho" }),
-        createTitle({ releaseYear: "1963", title: "The Birds" }),
-      ];
+      const titles = createTitles([
+        { releaseYear: "1960", title: "Psycho" },
+        { releaseYear: "1963", title: "The Birds" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);

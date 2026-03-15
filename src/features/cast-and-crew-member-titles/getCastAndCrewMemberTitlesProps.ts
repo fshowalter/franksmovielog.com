@@ -2,8 +2,8 @@ import type { CollectionEntry } from "astro:content";
 
 import { getEntry } from "astro:content";
 
-import { getStillImageProps } from "~/assets/stills";
-import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
+import { getFluidWidthPosterImageProps } from "~/assets/posters";
+import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
 import { gradeToValue } from "~/utils/grades";
 import { toSortYear } from "~/utils/toSortYear";
@@ -54,6 +54,10 @@ export async function getCastAndCrewMemberTitlesProps(
         grade: review ? review.data.grade : undefined,
         gradeValue: review ? gradeToValue(review.data.grade) : undefined,
         imdbId: title.imdbId,
+        posterImageProps: await getFluidWidthPosterImageProps(
+          review ? review.data.slug : "default",
+          PosterListItemImageConfig,
+        ),
         releaseSequence: index,
         releaseYear: title.releaseYear,
         reviewDisplayDate: review
@@ -67,10 +71,6 @@ export async function getCastAndCrewMemberTitlesProps(
         reviewYear: review ? toSortYear(review.data.date) : undefined,
         slug: review ? review.data.slug : undefined,
         sortTitle: title.sortTitle,
-        stillImageProps: await getStillImageProps(
-          review ? review.data.slug : "default",
-          ReviewCardListImageConfig,
-        ),
         title: title.title,
         watchlistCollectionNames: title.watchlistCollectionNames,
         watchlistDirectorNames: title.watchlistDirectorNames,
