@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) or similar agents wh
 
 ## Project Overview
 
-Frank's Movie Log is an Astro-based static site for book reviews and reading tracking. Built with TypeScript, React components, and Tailwind CSS. The site uses a content-first architecture with JSON data files and Markdown reviews.
+Frank's Movie Log is an Astro-based static site for movie reviews and viewing tracking. Built with TypeScript, React components, and Tailwind CSS. The site uses a content-first architecture with JSON data files and Markdown reviews.
 
 ## Development Commands
 

@@ -80,7 +80,6 @@ export function CastAndCrewMemberTitles({
   initialSort,
   values,
 }: CastAndCrewMemberTitlesProps): React.JSX.Element {
-  console.log(values);
   const [state, dispatch] = useReducer(
     reducer,
     {
