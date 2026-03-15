@@ -62,7 +62,7 @@ export const reviews = defineCollection({
             more: frontmatter.slug,
             slug: frontmatter.slug as string,
             synopsis: frontmatter.synopsis as string | undefined,
-            work: frontmatter.slug as string,
+            title: frontmatter.slug as string,
           };
         },
         directoryPath: path.join(CONTENT_ROOT, "reviews"),

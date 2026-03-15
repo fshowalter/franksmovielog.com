@@ -1,0 +1,38 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import { getStillImageProps } from "~/assets/stills";
+
+type Props = HTMLAttributes<"img"> & {
+  class?: string;
+  decoding: "async" | "auto" | "sync";
+  imageConfig: {
+    height: number;
+    sizes: string;
+    width: number;
+  };
+  loading: "eager" | "lazy";
+  slug: string;
+};
+
+const {
+  class: className,
+  decoding = "auto",
+  imageConfig,
+  loading = "lazy",
+  slug,
+  ...rest
+} = Astro.props;
+
+const imageProps = await getStillImageProps(slug, imageConfig);
+---
+
+<img
+  {...imageProps}
+  {...imageConfig}
+  alt=""
+  class:list={["aspect-video", className]}
+  decoding={decoding}
+  loading={loading}
+  {...rest}
+/>

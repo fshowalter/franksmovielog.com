@@ -3,7 +3,7 @@ import { getImage } from "astro:assets";
 /**
  * Props for poster images.
  */
-type PosterImageProps = {
+export type PosterImageProps = {
   src: string;
   srcSet: string;
 };

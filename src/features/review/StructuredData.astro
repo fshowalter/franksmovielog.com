@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+const gradeMap: Record<string, number> = {
+  A: 5,
+  B: 4,
+  C: 3,
+  D: 2,
+  F: 1,
+};
+
+type Props = {
+  value: CollectionEntry<"reviewedTitles">["data"];
+};
+
+const { value } = Astro.props;
+---
+
+<script
+  is:inline
+  set:html={JSON.stringify({
+    "@context": "http://schema.org",
+    "@type": "Review",
+    author: {
+      "@type": "Person",
+      name: "Frank Showalter",
+    },
+    itemReviewed: {
+      "@type": "Movie",
+      dateCreated: value.releaseYear,
+      director: {
+        "@type": "Person",
+        name: value.directorNames[0],
+      },
+      name: value.title,
+      sameAs: `http://www.imdb.com/title/${value.imdbId}/`,
+    },
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: gradeMap[value.grade[0]],
+    },
+  })}
+  type="application/ld+json"
+/>

@@ -15,45 +15,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 /**
- * Generates optimized poster image properties with fixed dimensions.
- * @param slug - The identifier for the poster image file
- * @param options - Image dimensions configuration
- * @param options.height - Fixed height for the poster image
- * @param options.width - Fixed width for the poster image
- * @returns Poster image properties with src and srcSet
- */
-export async function getFixedWidthPosterImageProps(
-  slug: string,
-  {
-    height,
-    width,
-  }: {
-    height: number;
-    width: number;
-  },
-): Promise<PosterImageProps> {
-  const posterFilePath = Object.keys(images).find((path) => {
-    return path.endsWith(`/${slug}.png`);
-  })!;
-
-  const posterFile = await images[posterFilePath]();
-
-  const optimizedImage = await getImage({
-    densities: [1, 2],
-    format: "avif",
-    height: height,
-    quality: 80,
-    src: posterFile.default,
-    width: width,
-  });
-
-  return {
-    src: normalizeSources(optimizedImage.src),
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
-  };
-}
-
-/**
  * Generates responsive poster image properties with multiple width variants.
  * @param slug - The identifier for the poster image file (defaults to "default")
  * @param options - Image dimensions configuration

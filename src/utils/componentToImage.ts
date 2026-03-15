@@ -7,7 +7,7 @@ import sharp from "sharp";
 
 import type { OpenGraphImageComponentType } from "~/components/open-graph-image/OpenGraphImage";
 import type { HomeOpenGraphImageComponentType } from "~/features/home/HomeOpenGraphImage";
-import type { ReviewOpenGraphImageComponentType } from "~/features/review/ReviewOpenGraphImage";
+import type { ReviewOpenGraphImageComponentType } from "~/features/review/reviewOpenGraphImageResponse";
 
 import {
   createCacheConfig,

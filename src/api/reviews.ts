@@ -4,7 +4,6 @@ import { remark } from "remark";
 import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import smartypants from "remark-smartypants";
-import strip from "strip-markdown";
 
 import { ENABLE_CACHE } from "~/utils/cache";
 import { collator } from "~/utils/collator";
@@ -12,19 +11,13 @@ import { perfLogger } from "~/utils/performanceLogger";
 
 import type { ReviewedTitleJson } from "./data/reviewed-titles-json";
 import type { MarkdownReview } from "./data/reviews-markdown";
-import type { MarkdownViewing } from "./data/viewings-markdown";
 
 import { allReviewedTitlesJson } from "./data/reviewed-titles-json";
 import { allReviewsMarkdown } from "./data/reviews-markdown";
-import { allViewingsMarkdown } from "./data/viewings-markdown";
 import { createReleaseSequenceMap } from "./utils/createReleaseSequenceMap";
-import { linkReviewedTitles } from "./utils/linkReviewedTitles";
-import { getHtml } from "./utils/markdown/getHtml";
 import { removeFootnotes } from "./utils/markdown/removeFootnotes";
-import { rootAsSpan } from "./utils/markdown/rootAsSpan";
 import { trimToExcerpt } from "./utils/markdown/trimToExcerpt";
 
-let cachedViewingsMarkdown: MarkdownViewing[];
 let cachedMarkdownReviews: MarkdownReview[];
 let cachedReviewedTitlesJson: ReviewedTitleJson[];
 let cachedReviews: Reviews;
@@ -33,16 +26,7 @@ const cachedExcerptHtml: Map<string, string> = new Map();
 /**
  * Review combining markdown content with title metadata.
  */
-export type Review = Omit<MarkdownReview, "date"> & ReviewedTitleJson;
-
-/**
- * Review content with excerpt and viewing history.
- */
-export type ReviewContent = {
-  content: string | undefined;
-  excerptPlainText: string;
-  viewings: ReviewViewing[];
-};
+type Review = Omit<MarkdownReview, "date"> & ReviewedTitleJson;
 
 type ReviewExcerpt = {
   excerpt: string;
@@ -53,12 +37,6 @@ type Reviews = {
   distinctReleaseYears: string[];
   distinctReviewYears: string[];
   reviews: (Review & { releaseSequence: number })[];
-};
-
-type ReviewViewing = MarkdownViewing & {
-  mediumNotes: string | undefined;
-  venueNotes: string | undefined;
-  viewingNotes: string | undefined;
 };
 
 /**
@@ -83,73 +61,6 @@ export async function allReviews(): Promise<Reviews> {
     }
 
     return reviews;
-  });
-}
-
-/**
- * Converts raw markdown content to plain text, removing formatting and footnotes.
- * @param rawContent - Raw markdown content string
- * @returns Plain text version of the content
- */
-export function getContentPlainText(rawContent: string): string {
-  return getMastProcessor()
-    .use(removeFootnotes)
-    .use(strip)
-    .processSync(rawContent)
-    .toString();
-}
-
-/**
- * Loads and processes full review content including HTML conversion and viewing details.
- * @param review - Review object with IMDB ID, raw content, and title
- * @returns Review with processed content, excerpt, and viewing information
- */
-export async function loadContent<
-  T extends { imdbId: string; rawContent: string; title: string },
->(review: T): Promise<ReviewContent & T> {
-  return await perfLogger.measure("loadContent", async () => {
-    const viewingsMarkdown =
-      cachedViewingsMarkdown || (await allViewingsMarkdown());
-    if (ENABLE_CACHE && !cachedViewingsMarkdown) {
-      cachedViewingsMarkdown = viewingsMarkdown;
-    }
-
-    const reviewedTitlesJson =
-      cachedReviewedTitlesJson || (await allReviewedTitlesJson());
-    if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
-      cachedReviewedTitlesJson = reviewedTitlesJson;
-    }
-
-    const excerptPlainText = getMastProcessor()
-      .use(removeFootnotes)
-      .use(trimToExcerpt)
-      .use(strip)
-      .processSync(review.rawContent)
-      .toString();
-
-    const viewings = viewingsMarkdown
-      .filter((viewing) => {
-        return viewing.imdbId === review.imdbId;
-      })
-      .reverse()
-      .map((viewing) => {
-        return {
-          ...viewing,
-          mediumNotes: getHtmlAsSpan(
-            viewing.mediumNotesRaw,
-            reviewedTitlesJson,
-          ),
-          venueNotes: getHtmlAsSpan(viewing.venueNotesRaw, reviewedTitlesJson),
-          viewingNotes: getHtml(viewing.viewingNotesRaw, reviewedTitlesJson),
-        };
-      });
-
-    return {
-      ...review,
-      content: getHtml(review.rawContent, reviewedTitlesJson),
-      excerptPlainText,
-      viewings,
-    };
   });
 }
 
@@ -223,25 +134,6 @@ export async function mostRecentReviews(limit: number) {
 
     return reviews;
   });
-}
-
-function getHtmlAsSpan(
-  content: string | undefined,
-  reviewedTitles: { imdbId: string; slug: string }[],
-) {
-  if (!content) {
-    return;
-  }
-
-  const html = getMastProcessor()
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rootAsSpan)
-    .use(rehypeStringify)
-    .processSync(content)
-    .toString();
-
-  return linkReviewedTitles(html, reviewedTitles);
 }
 
 function getMastProcessor() {

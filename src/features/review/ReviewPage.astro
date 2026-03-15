@@ -1,0 +1,291 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import { getEntries } from "astro:content";
+
+import { linkReviewedTitles } from "~/api/utils/linkReviewedTitles";
+import { getFixedWidthPosterImageProps } from "~/assets/posters";
+import Grade from "~/components/grade/Grade.astro";
+import BaseLayout from "~/components/layout/BaseLayout.astro";
+import Mast from "~/components/layout/Mast.astro";
+import LongFormText from "~/components/long-form-text/LongFormText.astro";
+import MoreReviews from "~/components/more-reviews/MoreReviews.astro";
+import Still from "~/components/still/Still.astro";
+import { toSentence } from "~/utils/toSentence";
+
+import Credit from "./Credit.astro";
+import CreditsPoster from "./CreditsPoster.astro";
+import MoreFromCastAndCrew from "./MoreFromCastAndCrew.astro";
+import MoreInCollections from "./MoreInCollections.astro";
+import { reviewDateFormat } from "./reviewDateFormat";
+import { reviewPageTitle } from "./reviewPageTitle";
+import StructuredData from "./StructuredData.astro";
+import ViewingHistory from "./ViewingHistory.astro";
+
+type Props = {
+  reviewedTitle: CollectionEntry<"reviewedTitles">["data"];
+};
+
+const StillImageConfig = {
+  height: 540,
+  sizes: "(min-width: 1143px) 960px, calc(79.57vw + 13px)",
+  width: 960,
+};
+
+const { reviewedTitle } = Astro.props;
+
+const { data: review } = await getEntry(reviewedTitle.review);
+const reviewedTitles = await getCollection("reviewedTitles");
+const moreReviews = await getEntries(reviewedTitle.moreReviews);
+
+const PosterImageConfig = {
+  height: 372,
+  width: 248,
+};
+
+const posterImageProps = await getFixedWidthPosterImageProps(
+  review.slug,
+  PosterImageConfig,
+);
+---
+
+<BaseLayout
+  canonical={true}
+  meta={{ description: review.description }}
+  openGraph={{
+    description: review.description,
+    type: "article",
+  }}
+  title={reviewPageTitle(reviewedTitle)}
+>
+  <Fragment slot="meta-theme-color">
+    <meta
+      content="#fff"
+      media="(prefers-color-scheme: light)"
+      name="theme-color"
+    />
+    <meta
+      content="#322f2f"
+      media="(prefers-color-scheme: dark)"
+      name="theme-color"
+    />
+  </Fragment>
+  <Mast addGradient={false} hasBackdrop={false} hideLogo={false} slot="mast" />
+  <div data-pagefind-body>
+    <header
+      class={`relative z-base mb-8 flex flex-col items-center px-[8%] pt-10`}
+    >
+      <nav class={`transform-gpu pb-2 transition-transform`}>
+        <a
+          class={`
+            relative inline-block pb-1 font-sans text-[13px] tracking-wider
+            text-subtle uppercase transition-all
+            after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+            after:origin-center after:scale-x-0 after:bg-accent
+            after:transition-transform
+            hover:text-accent
+            hover:after:scale-x-100
+          `}
+          href="/reviews/"
+        >
+          Reviews
+        </a>
+      </nav>
+      <div class="mb-4">
+        <h1
+          class={`
+            text-center text-4xl
+            laptop:text-7xl laptop:tracking-[-1px]
+          `}
+          data-pagefind-meta="title"
+          data-pagefind-weight="10"
+        >
+          {reviewedTitle.title}
+        </h1>
+        {
+          reviewedTitle.originalTitle && (
+            <div class="text-center text-muted">
+              ({reviewedTitle.originalTitle})
+            </div>
+          )
+        }
+      </div>
+      <Grade class="mb-6" height={24} value={reviewedTitle.grade} />
+      <div
+        class={`
+          mb-10 text-center font-sans text-sm tracking-wide text-subtle
+          uppercase
+          tablet:mb-12
+        `}
+      >
+        {reviewedTitle.releaseYear}
+        <span>|</span>
+        {
+          reviewedTitle.countries.map((country, index) => {
+            if (index === 0) {
+              return country;
+            }
+            return `&ndash;${country}`;
+          })
+        }
+        <span>|</span>{" "}
+        {reviewedTitle.runtimeMinutes}&nbsp;min{" "}
+        <span>
+          <span>|</span>{" "}
+          <a
+            class={`
+              relative -mb-1 inline-block origin-bottom-left pb-1 text-default
+              after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
+              after:origin-left after:scale-x-0 after:bg-(--fg-default)/80
+              after:transition-transform
+              hover:after:scale-x-100
+            `}
+            href="#credits"
+          >
+            More...
+          </a>
+        </span>
+      </div>
+      <Still
+        class="mx-auto mb-[.191px]"
+        decoding="sync"
+        imageConfig={StillImageConfig}
+        loading="eager"
+        slug={review.slug}
+      />
+      <div
+        class={`
+          relative mt-10 bg-default px-[1ch] font-sans text-xs tracking-wide
+          text-subtle uppercase
+          after:absolute after:top-1/2 after:left-[-11%] after:z-behind
+          after:w-[122%] after:border-t after:border-(--fg-subtle)
+          tablet:mt-12
+        `}
+      >
+        Reviewed {reviewDateFormat.format(review.date)}
+      </div>
+    </header>
+    <div
+      class={`
+        flex flex-col items-center gap-16 px-container pb-20
+        laptop:gap-20 laptop:pb-32
+      `}
+    >
+      <LongFormText
+        class={`
+          max-w-prose
+          first-letter:leading-[.8] first-letter:text-default
+          tablet:first-letter:pr-3
+          laptop:first-letter:text-[64px]
+          dark:font-light
+          [&>p:first-child]:first-letter:float-left
+          [&>p:first-child]:first-letter:mt-[6px]
+          [&>p:first-child]:first-letter:pr-2
+          [&>p:first-child]:first-letter:font-sans
+          [&>p:first-child]:first-letter:text-[56px]
+          [&>p:first-child]:first-letter:font-bold
+        `}
+        text={linkReviewedTitles(
+          review.html,
+          reviewedTitles.map(({ data: e }) => {
+            return { imdbId: e.imdbId, slug: e.review.id };
+          }),
+        )}
+      />
+      <ViewingHistory imdbId={reviewedTitle.imdbId} />
+      <aside
+        class={`
+          group/credits w-full max-w-popout bg-subtle px-container py-8
+          tablet:pt-12
+        `}
+        data-pagefind-meta={`image:${posterImageProps.src}`}
+        id="credits"
+      >
+        <div
+          class={`
+            flex flex-wrap justify-center gap-8
+            tablet:flex-nowrap
+          `}
+        >
+          <div class="shrink-0">
+            <div class="block">
+              <CreditsPoster
+                class="h-auto"
+                decoding="async"
+                imageConfig={PosterImageConfig}
+                imageProps={posterImageProps}
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <dl class="flex min-w-0 shrink flex-col items-start gap-y-4">
+            <Credit term="Title" value={reviewedTitle.title} />
+            {
+              reviewedTitle.originalTitle && (
+                <Credit
+                  term="Original Title"
+                  value={reviewedTitle.originalTitle}
+                />
+              )
+            }
+            <Credit term="Year" value={reviewedTitle.releaseYear} />
+            <Credit
+              term="Financing"
+              value={toSentence(reviewedTitle.countries)}
+            />
+            <Credit
+              term="Running Time"
+              value={`${reviewedTitle.runtimeMinutes} min`}
+            />
+            <Credit term="Directed by" value={reviewedTitle.directorNames} />
+            <Credit term="Written by" value={reviewedTitle.writerNames} />
+            <Credit
+              term="Starring"
+              value={toSentence(reviewedTitle.principalCastNames)}
+            />
+          </dl>
+        </div>
+        <a
+          class={`
+            mx-auto mt-8 hidden w-full max-w-button transform-gpu
+            place-content-center items-center rounded-md py-5 font-sans text-sm
+            tracking-wide uppercase shadow-all transition-all
+            group-target/credits:flex
+            hover:scale-105 hover:bg-footer hover:text-white
+            hover:drop-shadow-lg
+          `}
+          href="#top"
+        >
+          Back to Top
+        </a>
+      </aside>
+    </div>
+    <div
+      class={`
+        flex w-full flex-col items-center gap-y-12 bg-subtle pt-16 pb-32
+        tablet:pt-8
+        laptop:gap-y-24
+      `}
+      data-pagefind-ignore
+    >
+      <MoreFromCastAndCrew values={reviewedTitle.moreCastAndCrew} />
+      <MoreInCollections values={reviewedTitle.moreCollections} />
+      <MoreReviews
+        cardProps={moreReviews.map((value) => {
+          return {
+            value: value.data,
+          };
+        })}
+        headingProps={{
+          accentText: "Reviews",
+          href: `/reviews/`,
+          text: "More",
+        }}
+      />
+    </div>
+    <StructuredData value={reviewedTitle} />
+  </div>
+</BaseLayout>

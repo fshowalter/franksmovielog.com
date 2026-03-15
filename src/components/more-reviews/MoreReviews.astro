@@ -1,0 +1,39 @@
+---
+import type { ComponentProps } from "astro/types";
+
+import MoreReviewsCard from "./MoreReviewsCard.astro";
+import MoreReviewsHeading from "./MoreReviewsHeading.astro";
+
+type Props = {
+  cardProps: ComponentProps<typeof MoreReviewsCard>[];
+  headingProps: ComponentProps<typeof MoreReviewsHeading>;
+};
+
+const { cardProps, headingProps } = Astro.props;
+---
+
+<nav data-pagefind-ignore>
+  <div
+    class={`
+      relative mx-auto w-full max-w-(--breakpoint-desktop) px-container
+      laptop:px-20
+    `}
+  >
+    <MoreReviewsHeading {...headingProps} />
+    <ul
+      class={`
+        flex w-full flex-col items-start gap-[3%] gap-y-[6vw]
+        [--still-opacity:20%]
+        tablet:flex-row tablet:flex-wrap tablet:justify-between
+        tablet:[--card-width:47%]
+        laptop:flex-nowrap laptop:[--card-width:47%]
+      `}
+    >
+      {
+        cardProps.map((props) => {
+          return <MoreReviewsCard {...props} />;
+        })
+      }
+    </ul>
+  </div>
+</nav>

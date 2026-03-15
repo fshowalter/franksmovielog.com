@@ -1,0 +1,35 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+import type { PosterImageProps } from "~/assets/posters";
+
+type Props = HTMLAttributes<"img"> & {
+  class?: string;
+  decoding: "async" | "auto" | "sync";
+  imageConfig: {
+    height: number;
+    width: number;
+  };
+  imageProps: PosterImageProps | undefined;
+  loading: "eager" | "lazy";
+};
+
+const {
+  class: className,
+  decoding,
+  imageConfig,
+  imageProps,
+  loading,
+  ...rest
+} = Astro.props;
+---
+
+<img
+  {...rest}
+  {...imageProps}
+  alt=""
+  {...imageConfig}
+  class:list={["aspect-poster", className]}
+  decoding={decoding}
+  loading={loading}
+/>
