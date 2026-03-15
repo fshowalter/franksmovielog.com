@@ -1,35 +1,5 @@
 ---
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-import { getWatchlistProps } from "~/features/watchlist/getWatchlistProps";
-import { Watchlist } from "~/features/watchlist/Watchlist";
-
-const watchlistProps = await getWatchlistProps();
-const backdropImageProps = await getLayoutBackdropImageProps("watchlist");
-
-const deck = `"A man's got to know his limitations"`;
-const metaDescription =
-  "My to-review bucket list. See what I've yet to review. Sort or filter titles by reason, release date, or title.";
+import WatchlistPage from "~/features/watchlist/WatchlistPage.astro";
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{ description: metaDescription }}
-  openGraph={{
-    description: deck,
-    type: "website",
-  }}
-  title="Watchlist"
->
-  <Layout
-    backdrop={{
-      deck,
-      imageProps: backdropImageProps,
-      title: "Watchlist",
-    }}
-    className="bg-subtle"
-  >
-    <Watchlist client:load {...watchlistProps} />
-  </Layout>
-</AstroPageShell>
+<WatchlistPage />
