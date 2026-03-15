@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+import { CastAndCrew } from "~/features/cast-and-crew/CastAndCrew";
+import { getCastAndCrewProps } from "~/features/cast-and-crew/getCastAndCrewProps";
+
+const castAndCrewEntries = await getCollection("castAndCrew");
+const castAndCrewProps = await getCastAndCrewProps(
+  castAndCrewEntries.map((e) => e.data),
+);
+
+const title = "Cast and Crew";
+const deck = '"Round up the usual suspects."';
+const metaDescription =
+  "A sortable index of directors, performers, and writers who contributed to the movies reviewed on this site. Sort by name or review count.";
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: {
+      description: deck,
+      type: "website",
+    },
+    title,
+  }}
+  heroProps={{
+    backdropSlug: "cast-and-crew",
+    deck,
+    title,
+  }}
+>
+  <CastAndCrew client:load {...castAndCrewProps} />
+</HeroLayout>

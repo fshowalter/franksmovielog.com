@@ -56,11 +56,11 @@ const CastAndCrewMemberTitleSchema = z
   );
 
 const CastAndCrewMemberSchema = z.object({
+  creditedAs: z.array(z.string()),
+  description: z.string(),
   name: z.string(),
-  reviewCount: z.string(),
+  reviewCount: z.number(),
   slug: z.string(),
-  sortName: z.string(),
-  titleCount: z.string(),
   titles: z.array(CastAndCrewMemberTitleSchema),
 });
 

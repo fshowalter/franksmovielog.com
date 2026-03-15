@@ -1,3 +1,4 @@
+import { castAndCrew } from "./collections/castAndCrew";
 import { reviewedTitles } from "./collections/reviewedTitles";
 import { reviews } from "./collections/reviews";
 import { alltimeStats, yearStats } from "./collections/stats";
@@ -7,6 +8,7 @@ import { watchlistTitles } from "./collections/watchlistTitles";
 
 export const collections = {
   alltimeStats,
+  castAndCrew,
   reviewedTitles,
   reviews,
   viewings,
