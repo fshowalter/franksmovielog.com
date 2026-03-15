@@ -32,7 +32,7 @@ export function loadJsonFileAsCollection({
         loaderContext.store.has(id) &&
         loaderContext.store.get(id)?.digest === digest
       ) {
-        return;
+        continue;
       }
 
       const data = await loaderContext.parseData({ data: entry, id });
