@@ -55,7 +55,7 @@ export type CastAndCrewMemberTitlesValue = {
   releaseSequence: number;
   releaseYear: string;
   reviewDisplayDate?: string;
-  reviewSequence?: number;
+  reviewSequence?: string;
   reviewYear?: string;
   slug?: string;
   sortTitle: string;
@@ -80,6 +80,7 @@ export function CastAndCrewMemberTitles({
   initialSort,
   values,
 }: CastAndCrewMemberTitlesProps): React.JSX.Element {
+  console.log(values);
   const [state, dispatch] = useReducer(
     reducer,
     {

@@ -23,6 +23,24 @@ const GRADE_MAP: Record<number, string> = {
   16: "A+",
 };
 
+const GRADE_TO_VALUE: Record<string, number> = {
+  A: 15,
+  "A+": 16,
+  "A-": 14,
+  B: 12,
+  "B+": 13,
+  "B-": 11,
+  C: 9,
+  "C+": 10,
+  "C-": 8,
+  D: 6,
+  "D+": 7,
+  "D-": 5,
+  F: 3,
+  "F+": 4,
+  "F-": 2,
+};
+
 /**
  * Converts a grade number (2-16) to a letter grade (F- to A+).
  * @param grade - Grade as a number (2-16)
@@ -30,4 +48,8 @@ const GRADE_MAP: Record<number, string> = {
  */
 export function gradeToLetter(grade: number): string {
   return GRADE_MAP[grade] || grade.toString();
+}
+
+export function gradeToValue(grade: string): number {
+  return GRADE_TO_VALUE[grade];
 }

@@ -1,41 +1,40 @@
 import type { APIRoute, InferGetStaticPropsType } from "astro";
 
-import { getOpenGraphBackdropAsBase64String } from "~/api/backdrops";
-import { allCastAndCrew } from "~/api/cast-and-crew";
-import { OpenGraphImage } from "~/components/open-graph-image/OpenGraphImage";
-import { componentToImage } from "~/utils/componentToImage";
+import { getCollection } from "astro:content";
+
+import { castAndCrewMemberTitlesOpenGraphImageResponse } from "~/features/cast-and-crew-member-titles/castAndCrewMemberTitlesOpenGraphImageResponse";
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export async function getStaticPaths() {
-  const { castAndCrew } = await allCastAndCrew();
+  const castAndCrew = await getCollection("castAndCrew");
 
-  return castAndCrew.map((member) => {
+  return castAndCrew.map(({ data: castAndCrewMember }) => {
     return {
       params: {
-        slug: member.slug,
+        slug: castAndCrewMember.slug,
       },
       props: {
-        name: member.name,
-        slug: member.slug,
+        castAndCrewMember,
       },
     };
   });
 }
 
+/**
+ * Astro API endpoint that generates personalized Open Graph images for individual authors.
+ * Creates a JPEG image featuring the author's avatar, name, and custom backdrop for social
+ * media sharing when author pages are shared on platforms like Facebook, Twitter, etc.
+ *
+ * @param context - Astro API context object
+ * @param context.props - Author props containing name and slug from getStaticPaths
+ * @returns HTTP response containing the generated JPEG image with appropriate content-type headers
+ */
 export const GET: APIRoute = async function get({ props }) {
-  const { name, slug } = props as Props;
+  const { castAndCrewMember } = props as Props;
 
-  const jpeg = await componentToImage(
-    OpenGraphImage({
-      backdrop: await getOpenGraphBackdropAsBase64String(slug),
-      title: name,
-    }),
-  );
-
-  return new Response(new Uint8ClampedArray(jpeg), {
-    headers: {
-      "Content-Type": "image/jpg",
-    },
+  return await castAndCrewMemberTitlesOpenGraphImageResponse({
+    name: castAndCrewMember.name,
+    slug: castAndCrewMember.slug,
   });
 };
