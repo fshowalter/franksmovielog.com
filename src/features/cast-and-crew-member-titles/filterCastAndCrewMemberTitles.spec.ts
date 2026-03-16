@@ -12,7 +12,6 @@ describe("calculateGenreCounts", () => {
   const mockValues: CastAndCrewMemberTitlesValue[] = [
     {
       creditedAs: ["director"],
-      excerpt: undefined,
       genres: ["Horror", "Thriller"],
       grade: "A",
       gradeValue: 12,
@@ -22,8 +21,8 @@ describe("calculateGenreCounts", () => {
       releaseYear: "1980",
       reviewDisplayDate: "Jan 1, 2020",
       reviewSequence: "1",
+      reviewSlug: "test-1",
       reviewYear: "2020",
-      slug: "test-1",
       sortTitle: "test 1",
       title: "Test 1",
       watchlistCollectionNames: [],
@@ -33,7 +32,6 @@ describe("calculateGenreCounts", () => {
     },
     {
       creditedAs: ["director"],
-      excerpt: undefined,
       genres: ["Horror", "Action"],
       grade: "B+",
       gradeValue: 10,
@@ -43,8 +41,8 @@ describe("calculateGenreCounts", () => {
       releaseYear: "1985",
       reviewDisplayDate: "Jan 1, 2021",
       reviewSequence: "2",
+      reviewSlug: "test-2",
       reviewYear: "2021",
-      slug: "test-2",
       sortTitle: "test 2",
       title: "Test 2",
       watchlistCollectionNames: [],
@@ -54,16 +52,17 @@ describe("calculateGenreCounts", () => {
     },
     {
       creditedAs: ["writer"],
-      excerpt: undefined,
       genres: ["Comedy", "Drama"],
+      grade: undefined,
       gradeValue: undefined,
       imdbId: "tt3",
       posterImageProps: {} as never,
       releaseSequence: 3,
       releaseYear: "1990",
+      reviewDisplayDate: undefined,
       reviewSequence: undefined,
+      reviewSlug: undefined,
       reviewYear: undefined,
-      slug: undefined,
       sortTitle: "test 3",
       title: "Test 3",
       watchlistCollectionNames: [],
@@ -205,7 +204,6 @@ describe("calculateReviewedStatusCounts", () => {
   const mockValues: CastAndCrewMemberTitlesValue[] = [
     {
       creditedAs: ["director"],
-      excerpt: undefined,
       genres: ["Horror", "Thriller"],
       grade: "A",
       gradeValue: 12,
@@ -215,8 +213,8 @@ describe("calculateReviewedStatusCounts", () => {
       releaseYear: "1980",
       reviewDisplayDate: "Jan 1, 2020",
       reviewSequence: "1",
+      reviewSlug: "test-1", // reviewed
       reviewYear: "2020",
-      slug: "test-1", // reviewed
       sortTitle: "test 1",
       title: "Test 1",
       watchlistCollectionNames: [],
@@ -226,7 +224,6 @@ describe("calculateReviewedStatusCounts", () => {
     },
     {
       creditedAs: ["director"],
-      excerpt: undefined,
       genres: ["Horror", "Action"],
       grade: "B+",
       gradeValue: 10,
@@ -236,8 +233,8 @@ describe("calculateReviewedStatusCounts", () => {
       releaseYear: "1985",
       reviewDisplayDate: "Jan 1, 2021",
       reviewSequence: "2",
+      reviewSlug: "test-2", // reviewed
       reviewYear: "2021",
-      slug: "test-2", // reviewed
       sortTitle: "test 2",
       title: "Test 2",
       watchlistCollectionNames: [],
@@ -247,16 +244,17 @@ describe("calculateReviewedStatusCounts", () => {
     },
     {
       creditedAs: ["writer"],
-      excerpt: undefined,
       genres: ["Comedy", "Drama"],
+      grade: undefined,
       gradeValue: undefined,
       imdbId: "tt3",
       posterImageProps: {} as never,
       releaseSequence: 3,
       releaseYear: "1990",
+      reviewDisplayDate: undefined,
       reviewSequence: undefined,
+      reviewSlug: undefined, // not reviewed
       reviewYear: undefined,
-      slug: undefined, // not reviewed
       sortTitle: "test 3",
       title: "Test 3",
       watchlistCollectionNames: [],

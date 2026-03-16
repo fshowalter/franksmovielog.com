@@ -1,7 +1,6 @@
 {
   "name": "Phantasm",
   "slug": "phantasm",
-  "titleCount": 5,
   "reviewCount": 5,
   "titles": [
     {
@@ -14,11 +13,7 @@
         "Horror",
         "Sci-Fi"
       ],
-      "slug": "phantasm-1979",
-      "grade": "A-",
-      "gradeValue": 14,
-      "reviewDate": "2020-10-16",
-      "reviewSequence": "2020-10-16-01"
+      "reviewSlug": "phantasm-1979"
     },
     {
       "imdbId": "tt0095863",
@@ -31,11 +26,7 @@
         "Horror",
         "Sci-Fi"
       ],
-      "slug": "phantasm-ii-1988",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2022-07-21",
-      "reviewSequence": "2022-07-21-02"
+      "reviewSlug": "phantasm-ii-1988"
     },
     {
       "imdbId": "tt0110823",
@@ -49,11 +40,7 @@
         "Horror",
         "Sci-Fi"
       ],
-      "slug": "phantasm-iii-lord-of-the-dead-1994",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2023-04-13",
-      "reviewSequence": "2023-04-13-01"
+      "reviewSlug": "phantasm-iii-lord-of-the-dead-1994"
     },
     {
       "imdbId": "tt0138703",
@@ -66,11 +53,7 @@
         "Horror",
         "Sci-Fi"
       ],
-      "slug": "phantasm-iv-oblivion-1998",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2023-04-27",
-      "reviewSequence": "2023-04-27-01"
+      "reviewSlug": "phantasm-iv-oblivion-1998"
     },
     {
       "imdbId": "tt3627704",
@@ -84,11 +67,7 @@
         "Horror",
         "Sci-Fi"
       ],
-      "slug": "phantasm-ravager-2016",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2023-08-31",
-      "reviewSequence": "2023-08-31-01"
+      "reviewSlug": "phantasm-ravager-2016"
     }
   ],
   "description": "The _Phantasm_ franchise."

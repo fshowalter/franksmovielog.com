@@ -20,12 +20,12 @@ export function CollectionTitlesListItem({
 }): React.JSX.Element {
   return (
     <PosterListItem
-      hasReview={!!value.slug}
+      hasReview={!!value.reviewSlug}
       posterImageProps={value.posterImageProps}
     >
       <ListItemDetails>
         <ListItemTitle
-          slug={value.slug}
+          slug={value.reviewSlug}
           title={value.title}
           year={value.releaseYear}
         />

@@ -1,7 +1,6 @@
 {
   "name": "James Bond",
   "slug": "james-bond",
-  "titleCount": 27,
   "reviewCount": 24,
   "titles": [
     {
@@ -15,11 +14,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "dr-no-1962",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2024-08-22",
-      "reviewSequence": "2024-08-22-01"
+      "reviewSlug": "dr-no-1962"
     },
     {
       "imdbId": "tt0057076",
@@ -32,11 +27,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "from-russia-with-love-1963",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2009-04-01",
-      "reviewSequence": "2009-04-01-01"
+      "reviewSlug": "from-russia-with-love-1963"
     },
     {
       "imdbId": "tt0058150",
@@ -49,11 +40,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "goldfinger-1964",
-      "grade": "B+",
-      "gradeValue": 13,
-      "reviewDate": "2009-04-02",
-      "reviewSequence": "2009-04-02-02"
+      "reviewSlug": "goldfinger-1964"
     },
     {
       "imdbId": "tt0059800",
@@ -66,11 +53,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "thunderball-1965",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2009-04-02",
-      "reviewSequence": "2009-04-02-03"
+      "reviewSlug": "thunderball-1965"
     },
     {
       "imdbId": "tt0061452",
@@ -81,11 +64,7 @@
       "genres": [
         "Comedy"
       ],
-      "slug": "casino-royale-1967",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2003-09-25",
-      "reviewSequence": "2003-09-25-01"
+      "reviewSlug": "casino-royale-1967"
     },
     {
       "imdbId": "tt0062512",
@@ -98,11 +77,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "you-only-live-twice-1967",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2009-04-03",
-      "reviewSequence": "2009-04-03-01"
+      "reviewSlug": "you-only-live-twice-1967"
     },
     {
       "imdbId": "tt0064757",
@@ -115,11 +90,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "on-her-majestys-secret-service-1969",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2009-04-03",
-      "reviewSequence": "2009-04-03-02"
+      "reviewSlug": "on-her-majestys-secret-service-1969"
     },
     {
       "imdbId": "tt0066995",
@@ -132,11 +103,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "diamonds-are-forever-1971",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2009-04-04",
-      "reviewSequence": "2009-04-04-01"
+      "reviewSlug": "diamonds-are-forever-1971"
     },
     {
       "imdbId": "tt0070328",
@@ -149,11 +116,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "live-and-let-die-1973",
-      "grade": "D+",
-      "gradeValue": 7,
-      "reviewDate": "2022-07-01",
-      "reviewSequence": "2022-07-01-01"
+      "reviewSlug": "live-and-let-die-1973"
     },
     {
       "imdbId": "tt0071807",
@@ -166,11 +129,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "the-man-with-the-golden-gun-1974",
-      "grade": "C",
-      "gradeValue": 9,
-      "reviewDate": "2009-04-05",
-      "reviewSequence": "2009-04-05-02"
+      "reviewSlug": "the-man-with-the-golden-gun-1974"
     },
     {
       "imdbId": "tt0076752",
@@ -183,11 +142,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "the-spy-who-loved-me-1977",
-      "grade": "B",
-      "gradeValue": 12,
-      "reviewDate": "2009-04-05",
-      "reviewSequence": "2009-04-05-03"
+      "reviewSlug": "the-spy-who-loved-me-1977"
     },
     {
       "imdbId": "tt0079574",
@@ -201,11 +156,7 @@
         "Sci-Fi",
         "Thriller"
       ],
-      "slug": "moonraker-1979",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2009-04-05",
-      "reviewSequence": "2009-04-05-04"
+      "reviewSlug": "moonraker-1979"
     },
     {
       "imdbId": "tt0082398",
@@ -218,11 +169,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "for-your-eyes-only-1981",
-      "grade": "B+",
-      "gradeValue": 13,
-      "reviewDate": "2009-04-06",
-      "reviewSequence": "2009-04-06-01"
+      "reviewSlug": "for-your-eyes-only-1981"
     },
     {
       "imdbId": "tt0086006",
@@ -235,11 +182,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "never-say-never-again-1983",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2009-04-08",
-      "reviewSequence": "2009-04-08-01"
+      "reviewSlug": "never-say-never-again-1983"
     },
     {
       "imdbId": "tt0086034",
@@ -252,11 +195,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "octopussy-1983",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2009-04-07",
-      "reviewSequence": "2009-04-07-01"
+      "reviewSlug": "octopussy-1983"
     },
     {
       "imdbId": "tt0090264",
@@ -269,11 +208,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "a-view-to-a-kill-1985",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2009-04-09",
-      "reviewSequence": "2009-04-09-02"
+      "reviewSlug": "a-view-to-a-kill-1985"
     },
     {
       "imdbId": "tt0093428",
@@ -286,11 +221,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "the-living-daylights-1987",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2009-04-10",
-      "reviewSequence": "2009-04-10-01"
+      "reviewSlug": "the-living-daylights-1987"
     },
     {
       "imdbId": "tt0097742",
@@ -303,11 +234,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "licence-to-kill-1989",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2009-04-11",
-      "reviewSequence": "2009-04-11-01"
+      "reviewSlug": "licence-to-kill-1989"
     },
     {
       "imdbId": "tt0113189",
@@ -320,11 +247,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "goldeneye-1995",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2020-08-04",
-      "reviewSequence": "2020-08-04-01"
+      "reviewSlug": "goldeneye-1995"
     },
     {
       "imdbId": "tt0120347",
@@ -337,11 +260,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "tomorrow-never-dies-1997",
-      "grade": "D+",
-      "gradeValue": 7,
-      "reviewDate": "2020-08-06",
-      "reviewSequence": "2020-08-06-01"
+      "reviewSlug": "tomorrow-never-dies-1997"
     },
     {
       "imdbId": "tt0143145",
@@ -354,11 +273,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "the-world-is-not-enough-1999",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2020-08-06",
-      "reviewSequence": "2020-08-06-02"
+      "reviewSlug": "the-world-is-not-enough-1999"
     },
     {
       "imdbId": "tt0246460",
@@ -371,11 +286,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt0381061",
@@ -388,11 +299,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "casino-royale-2006",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2022-06-15",
-      "reviewSequence": "2022-06-15-01"
+      "reviewSlug": "casino-royale-2006"
     },
     {
       "imdbId": "tt0830515",
@@ -406,11 +313,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "quantum-of-solace-2008",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2008-11-20",
-      "reviewSequence": "2008-11-20-01"
+      "reviewSlug": "quantum-of-solace-2008"
     },
     {
       "imdbId": "tt1074638",
@@ -423,11 +326,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt2379713",
@@ -440,11 +339,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt2382320",
@@ -457,11 +352,7 @@
         "Adventure",
         "Thriller"
       ],
-      "slug": "no-time-to-die-2021",
-      "grade": "D",
-      "gradeValue": 6,
-      "reviewDate": "2022-06-16",
-      "reviewSequence": "2022-06-16-01"
+      "reviewSlug": "no-time-to-die-2021"
     }
   ],
   "description": "Bond on film."

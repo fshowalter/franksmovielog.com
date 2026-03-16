@@ -1,7 +1,6 @@
 {
   "name": "Friday the 13th",
   "slug": "friday-the-13th",
-  "titleCount": 12,
   "reviewCount": 12,
   "titles": [
     {
@@ -15,11 +14,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "friday-the-13th-1980",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2020-11-13",
-      "reviewSequence": "2020-11-13-01"
+      "reviewSlug": "friday-the-13th-1980"
     },
     {
       "imdbId": "tt0082418",
@@ -32,11 +27,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "friday-the-13th-part-2-1981",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2020-11-13",
-      "reviewSequence": "2020-11-13-02"
+      "reviewSlug": "friday-the-13th-part-2-1981"
     },
     {
       "imdbId": "tt0083972",
@@ -48,11 +39,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "friday-the-13th-part-3-1982",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2021-03-12",
-      "reviewSequence": "2021-03-12-03"
+      "reviewSlug": "friday-the-13th-part-3-1982"
     },
     {
       "imdbId": "tt0087298",
@@ -64,11 +51,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "friday-the-13th-the-final-chapter-1984",
-      "grade": "B",
-      "gradeValue": 12,
-      "reviewDate": "2021-04-02",
-      "reviewSequence": "2021-04-02-01"
+      "reviewSlug": "friday-the-13th-the-final-chapter-1984"
     },
     {
       "imdbId": "tt0089173",
@@ -81,11 +64,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "friday-the-13th-a-new-beginning-1985",
-      "grade": "D",
-      "gradeValue": 6,
-      "reviewDate": "2021-04-09",
-      "reviewSequence": "2021-04-09-01"
+      "reviewSlug": "friday-the-13th-a-new-beginning-1985"
     },
     {
       "imdbId": "tt0091080",
@@ -97,11 +76,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "friday-the-13th-part-vi-jason-lives-1986",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2021-04-16",
-      "reviewSequence": "2021-04-16-01"
+      "reviewSlug": "friday-the-13th-part-vi-jason-lives-1986"
     },
     {
       "imdbId": "tt0095179",
@@ -113,11 +88,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "friday-the-13th-the-new-blood-1988",
-      "grade": "D+",
-      "gradeValue": 7,
-      "reviewDate": "2023-10-13",
-      "reviewSequence": "2023-10-13-01"
+      "reviewSlug": "friday-the-13th-the-new-blood-1988"
     },
     {
       "imdbId": "tt0097388",
@@ -130,11 +101,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "friday-the-13th-part-viii-jason-takes-manhattan-1989",
-      "grade": "D+",
-      "gradeValue": 7,
-      "reviewDate": "2021-08-13",
-      "reviewSequence": "2021-08-13-01"
+      "reviewSlug": "friday-the-13th-part-viii-jason-takes-manhattan-1989"
     },
     {
       "imdbId": "tt0107254",
@@ -147,11 +114,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "jason-goes-to-hell-the-final-friday-1993",
-      "grade": "C",
-      "gradeValue": 9,
-      "reviewDate": "2025-05-22",
-      "reviewSequence": "2025-05-22-01"
+      "reviewSlug": "jason-goes-to-hell-the-final-friday-1993"
     },
     {
       "imdbId": "tt0211443",
@@ -165,11 +128,7 @@
         "Sci-Fi",
         "Thriller"
       ],
-      "slug": "jason-x-2001",
-      "grade": "B",
-      "gradeValue": 12,
-      "reviewDate": "2025-06-13",
-      "reviewSequence": "2025-06-13-01"
+      "reviewSlug": "jason-x-2001"
     },
     {
       "imdbId": "tt0329101",
@@ -181,11 +140,7 @@
         "Action",
         "Horror"
       ],
-      "slug": "freddy-vs-jason-2003",
-      "grade": "D",
-      "gradeValue": 6,
-      "reviewDate": "2023-01-13",
-      "reviewSequence": "2023-01-13-01"
+      "reviewSlug": "freddy-vs-jason-2003"
     },
     {
       "imdbId": "tt0758746",
@@ -198,11 +153,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "friday-the-13th-2009",
-      "grade": "D",
-      "gradeValue": 6,
-      "reviewDate": "2026-02-12",
-      "reviewSequence": "2026-02-12-02"
+      "reviewSlug": "friday-the-13th-2009"
     }
   ],
   "description": "The _Friday the 13th_ franchise."

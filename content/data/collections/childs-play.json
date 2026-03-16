@@ -1,7 +1,6 @@
 {
   "name": "Child's Play",
   "slug": "childs-play",
-  "titleCount": 8,
   "reviewCount": 8,
   "titles": [
     {
@@ -14,11 +13,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "childs-play-1988",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2021-03-17",
-      "reviewSequence": "2021-03-17-01"
+      "reviewSlug": "childs-play-1988"
     },
     {
       "imdbId": "tt0099253",
@@ -30,11 +25,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "childs-play-2-1990",
-      "grade": "D+",
-      "gradeValue": 7,
-      "reviewDate": "2021-04-04",
-      "reviewSequence": "2021-04-04-01"
+      "reviewSlug": "childs-play-2-1990"
     },
     {
       "imdbId": "tt0103956",
@@ -46,11 +37,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "childs-play-3-1991",
-      "grade": "D+",
-      "gradeValue": 7,
-      "reviewDate": "2021-04-11",
-      "reviewSequence": "2021-04-11-01"
+      "reviewSlug": "childs-play-3-1991"
     },
     {
       "imdbId": "tt0144120",
@@ -63,11 +50,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "bride-of-chucky-1998",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2021-04-18",
-      "reviewSequence": "2021-04-18-01"
+      "reviewSlug": "bride-of-chucky-1998"
     },
     {
       "imdbId": "tt0387575",
@@ -80,11 +63,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "seed-of-chucky-2004",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2021-04-25",
-      "reviewSequence": "2021-04-25-01"
+      "reviewSlug": "seed-of-chucky-2004"
     },
     {
       "imdbId": "tt2230358",
@@ -96,11 +75,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "curse-of-chucky-2013",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2021-05-16",
-      "reviewSequence": "2021-05-16-01"
+      "reviewSlug": "curse-of-chucky-2013"
     },
     {
       "imdbId": "tt3280262",
@@ -112,11 +87,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "cult-of-chucky-2017",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2021-06-03",
-      "reviewSequence": "2021-06-03-01"
+      "reviewSlug": "cult-of-chucky-2017"
     },
     {
       "imdbId": "tt8663516",
@@ -130,11 +101,7 @@
         "Sci-Fi",
         "Thriller"
       ],
-      "slug": "childs-play-2019",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2021-10-05",
-      "reviewSequence": "2021-10-05-01"
+      "reviewSlug": "childs-play-2019"
     }
   ],
   "description": "The _Chucky_ franchise."

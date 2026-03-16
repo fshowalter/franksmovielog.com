@@ -51,7 +51,7 @@ export function calculateReviewedStatusCounts(
   );
 
   // Count reviewed vs not reviewed (reviewed = has slug)
-  const reviewedCount = allFiltered.filter((v) => !!v.slug).length;
+  const reviewedCount = allFiltered.filter((v) => !!v.reviewSlug).length;
   const notReviewedCount = allFiltered.length - reviewedCount;
 
   return new Map([

@@ -1,7 +1,6 @@
 {
   "name": "Saw",
   "slug": "saw",
-  "titleCount": 10,
   "reviewCount": 8,
   "titles": [
     {
@@ -15,11 +14,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "saw-2004",
-      "grade": "B-",
-      "gradeValue": 11,
-      "reviewDate": "2022-07-08",
-      "reviewSequence": "2022-07-08-01"
+      "reviewSlug": "saw-2004"
     },
     {
       "imdbId": "tt0432348",
@@ -31,11 +26,7 @@
         "Horror",
         "Mystery"
       ],
-      "slug": "saw-ii-2005",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2022-07-22",
-      "reviewSequence": "2022-07-22-01"
+      "reviewSlug": "saw-ii-2005"
     },
     {
       "imdbId": "tt0489270",
@@ -48,11 +39,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "saw-iii-2006",
-      "grade": "C",
-      "gradeValue": 9,
-      "reviewDate": "2022-07-28",
-      "reviewSequence": "2022-07-28-01"
+      "reviewSlug": "saw-iii-2006"
     },
     {
       "imdbId": "tt0890870",
@@ -65,11 +52,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "saw-iv-2007",
-      "grade": "D",
-      "gradeValue": 6,
-      "reviewDate": "2022-08-10",
-      "reviewSequence": "2022-08-10-01"
+      "reviewSlug": "saw-iv-2007"
     },
     {
       "imdbId": "tt10342730",
@@ -82,11 +65,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt1132626",
@@ -98,11 +77,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "saw-v-2008",
-      "grade": "C+",
-      "gradeValue": 10,
-      "reviewDate": "2022-08-12",
-      "reviewSequence": "2022-08-12-02"
+      "reviewSlug": "saw-v-2008"
     },
     {
       "imdbId": "tt1233227",
@@ -115,11 +90,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "saw-vi-2009",
-      "grade": "C",
-      "gradeValue": 9,
-      "reviewDate": "2022-09-10",
-      "reviewSequence": "2022-09-10-02"
+      "reviewSlug": "saw-vi-2009"
     },
     {
       "imdbId": "tt1477076",
@@ -131,11 +102,7 @@
         "Horror",
         "Mystery"
       ],
-      "slug": "saw-3d-2010",
-      "grade": "D+",
-      "gradeValue": 7,
-      "reviewDate": "2023-01-14",
-      "reviewSequence": "2023-01-14-01"
+      "reviewSlug": "saw-3d-2010"
     },
     {
       "imdbId": "tt21807222",
@@ -148,11 +115,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt3348730",
@@ -165,11 +128,7 @@
         "Mystery",
         "Thriller"
       ],
-      "slug": "jigsaw-2017",
-      "grade": "D-",
-      "gradeValue": 5,
-      "reviewDate": "2025-11-23",
-      "reviewSequence": "2025-11-23-02"
+      "reviewSlug": "jigsaw-2017"
     }
   ],
   "description": "The _Saw_ franchise."

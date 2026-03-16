@@ -23,7 +23,7 @@ export function loadJsonSplitFile({
 
     for (const file of jsonFiles) {
       const rawItems = JSON.parse(
-        await fs.readFile(path.resolve(directoryPath, file.name), "utf8"),
+        await fs.readFile(path.join(directoryPath, file.name), "utf8"),
       ) as Record<string, unknown>[];
 
       for (const raw of rawItems) {

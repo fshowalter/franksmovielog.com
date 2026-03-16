@@ -1,5 +1,6 @@
-import { getAvatarImageProps } from "~/api/avatars";
-import { allCollections } from "~/api/collections";
+import type { CollectionEntry } from "astro:content";
+
+import { getAvatarImageProps } from "~/assets/avatars";
 import { AvatarListItemImageConfig } from "~/components/avatar-list/AvatarListItem";
 
 import type { CollectionsProps } from "./Collections";
@@ -9,9 +10,9 @@ import type { CollectionsValue } from "./Collections";
  * Fetches data for the collections list page including avatar images.
  * @returns Props for the Collections component with all collections
  */
-export async function getCollectionsProps(): Promise<CollectionsProps> {
-  const { collections } = await allCollections();
-
+export async function getCollectionsProps(
+  collections: CollectionEntry<"collections">["data"][],
+): Promise<CollectionsProps> {
   const values = await Promise.all(
     collections.map(async (collection) => {
       const listItemValue: CollectionsValue = {

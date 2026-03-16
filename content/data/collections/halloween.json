@@ -1,7 +1,6 @@
 {
   "name": "Halloween",
   "slug": "halloween",
-  "titleCount": 13,
   "reviewCount": 6,
   "titles": [
     {
@@ -14,11 +13,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "halloween-1978",
-      "grade": "A",
-      "gradeValue": 15,
-      "reviewDate": "2021-10-30",
-      "reviewSequence": "2021-10-30-04"
+      "reviewSlug": "halloween-1978"
     },
     {
       "imdbId": "tt0082495",
@@ -29,11 +24,7 @@
       "genres": [
         "Horror"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt0085636",
@@ -47,11 +38,7 @@
         "Sci-Fi",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt0095271",
@@ -63,11 +50,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt0097474",
@@ -79,11 +62,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt0113253",
@@ -95,11 +74,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt0120694",
@@ -111,11 +86,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt0220506",
@@ -127,11 +98,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null
+      "reviewSlug": null
     },
     {
       "imdbId": "tt0373883",
@@ -142,11 +109,7 @@
       "genres": [
         "Horror"
       ],
-      "slug": "halloween-2007",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2022-03-31",
-      "reviewSequence": "2022-03-31-01"
+      "reviewSlug": "halloween-2007"
     },
     {
       "imdbId": "tt10665338",
@@ -160,11 +123,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "halloween-kills-2021",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2022-03-03",
-      "reviewSequence": "2022-03-03-02"
+      "reviewSlug": "halloween-kills-2021"
     },
     {
       "imdbId": "tt10665342",
@@ -179,11 +138,7 @@
         "Romance",
         "Thriller"
       ],
-      "slug": "halloween-ends-2022",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2023-06-08",
-      "reviewSequence": "2023-06-08-01"
+      "reviewSlug": "halloween-ends-2022"
     },
     {
       "imdbId": "tt1311067",
@@ -194,11 +149,7 @@
       "genres": [
         "Horror"
       ],
-      "slug": "halloween-ii-2009",
-      "grade": "C-",
-      "gradeValue": 8,
-      "reviewDate": "2022-03-31",
-      "reviewSequence": "2022-03-31-02"
+      "reviewSlug": "halloween-ii-2009"
     },
     {
       "imdbId": "tt1502407",
@@ -212,11 +163,7 @@
         "Horror",
         "Thriller"
       ],
-      "slug": "halloween-2018",
-      "grade": "B+",
-      "gradeValue": 13,
-      "reviewDate": "2022-03-03",
-      "reviewSequence": "2022-03-03-01"
+      "reviewSlug": "halloween-2018"
     }
   ],
   "description": "The _Halloween_ franchise, in all its incarnations."

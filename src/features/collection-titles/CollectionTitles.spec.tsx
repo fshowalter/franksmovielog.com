@@ -27,31 +27,30 @@ import type {
 
 import { CollectionTitles } from "./CollectionTitles";
 
-// Inline minimal fixture data for testing - using James Bond films
-let testIdCounter = 0;
-const createCollectionTitle = (
-  overrides: Partial<CollectionTitlesValue> = {},
-): CollectionTitlesValue => {
-  testIdCounter += 1;
-  return {
-    genres: ["Action", "Adventure"],
-    grade: "B",
-    gradeValue: 7,
-    imdbId: `tt${String(testIdCounter).padStart(7, "0")}`,
-    posterImageProps: {
-      src: "/poster.jpg",
-      srcSet: "/poster.jpg 1x",
-    },
-    releaseSequence: testIdCounter,
-    releaseYear: "1962",
-    reviewDisplayDate: "Aug 22, 2024",
-    reviewSequence: testIdCounter,
-    reviewYear: "2024",
-    slug: "dr-no-1962",
-    sortTitle: "Dr. No",
-    title: "Dr. No",
-    ...overrides,
-  };
+const createCollectionTitles = (
+  overrides: Partial<CollectionTitlesValue>[] = [],
+): CollectionTitlesValue[] => {
+  return overrides.map((override, index) => {
+    return {
+      genres: ["Action", "Adventure"],
+      grade: "B",
+      gradeValue: 7,
+      imdbId: `tt${String(index).padStart(7, "0")}`,
+      posterImageProps: {
+        src: "/poster.jpg",
+        srcSet: "/poster.jpg 1x",
+      },
+      releaseSequence: index,
+      releaseYear: "1962",
+      reviewDisplayDate: "Aug 22, 2024",
+      reviewSequence: index.toString(),
+      reviewSlug: `test-slug-${index}`,
+      reviewYear: "2024",
+      sortTitle: "Dr. No",
+      title: "Dr. No",
+      ...override,
+    };
+  });
 };
 
 const baseProps: CollectionTitlesProps = {
@@ -73,7 +72,6 @@ const baseProps: CollectionTitlesProps = {
 
 describe("CollectionTitles", () => {
   beforeEach(() => {
-    testIdCounter = 0;
     vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
@@ -84,14 +82,14 @@ describe("CollectionTitles", () => {
 
   describe("filtering", () => {
     it("filters by title", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({ releaseYear: "1962", title: "Dr. No" }),
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        { releaseYear: "1962", title: "Dr. No" },
+        {
           releaseYear: "1963",
           title: "From Russia with Love",
-        }),
-        createCollectionTitle({ releaseYear: "1964", title: "Goldfinger" }),
-      ];
+        },
+        { releaseYear: "1964", title: "Goldfinger" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -109,20 +107,20 @@ describe("CollectionTitles", () => {
     });
 
     it("filters by genres", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        {
           genres: ["Action", "Thriller"],
           title: "Dr. No",
-        }),
-        createCollectionTitle({
+        },
+        {
           genres: ["Action", "Adventure"],
           title: "Goldfinger",
-        }),
-        createCollectionTitle({
+        },
+        {
           genres: ["Comedy", "Action"],
           title: "Casino Royale",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -142,14 +140,14 @@ describe("CollectionTitles", () => {
     });
 
     it("filters by release year range", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({ releaseYear: "1962", title: "Dr. No" }),
-        createCollectionTitle({ releaseYear: "1964", title: "Goldfinger" }),
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        { releaseYear: "1962", title: "Dr. No" },
+        { releaseYear: "1964", title: "Goldfinger" },
+        {
           releaseYear: "1977",
           title: "The Spy Who Loved Me",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -167,11 +165,11 @@ describe("CollectionTitles", () => {
     });
 
     it("filters by review year range", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({ reviewYear: "2022", title: "Dr. No" }),
-        createCollectionTitle({ reviewYear: "2023", title: "Goldfinger" }),
-        createCollectionTitle({ reviewYear: "2024", title: "GoldenEye" }),
-      ];
+      const titles = createCollectionTitles([
+        { reviewYear: "2022", title: "Dr. No" },
+        { reviewYear: "2023", title: "Goldfinger" },
+        { reviewYear: "2024", title: "GoldenEye" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -189,19 +187,19 @@ describe("CollectionTitles", () => {
     });
 
     it("filters by grade range", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        {
           grade: "C-",
           gradeValue: 8,
           title: "Die Another Day",
-        }),
-        createCollectionTitle({ grade: "B", gradeValue: 12, title: "Dr. No" }),
-        createCollectionTitle({
+        },
+        { grade: "B", gradeValue: 12, title: "Dr. No" },
+        {
           grade: "A",
           gradeValue: 15,
           title: "Goldfinger",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -221,26 +219,26 @@ describe("CollectionTitles", () => {
     });
 
     it("filters by reviewed status - reviewed only", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
-          reviewSequence: 1,
+      const titles = createCollectionTitles([
+        {
+          reviewSequence: "1",
+          reviewSlug: "dr-no-1962",
           reviewYear: "2024",
-          slug: "dr-no-1962",
           title: "Dr. No",
-        }),
-        createCollectionTitle({
-          reviewSequence: 2,
+        },
+        {
+          reviewSequence: "2",
+          reviewSlug: "goldfinger-1964",
           reviewYear: "2024",
-          slug: "goldfinger-1964",
           title: "Goldfinger",
-        }),
-        createCollectionTitle({
+        },
+        {
           reviewSequence: undefined,
+          reviewSlug: undefined,
           reviewYear: undefined,
-          slug: undefined,
           title: "Thunderball",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -257,26 +255,26 @@ describe("CollectionTitles", () => {
     });
 
     it("filters by reviewed status - unreviewed only", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
-          reviewSequence: 1,
+      const titles = createCollectionTitles([
+        {
+          reviewSequence: "1",
+          reviewSlug: "dr-no-1962",
           reviewYear: "2024",
-          slug: "dr-no-1962",
           title: "Dr. No",
-        }),
-        createCollectionTitle({
+        },
+        {
           reviewSequence: undefined,
+          reviewSlug: undefined,
           reviewYear: undefined,
-          slug: undefined,
           title: "Thunderball",
-        }),
-        createCollectionTitle({
+        },
+        {
           reviewSequence: undefined,
+          reviewSlug: undefined,
           reviewYear: undefined,
-          slug: undefined,
           title: "Never Say Never Again",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -295,14 +293,14 @@ describe("CollectionTitles", () => {
 
   describe("sorting", () => {
     it("sorts by title A → Z", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        {
           sortTitle: "Spy Who Loved Me",
           title: "The Spy Who Loved Me",
-        }),
-        createCollectionTitle({ sortTitle: "Dr. No", title: "Dr. No" }),
-        createCollectionTitle({ sortTitle: "Moonraker", title: "Moonraker" }),
-      ];
+        },
+        { sortTitle: "Dr. No", title: "Dr. No" },
+        { sortTitle: "Moonraker", title: "Moonraker" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -320,14 +318,14 @@ describe("CollectionTitles", () => {
     });
 
     it("sorts by title Z → A", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({ sortTitle: "Dr. No", title: "Dr. No" }),
-        createCollectionTitle({ sortTitle: "Moonraker", title: "Moonraker" }),
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        { sortTitle: "Dr. No", title: "Dr. No" },
+        { sortTitle: "Moonraker", title: "Moonraker" },
+        {
           sortTitle: "Spy Who Loved Me",
           title: "The Spy Who Loved Me",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -345,23 +343,23 @@ describe("CollectionTitles", () => {
     });
 
     it("sorts by release date oldest first", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        {
           releaseSequence: 3,
           releaseYear: "1995",
           title: "GoldenEye",
-        }),
-        createCollectionTitle({
+        },
+        {
           releaseSequence: 1,
           releaseYear: "1962",
           title: "Dr. No",
-        }),
-        createCollectionTitle({
+        },
+        {
           releaseSequence: 2,
           releaseYear: "1987",
           title: "The Living Daylights",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -379,23 +377,23 @@ describe("CollectionTitles", () => {
     });
 
     it("sorts by release date newest first", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        {
           releaseSequence: 1,
           releaseYear: "1962",
           title: "Dr. No",
-        }),
-        createCollectionTitle({
+        },
+        {
           releaseSequence: 2,
           releaseYear: "1987",
           title: "The Living Daylights",
-        }),
-        createCollectionTitle({
+        },
+        {
           releaseSequence: 3,
           releaseYear: "1995",
           title: "GoldenEye",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -413,19 +411,19 @@ describe("CollectionTitles", () => {
     });
 
     it("sorts by grade best first", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        {
           grade: "A",
           gradeValue: 12,
           title: "Goldfinger",
-        }),
-        createCollectionTitle({
+        },
+        {
           grade: "D",
           gradeValue: 3,
           title: "Die Another Day",
-        }),
-        createCollectionTitle({ grade: "B", gradeValue: 7, title: "Dr. No" }),
-      ];
+        },
+        { grade: "B", gradeValue: 7, title: "Dr. No" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -443,19 +441,19 @@ describe("CollectionTitles", () => {
     });
 
     it("sorts by grade worst first", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({
+      const titles = createCollectionTitles([
+        {
           grade: "A",
           gradeValue: 12,
           title: "Goldfinger",
-        }),
-        createCollectionTitle({ grade: "B", gradeValue: 7, title: "Dr. No" }),
-        createCollectionTitle({
+        },
+        { grade: "B", gradeValue: 7, title: "Dr. No" },
+        {
           grade: "D",
           gradeValue: 3,
           title: "Die Another Day",
-        }),
-      ];
+        },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -473,11 +471,11 @@ describe("CollectionTitles", () => {
     });
 
     it("sorts by review date oldest first", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({ reviewSequence: 3, title: "Casino Royale" }),
-        createCollectionTitle({ reviewSequence: 1, title: "Dr. No" }),
-        createCollectionTitle({ reviewSequence: 2, title: "Skyfall" }),
-      ];
+      const titles = createCollectionTitles([
+        { reviewSequence: "3", title: "Casino Royale" },
+        { reviewSequence: "1", title: "Dr. No" },
+        { reviewSequence: "2", title: "Skyfall" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -495,11 +493,11 @@ describe("CollectionTitles", () => {
     });
 
     it("sorts by review date newest first", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({ reviewSequence: 1, title: "Dr. No" }),
-        createCollectionTitle({ reviewSequence: 2, title: "Skyfall" }),
-        createCollectionTitle({ reviewSequence: 3, title: "Casino Royale" }),
-      ];
+      const titles = createCollectionTitles([
+        { reviewSequence: "1", title: "Dr. No" },
+        { reviewSequence: "2", title: "Skyfall" },
+        { reviewSequence: "3", title: "Casino Royale" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -519,10 +517,10 @@ describe("CollectionTitles", () => {
 
   describe("when clearing filters", () => {
     it("clears all filters with clear button", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({ genres: ["Action"], title: "Dr. No" }),
-        createCollectionTitle({ genres: ["Thriller"], title: "Goldfinger" }),
-      ];
+      const titles = createCollectionTitles([
+        { genres: ["Action"], title: "Dr. No" },
+        { genres: ["Thriller"], title: "Goldfinger" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
@@ -553,10 +551,10 @@ describe("CollectionTitles", () => {
 
   describe("when closing filter drawer without applying", () => {
     it("resets pending filter changes", async ({ expect }) => {
-      const titles = [
-        createCollectionTitle({ title: "Dr. No" }),
-        createCollectionTitle({ title: "Goldfinger" }),
-      ];
+      const titles = createCollectionTitles([
+        { title: "Dr. No" },
+        { title: "Goldfinger" },
+      ]);
 
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);

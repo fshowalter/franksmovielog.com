@@ -1,63 +1,28 @@
 ---
-import React from "react";
+import type { CollectionEntry } from "astro:content";
 
-import type { Collection } from "~/api/collections";
+import { getCollection } from "astro:content";
 
-import { allCollections } from "~/api/collections";
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-import { CollectionTitles } from "~/features/collection-titles/CollectionTitles";
-import { getCollectionTitlesProps } from "~/features/collection-titles/getCollectionTitlesProps";
+import CollectionTitlesPage from "~/features/collection-titles/CollectionTitlesPage.astro";
 
-type Props = Collection;
+type Props = {
+  collection: CollectionEntry<"collections">["data"];
+};
 
 export async function getStaticPaths() {
-  const { collections } = await allCollections();
+  const collections = await getCollection("collections");
 
-  return collections.map((collection) => {
+  return collections.map(({ data: collection }) => {
     return {
       params: {
         slug: collection.slug,
       },
-      props: collection,
+      props: { collection },
     };
   });
 }
 
-const { description, descriptionHtml, name, slug } = Astro.props;
-
-const collectionTitlesProps = await getCollectionTitlesProps(slug);
-const backdropImageProps = await getLayoutBackdropImageProps(slug);
-
-const deckElement = React.createElement("span", {
-  dangerouslySetInnerHTML: { __html: descriptionHtml },
-});
+const { collection } = Astro.props;
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{
-    description: `${name} movie reviews: ${description} Sort by oldest or newest, best or worst, or title.`,
-  }}
-  openGraph={{
-    description: description || "",
-    type: "website",
-  }}
-  title={`${name} movie reviews`}
->
-  <Layout
-    backdrop={{
-      breadcrumb: {
-        href: "/collections/",
-        text: "Collections",
-      },
-      deck: deckElement,
-      imageProps: backdropImageProps,
-      title: name,
-    }}
-    className="bg-subtle"
-  >
-    <CollectionTitles client:load {...collectionTitlesProps} />
-  </Layout>
-</AstroPageShell>
+<CollectionTitlesPage collection={collection} />

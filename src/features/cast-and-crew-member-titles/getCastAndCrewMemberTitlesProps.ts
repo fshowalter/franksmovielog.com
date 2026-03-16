@@ -26,20 +26,20 @@ export async function getCastAndCrewMemberTitlesProps(
 
   const values = await Promise.all(
     member.titles.map(async (title, index) => {
-      let review;
       let reviewedTitle;
 
       if (title.reviewSlug) {
-        review = await getEntry("reviews", title.reviewSlug);
+        reviewedTitle = await getEntry("reviewedTitles", title.reviewSlug);
       }
 
-      if (title.reviewSlug && !review) {
-        throw new Error(`Review not found for slug: ${title.reviewSlug}`);
+      if (title.reviewSlug && !reviewedTitle) {
+        throw new Error(
+          `Reviewed title not found for slug: ${title.reviewSlug}`,
+        );
       }
 
-      if (review) {
-        distinctReviewYears.add(toSortYear(review.data.date));
-        reviewedTitle = await getEntry(review.data.title);
+      if (reviewedTitle) {
+        distinctReviewYears.add(toSortYear(reviewedTitle.data.reviewDate));
       }
 
       for (const genre of title.genres) {
@@ -49,27 +49,30 @@ export async function getCastAndCrewMemberTitlesProps(
 
       return {
         creditedAs: title.creditedAs,
-        excerpt: review ? review.data.excerptHtml : undefined,
         genres: title.genres,
-        grade: review ? review.data.grade : undefined,
-        gradeValue: review ? gradeToValue(review.data.grade) : undefined,
+        grade: reviewedTitle ? reviewedTitle.data.grade : undefined,
+        gradeValue: reviewedTitle
+          ? gradeToValue(reviewedTitle.data.grade)
+          : undefined,
         imdbId: title.imdbId,
         posterImageProps: await getFluidWidthPosterImageProps(
-          review ? review.data.slug : "default",
+          reviewedTitle ? title.reviewSlug : "default",
           PosterListItemImageConfig,
         ),
         releaseSequence: index,
         releaseYear: title.releaseYear,
-        reviewDisplayDate: review
-          ? displayDate(review.data.date, {
+        reviewDisplayDate: reviewedTitle
+          ? displayDate(reviewedTitle.data.reviewDate, {
               dayFormat: "numeric",
             })
           : undefined,
         reviewSequence: reviewedTitle
           ? reviewedTitle.data.reviewSequence
           : undefined,
-        reviewYear: review ? toSortYear(review.data.date) : undefined,
-        slug: review ? review.data.slug : undefined,
+        reviewSlug: reviewedTitle ? title.reviewSlug : undefined,
+        reviewYear: reviewedTitle
+          ? toSortYear(reviewedTitle.data.reviewDate)
+          : undefined,
         sortTitle: title.sortTitle,
         title: title.title,
         watchlistCollectionNames: title.watchlistCollectionNames,

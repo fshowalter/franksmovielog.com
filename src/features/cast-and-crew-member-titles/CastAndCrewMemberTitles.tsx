@@ -42,18 +42,17 @@ export type CastAndCrewMemberTitlesProps = {
  */
 export type CastAndCrewMemberTitlesValue = {
   creditedAs: string[];
-  excerpt: string | undefined;
   genres: string[];
-  grade?: string;
-  gradeValue?: number;
+  grade: string | undefined;
+  gradeValue: number | undefined;
   imdbId: string;
   posterImageProps: PosterImageProps;
   releaseSequence: number;
   releaseYear: string;
-  reviewDisplayDate?: string;
-  reviewSequence?: string;
-  reviewYear?: string;
-  slug?: string;
+  reviewDisplayDate: string | undefined;
+  reviewSequence: string | undefined;
+  reviewSlug: string | undefined;
+  reviewYear: string | undefined;
   sortTitle: string;
   title: string;
   watchlistCollectionNames: string[];

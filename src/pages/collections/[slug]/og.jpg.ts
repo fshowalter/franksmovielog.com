@@ -1,42 +1,40 @@
 import type { APIRoute, InferGetStaticPropsType } from "astro";
 
-import { getOpenGraphBackdropAsBase64String } from "~/api/backdrops";
-import { allCollections } from "~/api/collections";
-import { OpenGraphImage } from "~/components/open-graph-image/OpenGraphImage";
-import { componentToImage } from "~/utils/componentToImage";
+import { getCollection } from "astro:content";
+
+import { collectionTitlesOpenGraphImageResponse } from "~/features/collection-titles/collectionTitlesOpenGraphImageResponse";
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 export async function getStaticPaths() {
-  const { collections } = await allCollections();
+  const collections = await getCollection("collections");
 
-  return collections.map((collection) => {
+  return collections.map(({ data: collection }) => {
     return {
       params: {
         slug: collection.slug,
       },
       props: {
-        name: collection.name,
-        slug: collection.slug,
+        collection,
       },
     };
   });
 }
 
+/**
+ * Astro API endpoint that generates personalized Open Graph images for individual authors.
+ * Creates a JPEG image featuring the author's avatar, name, and custom backdrop for social
+ * media sharing when author pages are shared on platforms like Facebook, Twitter, etc.
+ *
+ * @param context - Astro API context object
+ * @param context.props - Author props containing name and slug from getStaticPaths
+ * @returns HTTP response containing the generated JPEG image with appropriate content-type headers
+ */
 export const GET: APIRoute = async function get({ props }) {
-  const { name, slug } = props as Props;
+  const { collection } = props as Props;
 
-  const jpeg = await componentToImage(
-    OpenGraphImage({
-      backdrop: await getOpenGraphBackdropAsBase64String(slug),
-      sectionHead: "Collections",
-      title: name,
-    }),
-  );
-
-  return new Response(new Uint8ClampedArray(jpeg), {
-    headers: {
-      "Content-Type": "image/jpg",
-    },
+  return await collectionTitlesOpenGraphImageResponse({
+    name: collection.name,
+    slug: collection.slug,
   });
 };
