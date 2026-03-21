@@ -1,33 +1,5 @@
 ---
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-import { AllReviews } from "~/features/reviews/AllReviews";
-import { getAllReviewsProps } from "~/features/reviews/getReviewsProps";
-import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
-
-const allReviewsProps = await getAllReviewsProps();
-const backdropImageProps = await getLayoutBackdropImageProps("reviews");
-const deck = `"'Sorry' don't get it done, Dude."`;
-const metaDescription =
-  "All my movie reviews, from 2003 to present day. Filter by title, genre, review date, release date, or grade. Sort by best or worst, oldest or newest, or title.";
+import ReviewsPage from "~/features/reviews/ReviewsPage.astro";
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{ description: metaDescription }}
-  openGraph={{ description: deck, type: "website" }}
-  title="All Reviews"
->
-  <Layout
-    backdrop={{
-      deck,
-      imageProps: backdropImageProps,
-      title: "Reviews",
-    }}
-    className="bg-subtle"
-  >
-    <ReviewsSubNav active="all" />
-    <AllReviews client:load {...allReviewsProps} />
-  </Layout>
-</AstroPageShell>
+<ReviewsPage />

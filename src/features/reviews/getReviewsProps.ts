@@ -1,12 +1,15 @@
+import type { CollectionEntry } from "astro:content";
+
 import type { ReviewsValue } from "~/features/reviews/ReviewsListItem";
 
 import { allOverratedDisappointments } from "~/api/overrated-disappointments";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
-import { allReviews } from "~/api/reviews";
 import { allUnderratedSurprises } from "~/api/underrated-surprises";
 import { allUnderseenGems } from "~/api/underseen-gems";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
+import { gradeToValue } from "~/utils/grades";
+import { toSortYear } from "~/utils/toSortYear";
 
 import type { AllReviewsProps } from "./AllReviews";
 import type { OverratedProps } from "./Overrated";
@@ -17,11 +20,11 @@ import type { UnderseenProps } from "./Underseen";
  * Fetches data for the all reviews page including poster images and metadata.
  * @returns Props for the AllReviews component with all reviewed titles
  */
-export async function getAllReviewsProps(): Promise<AllReviewsProps> {
-  const { distinctGenres, distinctReleaseYears, distinctReviewYears, reviews } =
-    await allReviews();
-
-  const values = await buildReviewValues(reviews, true);
+export async function getAllReviewsProps(
+  reviews: CollectionEntry<"reviewedTitles">["data"][],
+): Promise<AllReviewsProps> {
+  const { distinctGenres, distinctReleaseYears, distinctReviewYears, values } =
+    await buildReviewValues(reviews);
 
   return {
     distinctGenres,
@@ -102,54 +105,54 @@ export async function getUnderseenProps(): Promise<UnderseenProps> {
 }
 
 async function buildReviewValues(
-  reviews: {
-    genres: string[];
-    grade: string;
-    gradeValue: number;
-    imdbId: string;
-    releaseSequence: number;
-    releaseYear: string;
-    reviewDate: Date;
-    reviewSequence: number;
-    slug: string;
-    sortTitle: string;
-    title: string;
-  }[],
-  includeReviewMonth: boolean,
-): Promise<ReviewsValue[]> {
-  return Promise.all(
-    reviews.map(async (review) => {
-      const date = review.reviewDate;
+  titles: CollectionEntry<"reviewedTitles">["data"][],
+): Promise<{
+  distinctGenres: string[];
+  distinctReleaseYears: string[];
+  distinctReviewYears: string[];
+  values: ReviewsValue[];
+}> {
+  const distinctReviewYears = new Set<string>();
+  const distinctReleaseYears = new Set<string>();
+  const distinctGenres = new Set<string>();
+
+  titles.sort((a, b) => a.releaseDate.localeCompare(b.releaseDate));
+
+  const values = await Promise.all(
+    titles.map(async (title, index) => {
+      for (const genre of title.genres) {
+        distinctGenres.add(genre);
+      }
+      distinctReleaseYears.add(title.releaseYear);
+      distinctReviewYears.add(toSortYear(title.reviewDate));
 
       const value: ReviewsValue = {
-        genres: review.genres,
-        grade: review.grade,
-        gradeValue: review.gradeValue,
-        imdbId: review.imdbId,
+        genres: title.genres,
+        grade: title.grade,
+        gradeValue: gradeToValue(title.grade),
+        imdbId: title.imdbId,
         posterImageProps: await getFluidWidthPosterImageProps(
-          review.slug,
+          title.review.id,
           PosterListItemImageConfig,
         ),
-        releaseSequence: review.releaseSequence,
-        releaseYear: review.releaseYear,
-        reviewDisplayDate: displayDate(review.reviewDate),
-        ...(includeReviewMonth && {
-          reviewMonth: date.toLocaleDateString("en-US", {
-            month: "long",
-            timeZone: "UTC",
-          }),
-        }),
-        reviewSequence: review.reviewSequence,
-        reviewYear: date.toLocaleDateString("en-US", {
-          timeZone: "UTC",
-          year: "numeric",
-        }),
-        slug: review.slug,
-        sortTitle: review.sortTitle,
-        title: review.title,
+        releaseSequence: index,
+        releaseYear: title.releaseYear,
+        reviewDisplayDate: displayDate(title.reviewDate),
+        reviewSequence: title.reviewSequence,
+        reviewYear: toSortYear(title.reviewDate),
+        slug: title.review.id,
+        sortTitle: title.sortTitle,
+        title: title.title,
       };
 
       return value;
     }),
   );
+
+  return {
+    distinctGenres: [...distinctGenres].toSorted(),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+    distinctReviewYears: [...distinctReviewYears].toSorted(),
+    values,
+  };
 }

@@ -1,8 +1,8 @@
 import { useReducer } from "react";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
-import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
+import { PosterList } from "~/components/poster-list/PosterList";
+import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { ReviewsValue } from "./ReviewsListItem";
@@ -10,7 +10,6 @@ import type { ReviewsSort } from "./sortReviews";
 
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterReviews } from "./filteredReviews";
-import { groupReviews } from "./groupReviews";
 import {
   createApplyFiltersAction,
   createClearFiltersAction,
@@ -63,10 +62,9 @@ export function AllReviews({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = usePaginatedGroupedValues(
+  const [paginatedValues, totalCount] = usePaginatedValues(
     sortReviews,
     filterReviews,
-    groupReviews,
     state.values,
     state.sort,
     state.activeFilterValues,
@@ -117,14 +115,19 @@ export function AllReviews({
       }}
       totalCount={totalCount}
     >
-      <GroupedPosterList
-        groupedValues={groupedValues}
-        onShowMore={() => dispatch(createShowMoreAction())}
-        totalCount={totalCount}
-        visibleCount={state.showCount}
-      >
-        {(value) => <ReviewsListItem key={value.imdbId} value={value} />}
-      </GroupedPosterList>
+      <div className="tablet:-mx-6 tablet:pt-10">
+        <PosterList
+          onShowMore={
+            paginatedValues.length < totalCount
+              ? (): void => dispatch(createShowMoreAction())
+              : undefined
+          }
+        >
+          {[...paginatedValues].map((value) => {
+            return <ReviewsListItem key={value.imdbId} value={value} />;
+          })}
+        </PosterList>
+      </div>
     </FilterAndSortContainer>
   );
 }

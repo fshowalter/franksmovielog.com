@@ -16,8 +16,7 @@ export type ReviewsValue = {
   releaseSequence: number;
   releaseYear: string;
   reviewDisplayDate: string;
-  reviewMonth?: string;
-  reviewSequence: number;
+  reviewSequence: string;
   reviewYear: string;
   slug: string;
   sortTitle: string;

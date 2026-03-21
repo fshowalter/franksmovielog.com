@@ -20,7 +20,6 @@ import { trimToExcerpt } from "./utils/markdown/trimToExcerpt";
 
 let cachedMarkdownReviews: MarkdownReview[];
 let cachedReviewedTitlesJson: ReviewedTitleJson[];
-let cachedReviews: Reviews;
 const cachedExcerptHtml: Map<string, string> = new Map();
 
 /**
@@ -38,31 +37,6 @@ type Reviews = {
   distinctReviewYears: string[];
   reviews: (Review & { releaseSequence: number })[];
 };
-
-/**
- * Retrieves all reviews with distinct metadata for filtering.
- * @returns Object containing all reviews and distinct values for genres, release years, and review years
- */
-export async function allReviews(): Promise<Reviews> {
-  return await perfLogger.measure("allReviews", async () => {
-    if (cachedReviews) {
-      return cachedReviews;
-    }
-
-    const reviewedTitlesJson =
-      cachedReviewedTitlesJson || (await allReviewedTitlesJson());
-    if (ENABLE_CACHE && !cachedReviewedTitlesJson) {
-      cachedReviewedTitlesJson = reviewedTitlesJson;
-    }
-
-    const reviews = await parseReviewedTitlesJson(reviewedTitlesJson);
-    if (ENABLE_CACHE) {
-      cachedReviews = reviews;
-    }
-
-    return reviews;
-  });
-}
 
 /**
  * Loads and converts review excerpt or synopsis to HTML format.
