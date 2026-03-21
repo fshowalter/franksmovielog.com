@@ -76,10 +76,6 @@ const CollectionSchema = z.object({
 
 const RawCollectionSchema = z.object({
   description: z.string(),
-  name: z.string(),
-  reviewCount: z.number(),
-  slug: z.string(),
-  titles: z.array(CollectionTitleSchema),
 });
 
 export const collections = defineCollection({
@@ -91,9 +87,9 @@ export const collections = defineCollection({
           return {
             description: descriptionToString(rawCollection.description),
             descriptionHtml: descriptionToHtml(rawCollection.description),
-            name: rawCollection.name,
-            reviewCount: rawCollection.reviewCount,
-            slug: rawCollection.slug,
+            name: raw.name,
+            reviewCount: raw.reviewCount,
+            slug: raw.slug,
             titles: raw.titles,
           };
         },
