@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
 
-import type { PosterImageProps } from "~/api/posters";
+import type { PosterImageProps } from "~/assets/posters";
 
 import type { ViewingsValue } from "./Viewings";
 import type { ViewingsFiltersValues } from "./Viewings.reducer";

@@ -1,6 +1,6 @@
 import { useEffect, useReducer, useRef } from "react";
 
-import type { PosterImageProps } from "~/api/posters";
+import type { PosterImageProps } from "~/assets/posters";
 import type { SortOption } from "~/components/filter-and-sort/FilterAndSortContainer";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";

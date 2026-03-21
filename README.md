@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.franksmovielog.com">
-    <img alt="Frank's Movie Log" src="https://www.franksmovielog.com/assets/default_og.jpg" width="500" />
+    <img alt="Frank's Movie Log" src="https://www.franksmovielog.com/og.jpg" width="1200" />
   </a>
 </p>
 <h1 align="center">
@@ -49,12 +49,9 @@ A quick look at the non-standard directories included in the project.
 
     .
     ├── content
-    ├── src/api
     └── src/utils
 
-1.  **`/content`**: The movie log content. Reviews and data copied from the backend system, as well as front-end specific assets like backdrops and posters. It also contains the content for the [how I grade](https://www.franksmovielog.com/how-i-grade/) page. We don't leverage Astro's content directory because I prefer keeping content and code separate.
-
-1.  **`/src/api`**: Functions to access the data in the `/content` folder. This replaces Gatsby's GraphQL layer. `/src/api/data` contains [Zod](https://zod.dev/) schemas to validate all the JSON and Markdown.
+1.  **`/content`**: The movie log content. Reviews and data copied from the backend system, as well as front-end specific assets like backdrops and posters. It also contains the content for the [how I grade](https://www.franksmovielog.com/how-i-grade/) page.
 
 1.  **`/src/utils`**: Shared utility functions.
 

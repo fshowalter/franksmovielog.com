@@ -1,10 +1,3 @@
-/**
- * Type for OpenGraph image component.
- */
-export type OpenGraphImageComponentType = (
-  props: OpenGraphImageProps,
-) => React.JSX.Element;
-
 type OpenGraphImageProps = {
   sectionHead?: string;
   title: string;

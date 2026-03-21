@@ -24,6 +24,29 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/stills/*.png",
 );
 
+export async function getFeedStillProps(
+  slug: string,
+): Promise<StillImageProps> {
+  const stillFilePath = Object.keys(images).find((path) => {
+    return path.endsWith(`/${slug}.png`);
+  })!;
+
+  const stillFile = await images[stillFilePath]();
+
+  const optimizedImage = await getImage({
+    format: "jpg",
+    height: 675,
+    quality: 80,
+    src: stillFile.default,
+    width: 1200,
+  });
+
+  return {
+    src: optimizedImage.src,
+    srcSet: optimizedImage.srcSet.attribute,
+  };
+}
+
 /**
  * Retrieves still image properties for a given slug.
  * @param slug - Identifier for the still image

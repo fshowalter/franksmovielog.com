@@ -5,14 +5,6 @@ import { getOpenGraphStill } from "~/assets/stills";
 import { fileForGrade } from "~/components/grade/fileForGrade";
 import { componentToImageResponse } from "~/utils/componentToImageResponse";
 
-/**
- * Type for review OpenGraph image component.
- */
-export type ReviewOpenGraphImageComponentType = (props: {
-  releaseYear: string;
-  title: string;
-}) => React.JSX.Element;
-
 type Props = {
   grade: string;
   releaseYear: string;

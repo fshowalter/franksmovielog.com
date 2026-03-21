@@ -2,7 +2,7 @@ import type { CollectionEntry } from "astro:content";
 
 import type { ReviewsValue } from "~/features/reviews/ReviewsListItem";
 
-import { getFluidWidthPosterImageProps } from "~/api/posters";
+import { getFluidWidthPosterImageProps } from "~/assets/posters";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
 import { gradeToValue } from "~/utils/grades";

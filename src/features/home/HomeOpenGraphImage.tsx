@@ -1,9 +1,4 @@
 /**
- * Type for home page OpenGraph image component.
- */
-export type HomeOpenGraphImageComponentType = () => React.JSX.Element;
-
-/**
  * OpenGraph image component for the home page.
  * @param props - Component props
  * @param props.backdrop - URL of the backdrop image

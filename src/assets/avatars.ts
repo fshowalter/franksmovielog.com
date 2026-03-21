@@ -3,7 +3,7 @@ import { getImage } from "astro:assets";
 /**
  * Props for avatar images.
  */
-type AvatarImageProps = {
+export type AvatarImageProps = {
   src: string;
   srcSet: string;
 };
