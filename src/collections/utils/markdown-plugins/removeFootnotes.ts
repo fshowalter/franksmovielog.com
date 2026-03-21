@@ -31,7 +31,7 @@ function pluginFunction(tree: Node) {
       index: number | undefined,
       parent: Parent | undefined,
     ) {
-      if (parent && index && node.type === "footnoteReference") {
+      if (parent && index !== undefined && node.type === "footnoteReference") {
         parent.children.splice(index, 1);
         return [SKIP, index];
       }

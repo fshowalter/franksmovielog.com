@@ -62,7 +62,7 @@ export function calculateReviewedStatusCounts(
   let notReviewedCount = 0;
 
   for (const value of filteredValues) {
-    if (value.slug) {
+    if (value.reviewSlug) {
       reviewedCount++;
     } else {
       notReviewedCount++;

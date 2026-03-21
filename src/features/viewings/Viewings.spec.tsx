@@ -38,20 +38,20 @@ function createViewingValue(
   overrides: Partial<ViewingsValue> = {},
 ): ViewingsValue {
   testIdCounter += 1;
-  const viewingDate = overrides.viewingDate || "2024-01-01";
+  const date = overrides.date || "2024-01-01";
   return {
+    date,
     medium: "Blu-ray",
     posterImageProps: {
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
     },
     releaseYear: "1970",
-    slug: `test-movie-${testIdCounter}`,
+    reviewSlug: `test-movie-${testIdCounter}`,
+    sequence: testIdCounter.toString(),
     sortTitle: `Test Movie ${testIdCounter}`,
     title: `Test Movie ${testIdCounter}`,
     venue: "Home",
-    viewingDate,
-    viewingSequence: testIdCounter,
     viewingYear: "2024",
     ...overrides,
   };
@@ -112,16 +112,16 @@ describe("Viewings", () => {
     it("filters by title", async ({ expect }) => {
       const viewings = [
         createViewingValue({
+          date: "2024-01-15",
           title: "The Curse of Frankenstein",
-          viewingDate: "2024-01-15",
         }),
         createViewingValue({
+          date: "2024-01-16",
           title: "Curse of the Demon",
-          viewingDate: "2024-01-16",
         }),
         createViewingValue({
+          date: "2024-01-17",
           title: "The Thing",
-          viewingDate: "2024-01-17",
         }),
       ];
 
@@ -170,10 +170,16 @@ describe("Viewings", () => {
 
     it("filters by reviewed status", async ({ expect }) => {
       const viewings = [
-        createViewingValue({ slug: "reviewed-movie", title: "Reviewed Movie" }),
-        createViewingValue({ slug: undefined, title: "Unreviewed Movie" }),
         createViewingValue({
-          slug: "another-reviewed",
+          reviewSlug: "reviewed-movie",
+          title: "Reviewed Movie",
+        }),
+        createViewingValue({
+          reviewSlug: undefined,
+          title: "Unreviewed Movie",
+        }),
+        createViewingValue({
+          reviewSlug: "another-reviewed",
           title: "Another Reviewed",
         }),
       ];
@@ -197,9 +203,18 @@ describe("Viewings", () => {
 
     it("filters by unreviewed status", async ({ expect }) => {
       const viewings = [
-        createViewingValue({ slug: "reviewed-movie", title: "Reviewed Movie" }),
-        createViewingValue({ slug: undefined, title: "Unreviewed Movie" }),
-        createViewingValue({ slug: undefined, title: "Another Unreviewed" }),
+        createViewingValue({
+          reviewSlug: "reviewed-movie",
+          title: "Reviewed Movie",
+        }),
+        createViewingValue({
+          reviewSlug: undefined,
+          title: "Unreviewed Movie",
+        }),
+        createViewingValue({
+          reviewSlug: undefined,
+          title: "Another Unreviewed",
+        }),
       ];
 
       const user = getUserWithFakeTimers();
@@ -277,18 +292,18 @@ describe("Viewings", () => {
     it("filters by viewing year range", async ({ expect }) => {
       const viewings = [
         createViewingValue({
+          date: "2012-06-15",
           title: "Movie 2012",
-          viewingDate: "2012-06-15",
           viewingYear: "2012",
         }),
         createViewingValue({
+          date: "2013-06-15",
           title: "Movie 2013",
-          viewingDate: "2013-06-15",
           viewingYear: "2013",
         }),
         createViewingValue({
+          date: "2014-06-15",
           title: "Movie 2014",
-          viewingDate: "2014-06-15",
           viewingYear: "2014",
         }),
       ];
@@ -322,19 +337,19 @@ describe("Viewings", () => {
     it("sorts by viewing date newest first", ({ expect }) => {
       const viewings = [
         createViewingValue({
+          date: "2024-01-01",
+          sequence: "1",
           title: "Old Viewing",
-          viewingDate: "2024-01-01",
-          viewingSequence: 1,
         }),
         createViewingValue({
+          date: "2024-01-03",
+          sequence: "3",
           title: "New Viewing",
-          viewingDate: "2024-01-03",
-          viewingSequence: 3,
         }),
         createViewingValue({
+          date: "2024-01-02",
+          sequence: "2",
           title: "Mid Viewing",
-          viewingDate: "2024-01-02",
-          viewingSequence: 2,
         }),
       ];
 
@@ -362,16 +377,16 @@ describe("Viewings", () => {
     it("sorts by viewing date oldest first", async ({ expect }) => {
       const viewings = [
         createViewingValue({
+          date: "2024-01-03",
           title: "New Viewing",
-          viewingDate: "2024-01-03",
         }),
         createViewingValue({
+          date: "2024-01-01",
           title: "Old Viewing",
-          viewingDate: "2024-01-01",
         }),
         createViewingValue({
+          date: "2024-01-02",
           title: "Mid Viewing",
-          viewingDate: "2024-01-02",
         }),
       ];
 
@@ -395,14 +410,14 @@ describe("Viewings", () => {
     it("navigates to previous month", async ({ expect }) => {
       const viewings = [
         createViewingValue({
+          date: "2024-02-15",
+          sequence: "2",
           title: "February Movie",
-          viewingDate: "2024-02-15",
-          viewingSequence: 2,
         }),
         createViewingValue({
+          date: "2024-01-15",
+          sequence: "1",
           title: "January Movie",
-          viewingDate: "2024-01-15",
-          viewingSequence: 1,
         }),
       ];
 
@@ -438,12 +453,12 @@ describe("Viewings", () => {
     it("navigates to next month", async ({ expect }) => {
       const viewings = [
         createViewingValue({
+          date: "2024-01-15",
           title: "January Movie",
-          viewingDate: "2024-01-15",
         }),
         createViewingValue({
+          date: "2024-02-15",
           title: "February Movie",
-          viewingDate: "2024-02-15",
         }),
       ];
 
@@ -476,17 +491,17 @@ describe("Viewings", () => {
     it("shows correct navigation buttons", async ({ expect }) => {
       const viewings = [
         createViewingValue({
+          date: "2024-01-15",
           title: "January Movie",
-          viewingDate: "2024-01-15",
         }),
         createViewingValue({
+          date: "2023-12-15",
           title: "December Movie",
-          viewingDate: "2023-12-15",
           viewingYear: "2023",
         }),
         createViewingValue({
+          date: "2024-02-15",
           title: "February Movie",
-          viewingDate: "2024-02-15",
         }),
       ];
 

@@ -2,8 +2,8 @@ import type { MaybeReviewedTitleFiltersValues } from "~/reducers/maybeReviewedTi
 
 type FilterableMaybeReviewedTitle = FilterableTitle & {
   gradeValue?: number;
+  reviewSlug?: string;
   reviewYear?: string;
-  slug?: string;
 };
 
 import type { FilterableTitle } from "./filterTitles";

@@ -73,7 +73,7 @@ export function CalendarCell({
             {value.viewings!.map((viewing) => (
               <PosterListItem
                 className="items-center"
-                key={viewing.viewingSequence}
+                key={viewing.sequence}
                 posterImageProps={viewing.posterImageProps}
               >
                 <div
@@ -83,7 +83,7 @@ export function CalendarCell({
                   `}
                 >
                   <ListItemTitle
-                    slug={viewing.slug}
+                    slug={viewing.reviewSlug}
                     title={viewing.title}
                     year={viewing.releaseYear}
                   />

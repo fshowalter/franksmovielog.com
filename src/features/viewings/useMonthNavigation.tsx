@@ -21,32 +21,32 @@ export function useMonthNavigation(
     return [undefined, undefined, undefined];
   }
 
-  selectedMonthDate = selectedMonthDate || filteredValues[0].viewingDate;
+  selectedMonthDate = selectedMonthDate || filteredValues[0].date;
 
   const selectedYearAndMonth = selectedMonthDate.slice(0, 7);
 
   for (const value of filteredValues) {
-    if (value.viewingDate.startsWith(selectedYearAndMonth)) {
+    if (value.date.startsWith(selectedYearAndMonth)) {
       currentMonthValue = value;
     } else {
       if (sort === "viewing-date-desc") {
         if (currentMonthValue) {
-          previousMonthDate = value.viewingDate;
+          previousMonthDate = value.date;
           break;
         } else {
-          nextMonthDate = value.viewingDate;
+          nextMonthDate = value.date;
         }
       }
 
       if (sort === "viewing-date-asc")
         if (currentMonthValue) {
-          nextMonthDate = value.viewingDate;
+          nextMonthDate = value.date;
           break;
         } else {
-          previousMonthDate = value.viewingDate;
+          previousMonthDate = value.date;
         }
     }
   }
 
-  return [previousMonthDate, currentMonthValue?.viewingDate, nextMonthDate];
+  return [previousMonthDate, currentMonthValue?.date, nextMonthDate];
 }

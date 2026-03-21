@@ -23,14 +23,14 @@ export function useCalendar(
   const currentYearAndMonth = currentMonthDate.slice(0, 7);
 
   for (const value of filteredValues) {
-    if (value.viewingDate.startsWith(currentYearAndMonth)) {
-      const viewingDay = Number(value.viewingDate.slice(-2));
+    if (value.date.startsWith(currentYearAndMonth)) {
+      const viewingDay = Number(value.date.slice(-2));
       viewingsForMonth.set(viewingDay, viewingsForMonth.get(viewingDay) || []);
 
       viewingsForMonth.get(viewingDay)?.push(value);
     }
 
-    const valueYearAndMonth = value.viewingDate.slice(0, 7);
+    const valueYearAndMonth = value.date.slice(0, 7);
 
     if (
       sort === "viewing-date-desc" &&
@@ -48,7 +48,7 @@ export function useCalendar(
   }
 
   for (const values of viewingsForMonth.values()) {
-    values.sort((a, b) => a.viewingSequence - b.viewingSequence);
+    values.sort((a, b) => a.sequence.localeCompare(b.sequence));
   }
 
   const cells = getCalendarCells(currentMonthDate, viewingsForMonth);

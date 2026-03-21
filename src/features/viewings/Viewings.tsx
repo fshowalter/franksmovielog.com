@@ -48,15 +48,15 @@ export type ViewingsProps = {
  * Value object for a viewing item.
  */
 export type ViewingsValue = {
+  date: string; // Full date string YYYY-MM-DD
   medium?: string;
   posterImageProps: PosterImageProps;
   releaseYear: string;
-  slug?: string;
+  reviewSlug?: string;
+  sequence: string;
   sortTitle: string;
   title: string;
   venue?: string;
-  viewingDate: string; // Full date string YYYY-MM-DD
-  viewingSequence: number;
   viewingYear: string;
 };
 

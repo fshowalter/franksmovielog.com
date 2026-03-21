@@ -9,6 +9,7 @@ import { loadJsonSplitFile } from "./utils/loadJsonSplitFile";
 
 const ViewingLogSchema = z
   .object({
+    date: z.coerce.date(),
     medium: z
       .nullable(z.string())
       .optional()
@@ -18,33 +19,35 @@ const ViewingLogSchema = z
       .nullable(z.string())
       .optional()
       .transform((v) => v ?? undefined),
+    sequence: z.string(),
     sortTitle: z.string(),
     title: z.string(),
     venue: z
       .nullable(z.string())
       .optional()
       .transform((v) => v ?? undefined),
-    viewingDate: z.coerce.date(),
   })
   .transform(
     ({
+      date,
       medium,
       releaseYear,
       reviewSlug,
+      sequence,
       sortTitle,
       title,
       venue,
-      viewingDate,
     }) => {
       // fix zod making anything with undefined optional
       return {
+        date,
         medium,
         releaseYear,
         reviewSlug,
+        sequence,
         sortTitle,
         title,
         venue,
-        viewingDate,
       };
     },
   );
@@ -54,6 +57,7 @@ export const viewingLog = defineCollection({
     load: (loaderContext: LoaderContext) =>
       loadJsonSplitFile({
         directoryPath: path.join(CONTENT_ROOT, "data", "viewing-log"),
+        getId: (raw) => raw.sequence as string,
         loaderContext,
       }),
     name: "viewing-log-loader",

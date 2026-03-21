@@ -1,5 +1,5 @@
 type FilterableMaybeReviewedTitle = {
-  slug?: string;
+  reviewSlug?: string;
 };
 
 /**
@@ -22,9 +22,9 @@ export function createReviewedStatusFilter<
 
   return (value: TValue): boolean => {
     if (filterValues.includes("Reviewed")) {
-      return !!value.slug;
+      return !!value.reviewSlug;
     }
 
-    return !value.slug;
+    return !value.reviewSlug;
   };
 }

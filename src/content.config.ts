@@ -7,6 +7,7 @@ import { reviews } from "./collections/reviews";
 import { alltimeStats, yearStats } from "./collections/stats";
 import { underrated } from "./collections/underrated";
 import { underseen } from "./collections/underseen";
+import { viewingLog } from "./collections/viewingLog";
 import { viewings } from "./collections/viewings";
 import { watchlistProgress } from "./collections/watchlistProgress";
 import { watchlistTitles } from "./collections/watchlistTitles";
@@ -21,6 +22,7 @@ export const collections = {
   reviews,
   underrated,
   underseen,
+  viewingLog,
   viewings,
   watchlistProgress,
   watchlistTitles,
