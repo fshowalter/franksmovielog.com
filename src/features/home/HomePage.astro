@@ -1,0 +1,189 @@
+---
+import { getEntry } from "astro:content";
+
+import Grade from "~/components/grade/Grade.astro";
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+import RenderedMarkdown from "~/components/rendered-markdown/RenderedMarkdown.astro";
+import Still from "~/components/still/Still.astro";
+import SubHeading from "~/components/sub-heading/SubHeading.astro";
+import { mostRecentReviewedTitles } from "~/utils/mostRecentReviewedTitles";
+
+const StillImageConfig = {
+  height: 360,
+  sizes:
+    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
+  width: 640,
+};
+
+const reviewedTitles = await mostRecentReviewedTitles(12);
+
+const title = "Frank's Movie Log";
+const deck = "Quality reviews of films of questionable quality.";
+const metaDescription =
+  "The latest reviews from movie critic Frank Showalter. Quality reviews of current, cult, classic, and forgotten films.";
+
+function formatDate(reviewDate: Date): string {
+  return reviewDate.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    timeZone: "UTC",
+    year: "numeric",
+  });
+}
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    mainClassNames: "bg-subtle",
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: { description: deck, type: "website" },
+    title,
+  }}
+  heroProps={{
+    backdropSlug: "home",
+    deck,
+    title,
+  }}
+  hideLogo={true}
+>
+  <nav class="mx-auto max-w-(--breakpoint-desktop) pb-8">
+    <SubHeading class="px-container" level="h2"> Latest Reviews </SubHeading>
+    <ul
+      class={`
+        flex w-full flex-col flex-wrap justify-center gap-x-[3%] pb-8
+        tablet:flex-row tablet:justify-between tablet:gap-y-[6vw]
+        tablet:px-container tablet:[--card-width:47%]
+        laptop:gap-y-[3vw] laptop:[--card-width:31.33%]
+        desktop:gap-y-14
+      `}
+    >
+      {
+        await Promise.all(
+          reviewedTitles.map(async ({ data: reviewedTitle }) => {
+            const { data: review } = await getEntry(reviewedTitle.review);
+            return (
+              <li
+                class={`
+                  group/card relative mb-1 flex w-(--card-width) transform-gpu
+                  flex-col bg-default px-[8%] pt-12 transition-transform
+                  duration-500
+                  tablet:mb-0 tablet:px-0 tablet:pt-0
+                  tablet-landscape:has-[a:hover]:-translate-y-2
+                  tablet-landscape:has-[a:hover]:drop-shadow-2xl
+                `}
+              >
+                <div
+                  class={`
+                    relative mb-6 block overflow-hidden
+                    after:absolute after:top-0 after:left-0 after:aspect-video
+                    after:size-full after:bg-default
+                    after:opacity-(--still-opacity,15%) after:duration-500
+                    group-has-[a:hover]/card:after:opacity-0
+                    tablet:after:inset-x-0 tablet:after:top-0
+                  `}
+                >
+                  <Still
+                    class={`
+                      h-auto w-full transform-gpu transition-transform
+                      duration-500
+                      group-has-[a:hover]/card:scale-110
+                    `}
+                    decoding="async"
+                    imageConfig={StillImageConfig}
+                    loading="lazy"
+                    slug={review.slug}
+                  />
+                </div>
+                <div
+                  class={`
+                    flex grow flex-col px-1 pb-8
+                    tablet:px-[8%]
+                    laptop:pr-[10%] laptop:pl-[8.5%]
+                  `}
+                >
+                  <div
+                    class={`
+                      mb-3 font-sans text-xs/4 font-normal tracking-wider
+                      text-subtle uppercase
+                      laptop:tracking-wide
+                    `}
+                  >
+                    {formatDate(reviewedTitle.reviewDate)}
+                  </div>
+                  {/* prettier-ignore */}
+                  <a class={`
+                    mb-3 block text-2.5xl/7 font-medium text-default
+                    transition-all duration-500
+                    after:absolute after:top-0 after:left-0 after:z-sticky
+                    after:size-full
+                    hover:text-accent
+                    tablet:text-2xl/7
+                    laptop:text-2.5xl/7
+                  `} href={`/reviews/${reviewedTitle.review.id}/`}>
+                   
+                    {reviewedTitle.title}&nbsp;<span class={`
+                      text-sm leading-none font-normal text-muted
+                    `}>{reviewedTitle.releaseYear}</span>
+                  </a>
+                  <Grade
+                    class={`
+                      mb-5
+                      tablet:mb-8
+                    `}
+                    height={24}
+                    value={reviewedTitle.grade}
+                  />
+                  <RenderedMarkdown
+                    class={`
+                      leading-normal mb-6 text-lg tracking-prose text-muted
+                    `}
+                    text={review.excerptHtml}
+                  />
+                  <div
+                    class={`
+                      mt-auto font-sans text-xs/4 tracking-wider text-subtle
+                      laptop:tracking-wide
+                    `}
+                  >
+                    {reviewedTitle.genres.join(", ")}
+                  </div>
+                </div>
+              </li>
+            );
+          }),
+        )
+      }
+    </ul>
+    <div
+      class={`
+        flex px-container py-10
+        has-[a:hover]:drop-shadow-lg
+      `}
+    >
+      <a
+        class={`
+          group/all-reviews mx-auto w-full max-w-button transform-gpu rounded-md
+          bg-default pt-5 pb-4 text-center font-sans text-sm font-bold
+          tracking-wide text-accent uppercase transition-all
+          hover:scale-105 hover:bg-accent hover:text-white
+        `}
+        href="/reviews/"
+      >
+        <span
+          class={`
+            relative inline-block pb-1
+            after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full
+            after:origin-center after:scale-x-0 after:transform-gpu
+            after:bg-white after:transition-transform after:duration-500
+            group-hover/all-reviews:after:scale-x-100
+          `}
+        >
+          All Reviews
+        </span>
+      </a>
+    </div>
+  </nav>
+</HeroLayout>

@@ -1,28 +1,5 @@
 ---
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-
-const deck = '"Dick Laurent is dead."';
-const backdropImageProps = await getLayoutBackdropImageProps("not-found");
+import NotFoundPage from "~/features/not-found/NotFoundPage.astro";
 ---
 
-<AstroPageShell
-  canonical={false}
-  meta={{ description: deck }}
-  openGraph={false}
-  title="404: Not Found"
->
-  <Layout
-    backdrop={{
-      centerText: true,
-      deck,
-      imageProps: backdropImageProps,
-      size: "large",
-      title: "404 Not Found",
-    }}
-    className="bg-subtle"
-  >
-    <span></span>
-  </Layout>
-</AstroPageShell>
+<NotFoundPage />

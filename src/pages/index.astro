@@ -1,35 +1,5 @@
 ---
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-import { getHomeProps } from "~/features/home/getHomeProps";
-import { Home } from "~/features/home/Home";
-
-const homeProps = await getHomeProps();
-const backdropImageProps = await getLayoutBackdropImageProps("home");
-
-const deck = "Quality reviews of films of questionable quality.";
-const metaDescription =
-  "The latest reviews from movie critic Frank Showalter. Quality reviews of current, cult, classic, and forgotten films.";
+import HomePage from "~/features/home/HomePage.astro";
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{
-    description: metaDescription,
-  }}
-  openGraph={{ description: deck, type: "website" }}
-  title="Frank's Movie Log"
->
-  <Layout
-    backdrop={{
-      deck,
-      imageProps: backdropImageProps,
-      title: "Frank's Movie Log",
-    }}
-    className="bg-subtle"
-    hideLogo={true}
-  >
-    <Home {...homeProps} />
-  </Layout>
-</AstroPageShell>
+<HomePage />
