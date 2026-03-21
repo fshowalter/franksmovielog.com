@@ -88,14 +88,13 @@ export const collections = defineCollection({
       loadJsonDirectory({
         buildData: ({ raw }) => {
           const rawCollection = RawCollectionSchema.parse(raw);
-
           return {
             description: descriptionToString(rawCollection.description),
             descriptionHtml: descriptionToHtml(rawCollection.description),
             name: rawCollection.name,
             reviewCount: rawCollection.reviewCount,
             slug: rawCollection.slug,
-            titles: rawCollection.titles,
+            titles: raw.titles,
           };
         },
         directoryPath: path.join(CONTENT_ROOT, "data", "collections"),

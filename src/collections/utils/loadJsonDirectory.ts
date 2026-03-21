@@ -44,9 +44,9 @@ export function loadJsonDirectory({
         continue;
       }
 
-      const data = buildData
-        ? buildData({ id, raw })
-        : await loaderContext.parseData({ data: raw, id });
+      const dataToLoad = buildData ? buildData({ id, raw }) : raw;
+
+      const data = await loaderContext.parseData({ data: dataToLoad, id });
 
       loaderContext.store.set({ data, digest, id });
     }

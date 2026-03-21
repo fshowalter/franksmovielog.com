@@ -5,7 +5,7 @@ import sharp from "sharp";
 /**
  * Props for still images.
  */
-export type StillImageProps = {
+type StillImageProps = {
   src: string;
   srcSet: string;
 };

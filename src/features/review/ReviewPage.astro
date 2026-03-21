@@ -5,7 +5,6 @@ import { getEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import { getEntries } from "astro:content";
 
-import { linkReviewedTitles } from "~/api/utils/linkReviewedTitles";
 import { getFixedWidthPosterImageProps } from "~/assets/posters";
 import Grade from "~/components/grade/Grade.astro";
 import BaseLayout from "~/components/layout/BaseLayout.astro";
@@ -13,6 +12,7 @@ import Mast from "~/components/layout/Mast.astro";
 import LongFormText from "~/components/long-form-text/LongFormText.astro";
 import MoreReviews from "~/components/more-reviews/MoreReviews.astro";
 import Still from "~/components/still/Still.astro";
+import { linkReviewedTitles } from "~/utils/linkReviewedTitles";
 import { toSentence } from "~/utils/toSentence";
 
 import Credit from "./Credit.astro";

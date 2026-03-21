@@ -1,6 +1,7 @@
 import { castAndCrew } from "./collections/castAndCrew";
 import { collections as collectionsLoader } from "./collections/collections";
 import { overrated } from "./collections/overrated";
+import { pages } from "./collections/pages";
 import { reviewedTitles } from "./collections/reviewedTitles";
 import { reviews } from "./collections/reviews";
 import { alltimeStats, yearStats } from "./collections/stats";
@@ -15,6 +16,7 @@ export const collections = {
   castAndCrew,
   collections: collectionsLoader,
   overrated,
+  pages,
   reviewedTitles,
   reviews,
   underrated,

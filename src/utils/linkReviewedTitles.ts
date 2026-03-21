@@ -17,7 +17,7 @@ export function linkReviewedTitles(
 
   let result = text;
 
-  const re = new RegExp(/(<span data-imdb-id="([^"]*)">)(.*?)(<\/span>)/, "g");
+  const re = new RegExp(/(<span data-imdb-id="(tt\d+)">)(.*?)(<\/span>)/, "g");
 
   const matches = [...text.matchAll(re)];
 
