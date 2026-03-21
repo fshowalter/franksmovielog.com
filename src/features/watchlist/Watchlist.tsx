@@ -4,15 +4,14 @@ import type { PosterImageProps } from "~/assets/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/TitleSortOptions";
-import { GroupedPosterList } from "~/components/poster-list/GroupedPosterList";
-import { usePaginatedGroupedValues } from "~/hooks/usePaginatedGroupedValues";
+import { PosterList } from "~/components/poster-list/PosterList";
+import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
 
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterWatchlistValues } from "./filterWatchlistValues";
-import { groupWatchlistValues } from "./groupWatchlistValues";
 import { sortWatchlistValues } from "./sortWatchlistValues";
 import {
   createApplyFiltersAction,
@@ -94,10 +93,9 @@ export function Watchlist({
     createInitialState,
   );
 
-  const [groupedValues, totalCount] = usePaginatedGroupedValues(
+  const [paginatedValues, totalCount] = usePaginatedValues(
     sortWatchlistValues,
     filterWatchlistValues,
-    groupWatchlistValues,
     state.values,
     state.sort,
     state.activeFilterValues,
@@ -212,14 +210,15 @@ export function Watchlist({
       }}
       totalCount={totalCount}
     >
-      <div className="@container/list">
-        <GroupedPosterList
-          groupedValues={groupedValues}
-          onShowMore={() => dispatch(createShowMoreAction())}
-          totalCount={totalCount}
-          visibleCount={state.showCount}
+      <div className="tablet:-mx-6 tablet:pt-10">
+        <PosterList
+          onShowMore={
+            paginatedValues.length < totalCount
+              ? (): void => dispatch(createShowMoreAction())
+              : undefined
+          }
         >
-          {(value) => {
+          {[...paginatedValues].map((value) => {
             return (
               <WatchlistListItem
                 defaultPosterImageProps={defaultPosterImageProps}
@@ -227,8 +226,8 @@ export function Watchlist({
                 value={value}
               />
             );
-          }}
-        </GroupedPosterList>
+          })}
+        </PosterList>
       </div>
     </FilterAndSortContainer>
   );

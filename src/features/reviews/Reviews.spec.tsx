@@ -18,7 +18,7 @@ import {
 } from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
 import {
   clickShowMore,
-  getGroupedPosterList,
+  getPosterList,
 } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
@@ -51,7 +51,7 @@ describe("AllReviews", () => {
       await fillTitleFilter(user, "Apostle");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("The Apostle")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Halloween"),
@@ -78,7 +78,7 @@ describe("AllReviews", () => {
       await clickGenresFilterOption(user, "Horror");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("The Exorcist")).toBeInTheDocument();
       expect(within(posterList).getByText("Alien")).toBeInTheDocument();
       expect(
@@ -100,7 +100,7 @@ describe("AllReviews", () => {
       await fillReleaseYearFilter(user, "1970", "1980");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("The Godfather")).toBeInTheDocument();
       expect(within(posterList).getByText("Jaws")).toBeInTheDocument();
       expect(
@@ -122,7 +122,7 @@ describe("AllReviews", () => {
       await fillReviewYearFilter(user, "2019", "2021");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Review 2019")).toBeInTheDocument();
       expect(within(posterList).getByText("Review 2020")).toBeInTheDocument();
       expect(
@@ -144,7 +144,7 @@ describe("AllReviews", () => {
       await fillGradeFilter(user, "B-", "B+");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Good Movie")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Bad Movie"),
@@ -168,7 +168,7 @@ describe("AllReviews", () => {
 
       await clickSortOption(user, "Title (A → Z)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const alienIndex = allText.indexOf("Alien");
       const matrixIndex = allText.indexOf("The Matrix");
@@ -190,7 +190,7 @@ describe("AllReviews", () => {
 
       await clickSortOption(user, "Title (Z → A)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const zodiacIndex = allText.indexOf("Zodiac");
       const matrixIndex = allText.indexOf("The Matrix");
@@ -224,7 +224,7 @@ describe("AllReviews", () => {
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const movie1970Index = allText.indexOf("Movie 1970");
       const movie1990Index = allText.indexOf("Movie 1990");
@@ -258,7 +258,7 @@ describe("AllReviews", () => {
 
       await clickSortOption(user, "Release Date (Newest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const movie2010Index = allText.indexOf("Movie 2010");
       const movie1990Index = allText.indexOf("Movie 1990");
@@ -280,7 +280,7 @@ describe("AllReviews", () => {
 
       await clickSortOption(user, "Grade (Best First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const greatIndex = allText.indexOf("Great");
       const goodIndex = allText.indexOf("Good");
@@ -302,7 +302,7 @@ describe("AllReviews", () => {
 
       await clickSortOption(user, "Grade (Worst First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const badIndex = allText.indexOf("Bad");
       const goodIndex = allText.indexOf("Good");
@@ -324,7 +324,7 @@ describe("AllReviews", () => {
 
       await clickSortOption(user, "Review Date (Oldest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const review1Index = allText.indexOf("Review 1");
       const review2Index = allText.indexOf("Review 2");
@@ -346,7 +346,7 @@ describe("AllReviews", () => {
 
       await clickSortOption(user, "Review Date (Newest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const review3Index = allText.indexOf("Review 3");
       const review2Index = allText.indexOf("Review 2");
@@ -372,7 +372,7 @@ describe("AllReviews", () => {
       await clickGenresFilterOption(user, "Horror");
       await clickViewResults(user);
 
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("Halloween")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("The Thing"),
@@ -385,7 +385,7 @@ describe("AllReviews", () => {
 
       await clickViewResults(user);
 
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("Halloween")).toBeInTheDocument();
       expect(within(posterList).getByText("The Thing")).toBeInTheDocument();
     });
@@ -405,7 +405,7 @@ describe("AllReviews", () => {
       await fillTitleFilter(user, "Halloween");
       await clickViewResults(user);
 
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("Halloween")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("The Thing"),
@@ -415,7 +415,7 @@ describe("AllReviews", () => {
       await fillTitleFilter(user, "Different");
       await clickCloseFilters(user);
 
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("Halloween")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("The Thing"),
@@ -452,7 +452,7 @@ describe("AllReviews", () => {
       await clickViewResults(user);
 
       // Verify filter is applied
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("The Exorcist")).toBeInTheDocument();
       expect(within(posterList).getByText("Alien")).toBeInTheDocument();
       expect(
@@ -473,7 +473,7 @@ describe("AllReviews", () => {
       ).not.toBeInTheDocument();
 
       // Verify all movies are now shown
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("The Exorcist")).toBeInTheDocument();
       expect(within(posterList).getByText("Alien")).toBeInTheDocument();
       expect(within(posterList).getByText("Die Hard")).toBeInTheDocument();
@@ -511,7 +511,7 @@ describe("AllReviews", () => {
       await clickViewResults(user);
 
       // Verify both filters are applied - only "Alien" has both genres
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(
         within(posterList).queryByText("The Exorcist"),
       ).not.toBeInTheDocument();
@@ -538,7 +538,7 @@ describe("AllReviews", () => {
       expect(screen.getByLabelText("Remove Sci-Fi filter")).toBeInTheDocument();
 
       // Verify only Sci-Fi filter is still active (shows movies with Sci-Fi)
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(
         within(posterList).queryByText("The Exorcist"),
       ).not.toBeInTheDocument();
@@ -580,7 +580,7 @@ describe("AllReviews", () => {
       await clickViewResults(user);
 
       // Verify filter is applied
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(
         within(posterList).getByText("Double Indemnity"),
       ).toBeInTheDocument();
@@ -603,7 +603,7 @@ describe("AllReviews", () => {
       ).not.toBeInTheDocument();
 
       // Verify all movies are now shown
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(
         within(posterList).getByText("Double Indemnity"),
       ).toBeInTheDocument();
@@ -626,7 +626,7 @@ describe("AllReviews", () => {
       const user = getUserWithFakeTimers();
       render(<Reviews {...baseProps} values={reviews} />);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Should show first 100 movies
       expect(within(posterList).getByText("Movie 1")).toBeInTheDocument();

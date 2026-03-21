@@ -72,7 +72,6 @@ export function CollectionTitles({
   initialSort,
   values,
 }: CollectionTitlesProps): React.JSX.Element {
-  console.log(values);
   const [state, dispatch] = useReducer(
     reducer,
     {
