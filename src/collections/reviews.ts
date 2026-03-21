@@ -37,9 +37,9 @@ const ReviewSchema = z.object({
   excerptHtml: z.string(),
   grade: z.string(),
   html: z.string(),
+  reviewedTitle: reference("reviewedTitles"),
   slug: z.string(),
   synopsis: z.optional(z.string()),
-  title: reference("reviewedTitles"),
 });
 
 export const reviews = defineCollection({
@@ -54,9 +54,9 @@ export const reviews = defineCollection({
             excerptHtml: parseExcerpt(frontmatter, body),
             grade: frontmatter.grade as string,
             html: markdownToHtml(body),
+            reviewedTitle: frontmatter.slug as string,
             slug: frontmatter.slug as string,
             synopsis: frontmatter.synopsis as string | undefined,
-            title: frontmatter.slug as string,
           };
         },
         directoryPath: path.join(CONTENT_ROOT, "reviews"),
