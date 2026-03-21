@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 
-import { castAndCrewOpenGraphImageResponse } from "~/features/cast-and-crew/castAndCrewOpenGraphImageResponse";
+import { openGraphImageResponse } from "~/utils/openGraphImageResponse";
 
 export const GET: APIRoute = async function get() {
-  return castAndCrewOpenGraphImageResponse();
+  return openGraphImageResponse("Cast & Crew", "cast-and-crew");
 };

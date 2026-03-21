@@ -1,29 +1,7 @@
 import type { APIRoute } from "astro";
 
-import path from "node:path";
-import sharp from "sharp";
-
-import { OpenGraphImage } from "~/components/open-graph-image/OpenGraphImage";
-import { componentToImage } from "~/utils/componentToImage";
+import { openGraphImageResponse } from "~/utils/openGraphImageResponse";
 
 export const GET: APIRoute = async function get() {
-  const imageBuffer = await sharp(
-    path.resolve(`./content/assets/backdrops/underseen.png`),
-  )
-    .resize(1200)
-    .toFormat("png")
-    .toBuffer();
-
-  const jpeg = await componentToImage(
-    OpenGraphImage({
-      backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
-      title: "Underseen Gems",
-    }),
-  );
-
-  return new Response(new Uint8ClampedArray(jpeg), {
-    headers: {
-      "Content-Type": "image/jpg",
-    },
-  });
+  return await openGraphImageResponse("Underseen Gems", "underseen");
 };

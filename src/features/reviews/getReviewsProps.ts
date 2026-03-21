@@ -2,98 +2,23 @@ import type { CollectionEntry } from "astro:content";
 
 import type { ReviewsValue } from "~/features/reviews/ReviewsListItem";
 
-import { allOverratedDisappointments } from "~/api/overrated-disappointments";
 import { getFluidWidthPosterImageProps } from "~/api/posters";
-import { allUnderratedSurprises } from "~/api/underrated-surprises";
-import { allUnderseenGems } from "~/api/underseen-gems";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
 import { gradeToValue } from "~/utils/grades";
 import { toSortYear } from "~/utils/toSortYear";
 
-import type { AllReviewsProps } from "./AllReviews";
-import type { OverratedProps } from "./Overrated";
-import type { UnderratedProps } from "./Underrated";
-import type { UnderseenProps } from "./Underseen";
+import type { ReviewsProps } from "./ReviewsProps";
 
 /**
  * Fetches data for the all reviews page including poster images and metadata.
  * @returns Props for the AllReviews component with all reviewed titles
  */
-export async function getAllReviewsProps(
+export async function getReviewsProps(
   reviews: CollectionEntry<"reviewedTitles">["data"][],
-): Promise<AllReviewsProps> {
+): Promise<ReviewsProps> {
   const { distinctGenres, distinctReleaseYears, distinctReviewYears, values } =
     await buildReviewValues(reviews);
-
-  return {
-    distinctGenres,
-    distinctReleaseYears,
-    distinctReviewYears,
-    initialSort: "title-asc",
-    values,
-  };
-}
-
-/**
- * Fetches data for the overrated disappointments page.
- * @returns Props for the Overrated component with overrated titles
- */
-export async function getOverratedProps(): Promise<OverratedProps> {
-  const {
-    distinctGenres,
-    distinctReleaseYears,
-    distinctReviewYears,
-    overratedDisappointments,
-  } = await allOverratedDisappointments();
-
-  const values = await buildReviewValues(overratedDisappointments, false);
-
-  return {
-    distinctGenres,
-    distinctReleaseYears,
-    distinctReviewYears,
-    initialSort: "title-asc",
-    values,
-  };
-}
-
-/**
- * Fetches data for the underrated surprises page.
- * @returns Props for the Underrated component with underrated titles
- */
-export async function getUnderratedProps(): Promise<UnderratedProps> {
-  const {
-    distinctGenres,
-    distinctReleaseYears,
-    distinctReviewYears,
-    underratedSurprises,
-  } = await allUnderratedSurprises();
-
-  const values = await buildReviewValues(underratedSurprises, false);
-
-  return {
-    distinctGenres,
-    distinctReleaseYears,
-    distinctReviewYears,
-    initialSort: "title-asc",
-    values,
-  };
-}
-
-/**
- * Fetches data for the underseen gems page.
- * @returns Props for the Underseen component with underseen titles
- */
-export async function getUnderseenProps(): Promise<UnderseenProps> {
-  const {
-    distinctGenres,
-    distinctReleaseYears,
-    distinctReviewYears,
-    underseenGems,
-  } = await allUnderseenGems();
-
-  const values = await buildReviewValues(underseenGems, false);
 
   return {
     distinctGenres,

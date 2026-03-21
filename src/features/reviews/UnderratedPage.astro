@@ -1,0 +1,28 @@
+---
+import { getEntries } from "astro:content";
+import { getEntry } from "astro:content";
+
+import ReviewsLayout from "./ReviewsLayout.astro";
+
+const overrated = await getEntry("underrated", "underrated");
+
+if (!overrated) {
+  throw new Error("Failed to load overrated titles.");
+}
+
+const titles = await getEntries(overrated.data.titles);
+
+const deck = "Four and five star movies with a below-average IMDb rating.";
+const metaDescription =
+  "The masses are wrong. These are movies have a four or five star review despite a below-average IMDb rating.";
+---
+
+<ReviewsLayout
+  activeTab="underrated"
+  backdropSlug="underrated"
+  deck={deck}
+  metaDescription={metaDescription}
+  pageTitle="Underrated Surprises"
+  title="Underrated"
+  titles={titles}
+/>

@@ -22,7 +22,7 @@ import {
 } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-import { AllReviews } from "./AllReviews";
+import { Reviews } from "./Reviews";
 import { baseProps, createReviewValue, resetTestIdCounter } from "./testHelper";
 
 describe("AllReviews", () => {
@@ -45,7 +45,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Apostle");
@@ -72,7 +72,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await clickGenresFilterOption(user, "Horror");
@@ -94,7 +94,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillReleaseYearFilter(user, "1970", "1980");
@@ -116,7 +116,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillReviewYearFilter(user, "2019", "2021");
@@ -138,7 +138,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillGradeFilter(user, "B-", "B+");
@@ -164,7 +164,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Title (A → Z)");
 
@@ -186,7 +186,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Title (Z → A)");
 
@@ -220,7 +220,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
@@ -254,7 +254,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Release Date (Newest First)");
 
@@ -276,7 +276,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Grade (Best First)");
 
@@ -298,7 +298,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Grade (Worst First)");
 
@@ -314,13 +314,13 @@ describe("AllReviews", () => {
 
     it("sorts by review date oldest first", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ reviewSequence: 3, title: "Review 3" }),
-        createReviewValue({ reviewSequence: 1, title: "Review 1" }),
-        createReviewValue({ reviewSequence: 2, title: "Review 2" }),
+        createReviewValue({ reviewSequence: "3", title: "Review 3" }),
+        createReviewValue({ reviewSequence: "1", title: "Review 1" }),
+        createReviewValue({ reviewSequence: "2", title: "Review 2" }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Review Date (Oldest First)");
 
@@ -336,13 +336,13 @@ describe("AllReviews", () => {
 
     it("sorts by review date newest first", async ({ expect }) => {
       const reviews = [
-        createReviewValue({ reviewSequence: 1, title: "Review 1" }),
-        createReviewValue({ reviewSequence: 2, title: "Review 2" }),
-        createReviewValue({ reviewSequence: 3, title: "Review 3" }),
+        createReviewValue({ reviewSequence: "1", title: "Review 1" }),
+        createReviewValue({ reviewSequence: "2", title: "Review 2" }),
+        createReviewValue({ reviewSequence: "3", title: "Review 3" }),
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickSortOption(user, "Review Date (Newest First)");
 
@@ -365,7 +365,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Halloween");
@@ -399,7 +399,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       await clickToggleFilters(user);
       await fillTitleFilter(user, "Halloween");
@@ -444,7 +444,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       // Apply Horror filter
       await clickToggleFilters(user);
@@ -502,7 +502,7 @@ describe("AllReviews", () => {
       ];
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       // Apply both Horror and Sci-Fi filters (AND logic - must have both)
       await clickToggleFilters(user);
@@ -567,7 +567,7 @@ describe("AllReviews", () => {
 
       const user = getUserWithFakeTimers();
       render(
-        <AllReviews
+        <Reviews
           {...baseProps}
           distinctGenres={[...baseProps.distinctGenres, "Film-Noir"]}
           values={reviews}
@@ -617,14 +617,14 @@ describe("AllReviews", () => {
       // Create 110 reviews to force pagination
       const reviews = Array.from({ length: 110 }, (_, i) =>
         createReviewValue({
-          reviewSequence: 3000 - i, // Higher sequences for newer reviews
+          reviewSequence: (3000 - i).toString(), // Higher sequences for newer reviews
           reviewYear: String(2020 - Math.floor(i / 10)),
           title: `Movie ${i + 1}`,
         }),
       );
 
       const user = getUserWithFakeTimers();
-      render(<AllReviews {...baseProps} values={reviews} />);
+      render(<Reviews {...baseProps} values={reviews} />);
 
       const posterList = getGroupedPosterList();
 

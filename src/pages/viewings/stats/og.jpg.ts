@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 
-import { alltimeStatsOpenGraphImageResponse } from "~/features/stats/alltimeStatsOpenGraphImageResponse";
+import { openGraphImageResponse } from "~/utils/openGraphImageResponse";
 
 export const GET: APIRoute = async function get() {
-  return await alltimeStatsOpenGraphImageResponse();
+  return await openGraphImageResponse("All-Time Stats", "stats");
 };

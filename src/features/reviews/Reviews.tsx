@@ -5,8 +5,7 @@ import { PosterList } from "~/components/poster-list/PosterList";
 import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { ReviewsValue } from "./ReviewsListItem";
-import type { ReviewsSort } from "./sortReviews";
+import type { ReviewsProps } from "./ReviewsProps";
 
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterReviews } from "./filteredReviews";
@@ -25,34 +24,13 @@ import { ReviewsFilters, SORT_OPTIONS } from "./ReviewsFilters";
 import { ReviewsListItem } from "./ReviewsListItem";
 import { sortReviews } from "./sortReviews";
 
-/**
- * Props for the AllReviews component.
- */
-export type AllReviewsProps = {
-  distinctGenres: readonly string[];
-  distinctReleaseYears: readonly string[];
-  distinctReviewYears: readonly string[];
-  initialSort: ReviewsSort;
-  values: ReviewsValue[];
-};
-
-/**
- * Component for displaying all reviews with filtering and sorting.
- * @param props - Component props
- * @param props.distinctGenres - Available genres for filtering
- * @param props.distinctReleaseYears - Available release years for filtering
- * @param props.distinctReviewYears - Available review years for filtering
- * @param props.initialSort - Initial sort configuration
- * @param props.values - Review values to display
- * @returns Reviews list component with filtering and sorting capabilities
- */
-export function AllReviews({
+export function Reviews({
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
   values,
-}: AllReviewsProps): React.JSX.Element {
+}: ReviewsProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
     reducer,
     {

@@ -1,36 +1,20 @@
 ---
 import { getCollection } from "astro:content";
 
-import HeroLayout from "~/components/layout/HeroLayout.astro";
-import { AllReviews } from "~/features/reviews/AllReviews";
-import { getAllReviewsProps } from "~/features/reviews/getReviewsProps";
-import { ReviewsSubNav } from "~/features/reviews/ReviewsSubNav";
+import ReviewsLayout from "./ReviewsLayout.astro";
 
-const reviews = await getCollection("reviewedTitles");
-const allReviewsProps = await getAllReviewsProps(reviews.map((e) => e.data));
+const titles = await getCollection("reviewedTitles");
 const deck = `"'Sorry' don't get it done, Dude."`;
 const metaDescription =
   "All my movie reviews, from 2003 to present day. Filter by title, genre, review date, release date, or grade. Sort by best or worst, oldest or newest, or title.";
 ---
 
-<HeroLayout
-  baseLayoutProps={{
-    canonical: true,
-    meta: {
-      description: metaDescription,
-    },
-    openGraph: {
-      description: deck,
-      type: "website",
-    },
-    title: "All Reviews",
-  }}
-  heroProps={{
-    backdropSlug: "reviews",
-    deck,
-    title: "Reviews",
-  }}
->
-  <ReviewsSubNav active="all" />
-  <AllReviews client:load {...allReviewsProps} />
-</HeroLayout>
+<ReviewsLayout
+  activeTab="all"
+  backdropSlug="reviews"
+  deck={deck}
+  metaDescription={metaDescription}
+  pageTitle="All Reviews"
+  title="Reviews"
+  titles={titles}
+/>

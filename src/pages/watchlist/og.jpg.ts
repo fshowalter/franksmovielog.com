@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 
-import { watchlistOpenGraphImageResponse } from "~/features/watchlist/watchlistOpenGraphImageResponse";
+import { openGraphImageResponse } from "~/utils/openGraphImageResponse";
 
 export const GET: APIRoute = async function get() {
-  return await watchlistOpenGraphImageResponse();
+  return await openGraphImageResponse("Watchlist", "watchlist");
 };
