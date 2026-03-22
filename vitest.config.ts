@@ -4,30 +4,28 @@ import { getViteConfig } from "astro/config";
 export default getViteConfig({
   test: {
     coverage: {
-      exclude: ["src/api/data/utils/getContentPath.ts"],
+      exclude: [
+        "src/**/*.astro",
+        "src/assets/**",
+        "src/collections/*.ts",
+        "src/components/nav-drawer/**",
+        "src/components/open-graph-image/**",
+        "src/components/pagefind-search/**",
+        "src/css",
+        "src/features/**/*OpenGraphImageResponse.tsx",
+        "src/features/**/get*Props.ts",
+        "src/features/feed/**",
+        "src/features/home/**",
+        "src/features/how-i-grade/**",
+        "src/features/review/**",
+        "src/features/stats/**",
+        "src/pages/**",
+      ],
       include: ["src/**"],
       provider: "v8",
     },
     globals: true, // needed for testing-library teardown
     projects: [
-      {
-        extends: true,
-        test: {
-          environment: "node",
-          include: ["src/api/**/*.spec.ts"],
-          name: "api-node",
-          setupFiles: ["setupTests.ts", "setupTestCache.ts"],
-        },
-      },
-      {
-        extends: true,
-        test: {
-          environment: "node",
-          include: ["src/pages/**/*.spec.ts"],
-          name: "pages-node",
-          setupFiles: ["setupTests.ts", "setupTestCache.ts"],
-        },
-      },
       {
         extends: true,
         test: {
@@ -58,23 +56,6 @@ export default getViteConfig({
           environment: "jsdom",
           include: ["src/features/**/*.spec.tsx"],
           name: "features-jsdom",
-        },
-      },
-      {
-        extends: true,
-        test: {
-          environment: "node",
-          include: ["src/astro/**/*.spec.ts"],
-          name: "layouts-node",
-        },
-      },
-      {
-        extends: true,
-        test: {
-          environment: "node",
-          include: ["src/utils/**/*.spec.ts"],
-          name: "utils-node",
-          setupFiles: ["setupTests.ts", "setupTestCache.ts"],
         },
       },
     ],

@@ -11,5 +11,3 @@ failOnConsole();
 if (typeof Element !== "undefined") {
   Element.prototype.scrollIntoView = vi.fn();
 }
-
-vi.mock("src/api/data/utils/getContentPath");

@@ -1,6 +1,6 @@
 import { useEffect, useReducer, useRef } from "react";
 
-import type { PosterImageProps } from "~/api/posters";
+import type { PosterImageProps } from "~/assets/posters";
 import type { SortOption } from "~/components/filter-and-sort/FilterAndSortContainer";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
@@ -48,15 +48,15 @@ export type ViewingsProps = {
  * Value object for a viewing item.
  */
 export type ViewingsValue = {
+  date: string; // Full date string YYYY-MM-DD
   medium?: string;
   posterImageProps: PosterImageProps;
   releaseYear: string;
-  slug?: string;
+  reviewSlug?: string;
+  sequence: string;
   sortTitle: string;
   title: string;
   venue?: string;
-  viewingDate: string; // Full date string YYYY-MM-DD
-  viewingSequence: number;
   viewingYear: string;
 };
 

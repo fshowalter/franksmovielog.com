@@ -1,100 +1,33 @@
 import type { APIRoute, InferGetStaticPropsType } from "astro";
 
-import path from "node:path";
-import sharp from "sharp";
+import { getCollection } from "astro:content";
 
-import { allReviews } from "~/api/reviews";
-import { getOpenGraphStillBuffer } from "~/api/stills";
-import { fileForGrade } from "~/components/grade/fileForGrade";
-import { ReviewOpenGraphImage } from "~/features/review/ReviewOpenGraphImage";
-import {
-  createCacheConfig,
-  createCacheKey,
-  ensureCacheDir,
-  getCachedItem,
-  saveCachedItem,
-} from "~/utils/cache";
-import { componentToImage } from "~/utils/componentToImage";
-
-const cacheConfig = createCacheConfig("grade-og");
+import { reviewOpenGraphImageResponse } from "~/features/review/reviewOpenGraphImageResponse";
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-/**
- * Generates static paths for all review OpenGraph images.
- * @returns Array of paths with review data as props
- */
 export async function getStaticPaths() {
-  const { reviews } = await allReviews();
+  const reviewedTitles = await getCollection("reviewedTitles");
 
-  return reviews.map((review) => {
+  return reviewedTitles.map(({ data: reviewedTitle }) => {
     return {
       params: {
-        slug: review.slug,
+        slug: reviewedTitle.review.id,
       },
       props: {
-        grade: review.grade,
-        slug: review.slug,
-        title: review.title,
-        year: review.releaseYear,
+        reviewedTitle,
       },
     };
   });
 }
 
-/**
- * API route handler for generating review-specific OpenGraph images.
- * @param context - Route context with props
- * @returns JPEG image response for review OpenGraph preview
- */
 export const GET: APIRoute = async function get({ props }) {
-  const { grade, slug, title, year } = props as Props;
+  const { reviewedTitle } = props as Props;
 
-  const imageBuffer = await getOpenGraphStillBuffer(slug);
-
-  const width = 240;
-  let gradeBuffer;
-  let cacheKey = "";
-
-  if (cacheConfig.enableCache) {
-    await ensureCacheDir(cacheConfig.cacheDir);
-
-    const cacheKeyData = `${grade}-${width}`;
-    cacheKey = createCacheKey(cacheKeyData);
-
-    gradeBuffer = await getCachedItem<Buffer<ArrayBufferLike>>(
-      cacheConfig.cacheDir,
-      cacheKey,
-      "png",
-      true,
-      cacheConfig.debugCache,
-      `Cached open-graph grade: ${grade}`,
-    );
-  }
-
-  if (!gradeBuffer) {
-    gradeBuffer = await sharp(path.resolve(`./public${fileForGrade(grade)}`))
-      .resize(240)
-      .toFormat("png")
-      .toBuffer();
-  }
-
-  const jpeg = await componentToImage(
-    ReviewOpenGraphImage({
-      backdrop: `data:${"image/png"};base64,${imageBuffer.toString("base64")}`,
-      grade: `data:${"image/png"};base64,${gradeBuffer.toString("base64")}`,
-      releaseYear: year,
-      title,
-    }),
-  );
-
-  if (cacheConfig.enableCache) {
-    await saveCachedItem(cacheConfig.cacheDir, cacheKey, "png", gradeBuffer);
-  }
-
-  return new Response(new Uint8ClampedArray(jpeg), {
-    headers: {
-      "Content-Type": "image/jpg",
-    },
+  return await reviewOpenGraphImageResponse({
+    grade: reviewedTitle.grade,
+    releaseYear: reviewedTitle.releaseYear,
+    stillSlug: reviewedTitle.review.id,
+    title: reviewedTitle.title,
   });
 };

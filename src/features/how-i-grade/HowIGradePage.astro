@@ -1,0 +1,39 @@
+---
+import { getEntry } from "astro:content";
+
+import Article from "~/components/article/Article.astro";
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+
+const pageEntry = await getEntry("pages", "how-i-grade");
+
+if (!pageEntry) {
+  throw new Error(`Failed to load "How I Grade" page.`);
+}
+
+const page = pageEntry.data;
+const deck = `"Should I watch this movie?"`;
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    meta: {
+      description: page.description,
+    },
+    openGraph: {
+      description: deck,
+      type: "article",
+    },
+    title: page.title,
+  }}
+  data-pagefind-body
+  heroProps={{
+    backdropSlug: "how-i-grade",
+    centerText: true,
+    deck,
+    size: "large",
+    title: page.title,
+  }}
+>
+  <Article page={page} />
+</HeroLayout>

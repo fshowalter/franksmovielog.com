@@ -1,14 +1,14 @@
 import type { ReviewedTitleSort } from "./createReviewedTitleSorter";
 import type { SortableTitle } from "./createTitleSorter";
 
-import { sortNumber } from "./createSorter";
+import { sortNumber, sortString } from "./createSorter";
 import { createTitleSorter } from "./createTitleSorter";
 
 export type MaybeReviewedTitleSort = ReviewedTitleSort;
 
 type SortableMaybeReviewedTitle = SortableTitle & {
   gradeValue?: number;
-  reviewSequence?: number;
+  reviewSequence?: string | undefined;
 };
 
 /**
@@ -43,8 +43,8 @@ function sortGrade<TValue extends SortableMaybeReviewedTitle>() {
 function sortReviewDate<TValue extends SortableMaybeReviewedTitle>() {
   return {
     "review-date-asc": (a: TValue, b: TValue) =>
-      sortNumber(a.reviewSequence || Infinity, b.reviewSequence || Infinity),
+      sortString(a.reviewSequence || "", b.reviewSequence || ""),
     "review-date-desc": (a: TValue, b: TValue) =>
-      sortNumber(a.reviewSequence || 0, b.reviewSequence || 0) * -1,
+      sortString(b.reviewSequence || "", a.reviewSequence || ""),
   };
 }

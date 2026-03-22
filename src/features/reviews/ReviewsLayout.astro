@@ -1,0 +1,54 @@
+---
+import type { ComponentProps } from "astro/types";
+import type { CollectionEntry } from "astro:content";
+
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+import { getReviewsProps } from "~/features/reviews/getReviewsProps";
+import { Reviews } from "~/features/reviews/Reviews";
+
+import ReviewsSubNav from "./ReviewsSubNav.astro";
+
+type Props = {
+  activeTab: ComponentProps<typeof ReviewsSubNav>["active"];
+  backdropSlug: string;
+  deck: string;
+  metaDescription: string;
+  pageTitle: string;
+  title: string;
+  titles: CollectionEntry<"reviewedTitles">[];
+};
+
+const {
+  activeTab,
+  backdropSlug,
+  deck,
+  metaDescription,
+  pageTitle,
+  title,
+  titles,
+} = Astro.props;
+
+const reviewsProps = await getReviewsProps(titles.map((e) => e.data));
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: {
+      description: deck,
+      type: "website",
+    },
+    title: pageTitle,
+  }}
+  heroProps={{
+    backdropSlug,
+    deck,
+    title,
+  }}
+>
+  <ReviewsSubNav active={activeTab} />
+  <Reviews client:load {...reviewsProps} />
+</HeroLayout>

@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+import { Collections } from "~/features/collections/Collections";
+import { getCollectionsProps } from "~/features/collections/getCollectionsProps";
+
+const collections = await getCollection("collections");
+
+const collectionsProps = await getCollectionsProps(
+  collections.map((e) => e.data),
+);
+
+const title = "Collections";
+const deck = `"Okay ramblers, let's get rambling."`;
+const metaDescription =
+  "A sortable index of movie collections reviewed on this site. Sort by name, review count, or title count.";
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: {
+      description: deck,
+      type: "website",
+    },
+    title,
+  }}
+  heroProps={{
+    backdropSlug: "collections",
+    deck,
+    title,
+  }}
+>
+  <Collections client:load {...collectionsProps} />
+</HeroLayout>

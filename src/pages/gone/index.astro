@@ -1,28 +1,5 @@
 ---
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-
-const deck = '"Forget it, Jake. It\'s Chinatown."';
-const backdropImageProps = await getLayoutBackdropImageProps("gone");
+import GonePage from "~/features/gone/GonePage.astro";
 ---
 
-<AstroPageShell
-  canonical={false}
-  meta={{ description: deck }}
-  openGraph={false}
-  title="410: Gone"
->
-  <Layout
-    backdrop={{
-      centerText: true,
-      deck,
-      imageProps: backdropImageProps,
-      size: "large",
-      title: "410 Gone",
-    }}
-    className="bg-subtle"
-  >
-    <span></span>
-  </Layout>
-</AstroPageShell>
+<GonePage />

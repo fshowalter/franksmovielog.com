@@ -98,18 +98,7 @@
       "imdbId": "tt0119081",
       "title": "Event Horizon",
       "releaseYear": "1997",
-      "sortTitle": "event-horizon-1997",
-      "releaseDate": "1997-08-15",
-      "genres": [
-        "Horror",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "slug": "event-horizon-1997",
-      "grade": "B",
-      "gradeValue": 12,
-      "reviewDate": "2022-01-28",
-      "reviewSequence": 2361,
+      "reviewSlug": "event-horizon-1997",
       "count": 2
     }
   ],
@@ -120,101 +109,42 @@
       "slug": "wes-craven",
       "viewings": [
         {
-          "imdbId": "tt0077681",
           "title": "The Hills Have Eyes",
-          "sortTitle": "hills-have-eyes-1977",
           "releaseYear": "1977",
-          "releaseDate": "1977-06-15",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-hills-have-eyes-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-01-12",
-          "reviewSequence": 2353,
-          "viewingDate": "2022-01-12",
-          "viewingSequence": 2353,
+          "reviewSlug": "the-hills-have-eyes-1977",
+          "date": "2022-01-12",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0082245",
           "title": "Deadly Blessing",
-          "sortTitle": "deadly-blessing-1981",
           "releaseYear": "1981",
-          "releaseDate": "1981-08-14",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "deadly-blessing-1981",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-01-27",
-          "reviewSequence": 2841,
-          "viewingDate": "2022-01-14",
-          "viewingSequence": 2355,
+          "reviewSlug": "deadly-blessing-1981",
+          "date": "2022-01-14",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0084745",
           "title": "Swamp Thing",
-          "sortTitle": "swamp-thing-1982",
           "releaseYear": "1982",
-          "releaseDate": "1982-01-01",
-          "genres": [
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": "swamp-thing-1982",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-01-26",
-          "reviewSequence": 2360,
-          "viewingDate": "2022-01-26",
-          "viewingSequence": 2360,
+          "reviewSlug": "swamp-thing-1982",
+          "date": "2022-01-26",
           "medium": "Amazon",
           "venue": null
         },
         {
-          "imdbId": "tt0089274",
           "title": "The Hills Have Eyes Part II",
-          "sortTitle": "hills-have-eyes-part-ii-1984",
           "releaseYear": "1984",
-          "releaseDate": "1984-06-30",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-hills-have-eyes-part-ii-1984",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-02-02",
-          "reviewSequence": 2366,
-          "viewingDate": "2022-02-02",
-          "viewingSequence": 2366,
+          "reviewSlug": "the-hills-have-eyes-part-ii-1984",
+          "date": "2022-02-02",
           "medium": "Arrow Player",
           "venue": null
         },
         {
-          "imdbId": "tt0087800",
           "title": "A Nightmare on Elm Street",
-          "sortTitle": "nightmare-on-elm-street-1984",
           "releaseYear": "1984",
-          "releaseDate": "1984-10-31",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "a-nightmare-on-elm-street-1984",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2022-02-09",
-          "reviewSequence": 2372,
-          "viewingDate": "2022-02-09",
-          "viewingSequence": 2372,
+          "reviewSlug": "a-nightmare-on-elm-street-1984",
+          "date": "2022-02-09",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -226,101 +156,42 @@
       "slug": "john-ford",
       "viewings": [
         {
-          "imdbId": "tt0024453",
           "title": "Pilgrimage",
-          "sortTitle": "pilgrimage-1933",
           "releaseYear": "1933",
-          "releaseDate": "1933-07-12",
-          "genres": [
-            "Drama"
-          ],
-          "slug": "pilgrimage-1933",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-06-21",
-          "reviewSequence": 2417,
-          "viewingDate": "2022-06-21",
-          "viewingSequence": 2417,
+          "reviewSlug": "pilgrimage-1933",
+          "date": "2022-06-21",
           "medium": "Criterion Channel",
           "venue": null
         },
         {
-          "imdbId": "tt0027042",
           "title": "Steamboat Round the Bend",
-          "sortTitle": "steamboat-round-the-bend-1935",
           "releaseYear": "1935",
-          "releaseDate": "1935-09-06",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "steamboat-round-the-bend-1935",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-06-22",
-          "reviewSequence": 2418,
-          "viewingDate": "2022-06-22",
-          "viewingSequence": 2418,
+          "reviewSlug": "steamboat-round-the-bend-1935",
+          "date": "2022-06-22",
           "medium": "Criterion Channel",
           "venue": null
         },
         {
-          "imdbId": "tt0028112",
           "title": "The Plough and the Stars",
-          "sortTitle": "plough-and-the-stars-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-12-26",
-          "genres": [
-            "Drama"
-          ],
-          "slug": "the-plough-and-the-stars-1936",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-06-27",
-          "reviewSequence": 2419,
-          "viewingDate": "2022-06-27",
-          "viewingSequence": 2419,
+          "reviewSlug": "the-plough-and-the-stars-1936",
+          "date": "2022-06-27",
           "medium": "Criterion Channel",
           "venue": null
         },
         {
-          "imdbId": "tt0023955",
           "title": "Doctor Bull",
-          "sortTitle": "doctor-bull-1933",
           "releaseYear": "1933",
-          "releaseDate": "1933-09-01",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "doctor-bull-1933",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-06-29",
-          "reviewSequence": 2420,
-          "viewingDate": "2022-06-29",
-          "viewingSequence": 2420,
+          "reviewSlug": "doctor-bull-1933",
+          "date": "2022-06-29",
           "medium": "Criterion Channel",
           "venue": null
         },
         {
-          "imdbId": "tt0021695",
           "title": "The Brat",
-          "sortTitle": "brat-1931",
           "releaseYear": "1931",
-          "releaseDate": "1931-08-23",
-          "genres": [
-            "Comedy"
-          ],
-          "slug": "the-brat-1931",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2022-07-29",
-          "reviewSequence": 2433,
-          "viewingDate": "2022-07-29",
-          "viewingSequence": 2433,
+          "reviewSlug": "the-brat-1931",
+          "date": "2022-07-29",
           "medium": "OK.ru",
           "venue": null
         }
@@ -332,111 +203,42 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0033717",
           "title": "High Sierra",
-          "sortTitle": "high-sierra-1941",
           "releaseYear": "1941",
-          "releaseDate": "1941-01-22",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Drama",
-            "Film-Noir",
-            "Thriller"
-          ],
-          "slug": "high-sierra-1941",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-09-13",
-          "reviewSequence": 2474,
-          "viewingDate": "2022-09-13",
-          "viewingSequence": 2474,
+          "reviewSlug": "high-sierra-1941",
+          "date": "2022-09-13",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0033149",
           "title": "They Drive by Night",
-          "sortTitle": "they-drive-by-night-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-07-26",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir",
-            "Thriller"
-          ],
-          "slug": "they-drive-by-night-1940",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2022-10-04",
-          "reviewSequence": 2497,
-          "viewingDate": "2022-10-04",
-          "viewingSequence": 2497,
+          "reviewSlug": "they-drive-by-night-1940",
+          "date": "2022-10-04",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031867",
           "title": "The Roaring Twenties",
-          "sortTitle": "roaring-twenties-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-10-25",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": "the-roaring-twenties-1939",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2008-04-18",
-          "reviewSequence": 680,
-          "viewingDate": "2022-10-12",
-          "viewingSequence": 2503,
+          "reviewSlug": "the-roaring-twenties-1939",
+          "date": "2022-10-12",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0034646",
           "title": "Desperate Journey",
-          "sortTitle": "desperate-journey-1942",
           "releaseYear": "1942",
-          "releaseDate": "1942-09-21",
-          "genres": [
-            "Drama",
-            "War"
-          ],
-          "slug": "desperate-journey-1942",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2025-11-11",
-          "reviewSequence": 2959,
-          "viewingDate": "2022-10-26",
-          "viewingSequence": 2526,
+          "reviewSlug": "desperate-journey-1942",
+          "date": "2022-10-26",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0037414",
           "title": "Uncertain Glory",
-          "sortTitle": "uncertain-glory-1944",
           "releaseYear": "1944",
-          "releaseDate": "1944-04-07",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Romance",
-            "Thriller",
-            "War"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-10-28",
-          "viewingSequence": 2532,
+          "reviewSlug": null,
+          "date": "2022-10-28",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -448,88 +250,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0031536",
           "title": "King of the Underworld",
-          "sortTitle": "king-of-the-underworld-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-01-07",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "king-of-the-underworld-1939",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-09",
-          "reviewSequence": 2469,
-          "viewingDate": "2022-09-09",
-          "viewingSequence": 2469,
+          "reviewSlug": "king-of-the-underworld-1939",
+          "date": "2022-09-09",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0034513",
           "title": "The Big Shot",
-          "sortTitle": "big-shot-1942",
           "releaseYear": "1942",
-          "releaseDate": "1942-06-13",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir",
-            "Romance"
-          ],
-          "slug": "the-big-shot-1942",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-09-11",
-          "reviewSequence": 2472,
-          "viewingDate": "2022-09-11",
-          "viewingSequence": 2472,
+          "reviewSlug": "the-big-shot-1942",
+          "date": "2022-09-11",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0032643",
           "title": "It All Came True",
-          "sortTitle": "it-all-came-true-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-04-05",
-          "genres": [
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Music",
-            "Romance"
-          ],
-          "slug": "it-all-came-true-1940",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2009-01-27",
-          "reviewSequence": 1036,
-          "viewingDate": "2022-10-06",
-          "viewingSequence": 2501,
+          "reviewSlug": "it-all-came-true-1940",
+          "date": "2022-10-06",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030026",
           "title": "Crime School",
-          "sortTitle": "crime-school-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-05-10",
-          "genres": [
-            "Crime",
-            "Drama"
-          ],
-          "slug": "crime-school-1938",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2008-04-06",
-          "reviewSequence": 661,
-          "viewingDate": "2022-10-14",
-          "viewingSequence": 2505,
+          "reviewSlug": "crime-school-1938",
+          "date": "2022-10-14",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -541,60 +289,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt8134742",
           "title": "3 from Hell",
-          "sortTitle": "3-from-hell-2019",
           "releaseYear": "2019",
-          "releaseDate": "2019-09-15",
-          "genres": [
-            "Action",
-            "Horror"
-          ],
-          "slug": "3-from-hell-2019",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-01-17",
-          "reviewSequence": 2356,
-          "viewingDate": "2022-01-17",
-          "viewingSequence": 2356,
+          "reviewSlug": "3-from-hell-2019",
+          "date": "2022-01-17",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt0373883",
           "title": "Halloween",
-          "sortTitle": "halloween-2007",
           "releaseYear": "2007",
-          "releaseDate": "2007-08-10",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "halloween-2007",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-03-31",
-          "reviewSequence": 2392,
-          "viewingDate": "2022-03-31",
-          "viewingSequence": 2392,
+          "reviewSlug": "halloween-2007",
+          "date": "2022-03-31",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt1311067",
           "title": "Halloween II",
-          "sortTitle": "halloween-ii-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-08-04",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "halloween-ii-2009",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-03-31",
-          "reviewSequence": 2393,
-          "viewingDate": "2022-03-31",
-          "viewingSequence": 2393,
+          "reviewSlug": "halloween-ii-2009",
+          "date": "2022-03-31",
           "medium": "iTunes",
           "venue": null
         }
@@ -606,66 +320,26 @@
       "slug": "brian-de-palma",
       "viewings": [
         {
-          "imdbId": "tt0082085",
           "title": "Blow Out",
-          "sortTitle": "blow-out-1981",
           "releaseYear": "1981",
-          "releaseDate": "1981-07-07",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "blow-out-1981",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-01-31",
-          "reviewSequence": 2364,
-          "viewingDate": "2022-01-31",
-          "viewingSequence": 2364,
+          "reviewSlug": "blow-out-1981",
+          "date": "2022-01-31",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0086250",
           "title": "Scarface",
-          "sortTitle": "scarface-1983",
           "releaseYear": "1983",
-          "releaseDate": "1983-12-01",
-          "genres": [
-            "Crime",
-            "Drama"
-          ],
-          "slug": "scarface-1983",
-          "grade": "A-",
-          "gradeValue": 14,
-          "reviewDate": "2022-02-12",
-          "reviewSequence": 2375,
-          "viewingDate": "2022-02-12",
-          "viewingSequence": 2375,
+          "reviewSlug": "scarface-1983",
+          "date": "2022-02-12",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0086984",
           "title": "Body Double",
-          "sortTitle": "body-double-1984",
           "releaseYear": "1984",
-          "releaseDate": "1984-10-15",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "body-double-1984",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-04-04",
-          "reviewSequence": 2394,
-          "viewingDate": "2022-04-04",
-          "viewingSequence": 2394,
+          "reviewSlug": "body-double-1984",
+          "date": "2022-04-04",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -677,64 +351,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0432348",
           "title": "Saw II",
-          "sortTitle": "saw-ii-2005",
           "releaseYear": "2005",
-          "releaseDate": "2005-10-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "saw-ii-2005",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-07-22",
-          "reviewSequence": 2430,
-          "viewingDate": "2022-07-22",
-          "viewingSequence": 2430,
+          "reviewSlug": "saw-ii-2005",
+          "date": "2022-07-22",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0489270",
           "title": "Saw III",
-          "sortTitle": "saw-iii-2006",
           "releaseYear": "2006",
-          "releaseDate": "2006-09-05",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-iii-2006",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-07-28",
-          "reviewSequence": 2432,
-          "viewingDate": "2022-07-28",
-          "viewingSequence": 2432,
+          "reviewSlug": "saw-iii-2006",
+          "date": "2022-07-28",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0890870",
           "title": "Saw IV",
-          "sortTitle": "saw-iv-2007",
           "releaseYear": "2007",
-          "releaseDate": "2007-10-04",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-iv-2007",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-10",
-          "reviewSequence": 2440,
-          "viewingDate": "2022-08-10",
-          "viewingSequence": 2440,
+          "reviewSlug": "saw-iv-2007",
+          "date": "2022-08-10",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -746,63 +382,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0034012",
           "title": "Penny Serenade",
-          "sortTitle": "penny-serenade-1941",
           "releaseYear": "1941",
-          "releaseDate": "1941-04-24",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "penny-serenade-1941",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-08-31",
-          "reviewSequence": 2459,
-          "viewingDate": "2022-08-31",
-          "viewingSequence": 2459,
+          "reviewSlug": "penny-serenade-1941",
+          "date": "2022-08-31",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0033221",
           "title": "Vigil in the Night",
-          "sortTitle": "vigil-in-the-night-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-02-08",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "vigil-in-the-night-1940",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2025-11-23",
-          "reviewSequence": 2968,
-          "viewingDate": "2022-10-30",
-          "viewingSequence": 2535,
+          "reviewSlug": "vigil-in-the-night-1940",
+          "date": "2022-10-30",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0040664",
           "title": "On Our Merry Way",
-          "sortTitle": "on-our-merry-way-1948",
           "releaseYear": "1948",
-          "releaseDate": "1948-02-03",
-          "genres": [
-            "Comedy",
-            "Music",
-            "Romance"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-11-04",
-          "viewingSequence": 2539,
+          "reviewSlug": null,
+          "date": "2022-11-04",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -814,66 +413,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0032636",
           "title": "Invisible Stripes",
-          "sortTitle": "invisible-stripes-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-12-30",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Film-Noir"
-          ],
-          "slug": "invisible-stripes-1939",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-07",
-          "reviewSequence": 2466,
-          "viewingDate": "2022-09-07",
-          "viewingSequence": 2466,
+          "reviewSlug": "invisible-stripes-1939",
+          "date": "2022-09-07",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031747",
           "title": "The Oklahoma Kid",
-          "sortTitle": "oklahoma-kid-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-03-03",
-          "genres": [
-            "Action",
-            "Western"
-          ],
-          "slug": "the-oklahoma-kid-1939",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-10-06",
-          "reviewSequence": 2500,
-          "viewingDate": "2022-10-06",
-          "viewingSequence": 2500,
+          "reviewSlug": "the-oklahoma-kid-1939",
+          "date": "2022-10-06",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030650",
           "title": "Racket Busters",
-          "sortTitle": "racket-busters-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-07-16",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Crime",
-            "Drama"
-          ],
-          "slug": "racket-busters-1938",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2012-03-18",
-          "reviewSequence": 1244,
-          "viewingDate": "2022-10-13",
-          "viewingSequence": 2504,
+          "reviewSlug": "racket-busters-1938",
+          "date": "2022-10-13",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -885,44 +444,18 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt4954522",
           "title": "Raw",
-          "sortTitle": "raw-2016",
           "releaseYear": "2016",
-          "releaseDate": "2016-05-14",
-          "genres": [
-            "Drama",
-            "Horror"
-          ],
-          "slug": "raw-2016",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-01-09",
-          "reviewSequence": 2351,
-          "viewingDate": "2022-01-09",
-          "viewingSequence": 2351,
+          "reviewSlug": "raw-2016",
+          "date": "2022-01-09",
           "medium": "Netflix",
           "venue": null
         },
         {
-          "imdbId": "tt10944760",
           "title": "Titane",
-          "sortTitle": "titane-2021",
           "releaseYear": "2021",
-          "releaseDate": "2021-06-06",
-          "genres": [
-            "Drama",
-            "Horror",
-            "Sci-Fi",
-            "Thriller"
-          ],
-          "slug": "titane-2021",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-01-20",
-          "reviewSequence": 2357,
-          "viewingDate": "2022-01-20",
-          "viewingSequence": 2357,
+          "reviewSlug": "titane-2021",
+          "date": "2022-01-20",
           "medium": "iTunes",
           "venue": null
         }
@@ -936,407 +469,154 @@
       "slug": "humphrey-bogart",
       "viewings": [
         {
-          "imdbId": "tt0033226",
           "title": "Virginia City",
-          "sortTitle": "virginia-city-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-03-16",
-          "genres": [
-            "Western"
-          ],
-          "slug": "virginia-city-1940",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-08-20",
-          "reviewSequence": 2449,
-          "viewingDate": "2022-08-20",
-          "viewingSequence": 2449,
+          "reviewSlug": "virginia-city-1940",
+          "date": "2022-08-20",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0032636",
           "title": "Invisible Stripes",
-          "sortTitle": "invisible-stripes-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-12-30",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Film-Noir"
-          ],
-          "slug": "invisible-stripes-1939",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-07",
-          "reviewSequence": 2466,
-          "viewingDate": "2022-09-07",
-          "viewingSequence": 2466,
+          "reviewSlug": "invisible-stripes-1939",
+          "date": "2022-09-07",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031536",
           "title": "King of the Underworld",
-          "sortTitle": "king-of-the-underworld-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-01-07",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "king-of-the-underworld-1939",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-09",
-          "reviewSequence": 2469,
-          "viewingDate": "2022-09-09",
-          "viewingSequence": 2469,
+          "reviewSlug": "king-of-the-underworld-1939",
+          "date": "2022-09-09",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0034513",
           "title": "The Big Shot",
-          "sortTitle": "big-shot-1942",
           "releaseYear": "1942",
-          "releaseDate": "1942-06-13",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir",
-            "Romance"
-          ],
-          "slug": "the-big-shot-1942",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-09-11",
-          "reviewSequence": 2472,
-          "viewingDate": "2022-09-11",
-          "viewingSequence": 2472,
+          "reviewSlug": "the-big-shot-1942",
+          "date": "2022-09-11",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0033717",
           "title": "High Sierra",
-          "sortTitle": "high-sierra-1941",
           "releaseYear": "1941",
-          "releaseDate": "1941-01-22",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Drama",
-            "Film-Noir",
-            "Thriller"
-          ],
-          "slug": "high-sierra-1941",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-09-13",
-          "reviewSequence": 2474,
-          "viewingDate": "2022-09-13",
-          "viewingSequence": 2474,
+          "reviewSlug": "high-sierra-1941",
+          "date": "2022-09-13",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0039305",
           "title": "Dead Reckoning",
-          "sortTitle": "dead-reckoning-1946",
           "releaseYear": "1946",
-          "releaseDate": "1946-12-31",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "dead-reckoning-1946",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2022-09-14",
-          "reviewSequence": 2475,
-          "viewingDate": "2022-09-14",
-          "viewingSequence": 2475,
+          "reviewSlug": "dead-reckoning-1946",
+          "date": "2022-09-14",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0042324",
           "title": "Chain Lightning",
-          "sortTitle": "chain-lightning-1950",
           "releaseYear": "1950",
-          "releaseDate": "1950-02-18",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Drama"
-          ],
-          "slug": "chain-lightning-1950",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-24",
-          "reviewSequence": 2486,
-          "viewingDate": "2022-09-24",
-          "viewingSequence": 2486,
+          "reviewSlug": "chain-lightning-1950",
+          "date": "2022-09-24",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030433",
           "title": "Men Are Such Fools",
-          "sortTitle": "men-are-such-fools-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-06-15",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "men-are-such-fools-1938",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-09-24",
-          "reviewSequence": 2487,
-          "viewingDate": "2022-09-24",
-          "viewingSequence": 2487,
+          "reviewSlug": "men-are-such-fools-1938",
+          "date": "2022-09-24",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0023590",
           "title": "Three on a Match",
-          "sortTitle": "three-on-a-match-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-10-28",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "three-on-a-match-1932",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2022-09-30",
-          "reviewSequence": 2493,
-          "viewingDate": "2022-09-30",
-          "viewingSequence": 2493,
+          "reviewSlug": "three-on-a-match-1932",
+          "date": "2022-09-30",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0027445",
           "title": "China Clipper",
-          "sortTitle": "china-clipper-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-08-11",
-          "genres": [
-            "Adventure",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "china-clipper-1936",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-10-01",
-          "reviewSequence": 2494,
-          "viewingDate": "2022-10-01",
-          "viewingSequence": 2494,
+          "reviewSlug": "china-clipper-1936",
+          "date": "2022-10-01",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030820",
           "title": "Swing Your Lady",
-          "sortTitle": "swing-your-lady-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-01-08",
-          "genres": [
-            "Comedy",
-            "Music",
-            "Romance",
-            "Sport"
-          ],
-          "slug": "swing-your-lady-1938",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-10-03",
-          "reviewSequence": 2495,
-          "viewingDate": "2022-10-03",
-          "viewingSequence": 2495,
+          "reviewSlug": "swing-your-lady-1938",
+          "date": "2022-10-03",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0028426",
           "title": "Two Against the World",
-          "sortTitle": "two-against-the-world-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-01-01",
-          "genres": [
-            "Crime",
-            "Drama"
-          ],
-          "slug": "two-against-the-world-1936",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2022-10-04",
-          "reviewSequence": 2496,
-          "viewingDate": "2022-10-04",
-          "viewingSequence": 2496,
+          "reviewSlug": "two-against-the-world-1936",
+          "date": "2022-10-04",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0033149",
           "title": "They Drive by Night",
-          "sortTitle": "they-drive-by-night-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-07-26",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Film-Noir",
-            "Thriller"
-          ],
-          "slug": "they-drive-by-night-1940",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2022-10-04",
-          "reviewSequence": 2497,
-          "viewingDate": "2022-10-04",
-          "viewingSequence": 2497,
+          "reviewSlug": "they-drive-by-night-1940",
+          "date": "2022-10-04",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0037611",
           "title": "Conflict",
-          "sortTitle": "conflict-1945",
           "releaseYear": "1945",
-          "releaseDate": "1945-05-13",
-          "genres": [
-            "Drama",
-            "Film-Noir",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "conflict-1945",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-10-05",
-          "reviewSequence": 2498,
-          "viewingDate": "2022-10-05",
-          "viewingSequence": 2498,
+          "reviewSlug": "conflict-1945",
+          "date": "2022-10-05",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031747",
           "title": "The Oklahoma Kid",
-          "sortTitle": "oklahoma-kid-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-03-03",
-          "genres": [
-            "Action",
-            "Western"
-          ],
-          "slug": "the-oklahoma-kid-1939",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-10-06",
-          "reviewSequence": 2500,
-          "viewingDate": "2022-10-06",
-          "viewingSequence": 2500,
+          "reviewSlug": "the-oklahoma-kid-1939",
+          "date": "2022-10-06",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0032643",
           "title": "It All Came True",
-          "sortTitle": "it-all-came-true-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-04-05",
-          "genres": [
-            "Comedy",
-            "Crime",
-            "Drama",
-            "Music",
-            "Romance"
-          ],
-          "slug": "it-all-came-true-1940",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2009-01-27",
-          "reviewSequence": 1036,
-          "viewingDate": "2022-10-06",
-          "viewingSequence": 2501,
+          "reviewSlug": "it-all-came-true-1940",
+          "date": "2022-10-06",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031867",
           "title": "The Roaring Twenties",
-          "sortTitle": "roaring-twenties-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-10-25",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": "the-roaring-twenties-1939",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2008-04-18",
-          "reviewSequence": 680,
-          "viewingDate": "2022-10-12",
-          "viewingSequence": 2503,
+          "reviewSlug": "the-roaring-twenties-1939",
+          "date": "2022-10-12",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030650",
           "title": "Racket Busters",
-          "sortTitle": "racket-busters-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-07-16",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Crime",
-            "Drama"
-          ],
-          "slug": "racket-busters-1938",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2012-03-18",
-          "reviewSequence": 1244,
-          "viewingDate": "2022-10-13",
-          "viewingSequence": 2504,
+          "reviewSlug": "racket-busters-1938",
+          "date": "2022-10-13",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030026",
           "title": "Crime School",
-          "sortTitle": "crime-school-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-05-10",
-          "genres": [
-            "Crime",
-            "Drama"
-          ],
-          "slug": "crime-school-1938",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2008-04-06",
-          "reviewSequence": 661,
-          "viewingDate": "2022-10-14",
-          "viewingSequence": 2505,
+          "reviewSlug": "crime-school-1938",
+          "date": "2022-10-14",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -1348,123 +628,50 @@
       "slug": "bette-davis",
       "viewings": [
         {
-          "imdbId": "tt0037614",
           "title": "The Corn Is Green",
-          "sortTitle": "corn-is-green-1945",
           "releaseYear": "1945",
-          "releaseDate": "1945-03-29",
-          "genres": [
-            "Drama"
-          ],
-          "slug": "the-corn-is-green-1945",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-09-07",
-          "reviewSequence": 2467,
-          "viewingDate": "2022-09-07",
-          "viewingSequence": 2467,
+          "reviewSlug": "the-corn-is-green-1945",
+          "date": "2022-09-07",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0023590",
           "title": "Three on a Match",
-          "sortTitle": "three-on-a-match-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-10-28",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "three-on-a-match-1932",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2022-09-30",
-          "reviewSequence": 2493,
-          "viewingDate": "2022-09-30",
-          "viewingSequence": 2493,
+          "reviewSlug": "three-on-a-match-1932",
+          "date": "2022-09-30",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0035140",
           "title": "Now, Voyager",
-          "sortTitle": "now-voyager-1942",
           "releaseYear": "1942",
-          "releaseDate": "1942-10-22",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "now-voyager-1942",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2008-08-17",
-          "reviewSequence": 821,
-          "viewingDate": "2022-10-10",
-          "viewingSequence": 2502,
+          "reviewSlug": "now-voyager-1942",
+          "date": "2022-10-10",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0033432",
           "title": "The Bride Came C.O.D.",
-          "sortTitle": "bride-came-c-o-d-1941",
           "releaseYear": "1941",
-          "releaseDate": "1941-07-12",
-          "genres": [
-            "Comedy",
-            "Romance"
-          ],
-          "slug": "the-bride-came-c-o-d-1941",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2008-08-12",
-          "reviewSequence": 817,
-          "viewingDate": "2022-10-18",
-          "viewingSequence": 2511,
+          "reviewSlug": "the-bride-came-c-o-d-1941",
+          "date": "2022-10-18",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0029058",
           "title": "It's Love I'm After",
-          "sortTitle": "its-love-im-after-1937",
           "releaseYear": "1937",
-          "releaseDate": "1937-08-25",
-          "genres": [
-            "Comedy",
-            "Romance"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-10-21",
-          "viewingSequence": 2515,
+          "reviewSlug": null,
+          "date": "2022-10-21",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0024785",
           "title": "The Working Man",
-          "sortTitle": "working-man-1933",
           "releaseYear": "1933",
-          "releaseDate": "1933-04-20",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Romance"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-11-14",
-          "viewingSequence": 2543,
+          "reviewSlug": null,
+          "date": "2022-11-14",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -1476,106 +683,42 @@
       "slug": "cary-grant",
       "viewings": [
         {
-          "imdbId": "tt0023213",
           "title": "Merrily We Go to Hell",
-          "sortTitle": "merrily-we-go-to-hell-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-06-10",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "merrily-we-go-to-hell-1932",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-03-28",
-          "reviewSequence": 2391,
-          "viewingDate": "2022-03-28",
-          "viewingSequence": 2391,
+          "reviewSlug": "merrily-we-go-to-hell-1932",
+          "date": "2022-03-28",
           "medium": "Criterion Channel",
           "venue": null
         },
         {
-          "imdbId": "tt0029682",
           "title": "Topper",
-          "sortTitle": "topper-1937",
           "releaseYear": "1937",
-          "releaseDate": "1937-07-16",
-          "genres": [
-            "Comedy",
-            "Fantasy",
-            "Romance"
-          ],
-          "slug": "topper-1937",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-08-26",
-          "reviewSequence": 2454,
-          "viewingDate": "2022-08-26",
-          "viewingSequence": 2454,
+          "reviewSlug": "topper-1937",
+          "date": "2022-08-26",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0034012",
           "title": "Penny Serenade",
-          "sortTitle": "penny-serenade-1941",
           "releaseYear": "1941",
-          "releaseDate": "1941-04-24",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "penny-serenade-1941",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-08-31",
-          "reviewSequence": 2459,
-          "viewingDate": "2022-08-31",
-          "viewingSequence": 2459,
+          "reviewSlug": "penny-serenade-1941",
+          "date": "2022-08-31",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0040331",
           "title": "Every Girl Should Be Married",
-          "sortTitle": "every-girl-should-be-married-1948",
           "releaseYear": "1948",
-          "releaseDate": "1948-12-25",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "every-girl-should-be-married-1948",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-09-02",
-          "reviewSequence": 2462,
-          "viewingDate": "2022-09-02",
-          "viewingSequence": 2462,
+          "reviewSlug": "every-girl-should-be-married-1948",
+          "date": "2022-09-02",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0028330",
           "title": "Suzy",
-          "sortTitle": "suzy-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-06-26",
-          "genres": [
-            "Drama",
-            "Romance",
-            "War"
-          ],
-          "slug": "suzy-1936",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2022-09-20",
-          "reviewSequence": 2483,
-          "viewingDate": "2022-09-20",
-          "viewingSequence": 2483,
+          "reviewSlug": "suzy-1936",
+          "date": "2022-09-20",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -1587,108 +730,42 @@
       "slug": "john-wayne",
       "viewings": [
         {
-          "imdbId": "tt0023396",
           "title": "Ride Him, Cowboy",
-          "sortTitle": "ride-him-cowboy-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-08-27",
-          "genres": [
-            "Action",
-            "Drama",
-            "Romance",
-            "Western"
-          ],
-          "slug": "ride-him-cowboy-1932",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-06-19",
-          "reviewSequence": 2412,
-          "viewingDate": "2022-06-19",
-          "viewingSequence": 2412,
+          "reviewSlug": "ride-him-cowboy-1932",
+          "date": "2022-06-19",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt0022981",
           "title": "Haunted Gold",
-          "sortTitle": "haunted-gold-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-12-17",
-          "genres": [
-            "Drama",
-            "Mystery",
-            "Western"
-          ],
-          "slug": "haunted-gold-1932",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-06-19",
-          "reviewSequence": 2413,
-          "viewingDate": "2022-06-19",
-          "viewingSequence": 2413,
+          "reviewSlug": "haunted-gold-1932",
+          "date": "2022-06-19",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt0024293",
           "title": "The Man from Monterey",
-          "sortTitle": "man-from-monterey-1933",
           "releaseYear": "1933",
-          "releaseDate": "1933-07-15",
-          "genres": [
-            "Adventure",
-            "Music",
-            "Romance",
-            "Western"
-          ],
-          "slug": "the-man-from-monterey-1933",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2024-08-05",
-          "reviewSequence": 2746,
-          "viewingDate": "2022-08-18",
-          "viewingSequence": 2447,
+          "reviewSlug": "the-man-from-monterey-1933",
+          "date": "2022-08-18",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0035250",
           "title": "Reunion in France",
-          "sortTitle": "reunion-in-france-1942",
           "releaseYear": "1942",
-          "releaseDate": "1942-12-25",
-          "genres": [
-            "Drama",
-            "Romance",
-            "War"
-          ],
-          "slug": "reunion-in-france-1942",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2022-09-18",
-          "reviewSequence": 2480,
-          "viewingDate": "2022-09-18",
-          "viewingSequence": 2480,
+          "reviewSlug": "reunion-in-france-1942",
+          "date": "2022-09-18",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0025373",
           "title": "The Lawless Frontier",
-          "sortTitle": "lawless-frontier-1934",
           "releaseYear": "1934",
-          "releaseDate": "1934-11-22",
-          "genres": [
-            "Drama",
-            "Western"
-          ],
-          "slug": "the-lawless-frontier-1934",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-11-07",
-          "reviewSequence": 2541,
-          "viewingDate": "2022-11-07",
-          "viewingSequence": 2541,
+          "reviewSlug": "the-lawless-frontier-1934",
+          "date": "2022-11-07",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -1700,103 +777,42 @@
       "slug": "william-powell",
       "viewings": [
         {
-          "imdbId": "tt0023074",
           "title": "Jewel Robbery",
-          "sortTitle": "jewel-robbery-1932",
           "releaseYear": "1932",
-          "releaseDate": "1932-07-08",
-          "genres": [
-            "Comedy",
-            "Crime",
-            "Romance"
-          ],
-          "slug": "jewel-robbery-1932",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-06-19",
-          "reviewSequence": 2414,
-          "viewingDate": "2022-06-19",
-          "viewingSequence": 2414,
+          "reviewSlug": "jewel-robbery-1932",
+          "date": "2022-06-19",
           "medium": "DVD",
           "venue": null
         },
         {
-          "imdbId": "tt0038615",
           "title": "The Hoodlum Saint",
-          "sortTitle": "hoodlum-saint-1946",
           "releaseYear": "1946",
-          "releaseDate": "1946-04-04",
-          "genres": [
-            "Drama",
-            "Music"
-          ],
-          "slug": "the-hoodlum-saint-1946",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-19",
-          "reviewSequence": 2448,
-          "viewingDate": "2022-08-19",
-          "viewingSequence": 2448,
+          "reviewSlug": "the-hoodlum-saint-1946",
+          "date": "2022-08-19",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0027698",
           "title": "The Great Ziegfeld",
-          "sortTitle": "great-ziegfeld-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-03-22",
-          "genres": [
-            "Drama",
-            "Musical"
-          ],
-          "slug": "the-great-ziegfeld-1936",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-09-17",
-          "reviewSequence": 2479,
-          "viewingDate": "2022-09-17",
-          "viewingSequence": 2479,
+          "reviewSlug": "the-great-ziegfeld-1936",
+          "date": "2022-09-17",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0028804",
           "title": "Double Wedding",
-          "sortTitle": "double-wedding-1937",
           "releaseYear": "1937",
-          "releaseDate": "1937-10-15",
-          "genres": [
-            "Comedy",
-            "Romance"
-          ],
-          "slug": "double-wedding-1937",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2008-12-27",
-          "reviewSequence": 983,
-          "viewingDate": "2022-09-23",
-          "viewingSequence": 2485,
+          "reviewSlug": "double-wedding-1937",
+          "date": "2022-09-23",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0032617",
           "title": "I Love You Again",
-          "sortTitle": "i-love-you-again-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-08-02",
-          "genres": [
-            "Comedy",
-            "Romance"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-09-26",
-          "viewingSequence": 2488,
+          "reviewSlug": null,
+          "date": "2022-09-26",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -1808,103 +824,42 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0028112",
           "title": "The Plough and the Stars",
-          "sortTitle": "plough-and-the-stars-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-12-26",
-          "genres": [
-            "Drama"
-          ],
-          "slug": "the-plough-and-the-stars-1936",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-06-27",
-          "reviewSequence": 2419,
-          "viewingDate": "2022-06-27",
-          "viewingSequence": 2419,
+          "reviewSlug": "the-plough-and-the-stars-1936",
+          "date": "2022-06-27",
           "medium": "Criterion Channel",
           "venue": null
         },
         {
-          "imdbId": "tt0033226",
           "title": "Virginia City",
-          "sortTitle": "virginia-city-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-03-16",
-          "genres": [
-            "Western"
-          ],
-          "slug": "virginia-city-1940",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-08-20",
-          "reviewSequence": 2449,
-          "viewingDate": "2022-08-20",
-          "viewingSequence": 2449,
+          "reviewSlug": "virginia-city-1940",
+          "date": "2022-08-20",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0032636",
           "title": "Invisible Stripes",
-          "sortTitle": "invisible-stripes-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-12-30",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Film-Noir"
-          ],
-          "slug": "invisible-stripes-1939",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-07",
-          "reviewSequence": 2466,
-          "viewingDate": "2022-09-07",
-          "viewingSequence": 2466,
+          "reviewSlug": "invisible-stripes-1939",
+          "date": "2022-09-07",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0035250",
           "title": "Reunion in France",
-          "sortTitle": "reunion-in-france-1942",
           "releaseYear": "1942",
-          "releaseDate": "1942-12-25",
-          "genres": [
-            "Drama",
-            "Romance",
-            "War"
-          ],
-          "slug": "reunion-in-france-1942",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2022-09-18",
-          "reviewSequence": 2480,
-          "viewingDate": "2022-09-18",
-          "viewingSequence": 2480,
+          "reviewSlug": "reunion-in-france-1942",
+          "date": "2022-09-18",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0039581",
           "title": "The Long Night",
-          "sortTitle": "long-night-1947",
           "releaseYear": "1947",
-          "releaseDate": "1947-05-28",
-          "genres": [
-            "Drama",
-            "Film-Noir"
-          ],
-          "slug": "the-long-night-1947",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2015-02-14",
-          "reviewSequence": 1605,
-          "viewingDate": "2022-10-16",
-          "viewingSequence": 2510,
+          "reviewSlug": "the-long-night-1947",
+          "date": "2022-10-16",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -1916,105 +871,42 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0387564",
           "title": "Saw",
-          "sortTitle": "saw-2004",
           "releaseYear": "2004",
-          "releaseDate": "2003-12-02",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-2004",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-07-08",
-          "reviewSequence": 2426,
-          "viewingDate": "2022-07-08",
-          "viewingSequence": 2426,
+          "reviewSlug": "saw-2004",
+          "date": "2022-07-08",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0432348",
           "title": "Saw II",
-          "sortTitle": "saw-ii-2005",
           "releaseYear": "2005",
-          "releaseDate": "2005-10-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "saw-ii-2005",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-07-22",
-          "reviewSequence": 2430,
-          "viewingDate": "2022-07-22",
-          "viewingSequence": 2430,
+          "reviewSlug": "saw-ii-2005",
+          "date": "2022-07-22",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0489270",
           "title": "Saw III",
-          "sortTitle": "saw-iii-2006",
           "releaseYear": "2006",
-          "releaseDate": "2006-09-05",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-iii-2006",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-07-28",
-          "reviewSequence": 2432,
-          "viewingDate": "2022-07-28",
-          "viewingSequence": 2432,
+          "reviewSlug": "saw-iii-2006",
+          "date": "2022-07-28",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0890870",
           "title": "Saw IV",
-          "sortTitle": "saw-iv-2007",
           "releaseYear": "2007",
-          "releaseDate": "2007-10-04",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-iv-2007",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-10",
-          "reviewSequence": 2440,
-          "viewingDate": "2022-08-10",
-          "viewingSequence": 2440,
+          "reviewSlug": "saw-iv-2007",
+          "date": "2022-08-10",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1132626",
           "title": "Saw V",
-          "sortTitle": "saw-v-2008",
           "releaseYear": "2008",
-          "releaseDate": "2008-09-22",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "saw-v-2008",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2022-08-12",
-          "reviewSequence": 2444,
-          "viewingDate": "2022-08-12",
-          "viewingSequence": 2444,
+          "reviewSlug": "saw-v-2008",
+          "date": "2022-08-12",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2026,104 +918,42 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0038615",
           "title": "The Hoodlum Saint",
-          "sortTitle": "hoodlum-saint-1946",
           "releaseYear": "1946",
-          "releaseDate": "1946-04-04",
-          "genres": [
-            "Drama",
-            "Music"
-          ],
-          "slug": "the-hoodlum-saint-1946",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-19",
-          "reviewSequence": 2448,
-          "viewingDate": "2022-08-19",
-          "viewingSequence": 2448,
+          "reviewSlug": "the-hoodlum-saint-1946",
+          "date": "2022-08-19",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0033226",
           "title": "Virginia City",
-          "sortTitle": "virginia-city-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-03-16",
-          "genres": [
-            "Western"
-          ],
-          "slug": "virginia-city-1940",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-08-20",
-          "reviewSequence": 2449,
-          "viewingDate": "2022-08-20",
-          "viewingSequence": 2449,
+          "reviewSlug": "virginia-city-1940",
+          "date": "2022-08-20",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0032617",
           "title": "I Love You Again",
-          "sortTitle": "i-love-you-again-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-08-02",
-          "genres": [
-            "Comedy",
-            "Romance"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-09-26",
-          "viewingSequence": 2488,
+          "reviewSlug": null,
+          "date": "2022-09-26",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030820",
           "title": "Swing Your Lady",
-          "sortTitle": "swing-your-lady-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-01-08",
-          "genres": [
-            "Comedy",
-            "Music",
-            "Romance",
-            "Sport"
-          ],
-          "slug": "swing-your-lady-1938",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-10-03",
-          "reviewSequence": 2495,
-          "viewingDate": "2022-10-03",
-          "viewingSequence": 2495,
+          "reviewSlug": "swing-your-lady-1938",
+          "date": "2022-10-03",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031867",
           "title": "The Roaring Twenties",
-          "sortTitle": "roaring-twenties-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-10-25",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Thriller"
-          ],
-          "slug": "the-roaring-twenties-1939",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2008-04-18",
-          "reviewSequence": 680,
-          "viewingDate": "2022-10-12",
-          "viewingSequence": 2503,
+          "reviewSlug": "the-roaring-twenties-1939",
+          "date": "2022-10-12",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -2135,108 +965,42 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0038615",
           "title": "The Hoodlum Saint",
-          "sortTitle": "hoodlum-saint-1946",
           "releaseYear": "1946",
-          "releaseDate": "1946-04-04",
-          "genres": [
-            "Drama",
-            "Music"
-          ],
-          "slug": "the-hoodlum-saint-1946",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-19",
-          "reviewSequence": 2448,
-          "viewingDate": "2022-08-19",
-          "viewingSequence": 2448,
+          "reviewSlug": "the-hoodlum-saint-1946",
+          "date": "2022-08-19",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0032636",
           "title": "Invisible Stripes",
-          "sortTitle": "invisible-stripes-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-12-30",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Film-Noir"
-          ],
-          "slug": "invisible-stripes-1939",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-07",
-          "reviewSequence": 2466,
-          "viewingDate": "2022-09-07",
-          "viewingSequence": 2466,
+          "reviewSlug": "invisible-stripes-1939",
+          "date": "2022-09-07",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0041473",
           "title": "Holiday Affair",
-          "sortTitle": "holiday-affair-1949",
           "releaseYear": "1949",
-          "releaseDate": "1949-11-23",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Family",
-            "Romance"
-          ],
-          "slug": "holiday-affair-1949",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-09-15",
-          "reviewSequence": 2476,
-          "viewingDate": "2022-09-15",
-          "viewingSequence": 2476,
+          "reviewSlug": "holiday-affair-1949",
+          "date": "2022-09-15",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0028426",
           "title": "Two Against the World",
-          "sortTitle": "two-against-the-world-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-01-01",
-          "genres": [
-            "Crime",
-            "Drama"
-          ],
-          "slug": "two-against-the-world-1936",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2022-10-04",
-          "reviewSequence": 2496,
-          "viewingDate": "2022-10-04",
-          "viewingSequence": 2496,
+          "reviewSlug": "two-against-the-world-1936",
+          "date": "2022-10-04",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030650",
           "title": "Racket Busters",
-          "sortTitle": "racket-busters-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-07-16",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Crime",
-            "Drama"
-          ],
-          "slug": "racket-busters-1938",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2012-03-18",
-          "reviewSequence": 1244,
-          "viewingDate": "2022-10-13",
-          "viewingSequence": 2504,
+          "reviewSlug": "racket-busters-1938",
+          "date": "2022-10-13",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -2248,109 +1012,42 @@
       "slug": "vincent-price",
       "viewings": [
         {
-          "imdbId": "tt0046891",
           "title": "Dangerous Mission",
-          "sortTitle": "dangerous-mission-1954",
           "releaseYear": "1954",
-          "releaseDate": "1954-02-25",
-          "genres": [
-            "Action",
-            "Crime",
-            "Film-Noir",
-            "Mystery",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": "dangerous-mission-1954",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-22",
-          "reviewSequence": 2452,
-          "viewingDate": "2022-08-22",
-          "viewingSequence": 2452,
+          "reviewSlug": "dangerous-mission-1954",
+          "date": "2022-08-22",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0040876",
           "title": "The Three Musketeers",
-          "sortTitle": "three-musketeers-1948",
           "releaseYear": "1948",
-          "releaseDate": "1948-10-19",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "the-three-musketeers-1948",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-09-05",
-          "reviewSequence": 2463,
-          "viewingDate": "2022-09-05",
-          "viewingSequence": 2463,
+          "reviewSlug": "the-three-musketeers-1948",
+          "date": "2022-09-05",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0055868",
           "title": "Convicts 4",
-          "sortTitle": "convicts-4-1962",
           "releaseYear": "1962",
-          "releaseDate": "1962-03-28",
-          "genres": [
-            "Biography",
-            "Crime",
-            "Drama"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-10-05",
-          "viewingSequence": 2499,
+          "reviewSlug": null,
+          "date": "2022-10-05",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0039581",
           "title": "The Long Night",
-          "sortTitle": "long-night-1947",
           "releaseYear": "1947",
-          "releaseDate": "1947-05-28",
-          "genres": [
-            "Drama",
-            "Film-Noir"
-          ],
-          "slug": "the-long-night-1947",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2015-02-14",
-          "reviewSequence": 1605,
-          "viewingDate": "2022-10-16",
-          "viewingSequence": 2510,
+          "reviewSlug": "the-long-night-1947",
+          "date": "2022-10-16",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0059124",
           "title": "Dr. Goldfoot and the Bikini Machine",
-          "sortTitle": "dr-goldfoot-and-the-bikini-machine-1965",
           "releaseYear": "1965",
-          "releaseDate": "1965-11-06",
-          "genres": [
-            "Comedy",
-            "Sci-Fi"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-10-26",
-          "viewingSequence": 2527,
+          "reviewSlug": null,
+          "date": "2022-10-26",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -2364,101 +1061,42 @@
       "slug": "wes-craven",
       "viewings": [
         {
-          "imdbId": "tt0077681",
           "title": "The Hills Have Eyes",
-          "sortTitle": "hills-have-eyes-1977",
           "releaseYear": "1977",
-          "releaseDate": "1977-06-15",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-hills-have-eyes-1977",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-01-12",
-          "reviewSequence": 2353,
-          "viewingDate": "2022-01-12",
-          "viewingSequence": 2353,
+          "reviewSlug": "the-hills-have-eyes-1977",
+          "date": "2022-01-12",
           "medium": "4k UHD Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0082245",
           "title": "Deadly Blessing",
-          "sortTitle": "deadly-blessing-1981",
           "releaseYear": "1981",
-          "releaseDate": "1981-08-14",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "deadly-blessing-1981",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2025-01-27",
-          "reviewSequence": 2841,
-          "viewingDate": "2022-01-14",
-          "viewingSequence": 2355,
+          "reviewSlug": "deadly-blessing-1981",
+          "date": "2022-01-14",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0084745",
           "title": "Swamp Thing",
-          "sortTitle": "swamp-thing-1982",
           "releaseYear": "1982",
-          "releaseDate": "1982-01-01",
-          "genres": [
-            "Horror",
-            "Sci-Fi"
-          ],
-          "slug": "swamp-thing-1982",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-01-26",
-          "reviewSequence": 2360,
-          "viewingDate": "2022-01-26",
-          "viewingSequence": 2360,
+          "reviewSlug": "swamp-thing-1982",
+          "date": "2022-01-26",
           "medium": "Amazon",
           "venue": null
         },
         {
-          "imdbId": "tt0089274",
           "title": "The Hills Have Eyes Part II",
-          "sortTitle": "hills-have-eyes-part-ii-1984",
           "releaseYear": "1984",
-          "releaseDate": "1984-06-30",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "the-hills-have-eyes-part-ii-1984",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-02-02",
-          "reviewSequence": 2366,
-          "viewingDate": "2022-02-02",
-          "viewingSequence": 2366,
+          "reviewSlug": "the-hills-have-eyes-part-ii-1984",
+          "date": "2022-02-02",
           "medium": "Arrow Player",
           "venue": null
         },
         {
-          "imdbId": "tt0087800",
           "title": "A Nightmare on Elm Street",
-          "sortTitle": "nightmare-on-elm-street-1984",
           "releaseYear": "1984",
-          "releaseDate": "1984-10-31",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "a-nightmare-on-elm-street-1984",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2022-02-09",
-          "reviewSequence": 2372,
-          "viewingDate": "2022-02-09",
-          "viewingSequence": 2372,
+          "reviewSlug": "a-nightmare-on-elm-street-1984",
+          "date": "2022-02-09",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2470,82 +1108,34 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0033226",
           "title": "Virginia City",
-          "sortTitle": "virginia-city-1940",
           "releaseYear": "1940",
-          "releaseDate": "1940-03-16",
-          "genres": [
-            "Western"
-          ],
-          "slug": "virginia-city-1940",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-08-20",
-          "reviewSequence": 2449,
-          "viewingDate": "2022-08-20",
-          "viewingSequence": 2449,
+          "reviewSlug": "virginia-city-1940",
+          "date": "2022-08-20",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030433",
           "title": "Men Are Such Fools",
-          "sortTitle": "men-are-such-fools-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-06-15",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "men-are-such-fools-1938",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-09-24",
-          "reviewSequence": 2487,
-          "viewingDate": "2022-09-24",
-          "viewingSequence": 2487,
+          "reviewSlug": "men-are-such-fools-1938",
+          "date": "2022-09-24",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0027445",
           "title": "China Clipper",
-          "sortTitle": "china-clipper-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-08-11",
-          "genres": [
-            "Adventure",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "china-clipper-1936",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-10-01",
-          "reviewSequence": 2494,
-          "viewingDate": "2022-10-01",
-          "viewingSequence": 2494,
+          "reviewSlug": "china-clipper-1936",
+          "date": "2022-10-01",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031747",
           "title": "The Oklahoma Kid",
-          "sortTitle": "oklahoma-kid-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-03-03",
-          "genres": [
-            "Action",
-            "Western"
-          ],
-          "slug": "the-oklahoma-kid-1939",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-10-06",
-          "reviewSequence": 2500,
-          "viewingDate": "2022-10-06",
-          "viewingSequence": 2500,
+          "reviewSlug": "the-oklahoma-kid-1939",
+          "date": "2022-10-06",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -2557,60 +1147,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt8134742",
           "title": "3 from Hell",
-          "sortTitle": "3-from-hell-2019",
           "releaseYear": "2019",
-          "releaseDate": "2019-09-15",
-          "genres": [
-            "Action",
-            "Horror"
-          ],
-          "slug": "3-from-hell-2019",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-01-17",
-          "reviewSequence": 2356,
-          "viewingDate": "2022-01-17",
-          "viewingSequence": 2356,
+          "reviewSlug": "3-from-hell-2019",
+          "date": "2022-01-17",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt0373883",
           "title": "Halloween",
-          "sortTitle": "halloween-2007",
           "releaseYear": "2007",
-          "releaseDate": "2007-08-10",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "halloween-2007",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-03-31",
-          "reviewSequence": 2392,
-          "viewingDate": "2022-03-31",
-          "viewingSequence": 2392,
+          "reviewSlug": "halloween-2007",
+          "date": "2022-03-31",
           "medium": "iTunes",
           "venue": null
         },
         {
-          "imdbId": "tt1311067",
           "title": "Halloween II",
-          "sortTitle": "halloween-ii-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-08-04",
-          "genres": [
-            "Horror"
-          ],
-          "slug": "halloween-ii-2009",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-03-31",
-          "reviewSequence": 2393,
-          "viewingDate": "2022-03-31",
-          "viewingSequence": 2393,
+          "reviewSlug": "halloween-ii-2009",
+          "date": "2022-03-31",
           "medium": "iTunes",
           "venue": null
         }
@@ -2622,61 +1178,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0024453",
           "title": "Pilgrimage",
-          "sortTitle": "pilgrimage-1933",
           "releaseYear": "1933",
-          "releaseDate": "1933-07-12",
-          "genres": [
-            "Drama"
-          ],
-          "slug": "pilgrimage-1933",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-06-21",
-          "reviewSequence": 2417,
-          "viewingDate": "2022-06-21",
-          "viewingSequence": 2417,
+          "reviewSlug": "pilgrimage-1933",
+          "date": "2022-06-21",
           "medium": "Criterion Channel",
           "venue": null
         },
         {
-          "imdbId": "tt0027042",
           "title": "Steamboat Round the Bend",
-          "sortTitle": "steamboat-round-the-bend-1935",
           "releaseYear": "1935",
-          "releaseDate": "1935-09-06",
-          "genres": [
-            "Comedy",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "steamboat-round-the-bend-1935",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-06-22",
-          "reviewSequence": 2418,
-          "viewingDate": "2022-06-22",
-          "viewingSequence": 2418,
+          "reviewSlug": "steamboat-round-the-bend-1935",
+          "date": "2022-06-22",
           "medium": "Criterion Channel",
           "venue": null
         },
         {
-          "imdbId": "tt0028112",
           "title": "The Plough and the Stars",
-          "sortTitle": "plough-and-the-stars-1936",
           "releaseYear": "1936",
-          "releaseDate": "1936-12-26",
-          "genres": [
-            "Drama"
-          ],
-          "slug": "the-plough-and-the-stars-1936",
-          "grade": "F",
-          "gradeValue": 3,
-          "reviewDate": "2022-06-27",
-          "reviewSequence": 2419,
-          "viewingDate": "2022-06-27",
-          "viewingSequence": 2419,
+          "reviewSlug": "the-plough-and-the-stars-1936",
+          "date": "2022-06-27",
           "medium": "Criterion Channel",
           "venue": null
         }
@@ -2688,64 +1209,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0387564",
           "title": "Saw",
-          "sortTitle": "saw-2004",
           "releaseYear": "2004",
-          "releaseDate": "2003-12-02",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-2004",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-07-08",
-          "reviewSequence": 2426,
-          "viewingDate": "2022-07-08",
-          "viewingSequence": 2426,
+          "reviewSlug": "saw-2004",
+          "date": "2022-07-08",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0432348",
           "title": "Saw II",
-          "sortTitle": "saw-ii-2005",
           "releaseYear": "2005",
-          "releaseDate": "2005-10-03",
-          "genres": [
-            "Horror",
-            "Mystery"
-          ],
-          "slug": "saw-ii-2005",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-07-22",
-          "reviewSequence": 2430,
-          "viewingDate": "2022-07-22",
-          "viewingSequence": 2430,
+          "reviewSlug": "saw-ii-2005",
+          "date": "2022-07-22",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt0489270",
           "title": "Saw III",
-          "sortTitle": "saw-iii-2006",
           "releaseYear": "2006",
-          "releaseDate": "2006-09-05",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-iii-2006",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-07-28",
-          "reviewSequence": 2432,
-          "viewingDate": "2022-07-28",
-          "viewingSequence": 2432,
+          "reviewSlug": "saw-iii-2006",
+          "date": "2022-07-28",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2757,64 +1240,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0890870",
           "title": "Saw IV",
-          "sortTitle": "saw-iv-2007",
           "releaseYear": "2007",
-          "releaseDate": "2007-10-04",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-iv-2007",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-10",
-          "reviewSequence": 2440,
-          "viewingDate": "2022-08-10",
-          "viewingSequence": 2440,
+          "reviewSlug": "saw-iv-2007",
+          "date": "2022-08-10",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1132626",
           "title": "Saw V",
-          "sortTitle": "saw-v-2008",
           "releaseYear": "2008",
-          "releaseDate": "2008-09-22",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "saw-v-2008",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2022-08-12",
-          "reviewSequence": 2444,
-          "viewingDate": "2022-08-12",
-          "viewingSequence": 2444,
+          "reviewSlug": "saw-v-2008",
+          "date": "2022-08-12",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1233227",
           "title": "Saw VI",
-          "sortTitle": "saw-vi-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-09-08",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-vi-2009",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-09-10",
-          "reviewSequence": 2471,
-          "viewingDate": "2022-09-10",
-          "viewingSequence": 2471,
+          "reviewSlug": "saw-vi-2009",
+          "date": "2022-09-10",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2826,64 +1271,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0890870",
           "title": "Saw IV",
-          "sortTitle": "saw-iv-2007",
           "releaseYear": "2007",
-          "releaseDate": "2007-10-04",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-iv-2007",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-10",
-          "reviewSequence": 2440,
-          "viewingDate": "2022-08-10",
-          "viewingSequence": 2440,
+          "reviewSlug": "saw-iv-2007",
+          "date": "2022-08-10",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1132626",
           "title": "Saw V",
-          "sortTitle": "saw-v-2008",
           "releaseYear": "2008",
-          "releaseDate": "2008-09-22",
-          "genres": [
-            "Horror",
-            "Thriller"
-          ],
-          "slug": "saw-v-2008",
-          "grade": "C+",
-          "gradeValue": 10,
-          "reviewDate": "2022-08-12",
-          "reviewSequence": 2444,
-          "viewingDate": "2022-08-12",
-          "viewingSequence": 2444,
+          "reviewSlug": "saw-v-2008",
+          "date": "2022-08-12",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "imdbId": "tt1233227",
           "title": "Saw VI",
-          "sortTitle": "saw-vi-2009",
           "releaseYear": "2009",
-          "releaseDate": "2009-09-08",
-          "genres": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-          ],
-          "slug": "saw-vi-2009",
-          "grade": "C",
-          "gradeValue": 9,
-          "reviewDate": "2022-09-10",
-          "reviewSequence": 2471,
-          "viewingDate": "2022-09-10",
-          "viewingSequence": 2471,
+          "reviewSlug": "saw-vi-2009",
+          "date": "2022-09-10",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -2895,70 +1302,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0046891",
           "title": "Dangerous Mission",
-          "sortTitle": "dangerous-mission-1954",
           "releaseYear": "1954",
-          "releaseDate": "1954-02-25",
-          "genres": [
-            "Action",
-            "Crime",
-            "Film-Noir",
-            "Mystery",
-            "Romance",
-            "Thriller"
-          ],
-          "slug": "dangerous-mission-1954",
-          "grade": "D",
-          "gradeValue": 6,
-          "reviewDate": "2022-08-22",
-          "reviewSequence": 2452,
-          "viewingDate": "2022-08-22",
-          "viewingSequence": 2452,
+          "reviewSlug": "dangerous-mission-1954",
+          "date": "2022-08-22",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031536",
           "title": "King of the Underworld",
-          "sortTitle": "king-of-the-underworld-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-01-07",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Romance"
-          ],
-          "slug": "king-of-the-underworld-1939",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-09",
-          "reviewSequence": 2469,
-          "viewingDate": "2022-09-09",
-          "viewingSequence": 2469,
+          "reviewSlug": "king-of-the-underworld-1939",
+          "date": "2022-09-09",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0033717",
           "title": "High Sierra",
-          "sortTitle": "high-sierra-1941",
           "releaseYear": "1941",
-          "releaseDate": "1941-01-22",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Drama",
-            "Film-Noir",
-            "Thriller"
-          ],
-          "slug": "high-sierra-1941",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-09-13",
-          "reviewSequence": 2474,
-          "viewingDate": "2022-09-13",
-          "viewingSequence": 2474,
+          "reviewSlug": "high-sierra-1941",
+          "date": "2022-09-13",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -2970,66 +1333,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0032636",
           "title": "Invisible Stripes",
-          "sortTitle": "invisible-stripes-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-12-30",
-          "genres": [
-            "Action",
-            "Crime",
-            "Drama",
-            "Film-Noir"
-          ],
-          "slug": "invisible-stripes-1939",
-          "grade": "D+",
-          "gradeValue": 7,
-          "reviewDate": "2022-09-07",
-          "reviewSequence": 2466,
-          "viewingDate": "2022-09-07",
-          "viewingSequence": 2466,
+          "reviewSlug": "invisible-stripes-1939",
+          "date": "2022-09-07",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0031747",
           "title": "The Oklahoma Kid",
-          "sortTitle": "oklahoma-kid-1939",
           "releaseYear": "1939",
-          "releaseDate": "1939-03-03",
-          "genres": [
-            "Action",
-            "Western"
-          ],
-          "slug": "the-oklahoma-kid-1939",
-          "grade": "C-",
-          "gradeValue": 8,
-          "reviewDate": "2022-10-06",
-          "reviewSequence": 2500,
-          "viewingDate": "2022-10-06",
-          "viewingSequence": 2500,
+          "reviewSlug": "the-oklahoma-kid-1939",
+          "date": "2022-10-06",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0030650",
           "title": "Racket Busters",
-          "sortTitle": "racket-busters-1938",
           "releaseYear": "1938",
-          "releaseDate": "1938-07-16",
-          "genres": [
-            "Action",
-            "Adventure",
-            "Crime",
-            "Drama"
-          ],
-          "slug": "racket-busters-1938",
-          "grade": "D-",
-          "gradeValue": 5,
-          "reviewDate": "2012-03-18",
-          "reviewSequence": 1244,
-          "viewingDate": "2022-10-13",
-          "viewingSequence": 2504,
+          "reviewSlug": "racket-busters-1938",
+          "date": "2022-10-13",
           "medium": "Watch TCM",
           "venue": null
         }
@@ -3041,61 +1364,26 @@
       "slug": null,
       "viewings": [
         {
-          "imdbId": "tt0037614",
           "title": "The Corn Is Green",
-          "sortTitle": "corn-is-green-1945",
           "releaseYear": "1945",
-          "releaseDate": "1945-03-29",
-          "genres": [
-            "Drama"
-          ],
-          "slug": "the-corn-is-green-1945",
-          "grade": "B-",
-          "gradeValue": 11,
-          "reviewDate": "2022-09-07",
-          "reviewSequence": 2467,
-          "viewingDate": "2022-09-07",
-          "viewingSequence": 2467,
+          "reviewSlug": "the-corn-is-green-1945",
+          "date": "2022-09-07",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0035140",
           "title": "Now, Voyager",
-          "sortTitle": "now-voyager-1942",
           "releaseYear": "1942",
-          "releaseDate": "1942-10-22",
-          "genres": [
-            "Drama",
-            "Romance"
-          ],
-          "slug": "now-voyager-1942",
-          "grade": "B",
-          "gradeValue": 12,
-          "reviewDate": "2008-08-17",
-          "reviewSequence": 821,
-          "viewingDate": "2022-10-10",
-          "viewingSequence": 2502,
+          "reviewSlug": "now-voyager-1942",
+          "date": "2022-10-10",
           "medium": "Watch TCM",
           "venue": null
         },
         {
-          "imdbId": "tt0029058",
           "title": "It's Love I'm After",
-          "sortTitle": "its-love-im-after-1937",
           "releaseYear": "1937",
-          "releaseDate": "1937-08-25",
-          "genres": [
-            "Comedy",
-            "Romance"
-          ],
-          "slug": null,
-          "grade": null,
-          "gradeValue": null,
-          "reviewDate": null,
-          "reviewSequence": null,
-          "viewingDate": "2022-10-21",
-          "viewingSequence": 2515,
+          "reviewSlug": null,
+          "date": "2022-10-21",
           "medium": "Watch TCM",
           "venue": null
         }

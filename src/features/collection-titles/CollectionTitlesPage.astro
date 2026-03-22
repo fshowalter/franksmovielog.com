@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import HeroLayout from "~/components/layout/HeroLayout.astro";
+import { CollectionTitles } from "~/features/collection-titles/CollectionTitles";
+import { getCollectionTitlesProps } from "~/features/collection-titles/getCollectionTitlesProps";
+
+type Props = {
+  collection: CollectionEntry<"collections">["data"];
+};
+
+const { collection } = Astro.props;
+
+const collectionTitlesProps = await getCollectionTitlesProps(collection);
+
+const metaDescription = `${collection.name} movie reviews: ${collection.description} Sort by oldest or newest, best or worst, or title.`;
+---
+
+<HeroLayout
+  baseLayoutProps={{
+    canonical: true,
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: {
+      description: collection.description,
+      type: "website",
+    },
+    title: `${collection.name} movie reviews`,
+  }}
+  heroProps={{
+    backdropSlug: collection.slug,
+    breadcrumb: {
+      href: "/collections/",
+      text: "Collections",
+    },
+    deck: collection.descriptionHtml,
+    title: collection.name,
+  }}
+>
+  <CollectionTitles client:load {...collectionTitlesProps} />
+</HeroLayout>

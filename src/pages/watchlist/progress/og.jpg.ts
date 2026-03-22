@@ -1,21 +1,10 @@
 import type { APIRoute } from "astro";
 
-import { getOpenGraphBackdropAsBase64String } from "~/api/backdrops";
-import { OpenGraphImage } from "~/components/open-graph-image/OpenGraphImage";
-import { componentToImage } from "~/utils/componentToImage";
+import { openGraphImageResponse } from "~/utils/openGraphImageResponse";
 
 export const GET: APIRoute = async function get() {
-  const jpeg = await componentToImage(
-    OpenGraphImage({
-      backdrop: await getOpenGraphBackdropAsBase64String("watchlist-progress"),
-      sectionHead: "Watchlist",
-      title: "Progress",
-    }),
+  return await openGraphImageResponse(
+    "Watchlist Progress",
+    "watchlist-progress",
   );
-
-  return new Response(new Uint8ClampedArray(jpeg), {
-    headers: {
-      "Content-Type": "image/jpg",
-    },
-  });
 };

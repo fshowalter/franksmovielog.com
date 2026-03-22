@@ -1,0 +1,148 @@
+---
+import { getCollection } from "astro:content";
+
+import RenderedMarkdown from "~/components/rendered-markdown/RenderedMarkdown.astro";
+import SubHeading from "~/components/sub-heading/SubHeading.astro";
+import { linkReviewedTitles } from "~/utils/linkReviewedTitles";
+
+import {
+  viewingDayFormat,
+  viewingMonthFormat,
+  viewingWeekdayFormat,
+  viewingYearFormat,
+} from "./viewingHistoryDateFormats";
+
+type Props = {
+  imdbId: string;
+};
+
+const { imdbId } = Astro.props;
+
+const viewings = await getCollection(
+  "viewings",
+  (entry) => entry.data.imdbId === imdbId,
+);
+
+const reviewedTitleEntries = await getCollection("reviewedTitles");
+
+const reviewedTitleMatchers = reviewedTitleEntries.map(({ data: e }) => {
+  return { imdbId: e.imdbId, slug: e.review.id };
+});
+
+viewings.sort((a, b) => `${b.id}`.localeCompare(a.id));
+---
+
+<aside class="w-full max-w-popout">
+  <SubHeading class="text-center shadow-bottom" level="h2">
+    Viewing History
+  </SubHeading>
+  <ul class="bg-default">
+    {
+      viewings.map(({ data: viewing }) => {
+        return (
+          <li
+            class={`
+              mb-1 flex flex-col bg-subtle px-container font-sans text-sm
+              font-normal
+              tablet:px-6
+            `}
+          >
+            <div
+              class={`
+                flex items-center gap-x-4 py-4
+                tablet:gap-x-6
+              `}
+            >
+              <div class="size-auto">
+                <div class="bg-subtle py-2 text-center">
+                  <div
+                    class={`
+                      px-4 pb-2 font-serif text-md font-normal text-subtle
+                    `}
+                  >
+                    {viewingYearFormat.format(viewing.date)}
+                  </div>
+                  <div class="bg-default py-1 text-subtle">
+                    {viewingMonthFormat.format(viewing.date)}
+                  </div>
+                  <div
+                    class={`
+                      bg-default font-serif text-md font-normal text-default
+                    `}
+                  >
+                    {viewingDayFormat.format(viewing.date)}
+                  </div>
+                  <div class="bg-default py-1 text-subtle">
+                    {viewingWeekdayFormat.format(viewing.date)}
+                  </div>
+                </div>
+              </div>
+              <div class="grow">
+                {viewing.medium && (
+                  <span class={`font-serif text-base font-normal text-default`}>
+                    {viewing.medium}
+                  </span>
+                )}
+                {viewing.mediumNotesHtml && (
+                  <span class="font-normal tracking-prose text-subtle">
+                    {" "}
+                    (
+                    <RenderedMarkdown
+                      as="span"
+                      class="leading-none"
+                      text={linkReviewedTitles(
+                        viewing.mediumNotesHtml,
+                        reviewedTitleMatchers,
+                      )}
+                    />
+                    )
+                  </span>
+                )}
+                {viewing.venue && (
+                  <span class="text-subtle">
+                    {viewing.medium && <span> at </span>}
+                    <span class="font-serif text-base font-normal text-default">
+                      {viewing.venue}
+                    </span>
+                  </span>
+                )}{" "}
+                {viewing.venueNotesHtml && (
+                  <span class="font-light tracking-normal text-muted">
+                    (
+                    <RenderedMarkdown
+                      as="span"
+                      class="leading-none"
+                      text={linkReviewedTitles(
+                        viewing.venueNotesHtml,
+                        reviewedTitleMatchers,
+                      )}
+                    />
+                    )
+                  </span>
+                )}
+              </div>
+            </div>
+            <div class="tablet:-mt-13 tablet:min-h-[52px]">
+              {viewing.viewingNotesHtml && (
+                <div
+                  class={`
+                    px-2 pb-6 text-base font-normal
+                    tablet:mx-24 tablet:px-0
+                  `}
+                >
+                  <RenderedMarkdown
+                    class="leading-normal tracking-prose text-muted"
+                    text={linkReviewedTitles(
+                      viewing.viewingNotesHtml,
+                      reviewedTitleMatchers,
+                    )}
+                  />
+                </div>
+              )}
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</aside>

@@ -1,4 +1,4 @@
-import type { AvatarImageProps } from "~/api/avatars";
+import type { AvatarImageProps } from "~/assets/avatars";
 
 import { AvatarListItemAvatar } from "./AvatarListItemAvatar";
 

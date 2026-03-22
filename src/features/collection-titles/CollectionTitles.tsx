@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-import type { PosterImageProps } from "~/api/posters";
+import type { PosterImageProps } from "~/assets/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
 import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
@@ -41,16 +41,16 @@ export type CollectionTitlesProps = {
  */
 export type CollectionTitlesValue = {
   genres: string[];
-  grade?: string;
-  gradeValue?: number;
+  grade: string | undefined;
+  gradeValue: number | undefined;
   imdbId: string;
   posterImageProps: PosterImageProps;
   releaseSequence: number;
   releaseYear: string;
-  reviewDisplayDate: string;
-  reviewSequence?: number;
-  reviewYear?: string;
-  slug?: string;
+  reviewDisplayDate: string | undefined;
+  reviewSequence: string | undefined;
+  reviewSlug: string | undefined;
+  reviewYear: string | undefined;
   sortTitle: string;
   title: string;
 };
@@ -135,7 +135,7 @@ export function CollectionTitles({
       }}
       totalCount={filteredValues.length}
     >
-      <div className="tablet:pt-10">
+      <div className="tablet:-mx-6 tablet:pt-10">
         <PosterList>
           {[...filteredValues].map((value) => {
             return (

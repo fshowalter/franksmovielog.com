@@ -1,0 +1,21 @@
+---
+type Props = {
+  term: string;
+  value: string | string[];
+};
+
+const { term, value } = Astro.props;
+---
+
+<div>
+  <dt class={`font-sans text-xs/4 tracking-wide text-subtle uppercase`}>
+    {term}
+  </dt>
+  <dd class="font-normal text-wrap text-muted">
+    {
+      Array.isArray(value)
+        ? value.map((termValue) => <div>{termValue}</div>)
+        : value
+    }
+  </dd>
+</div>

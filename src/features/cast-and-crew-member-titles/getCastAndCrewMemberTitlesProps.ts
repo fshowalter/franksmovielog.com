@@ -1,8 +1,12 @@
-import { castAndCrewMember } from "~/api/cast-and-crew";
-import { loadExcerptHtml } from "~/api/reviews";
-import { getStillImageProps } from "~/api/stills";
-import { ReviewCardListImageConfig } from "~/components/review-card-list/ReviewCardList";
+import type { CollectionEntry } from "astro:content";
+
+import { getEntry } from "astro:content";
+
+import { getFluidWidthPosterImageProps } from "~/assets/posters";
+import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { displayDate } from "~/utils/displayDate";
+import { gradeToValue } from "~/utils/grades";
+import { toSortYear } from "~/utils/toSortYear";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
 
@@ -12,45 +16,79 @@ import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
  * @returns Props for the CastAndCrewMemberTitles component
  */
 export async function getCastAndCrewMemberTitlesProps(
-  slug: string,
+  member: CollectionEntry<"castAndCrew">["data"],
 ): Promise<CastAndCrewMemberTitlesProps> {
-  const { distinctGenres, distinctReleaseYears, distinctReviewYears, member } =
-    await castAndCrewMember(slug);
+  const distinctGenres = new Set<string>();
+  const distinctReleaseYears = new Set<string>();
+  const distinctReviewYears = new Set<string>();
+
+  member.titles.sort((a, b) => a.releaseDate.localeCompare(b.releaseDate));
+
+  const values = await Promise.all(
+    member.titles.map(async (title, index) => {
+      let reviewedTitle;
+
+      if (title.reviewSlug) {
+        reviewedTitle = await getEntry("reviewedTitles", title.reviewSlug);
+      }
+
+      if (title.reviewSlug && !reviewedTitle) {
+        throw new Error(
+          `Reviewed title not found for slug: ${title.reviewSlug}`,
+        );
+      }
+
+      if (reviewedTitle) {
+        distinctReviewYears.add(toSortYear(reviewedTitle.data.reviewDate));
+      }
+
+      for (const genre of title.genres) {
+        distinctGenres.add(genre);
+      }
+      distinctReleaseYears.add(title.releaseYear);
+
+      return {
+        creditedAs: title.creditedAs,
+        genres: title.genres,
+        grade: reviewedTitle ? reviewedTitle.data.grade : undefined,
+        gradeValue: reviewedTitle
+          ? gradeToValue(reviewedTitle.data.grade)
+          : undefined,
+        imdbId: title.imdbId,
+        posterImageProps: await getFluidWidthPosterImageProps(
+          reviewedTitle ? title.reviewSlug : "default",
+          PosterListItemImageConfig,
+        ),
+        releaseSequence: index,
+        releaseYear: title.releaseYear,
+        reviewDisplayDate: reviewedTitle
+          ? displayDate(reviewedTitle.data.reviewDate, {
+              dayFormat: "numeric",
+            })
+          : undefined,
+        reviewSequence: reviewedTitle
+          ? reviewedTitle.data.reviewSequence
+          : undefined,
+        reviewSlug: reviewedTitle ? title.reviewSlug : undefined,
+        reviewYear: reviewedTitle
+          ? toSortYear(reviewedTitle.data.reviewDate)
+          : undefined,
+        sortTitle: title.sortTitle,
+        title: title.title,
+        watchlistCollectionNames: title.watchlistCollectionNames,
+        watchlistDirectorNames: title.watchlistDirectorNames,
+        watchlistPerformerNames: title.watchlistPerformerNames,
+        watchlistWriterNames: title.watchlistWriterNames,
+      };
+    }),
+  );
 
   return {
     distinctCreditKinds: member.creditedAs,
-    distinctGenres,
-    distinctReleaseYears,
-    distinctReviewYears,
+    distinctGenres: [...distinctGenres].toSorted(),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+    distinctReviewYears: [...distinctReviewYears].toSorted(),
     initialSort: "release-date-asc",
-    values: await Promise.all(
-      member.titles.map(async (title) => {
-        let excerpt;
-
-        if (title.slug) {
-          const reviewWithExcerpt = await loadExcerptHtml({ slug: title.slug });
-          excerpt = reviewWithExcerpt.excerpt;
-        }
-
-        return {
-          ...title,
-          excerpt,
-          reviewDisplayDate: displayDate(title.reviewDate, {
-            dayFormat: "numeric",
-          }),
-          reviewSequence: title.reviewSequence,
-          reviewYear: title.reviewDate
-            ? new Date(title.reviewDate).toLocaleDateString("en-US", {
-                timeZone: "UTC",
-                year: "numeric",
-              })
-            : "",
-          stillImageProps: await getStillImageProps(
-            title.slug || "default",
-            ReviewCardListImageConfig,
-          ),
-        };
-      }),
-    ),
+    values,
   };
 }

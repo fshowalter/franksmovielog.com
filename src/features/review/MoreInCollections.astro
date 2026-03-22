@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getEntry } from "astro:content";
+
+import MoreReviews from "~/components/more-reviews/MoreReviews.astro";
+
+type Props = {
+  values: CollectionEntry<"reviewedTitles">["data"]["moreCollections"];
+};
+
+const { values } = Astro.props;
+---
+
+{
+  await Promise.all(
+    values.map(async (value) => {
+      return (
+        <MoreReviews
+          cardProps={await Promise.all(
+            value.titles.map(async (title) => {
+              const reviewedTitleEntry = await getEntry(title);
+              return {
+                value: reviewedTitleEntry.data,
+              };
+            }),
+          )}
+          headingProps={{
+            accentText: value.name,
+            href: `/collections/${value.slug}/`,
+            text: "More ",
+          }}
+        />
+      );
+    }),
+  )
+}

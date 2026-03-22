@@ -1,63 +1,24 @@
 ---
-import { allStatYears } from "~/api/stats";
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-import { getYearStatsProps } from "~/features/stats/getStatsProps";
-import { YearStats } from "~/features/stats/YearStats";
+import { getCollection } from "astro:content";
 
-type Props = {
-  year: string;
-};
+import YearStatsPage from "~/features/stats/YearStatsPage.astro";
 
 export async function getStaticPaths() {
-  const statYears = await allStatYears();
+  const yearStatsEntries = await getCollection("yearStats");
 
-  return statYears.map((year) => {
+  return yearStatsEntries.map(({ data: stats }) => {
     return {
       params: {
-        year: year,
+        year: stats.year,
       },
       props: {
-        year: year,
+        stats,
       },
     };
   });
 }
 
-const { year } = Astro.props;
-
-const yearStatsProps = await getYearStatsProps(year);
-const backdropImageProps = await getLayoutBackdropImageProps(year);
-const distinctStatYears = await allStatYears();
-
-const deck =
-  [...distinctStatYears].reverse()[0] === year
-    ? "A Year in Progress..."
-    : "A Year in Review";
-const metaDescription = `My ${year} viewing stats. Includes my most-watched movies, directors, performers, and writers; as well as venue, release year, and media distributions.`;
+const { stats } = Astro.props;
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{ description: metaDescription }}
-  openGraph={{
-    description: deck,
-    type: "website",
-  }}
-  title={`${year} Stats`}
->
-  <Layout
-    backdrop={{
-      breadcrumb: {
-        href: "/viewings/",
-        text: "Viewing Log",
-      },
-      deck,
-      imageProps: backdropImageProps,
-      title: `${year} Stats`,
-    }}
-  >
-    <YearStats {...yearStatsProps} />
-  </Layout>
-</AstroPageShell>
+<YearStatsPage stats={stats} />

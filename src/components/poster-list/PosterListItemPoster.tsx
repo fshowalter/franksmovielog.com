@@ -1,4 +1,4 @@
-import type { PosterImageProps } from "~/api/posters";
+import type { PosterImageProps } from "~/assets/posters";
 
 /**
  * Poster image component for list items.

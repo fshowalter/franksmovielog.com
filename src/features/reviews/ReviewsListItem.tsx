@@ -1,4 +1,4 @@
-import type { PosterImageProps } from "~/api/posters";
+import type { PosterImageProps } from "~/assets/posters";
 
 import { ListItemDetails } from "~/components/list-item-details/ListItemDetails";
 import { ListItemGenres } from "~/components/list-item-genres/ListItemGenres";
@@ -16,8 +16,7 @@ export type ReviewsValue = {
   releaseSequence: number;
   releaseYear: string;
   reviewDisplayDate: string;
-  reviewMonth?: string;
-  reviewSequence: number;
+  reviewSequence: string;
   reviewYear: string;
   slug: string;
   sortTitle: string;

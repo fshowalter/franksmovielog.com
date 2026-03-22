@@ -14,7 +14,7 @@ import {
   fillTitleFilter,
   getTitleFilter,
 } from "~/components/filter-and-sort/TitleFilters.testHelper";
-import { getGroupedPosterList } from "~/components/poster-list/PosterList.testHelper";
+import { getPosterList } from "~/components/poster-list/PosterList.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { WatchlistProps, WatchlistValue } from "./Watchlist";
@@ -122,7 +122,7 @@ describe("Watchlist", () => {
       await fillTitleFilter(user, "Lawyer");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Only "Lawyer Man" should be visible in the poster list
       expect(within(posterList).getByText("Lawyer Man")).toBeInTheDocument();
@@ -157,7 +157,7 @@ describe("Watchlist", () => {
       await clickDirectorFilterOption(user, "Howard Hawks");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Only Howard Hawks films should be visible
       expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
@@ -190,7 +190,7 @@ describe("Watchlist", () => {
       await clickPerformerFilterOption(user, "John Wayne");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Only John Wayne films should be visible
       expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
@@ -223,7 +223,7 @@ describe("Watchlist", () => {
       await clickWriterFilterOption(user, "Leigh Brackett");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Only Leigh Brackett films should be visible
       expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
@@ -256,7 +256,7 @@ describe("Watchlist", () => {
       await clickCollectionFilterOption(user, "Universal Monsters");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Only Universal Monsters films should be visible
       expect(within(posterList).getByText("Dracula")).toBeInTheDocument();
@@ -294,7 +294,7 @@ describe("Watchlist", () => {
       await clickGenresFilterOption(user, "Thriller");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Only Horror/Thriller films should be visible
       expect(within(posterList).getByText("The Thing")).toBeInTheDocument();
@@ -321,7 +321,7 @@ describe("Watchlist", () => {
       await fillReleaseYearFilter(user, "1970", "1980");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Alien")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Rio Bravo"),
@@ -364,7 +364,7 @@ describe("Watchlist", () => {
       await clickPerformerFilterOption(user, "John Wayne");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Only Hawks films with John Wayne should be visible
       expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
@@ -388,7 +388,7 @@ describe("Watchlist", () => {
 
       await clickSortOption(user, "Title (A → Z)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const alienIndex = allText.indexOf("Alien");
       const rioIndex = allText.indexOf("Rio Bravo");
@@ -410,7 +410,7 @@ describe("Watchlist", () => {
 
       await clickSortOption(user, "Title (Z → A)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const thingIndex = allText.indexOf("The Thing");
       const rioIndex = allText.indexOf("Rio Bravo");
@@ -444,7 +444,7 @@ describe("Watchlist", () => {
 
       await clickSortOption(user, "Release Date (Oldest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const rioIndex = allText.indexOf("Rio Bravo");
       const alienIndex = allText.indexOf("Alien");
@@ -478,7 +478,7 @@ describe("Watchlist", () => {
 
       await clickSortOption(user, "Release Date (Newest First)");
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       const allText = posterList.textContent || "";
       const thingIndex = allText.indexOf("The Thing");
       const alienIndex = allText.indexOf("Alien");
@@ -504,7 +504,7 @@ describe("Watchlist", () => {
       await fillTitleFilter(user, "Rio");
       await clickViewResults(user);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
       expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("The Magnificent Seven"),
@@ -548,7 +548,7 @@ describe("Watchlist", () => {
       await clickDirectorFilterOption(user, "John Carpenter");
       await clickViewResults(user);
 
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("The Thing")).toBeInTheDocument();
       expect(
         within(posterList).getByText("Big Trouble in Little China"),
@@ -562,7 +562,7 @@ describe("Watchlist", () => {
       await clickGenresFilterOption(user, "Horror");
       await clickViewResults(user);
 
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("The Thing")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Big Trouble in Little China"),
@@ -596,7 +596,7 @@ describe("Watchlist", () => {
       await clickViewResults(user);
 
       // Verify filters are applied
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("The Thing")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Rio Bravo"),
@@ -612,7 +612,7 @@ describe("Watchlist", () => {
       await clickViewResults(user);
 
       // All titles should be visible again
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
       expect(within(posterList).getByText("The Thing")).toBeInTheDocument();
     });
@@ -634,7 +634,7 @@ describe("Watchlist", () => {
       await clickViewResults(user);
 
       // Verify filter is applied
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("The Thing"),
@@ -646,7 +646,7 @@ describe("Watchlist", () => {
       await clickCloseFilters(user); // Close without clicking "View Results"
 
       // Original filter should still be active
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("Rio Bravo")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("The Thing"),
@@ -671,7 +671,7 @@ describe("Watchlist", () => {
 
       render(<Watchlist {...baseProps} values={testTitles} />);
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Check that first 100 are visible
       expect(within(posterList).getByText("Movie 001")).toBeInTheDocument();
@@ -704,7 +704,7 @@ describe("Watchlist", () => {
       // Click Show More
       await user.click(screen.getByText("Show More"));
 
-      const posterList = getGroupedPosterList();
+      const posterList = getPosterList();
 
       // Check that items 101-150 are now visible
       expect(within(posterList).getByText("Movie 101")).toBeInTheDocument();
@@ -749,7 +749,7 @@ describe("Watchlist", () => {
       // Click Show More to show all 150 items
       await user.click(screen.getByText("Show More"));
 
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("Movie 150")).toBeInTheDocument();
 
       // Apply genre filter for "Action" (first 80 movies)
@@ -757,7 +757,7 @@ describe("Watchlist", () => {
       await clickGenresFilterOption(user, "Action");
       await clickViewResults(user);
 
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
 
       // All 80 Action movies should be visible (less than pagination limit)
       expect(within(posterList).getByText("Movie 001")).toBeInTheDocument();
@@ -790,13 +790,13 @@ describe("Watchlist", () => {
       // Click Show More to show all items
       await user.click(screen.getByText("Show More"));
 
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
       expect(within(posterList).getByText("Movie 150")).toBeInTheDocument();
 
       // Change sort order
       await clickSortOption(user, "Release Date (Oldest First)");
 
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
 
       // Should reset to showing first 100 items in new sort order
       expect(within(posterList).getByText("Movie 001")).toBeInTheDocument();
@@ -825,7 +825,7 @@ describe("Watchlist", () => {
       const user = getUserWithFakeTimers();
       render(<Watchlist {...baseProps} values={testTitles} />);
 
-      let posterList = getGroupedPosterList();
+      let posterList = getPosterList();
 
       // Initially shows first 100
       expect(within(posterList).getByText("Movie 100")).toBeInTheDocument();
@@ -835,7 +835,7 @@ describe("Watchlist", () => {
 
       // First click - shows 200
       await user.click(screen.getByText("Show More"));
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("Movie 200")).toBeInTheDocument();
       expect(
         within(posterList).queryByText("Movie 201"),
@@ -843,7 +843,7 @@ describe("Watchlist", () => {
 
       // Second click - shows all 250
       await user.click(screen.getByText("Show More"));
-      posterList = getGroupedPosterList();
+      posterList = getPosterList();
       expect(within(posterList).getByText("Movie 250")).toBeInTheDocument();
 
       // No more Show More button

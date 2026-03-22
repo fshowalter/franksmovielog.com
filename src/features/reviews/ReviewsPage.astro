@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+
+import ReviewsLayout from "./ReviewsLayout.astro";
+
+const titles = await getCollection("reviewedTitles");
+const deck = `"'Sorry' don't get it done, Dude."`;
+const metaDescription =
+  "All my movie reviews, from 2003 to present day. Filter by title, genre, review date, release date, or grade. Sort by best or worst, oldest or newest, or title.";
+---
+
+<ReviewsLayout
+  activeTab="all"
+  backdropSlug="reviews"
+  deck={deck}
+  metaDescription={metaDescription}
+  pageTitle="All Reviews"
+  title="Reviews"
+  titles={titles}
+/>

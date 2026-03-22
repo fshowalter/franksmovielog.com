@@ -1,0 +1,14 @@
+---
+import type { MostWatchedPerson } from "~/collections/stats";
+
+import MostWatchedPeople from "./MostWatchedPeople.astro";
+
+type Props = {
+  values: MostWatchedPerson[];
+};
+
+const { values } = Astro.props;
+---
+
+<MostWatchedPeople header="Most Watched Performers" values={values} />;
+

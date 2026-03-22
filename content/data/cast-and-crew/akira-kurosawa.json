@@ -1,7 +1,6 @@
 {
   "name": "Akira Kurosawa",
   "slug": "akira-kurosawa",
-  "titleCount": 3,
   "reviewCount": 2,
   "titles": [
     {
@@ -13,11 +12,7 @@
       "genres": [
         "Drama"
       ],
-      "slug": "uma-1941",
-      "grade": "D+",
-      "gradeValue": 7,
-      "reviewDate": "2021-02-24",
-      "reviewSequence": 2153,
+      "reviewSlug": "uma-1941",
       "creditedAs": [
         "writer"
       ],
@@ -38,11 +33,7 @@
         "Drama",
         "Western"
       ],
-      "slug": "the-magnificent-seven-1960",
-      "grade": "B",
-      "gradeValue": 12,
-      "reviewDate": "2023-08-23",
-      "reviewSequence": 2648,
+      "reviewSlug": "the-magnificent-seven-1960",
       "creditedAs": [
         "writer"
       ],
@@ -61,11 +52,7 @@
         "Drama",
         "Western"
       ],
-      "slug": null,
-      "grade": null,
-      "gradeValue": null,
-      "reviewDate": null,
-      "reviewSequence": null,
+      "reviewSlug": null,
       "creditedAs": [
         "writer"
       ],

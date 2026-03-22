@@ -1,66 +1,28 @@
 ---
-import type { CastAndCrewMember } from "~/api/cast-and-crew";
+import type { CollectionEntry } from "astro:content";
 
-import { allCastAndCrew } from "~/api/cast-and-crew";
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-import { CastAndCrewMemberTitles } from "~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles";
-import { getCastAndCrewMemberTitlesProps } from "~/features/cast-and-crew-member-titles/getCastAndCrewMemberTitlesProps";
+import { getCollection } from "astro:content";
 
-type Props = CastAndCrewMember;
+import CastAndCrewMemberTitlesPage from "~/features/cast-and-crew-member-titles/CastAndCrewMemberTitlesPage.astro";
+
+type Props = {
+  castAndCrewMember: CollectionEntry<"castAndCrew">["data"];
+};
 
 export async function getStaticPaths() {
-  const { castAndCrew } = await allCastAndCrew();
+  const castAndCrew = await getCollection("castAndCrew");
 
-  return castAndCrew.map((member) => {
+  return castAndCrew.map(({ data: castAndCrewMember }) => {
     return {
       params: {
-        slug: member.slug,
+        slug: castAndCrewMember.slug,
       },
-      props: member,
+      props: { castAndCrewMember },
     };
   });
 }
 
-const { creditedAs, description, name, slug } = Astro.props;
-
-const castAndCrewMemberTitlesProps =
-  await getCastAndCrewMemberTitlesProps(slug);
-
-const backdropImageProps = await getLayoutBackdropImageProps(slug);
-
-const creditMap: Record<string, string> = {
-  director: "directed by",
-  performer: "with",
-  writer: "written by",
-};
-
-const creditString = new Intl.ListFormat("en", {
-  type: "disjunction",
-}).format(creditedAs.map((credit) => creditMap[credit]));
-
-const metaDescription = `Reviews of movies ${creditString} ${name}. Sort reviews by best or worst, newest or oldest. Filter by credit kind, year, or title.`;
+const { castAndCrewMember } = Astro.props;
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{ description: metaDescription }}
-  openGraph={{
-    description,
-    type: "website",
-  }}
-  title={`${name} movie reviews`}
->
-  <Layout
-    backdrop={{
-      breadcrumb: { href: "/cast-and-crew/", text: "Cast & Crew" },
-      deck: description,
-      imageProps: backdropImageProps,
-      title: name,
-    }}
-    className="bg-subtle"
-  >
-    <CastAndCrewMemberTitles client:load {...castAndCrewMemberTitlesProps} />
-  </Layout>
-</AstroPageShell>
+<CastAndCrewMemberTitlesPage castAndCrewMember={castAndCrewMember} />

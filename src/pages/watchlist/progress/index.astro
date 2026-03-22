@@ -1,36 +1,5 @@
 ---
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-import { getWatchlistProgressProps } from "~/features/watchlist-progress/getWatchlistProgressProps";
-import { WatchlistProgress } from "~/features/watchlist-progress/WatchlistProgress";
-
-const watchlistProgressProps = await getWatchlistProgressProps();
-const backdropImageProps =
-  await getLayoutBackdropImageProps("watchlist-progress");
-
-const deck = '"I find your lack of faith disturbing."';
-const metaDescription =
-  "My progress working through my to-review watchlist. Overall and individual percentage breakdowns by director, writer, performer, and collection.";
+import WatchlistProgressPage from "~/features/watchlist-progress/WatchlistProgressPage.astro";
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{ description: metaDescription }}
-  openGraph={{ description: deck, type: "website" }}
-  title="Watchlist Progress"
->
-  <Layout
-    backdrop={{
-      breadcrumb: {
-        href: "/watchlist/",
-        text: "Watchlist",
-      },
-      deck,
-      imageProps: backdropImageProps,
-      title: "Progress",
-    }}
-  >
-    <WatchlistProgress {...watchlistProgressProps} />
-  </Layout>
-</AstroPageShell>
+<WatchlistProgressPage />

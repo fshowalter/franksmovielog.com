@@ -12,6 +12,7 @@ const mockTitle = (
   overrides: Partial<CollectionTitlesValue>,
 ): CollectionTitlesValue => ({
   genres: [],
+  grade: "B",
   gradeValue: 10,
   imdbId: "tt0000000",
   posterImageProps: {
@@ -21,6 +22,9 @@ const mockTitle = (
   releaseSequence: 1,
   releaseYear: "2020",
   reviewDisplayDate: "2023-01-01",
+  reviewSequence: "11",
+  reviewSlug: "test-slug",
+  reviewYear: "2023",
   sortTitle: "Title",
   title: "Title",
   ...overrides,
@@ -95,9 +99,9 @@ describe("calculateGenreCounts", () => {
 
   it("respects reviewed status filter when counting genres", () => {
     const titles = [
-      mockTitle({ genres: ["Horror"], slug: "horror-movie" }),
-      mockTitle({ genres: ["Horror"], slug: undefined }),
-      mockTitle({ genres: ["Drama"], slug: "drama-movie" }),
+      mockTitle({ genres: ["Horror"], reviewSlug: "horror-movie" }),
+      mockTitle({ genres: ["Horror"], reviewSlug: undefined }),
+      mockTitle({ genres: ["Drama"], reviewSlug: "drama-movie" }),
     ];
     const filterValues: CollectionTitlesFiltersValues = {
       reviewedStatus: ["Reviewed"],
@@ -132,19 +136,19 @@ describe("calculateGenreCounts", () => {
         genres: ["Horror"],
         gradeValue: 12,
         releaseYear: "1980",
-        slug: "horror-movie",
+        reviewSlug: "horror-movie",
       }),
       mockTitle({
         genres: ["Horror"],
         gradeValue: 8,
         releaseYear: "1985",
-        slug: "horror-2",
+        reviewSlug: "horror-2",
       }),
       mockTitle({
         genres: ["Drama"],
         gradeValue: 11,
         releaseYear: "1983",
-        slug: undefined,
+        reviewSlug: undefined,
       }),
     ];
     const filterValues: CollectionTitlesFiltersValues = {
@@ -163,9 +167,9 @@ describe("calculateGenreCounts", () => {
 describe("calculateReviewedStatusCounts", () => {
   it("returns counts for all statuses when no filters applied", () => {
     const titles = [
-      mockTitle({ slug: "reviewed-1" }), // reviewed
-      mockTitle({ slug: "reviewed-2" }), // reviewed
-      mockTitle({ slug: undefined }), // not reviewed
+      mockTitle({ reviewSlug: "reviewed-1" }), // reviewed
+      mockTitle({ reviewSlug: "reviewed-2" }), // reviewed
+      mockTitle({ reviewSlug: undefined }), // not reviewed
     ];
     const filterValues: CollectionTitlesFiltersValues = {};
     const result = calculateReviewedStatusCounts(titles, filterValues);
@@ -177,9 +181,9 @@ describe("calculateReviewedStatusCounts", () => {
 
   it("respects genre filter when counting reviewed status", () => {
     const titles = [
-      mockTitle({ genres: ["Horror"], slug: "horror-1" }),
-      mockTitle({ genres: ["Horror"], slug: undefined }),
-      mockTitle({ genres: ["Drama"], slug: "drama-1" }),
+      mockTitle({ genres: ["Horror"], reviewSlug: "horror-1" }),
+      mockTitle({ genres: ["Horror"], reviewSlug: undefined }),
+      mockTitle({ genres: ["Drama"], reviewSlug: "drama-1" }),
     ];
     const filterValues: CollectionTitlesFiltersValues = {
       genres: ["Horror"],
@@ -194,9 +198,9 @@ describe("calculateReviewedStatusCounts", () => {
 
   it("respects grade filter when counting reviewed status", () => {
     const titles = [
-      mockTitle({ gradeValue: 12, slug: "movie-1" }), // A
-      mockTitle({ gradeValue: 10, slug: "movie-2" }), // B+
-      mockTitle({ gradeValue: 8, slug: undefined }), // B-
+      mockTitle({ gradeValue: 12, reviewSlug: "movie-1" }), // A
+      mockTitle({ gradeValue: 10, reviewSlug: "movie-2" }), // B+
+      mockTitle({ gradeValue: 8, reviewSlug: undefined }), // B-
     ];
     const filterValues: CollectionTitlesFiltersValues = {
       gradeValue: [10, 13], // B+ to A+
@@ -211,9 +215,9 @@ describe("calculateReviewedStatusCounts", () => {
 
   it("excludes reviewed status filter when calculating counts", () => {
     const titles = [
-      mockTitle({ slug: "reviewed-1" }),
-      mockTitle({ slug: "reviewed-2" }),
-      mockTitle({ slug: undefined }),
+      mockTitle({ reviewSlug: "reviewed-1" }),
+      mockTitle({ reviewSlug: "reviewed-2" }),
+      mockTitle({ reviewSlug: undefined }),
     ];
     const filterValues: CollectionTitlesFiltersValues = {
       reviewedStatus: ["Reviewed"], // This should be excluded from calculation

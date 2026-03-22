@@ -1,12 +1,4 @@
-/**
- * Type for OpenGraph image component.
- */
-export type OpenGraphImageComponentType = (
-  props: OpenGraphImageProps,
-) => React.JSX.Element;
-
 type OpenGraphImageProps = {
-  backdrop: string;
   sectionHead?: string;
   title: string;
 };
@@ -20,7 +12,6 @@ type OpenGraphImageProps = {
  * @returns OpenGraph image component
  */
 export function OpenGraphImage({
-  backdrop,
   sectionHead = "Frank's Movie Log",
   title,
 }: OpenGraphImageProps): React.JSX.Element {
@@ -37,7 +28,7 @@ export function OpenGraphImage({
     >
       <img
         height={630}
-        src={backdrop}
+        src="backdrop"
         style={{
           objectFit: "cover",
         }}
@@ -46,7 +37,7 @@ export function OpenGraphImage({
       <div
         style={{
           backgroundImage:
-            "radial-gradient(400px at left bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0)) 25%",
+            "radial-gradient(ellipse at left bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0)) 25%",
           bottom: 0,
           display: "flex",
           flexDirection: "column",

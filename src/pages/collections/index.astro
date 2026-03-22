@@ -1,33 +1,5 @@
 ---
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
-import { Collections } from "~/features/collections/Collections";
-import { getCollectionsProps } from "~/features/collections/getCollectionsProps";
-
-const collectionsProps = await getCollectionsProps();
-const backdropImageProps = await getLayoutBackdropImageProps("collections");
-
-const deck = `"Okay ramblers, let's get rambling."`;
+import CollectionsPage from "~/features/collections/CollectionsPage.astro";
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{
-    description:
-      "A sortable index of movie collections reviewed on this site. Sort by name, review count, or title count.",
-  }}
-  openGraph={{ description: deck, type: "website" }}
-  title="Collections"
->
-  <Layout
-    backdrop={{
-      deck,
-      imageProps: backdropImageProps,
-      title: "Collections",
-    }}
-    className="bg-subtle"
-  >
-    <Collections client:load {...collectionsProps} />
-  </Layout>
-</AstroPageShell>
+<CollectionsPage />

@@ -1,6 +1,9 @@
-import { getFluidWidthPosterImageProps } from "~/api/posters";
-import { allViewings } from "~/api/viewings";
+import type { CollectionEntry } from "astro:content";
+
+import { getFluidWidthPosterImageProps } from "~/assets/posters";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
+import { toSortDate } from "~/utils/toSortDate";
+import { toSortYear } from "~/utils/toSortYear";
 
 import type { ViewingsProps, ViewingsValue } from "./Viewings";
 
@@ -10,31 +13,40 @@ import { sortViewings } from "./sortViewings";
  * Fetches data for the viewings page including poster images and metadata.
  * @returns Props for the Viewings component with all viewings sorted by date
  */
-export async function getViewingsProps(): Promise<ViewingsProps> {
-  const {
-    distinctMedia,
-    distinctReleaseYears,
-    distinctVenues,
-    distinctViewingYears,
-    viewings,
-  } = await allViewings();
+export async function getViewingLogProps(
+  viewingLogEntries: CollectionEntry<"viewingLog">["data"][],
+): Promise<ViewingsProps> {
+  const distinctMedia = new Set<string>();
+  const distinctVenues = new Set<string>();
+  const distinctViewingYears = new Set<string>();
+  const distinctReleaseYears = new Set<string>();
 
   const values = await Promise.all(
-    viewings.map(async (viewing) => {
+    viewingLogEntries.map(async (entry) => {
+      if (entry.medium) {
+        distinctMedia.add(entry.medium);
+      }
+
+      if (entry.venue) {
+        distinctVenues.add(entry.venue);
+      }
+      distinctViewingYears.add(toSortYear(entry.date));
+      distinctReleaseYears.add(entry.releaseYear);
+
       const value: ViewingsValue = {
-        medium: viewing.medium,
+        date: toSortDate(entry.date),
+        medium: entry.medium,
         posterImageProps: await getFluidWidthPosterImageProps(
-          viewing.slug,
+          entry.reviewSlug,
           PosterListItemImageConfig,
         ),
-        releaseYear: viewing.releaseYear,
-        slug: viewing.slug,
-        sortTitle: viewing.sortTitle,
-        title: viewing.title,
-        venue: viewing.venue,
-        viewingDate: viewing.viewingDate,
-        viewingSequence: viewing.viewingSequence,
-        viewingYear: viewing.viewingYear,
+        releaseYear: entry.releaseYear,
+        reviewSlug: entry.reviewSlug,
+        sequence: entry.sequence,
+        sortTitle: entry.sortTitle,
+        title: entry.title,
+        venue: entry.venue,
+        viewingYear: toSortYear(entry.date),
       };
 
       return value;
@@ -42,10 +54,10 @@ export async function getViewingsProps(): Promise<ViewingsProps> {
   );
 
   return {
-    distinctMedia,
-    distinctReleaseYears,
-    distinctVenues,
-    distinctViewingYears,
+    distinctMedia: [...distinctMedia].toSorted(),
+    distinctReleaseYears: [...distinctReleaseYears].toSorted(),
+    distinctVenues: [...distinctVenues].toSorted(),
+    distinctViewingYears: [...distinctViewingYears].toSorted(),
     initialSort: "viewing-date-desc",
     values: sortViewings(values, "viewing-date-desc"),
   };

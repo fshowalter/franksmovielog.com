@@ -1,82 +1,30 @@
 ---
-import type { Review as AllReviewsResult } from "~/api/reviews";
+import type { CollectionEntry } from "astro:content";
 
-import { getFluidWidthPosterImageProps } from "~/api/posters";
-import { allReviews, getContentPlainText } from "~/api/reviews";
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { Layout } from "~/components/layout/Layout";
-import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
-import { getReviewProps } from "~/features/review/getReviewProps";
-import { Review } from "~/features/review/Review";
+import { getCollection } from "astro:content";
 
-type Props = AllReviewsResult;
+import ReviewPage from "~/features/review/ReviewPage.astro";
+
+type Props = {
+  reviewedTitle: CollectionEntry<"reviewedTitles">["data"];
+};
 
 export async function getStaticPaths() {
-  const { reviews } = await allReviews();
+  const reviewedTitles = await getCollection("reviewedTitles");
 
-  return await Promise.all(
-    reviews.map(async (review) => {
-      return {
-        params: {
-          slug: review.slug,
-        },
-        props: review,
-      };
-    }),
-  );
+  return reviewedTitles.map(({ data: reviewedTitle }) => {
+    return {
+      params: {
+        slug: reviewedTitle.review.id,
+      },
+      props: {
+        reviewedTitle,
+      },
+    };
+  });
 }
 
-const { rawContent, releaseYear, slug, title } = Astro.props;
-
-const reviewProps = await getReviewProps(Astro.props);
-
-const searchPosterImageProps = await getFluidWidthPosterImageProps(
-  slug,
-  PosterListItemImageConfig,
-);
-
-//trim the string to the maximum length
-let description = getContentPlainText(rawContent)
-  .replaceAll(/\r?\n|\r/g, " ")
-  .slice(0, Math.max(0, 160));
-
-//re-trim if we are in the middle of a word
-description = description.slice(
-  0,
-  Math.max(0, Math.min(description.length, description.lastIndexOf(" "))),
-);
-
-let metaTitle = `${title} movie review`;
-
-metaTitle =
-  title.length <= 10
-    ? `${metaTitle} & summary (${releaseYear})`
-    : `${metaTitle} (${releaseYear})`;
+const { reviewedTitle } = Astro.props;
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{ description }}
-  openGraph={{ description, type: "article" }}
-  title={metaTitle}
->
-  <Fragment slot="meta-theme-color">
-    <meta
-      content="#fff"
-      media="(prefers-color-scheme: light)"
-      name="theme-color"
-    />
-    <meta
-      content="#322f2f"
-      media="(prefers-color-scheme: dark)"
-      name="theme-color"
-    />
-  </Fragment>
-  <Layout
-    className="flex flex-col"
-    data-pagefind-body
-    data-pagefind-meta={`image:${searchPosterImageProps.src}`}
-  >
-    <Review {...reviewProps} />
-  </Layout>
-</AstroPageShell>
+<ReviewPage reviewedTitle={reviewedTitle} />

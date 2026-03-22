@@ -1,4 +1,4 @@
-import type { PosterImageProps } from "~/api/posters";
+import type { PosterImageProps } from "~/assets/posters";
 
 import { PosterListItemPoster } from "./PosterListItemPoster";
 

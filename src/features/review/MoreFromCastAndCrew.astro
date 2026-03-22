@@ -1,0 +1,58 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getEntry } from "astro:content";
+
+import MoreReviews from "~/components/more-reviews/MoreReviews.astro";
+
+type Props = {
+  values: CollectionEntry<"reviewedTitles">["data"]["moreCastAndCrew"];
+};
+
+const { values } = Astro.props;
+---
+
+{
+  await Promise.all(
+    values.map(async (value) => {
+      let leadText;
+
+      switch (value.creditKind) {
+        case "director": {
+          leadText = "More directed by";
+          break;
+        }
+        case "performer": {
+          leadText = "More with";
+          break;
+        }
+        case "writer": {
+          leadText = "More written by";
+          break;
+        }
+      }
+
+      if (!leadText) {
+        throw new Error(`Invalid creditKind: ${value.creditKind}`);
+      }
+
+      return (
+        <MoreReviews
+          cardProps={await Promise.all(
+            value.titles.map(async (title) => {
+              const reviewedTitleEntry = await getEntry(title);
+              return {
+                value: reviewedTitleEntry.data,
+              };
+            }),
+          )}
+          headingProps={{
+            accentText: value.name,
+            href: `/cast-and-crew/${value.slug}/`,
+            text: leadText,
+          }}
+        />
+      );
+    }),
+  )
+}

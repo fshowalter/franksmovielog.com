@@ -1,0 +1,41 @@
+---
+type Props = {
+  class?: string;
+  reviewSlug?: string;
+  title: string;
+  year: string;
+};
+
+const { class: className, reviewSlug, title, year } = Astro.props;
+const yearClasses = `text-xxs leading-none font-light text-subtle`;
+---
+
+{
+  reviewSlug ? (
+    <a
+      class={`
+        text-base/5 font-semibold text-default transition-all duration-500
+        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:opacity-0
+        hover:text-accent
+      `}
+      href={`/reviews/${reviewSlug}/`}
+    >
+      {/* prettier-ignore */}
+      {title}&#x202F;&#x202F;<span class={yearClasses}>{year}</span>
+    </a>
+  ) : (
+    <span
+      class:list={[
+        `
+          block text-base/5 font-semibold
+          text-(--list-item-title-unreviewed-color,var(--fg-subtle))
+        `,
+        className,
+      ]}
+    >
+      {/* prettier-ignore */}
+      {title}&#x202F;&#x202F;<span class={yearClasses}>{year}</span>
+    </span>
+  )
+}

@@ -1,23 +1,10 @@
 /**
- * Type for home page OpenGraph image component.
- */
-export type HomeOpenGraphImageComponentType = (
-  props: HomeOpenGraphImageProps,
-) => React.JSX.Element;
-
-type HomeOpenGraphImageProps = {
-  backdrop: string;
-};
-
-/**
  * OpenGraph image component for the home page.
  * @param props - Component props
  * @param props.backdrop - URL of the backdrop image
  * @returns OpenGraph image element
  */
-export function HomeOpenGraphImage({
-  backdrop,
-}: HomeOpenGraphImageProps): React.JSX.Element {
+export function HomeOpenGraphImage(): React.JSX.Element {
   "use no memo";
 
   return (
@@ -31,7 +18,7 @@ export function HomeOpenGraphImage({
     >
       <img
         height={630}
-        src={backdrop}
+        src="backdrop"
         style={{
           objectFit: "cover",
         }}

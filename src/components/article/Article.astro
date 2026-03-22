@@ -1,0 +1,47 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getCollection } from "astro:content";
+
+import LongFormText from "~/components/long-form-text/LongFormText.astro";
+import MoreReviews from "~/components/more-reviews/MoreReviews.astro";
+import { linkReviewedTitles } from "~/utils/linkReviewedTitles";
+import { mostRecentReviewedTitles } from "~/utils/mostRecentReviewedTitles";
+
+type Props = {
+  page: CollectionEntry<"pages">["data"];
+};
+
+const { page } = Astro.props;
+
+const reviewedTitles = await getCollection("reviewedTitles");
+const recentReviews = await mostRecentReviewedTitles(4);
+---
+
+<section class="flex flex-col items-center pt-16 pb-32">
+  <div class="px-container">
+    <LongFormText
+      class="max-w-prose"
+      text={linkReviewedTitles(
+        page.html,
+        reviewedTitles.map(({ data: e }) => {
+          return { imdbId: e.imdbId, slug: e.review.id };
+        }),
+      )}
+    />
+  </div>
+</section>
+<div class="bg-subtle pt-6 pb-16">
+  <MoreReviews
+    cardProps={recentReviews.map((value) => {
+      return {
+        value: value.data,
+      };
+    })}
+    headingProps={{
+      accentText: "Reviews",
+      href: `/reviews/`,
+      text: "Recent",
+    }}
+  />
+</div>
