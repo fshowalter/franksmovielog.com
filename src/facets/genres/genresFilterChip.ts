@@ -1,0 +1,10 @@
+import type { FilterChip } from "~/components/filter-and-sort/AppliedFilters";
+
+import { buildMultiSelectChips } from "~/facets/filterChipBuilders";
+
+// AIDEV-NOTE: id is "genre" (not "genres") so chips get id "genre-horror" not "genres-horror"
+export function buildGenresFilterChip(
+  values: readonly string[] | undefined,
+): FilterChip[] {
+  return buildMultiSelectChips({ category: "Genre", id: "genre", values });
+}

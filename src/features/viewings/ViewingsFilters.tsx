@@ -1,8 +1,8 @@
 import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
 
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/fields/CheckboxListField";
 import { YearField } from "~/components/fields/YearField";
-import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
 
 import type { ViewingsValue } from "./Viewings";
@@ -109,7 +109,7 @@ export function ViewingsFilters({
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
-      <FilterSection title="Reviewed Status">
+      <AnimatedDetailsDisclosure title="Reviewed Status">
         <CheckboxListField
           defaultValues={filterValues.reviewedStatus ?? []}
           label="Reviewed Status"
@@ -119,7 +119,7 @@ export function ViewingsFilters({
           onClear={() => dispatch(createReviewedStatusFilterChangedAction([]))}
           options={reviewedStatusOptions}
         />
-      </FilterSection>
+      </AnimatedDetailsDisclosure>
       <YearField
         defaultValues={filterValues.viewingYear}
         label="Viewing Year"
@@ -129,7 +129,7 @@ export function ViewingsFilters({
         }
         years={distinctViewingYears}
       />
-      <FilterSection title="Medium">
+      <AnimatedDetailsDisclosure title="Medium">
         <CheckboxListField
           defaultValues={filterValues.medium ?? []}
           label="Medium"
@@ -139,8 +139,8 @@ export function ViewingsFilters({
           onClear={() => dispatch(createMediumFilterChangedAction([]))}
           options={mediumOptions}
         />
-      </FilterSection>
-      <FilterSection title="Venue">
+      </AnimatedDetailsDisclosure>
+      <AnimatedDetailsDisclosure title="Venue">
         <CheckboxListField
           defaultValues={filterValues.venue ?? []}
           label="Venue"
@@ -150,7 +150,7 @@ export function ViewingsFilters({
           onClear={() => dispatch(createVenueFilterChangedAction([]))}
           options={venueOptions}
         />
-      </FilterSection>
+      </AnimatedDetailsDisclosure>
     </>
   );
 }

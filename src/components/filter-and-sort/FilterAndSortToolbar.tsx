@@ -1,17 +1,17 @@
 import type { SortProps } from "./FilterAndSortContainer";
 
 /**
- * Header component with filter toggle, sort options, and result count.
+ * Toolbar component with filter toggle, sort options, and result count.
  * @param props - Component props
  * @param props.filterDrawerVisible - Whether filter drawer is visible
- * @param props.headerLinks - Optional navigation links
+ * @param props.headerLink - Optional navigation link
  * @param props.onFilterClick - Handler for filter toggle click
  * @param props.sortProps - Sort configuration and handlers
  * @param props.toggleButtonRef - Ref to filter toggle button
  * @param props.totalCount - Total number of results
- * @returns Header with filter/sort controls and result count
+ * @returns Toolbar with filter/sort controls and result count
  */
-export function FilterAndSortHeader<T extends string>({
+export function FilterAndSortToolbar<T extends string>({
   filterDrawerVisible,
   headerLink,
   onFilterClick,
@@ -49,7 +49,8 @@ export function FilterAndSortHeader<T extends string>({
         </span>
       </span>
       <div>{headerLink && <HeaderLink {...headerLink} />}</div>
-      {/* AIDEV-NOTE: Per SPEC.md Stage 1 - Hide sort dropdown on mobile (<640px), show on desktop (≥640px) */}
+      {/* AIDEV-NOTE: Hide sort dropdown on mobile (<640px), show on desktop (≥640px).
+          Mobile sort is handled by radio buttons in the filter drawer. */}
       <div
         className={`
           col-span-full hidden
@@ -81,7 +82,7 @@ export function FilterAndSortHeader<T extends string>({
           </select>
         </label>
       </div>
-      {/* AIDEV-NOTE: Per SPEC.md Stage 1 - Show "Filter & Sort" on mobile (<640px), "Filter" on desktop (≥640px) */}
+      {/* AIDEV-NOTE: Show "Filter & Sort" on mobile (<640px), "Filter" on desktop (≥640px) */}
       <button
         aria-controls="filters"
         aria-expanded={filterDrawerVisible}

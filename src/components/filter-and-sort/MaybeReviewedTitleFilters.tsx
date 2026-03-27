@@ -2,9 +2,9 @@ import type { ComponentProps } from "react";
 
 import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
 
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/fields/CheckboxListField";
 
-import { FilterSection } from "./FilterSection";
 import { ReviewedTitleFilters } from "./ReviewedTitleFilters";
 
 type Props = ComponentProps<typeof ReviewedTitleFilters> & {
@@ -52,7 +52,7 @@ export function MaybeReviewedTitleFilters({
         reviewYear={reviewYear}
         title={title}
       />
-      <FilterSection title="Reviewed Status">
+      <AnimatedDetailsDisclosure title="Reviewed Status">
         <CheckboxListField
           defaultValues={reviewedStatus.defaultValues ?? []}
           label="Reviewed Status"
@@ -62,7 +62,7 @@ export function MaybeReviewedTitleFilters({
           }
           options={reviewedStatusOptions}
         />
-      </FilterSection>
+      </AnimatedDetailsDisclosure>
     </>
   );
 }

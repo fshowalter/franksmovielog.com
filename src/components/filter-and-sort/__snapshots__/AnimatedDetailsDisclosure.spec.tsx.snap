@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`FilterSection > snapshot test - closed state 1`] = `
+exports[`AnimatedDetailsDisclosure > snapshot test - closed state 1`] = `
 <div>
   <details
     class="
@@ -53,7 +53,7 @@ exports[`FilterSection > snapshot test - closed state 1`] = `
 </div>
 `;
 
-exports[`FilterSection > snapshot test - open state (default) 1`] = `
+exports[`AnimatedDetailsDisclosure > snapshot test - open state (default) 1`] = `
 <div>
   <details
     class="

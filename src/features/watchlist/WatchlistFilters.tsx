@@ -1,7 +1,7 @@
 import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
 
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/fields/CheckboxListField";
-import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
 
 import type { WatchlistValue } from "./Watchlist";
@@ -124,7 +124,7 @@ export function WatchlistFilters({
           onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
         }}
       />
-      <FilterSection title="Director">
+      <AnimatedDetailsDisclosure title="Director">
         <CheckboxListField
           defaultValues={filterValues.director}
           label="Director"
@@ -136,8 +136,8 @@ export function WatchlistFilters({
           }
           options={directorOptions}
         />
-      </FilterSection>
-      <FilterSection title="Performer">
+      </AnimatedDetailsDisclosure>
+      <AnimatedDetailsDisclosure title="Performer">
         <CheckboxListField
           defaultValues={filterValues.performer}
           label="Performer"
@@ -149,8 +149,8 @@ export function WatchlistFilters({
           }
           options={performerOptions}
         />
-      </FilterSection>
-      <FilterSection title="Writer">
+      </AnimatedDetailsDisclosure>
+      <AnimatedDetailsDisclosure title="Writer">
         <CheckboxListField
           defaultValues={filterValues.writer}
           label="Writer"
@@ -162,8 +162,8 @@ export function WatchlistFilters({
           }
           options={writerOptions}
         />
-      </FilterSection>
-      <FilterSection title="Collection">
+      </AnimatedDetailsDisclosure>
+      <AnimatedDetailsDisclosure title="Collection">
         <CheckboxListField
           defaultValues={filterValues.collection}
           label="Collection"
@@ -175,7 +175,7 @@ export function WatchlistFilters({
           }
           options={collectionOptions}
         />
-      </FilterSection>
+      </AnimatedDetailsDisclosure>
     </>
   );
 }

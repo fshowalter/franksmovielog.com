@@ -1,0 +1,17 @@
+import { sortString } from "~/sorters/createSorter";
+
+type SortableByTitle = { sortTitle: string };
+type TitleSortKeys = "title-asc" | "title-desc";
+
+export const titleSortComparators: Record<
+  TitleSortKeys,
+  (a: SortableByTitle, b: SortableByTitle) => number
+> = {
+  "title-asc": (a, b) => sortString(a.sortTitle, b.sortTitle),
+  "title-desc": (a, b) => sortString(a.sortTitle, b.sortTitle) * -1,
+};
+
+export const titleSortOptions = [
+  { label: "Title (A → Z)", value: "title-asc" },
+  { label: "Title (Z → A)", value: "title-desc" },
+];

@@ -2,30 +2,30 @@ import type { ReactNode } from "react";
 
 import { useEffect, useRef } from "react";
 
-type FilterSectionProps = {
+type AnimatedDetailsDisclosureProps = {
   children: ReactNode;
   defaultOpen?: boolean;
   title: string;
 };
 
 /**
- * Collapsible filter section wrapper using native details/summary.
+ * Collapsible disclosure wrapper using native details/summary.
  * - Prevents default toggle and manually controls open attribute for smooth animations
  * - Opening: height 0 → open=true → height scrollHeight
  * - Closing: height scrollHeight → is-closing class → height 0 → open=false on transitionend
  * - Uses direct DOM manipulation (classList, open attribute) to avoid React re-render conflicts
  * - Opacity transitions handled by CSS based on [open] and .is-closing states
  * @param props - Component props
- * @param props.children - Filter field content to render in details
+ * @param props.children - Content to render in the disclosure panel
  * @param props.defaultOpen - Whether section should be open by default (default: true)
  * @param props.title - Section title displayed in summary
- * @returns Collapsible filter section with accessible details/summary structure
+ * @returns Collapsible section with accessible details/summary structure
  */
-export function FilterSection({
+export function AnimatedDetailsDisclosure({
   children,
   defaultOpen = true,
   title,
-}: FilterSectionProps): React.JSX.Element {
+}: AnimatedDetailsDisclosureProps): React.JSX.Element {
   const detailsRef = useRef<HTMLDetailsElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const transitionsEnabledRef = useRef<boolean | null>(null);
@@ -44,8 +44,8 @@ export function FilterSection({
     if (!summary) return;
 
     /**
-     * Check if transitions are enabled
-     * Lazy check on first click to ensure styles are computed
+     * Check if transitions are enabled.
+     * Lazy check on first click to ensure styles are computed.
      */
     const checkTransitionsEnabled = (): boolean => {
       if (transitionsEnabledRef.current === null) {
@@ -56,7 +56,7 @@ export function FilterSection({
     };
 
     /**
-     * Handles summary click - prevents default and manually controls open state
+     * Handles summary click - prevents default and manually controls open state.
      */
     const handleClick = (evt: MouseEvent): void => {
       if (!checkTransitionsEnabled()) return; // Let native behavior work if no transitions
@@ -71,7 +71,7 @@ export function FilterSection({
     };
 
     /**
-     * Opens the details element with animation
+     * Opens the details element with animation.
      */
     const openDetails = (): void => {
       // Set height to 0 before opening
@@ -88,7 +88,7 @@ export function FilterSection({
     };
 
     /**
-     * Closes the details element with animation
+     * Closes the details element with animation.
      */
     const closeDetails = (): void => {
       // Set height to current scrollHeight first
@@ -106,7 +106,7 @@ export function FilterSection({
     };
 
     /**
-     * Handles transition end - cleanup after closing animation
+     * Handles transition end - cleanup after closing animation.
      */
     const handleTransitionEnd = (evt: TransitionEvent): void => {
       if (evt.target !== content) return;

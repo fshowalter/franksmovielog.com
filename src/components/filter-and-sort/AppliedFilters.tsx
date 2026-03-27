@@ -1,4 +1,4 @@
-import { FilterSection } from "./FilterSection";
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 
 /**
  * AppliedFilters component displays active filters as removable chips
@@ -35,7 +35,7 @@ export function AppliedFilters({
   }
 
   return (
-    <FilterSection title="Applied Filters">
+    <AnimatedDetailsDisclosure title="Applied Filters">
       <div className="mb-3 flex flex-wrap gap-2">
         {filters.map((filter) => {
           // AIDEV-NOTE: Per FILTER_REDESIGN_SPEC.md Task 8.2:
@@ -79,6 +79,6 @@ export function AppliedFilters({
       >
         Clear all
       </button>
-    </FilterSection>
+    </AnimatedDetailsDisclosure>
   );
 }

@@ -275,6 +275,7 @@ describe("CastAndCrewMemberTitles", () => {
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
+      await clickToggleFilters(user);
       await clickReviewedStatusFilterOption(user, "Reviewed");
       await clickViewResults(user);
 
@@ -314,6 +315,7 @@ describe("CastAndCrewMemberTitles", () => {
       const user = getUserWithFakeTimers();
       render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
 
+      await clickToggleFilters(user);
       await clickReviewedStatusFilterOption(user, "Not Reviewed");
       await clickViewResults(user);
 

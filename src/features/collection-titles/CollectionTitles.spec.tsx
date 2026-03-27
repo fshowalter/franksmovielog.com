@@ -243,6 +243,7 @@ describe("CollectionTitles", () => {
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
 
+      await clickToggleFilters(user);
       await clickReviewedStatusFilterOption(user, "Reviewed");
       await clickViewResults(user);
 
@@ -279,6 +280,7 @@ describe("CollectionTitles", () => {
       const user = getUserWithFakeTimers();
       render(<CollectionTitles {...baseProps} values={titles} />);
 
+      await clickToggleFilters(user);
       await clickReviewedStatusFilterOption(user, "Not Reviewed");
       await clickViewResults(user);
 

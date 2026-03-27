@@ -1,7 +1,7 @@
 import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListField";
 
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/fields/CheckboxListField";
-import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 import { capitalize } from "~/utils/capitalize";
 
 /**
@@ -36,7 +36,7 @@ export function CreditedAsFilter({
   }));
 
   return (
-    <FilterSection title="Credited As">
+    <AnimatedDetailsDisclosure title="Credited As">
       <CheckboxListField
         defaultValues={defaultValues}
         label="Credited As"
@@ -44,6 +44,6 @@ export function CreditedAsFilter({
         onClear={onClear || ((): void => onChange([]))}
         options={options}
       />
-    </FilterSection>
+    </AnimatedDetailsDisclosure>
   );
 }

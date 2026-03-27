@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-import { FilterSection } from "./FilterSection";
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 
-describe("FilterSection", () => {
+describe("AnimatedDetailsDisclosure", () => {
   it("renders open by default", () => {
     render(
-      <FilterSection title="Test Section">
+      <AnimatedDetailsDisclosure title="Test Section">
         <div>Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     const details = screen.getByRole("group");
@@ -17,9 +17,9 @@ describe("FilterSection", () => {
 
   it("renders closed when defaultOpen is false", () => {
     render(
-      <FilterSection defaultOpen={false} title="Test Section">
+      <AnimatedDetailsDisclosure defaultOpen={false} title="Test Section">
         <div>Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     const details = screen.getByRole("group");
@@ -28,9 +28,9 @@ describe("FilterSection", () => {
 
   it("displays the section title", () => {
     render(
-      <FilterSection title="Genres">
+      <AnimatedDetailsDisclosure title="Genres">
         <div>Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     expect(screen.getByText("Genres")).toBeInTheDocument();
@@ -38,9 +38,9 @@ describe("FilterSection", () => {
 
   it("renders children content", () => {
     render(
-      <FilterSection title="Test Section">
+      <AnimatedDetailsDisclosure title="Test Section">
         <div>Test Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     expect(screen.getByText("Test Content")).toBeInTheDocument();
@@ -48,9 +48,9 @@ describe("FilterSection", () => {
 
   it("uses native details/summary for keyboard accessibility", () => {
     const { container } = render(
-      <FilterSection title="Test Section">
+      <AnimatedDetailsDisclosure title="Test Section">
         <div>Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     // Verify we're using native details/summary elements
@@ -68,9 +68,9 @@ describe("FilterSection", () => {
 
   it("has accessible summary element", () => {
     render(
-      <FilterSection title="Test Section">
+      <AnimatedDetailsDisclosure title="Test Section">
         <div>Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     // summary element should be properly structured
@@ -81,9 +81,9 @@ describe("FilterSection", () => {
 
   it("renders disclosure triangle", () => {
     const { container } = render(
-      <FilterSection title="Test Section">
+      <AnimatedDetailsDisclosure title="Test Section">
         <div>Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     // Check for SVG disclosure triangle
@@ -94,9 +94,9 @@ describe("FilterSection", () => {
 
   it("sets initial height for open state", () => {
     const { container } = render(
-      <FilterSection defaultOpen={true} title="Test Section">
+      <AnimatedDetailsDisclosure defaultOpen={true} title="Test Section">
         <div>Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     // Find the panel div (first child of details after summary)
@@ -108,9 +108,9 @@ describe("FilterSection", () => {
 
   it("sets initial height for closed state", () => {
     const { container } = render(
-      <FilterSection defaultOpen={false} title="Test Section">
+      <AnimatedDetailsDisclosure defaultOpen={false} title="Test Section">
         <div>Content</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     // Find the panel div (first child of details after summary)
@@ -126,9 +126,9 @@ describe("FilterSection", () => {
 
   it("snapshot test - open state (default)", () => {
     const { container } = render(
-      <FilterSection title="Genres">
+      <AnimatedDetailsDisclosure title="Genres">
         <div>Filter content here</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     expect(container).toMatchSnapshot();
@@ -136,9 +136,9 @@ describe("FilterSection", () => {
 
   it("snapshot test - closed state", () => {
     const { container } = render(
-      <FilterSection defaultOpen={false} title="Genres">
+      <AnimatedDetailsDisclosure defaultOpen={false} title="Genres">
         <div>Filter content here</div>
-      </FilterSection>,
+      </AnimatedDetailsDisclosure>,
     );
 
     expect(container).toMatchSnapshot();

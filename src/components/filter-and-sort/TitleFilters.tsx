@@ -1,7 +1,7 @@
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/fields/CheckboxListField";
 import { TextField } from "~/components/fields/TextField";
 import { YearField } from "~/components/fields/YearField";
-import { FilterSection } from "~/components/filter-and-sort/FilterSection";
 
 type TitleFiltersProps = {
   genres?: {
@@ -52,7 +52,7 @@ export function TitleFilters({
         years={releaseYear.values}
       />
       {genres && (
-        <FilterSection title="Genres">
+        <AnimatedDetailsDisclosure title="Genres">
           <CheckboxListField
             defaultValues={genres.defaultValues}
             label="Genres"
@@ -64,7 +64,7 @@ export function TitleFilters({
               value,
             }))}
           />
-        </FilterSection>
+        </AnimatedDetailsDisclosure>
       )}
     </>
   );

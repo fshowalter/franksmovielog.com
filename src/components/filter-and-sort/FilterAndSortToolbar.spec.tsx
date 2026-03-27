@@ -7,14 +7,14 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 import type { SortProps } from "./FilterAndSortContainer";
 
-import { FilterAndSortHeader } from "./FilterAndSortHeader";
+import { FilterAndSortToolbar } from "./FilterAndSortToolbar";
 
-describe("FilterAndSortHeader", () => {
+describe("FilterAndSortToolbar", () => {
   let mockOnFilterClick: ComponentProps<
-    typeof FilterAndSortHeader
+    typeof FilterAndSortToolbar
   >["onFilterClick"];
   let mockOnSortChange: ComponentProps<
-    typeof FilterAndSortHeader
+    typeof FilterAndSortToolbar
   >["sortProps"]["onSortChange"];
   let toggleButtonRef: React.RefObject<HTMLButtonElement | null>;
 
@@ -37,7 +37,7 @@ describe("FilterAndSortHeader", () => {
   describe("Result Count", () => {
     it("displays total count with formatting", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -52,7 +52,7 @@ describe("FilterAndSortHeader", () => {
 
     it("handles zero count", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -66,7 +66,7 @@ describe("FilterAndSortHeader", () => {
 
     it("handles single result", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -80,7 +80,7 @@ describe("FilterAndSortHeader", () => {
 
     it("formats large numbers with commas", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -96,7 +96,7 @@ describe("FilterAndSortHeader", () => {
   describe("Header Link", () => {
     it("renders header link when provided", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           headerLink={{ href: "/watchlist", text: "View Watchlist" }}
           onFilterClick={mockOnFilterClick}
@@ -113,7 +113,7 @@ describe("FilterAndSortHeader", () => {
 
     it("does not render link when not provided", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -129,7 +129,7 @@ describe("FilterAndSortHeader", () => {
   describe("Sort Dropdown", () => {
     it("renders sort dropdown with current value", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={{
@@ -147,7 +147,7 @@ describe("FilterAndSortHeader", () => {
 
     it("renders all sort options", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -169,7 +169,7 @@ describe("FilterAndSortHeader", () => {
       };
 
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={customSortProps}
@@ -188,7 +188,7 @@ describe("FilterAndSortHeader", () => {
   describe("Filter Toggle Button", () => {
     it("renders toggle button with correct label", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -205,7 +205,7 @@ describe("FilterAndSortHeader", () => {
       const user = userEvent.setup();
 
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -221,7 +221,7 @@ describe("FilterAndSortHeader", () => {
 
     it("sets aria-expanded to false when drawer is closed", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -236,7 +236,7 @@ describe("FilterAndSortHeader", () => {
 
     it("sets aria-expanded to true when drawer is open", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={true}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -251,7 +251,7 @@ describe("FilterAndSortHeader", () => {
 
     it("has aria-controls pointing to filters", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -266,7 +266,7 @@ describe("FilterAndSortHeader", () => {
 
     it("attaches ref to toggle button", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -285,7 +285,7 @@ describe("FilterAndSortHeader", () => {
   describe("Responsive Text", () => {
     it("renders both mobile and desktop text for filter button", () => {
       render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -304,7 +304,7 @@ describe("FilterAndSortHeader", () => {
   describe("Snapshot Tests", () => {
     it("matches snapshot - basic render", () => {
       const { container } = render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -318,7 +318,7 @@ describe("FilterAndSortHeader", () => {
 
     it("matches snapshot - with header link", () => {
       const { container } = render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           headerLink={{ href: "/watchlist", text: "View Watchlist" }}
           onFilterClick={mockOnFilterClick}
@@ -333,7 +333,7 @@ describe("FilterAndSortHeader", () => {
 
     it("matches snapshot - drawer visible", () => {
       const { container } = render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={true}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -347,7 +347,7 @@ describe("FilterAndSortHeader", () => {
 
     it("matches snapshot - zero results", () => {
       const { container } = render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}
@@ -361,7 +361,7 @@ describe("FilterAndSortHeader", () => {
 
     it("matches snapshot - large result count", () => {
       const { container } = render(
-        <FilterAndSortHeader
+        <FilterAndSortToolbar
           filterDrawerVisible={false}
           onFilterClick={mockOnFilterClick}
           sortProps={defaultSortProps}

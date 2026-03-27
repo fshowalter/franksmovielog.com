@@ -1,4 +1,4 @@
-import { FilterSection } from "~/components/filter-and-sort/FilterSection";
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 import { debounceOnChange } from "~/utils/debounce";
 
 /**
@@ -39,7 +39,7 @@ export function TextField({
   };
 
   return (
-    <FilterSection title={label}>
+    <AnimatedDetailsDisclosure title={label}>
       <input
         aria-label={label}
         className={`
@@ -52,6 +52,6 @@ export function TextField({
         placeholder={placeholder}
         type="text"
       />
-    </FilterSection>
+    </AnimatedDetailsDisclosure>
   );
 }

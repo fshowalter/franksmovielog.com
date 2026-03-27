@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { FilterSection } from "~/components/filter-and-sort/FilterSection";
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 
 import { RangeSliderField } from "./RangeSliderField";
 import { SelectInput } from "./SelectInput";
@@ -90,7 +90,7 @@ export function YearField({
   };
 
   return (
-    <FilterSection title={label}>
+    <AnimatedDetailsDisclosure title={label}>
       <div className="flex flex-col gap-4">
         <fieldset aria-label={label} className="text-subtle">
           <div className="flex items-baseline">
@@ -142,7 +142,7 @@ export function YearField({
           toValue={currentMaxNum}
         />
       </div>
-    </FilterSection>
+    </AnimatedDetailsDisclosure>
   );
 }
 
