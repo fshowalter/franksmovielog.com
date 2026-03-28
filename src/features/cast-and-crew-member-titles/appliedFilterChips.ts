@@ -49,7 +49,7 @@ export function buildAppliedFilterChips(
         category: "Grade",
         id: "gradeValue",
         label:
-          minLetter === maxLetter ? minLetter : `${maxLetter} to ${minLetter}`,
+          minLetter === maxLetter ? minLetter : `${minLetter} to ${maxLetter}`,
       });
     }
   }
@@ -66,7 +66,7 @@ export function buildAppliedFilterChips(
       chips.push({
         category: "Release Year",
         id: "releaseYear",
-        label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
+        label: minYear === maxYear ? minYear : `${minYear} to ${maxYear}`,
       });
     }
   }
@@ -83,7 +83,7 @@ export function buildAppliedFilterChips(
       chips.push({
         category: "Review Year",
         id: "reviewYear",
-        label: minYear === maxYear ? minYear : `${minYear}-${maxYear}`,
+        label: minYear === maxYear ? minYear : `${minYear} to ${maxYear}`,
       });
     }
   }

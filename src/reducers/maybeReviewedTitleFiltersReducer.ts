@@ -112,7 +112,7 @@ function handleRemoveAppliedFilter<
   TState extends MaybeReviewedTitleFiltersState<TValue>,
 >(state: TState, action: RemoveAppliedFilterAction): TState {
   // Handle removal of individual reviewedStatus values (e.g., "reviewedStatus-reviewed")
-  // Updates BOTH pendingFilterValues and activeFilterValues to ensure UI updates.
+  // Only updates pendingFilterValues — list update is deferred until View Results is clicked.
   if (action.filterKey.startsWith("reviewedStatus-")) {
     const statusValue = action.filterKey
       .replace(/^reviewedStatus-/, "")
@@ -125,10 +125,6 @@ function handleRemoveAppliedFilter<
 
     return {
       ...state,
-      activeFilterValues: {
-        ...state.activeFilterValues,
-        reviewedStatus: newStatus.length === 0 ? undefined : newStatus,
-      },
       pendingFilterValues: {
         ...state.pendingFilterValues,
         reviewedStatus: newStatus.length === 0 ? undefined : newStatus,
@@ -136,7 +132,7 @@ function handleRemoveAppliedFilter<
     };
   }
 
-  // For all other filters, use the default behavior from reviewedTitleFiltersReducer
+  // For all other filters, delegate to reviewedTitleFiltersReducer (deferred behavior)
   return reviewedTitleFiltersReducer<TValue, TState>(state, action);
 }
 

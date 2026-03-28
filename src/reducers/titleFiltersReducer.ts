@@ -182,7 +182,7 @@ function handleReleaseYearFilterChanged<
  * Handle removing applied filters - special case for genre filters
  * AIDEV-NOTE: Genre chips have IDs like "genre-horror" or "genre-film-noir" but we need
  * to remove that specific genre from the genres array, not delete the whole genres key.
- * Updates BOTH pendingFilterValues and activeFilterValues to ensure UI updates.
+ * Only updates pendingFilterValues — list update is deferred until View Results is clicked.
  *
  * AIDEV-NOTE: Normalization logic handles all genre formats correctly:
  * - "Film-Noir" (from data) → "film-noir" (normalized)
@@ -206,28 +206,20 @@ function handleRemoveAppliedFilter<
         (g) => String(g).toLowerCase().replaceAll(" ", "-") !== genreSlug,
       );
 
-      // If no genres left, remove the genres key entirely from both pending and active
+      // If no genres left, remove the genres key entirely from pending (deferred)
       if (updatedGenres.length === 0) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const { genres: _removedPending, ...remainingPendingFilters } =
           state.pendingFilterValues;
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const { genres: _removedActive, ...remainingActiveFilters } =
-          state.activeFilterValues;
         return {
           ...state,
-          activeFilterValues: remainingActiveFilters,
           pendingFilterValues: remainingPendingFilters,
         };
       }
 
-      // Update both pending and active filter values
+      // Update only pending filter values (deferred — list updates on View Results)
       return {
         ...state,
-        activeFilterValues: {
-          ...state.activeFilterValues,
-          genres: updatedGenres,
-        },
         pendingFilterValues: {
           ...state.pendingFilterValues,
           genres: updatedGenres,
@@ -236,8 +228,15 @@ function handleRemoveAppliedFilter<
     }
   }
 
-  // For other filters (title, releaseYear), delegate to base filtersReducer
-  return filtersReducer<TValue, TState>(state, action);
+  // For other filters (title, releaseYear, gradeValue, reviewYear),
+  // only update pendingFilterValues (deferred behavior)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { [action.filterKey]: _removed, ...remainingPendingFilters } =
+    state.pendingFilterValues;
+  return {
+    ...state,
+    pendingFilterValues: remainingPendingFilters,
+  };
 }
 
 /**

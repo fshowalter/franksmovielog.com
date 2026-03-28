@@ -40,6 +40,6 @@ function createGenresFilter<TValue extends FilterableTitle>(
 ) {
   if (!filterValue || filterValue.length === 0) return;
   return (value: TValue) => {
-    return filterValue.every((genre) => value.genres.includes(genre));
+    return filterValue.some((genre) => value.genres.includes(genre));
   };
 }

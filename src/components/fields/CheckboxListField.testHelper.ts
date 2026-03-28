@@ -50,8 +50,10 @@ export async function clickCheckboxListOption(
   );
 
   // If not found, try clicking "Show more" button
+  // AIDEV-NOTE: The "Show more" button is inside the fieldset but OUTSIDE the role="group" div,
+  // so we must search within the fieldset (targetFieldset), not the group (targetGroup).
   if (!checkbox) {
-    const showMoreButton = within(targetGroup as HTMLElement).queryByRole(
+    const showMoreButton = within(targetFieldset).queryByRole(
       "button",
       {
         name: /Show more/,

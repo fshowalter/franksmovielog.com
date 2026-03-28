@@ -30,7 +30,7 @@ describe("buildAppliedFilterChips", () => {
 
   it("creates chip for grade range", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
-      gradeValue: [14, 13], // Min: A-, Max: B+
+      gradeValue: [13, 14], // Min: B+, Max: A-
     };
     const chips = buildAppliedFilterChips(filterValues, {
       distinctReleaseYears: ["1920", "2024"],
@@ -74,7 +74,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Release Year", id: "releaseYear", label: "1980-1989" },
+      { category: "Release Year", id: "releaseYear", label: "1980 to 1989" },
     ]);
   });
 
@@ -100,7 +100,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Review Year", id: "reviewYear", label: "2020-2025" },
+      { category: "Review Year", id: "reviewYear", label: "2020 to 2025" },
     ]);
   });
 
@@ -261,7 +261,7 @@ describe("buildAppliedFilterChips", () => {
     const filterValues: CastAndCrewMemberTitlesFiltersValues = {
       creditedAs: ["director"],
       genres: ["Horror", "Sci-Fi"],
-      gradeValue: [14, 13],
+      gradeValue: [13, 14],
       releaseYear: ["1980", "1989"],
       reviewedStatus: ["Not Reviewed"],
       reviewYear: ["2020", "2025"],
@@ -275,8 +275,8 @@ describe("buildAppliedFilterChips", () => {
       { category: "Genre", id: "genre-horror", label: "Horror" },
       { category: "Genre", id: "genre-sci-fi", label: "Sci-Fi" },
       { category: "Grade", id: "gradeValue", label: "B+ to A-" },
-      { category: "Release Year", id: "releaseYear", label: "1980-1989" },
-      { category: "Review Year", id: "reviewYear", label: "2020-2025" },
+      { category: "Release Year", id: "releaseYear", label: "1980 to 1989" },
+      { category: "Review Year", id: "reviewYear", label: "2020 to 2025" },
       {
         category: "Reviewed Status",
         id: "reviewedStatus-not-reviewed",

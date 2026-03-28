@@ -7,21 +7,32 @@ import {
 } from "~/components/filter-and-sort/CreditedAsFilter.testHelper";
 import {
   clickClearFilters,
-  clickCloseFilters,
-  clickSortOption,
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
-import { clickReviewedStatusFilterOption } from "~/components/filter-and-sort/ReviewedStatusFilter.testHelper";
 import {
-  clickGenresFilterOption,
-  fillGradeFilter,
-  fillReleaseYearFilter,
-  fillReviewYearFilter,
   fillTitleFilter,
   getTitleFilter,
 } from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
 import { getPosterList } from "~/components/poster-list/PosterList.testHelper";
+import { genresFilterFacetTests } from "~/facets/genres/genresFacetTests";
+import {
+  gradeFilterFacetTests,
+  gradeSortFacetTests,
+} from "~/facets/grade/gradeFacetTests";
+import {
+  releaseYearFilterFacetTests,
+  releaseYearSortFacetTests,
+} from "~/facets/releaseYear/releaseYearFacetTests";
+import {
+  reviewYearFilterFacetTests,
+  reviewYearSortFacetTests,
+} from "~/facets/reviewYear/reviewYearFacetTests";
+import { reviewedStatusFilterFacetTests } from "~/facets/reviewedStatus/reviewedStatusFacetTests";
+import {
+  titleFilterFacetTests,
+  titleSortFacetTests,
+} from "~/facets/title/titleFacetTests";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type {
@@ -73,6 +84,106 @@ const baseProps: CastAndCrewMemberTitlesProps = {
   values: [],
 };
 
+// AIDEV-NOTE: Facet test suites are called at module level (outside the outer describe)
+// so they don't inherit the describe's beforeEach/afterEach timer setup.
+// Each facet test manages its own vi.useFakeTimers() / vi.useRealTimers() lifecycle.
+titleFilterFacetTests(
+  (items) =>
+    render(
+      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+    ),
+  getPosterList,
+);
+
+titleSortFacetTests(
+  (items) =>
+    render(
+      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+    ),
+  getPosterList,
+);
+
+genresFilterFacetTests(
+  (items) =>
+    render(
+      <CastAndCrewMemberTitles
+        {...baseProps}
+        distinctGenres={[...baseProps.distinctGenres, "Sci-Fi"]}
+        values={createTitles(items)}
+      />,
+    ),
+  getPosterList,
+);
+
+gradeFilterFacetTests(
+  (items) =>
+    render(
+      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+    ),
+  getPosterList,
+);
+
+gradeSortFacetTests(
+  (items) =>
+    render(
+      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+    ),
+  getPosterList,
+);
+
+releaseYearFilterFacetTests({
+  distinctReleaseYears: baseProps.distinctReleaseYears,
+  getList: getPosterList,
+  renderItems: (items) =>
+    render(
+      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+    ),
+});
+
+releaseYearSortFacetTests(
+  (items) =>
+    render(
+      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+    ),
+  getPosterList,
+);
+
+reviewYearFilterFacetTests({
+  distinctReviewYears: baseProps.distinctReviewYears,
+  getList: getPosterList,
+  renderItems: (items) =>
+    render(
+      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+    ),
+});
+
+reviewYearSortFacetTests(
+  (items) =>
+    render(
+      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+    ),
+  getPosterList,
+);
+
+// AIDEV-NOTE: reviewedStatus "reviewed" = has reviewSlug; map grade presence → reviewSlug presence
+reviewedStatusFilterFacetTests(
+  (items) =>
+    render(
+      <CastAndCrewMemberTitles
+        {...baseProps}
+        values={createTitles(
+          items.map((item) => ({
+            ...item,
+            reviewSlug: item.grade !== undefined ? "test-slug" : undefined,
+            reviewSequence: item.grade !== undefined ? "1" : undefined,
+            reviewYear: item.grade !== undefined ? "2020" : undefined,
+          })),
+        )}
+      />,
+    ),
+  getPosterList,
+);
+
 describe("CastAndCrewMemberTitles", () => {
   beforeEach(() => {
     vi.useFakeTimers({ shouldAdvanceTime: true });
@@ -84,251 +195,6 @@ describe("CastAndCrewMemberTitles", () => {
   });
 
   describe("filtering", () => {
-    it("filters by title", async ({ expect }) => {
-      const titles = createTitles([
-        { releaseYear: "1960", title: "Psycho" },
-        { releaseYear: "1963", title: "The Birds" },
-        { releaseYear: "1958", title: "Vertigo" },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "Psycho");
-      await clickViewResults(user);
-
-      const reviewCardList = getPosterList();
-      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("The Birds"),
-      ).not.toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("Vertigo"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by genres", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          genres: ["Horror", "Thriller"],
-          releaseYear: "1960",
-          title: "Psycho",
-        },
-        {
-          genres: ["Thriller", "Action"],
-          releaseYear: "1959",
-          title: "North by Northwest",
-        },
-        {
-          genres: ["Comedy"],
-          releaseYear: "1955",
-          title: "The Trouble with Harry",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await clickGenresFilterOption(user, "Thriller");
-      await clickViewResults(user);
-
-      const reviewCardList = getPosterList();
-      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).getByText("North by Northwest"),
-      ).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("The Trouble with Harry"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by release year range", async ({ expect }) => {
-      const titles = createTitles([
-        { releaseYear: "1950", title: "Stage Fright" },
-        { releaseYear: "1965", title: "Marnie" },
-        { releaseYear: "1975", title: "Family Plot" },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await fillReleaseYearFilter(user, "1950", "1970");
-      await clickViewResults(user);
-
-      const reviewCardList = getPosterList();
-      expect(
-        within(reviewCardList).getByText("Stage Fright"),
-      ).toBeInTheDocument();
-      expect(within(reviewCardList).getByText("Marnie")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("Family Plot"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by review year range", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseYear: "1954",
-          reviewYear: "2019",
-          title: "Rear Window",
-        },
-        {
-          releaseYear: "1951",
-          reviewYear: "2020",
-          title: "Strangers on a Train",
-        },
-        {
-          releaseYear: "1955",
-          reviewYear: "2022",
-          title: "To Catch a Thief",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await fillReviewYearFilter(user, "2019", "2021");
-      await clickViewResults(user);
-
-      const reviewCardList = getPosterList();
-      expect(
-        within(reviewCardList).getByText("Rear Window"),
-      ).toBeInTheDocument();
-      expect(
-        within(reviewCardList).getByText("Strangers on a Train"),
-      ).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("To Catch a Thief"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by grade range", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          grade: "C-",
-          gradeValue: 8,
-          releaseYear: "1953",
-          title: "I Confess",
-        },
-        {
-          grade: "B",
-          gradeValue: 12,
-          releaseYear: "1954",
-          title: "Dial M for Murder",
-        },
-        {
-          grade: "A",
-          gradeValue: 15,
-          releaseYear: "1959",
-          title: "North by Northwest",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await fillGradeFilter(user, "B-", "B+");
-      await clickViewResults(user);
-
-      const reviewCardList = getPosterList();
-      expect(
-        within(reviewCardList).getByText("Dial M for Murder"),
-      ).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("I Confess"),
-      ).not.toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("North by Northwest"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by reviewed status - reviewed only", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseYear: "1960",
-          reviewSequence: "1",
-          reviewSlug: "psycho-1960",
-          reviewYear: "2020",
-          title: "Psycho",
-        },
-        {
-          releaseYear: "1963",
-          reviewSequence: "2",
-          reviewSlug: "the-birds-1963",
-          reviewYear: "2021",
-          title: "The Birds",
-        },
-        {
-          releaseYear: "1964",
-          reviewSequence: undefined,
-          reviewSlug: undefined,
-          reviewYear: undefined,
-          title: "Marnie",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await clickReviewedStatusFilterOption(user, "Reviewed");
-      await clickViewResults(user);
-
-      const reviewCardList = getPosterList();
-      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
-      expect(within(reviewCardList).getByText("The Birds")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("Marnie"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by reviewed status - unreviewed only", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseYear: "1960",
-          reviewSequence: "1",
-          reviewSlug: "psycho-1960",
-          reviewYear: "2020",
-          title: "Psycho",
-        },
-        {
-          releaseYear: "1964",
-          reviewSequence: undefined,
-          reviewSlug: undefined,
-          reviewYear: undefined,
-          title: "Marnie",
-        },
-        {
-          releaseYear: "1966",
-          reviewSequence: undefined,
-          reviewSlug: undefined,
-          reviewYear: undefined,
-          title: "Torn Curtain",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await clickReviewedStatusFilterOption(user, "Not Reviewed");
-      await clickViewResults(user);
-
-      const reviewCardList = getPosterList();
-      expect(
-        within(reviewCardList).queryByText("Psycho"),
-      ).not.toBeInTheDocument();
-      expect(within(reviewCardList).getByText("Marnie")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).getByText("Torn Curtain"),
-      ).toBeInTheDocument();
-    });
-
     it("filters by credited as", async ({ expect }) => {
       const titles = createTitles([
         {
@@ -365,286 +231,6 @@ describe("CastAndCrewMemberTitles", () => {
       expect(
         within(reviewCardList).queryByText("To Catch a Thief"),
       ).not.toBeInTheDocument();
-    });
-  });
-
-  describe("sorting", () => {
-    it("sorts by title A → Z", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseYear: "1958",
-          sortTitle: "Vertigo",
-          title: "Vertigo",
-        },
-        {
-          releaseYear: "1963",
-          sortTitle: "Birds",
-          title: "The Birds",
-        },
-        {
-          releaseYear: "1960",
-          sortTitle: "Psycho",
-          title: "Psycho",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickSortOption(user, "Title (A → Z)");
-
-      const reviewCardList = getPosterList();
-      const allText = reviewCardList.textContent || "";
-      const birdsIndex = allText.indexOf("The Birds");
-      const psychoIndex = allText.indexOf("Psycho");
-      const vertigoIndex = allText.indexOf("Vertigo");
-
-      expect(birdsIndex).toBeLessThan(psychoIndex);
-      expect(psychoIndex).toBeLessThan(vertigoIndex);
-    });
-
-    it("sorts by title Z → A", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseYear: "1963",
-          sortTitle: "Birds",
-          title: "The Birds",
-        },
-        {
-          releaseYear: "1960",
-          sortTitle: "Psycho",
-          title: "Psycho",
-        },
-        {
-          releaseYear: "1958",
-          sortTitle: "Vertigo",
-          title: "Vertigo",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickSortOption(user, "Title (Z → A)");
-
-      const reviewCardList = getPosterList();
-      const allText = reviewCardList.textContent || "";
-      const vertigoIndex = allText.indexOf("Vertigo");
-      const psychoIndex = allText.indexOf("Psycho");
-      const birdsIndex = allText.indexOf("The Birds");
-
-      expect(vertigoIndex).toBeLessThan(psychoIndex);
-      expect(psychoIndex).toBeLessThan(birdsIndex);
-    });
-
-    it("sorts by release date oldest first", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseSequence: 3,
-          releaseYear: "1980",
-          title: "Family Plot",
-        },
-        {
-          releaseSequence: 1,
-          releaseYear: "1950",
-          title: "Stage Fright",
-        },
-        {
-          releaseSequence: 2,
-          releaseYear: "1965",
-          title: "Marnie",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickSortOption(user, "Release Date (Oldest First)");
-
-      const reviewCardList = getPosterList();
-      const allText = reviewCardList.textContent || "";
-      const stageFrightIndex = allText.indexOf("Stage Fright");
-      const marnieIndex = allText.indexOf("Marnie");
-      const familyPlotIndex = allText.indexOf("Family Plot");
-
-      expect(stageFrightIndex).toBeLessThan(marnieIndex);
-      expect(marnieIndex).toBeLessThan(familyPlotIndex);
-    });
-
-    it("sorts by release date newest first", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseSequence: 1,
-          releaseYear: "1950",
-          title: "Stage Fright",
-        },
-        {
-          releaseSequence: 2,
-          releaseYear: "1965",
-          title: "Marnie",
-        },
-        {
-          releaseSequence: 3,
-          releaseYear: "1980",
-          title: "Family Plot",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickSortOption(user, "Release Date (Newest First)");
-
-      const reviewCardList = getPosterList();
-      const allText = reviewCardList.textContent || "";
-      const familyPlotIndex = allText.indexOf("Family Plot");
-      const marnieIndex = allText.indexOf("Marnie");
-      const stageFrightIndex = allText.indexOf("Stage Fright");
-
-      expect(familyPlotIndex).toBeLessThan(marnieIndex);
-      expect(marnieIndex).toBeLessThan(stageFrightIndex);
-    });
-
-    it("sorts by grade best first", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          grade: "A",
-          gradeValue: 12,
-          releaseYear: "1954",
-          title: "Rear Window",
-        },
-        {
-          grade: "C-",
-          gradeValue: 5,
-          releaseYear: "1953",
-          title: "I Confess",
-        },
-        {
-          grade: "B",
-          gradeValue: 7,
-          releaseYear: "1956",
-          title: "The Man Who Knew Too Much",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickSortOption(user, "Grade (Best First)");
-
-      const reviewCardList = getPosterList();
-      const allText = reviewCardList.textContent || "";
-      const rearWindowIndex = allText.indexOf("Rear Window");
-      const manWhoKnewIndex = allText.indexOf("The Man Who Knew Too Much");
-      const iConfessIndex = allText.indexOf("I Confess");
-
-      expect(rearWindowIndex).toBeLessThan(manWhoKnewIndex);
-      expect(manWhoKnewIndex).toBeLessThan(iConfessIndex);
-    });
-
-    it("sorts by grade worst first", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          grade: "A",
-          gradeValue: 12,
-          releaseYear: "1954",
-          title: "Rear Window",
-        },
-        {
-          grade: "B",
-          gradeValue: 7,
-          releaseYear: "1956",
-          title: "The Man Who Knew Too Much",
-        },
-        {
-          grade: "C-",
-          gradeValue: 5,
-          releaseYear: "1953",
-          title: "I Confess",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickSortOption(user, "Grade (Worst First)");
-
-      const reviewCardList = getPosterList();
-      const allText = reviewCardList.textContent || "";
-      const iConfessIndex = allText.indexOf("I Confess");
-      const manWhoKnewIndex = allText.indexOf("The Man Who Knew Too Much");
-      const rearWindowIndex = allText.indexOf("Rear Window");
-
-      expect(iConfessIndex).toBeLessThan(manWhoKnewIndex);
-      expect(manWhoKnewIndex).toBeLessThan(rearWindowIndex);
-    });
-
-    it("sorts by review date oldest first", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseYear: "1958",
-          reviewSequence: "3",
-          title: "Vertigo",
-        },
-        {
-          releaseYear: "1960",
-          reviewSequence: "1",
-          title: "Psycho",
-        },
-        {
-          releaseYear: "1959",
-          reviewSequence: "2",
-          title: "North by Northwest",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickSortOption(user, "Review Date (Oldest First)");
-
-      const reviewCardList = getPosterList();
-      const allText = reviewCardList.textContent || "";
-      const psychoIndex = allText.indexOf("Psycho");
-      const northIndex = allText.indexOf("North by Northwest");
-      const vertigoIndex = allText.indexOf("Vertigo");
-
-      expect(psychoIndex).toBeLessThan(northIndex);
-      expect(northIndex).toBeLessThan(vertigoIndex);
-    });
-
-    it("sorts by review date newest first", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          releaseYear: "1960",
-          reviewSequence: "1",
-          title: "Psycho",
-        },
-        {
-          releaseYear: "1959",
-          reviewSequence: "2",
-          title: "North by Northwest",
-        },
-        {
-          releaseYear: "1958",
-          reviewSequence: "3",
-          title: "Vertigo",
-        },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickSortOption(user, "Review Date (Newest First)");
-
-      const reviewCardList = getPosterList();
-      const allText = reviewCardList.textContent || "";
-      const vertigoIndex = allText.indexOf("Vertigo");
-      const northIndex = allText.indexOf("North by Northwest");
-      const psychoIndex = allText.indexOf("Psycho");
-
-      expect(vertigoIndex).toBeLessThan(northIndex);
-      expect(northIndex).toBeLessThan(psychoIndex);
     });
   });
 
@@ -690,41 +276,6 @@ describe("CastAndCrewMemberTitles", () => {
       expect(
         within(reviewCardList).getByText("Shadow of a Doubt"),
       ).toBeInTheDocument();
-    });
-  });
-
-  describe("when closing filter drawer without applying", () => {
-    it("resets pending filter changes", async ({ expect }) => {
-      const titles = createTitles([
-        { releaseYear: "1960", title: "Psycho" },
-        { releaseYear: "1963", title: "The Birds" },
-      ]);
-
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "Psycho");
-      await clickViewResults(user);
-
-      let reviewCardList = getPosterList();
-      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("The Birds"),
-      ).not.toBeInTheDocument();
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "Different");
-      await clickCloseFilters(user);
-
-      reviewCardList = getPosterList();
-      expect(within(reviewCardList).getByText("Psycho")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("The Birds"),
-      ).not.toBeInTheDocument();
-
-      await clickToggleFilters(user);
-      expect(getTitleFilter()).toHaveValue("Psycho");
     });
   });
 });

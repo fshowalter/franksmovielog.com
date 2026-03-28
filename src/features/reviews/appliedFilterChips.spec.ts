@@ -136,7 +136,7 @@ describe("buildAppliedFilterChips", () => {
 
     it("creates a chip for a grade range", () => {
       const filterValues: ReviewsFiltersValues = {
-        gradeValue: [14, 13], // A- to B+
+        gradeValue: [13, 14], // B+ to A-
       };
 
       const result = buildAppliedFilterChips(filterValues);
@@ -150,9 +150,9 @@ describe("buildAppliedFilterChips", () => {
       ]);
     });
 
-    it("handles full grade range (A+ to F-)", () => {
+    it("creates a chip for a wide grade range (F to A)", () => {
       const filterValues: ReviewsFiltersValues = {
-        gradeValue: [16, 2], // A+ to F-
+        gradeValue: [3, 15], // F to A (wide non-default range)
       };
 
       const result = buildAppliedFilterChips(filterValues);
@@ -161,7 +161,7 @@ describe("buildAppliedFilterChips", () => {
         {
           category: "Grade",
           id: "gradeValue",
-          label: "F- to A+",
+          label: "F to A",
         },
       ]);
     });
@@ -245,7 +245,7 @@ describe("buildAppliedFilterChips", () => {
         {
           category: "Release Year",
           id: "releaseYear",
-          label: "1980-1989",
+          label: "1980 to 1989",
         },
       ]);
     });
@@ -305,7 +305,7 @@ describe("buildAppliedFilterChips", () => {
         {
           category: "Review Year",
           id: "reviewYear",
-          label: "2020-2024",
+          label: "2020 to 2024",
         },
       ]);
     });
@@ -391,7 +391,7 @@ describe("buildAppliedFilterChips", () => {
     it("creates chips for all active filters", () => {
       const filterValues: ReviewsFiltersValues = {
         genres: ["Horror", "Action"],
-        gradeValue: [14, 13], // A- to B+
+        gradeValue: [13, 14], // B+ to A-
         releaseYear: ["1980", "1989"],
         reviewYear: ["2020", "2024"],
         title: "alien",
@@ -421,12 +421,12 @@ describe("buildAppliedFilterChips", () => {
         {
           category: "Release Year",
           id: "releaseYear",
-          label: "1980-1989",
+          label: "1980 to 1989",
         },
         {
           category: "Review Year",
           id: "reviewYear",
-          label: "2020-2024",
+          label: "2020 to 2024",
         },
         {
           category: "Search",
@@ -456,7 +456,7 @@ describe("buildAppliedFilterChips", () => {
         {
           category: "Release Year",
           id: "releaseYear",
-          label: "1980-1989",
+          label: "1980 to 1989",
         },
       ]);
     });
@@ -481,7 +481,7 @@ describe("buildAppliedFilterChips", () => {
         {
           category: "Release Year",
           id: "releaseYear",
-          label: "1980-1989",
+          label: "1980 to 1989",
         },
       ]);
     });
