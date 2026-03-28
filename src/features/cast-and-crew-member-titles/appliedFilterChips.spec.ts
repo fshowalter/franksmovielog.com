@@ -23,8 +23,8 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Genre", id: "genre-horror", label: "Horror" },
-      { category: "Genre", id: "genre-action", label: "Action" },
+      { displayText: "Horror", key: "genre-horror", value: "Horror" },
+      { displayText: "Action", key: "genre-action", value: "Action" },
     ]);
   });
 
@@ -37,7 +37,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Grade", id: "gradeValue", label: "B+ to A-" },
+      { displayText: "Grade: B+ to A-", key: "gradeValue" },
     ]);
   });
 
@@ -50,7 +50,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Grade", id: "gradeValue", label: "A-" },
+      { displayText: "Grade: A-", key: "gradeValue" },
     ]);
   });
 
@@ -74,7 +74,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Release Year", id: "releaseYear", label: "1980 to 1989" },
+      { displayText: "Release Year: 1980 to 1989", key: "releaseYear" },
     ]);
   });
 
@@ -87,7 +87,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Release Year", id: "releaseYear", label: "1985" },
+      { displayText: "Release Year: 1985", key: "releaseYear" },
     ]);
   });
 
@@ -100,7 +100,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Review Year", id: "reviewYear", label: "2020 to 2025" },
+      { displayText: "Review Year: 2020 to 2025", key: "reviewYear" },
     ]);
   });
 
@@ -113,7 +113,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Review Year", id: "reviewYear", label: "2023" },
+      { displayText: "Review Year: 2023", key: "reviewYear" },
     ]);
   });
 
@@ -127,9 +127,9 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(chips).toEqual([
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-reviewed",
-        label: "Reviewed",
+        displayText: "Reviewed",
+        key: "reviewedStatus-reviewed",
+        value: "Reviewed",
       },
     ]);
   });
@@ -144,14 +144,14 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(chips).toEqual([
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-reviewed",
-        label: "Reviewed",
+        displayText: "Reviewed",
+        key: "reviewedStatus-reviewed",
+        value: "Reviewed",
       },
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-not-reviewed",
-        label: "Not Reviewed",
+        displayText: "Not Reviewed",
+        key: "reviewedStatus-not-reviewed",
+        value: "Not Reviewed",
       },
     ]);
   });
@@ -207,7 +207,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Credited As", id: "creditedAs-director", label: "Director" },
+      { displayText: "Director", key: "creditedAs-director", value: "director" },
     ]);
   });
 
@@ -231,7 +231,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Search", id: "title", label: "alien" },
+      { displayText: "Search: alien", key: "title" },
     ]);
   });
 
@@ -272,18 +272,18 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { category: "Genre", id: "genre-horror", label: "Horror" },
-      { category: "Genre", id: "genre-sci-fi", label: "Sci-Fi" },
-      { category: "Grade", id: "gradeValue", label: "B+ to A-" },
-      { category: "Release Year", id: "releaseYear", label: "1980 to 1989" },
-      { category: "Review Year", id: "reviewYear", label: "2020 to 2025" },
+      { displayText: "Horror", key: "genre-horror", value: "Horror" },
+      { displayText: "Sci-Fi", key: "genre-sci-fi", value: "Sci-Fi" },
+      { displayText: "Grade: B+ to A-", key: "gradeValue" },
+      { displayText: "Release Year: 1980 to 1989", key: "releaseYear" },
+      { displayText: "Review Year: 2020 to 2025", key: "reviewYear" },
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-not-reviewed",
-        label: "Not Reviewed",
+        displayText: "Not Reviewed",
+        key: "reviewedStatus-not-reviewed",
+        value: "Not Reviewed",
       },
-      { category: "Credited As", id: "creditedAs-director", label: "Director" },
-      { category: "Search", id: "title", label: "alien" },
+      { displayText: "Director", key: "creditedAs-director", value: "director" },
+      { displayText: "Search: alien", key: "title" },
     ]);
   });
 });

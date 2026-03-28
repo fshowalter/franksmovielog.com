@@ -4,6 +4,13 @@ import { act, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { beforeEach, describe, it, vi } from "vitest";
 
+import {
+  createApplyFiltersAction,
+  createClearFiltersAction,
+  createRemoveAppliedFilterAction,
+  createResetFiltersAction,
+} from "~/reducers/filtersReducer";
+
 import type { FilterChip } from "./AppliedFilters";
 
 import { FilterAndSortContainer } from "./FilterAndSortContainer";
@@ -23,29 +30,30 @@ type FilterAndSortContainerProps = Omit<
   "children"
 >;
 
+const SORT_OPTIONS = [
+  { label: "Title (A → Z)", value: "title-asc" },
+  { label: "Title (Z → A)", value: "title-desc" },
+] as const;
+
+const createSortAction = vi.fn().mockImplementation((value: string) => ({
+  type: "sort/changed",
+  value,
+}));
+
 const createMockProps = (
   overrides: Partial<FilterAndSortContainerProps> = {},
 ): FilterAndSortContainerProps => ({
+  createSortAction,
+  dispatch: vi.fn(),
   filters: (
     <div data-testid="filters-content">
       <input placeholder="Filter input" type="text" />
       <button type="button">Filter button</button>
     </div>
   ),
-  hasPendingFilters: false,
-  onApplyFilters: vi.fn(),
-  onClearFilters: vi.fn(),
-  onFilterDrawerOpen: vi.fn(),
-  onResetFilters: vi.fn(),
   pendingFilteredCount: 100,
-  sortProps: {
-    currentSortValue: "title-asc",
-    onSortChange: vi.fn(),
-    sortOptions: [
-      { label: "Title (A → Z)", value: "title-asc" },
-      { label: "Title (Z → A)", value: "title-desc" },
-    ],
-  },
+  sortOptions: SORT_OPTIONS,
+  state: { pendingFilterValues: {}, sort: "title-asc" },
   totalCount: 100,
   ...overrides,
 });
@@ -111,7 +119,7 @@ describe("FilterAndSortContainer", () => {
       expect(
         document.querySelector("dialog[aria-label='Filters']"),
       ).toHaveAttribute("open");
-      expect(mockProps.onFilterDrawerOpen).toHaveBeenCalled();
+      expect(mockProps.dispatch).toHaveBeenCalledWith(createResetFiltersAction());
     });
 
     it("closes filter drawer when toggle button is clicked again", async ({
@@ -164,7 +172,7 @@ describe("FilterAndSortContainer", () => {
       });
 
       expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(mockProps.onResetFilters).toHaveBeenCalled();
+      expect(mockProps.dispatch).toHaveBeenCalledWith(createResetFiltersAction());
     });
 
     it("closes filter drawer when clicking outside on backdrop", async ({
@@ -217,7 +225,7 @@ describe("FilterAndSortContainer", () => {
       await clickViewResults(user);
 
       expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(mockProps.onApplyFilters).toHaveBeenCalled();
+      expect(mockProps.dispatch).toHaveBeenCalledWith(createApplyFiltersAction());
     });
 
     it("closes filter drawer when Close button is clicked", async ({
@@ -240,7 +248,7 @@ describe("FilterAndSortContainer", () => {
       await clickCloseFilters(user);
 
       expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(mockProps.onResetFilters).toHaveBeenCalled();
+      expect(mockProps.dispatch).toHaveBeenCalledWith(createResetFiltersAction());
     });
 
     it("disables Clear button when there are no pending filters", async ({
@@ -248,7 +256,10 @@ describe("FilterAndSortContainer", () => {
     }) => {
       const user = userEvent.setup();
       render(
-        <FilterAndSortContainer {...mockProps} hasPendingFilters={false}>
+        <FilterAndSortContainer
+          {...mockProps}
+          state={{ pendingFilterValues: {}, sort: "title-asc" }}
+        >
           <div>Test Content</div>
         </FilterAndSortContainer>,
       );
@@ -266,7 +277,10 @@ describe("FilterAndSortContainer", () => {
     }) => {
       const user = userEvent.setup();
       render(
-        <FilterAndSortContainer {...mockProps} hasPendingFilters={true}>
+        <FilterAndSortContainer
+          {...mockProps}
+          state={{ pendingFilterValues: { title: "test" }, sort: "title-asc" }}
+        >
           <div>Test Content</div>
         </FilterAndSortContainer>,
       );
@@ -375,17 +389,12 @@ describe("FilterAndSortContainer", () => {
       expect(sortSelect.value).toBe("title-asc");
     });
 
-    it("calls onSortChange when sort option is selected", async ({
+    it("dispatches sort action when sort option is selected", async ({
       expect,
     }) => {
       const user = userEvent.setup();
-      const onSortChange = vi.fn();
-      const props = createMockProps({
-        sortProps: {
-          ...mockProps.sortProps,
-          onSortChange,
-        },
-      });
+      const dispatch = vi.fn();
+      const props = createMockProps({ dispatch });
 
       render(
         <FilterAndSortContainer {...props}>
@@ -396,7 +405,8 @@ describe("FilterAndSortContainer", () => {
       const sortSelect = screen.getByLabelText("Sort");
       await user.selectOptions(sortSelect, "title-desc");
 
-      expect(onSortChange).toHaveBeenCalledTimes(1);
+      expect(dispatch).toHaveBeenCalledTimes(1);
+      expect(dispatch).toHaveBeenCalledWith(createSortAction("title-desc"));
     });
   });
 
@@ -473,17 +483,12 @@ describe("FilterAndSortContainer", () => {
       expect(unselectedRadio?.checked).toBe(false);
     });
 
-    it("does not call onSortChange immediately when radio button is selected", async ({
+    it("does not dispatch sort action immediately when radio button is selected", async ({
       expect,
     }) => {
       const user = userEvent.setup();
-      const onSortChange = vi.fn();
-      const props = createMockProps({
-        sortProps: {
-          ...mockProps.sortProps,
-          onSortChange,
-        },
-      });
+      const dispatch = vi.fn();
+      const props = createMockProps({ dispatch });
 
       const { container } = render(
         <FilterAndSortContainer {...props}>
@@ -492,6 +497,8 @@ describe("FilterAndSortContainer", () => {
       );
 
       await clickToggleFilters(user);
+      // Clear calls from opening drawer
+      dispatch.mockClear();
 
       const radioButtons = container.querySelectorAll<HTMLInputElement>(
         'input[type="radio"][name="sort"]',
@@ -505,22 +512,17 @@ describe("FilterAndSortContainer", () => {
       }
 
       // Sort should NOT be applied immediately - only when "View Results" is clicked
-      expect(onSortChange).not.toHaveBeenCalled();
+      expect(dispatch).not.toHaveBeenCalledWith(
+        expect.objectContaining({ type: "sort/changed" }),
+      );
     });
 
-    it("calls onSortChange when View Results is clicked after changing sort", async ({
+    it("dispatches sort and apply actions when View Results is clicked after changing sort", async ({
       expect,
     }) => {
       const user = userEvent.setup();
-      const onSortChange = vi.fn();
-      const onApplyFilters = vi.fn();
-      const props = createMockProps({
-        onApplyFilters,
-        sortProps: {
-          ...mockProps.sortProps,
-          onSortChange,
-        },
-      });
+      const dispatch = vi.fn();
+      const props = createMockProps({ dispatch });
 
       const { container } = render(
         <FilterAndSortContainer {...props}>
@@ -547,9 +549,8 @@ describe("FilterAndSortContainer", () => {
       });
       await user.click(viewResultsButton);
 
-      expect(onSortChange).toHaveBeenCalledTimes(1);
-      expect(onSortChange).toHaveBeenCalledWith("title-desc");
-      expect(onApplyFilters).toHaveBeenCalledTimes(1);
+      expect(dispatch).toHaveBeenCalledWith(createSortAction("title-desc"));
+      expect(dispatch).toHaveBeenCalledWith(createApplyFiltersAction());
     });
 
     it("keeps drawer open after sort selection", async ({ expect }) => {
@@ -586,13 +587,8 @@ describe("FilterAndSortContainer", () => {
       expect,
     }) => {
       const user = userEvent.setup();
-      const onSortChange = vi.fn();
-      const props = createMockProps({
-        sortProps: {
-          ...mockProps.sortProps,
-          onSortChange,
-        },
-      });
+      const dispatch = vi.fn();
+      const props = createMockProps({ dispatch });
 
       const { container } = render(
         <FilterAndSortContainer {...props}>
@@ -616,8 +612,10 @@ describe("FilterAndSortContainer", () => {
       const closeButton = screen.getByRole("button", { name: "Close filters" });
       await user.click(closeButton);
 
-      // onSortChange should not have been called
-      expect(onSortChange).not.toHaveBeenCalled();
+      // No sort action should have been dispatched
+      expect(dispatch).not.toHaveBeenCalledWith(
+        expect.objectContaining({ type: "sort/changed" }),
+      );
 
       // Re-open drawer - original sort should be selected again
       await clickToggleFilters(user);
@@ -651,13 +649,8 @@ describe("FilterAndSortContainer", () => {
       expect,
     }) => {
       const user = userEvent.setup();
-      const onRemoveFilter = vi.fn();
       render(
-        <FilterAndSortContainer
-          {...mockProps}
-          activeFilters={[]}
-          onRemoveFilter={onRemoveFilter}
-        >
+        <FilterAndSortContainer {...mockProps} activeFilters={[]}>
           <div>Test Content</div>
         </FilterAndSortContainer>,
       );
@@ -671,18 +664,13 @@ describe("FilterAndSortContainer", () => {
       expect,
     }) => {
       const user = userEvent.setup();
-      const onRemoveFilter = vi.fn();
       const activeFilters: FilterChip[] = [
-        { category: "Genre", id: "genre-horror", label: "Horror" },
-        { category: "Genre", id: "genre-action", label: "Action" },
+        { displayText: "Horror", key: "genre-horror", value: "Horror" },
+        { displayText: "Action", key: "genre-action", value: "Action" },
       ];
 
       render(
-        <FilterAndSortContainer
-          {...mockProps}
-          activeFilters={activeFilters}
-          onRemoveFilter={onRemoveFilter}
-        >
+        <FilterAndSortContainer {...mockProps} activeFilters={activeFilters}>
           <div>Test Content</div>
         </FilterAndSortContainer>,
       );
@@ -690,25 +678,24 @@ describe("FilterAndSortContainer", () => {
       await clickToggleFilters(user);
 
       expect(screen.getByText("Applied Filters")).toBeInTheDocument();
-      // Simple filters (Genre) show value only
       expect(screen.getByText("Horror")).toBeInTheDocument();
       expect(screen.getByText("Action")).toBeInTheDocument();
     });
 
-    it("calls onRemoveFilter when a filter chip is removed", async ({
+    it("dispatches remove action when a filter chip is removed", async ({
       expect,
     }) => {
       const user = userEvent.setup();
-      const onRemoveFilter = vi.fn();
+      const dispatch = vi.fn();
       const activeFilters: FilterChip[] = [
-        { category: "Genre", id: "genre-horror", label: "Horror" },
+        { displayText: "Horror", key: "genre-horror", value: "Horror" },
       ];
 
       render(
         <FilterAndSortContainer
           {...mockProps}
           activeFilters={activeFilters}
-          onRemoveFilter={onRemoveFilter}
+          dispatch={dispatch}
         >
           <div>Test Content</div>
         </FilterAndSortContainer>,
@@ -716,30 +703,31 @@ describe("FilterAndSortContainer", () => {
 
       await clickToggleFilters(user);
 
-      // Simple filters (Genre) show value only: "Horror"
       const removeButton = screen.getByRole("button", {
         name: "Remove Horror filter",
       });
       await user.click(removeButton);
 
-      expect(onRemoveFilter).toHaveBeenCalledWith("genre-horror");
+      expect(dispatch).toHaveBeenCalledWith(
+        createRemoveAppliedFilterAction("genre-horror"),
+      );
     });
 
-    it("calls onClearFilters when Clear all button is clicked", async ({
+    it("dispatches clear action when Clear all button is clicked", async ({
       expect,
     }) => {
       const user = userEvent.setup();
-      const onRemoveFilter = vi.fn();
+      const dispatch = vi.fn();
       const activeFilters: FilterChip[] = [
-        { category: "Genre", id: "genre-horror", label: "Horror" },
-        { category: "Genre", id: "genre-action", label: "Action" },
+        { displayText: "Horror", key: "genre-horror", value: "Horror" },
+        { displayText: "Action", key: "genre-action", value: "Action" },
       ];
 
       render(
         <FilterAndSortContainer
           {...mockProps}
           activeFilters={activeFilters}
-          onRemoveFilter={onRemoveFilter}
+          dispatch={dispatch}
         >
           <div>Test Content</div>
         </FilterAndSortContainer>,
@@ -752,26 +740,7 @@ describe("FilterAndSortContainer", () => {
       });
       await user.click(clearAllButton);
 
-      expect(mockProps.onClearFilters).toHaveBeenCalled();
-    });
-
-    it("does not render AppliedFilters when onRemoveFilter is not provided", async ({
-      expect,
-    }) => {
-      const user = userEvent.setup();
-      const activeFilters: FilterChip[] = [
-        { category: "Genre", id: "genre-horror", label: "Horror" },
-      ];
-
-      render(
-        <FilterAndSortContainer {...mockProps} activeFilters={activeFilters}>
-          <div>Test Content</div>
-        </FilterAndSortContainer>,
-      );
-
-      await clickToggleFilters(user);
-
-      expect(screen.queryByText("Applied Filters")).not.toBeInTheDocument();
+      expect(dispatch).toHaveBeenCalledWith(createClearFiltersAction());
     });
   });
 });

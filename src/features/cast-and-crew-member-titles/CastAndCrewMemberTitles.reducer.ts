@@ -11,7 +11,7 @@ import { reviewYearFacetReducer } from "~/facets/reviewYear/reviewYearReducer";
 import { titleFacetReducer } from "~/facets/title/titleReducer";
 import {
   createInitialFiltersState,
-  filtersReducer,
+  filtersLifecycleReducer,
 } from "~/reducers/filtersReducer";
 import {
   createInitialSortState,
@@ -26,13 +26,7 @@ export { createReleaseYearFilterChangedAction } from "~/facets/releaseYear/relea
 export { createReviewedStatusFilterChangedAction } from "~/facets/reviewedStatus/reviewedStatusReducer";
 export { createReviewYearFilterChangedAction } from "~/facets/reviewYear/reviewYearReducer";
 export { createTitleFilterChangedAction } from "~/facets/title/titleReducer";
-export {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  selectHasPendingFilters,
-} from "~/reducers/filtersReducer";
+export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
 
 import type { CreditedAsFilterChangedAction } from "~/facets/creditedAs/creditedAsReducer";
 import type { GenresFilterChangedAction } from "~/facets/genres/genresReducer";
@@ -75,7 +69,7 @@ type CastAndCrewMemberTitlesState = {
 
 const castAndCrewMemberTitlesComposedReducer =
   composeReducers<CastAndCrewMemberTitlesState>(
-    filtersReducer,
+    filtersLifecycleReducer,
     titleFacetReducer,
     genresFacetReducer,
     gradeFacetReducer,
@@ -83,10 +77,7 @@ const castAndCrewMemberTitlesComposedReducer =
     reviewYearFacetReducer,
     reviewedStatusFacetReducer,
     creditedAsFacetReducer,
-    (state, action) =>
-      action.type === "sort/sort"
-        ? sortReducer(state, action as SortAction<CastAndCrewMemberTitlesSort>)
-        : state,
+    sortReducer,
   );
 
 export function createInitialState({

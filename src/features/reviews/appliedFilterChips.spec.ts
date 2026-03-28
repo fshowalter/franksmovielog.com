@@ -25,9 +25,9 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-horror",
-          label: "Horror",
+          displayText: "Horror",
+          key: "genre-horror",
+          value: "Horror",
         },
       ]);
     });
@@ -41,19 +41,19 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-horror",
-          label: "Horror",
+          displayText: "Horror",
+          key: "genre-horror",
+          value: "Horror",
         },
         {
-          category: "Genre",
-          id: "genre-action",
-          label: "Action",
+          displayText: "Action",
+          key: "genre-action",
+          value: "Action",
         },
         {
-          category: "Genre",
-          id: "genre-comedy",
-          label: "Comedy",
+          displayText: "Comedy",
+          key: "genre-comedy",
+          value: "Comedy",
         },
       ]);
     });
@@ -67,9 +67,9 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-science-fiction",
-          label: "Science Fiction",
+          displayText: "Science Fiction",
+          key: "genre-science-fiction",
+          value: "Science Fiction",
         },
       ]);
     });
@@ -83,9 +83,9 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-sci-fi",
-          label: "Sci-Fi",
+          displayText: "Sci-Fi",
+          key: "genre-sci-fi",
+          value: "Sci-Fi",
         },
       ]);
     });
@@ -99,9 +99,9 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-film-noir",
-          label: "Film-Noir",
+          displayText: "Film-Noir",
+          key: "genre-film-noir",
+          value: "Film-Noir",
         },
       ]);
     });
@@ -127,9 +127,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Grade",
-          id: "gradeValue",
-          label: "A-",
+          displayText: "Grade: A-",
+          key: "gradeValue",
         },
       ]);
     });
@@ -143,9 +142,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Grade",
-          id: "gradeValue",
-          label: "B+ to A-",
+          displayText: "Grade: B+ to A-",
+          key: "gradeValue",
         },
       ]);
     });
@@ -159,9 +157,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Grade",
-          id: "gradeValue",
-          label: "F to A",
+          displayText: "Grade: F to A",
+          key: "gradeValue",
         },
       ]);
     });
@@ -204,9 +201,8 @@ describe("buildAppliedFilterChips", () => {
 
         expect(result).toEqual([
           {
-            category: "Grade",
-            id: "gradeValue",
-            label: gradeLetter,
+            displayText: `Grade: ${gradeLetter}`,
+            key: "gradeValue",
           },
         ]);
       }
@@ -225,9 +221,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Release Year",
-          id: "releaseYear",
-          label: "1980",
+          displayText: "Release Year: 1980",
+          key: "releaseYear",
         },
       ]);
     });
@@ -243,9 +238,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Release Year",
-          id: "releaseYear",
-          label: "1980 to 1989",
+          displayText: "Release Year: 1980 to 1989",
+          key: "releaseYear",
         },
       ]);
     });
@@ -285,9 +279,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Review Year",
-          id: "reviewYear",
-          label: "2020",
+          displayText: "Review Year: 2020",
+          key: "reviewYear",
         },
       ]);
     });
@@ -303,9 +296,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Review Year",
-          id: "reviewYear",
-          label: "2020 to 2024",
+          displayText: "Review Year: 2020 to 2024",
+          key: "reviewYear",
         },
       ]);
     });
@@ -343,9 +335,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Search",
-          id: "title",
-          label: "alien",
+          displayText: "Search: alien",
+          key: "title",
         },
       ]);
     });
@@ -359,9 +350,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Search",
-          id: "title",
-          label: "The Matrix",
+          displayText: "Search: The Matrix",
+          key: "title",
         },
       ]);
     });
@@ -404,34 +394,30 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-horror",
-          label: "Horror",
+          displayText: "Horror",
+          key: "genre-horror",
+          value: "Horror",
         },
         {
-          category: "Genre",
-          id: "genre-action",
-          label: "Action",
+          displayText: "Action",
+          key: "genre-action",
+          value: "Action",
         },
         {
-          category: "Grade",
-          id: "gradeValue",
-          label: "B+ to A-",
+          displayText: "Grade: B+ to A-",
+          key: "gradeValue",
         },
         {
-          category: "Release Year",
-          id: "releaseYear",
-          label: "1980 to 1989",
+          displayText: "Release Year: 1980 to 1989",
+          key: "releaseYear",
         },
         {
-          category: "Review Year",
-          id: "reviewYear",
-          label: "2020 to 2024",
+          displayText: "Review Year: 2020 to 2024",
+          key: "reviewYear",
         },
         {
-          category: "Search",
-          id: "title",
-          label: "alien",
+          displayText: "Search: alien",
+          key: "title",
         },
       ]);
     });
@@ -449,14 +435,13 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-horror",
-          label: "Horror",
+          displayText: "Horror",
+          key: "genre-horror",
+          value: "Horror",
         },
         {
-          category: "Release Year",
-          id: "releaseYear",
-          label: "1980 to 1989",
+          displayText: "Release Year: 1980 to 1989",
+          key: "releaseYear",
         },
       ]);
     });
@@ -474,14 +459,13 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-horror",
-          label: "Horror",
+          displayText: "Horror",
+          key: "genre-horror",
+          value: "Horror",
         },
         {
-          category: "Release Year",
-          id: "releaseYear",
-          label: "1980 to 1989",
+          displayText: "Release Year: 1980 to 1989",
+          key: "releaseYear",
         },
       ]);
     });
@@ -500,9 +484,9 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Genre",
-          id: "genre-horror",
-          label: "Horror",
+          displayText: "Horror",
+          key: "genre-horror",
+          value: "Horror",
         },
       ]);
     });
@@ -523,12 +507,12 @@ describe("buildAppliedFilterChips", () => {
         distinctReviewYears: ["2010", "2024"],
       });
 
-      expect(result.map((chip) => chip.category)).toEqual([
-        "Genre",
-        "Grade",
-        "Release Year",
-        "Review Year",
-        "Search",
+      expect(result.map((chip) => chip.key)).toEqual([
+        "genre-drama",
+        "gradeValue",
+        "releaseYear",
+        "reviewYear",
+        "title",
       ]);
     });
 
@@ -539,7 +523,7 @@ describe("buildAppliedFilterChips", () => {
 
       const result = buildAppliedFilterChips(filterValues);
 
-      expect(result.map((chip) => chip.label)).toEqual([
+      expect(result.map((chip) => chip.displayText)).toEqual([
         "Zebra",
         "Apple",
         "Monster",

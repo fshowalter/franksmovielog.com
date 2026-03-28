@@ -1,9 +1,9 @@
 import { omitPendingKey } from "~/facets/omitPendingKey";
 
-export const STATE_KEY = "genres";
+const STATE_KEY = "genres";
 
 const ActionTypes = {
-  CHANGED: "titleFilters/genresFilterChanged" as const,
+  CHANGED: "genres/changed" as const,
 };
 
 export type GenresFilterChangedAction = {

@@ -1,9 +1,9 @@
 import { omitPendingKey } from "~/facets/omitPendingKey";
 
-export const STATE_KEY = "reviewedStatus";
+const STATE_KEY = "reviewedStatus";
 
 const ActionTypes = {
-  CHANGED: "maybeReviewedTitleFilters/reviewedStatusFilterChanged" as const,
+  CHANGED: "reviewedStatus/changed" as const,
 };
 
 export type ReviewedStatusFilterChangedAction = {

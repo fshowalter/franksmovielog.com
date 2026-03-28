@@ -16,14 +16,9 @@ import { MonthNavigationHeader } from "./MonthNavigationHeader";
 import { sortViewings } from "./sortViewings";
 import { useMonthNavigation } from "./useMonthNavigation";
 import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
   createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
   createSortAction,
   reducer,
-  selectHasPendingFilters,
 } from "./Viewings.reducer";
 import { ViewingsFilters } from "./ViewingsFilters";
 
@@ -115,8 +110,6 @@ export function Viewings({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
     distinctReleaseYears,
@@ -129,6 +122,8 @@ export function Viewings({
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      createSortAction={createSortAction}
+      dispatch={dispatch}
       filters={
         <ViewingsFilters
           dispatch={dispatch}
@@ -140,25 +135,10 @@ export function Viewings({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
       headerLink={{ href: "/viewings/stats/", text: "stats" }}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => {
-        dispatch(createResetFiltersAction());
-      }}
-      onRemoveFilter={(filterKey) => {
-        dispatch(createRemoveAppliedFilterAction(filterKey));
-      }}
-      onResetFilters={() => dispatch(createResetFiltersAction())}
       pendingFilteredCount={pendingFilteredCount}
-      sortProps={{
-        currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: VIEWINGS_SORT_OPTIONS,
-      }}
+      sortOptions={VIEWINGS_SORT_OPTIONS}
+      state={state}
       totalCount={filteredValues.length}
     >
       {currentMonthDate ? (

@@ -1,9 +1,9 @@
 import { omitPendingKey } from "~/facets/omitPendingKey";
 
-export const STATE_KEY = "name";
+const STATE_KEY = "name";
 
 const ActionTypes = {
-  CHANGED: "collectionFilters/nameFilterChanged" as const,
+  CHANGED: "name/changed" as const,
 };
 
 export type NameFilterChangedAction = {

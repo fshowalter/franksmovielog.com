@@ -22,9 +22,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Release Year",
-        id: "releaseYear",
-        label: "2020-2023",
+        displayText: "Release Year: 2020 to 2023",
+        key: "releaseYear",
       },
     ]);
   });
@@ -39,9 +38,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Release Year",
-        id: "releaseYear",
-        label: "2022",
+        displayText: "Release Year: 2022",
+        key: "releaseYear",
       },
     ]);
   });
@@ -74,9 +72,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-reviewed",
-        label: "Reviewed",
+        displayText: "Reviewed",
+        key: "reviewedStatus-reviewed",
+        value: "Reviewed",
       },
     ]);
   });
@@ -100,9 +98,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Viewing Year",
-        id: "viewingYear",
-        label: "2023-2024",
+        displayText: "Viewing Year: 2023 to 2024",
+        key: "viewingYear",
       },
     ]);
   });
@@ -117,9 +114,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Viewing Year",
-        id: "viewingYear",
-        label: "2024",
+        displayText: "Viewing Year: 2024",
+        key: "viewingYear",
       },
     ]);
   });
@@ -152,14 +148,14 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Medium",
-        id: "medium-blu-ray",
-        label: "Blu-ray",
+        displayText: "Blu-ray",
+        key: "medium-blu-ray",
+        value: "Blu-ray",
       },
       {
-        category: "Medium",
-        id: "medium-dvd",
-        label: "DVD",
+        displayText: "DVD",
+        key: "medium-dvd",
+        value: "DVD",
       },
     ]);
   });
@@ -181,14 +177,14 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Venue",
-        id: "venue-home",
-        label: "Home",
+        displayText: "Home",
+        key: "venue-home",
+        value: "Home",
       },
       {
-        category: "Venue",
-        id: "venue-theater",
-        label: "Theater",
+        displayText: "Theater",
+        key: "venue-theater",
+        value: "Theater",
       },
     ]);
   });
@@ -210,9 +206,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Search",
-        id: "title",
-        label: "alien",
+        displayText: "Search: alien",
+        key: "title",
       },
     ]);
   });
@@ -242,34 +237,31 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Release Year",
-        id: "releaseYear",
-        label: "2020-2023",
+        displayText: "Release Year: 2020 to 2023",
+        key: "releaseYear",
       },
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-not-reviewed",
-        label: "Not Reviewed",
+        displayText: "Not Reviewed",
+        key: "reviewedStatus-not-reviewed",
+        value: "Not Reviewed",
       },
       {
-        category: "Viewing Year",
-        id: "viewingYear",
-        label: "2024",
+        displayText: "Viewing Year: 2024",
+        key: "viewingYear",
       },
       {
-        category: "Medium",
-        id: "medium-4k-uhd",
-        label: "4K UHD",
+        displayText: "4K UHD",
+        key: "medium-4k-uhd",
+        value: "4K UHD",
       },
       {
-        category: "Venue",
-        id: "venue-theater",
-        label: "Theater",
+        displayText: "Theater",
+        key: "venue-theater",
+        value: "Theater",
       },
       {
-        category: "Search",
-        id: "title",
-        label: "dark knight",
+        displayText: "Search: dark knight",
+        key: "title",
       },
     ]);
   });
@@ -290,7 +282,7 @@ describe("buildAppliedFilterChips", () => {
     });
 
     // Expect consistent order: releaseYear, reviewedStatus, viewingYear, medium, venue, title
-    expect(chips.map((chip) => chip.id)).toEqual([
+    expect(chips.map((chip) => chip.key)).toEqual([
       "releaseYear",
       "reviewedStatus-reviewed",
       "viewingYear",
@@ -314,14 +306,14 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toEqual([
       {
-        category: "Medium",
-        id: "medium-dvd",
-        label: "DVD",
+        displayText: "DVD",
+        key: "medium-dvd",
+        value: "DVD",
       },
       {
-        category: "Venue",
-        id: "venue-home",
-        label: "Home",
+        displayText: "Home",
+        key: "venue-home",
+        value: "Home",
       },
     ]);
   });

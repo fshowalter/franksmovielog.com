@@ -2,7 +2,8 @@ import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListFi
 
 import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/fields/CheckboxListField";
-import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
+import { TextField } from "~/components/fields/TextField";
+import { YearField } from "~/components/fields/YearField";
 
 import type { WatchlistValue } from "./Watchlist";
 import type {
@@ -18,11 +19,14 @@ import {
   calculateWriterCounts,
 } from "./filterWatchlistValues";
 import {
+  createCollectionFilterChangedAction,
+  createDirectorFilterChangedAction,
   createGenresFilterChangedAction,
+  createPerformerFilterChangedAction,
   createReleaseYearFilterChangedAction,
   createRemoveAppliedFilterAction,
   createTitleFilterChangedAction,
-  createWatchlistFilterChangedAction,
+  createWriterFilterChangedAction,
 } from "./Watchlist.reducer";
 
 /**
@@ -102,38 +106,42 @@ export function WatchlistFilters({
 
   return (
     <>
-      <TitleFilters
-        genres={{
-          counts: genreCounts,
-          defaultValues: filterValues.genres,
-          onChange: (values) =>
-            dispatch(createGenresFilterChangedAction(values)),
-          onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
-          values: distinctGenres,
-        }}
-        releaseYear={{
-          defaultValues: filterValues.releaseYear,
-          onChange: (values) =>
-            dispatch(createReleaseYearFilterChangedAction(values)),
-          onClear: () =>
-            dispatch(createRemoveAppliedFilterAction("releaseYear")),
-          values: distinctReleaseYears,
-        }}
-        title={{
-          defaultValue: filterValues.title,
-          onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
-        }}
+      <TextField
+        defaultValue={filterValues.title}
+        label="Title"
+        onInputChange={(value) => dispatch(createTitleFilterChangedAction(value))}
+        placeholder="Enter all or part of a title"
       />
+      <YearField
+        defaultValues={filterValues.releaseYear}
+        label="Release Year"
+        onClear={() => dispatch(createRemoveAppliedFilterAction("releaseYear"))}
+        onYearChange={(values) =>
+          dispatch(createReleaseYearFilterChangedAction(values))
+        }
+        years={distinctReleaseYears}
+      />
+      <AnimatedDetailsDisclosure title="Genres">
+        <CheckboxListField
+          defaultValues={filterValues.genres}
+          label="Genres"
+          onChange={(values) => dispatch(createGenresFilterChangedAction(values))}
+          onClear={() => dispatch(createRemoveAppliedFilterAction("genres"))}
+          options={distinctGenres.map((value) => ({
+            count: genreCounts.get(value) ?? 0,
+            label: value,
+            value,
+          }))}
+        />
+      </AnimatedDetailsDisclosure>
       <AnimatedDetailsDisclosure title="Director">
         <CheckboxListField
           defaultValues={filterValues.director}
           label="Director"
           onChange={(values) =>
-            dispatch(createWatchlistFilterChangedAction("director", values))
+            dispatch(createDirectorFilterChangedAction(values))
           }
-          onClear={() =>
-            dispatch(createWatchlistFilterChangedAction("director", []))
-          }
+          onClear={() => dispatch(createDirectorFilterChangedAction([]))}
           options={directorOptions}
         />
       </AnimatedDetailsDisclosure>
@@ -142,11 +150,9 @@ export function WatchlistFilters({
           defaultValues={filterValues.performer}
           label="Performer"
           onChange={(values) =>
-            dispatch(createWatchlistFilterChangedAction("performer", values))
+            dispatch(createPerformerFilterChangedAction(values))
           }
-          onClear={() =>
-            dispatch(createWatchlistFilterChangedAction("performer", []))
-          }
+          onClear={() => dispatch(createPerformerFilterChangedAction([]))}
           options={performerOptions}
         />
       </AnimatedDetailsDisclosure>
@@ -155,11 +161,9 @@ export function WatchlistFilters({
           defaultValues={filterValues.writer}
           label="Writer"
           onChange={(values) =>
-            dispatch(createWatchlistFilterChangedAction("writer", values))
+            dispatch(createWriterFilterChangedAction(values))
           }
-          onClear={() =>
-            dispatch(createWatchlistFilterChangedAction("writer", []))
-          }
+          onClear={() => dispatch(createWriterFilterChangedAction([]))}
           options={writerOptions}
         />
       </AnimatedDetailsDisclosure>
@@ -168,11 +172,9 @@ export function WatchlistFilters({
           defaultValues={filterValues.collection}
           label="Collection"
           onChange={(values) =>
-            dispatch(createWatchlistFilterChangedAction("collection", values))
+            dispatch(createCollectionFilterChangedAction(values))
           }
-          onClear={() =>
-            dispatch(createWatchlistFilterChangedAction("collection", []))
-          }
+          onClear={() => dispatch(createCollectionFilterChangedAction([]))}
           options={collectionOptions}
         />
       </AnimatedDetailsDisclosure>

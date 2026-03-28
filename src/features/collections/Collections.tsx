@@ -12,14 +12,9 @@ import type { CollectionsSort } from "./sortCollections";
 
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
   createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
   createSortAction,
   reducer,
-  selectHasPendingFilters,
 } from "./Collections.reducer";
 import { CollectionsFilters } from "./CollectionsFilters";
 import { CollectionsListItem } from "./CollectionsListItem";
@@ -78,38 +73,23 @@ export function Collections({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      createSortAction={createSortAction}
+      dispatch={dispatch}
       filters={
         <CollectionsFilters
           dispatch={dispatch}
           filterValues={state.pendingFilterValues}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={(filterId) =>
-        dispatch(createRemoveAppliedFilterAction(filterId))
-      }
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
-      sortProps={{
-        currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: COLLECTION_SORT_OPTIONS,
-      }}
+      sortOptions={COLLECTION_SORT_OPTIONS}
+      state={state}
       totalCount={filteredValues.length}
     >
       <AvatarList

@@ -1,6 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
+import {
+  createApplyFiltersAction,
+  createClearFiltersAction,
+  createRemoveAppliedFilterAction,
+  createResetFiltersAction,
+} from "~/reducers/filtersReducer";
 
 import type { FilterChip } from "./AppliedFilters";
 
@@ -17,6 +23,7 @@ export type SortOption = {
 
 /**
  * Props for sort functionality.
+ * AIDEV-NOTE: Exported for use by FilterAndSortToolbar — do not remove.
  */
 export type SortProps<T extends string> = {
   currentSortValue: T;
@@ -28,17 +35,16 @@ type Props<T extends string> = {
   activeFilters?: FilterChip[];
   children: React.ReactNode;
   className?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  createSortAction: (value: T) => any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  dispatch: React.Dispatch<any>;
   filters: React.ReactNode;
-  hasPendingFilters: boolean;
   headerLink?: { href: string; text: string };
-  onApplyFilters: () => void;
-  onClearFilters: () => void;
-  onFilterDrawerOpen: () => void;
-  onRemoveFilter?: (id: string) => void;
-  onResetFilters: () => void;
   pendingFilteredCount: number;
   sideNav?: React.ReactNode;
-  sortProps: SortProps<T>;
+  sortOptions: readonly SortOption[];
+  state: { pendingFilterValues: Record<string, unknown>; sort: T };
   topNav?: React.ReactNode;
   totalCount: number;
 };
@@ -54,29 +60,34 @@ export function FilterAndSortContainer<T extends string>({
   activeFilters,
   children,
   className,
+  createSortAction,
+  dispatch,
   filters,
-  hasPendingFilters,
   headerLink,
-  onApplyFilters,
-  onClearFilters,
-  onFilterDrawerOpen,
-  onRemoveFilter,
-  onResetFilters,
   pendingFilteredCount,
   sideNav,
-  sortProps,
+  sortOptions,
+  state,
   topNav,
   totalCount,
 }: Props<T>): React.JSX.Element {
   const [filterDrawerVisible, setFilterDrawerVisible] = useState(false);
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
-  const prevSortValueRef = useRef<T>(sortProps.currentSortValue);
+  const prevSortValueRef = useRef<T>(state.sort);
   // AIDEV-NOTE: Used to suppress the useEffect scroll when sort changes via the mobile drawer,
   // since the drawer's "View Results" handler scrolls explicitly.
   const suppressSortScrollRef = useRef(false);
   const formRef = useRef<HTMLFormElement | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
+
+  const hasPendingFilters = Object.keys(state.pendingFilterValues).length > 0;
+
+  const sortProps: SortProps<T> = {
+    currentSortValue: state.sort,
+    onSortChange: (value) => dispatch(createSortAction(value)),
+    sortOptions,
+  };
 
   // Drive open/close imperatively from state
   useEffect(() => {
@@ -95,7 +106,7 @@ export function FilterAndSortContainer<T extends string>({
     const handleCancel = (evt: Event): void => {
       // Prevent browser's default close so we can reset state first
       evt.preventDefault();
-      onResetFilters();
+      dispatch(createResetFiltersAction());
       formRef.current?.reset();
       toggleButtonRef.current?.focus();
       dialog.close();
@@ -112,35 +123,35 @@ export function FilterAndSortContainer<T extends string>({
       dialog.removeEventListener("cancel", handleCancel);
       dialog.removeEventListener("close", handleClose);
     };
-  }, [onResetFilters]);
+  }, [dispatch]);
 
   // Scroll to top of list when sort changes via desktop select
   useEffect(() => {
-    if (prevSortValueRef.current !== sortProps.currentSortValue) {
-      prevSortValueRef.current = sortProps.currentSortValue;
+    if (prevSortValueRef.current !== state.sort) {
+      prevSortValueRef.current = state.sort;
       if (suppressSortScrollRef.current) {
         suppressSortScrollRef.current = false;
       } else {
         listRef.current?.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, [sortProps.currentSortValue]);
+  }, [state.sort]);
 
   const onFilterClick = useCallback(
     (event: React.MouseEvent) => {
       event.preventDefault();
 
       if (filterDrawerVisible) {
-        onResetFilters();
+        dispatch(createResetFiltersAction());
         formRef.current?.reset();
         dialogRef.current?.close();
         toggleButtonRef.current?.focus();
       } else {
         setFilterDrawerVisible(true);
-        onFilterDrawerOpen();
+        dispatch(createResetFiltersAction());
       }
     },
-    [filterDrawerVisible, onResetFilters, onFilterDrawerOpen],
+    [filterDrawerVisible, dispatch],
   );
 
   return (
@@ -211,7 +222,7 @@ export function FilterAndSortContainer<T extends string>({
             onClick={(e) => {
               // Backdrop click: event.target is the dialog itself, not any child
               if (e.target === dialogRef.current) {
-                onResetFilters();
+                dispatch(createResetFiltersAction());
                 formRef.current?.reset();
                 dialogRef.current?.close();
                 toggleButtonRef.current?.focus();
@@ -237,7 +248,7 @@ export function FilterAndSortContainer<T extends string>({
                   tablet:right-[34px]
                 `}
                 onClick={() => {
-                  onResetFilters();
+                  dispatch(createResetFiltersAction());
                   formRef.current?.reset();
                   dialogRef.current?.close();
                   toggleButtonRef.current?.focus();
@@ -276,11 +287,13 @@ export function FilterAndSortContainer<T extends string>({
                     tablet-landscape:px-12
                   "
                 >
-                  {activeFilters && onRemoveFilter && (
+                  {activeFilters && activeFilters.length > 0 && (
                     <AppliedFilters
                       filters={activeFilters}
-                      onClearAll={onClearFilters}
-                      onRemove={onRemoveFilter}
+                      onClearAll={() => dispatch(createClearFiltersAction())}
+                      onRemove={(key) =>
+                        dispatch(createRemoveAppliedFilterAction(key))
+                      }
                     />
                   )}
                   {/* AIDEV-NOTE: Sort section in mobile drawer only (<640px).
@@ -292,16 +305,14 @@ export function FilterAndSortContainer<T extends string>({
                       title="Sort by"
                     >
                       <div className="space-y-3">
-                        {sortProps.sortOptions.map(({ label, value }) => (
+                        {sortOptions.map(({ label, value }) => (
                           <label
                             className="flex cursor-pointer items-center gap-3"
                             key={value}
                           >
                             <input
                               className="size-4 cursor-pointer accent-accent"
-                              defaultChecked={
-                                sortProps.currentSortValue === value
-                              }
+                              defaultChecked={state.sort === value}
                               name="sort"
                               type="radio"
                               value={value}
@@ -341,7 +352,7 @@ export function FilterAndSortContainer<T extends string>({
                     disabled={!hasPendingFilters}
                     onClick={() => {
                       if (hasPendingFilters) {
-                        onClearFilters();
+                        dispatch(createClearFiltersAction());
                       }
                     }}
                     type="reset"
@@ -368,8 +379,8 @@ export function FilterAndSortContainer<T extends string>({
                       const formData = new FormData(formRef.current!);
                       const sortValue = formData.get("sort") as T;
                       suppressSortScrollRef.current = true;
-                      sortProps.onSortChange(sortValue);
-                      onApplyFilters();
+                      dispatch(createSortAction(sortValue));
+                      dispatch(createApplyFiltersAction());
                       dialogRef.current?.close();
                       listRef.current?.scrollIntoView();
                     }}

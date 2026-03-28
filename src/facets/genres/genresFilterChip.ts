@@ -6,5 +6,5 @@ import { buildMultiSelectChips } from "~/facets/filterChipBuilders";
 export function buildGenresFilterChip(
   values: readonly string[] | undefined,
 ): FilterChip[] {
-  return buildMultiSelectChips({ category: "Genre", id: "genre", values });
+  return buildMultiSelectChips({ id: "genre", values });
 }

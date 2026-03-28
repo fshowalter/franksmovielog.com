@@ -29,9 +29,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Search",
-      id: "name",
-      label: "john",
+      displayText: "Search: john",
+      key: "name",
     });
   });
 
@@ -61,9 +60,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Credited As",
-      id: "creditedAs-director",
-      label: "Director",
+      displayText: "Director",
+      key: "creditedAs-director",
+      value: "director",
     });
   });
 
@@ -75,9 +74,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Credited As",
-      id: "creditedAs-performer",
-      label: "Performer",
+      displayText: "Performer",
+      key: "creditedAs-performer",
+      value: "performer",
     });
   });
 
@@ -89,9 +88,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Credited As",
-      id: "creditedAs-writer",
-      label: "Writer",
+      displayText: "Writer",
+      key: "creditedAs-writer",
+      value: "writer",
     });
   });
 
@@ -103,14 +102,14 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(2);
     expect(chips[0]).toEqual({
-      category: "Credited As",
-      id: "creditedAs-director",
-      label: "Director",
+      displayText: "Director",
+      key: "creditedAs-director",
+      value: "director",
     });
     expect(chips[1]).toEqual({
-      category: "Credited As",
-      id: "creditedAs-writer",
-      label: "Writer",
+      displayText: "Writer",
+      key: "creditedAs-writer",
+      value: "writer",
     });
   });
 
@@ -123,14 +122,13 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(2);
     expect(chips[0]).toEqual({
-      category: "Search",
-      id: "name",
-      label: "christopher nolan",
+      displayText: "Search: christopher nolan",
+      key: "name",
     });
     expect(chips[1]).toEqual({
-      category: "Credited As",
-      id: "creditedAs-director",
-      label: "Director",
+      displayText: "Director",
+      key: "creditedAs-director",
+      value: "director",
     });
   });
 });

@@ -1,30 +1,22 @@
-import type { SortAction, SortState } from "~/reducers/sortReducer";
+import type { FiltersAction } from "~/reducers/filtersReducer";
+import type { SortAction } from "~/reducers/sortReducer";
 
+import { composeReducers } from "~/facets/composeReducers";
+import { creditedAsFacetReducer } from "~/facets/creditedAs/creditedAsReducer";
+import { nameFacetReducer } from "~/facets/name/nameReducer";
+import {
+  createInitialFiltersState,
+  filtersLifecycleReducer,
+} from "~/reducers/filtersReducer";
 import {
   createInitialSortState,
   createSortActionCreator,
   sortReducer,
 } from "~/reducers/sortReducer";
 
-export {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createNameFilterChangedAction,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  selectHasPendingFilters,
-} from "~/reducers/collectionFiltersReducer";
+export { createNameFilterChangedAction } from "~/facets/name/nameReducer";
 
-import type {
-  CollectionFiltersAction,
-  CollectionFiltersState,
-  CollectionFiltersValues,
-} from "~/reducers/collectionFiltersReducer";
-
-import {
-  collectionFiltersReducer,
-  createInitialCollectionFiltersState,
-} from "~/reducers/collectionFiltersReducer";
+import type { NameFilterChangedAction } from "~/facets/name/nameReducer";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
@@ -33,31 +25,31 @@ import type { CastAndCrewSort } from "./sortCastAndCrew";
  * Union type of all actions for cast and crew state management.
  */
 export type CastAndCrewAction =
-  | CollectionFiltersAction
   | CreditedAsFilterChangedAction
+  | FiltersAction
+  | NameFilterChangedAction
   | SortAction<CastAndCrewSort>;
 
 /**
  * Filter values for cast and crew.
  */
-export type CastAndCrewFiltersValues = CollectionFiltersValues & {
+export type CastAndCrewFiltersValues = {
   creditedAs?: readonly string[];
+  name?: string;
 };
 
 /**
  * Internal state type for cast and crew reducer.
  */
-type CastAndCrewState = Omit<
-  CollectionFiltersState<CastAndCrewValue>,
-  "activeFilterValues" | "pendingFilterValues"
-> &
-  SortState<CastAndCrewSort> & {
-    activeFilterValues: CastAndCrewFiltersValues;
-    pendingFilterValues: CastAndCrewFiltersValues;
-  };
+type CastAndCrewState = {
+  activeFilterValues: CastAndCrewFiltersValues;
+  pendingFilterValues: CastAndCrewFiltersValues;
+  sort: CastAndCrewSort;
+  values: CastAndCrewValue[];
+};
 
 type CreditedAsFilterChangedAction = {
-  type: "castAndCrew/creditedAsFilterChanged";
+  type: "creditedAs/changed";
   values: readonly string[];
 };
 
@@ -69,8 +61,32 @@ type CreditedAsFilterChangedAction = {
 export function createCreditedAsFilterChangedAction(
   values: readonly string[],
 ): CreditedAsFilterChangedAction {
-  return { type: "castAndCrew/creditedAsFilterChanged", values };
+  return { type: "creditedAs/changed", values };
 }
+
+const castAndCrewComposedReducer = composeReducers<CastAndCrewState>(
+  filtersLifecycleReducer,
+  nameFacetReducer,
+  creditedAsFacetReducer,
+  (state, action): CastAndCrewState => {
+    if (action.type !== "creditedAs/changed") return state;
+    // AIDEV-NOTE: Update both activeFilterValues and pendingFilterValues to ensure
+    // chips disappear immediately when clicked (not just when "Apply" is clicked).
+    const { values } = action as CreditedAsFilterChangedAction;
+    return {
+      ...state,
+      activeFilterValues: {
+        ...state.activeFilterValues,
+        creditedAs: values.length === 0 ? undefined : values,
+      },
+      pendingFilterValues: {
+        ...state.pendingFilterValues,
+        creditedAs: values.length === 0 ? undefined : values,
+      },
+    };
+  },
+  sortReducer,
+);
 
 /**
  * Creates the initial state for cast and crew.
@@ -86,14 +102,9 @@ export function createInitialState({
   initialSort: CastAndCrewSort;
   values: CastAndCrewValue[];
 }): CastAndCrewState {
-  const sortState = createInitialSortState({ initialSort });
-  const collectionFiltersState = createInitialCollectionFiltersState({
-    values,
-  });
-
   return {
-    ...collectionFiltersState,
-    ...sortState,
+    ...createInitialFiltersState({ values }),
+    ...createInitialSortState({ initialSort }),
   };
 }
 
@@ -103,37 +114,11 @@ export function createInitialState({
  * @param action - Action to process
  * @returns Updated state
  */
-export function reducer(state: CastAndCrewState, action: CastAndCrewAction) {
-  switch (action.type) {
-    case "castAndCrew/creditedAsFilterChanged": {
-      return handleCreditedAsFilterChanged(state, action);
-    }
-    case "sort/sort": {
-      return sortReducer(state, action);
-    }
-    default: {
-      return collectionFiltersReducer(state, action);
-    }
-  }
-}
-
-function handleCreditedAsFilterChanged(
+export function reducer(
   state: CastAndCrewState,
-  action: CreditedAsFilterChangedAction,
+  action: CastAndCrewAction,
 ): CastAndCrewState {
-  // AIDEV-NOTE: Update both activeFilterValues and pendingFilterValues to ensure
-  // chips disappear immediately when clicked (not just when "Apply" is clicked).
-  return {
-    ...state,
-    activeFilterValues: {
-      ...state.activeFilterValues,
-      creditedAs: action.values.length === 0 ? undefined : action.values,
-    },
-    pendingFilterValues: {
-      ...state.pendingFilterValues,
-      creditedAs: action.values.length === 0 ? undefined : action.values,
-    },
-  };
+  return castAndCrewComposedReducer(state, action);
 }
 
 /**

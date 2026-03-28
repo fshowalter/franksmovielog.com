@@ -18,9 +18,9 @@ describe("AppliedFilters", () => {
   });
 
   const sampleFilters: AppliedFiltersProps["filters"] = [
-    { category: "Genre", id: "genre-horror", label: "Horror" },
-    { category: "Genre", id: "genre-action", label: "Action" },
-    { category: "Search", id: "search", label: "alien" },
+    { displayText: "Horror", key: "genre-horror", value: "Horror" },
+    { displayText: "Action", key: "genre-action", value: "Action" },
+    { displayText: "Search: alien", key: "title" },
   ];
 
   describe("Visibility", () => {
@@ -57,51 +57,50 @@ describe("AppliedFilters", () => {
         />,
       );
 
-      // Simple filters (Genre) show value only
       expect(screen.getByText("Horror")).toBeInTheDocument();
       expect(screen.getByText("Action")).toBeInTheDocument();
-      // Search filters show "Search: query"
-      expect(screen.getByText(/Search: alien/)).toBeInTheDocument();
+      expect(screen.getByText("Search: alien")).toBeInTheDocument();
     });
 
-    it("formats range filter chips with category and label", () => {
+    it("renders pre-assembled displayText for range filters", () => {
       render(
         <AppliedFilters
           filters={[
-            { category: "Release Year", id: "year-1980", label: "1980-1989" },
+            { displayText: "Release Year: 1980 to 1989", key: "releaseYear" },
           ]}
           onClearAll={mockOnClearAll}
           onRemove={mockOnRemove}
         />,
       );
 
-      expect(screen.getByText(/Release Year: 1980-1989/)).toBeInTheDocument();
+      expect(
+        screen.getByText("Release Year: 1980 to 1989"),
+      ).toBeInTheDocument();
     });
 
-    it("formats simple filter chips without category (value only)", () => {
+    it("renders pre-assembled displayText for simple filters (value only)", () => {
       render(
         <AppliedFilters
-          filters={[{ category: "Genre", id: "genre-horror", label: "Horror" }]}
+          filters={[{ displayText: "Horror", key: "genre-horror", value: "Horror" }]}
           onClearAll={mockOnClearAll}
           onRemove={mockOnRemove}
         />,
       );
 
-      // Should show "Horror" not "Genre: Horror"
       expect(screen.getByText("Horror")).toBeInTheDocument();
       expect(screen.queryByText("Genre: Horror")).not.toBeInTheDocument();
     });
 
-    it("formats grade filter chips with category and label", () => {
+    it("renders pre-assembled displayText for grade filters", () => {
       render(
         <AppliedFilters
-          filters={[{ category: "Grade", id: "grade", label: "A- to B+" }]}
+          filters={[{ displayText: "Grade: A- to B+", key: "gradeValue" }]}
           onClearAll={mockOnClearAll}
           onRemove={mockOnRemove}
         />,
       );
 
-      expect(screen.getByText(/Grade: A- to B\+/)).toBeInTheDocument();
+      expect(screen.getByText("Grade: A- to B+")).toBeInTheDocument();
     });
 
     it("shows × symbol in each chip", () => {
@@ -127,7 +126,7 @@ describe("AppliedFilters", () => {
   });
 
   describe("Chip Removal", () => {
-    it("calls onRemove with correct id when chip × is clicked", async () => {
+    it("calls onRemove with correct key when chip × is clicked", async () => {
       const user = userEvent.setup();
       render(
         <AppliedFilters
@@ -137,7 +136,6 @@ describe("AppliedFilters", () => {
         />,
       );
 
-      // Simple filter (Genre) shows value only: "Horror"
       const horrorChip = screen.getByLabelText("Remove Horror filter");
       await user.click(horrorChip);
 
@@ -145,7 +143,7 @@ describe("AppliedFilters", () => {
       expect(mockOnRemove).toHaveBeenCalledWith("genre-horror");
     });
 
-    it("calls onRemove with different ids for different chips", async () => {
+    it("calls onRemove with different keys for different chips", async () => {
       const user = userEvent.setup();
       render(
         <AppliedFilters
@@ -155,17 +153,15 @@ describe("AppliedFilters", () => {
         />,
       );
 
-      // Simple filter (Genre) shows value only: "Action"
       const actionChip = screen.getByLabelText("Remove Action filter");
       await user.click(actionChip);
 
       expect(mockOnRemove).toHaveBeenCalledWith("genre-action");
 
-      // Search filter shows "Search: alien"
       const searchChip = screen.getByLabelText("Remove Search: alien filter");
       await user.click(searchChip);
 
-      expect(mockOnRemove).toHaveBeenCalledWith("search");
+      expect(mockOnRemove).toHaveBeenCalledWith("title");
       expect(mockOnRemove).toHaveBeenCalledTimes(2);
     });
   });
@@ -211,10 +207,8 @@ describe("AppliedFilters", () => {
         />,
       );
 
-      // Simple filter (Genre) shows value only: "Horror"
       const horrorChip = screen.getByLabelText("Remove Horror filter");
 
-      // Tab to focus, Enter to activate
       horrorChip.focus();
       expect(horrorChip).toHaveFocus();
 
@@ -251,7 +245,6 @@ describe("AppliedFilters", () => {
         />,
       );
 
-      // Simple filter (Genre) shows value only: "Action"
       const actionChip = screen.getByLabelText("Remove Action filter");
       actionChip.focus();
 
@@ -270,10 +263,8 @@ describe("AppliedFilters", () => {
         />,
       );
 
-      // Simple filters (Genre) show value only: "Horror", "Action"
       expect(screen.getByLabelText("Remove Horror filter")).toBeInTheDocument();
       expect(screen.getByLabelText("Remove Action filter")).toBeInTheDocument();
-      // Search filter shows "Search: alien"
       expect(
         screen.getByLabelText("Remove Search: alien filter"),
       ).toBeInTheDocument();
@@ -288,7 +279,6 @@ describe("AppliedFilters", () => {
         />,
       );
 
-      // Simple filter (Genre) shows value only: "Horror"
       const horrorChip = screen.getByLabelText("Remove Horror filter");
       const xSymbol = horrorChip.querySelector('[aria-hidden="true"]');
 
@@ -305,7 +295,6 @@ describe("AppliedFilters", () => {
         />,
       );
 
-      // Simple filter (Genre) shows value only: "Horror"
       const horrorChip = screen.getByLabelText("Remove Horror filter");
       expect(horrorChip).toHaveAttribute("type", "button");
     });
@@ -339,7 +328,7 @@ describe("AppliedFilters", () => {
     it("matches snapshot with single filter", () => {
       const { container } = render(
         <AppliedFilters
-          filters={[{ category: "Genre", id: "genre-horror", label: "Horror" }]}
+          filters={[{ displayText: "Horror", key: "genre-horror", value: "Horror" }]}
           onClearAll={mockOnClearAll}
           onRemove={mockOnRemove}
         />,
@@ -350,7 +339,7 @@ describe("AppliedFilters", () => {
     it("matches snapshot with search filter", () => {
       const { container } = render(
         <AppliedFilters
-          filters={[{ category: "Search", id: "search", label: "alien" }]}
+          filters={[{ displayText: "Search: alien", key: "title" }]}
           onClearAll={mockOnClearAll}
           onRemove={mockOnRemove}
         />,

@@ -1,4 +1,8 @@
-import { ReviewedTitleFilters } from "~/components/filter-and-sort/ReviewedTitleFilters";
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
+import { CheckboxListField } from "~/components/fields/CheckboxListField";
+import { GradeField } from "~/components/fields/GradeField";
+import { TextField } from "~/components/fields/TextField";
+import { YearField } from "~/components/fields/YearField";
 
 import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
 import type { ReviewsValue } from "./ReviewsListItem";
@@ -39,42 +43,54 @@ export function ReviewsFilters({
   filterValues: ReviewsFiltersValues;
   values: ReviewsValue[];
 }): React.JSX.Element {
-  // Calculate dynamic counts for genre filter options
   const genreCounts = calculateGenreCounts(values, filterValues);
 
   return (
-    <ReviewedTitleFilters
-      genres={{
-        counts: genreCounts,
-        defaultValues: filterValues.genres,
-        onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
-        values: distinctGenres,
-      }}
-      grade={{
-        defaultValues: filterValues.gradeValue,
-        onChange: (values) => dispatch(createGradeFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("gradeValue")),
-      }}
-      releaseYear={{
-        defaultValues: filterValues.releaseYear,
-        onChange: (values) =>
-          dispatch(createReleaseYearFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("releaseYear")),
-        values: distinctReleaseYears,
-      }}
-      reviewYear={{
-        defaultValues: filterValues.reviewYear,
-        onChange: (values) =>
-          dispatch(createReviewYearFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("reviewYear")),
-        values: distinctReviewYears,
-      }}
-      title={{
-        defaultValue: filterValues.title,
-        onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
-      }}
-    />
+    <>
+      <TextField
+        defaultValue={filterValues.title}
+        label="Title"
+        onInputChange={(value) => dispatch(createTitleFilterChangedAction(value))}
+        placeholder="Enter all or part of a title"
+      />
+      <YearField
+        defaultValues={filterValues.releaseYear}
+        label="Release Year"
+        onClear={() => dispatch(createRemoveAppliedFilterAction("releaseYear"))}
+        onYearChange={(values) =>
+          dispatch(createReleaseYearFilterChangedAction(values))
+        }
+        years={distinctReleaseYears}
+      />
+      <AnimatedDetailsDisclosure title="Genres">
+        <CheckboxListField
+          defaultValues={filterValues.genres}
+          label="Genres"
+          onChange={(values) => dispatch(createGenresFilterChangedAction(values))}
+          onClear={() => dispatch(createRemoveAppliedFilterAction("genres"))}
+          options={distinctGenres.map((value) => ({
+            count: genreCounts.get(value) ?? 0,
+            label: value,
+            value,
+          }))}
+        />
+      </AnimatedDetailsDisclosure>
+      <GradeField
+        defaultValues={filterValues.gradeValue}
+        label="Grade"
+        onClear={() => dispatch(createRemoveAppliedFilterAction("gradeValue"))}
+        onGradeChange={(values) => dispatch(createGradeFilterChangedAction(values))}
+      />
+      <YearField
+        defaultValues={filterValues.reviewYear}
+        label="Review Year"
+        onClear={() => dispatch(createRemoveAppliedFilterAction("reviewYear"))}
+        onYearChange={(values) =>
+          dispatch(createReviewYearFilterChangedAction(values))
+        }
+        years={distinctReviewYears}
+      />
+    </>
   );
 }
 

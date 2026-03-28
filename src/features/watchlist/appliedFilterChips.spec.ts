@@ -24,14 +24,14 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(2);
     expect(chips[0]).toEqual({
-      category: "Genre",
-      id: "genre-horror",
-      label: "Horror",
+      displayText: "Horror",
+      key: "genre-horror",
+      value: "Horror",
     });
     expect(chips[1]).toEqual({
-      category: "Genre",
-      id: "genre-action",
-      label: "Action",
+      displayText: "Action",
+      key: "genre-action",
+      value: "Action",
     });
   });
 
@@ -46,9 +46,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Release Year",
-      id: "releaseYear",
-      label: "2020",
+      displayText: "Release Year: 2020",
+      key: "releaseYear",
     });
   });
 
@@ -63,9 +62,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Release Year",
-      id: "releaseYear",
-      label: "1980-1989",
+      displayText: "Release Year: 1980 to 1989",
+      key: "releaseYear",
     });
   });
 
@@ -105,9 +103,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Director",
-      id: "director-christopher-nolan",
-      label: "Christopher Nolan",
+      displayText: "Christopher Nolan",
+      key: "director-christopher-nolan",
+      value: "Christopher Nolan",
     });
   });
 
@@ -125,9 +123,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Performer",
-      id: "performer-tom-hanks",
-      label: "Tom Hanks",
+      displayText: "Tom Hanks",
+      key: "performer-tom-hanks",
+      value: "Tom Hanks",
     });
   });
 
@@ -145,9 +143,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Writer",
-      id: "writer-aaron-sorkin",
-      label: "Aaron Sorkin",
+      displayText: "Aaron Sorkin",
+      key: "writer-aaron-sorkin",
+      value: "Aaron Sorkin",
     });
   });
 
@@ -165,9 +163,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Collection",
-      id: "collection-criterion-collection",
-      label: "Criterion Collection",
+      displayText: "Criterion Collection",
+      key: "collection-criterion-collection",
+      value: "Criterion Collection",
     });
   });
 
@@ -182,9 +180,8 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Search",
-      id: "title",
-      label: "dark knight",
+      displayText: "Search: dark knight",
+      key: "title",
     });
   });
 
@@ -228,16 +225,16 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(8);
     // Verify order: genres, releaseYear, director, performer, writer, collection, title
-    expect(chips[0].category).toBe("Genre");
-    expect(chips[0].label).toBe("Horror");
-    expect(chips[1].category).toBe("Genre");
-    expect(chips[1].label).toBe("Action");
-    expect(chips[2].category).toBe("Release Year");
-    expect(chips[3].category).toBe("Director");
-    expect(chips[4].category).toBe("Performer");
-    expect(chips[5].category).toBe("Writer");
-    expect(chips[6].category).toBe("Collection");
-    expect(chips[7].category).toBe("Search");
+    expect(chips[0].key).toMatch(/^genre-/);
+    expect(chips[0].displayText).toBe("Horror");
+    expect(chips[1].key).toMatch(/^genre-/);
+    expect(chips[1].displayText).toBe("Action");
+    expect(chips[2].key).toBe("releaseYear");
+    expect(chips[3].key).toMatch(/^director-/);
+    expect(chips[4].key).toMatch(/^performer-/);
+    expect(chips[5].key).toMatch(/^writer-/);
+    expect(chips[6].key).toMatch(/^collection-/);
+    expect(chips[7].key).toBe("title");
   });
 
   it("handles genre with spaces in name", () => {
@@ -250,9 +247,9 @@ describe("buildAppliedFilterChips", () => {
 
     expect(chips).toHaveLength(1);
     expect(chips[0]).toEqual({
-      category: "Genre",
-      id: "genre-science-fiction",
-      label: "Science Fiction",
+      displayText: "Science Fiction",
+      key: "genre-science-fiction",
+      value: "Science Fiction",
     });
   });
 

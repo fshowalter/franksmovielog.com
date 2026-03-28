@@ -14,16 +14,10 @@ import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterWatchlistValues } from "./filterWatchlistValues";
 import { sortWatchlistValues } from "./sortWatchlistValues";
 import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
   createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
-  createWatchlistFilterChangedAction,
   reducer,
-  selectHasPendingFilters,
 } from "./Watchlist.reducer";
 import { WatchlistFilters } from "./WatchlistFilters";
 import { WatchlistListItem } from "./WatchlistListItem";
@@ -108,76 +102,16 @@ export function Watchlist({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
     distinctReleaseYears,
   });
 
-  /**
-   * Handles removal of individual filter chips.
-   * For director/performer/writer/collection, removes specific value from array.
-   * For other filters, removes entire filter key.
-   */
-  function handleRemoveAppliedFilter(filterId: string): void {
-    // Parse the filter ID to determine type and value
-    if (filterId.startsWith("director-")) {
-      const directorName = filterId
-        .replace("director-", "")
-        .replaceAll("-", " ")
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-      const newDirectors =
-        state.pendingFilterValues.director?.filter((d) => d !== directorName) ??
-        [];
-      dispatch(createWatchlistFilterChangedAction("director", newDirectors));
-    } else if (filterId.startsWith("performer-")) {
-      const performerName = filterId
-        .replace("performer-", "")
-        .replaceAll("-", " ")
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-      const newPerformers =
-        state.pendingFilterValues.performer?.filter(
-          (p) => p !== performerName,
-        ) ?? [];
-      dispatch(createWatchlistFilterChangedAction("performer", newPerformers));
-    } else if (filterId.startsWith("writer-")) {
-      const writerName = filterId
-        .replace("writer-", "")
-        .replaceAll("-", " ")
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-      const newWriters =
-        state.pendingFilterValues.writer?.filter((w) => w !== writerName) ?? [];
-      dispatch(createWatchlistFilterChangedAction("writer", newWriters));
-    } else if (filterId.startsWith("collection-")) {
-      const collectionName = filterId
-        .replace("collection-", "")
-        .replaceAll("-", " ")
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-      const newCollections =
-        state.pendingFilterValues.collection?.filter(
-          (c) => c !== collectionName,
-        ) ?? [];
-      dispatch(
-        createWatchlistFilterChangedAction("collection", newCollections),
-      );
-    } else {
-      // For other filters (genres, releaseYear, title), use the standard removal
-      dispatch(createRemoveAppliedFilterAction(filterId));
-    }
-  }
-
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      createSortAction={createSortAction}
+      dispatch={dispatch}
       filters={
         <WatchlistFilters
           dispatch={dispatch}
@@ -191,23 +125,10 @@ export function Watchlist({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
       headerLink={{ href: "/watchlist/progress/", text: "progress" }}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={handleRemoveAppliedFilter}
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
-      sortProps={{
-        currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: TITLE_SORT_OPTIONS,
-      }}
+      sortOptions={TITLE_SORT_OPTIONS}
+      state={state}
       totalCount={totalCount}
     >
       <div className="tablet:-mx-6 tablet:pt-10">

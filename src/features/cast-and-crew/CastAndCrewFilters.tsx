@@ -1,5 +1,7 @@
-import { CollectionFilters } from "~/components/filter-and-sort/CollectionFilters";
-import { CreditedAsFilter } from "~/components/filter-and-sort/CreditedAsFilter";
+import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
+import { CheckboxListField } from "~/components/fields/CheckboxListField";
+import { TextField } from "~/components/fields/TextField";
+import { capitalize } from "~/utils/capitalize";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type {
@@ -10,7 +12,6 @@ import type {
 import {
   createCreditedAsFilterChangedAction,
   createNameFilterChangedAction,
-  createRemoveAppliedFilterAction,
 } from "./CastAndCrew.reducer";
 import { calculateCreditedAsCounts } from "./filterCastAndCrew";
 
@@ -36,21 +37,27 @@ export function CastAndCrewFilters({
 
   return (
     <>
-      <CollectionFilters
-        name={{
-          defaultValue: filterValues.name,
-          onChange: (value) => dispatch(createNameFilterChangedAction(value)),
-        }}
+      <TextField
+        defaultValue={filterValues.name}
+        label="Name"
+        onInputChange={(value) => dispatch(createNameFilterChangedAction(value))}
+        placeholder="Enter all or part of a name"
       />
-      <CreditedAsFilter
-        counts={creditedAsCounts}
-        defaultValues={filterValues.creditedAs ?? []}
-        onChange={(value) =>
-          dispatch(createCreditedAsFilterChangedAction(value))
-        }
-        onClear={() => dispatch(createRemoveAppliedFilterAction("creditedAs"))}
-        values={["director", "performer", "writer"]}
-      />
+      <AnimatedDetailsDisclosure title="Credited As">
+        <CheckboxListField
+          defaultValues={filterValues.creditedAs ?? []}
+          label="Credited As"
+          onChange={(values) =>
+            dispatch(createCreditedAsFilterChangedAction(values))
+          }
+          onClear={() => dispatch(createCreditedAsFilterChangedAction([]))}
+          options={["director", "performer", "writer"].map((credit) => ({
+            count: creditedAsCounts.get(credit) ?? 0,
+            label: capitalize(credit),
+            value: credit,
+          }))}
+        />
+      </AnimatedDetailsDisclosure>
     </>
   );
 }

@@ -10,15 +10,10 @@ import type { ReviewsProps } from "./ReviewsProps";
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import { filterReviews } from "./filteredReviews";
 import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
   createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
   createShowMoreAction,
   createSortAction,
   reducer,
-  selectHasPendingFilters,
 } from "./reducer";
 import { ReviewsFilters, SORT_OPTIONS } from "./ReviewsFilters";
 import { ReviewsListItem } from "./ReviewsListItem";
@@ -55,7 +50,6 @@ export function Reviews({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
     distinctReleaseYears,
@@ -65,6 +59,8 @@ export function Reviews({
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      createSortAction={createSortAction}
+      dispatch={dispatch}
       filters={
         <ReviewsFilters
           dispatch={dispatch}
@@ -75,22 +71,9 @@ export function Reviews({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={(id) => dispatch(createRemoveAppliedFilterAction(id))}
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
-      sortProps={{
-        currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: SORT_OPTIONS,
-      }}
+      sortOptions={SORT_OPTIONS}
+      state={state}
       totalCount={totalCount}
     >
       <div className="tablet:-mx-6 tablet:pt-10">

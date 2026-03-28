@@ -10,7 +10,7 @@ import { reviewYearFacetReducer } from "~/facets/reviewYear/reviewYearReducer";
 import { titleFacetReducer } from "~/facets/title/titleReducer";
 import {
   createInitialFiltersState,
-  filtersReducer,
+  filtersLifecycleReducer,
 } from "~/reducers/filtersReducer";
 import {
   createInitialSortState,
@@ -24,13 +24,7 @@ export { createReleaseYearFilterChangedAction } from "~/facets/releaseYear/relea
 export { createReviewedStatusFilterChangedAction } from "~/facets/reviewedStatus/reviewedStatusReducer";
 export { createReviewYearFilterChangedAction } from "~/facets/reviewYear/reviewYearReducer";
 export { createTitleFilterChangedAction } from "~/facets/title/titleReducer";
-export {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  selectHasPendingFilters,
-} from "~/reducers/filtersReducer";
+export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
 
 import type { GenresFilterChangedAction } from "~/facets/genres/genresReducer";
 import type { GradeFilterChangedAction } from "~/facets/grade/gradeReducer";
@@ -69,17 +63,14 @@ type CollectionTitlesState = {
 };
 
 const collectionTitlesComposedReducer = composeReducers<CollectionTitlesState>(
-  filtersReducer,
+  filtersLifecycleReducer,
   titleFacetReducer,
   genresFacetReducer,
   gradeFacetReducer,
   releaseYearFacetReducer,
   reviewYearFacetReducer,
   reviewedStatusFacetReducer,
-  (state, action) =>
-    action.type === "sort/sort"
-      ? sortReducer(state, action as SortAction<CollectionTitlesSort>)
-      : state,
+  sortReducer,
 );
 
 export function createInitialState({

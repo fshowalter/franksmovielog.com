@@ -25,9 +25,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Search",
-          id: "name",
-          label: "horror",
+          displayText: "Search: horror",
+          key: "name",
         },
       ]);
     });
@@ -61,9 +60,8 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          category: "Search",
-          id: "name",
-          label: "The Alien Collection",
+          displayText: "Search: The Alien Collection",
+          key: "name",
         },
       ]);
     });

@@ -1,12 +1,12 @@
 import { omitPendingKey } from "~/facets/omitPendingKey";
 
-export const STATE_KEY = "gradeValue";
+const STATE_KEY = "gradeValue";
 
 const GRADE_MIN = 2;
 const GRADE_MAX = 16;
 
 const ActionTypes = {
-  CHANGED: "reviewedTitleFilters/gradeFilterChanged" as const,
+  CHANGED: "grade/changed" as const,
 };
 
 export type GradeFilterChangedAction = {

@@ -13,15 +13,9 @@ import type { CastAndCrewSort } from "./sortCastAndCrew";
 import { AlphabetSideNav } from "./AlphabetSideNav";
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createCreditedAsFilterChangedAction,
   createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
   createSortAction,
   reducer,
-  selectHasPendingFilters,
 } from "./CastAndCrew.reducer";
 import { CastAndCrewFilters } from "./CastAndCrewFilters";
 import { CastAndCrewListItem } from "./CastAndCrewListItem";
@@ -83,28 +77,14 @@ export function CastAndCrew({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
-
-  // Custom handler for removing individual creditedAs values
-  function handleRemoveAppliedFilter(filterId: string): void {
-    if (filterId.startsWith("creditedAs-")) {
-      const roleToRemove = filterId.replace("creditedAs-", "");
-      const currentRoles = state.pendingFilterValues.creditedAs || [];
-      const updatedRoles = currentRoles.filter(
-        (role) => role.toLowerCase() !== roleToRemove,
-      );
-      dispatch(createCreditedAsFilterChangedAction(updatedRoles));
-    } else {
-      dispatch(createRemoveAppliedFilterAction(filterId));
-    }
-  }
 
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      createSortAction={createSortAction}
+      dispatch={dispatch}
       filters={
         <CastAndCrewFilters
           dispatch={dispatch}
@@ -112,25 +92,12 @@ export function CastAndCrew({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={handleRemoveAppliedFilter}
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
       sideNav={
         <AlphabetSideNav groupedValues={groupedValues} sortValue={state.sort} />
       }
-      sortProps={{
-        currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: COLLECTION_SORT_OPTIONS,
-      }}
+      sortOptions={COLLECTION_SORT_OPTIONS}
+      state={state}
       totalCount={totalCount}
     >
       <GroupedAvatarList

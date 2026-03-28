@@ -1,5 +1,3 @@
-import type { TitleFiltersValues } from "~/reducers/titleFiltersReducer";
-
 import { createReleaseYearFilter } from "./createReleaseYearFilter";
 import { createTitleFilter } from "./createTitleFilter";
 import { filterSortedValues } from "./filterSortedValues";
@@ -8,6 +6,12 @@ export type FilterableTitle = {
   genres: string[];
   releaseYear: string;
   title: string;
+};
+
+type TitleFiltersValues = {
+  genres?: readonly string[];
+  releaseYear?: [string, string];
+  title?: string;
 };
 
 /**

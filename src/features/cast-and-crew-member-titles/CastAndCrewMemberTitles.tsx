@@ -11,14 +11,9 @@ import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles"
 
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
   createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
   createSortAction,
   reducer,
-  selectHasPendingFilters,
 } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
 import { CastAndCrewMemberTitlesListItem } from "./CastAndCrewMemberTitlesListItem";
@@ -95,8 +90,6 @@ export function CastAndCrewMemberTitles({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   return (
     <FilterAndSortContainer
@@ -104,6 +97,8 @@ export function CastAndCrewMemberTitles({
         distinctReleaseYears,
         distinctReviewYears,
       })}
+      createSortAction={createSortAction}
+      dispatch={dispatch}
       filters={
         <CastAndCrewMemberTitlesFilters
           dispatch={dispatch}
@@ -115,24 +110,9 @@ export function CastAndCrewMemberTitles({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={(filterId) =>
-        dispatch(createRemoveAppliedFilterAction(filterId))
-      }
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
-      sortProps={{
-        currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
-      }}
+      sortOptions={REVIEWED_TITLE_SORT_OPTIONS}
+      state={state}
       totalCount={filteredValues.length}
     >
       <div className="tablet:-mx-6 tablet:pt-10">

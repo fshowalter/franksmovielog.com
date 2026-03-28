@@ -13,15 +13,17 @@ import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosur
  */
 
 export type FilterChip = {
-  category: string; // Display category (e.g., "Genre", "Search")
-  id: string; // Unique identifier (e.g., "genre-horror", "search")
-  label: string; // Display value (e.g., "Horror", "alien")
+  // AIDEV-NOTE: displayText is pre-assembled by chip builders (e.g. "Grade: A- to B+",
+  // "Search: alien", "Horror"). No rendering logic needed here.
+  displayText: string;
+  key: string; // Unique id used for removal dispatch (e.g. "genre-horror", "gradeValue")
+  value?: string; // Raw filter value for multi-select chips (e.g. "Horror")
 };
 
 type AppliedFiltersProps = {
   filters: FilterChip[];
   onClearAll: () => void;
-  onRemove: (id: string) => void;
+  onRemove: (key: string) => void;
 };
 
 export function AppliedFilters({
@@ -37,39 +39,24 @@ export function AppliedFilters({
   return (
     <AnimatedDetailsDisclosure title="Applied Filters">
       <div className="mb-3 flex flex-wrap gap-2">
-        {filters.map((filter) => {
-          // AIDEV-NOTE: Per FILTER_REDESIGN_SPEC.md Task 8.2:
-          // - Simple filters (Genre, Medium, Venue, etc.) show value only: "Horror"
-          // - Range filters (Grade, Year) show "Category: Value": "Grade: A- to B+"
-          // - Search filters show "Search: query": "Search: alien"
-          const isRangeOrSearch =
-            filter.category.includes("Grade") ||
-            filter.category.includes("Year") ||
-            filter.category === "Search";
-
-          const displayText = isRangeOrSearch
-            ? `${filter.category}: ${filter.label}`
-            : filter.label;
-
-          return (
-            <button
-              aria-label={`Remove ${displayText} filter`}
-              className="
-                inline-flex items-center gap-2 rounded-sm border border-default
-                bg-canvas px-3 py-1.5 font-sans text-sm text-default
-                transition-colors
-                hover:border-accent hover:bg-accent
-                focus:border-accent focus:bg-accent focus:outline-none
-              "
-              key={filter.id}
-              onClick={() => onRemove(filter.id)}
-              type="button"
-            >
-              <span>{displayText}</span>
-              <span aria-hidden="true">×</span>
-            </button>
-          );
-        })}
+        {filters.map((filter) => (
+          <button
+            aria-label={`Remove ${filter.displayText} filter`}
+            className="
+              inline-flex items-center gap-2 rounded-sm border border-default
+              bg-canvas px-3 py-1.5 font-sans text-sm text-default
+              transition-colors
+              hover:border-accent hover:bg-accent
+              focus:border-accent focus:bg-accent focus:outline-none
+            "
+            key={filter.key}
+            onClick={() => onRemove(filter.key)}
+            type="button"
+          >
+            <span>{filter.displayText}</span>
+            <span aria-hidden="true">×</span>
+          </button>
+        ))}
       </div>
 
       <button

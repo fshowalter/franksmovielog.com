@@ -21,9 +21,11 @@ export function buildGradeChip(
   }
   const minLetter = gradeToLetter(min);
   const maxLetter = gradeToLetter(max);
-  const label =
-    minLetter === maxLetter ? minLetter : `${minLetter} to ${maxLetter}`;
-  return [{ category: "Grade", id: "gradeValue", label }];
+  const displayText =
+    minLetter === maxLetter
+      ? `Grade: ${minLetter}`
+      : `Grade: ${minLetter} to ${maxLetter}`;
+  return [{ displayText, key: "gradeValue" }];
 }
 
 /**
@@ -31,11 +33,9 @@ export function buildGradeChip(
  * Returns one chip per value with the given category and an id of `${id}-${slug}`.
  */
 export function buildMultiSelectChips({
-  category,
   id,
   values,
 }: {
-  category: string;
   id: string;
   values: readonly string[] | undefined;
 }): FilterChip[] {
@@ -43,9 +43,9 @@ export function buildMultiSelectChips({
     return [];
   }
   return values.map((value) => ({
-    category,
-    id: `${id}-${value.toLowerCase().replaceAll(" ", "-")}`,
-    label: value,
+    displayText: value,
+    key: `${id}-${value.toLowerCase().replaceAll(" ", "-")}`,
+    value,
   }));
 }
 
@@ -63,7 +63,7 @@ export function buildSearchChip({
   if (!value || value.trim() === "") {
     return [];
   }
-  return [{ category: "Search", id, label: value.trim() }];
+  return [{ displayText: `Search: ${value.trim()}`, key: id }];
 }
 
 /**
@@ -90,6 +90,6 @@ export function buildYearRangeChip({
   if (minYear === fullMin && maxYear === fullMax) {
     return [];
   }
-  const label = minYear === maxYear ? minYear : `${minYear} to ${maxYear}`;
-  return [{ category, id, label }];
+  const range = minYear === maxYear ? minYear : `${minYear} to ${maxYear}`;
+  return [{ displayText: `${category}: ${range}`, key: id }];
 }

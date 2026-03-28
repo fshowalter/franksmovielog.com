@@ -9,7 +9,7 @@ export type SortAction<TSort> = {
 /**
  * State shape for sort functionality.
  */
-export type SortState<TSort> = {
+type SortState<TSort> = {
   sort: TSort;
 };
 
@@ -44,23 +44,18 @@ export function createSortActionCreator<TSort>() {
 
 /**
  * Reducer function for handling sort state updates.
+ * Returns state unchanged for non-sort actions (facet contract).
  * @param state - Current sort state
- * @param action - Sort action to process
- * @returns Updated state with new sort value
+ * @param action - Action to process
+ * @returns Updated state with new sort value, or unchanged state
  */
 export function sortReducer<TSort, TState extends SortState<TSort>>(
   state: TState,
-  action: SortAction<TSort>,
+  action: { type: string },
 ): TState {
-  return updateSort<TSort, TState>(state, action);
-}
-
-function updateSort<TSort, TState extends SortState<TSort>>(
-  state: TState,
-  action: SortAction<TSort>,
-): TState {
+  if (action.type !== "sort/sort") return state;
   return {
     ...state,
-    sort: action.value,
+    sort: (action as SortAction<TSort>).value,
   };
 }

@@ -8,7 +8,7 @@ import {
 } from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-type GenresFacetItem = { genres: readonly string[]; title: string };
+type GenresFacetItem = { genres: string[]; title: string };
 
 /**
  * Shared genres filter facet tests.

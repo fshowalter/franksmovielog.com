@@ -7,15 +7,6 @@ export type FiltersAction =
   | RemoveAppliedFilterAction
   | ResetFiltersAction;
 
-/**
- * State shape for filter functionality.
- */
-export type FiltersState<TValue> = {
-  activeFilterValues: Record<string, unknown>;
-  pendingFilterValues: Record<string, unknown>;
-  values: TValue[];
-};
-
 export type RemoveAppliedFilterAction = {
   filterKey: string;
   type: "filters/removeAppliedFilter";
@@ -30,6 +21,15 @@ type ApplyFiltersAction = {
 
 type ClearFiltersAction = {
   type: "filters/cleared";
+};
+
+/**
+ * State shape for filter functionality.
+ */
+type FiltersState<TValue> = {
+  activeFilterValues: Record<string, unknown>;
+  pendingFilterValues: Record<string, unknown>;
+  values: TValue[];
 };
 
 type ResetFiltersAction = {
@@ -90,13 +90,13 @@ export function createResetFiltersAction(): ResetFiltersAction {
 }
 
 /**
- * Reducer function for handling filter state updates.
+ * Lifecycle reducer for filter state: apply, clear, reset, and scalar chip removal.
  * Accepts any action; handles its own types and returns state unchanged for others.
  * @param state - Current filter state
  * @param action - Action to process
  * @returns Updated state with filter changes applied
  */
-export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
+export function filtersLifecycleReducer<TValue, TState extends FiltersState<TValue>>(
   state: TState,
   action: { type: string },
 ): TState {
@@ -124,18 +124,6 @@ export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
       return state;
     }
   }
-}
-
-/**
- * Selector to determine if there are any pending filters.
- * @param state - Current filter state
- * @returns True if there are pending filters, false otherwise
- */
-export function selectHasPendingFilters<
-  TValue,
-  TState extends FiltersState<TValue>,
->(state: TState): boolean {
-  return Object.keys(state.pendingFilterValues).length > 0;
 }
 
 /**

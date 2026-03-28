@@ -11,14 +11,9 @@ import type { CollectionTitlesSort } from "./sortCollectionTitles";
 
 import { buildAppliedFilterChips } from "./appliedFilterChips";
 import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
   createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
   createSortAction,
   reducer,
-  selectHasPendingFilters,
 } from "./CollectionTitles.reducer";
 import { CollectionTitlesFilters } from "./CollectionTitlesFilters";
 import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
@@ -94,8 +89,6 @@ export function CollectionTitles({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
     distinctReleaseYears,
@@ -105,6 +98,8 @@ export function CollectionTitles({
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      createSortAction={createSortAction}
+      dispatch={dispatch}
       filters={
         <CollectionTitlesFilters
           dispatch={dispatch}
@@ -115,24 +110,9 @@ export function CollectionTitles({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={(filterId) =>
-        dispatch(createRemoveAppliedFilterAction(filterId))
-      }
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
-      sortProps={{
-        currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
-      }}
+      sortOptions={REVIEWED_TITLE_SORT_OPTIONS}
+      state={state}
       totalCount={filteredValues.length}
     >
       <div className="tablet:-mx-6 tablet:pt-10">

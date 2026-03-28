@@ -1,4 +1,4 @@
-import { CollectionFilters } from "~/components/filter-and-sort/CollectionFilters";
+import { TextField } from "~/components/fields/TextField";
 
 import type {
   CollectionsAction,
@@ -22,11 +22,11 @@ export function CollectionsFilters({
   filterValues: CollectionsFiltersValues;
 }): React.JSX.Element {
   return (
-    <CollectionFilters
-      name={{
-        defaultValue: filterValues.name,
-        onChange: (value) => dispatch(createNameFilterChangedAction(value)),
-      }}
+    <TextField
+      defaultValue={filterValues.name}
+      label="Name"
+      onInputChange={(value) => dispatch(createNameFilterChangedAction(value))}
+      placeholder="Enter all or part of a name"
     />
   );
 }

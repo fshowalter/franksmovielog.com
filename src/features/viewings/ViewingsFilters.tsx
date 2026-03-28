@@ -2,8 +2,8 @@ import type { CheckboxListFieldOption } from "~/components/fields/CheckboxListFi
 
 import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/fields/CheckboxListField";
+import { TextField } from "~/components/fields/TextField";
 import { YearField } from "~/components/fields/YearField";
-import { TitleFilters } from "~/components/filter-and-sort/TitleFilters";
 
 import type { ViewingsValue } from "./Viewings";
 import type { ViewingsAction, ViewingsFiltersValues } from "./Viewings.reducer";
@@ -95,19 +95,20 @@ export function ViewingsFilters({
 
   return (
     <>
-      <TitleFilters
-        releaseYear={{
-          defaultValues: filterValues.releaseYear,
-          onChange: (values) =>
-            dispatch(createReleaseYearFilterChangedAction(values)),
-          onClear: () =>
-            dispatch(createRemoveAppliedFilterAction("releaseYear")),
-          values: distinctReleaseYears,
-        }}
-        title={{
-          defaultValue: filterValues.title,
-          onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
-        }}
+      <TextField
+        defaultValue={filterValues.title}
+        label="Title"
+        onInputChange={(value) => dispatch(createTitleFilterChangedAction(value))}
+        placeholder="Enter all or part of a title"
+      />
+      <YearField
+        defaultValues={filterValues.releaseYear}
+        label="Release Year"
+        onClear={() => dispatch(createRemoveAppliedFilterAction("releaseYear"))}
+        onYearChange={(values) =>
+          dispatch(createReleaseYearFilterChangedAction(values))
+        }
+        years={distinctReleaseYears}
       />
       <AnimatedDetailsDisclosure title="Reviewed Status">
         <CheckboxListField

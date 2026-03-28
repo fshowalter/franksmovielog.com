@@ -8,9 +8,5 @@ import { buildMultiSelectChips } from "~/facets/filterChipBuilders";
 export function buildReviewedStatusFilterChip(
   values: readonly string[] | undefined,
 ): FilterChip[] {
-  return buildMultiSelectChips({
-    category: "Reviewed Status",
-    id: "reviewedStatus",
-    values,
-  });
+  return buildMultiSelectChips({ id: "reviewedStatus", values });
 }

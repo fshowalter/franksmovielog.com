@@ -1,6 +1,8 @@
-import type { CollectionFiltersValues } from "~/reducers/collectionFiltersReducer";
-
 import { filterSortedValues } from "./filterSortedValues";
+
+type CollectionFiltersValues = {
+  name?: string;
+};
 
 type FilterableCollection = {
   name: string;

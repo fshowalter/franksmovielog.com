@@ -24,14 +24,14 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Genre",
-        id: "genre-horror",
-        label: "Horror",
+        displayText: "Horror",
+        key: "genre-horror",
+        value: "Horror",
       },
       {
-        category: "Genre",
-        id: "genre-action",
-        label: "Action",
+        displayText: "Action",
+        key: "genre-action",
+        value: "Action",
       },
     ]);
   });
@@ -46,9 +46,9 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Genre",
-        id: "genre-science-fiction",
-        label: "Science Fiction",
+        displayText: "Science Fiction",
+        key: "genre-science-fiction",
+        value: "Science Fiction",
       },
     ]);
   });
@@ -63,9 +63,8 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Grade",
-        id: "gradeValue",
-        label: "A-",
+        displayText: "Grade: A-",
+        key: "gradeValue",
       },
     ]);
   });
@@ -80,9 +79,8 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Grade",
-        id: "gradeValue",
-        label: "B+ to B-",
+        displayText: "Grade: B- to B+",
+        key: "gradeValue",
       },
     ]);
   });
@@ -108,9 +106,8 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Release Year",
-        id: "releaseYear",
-        label: "1980",
+        displayText: "Release Year: 1980",
+        key: "releaseYear",
       },
     ]);
   });
@@ -125,9 +122,8 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Release Year",
-        id: "releaseYear",
-        label: "1980-1989",
+        displayText: "Release Year: 1980 to 1989",
+        key: "releaseYear",
       },
     ]);
   });
@@ -142,9 +138,8 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Review Year",
-        id: "reviewYear",
-        label: "2020",
+        displayText: "Review Year: 2020",
+        key: "reviewYear",
       },
     ]);
   });
@@ -159,9 +154,8 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Review Year",
-        id: "reviewYear",
-        label: "2020-2023",
+        displayText: "Review Year: 2020 to 2023",
+        key: "reviewYear",
       },
     ]);
   });
@@ -207,9 +201,9 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-reviewed",
-        label: "Reviewed",
+        displayText: "Reviewed",
+        key: "reviewedStatus-reviewed",
+        value: "Reviewed",
       },
     ]);
   });
@@ -224,14 +218,14 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-reviewed",
-        label: "Reviewed",
+        displayText: "Reviewed",
+        key: "reviewedStatus-reviewed",
+        value: "Reviewed",
       },
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-not-reviewed",
-        label: "Not Reviewed",
+        displayText: "Not Reviewed",
+        key: "reviewedStatus-not-reviewed",
+        value: "Not Reviewed",
       },
     ]);
   });
@@ -257,9 +251,8 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Search",
-        id: "title",
-        label: "alien",
+        displayText: "Search: alien",
+        key: "title",
       },
     ]);
   });
@@ -301,39 +294,35 @@ describe("buildAppliedFilterChips", () => {
     });
     expect(result).toEqual([
       {
-        category: "Genre",
-        id: "genre-horror",
-        label: "Horror",
+        displayText: "Horror",
+        key: "genre-horror",
+        value: "Horror",
       },
       {
-        category: "Genre",
-        id: "genre-drama",
-        label: "Drama",
+        displayText: "Drama",
+        key: "genre-drama",
+        value: "Drama",
       },
       {
-        category: "Grade",
-        id: "gradeValue",
-        label: "A+ to B+",
+        displayText: "Grade: B+ to A+",
+        key: "gradeValue",
       },
       {
-        category: "Release Year",
-        id: "releaseYear",
-        label: "1980-1989",
+        displayText: "Release Year: 1980 to 1989",
+        key: "releaseYear",
       },
       {
-        category: "Review Year",
-        id: "reviewYear",
-        label: "2020-2023",
+        displayText: "Review Year: 2020 to 2023",
+        key: "reviewYear",
       },
       {
-        category: "Reviewed Status",
-        id: "reviewedStatus-reviewed",
-        label: "Reviewed",
+        displayText: "Reviewed",
+        key: "reviewedStatus-reviewed",
+        value: "Reviewed",
       },
       {
-        category: "Search",
-        id: "title",
-        label: "night",
+        displayText: "Search: night",
+        key: "title",
       },
     ]);
   });
