@@ -185,7 +185,9 @@ export function titleSortFacetTests(
 
       const list = getList();
       const allText = list.textContent ?? "";
-      expect(allText.indexOf("Alien")).toBeLessThan(allText.indexOf("The Matrix"));
+      expect(allText.indexOf("Alien")).toBeLessThan(
+        allText.indexOf("The Matrix"),
+      );
       expect(allText.indexOf("The Matrix")).toBeLessThan(
         allText.indexOf("Zodiac"),
       );
@@ -213,7 +215,9 @@ export function titleSortFacetTests(
       expect(allText.indexOf("Zodiac")).toBeLessThan(
         allText.indexOf("The Matrix"),
       );
-      expect(allText.indexOf("The Matrix")).toBeLessThan(allText.indexOf("Alien"));
+      expect(allText.indexOf("The Matrix")).toBeLessThan(
+        allText.indexOf("Alien"),
+      );
 
       vi.clearAllTimers();
       vi.useRealTimers();

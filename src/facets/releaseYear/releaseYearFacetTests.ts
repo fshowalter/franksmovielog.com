@@ -37,8 +37,7 @@ export function releaseYearFilterFacetTests(
       // Use a sub-range of distinctReleaseYears for the test
       const minYear = distinctReleaseYears[1] ?? distinctReleaseYears[0];
       const maxYear =
-        distinctReleaseYears.at(-2) ??
-        distinctReleaseYears.at(-1)!;
+        distinctReleaseYears.at(-2) ?? distinctReleaseYears.at(-1)!;
 
       const items: ReleaseYearItem[] = [
         {
@@ -69,9 +68,7 @@ export function releaseYearFilterFacetTests(
       expect(within(list).getByText("Middle Movie")).toBeInTheDocument();
       // Oldest movie is in the excluded range (before minYear or at distinctYears[0])
       // Only verify Middle Movie is shown; others depend on specific year values
-      expect(
-        within(list).queryByText("Newest Movie"),
-      ).not.toBeInTheDocument();
+      expect(within(list).queryByText("Newest Movie")).not.toBeInTheDocument();
 
       vi.clearAllTimers();
       vi.useRealTimers();
@@ -82,8 +79,7 @@ export function releaseYearFilterFacetTests(
 
       const fromYear = distinctReleaseYears[1] ?? distinctReleaseYears[0];
       const toYear =
-        distinctReleaseYears.at(-2) ??
-        distinctReleaseYears.at(-1)!;
+        distinctReleaseYears.at(-2) ?? distinctReleaseYears.at(-1)!;
 
       const items: ReleaseYearItem[] = [
         {
@@ -118,8 +114,7 @@ export function releaseYearFilterFacetTests(
 
       const fromYear = distinctReleaseYears[1] ?? distinctReleaseYears[0];
       const toYear =
-        distinctReleaseYears.at(-2) ??
-        distinctReleaseYears.at(-1)!;
+        distinctReleaseYears.at(-2) ?? distinctReleaseYears.at(-1)!;
 
       const items: ReleaseYearItem[] = [
         {

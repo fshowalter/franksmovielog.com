@@ -34,7 +34,10 @@ export function titleFacetReducer<
       }
       return {
         ...state,
-        pendingFilterValues: { ...state.pendingFilterValues, [STATE_KEY]: value },
+        pendingFilterValues: {
+          ...state.pendingFilterValues,
+          [STATE_KEY]: value,
+        },
       };
     }
     case "filters/removeAppliedFilter": {

@@ -24,12 +24,8 @@ import {
 
 export { createGenresFilterChangedAction } from "~/facets/genres/genresReducer";
 export { createGradeFilterChangedAction } from "~/facets/grade/gradeReducer";
-export {
-  createReleaseYearFilterChangedAction,
-} from "~/facets/releaseYear/releaseYearReducer";
-export {
-  createReviewYearFilterChangedAction,
-} from "~/facets/reviewYear/reviewYearReducer";
+export { createReleaseYearFilterChangedAction } from "~/facets/releaseYear/releaseYearReducer";
+export { createReviewYearFilterChangedAction } from "~/facets/reviewYear/reviewYearReducer";
 export { createTitleFilterChangedAction } from "~/facets/title/titleReducer";
 export {
   createApplyFiltersAction,
@@ -42,12 +38,8 @@ export { createShowMoreAction } from "~/reducers/showMoreReducer";
 
 import type { GenresFilterChangedAction } from "~/facets/genres/genresReducer";
 import type { GradeFilterChangedAction } from "~/facets/grade/gradeReducer";
-import type {
-  ReleaseYearFilterChangedAction,
-} from "~/facets/releaseYear/releaseYearReducer";
-import type {
-  ReviewYearFilterChangedAction,
-} from "~/facets/reviewYear/reviewYearReducer";
+import type { ReleaseYearFilterChangedAction } from "~/facets/releaseYear/releaseYearReducer";
+import type { ReviewYearFilterChangedAction } from "~/facets/reviewYear/reviewYearReducer";
 import type { TitleFilterChangedAction } from "~/facets/title/titleReducer";
 
 import type { ReviewsValue } from "./ReviewsListItem";

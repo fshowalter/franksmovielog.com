@@ -21,7 +21,8 @@ export function buildGradeChip(
   }
   const minLetter = gradeToLetter(min);
   const maxLetter = gradeToLetter(max);
-  const label = minLetter === maxLetter ? minLetter : `${minLetter} to ${maxLetter}`;
+  const label =
+    minLetter === maxLetter ? minLetter : `${minLetter} to ${maxLetter}`;
   return [{ category: "Grade", id: "gradeValue", label }];
 }
 

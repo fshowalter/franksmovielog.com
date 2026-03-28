@@ -4,8 +4,6 @@ import { buildSearchChip } from "~/facets/filterChipBuilders";
 
 import { STATE_KEY } from "./titleReducer";
 
-export function buildTitleFilterChip(
-  title: string | undefined,
-): FilterChip[] {
+export function buildTitleFilterChip(title: string | undefined): FilterChip[] {
   return buildSearchChip({ id: STATE_KEY, value: title });
 }

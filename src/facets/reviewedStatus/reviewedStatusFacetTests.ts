@@ -116,9 +116,7 @@ export function reviewedStatusFilterFacetTests(
       await clickReviewedStatusFilterOption(user, "Reviewed");
       await clickViewResults(user);
 
-      expect(
-        within(getList()).getByText("Reviewed Movie"),
-      ).toBeInTheDocument();
+      expect(within(getList()).getByText("Reviewed Movie")).toBeInTheDocument();
       expect(
         within(getList()).queryByText("Not Reviewed Movie"),
       ).not.toBeInTheDocument();
@@ -129,9 +127,7 @@ export function reviewedStatusFilterFacetTests(
       await user.click(chip);
 
       // Before clicking View Results, list should still be filtered
-      expect(
-        within(getList()).getByText("Reviewed Movie"),
-      ).toBeInTheDocument();
+      expect(within(getList()).getByText("Reviewed Movie")).toBeInTheDocument();
       expect(
         within(getList()).queryByText("Not Reviewed Movie"),
       ).not.toBeInTheDocument();
@@ -140,9 +136,7 @@ export function reviewedStatusFilterFacetTests(
       await clickViewResults(user);
 
       // Now both items should appear
-      expect(
-        within(getList()).getByText("Reviewed Movie"),
-      ).toBeInTheDocument();
+      expect(within(getList()).getByText("Reviewed Movie")).toBeInTheDocument();
       expect(
         within(getList()).getByText("Not Reviewed Movie"),
       ).toBeInTheDocument();

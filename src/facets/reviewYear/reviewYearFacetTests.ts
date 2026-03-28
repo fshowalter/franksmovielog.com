@@ -35,9 +35,7 @@ export function reviewYearFilterFacetTests(
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
       const fromYear = distinctReviewYears[1] ?? distinctReviewYears[0];
-      const toYear =
-        distinctReviewYears.at(-2) ??
-        distinctReviewYears.at(-1)!;
+      const toYear = distinctReviewYears.at(-2) ?? distinctReviewYears.at(-1)!;
 
       const items: ReviewYearItem[] = [
         {
@@ -66,9 +64,7 @@ export function reviewYearFilterFacetTests(
 
       const list = getList();
       expect(within(list).getByText("Middle Review")).toBeInTheDocument();
-      expect(
-        within(list).queryByText("Newest Review"),
-      ).not.toBeInTheDocument();
+      expect(within(list).queryByText("Newest Review")).not.toBeInTheDocument();
 
       vi.clearAllTimers();
       vi.useRealTimers();
@@ -78,9 +74,7 @@ export function reviewYearFilterFacetTests(
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
       const fromYear = distinctReviewYears[1] ?? distinctReviewYears[0];
-      const toYear =
-        distinctReviewYears.at(-2) ??
-        distinctReviewYears.at(-1)!;
+      const toYear = distinctReviewYears.at(-2) ?? distinctReviewYears.at(-1)!;
 
       const items: ReviewYearItem[] = [
         {
@@ -114,9 +108,7 @@ export function reviewYearFilterFacetTests(
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
       const fromYear = distinctReviewYears[1] ?? distinctReviewYears[0];
-      const toYear =
-        distinctReviewYears.at(-2) ??
-        distinctReviewYears.at(-1)!;
+      const toYear = distinctReviewYears.at(-2) ?? distinctReviewYears.at(-1)!;
 
       const items: ReviewYearItem[] = [
         {

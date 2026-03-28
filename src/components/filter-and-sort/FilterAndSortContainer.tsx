@@ -287,7 +287,10 @@ export function FilterAndSortContainer<T extends string>({
                       Uncontrolled radios — value read from form on "View Results" click.
                       Desktop dropdown in header applies sort immediately. */}
                   <div className="tablet:hidden">
-                    <AnimatedDetailsDisclosure defaultOpen={true} title="Sort by">
+                    <AnimatedDetailsDisclosure
+                      defaultOpen={true}
+                      title="Sort by"
+                    >
                       <div className="space-y-3">
                         {sortProps.sortOptions.map(({ label, value }) => (
                           <label
