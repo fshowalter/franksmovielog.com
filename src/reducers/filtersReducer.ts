@@ -96,10 +96,10 @@ export function createResetFiltersAction(): ResetFiltersAction {
  * @param action - Action to process
  * @returns Updated state with filter changes applied
  */
-export function filtersLifecycleReducer<TValue, TState extends FiltersState<TValue>>(
-  state: TState,
-  action: { type: string },
-): TState {
+export function filtersLifecycleReducer<
+  TValue,
+  TState extends FiltersState<TValue>,
+>(state: TState, action: { type: string }): TState {
   switch (action.type) {
     case "filters/applied": {
       return applyFilters<TValue, TState>(state);

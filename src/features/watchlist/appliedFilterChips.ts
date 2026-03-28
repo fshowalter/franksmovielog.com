@@ -2,7 +2,10 @@ import type { FilterChip } from "~/components/filter-and-sort/AppliedFilters";
 
 import { buildCollectionFilterChip } from "~/facets/collection/collectionFilterChip";
 import { buildDirectorFilterChip } from "~/facets/director/directorFilterChip";
-import { buildSearchChip, buildYearRangeChip } from "~/facets/filterChipBuilders";
+import {
+  buildSearchChip,
+  buildYearRangeChip,
+} from "~/facets/filterChipBuilders";
 import { buildGenresFilterChip } from "~/facets/genres/genresFilterChip";
 import { buildPerformerFilterChip } from "~/facets/performer/performerFilterChip";
 import { buildWriterFilterChip } from "~/facets/writer/writerFilterChip";

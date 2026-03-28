@@ -81,7 +81,9 @@ describe("AppliedFilters", () => {
     it("renders pre-assembled displayText for simple filters (value only)", () => {
       render(
         <AppliedFilters
-          filters={[{ displayText: "Horror", key: "genre-horror", value: "Horror" }]}
+          filters={[
+            { displayText: "Horror", key: "genre-horror", value: "Horror" },
+          ]}
           onClearAll={mockOnClearAll}
           onRemove={mockOnRemove}
         />,
@@ -328,7 +330,9 @@ describe("AppliedFilters", () => {
     it("matches snapshot with single filter", () => {
       const { container } = render(
         <AppliedFilters
-          filters={[{ displayText: "Horror", key: "genre-horror", value: "Horror" }]}
+          filters={[
+            { displayText: "Horror", key: "genre-horror", value: "Horror" },
+          ]}
           onClearAll={mockOnClearAll}
           onRemove={mockOnRemove}
         />,

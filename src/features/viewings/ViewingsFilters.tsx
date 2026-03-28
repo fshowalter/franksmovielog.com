@@ -98,7 +98,9 @@ export function ViewingsFilters({
       <TextField
         defaultValue={filterValues.title}
         label="Title"
-        onInputChange={(value) => dispatch(createTitleFilterChangedAction(value))}
+        onInputChange={(value) =>
+          dispatch(createTitleFilterChangedAction(value))
+        }
         placeholder="Enter all or part of a title"
       />
       <YearField

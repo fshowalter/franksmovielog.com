@@ -40,7 +40,9 @@ export function CastAndCrewFilters({
       <TextField
         defaultValue={filterValues.name}
         label="Name"
-        onInputChange={(value) => dispatch(createNameFilterChangedAction(value))}
+        onInputChange={(value) =>
+          dispatch(createNameFilterChangedAction(value))
+        }
         placeholder="Enter all or part of a name"
       />
       <AnimatedDetailsDisclosure title="Credited As">

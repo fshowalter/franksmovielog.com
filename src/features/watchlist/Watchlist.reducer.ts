@@ -87,7 +87,9 @@ const watchlistComposedReducer = composeReducers<WatchlistState>(
   sortReducer,
   // AIDEV-NOTE: Reset pagination whenever sort changes.
   (state, action) =>
-    action.type === "sort/sort" ? { ...state, ...createInitialShowMoreState() } : state,
+    action.type === "sort/sort"
+      ? { ...state, ...createInitialShowMoreState() }
+      : state,
   showMoreReducer,
 );
 

@@ -1,6 +1,9 @@
 import type { FilterChip } from "~/components/filter-and-sort/AppliedFilters";
 
-import { buildSearchChip, buildYearRangeChip } from "~/facets/filterChipBuilders";
+import {
+  buildSearchChip,
+  buildYearRangeChip,
+} from "~/facets/filterChipBuilders";
 import { buildMediumFilterChip } from "~/facets/medium/mediumFilterChip";
 import { buildReviewedStatusFilterChip } from "~/facets/reviewedStatus/reviewedStatusFilterChip";
 import { buildVenueFilterChip } from "~/facets/venue/venueFilterChip";

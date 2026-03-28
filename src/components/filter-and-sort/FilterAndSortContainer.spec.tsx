@@ -119,7 +119,9 @@ describe("FilterAndSortContainer", () => {
       expect(
         document.querySelector("dialog[aria-label='Filters']"),
       ).toHaveAttribute("open");
-      expect(mockProps.dispatch).toHaveBeenCalledWith(createResetFiltersAction());
+      expect(mockProps.dispatch).toHaveBeenCalledWith(
+        createResetFiltersAction(),
+      );
     });
 
     it("closes filter drawer when toggle button is clicked again", async ({
@@ -172,7 +174,9 @@ describe("FilterAndSortContainer", () => {
       });
 
       expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(mockProps.dispatch).toHaveBeenCalledWith(createResetFiltersAction());
+      expect(mockProps.dispatch).toHaveBeenCalledWith(
+        createResetFiltersAction(),
+      );
     });
 
     it("closes filter drawer when clicking outside on backdrop", async ({
@@ -225,7 +229,9 @@ describe("FilterAndSortContainer", () => {
       await clickViewResults(user);
 
       expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(mockProps.dispatch).toHaveBeenCalledWith(createApplyFiltersAction());
+      expect(mockProps.dispatch).toHaveBeenCalledWith(
+        createApplyFiltersAction(),
+      );
     });
 
     it("closes filter drawer when Close button is clicked", async ({
@@ -248,7 +254,9 @@ describe("FilterAndSortContainer", () => {
       await clickCloseFilters(user);
 
       expect(filterButton.getAttribute("aria-expanded")).toBe("false");
-      expect(mockProps.dispatch).toHaveBeenCalledWith(createResetFiltersAction());
+      expect(mockProps.dispatch).toHaveBeenCalledWith(
+        createResetFiltersAction(),
+      );
     });
 
     it("disables Clear button when there are no pending filters", async ({

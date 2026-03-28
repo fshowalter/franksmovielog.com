@@ -49,9 +49,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReleaseYears: ["1920", "2024"],
       distinctReviewYears: ["2018", "2024"],
     });
-    expect(chips).toEqual([
-      { displayText: "Grade: A-", key: "gradeValue" },
-    ]);
+    expect(chips).toEqual([{ displayText: "Grade: A-", key: "gradeValue" }]);
   });
 
   it("excludes full grade range (2-16)", () => {
@@ -207,7 +205,11 @@ describe("buildAppliedFilterChips", () => {
       distinctReviewYears: ["2018", "2024"],
     });
     expect(chips).toEqual([
-      { displayText: "Director", key: "creditedAs-director", value: "director" },
+      {
+        displayText: "Director",
+        key: "creditedAs-director",
+        value: "director",
+      },
     ]);
   });
 
@@ -230,9 +232,7 @@ describe("buildAppliedFilterChips", () => {
       distinctReleaseYears: ["1920", "2024"],
       distinctReviewYears: ["2018", "2024"],
     });
-    expect(chips).toEqual([
-      { displayText: "Search: alien", key: "title" },
-    ]);
+    expect(chips).toEqual([{ displayText: "Search: alien", key: "title" }]);
   });
 
   it("excludes title search when empty string", () => {
@@ -282,7 +282,11 @@ describe("buildAppliedFilterChips", () => {
         key: "reviewedStatus-not-reviewed",
         value: "Not Reviewed",
       },
-      { displayText: "Director", key: "creditedAs-director", value: "director" },
+      {
+        displayText: "Director",
+        key: "creditedAs-director",
+        value: "director",
+      },
       { displayText: "Search: alien", key: "title" },
     ]);
   });

@@ -50,7 +50,9 @@ export function ReviewsFilters({
       <TextField
         defaultValue={filterValues.title}
         label="Title"
-        onInputChange={(value) => dispatch(createTitleFilterChangedAction(value))}
+        onInputChange={(value) =>
+          dispatch(createTitleFilterChangedAction(value))
+        }
         placeholder="Enter all or part of a title"
       />
       <YearField
@@ -66,7 +68,9 @@ export function ReviewsFilters({
         <CheckboxListField
           defaultValues={filterValues.genres}
           label="Genres"
-          onChange={(values) => dispatch(createGenresFilterChangedAction(values))}
+          onChange={(values) =>
+            dispatch(createGenresFilterChangedAction(values))
+          }
           onClear={() => dispatch(createRemoveAppliedFilterAction("genres"))}
           options={distinctGenres.map((value) => ({
             count: genreCounts.get(value) ?? 0,
@@ -79,7 +83,9 @@ export function ReviewsFilters({
         defaultValues={filterValues.gradeValue}
         label="Grade"
         onClear={() => dispatch(createRemoveAppliedFilterAction("gradeValue"))}
-        onGradeChange={(values) => dispatch(createGradeFilterChangedAction(values))}
+        onGradeChange={(values) =>
+          dispatch(createGradeFilterChangedAction(values))
+        }
       />
       <YearField
         defaultValues={filterValues.reviewYear}

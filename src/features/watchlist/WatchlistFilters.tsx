@@ -109,7 +109,9 @@ export function WatchlistFilters({
       <TextField
         defaultValue={filterValues.title}
         label="Title"
-        onInputChange={(value) => dispatch(createTitleFilterChangedAction(value))}
+        onInputChange={(value) =>
+          dispatch(createTitleFilterChangedAction(value))
+        }
         placeholder="Enter all or part of a title"
       />
       <YearField
@@ -125,7 +127,9 @@ export function WatchlistFilters({
         <CheckboxListField
           defaultValues={filterValues.genres}
           label="Genres"
-          onChange={(values) => dispatch(createGenresFilterChangedAction(values))}
+          onChange={(values) =>
+            dispatch(createGenresFilterChangedAction(values))
+          }
           onClear={() => dispatch(createRemoveAppliedFilterAction("genres"))}
           options={distinctGenres.map((value) => ({
             count: genreCounts.get(value) ?? 0,
