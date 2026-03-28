@@ -24,11 +24,11 @@ import {
   releaseYearFilterFacetTests,
   releaseYearSortFacetTests,
 } from "~/facets/releaseYear/releaseYearFacetTests";
+import { reviewedStatusFilterFacetTests } from "~/facets/reviewedStatus/reviewedStatusFacetTests";
 import {
   reviewYearFilterFacetTests,
   reviewYearSortFacetTests,
 } from "~/facets/reviewYear/reviewYearFacetTests";
-import { reviewedStatusFilterFacetTests } from "~/facets/reviewedStatus/reviewedStatusFacetTests";
 import {
   titleFilterFacetTests,
   titleSortFacetTests,
@@ -174,9 +174,9 @@ reviewedStatusFilterFacetTests(
         values={createTitles(
           items.map((item) => ({
             ...item,
-            reviewSlug: item.grade !== undefined ? "test-slug" : undefined,
-            reviewSequence: item.grade !== undefined ? "1" : undefined,
-            reviewYear: item.grade !== undefined ? "2020" : undefined,
+            reviewSequence: item.grade === undefined ? undefined : "1",
+            reviewSlug: item.grade === undefined ? undefined : "test-slug",
+            reviewYear: item.grade === undefined ? undefined : "2020",
           })),
         )}
       />,
