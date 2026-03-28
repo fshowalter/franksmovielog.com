@@ -1,6 +1,6 @@
 import type { UserEvent } from "@testing-library/user-event";
 
-import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
+import { clickCheckboxListOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
 
 /**
  * Clicks a collection filter option in tests.

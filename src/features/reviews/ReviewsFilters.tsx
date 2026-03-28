@@ -1,8 +1,8 @@
-import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
-import { CheckboxListField } from "~/components/fields/CheckboxListField";
-import { GradeField } from "~/components/fields/GradeField";
-import { TextField } from "~/components/fields/TextField";
-import { YearField } from "~/components/fields/YearField";
+import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
+import { CheckboxListField } from "~/components/filter-and-sort/fields/CheckboxListField";
+import { GradeField } from "~/components/filter-and-sort/facets/grade/GradeFacet";
+import { TextField } from "~/components/filter-and-sort/fields/TextField";
+import { YearField } from "~/components/filter-and-sort/fields/YearField";
 
 import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
 import type { ReviewsValue } from "./ReviewsListItem";

@@ -16,7 +16,7 @@ import {
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
+} from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { CastAndCrewProps, CastAndCrewValue } from "./CastAndCrew";

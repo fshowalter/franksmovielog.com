@@ -2,9 +2,9 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { toggleCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
-import { fillTextField } from "~/components/fields/TextField.testHelper";
-import { fillYearField } from "~/components/fields/YearField.testHelper";
+import { toggleCheckboxListOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
+import { fillTextField } from "~/components/filter-and-sort/fields/TextField.testHelper";
+import { fillYearField } from "~/components/filter-and-sort/fields/YearField.testHelper";
 
 /**
  * Test helper to select a genre filter option.

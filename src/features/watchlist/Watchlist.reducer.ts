@@ -1,70 +1,63 @@
-import type { FiltersAction } from "~/reducers/filtersReducer";
+import type { FilterAndSortContainerAction } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
 import type { ShowMoreAction } from "~/reducers/showMoreReducer";
-import type { SortAction } from "~/reducers/sortReducer";
 
-import { collectionFacetReducer } from "~/facets/collection/collectionReducer";
-import { composeReducers } from "~/facets/composeReducers";
-import { directorFacetReducer } from "~/facets/director/directorReducer";
-import { genresFacetReducer } from "~/facets/genres/genresReducer";
-import { performerFacetReducer } from "~/facets/performer/performerReducer";
-import { releaseYearFacetReducer } from "~/facets/releaseYear/releaseYearReducer";
-import { titleFacetReducer } from "~/facets/title/titleReducer";
-import { writerFacetReducer } from "~/facets/writer/writerReducer";
 import {
-  createInitialFiltersState,
-  filtersLifecycleReducer,
-} from "~/reducers/filtersReducer";
+  createInitialFilterAndSortContainerState,
+  filterAndSortContainerReducer,
+} from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import { collectionsFacetReducer } from "~/components/filter-and-sort/facets/collections/collectionsReducer";
+import { composeReducers } from "~/components/filter-and-sort/facets/composeReducers";
+import { directorsFacetReducer } from "~/components/filter-and-sort/facets/directors/directorsReducer";
+import { genresFacetReducer } from "~/components/filter-and-sort/facets/genres/genresReducer";
+import { performersFacetReducer } from "~/components/filter-and-sort/facets/performers/performersReducer";
+import { releaseYearFacetReducer } from "~/components/filter-and-sort/facets/releaseYear/releaseYearReducer";
+import { titleFacetReducer } from "~/components/filter-and-sort/facets/title/titleReducer";
+import { writersFacetReducer } from "~/components/filter-and-sort/facets/writers/writersReducer";
 import {
   createInitialShowMoreState,
   showMoreReducer,
 } from "~/reducers/showMoreReducer";
-import {
-  createInitialSortState,
-  createSortActionCreator,
-  sortReducer,
-} from "~/reducers/sortReducer";
 
-export { createCollectionFilterChangedAction } from "~/facets/collection/collectionReducer";
-export { createDirectorFilterChangedAction } from "~/facets/director/directorReducer";
-export { createGenresFilterChangedAction } from "~/facets/genres/genresReducer";
-export { createPerformerFilterChangedAction } from "~/facets/performer/performerReducer";
-export { createReleaseYearFilterChangedAction } from "~/facets/releaseYear/releaseYearReducer";
-export { createTitleFilterChangedAction } from "~/facets/title/titleReducer";
-export { createWriterFilterChangedAction } from "~/facets/writer/writerReducer";
+export { createCollectionFilterChangedAction } from "~/components/filter-and-sort/facets/collection/collectionReducer";
+export { createDirectorFilterChangedAction } from "~/components/filter-and-sort/facets/directors/directorReducer";
+export { createGenresFilterChangedAction } from "~/components/filter-and-sort/facets/genres/genreReducer";
+export { createPerformerFilterChangedAction } from "~/components/filter-and-sort/facets/performer/performerReducer";
+export { createReleaseYearFilterChangedAction } from "~/components/filter-and-sort/facets/releaseYear/releaseYearReducer";
+export { createTitleFilterChangedAction } from "~/components/filter-and-sort/facets/title/titleReducer";
+export { createWriterFilterChangedAction } from "~/components/filter-and-sort/facets/writer/writerReducer";
 export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
 export { createShowMoreAction } from "~/reducers/showMoreReducer";
 
-import type { CollectionFilterChangedAction } from "~/facets/collection/collectionReducer";
-import type { DirectorFilterChangedAction } from "~/facets/director/directorReducer";
-import type { GenresFilterChangedAction } from "~/facets/genres/genresReducer";
-import type { PerformerFilterChangedAction } from "~/facets/performer/performerReducer";
-import type { ReleaseYearFilterChangedAction } from "~/facets/releaseYear/releaseYearReducer";
-import type { TitleFilterChangedAction } from "~/facets/title/titleReducer";
-import type { WriterFilterChangedAction } from "~/facets/writer/writerReducer";
+import type { CollectionFilterChangedAction } from "~/components/filter-and-sort/facets/collection/collectionReducer";
+import type { DirectorFilterChangedAction } from "~/components/filter-and-sort/facets/directors/directorReducer";
+import type { GenresFilterChangedAction } from "~/components/filter-and-sort/facets/genres/genreReducer";
+import type { PerformerFilterChangedAction } from "~/components/filter-and-sort/facets/performer/performerReducer";
+import type { ReleaseYearFilterChangedAction } from "~/components/filter-and-sort/facets/releaseYear/releaseYearReducer";
+import type { TitleFilterChangedAction } from "~/components/filter-and-sort/facets/title/titleReducer";
+import type { WriterFilterChangedAction } from "~/components/filter-and-sort/facets/writer/writerReducer";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
 import type { WatchlistValue } from "./Watchlist";
 
 export type WatchlistAction =
   | CollectionFilterChangedAction
-  | DirectorFilterChangedAction
-  | FiltersAction
+  | DirectorsFilterChangedAction
+  | FilterAndSortContainerAction<WatchlistSort>
   | GenresFilterChangedAction
-  | PerformerFilterChangedAction
+  | PerformersFilterChangedAction
   | ReleaseYearFilterChangedAction
   | ShowMoreAction
-  | SortAction<WatchlistSort>
   | TitleFilterChangedAction
-  | WriterFilterChangedAction;
+  | WritersFilterChangedAction;
 
 export type WatchlistFiltersValues = {
-  collection?: readonly string[];
-  director?: readonly string[];
+  collections?: readonly string[];
+  directors?: readonly string[];
   genres?: readonly string[];
-  performer?: readonly string[];
+  performers?: readonly string[];
   releaseYear?: [string, string];
   title?: string;
-  writer?: readonly string[];
+  writers?: readonly string[];
 };
 
 type WatchlistState = {
@@ -75,21 +68,15 @@ type WatchlistState = {
   values: WatchlistValue[];
 };
 
-const watchlistComposedReducer = composeReducers<WatchlistState>(
-  filtersLifecycleReducer,
+const watchlistReducer = composeReducers<WatchlistState>(
+  filterAndSortContainerReducer,
   titleFacetReducer,
   genresFacetReducer,
   releaseYearFacetReducer,
-  directorFacetReducer,
-  performerFacetReducer,
-  writerFacetReducer,
-  collectionFacetReducer,
-  sortReducer,
-  // AIDEV-NOTE: Reset pagination whenever sort changes.
-  (state, action) =>
-    action.type === "sort/sort"
-      ? { ...state, ...createInitialShowMoreState() }
-      : state,
+  directorsFacetReducer,
+  performersFacetReducer,
+  writersFacetReducer,
+  collectionsFacetReducer,
   showMoreReducer,
 );
 
@@ -101,9 +88,8 @@ export function createInitialState({
   values: WatchlistValue[];
 }): WatchlistState {
   return {
-    ...createInitialFiltersState({ values }),
+    ...createInitialFilterAndSortContainerState({ initialSort, values }),
     ...createInitialShowMoreState(),
-    ...createInitialSortState({ initialSort }),
   };
 }
 
@@ -111,7 +97,5 @@ export function reducer(
   state: WatchlistState,
   action: WatchlistAction,
 ): WatchlistState {
-  return watchlistComposedReducer(state, action);
+  return watchlistReducer(state, action);
 }
-
-export const createSortAction = createSortActionCreator<WatchlistSort>();

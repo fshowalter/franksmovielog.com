@@ -2,7 +2,7 @@ import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
 
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";

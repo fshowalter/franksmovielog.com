@@ -1,11 +1,37 @@
-// AIDEV-NOTE: Single source of truth for grade number to letter mapping
-// Used by GradeField component and filter chip displays across the site
+// Single source of truth for grade number <-> letter mapping
+// Used by GradeField, filter chip displays, and API layers across the site.
+// Scale: 2 (F-) to 16 (A+). Abandoned entries use gradeValue=0 (below slider range).
 
-/**
- * Maps grade numbers (2-16) to letter grades (F- to A+).
- * DO NOT modify this mapping without updating all grade-related functionality.
- */
-const GRADE_MAP: Record<number, string> = {
+export const GRADES = [
+  "A",
+  "A+",
+  "A-",
+  "B",
+  "B+",
+  "B-",
+  "C",
+  "C+",
+  "C-",
+  "D",
+  "D+",
+  "D-",
+  "F",
+  "F+",
+  "F-",
+] as const;
+
+export type GradeText = (typeof GRADES)[number];
+
+export const GRADE_VALUES = [
+  2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+] as const;
+
+export const GRADE_MIN: GradeValue = 2;
+export const GRADE_MAX: GradeValue = 16;
+
+export type GradeValue = (typeof GRADE_VALUES)[number];
+
+export const GRADE_VALUE_TO_LETTER: Record<GradeValue, GradeText> = {
   2: "F-",
   3: "F",
   4: "F+",
@@ -21,9 +47,9 @@ const GRADE_MAP: Record<number, string> = {
   14: "A-",
   15: "A",
   16: "A+",
-};
+} as const;
 
-const GRADE_TO_VALUE: Record<string, number> = {
+const GRADE_TEXT_TO_VALUE: Record<GradeText, GradeValue> = {
   A: 15,
   "A+": 16,
   "A-": 14,
@@ -39,17 +65,33 @@ const GRADE_TO_VALUE: Record<string, number> = {
   F: 3,
   "F+": 4,
   "F-": 2,
-};
+} as const;
 
-/**
- * Converts a grade number (2-16) to a letter grade (F- to A+).
- * @param grade - Grade as a number (2-16)
- * @returns Letter grade (e.g., "A+", "B-", "F")
- */
-export function gradeToLetter(grade: number): string {
-  return GRADE_MAP[grade] || grade.toString();
+export function gradeToValue(grade: GradeText): GradeValue {
+  return GRADE_TEXT_TO_VALUE[grade];
 }
 
-export function gradeToValue(grade: string): number {
-  return GRADE_TO_VALUE[grade];
+export function gradeValueToLetter(gradeValue: GradeValue): GradeText {
+  return GRADE_VALUE_TO_LETTER[gradeValue];
 }
+
+export const GRADE_SVG_MAP: Record<
+  Exclude<GradeText, "Abandoned">,
+  { altText: string; src: string }
+> = {
+  A: { altText: "5 stars (out of 5)", src: "/svg/5-stars.svg" },
+  "A+": { altText: "5 stars (out of 5)", src: "/svg/5-stars.svg" },
+  "A-": { altText: "4.5 stars (out of 5)", src: "/svg/4-half-stars.svg" },
+  B: { altText: "4 stars (out of 5)", src: "/svg/4-stars.svg" },
+  "B+": { altText: "4 stars (out of 5)", src: "/svg/4-stars.svg" },
+  "B-": { altText: "3.5 stars (out of 5)", src: "/svg/3-half-stars.svg" },
+  C: { altText: "3 stars (out of 5)", src: "/svg/3-stars.svg" },
+  "C+": { altText: "3 stars (out of 5)", src: "/svg/3-stars.svg" },
+  "C-": { altText: "2.5 stars (out of 5)", src: "/svg/2-half-stars.svg" },
+  D: { altText: "2 stars (out of 5)", src: "/svg/2-stars.svg" },
+  "D+": { altText: "2 stars (out of 5)", src: "/svg/2-stars.svg" },
+  "D-": { altText: "1.5 stars (out of 5)", src: "/svg/1-half-stars.svg" },
+  F: { altText: "1 star (out of 5)", src: "/svg/1-star.svg" },
+  "F+": { altText: "1 star (out of 5)", src: "/svg/1-star.svg" },
+  "F-": { altText: "1/2 star (out of 5)", src: "/svg/half-star.svg" },
+} as const;

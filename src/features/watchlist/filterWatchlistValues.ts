@@ -1,3 +1,7 @@
+import { createCollectionsFilter } from "~/components/filter-and-sort/facets/collections/collectionsFilter";
+import { createDirectorsFilter } from "~/components/filter-and-sort/facets/directors/directorsFilter";
+import { createPerformersFilter } from "~/components/filter-and-sort/facets/performers/performersFilter";
+import { createWritersFilter } from "~/components/filter-and-sort/facets/writers/writersFilter";
 import { filterTitles } from "~/filterers/filterTitles";
 
 import type { WatchlistValue } from "./Watchlist";
@@ -18,7 +22,7 @@ export function calculateCollectionCounts(
   // Apply all filters EXCEPT collection to get the base set
   const filtersWithoutCollection: WatchlistFiltersValues = {
     ...currentFilters,
-    collection: undefined,
+    collections: undefined,
   };
   const filteredValues = filterWatchlistValues(
     values,
@@ -50,7 +54,7 @@ export function calculateDirectorCounts(
   // Apply all filters EXCEPT director to get the base set
   const filtersWithoutDirector: WatchlistFiltersValues = {
     ...currentFilters,
-    director: undefined,
+    directors: undefined,
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutDirector);
 
@@ -108,7 +112,7 @@ export function calculatePerformerCounts(
   // Apply all filters EXCEPT performer to get the base set
   const filtersWithoutPerformer: WatchlistFiltersValues = {
     ...currentFilters,
-    performer: undefined,
+    performers: undefined,
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutPerformer);
 
@@ -137,7 +141,7 @@ export function calculateWriterCounts(
   // Apply all filters EXCEPT writer to get the base set
   const filtersWithoutWriter: WatchlistFiltersValues = {
     ...currentFilters,
-    writer: undefined,
+    writers: undefined,
   };
   const filteredValues = filterWatchlistValues(values, filtersWithoutWriter);
 
@@ -162,51 +166,11 @@ export function filterWatchlistValues(
   filterValues: WatchlistFiltersValues,
 ) {
   const extraFilters = [
-    createDirectorFilter(filterValues.director),
-    createPerformerFilter(filterValues.performer),
-    createWriterFilter(filterValues.writer),
-    createCollectionFilter(filterValues.collection),
+    createDirectorsFilter(filterValues.directors),
+    createPerformersFilter(filterValues.performers),
+    createWritersFilter(filterValues.writers),
+    createCollectionsFilter(filterValues.collections),
   ].filter((filterFn) => filterFn !== undefined);
 
   return filterTitles(filterValues, sortedValues, extraFilters);
-}
-
-function createCollectionFilter(filterValues?: readonly string[]) {
-  if (!filterValues || filterValues.length === 0) return;
-  return (value: WatchlistValue) => {
-    // Title matches if it has at least one of the selected collections
-    return filterValues.some((collection) =>
-      value.watchlistCollectionNames.includes(collection),
-    );
-  };
-}
-
-function createDirectorFilter(filterValues?: readonly string[]) {
-  if (!filterValues || filterValues.length === 0) return;
-  return (value: WatchlistValue) => {
-    // Title matches if it has at least one of the selected directors
-    return filterValues.some((director) =>
-      value.watchlistDirectorNames.includes(director),
-    );
-  };
-}
-
-function createPerformerFilter(filterValues?: readonly string[]) {
-  if (!filterValues || filterValues.length === 0) return;
-  return (value: WatchlistValue) => {
-    // Title matches if it has at least one of the selected performers
-    return filterValues.some((performer) =>
-      value.watchlistPerformerNames.includes(performer),
-    );
-  };
-}
-
-function createWriterFilter(filterValues?: readonly string[]) {
-  if (!filterValues || filterValues.length === 0) return;
-  return (value: WatchlistValue) => {
-    // Title matches if it has at least one of the selected writers
-    return filterValues.some((writer) =>
-      value.watchlistWriterNames.includes(writer),
-    );
-  };
 }

@@ -1,4 +1,4 @@
-import type { FilterChip } from "~/components/filter-and-sort/AppliedFilters";
+import type { FilterChip } from "~/components/filter-and-sort/container/AppliedFiltersSection";
 
 import { buildSearchChip } from "~/facets/filterChipBuilders";
 

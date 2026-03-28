@@ -1,4 +1,4 @@
-import { TextField } from "~/components/fields/TextField";
+import { TextField } from "~/components/filter-and-sort/fields/TextField";
 
 import type {
   CollectionsAction,

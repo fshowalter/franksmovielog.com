@@ -2,7 +2,7 @@ import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
 
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/TitleSortOptions";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { usePaginatedValues } from "~/hooks/usePaginatedValues";
@@ -16,7 +16,6 @@ import { sortWatchlistValues } from "./sortWatchlistValues";
 import {
   createInitialState,
   createShowMoreAction,
-  createSortAction,
   reducer,
 } from "./Watchlist.reducer";
 import { WatchlistFilters } from "./WatchlistFilters";
@@ -110,7 +109,6 @@ export function Watchlist({
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
-      createSortAction={createSortAction}
       dispatch={dispatch}
       filters={
         <WatchlistFilters
@@ -127,7 +125,10 @@ export function Watchlist({
       }
       headerLink={{ href: "/watchlist/progress/", text: "progress" }}
       pendingFilteredCount={pendingFilteredCount}
-      sortOptions={TITLE_SORT_OPTIONS}
+      sortProps={{
+        currentSortValue: state.sort,
+        sortOptions: TITLE_SORT_OPTIONS,
+      }}
       state={state}
       totalCount={totalCount}
     >

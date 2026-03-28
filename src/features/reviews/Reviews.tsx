@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";

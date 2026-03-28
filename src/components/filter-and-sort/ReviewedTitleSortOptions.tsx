@@ -1,4 +1,4 @@
-import type { SortOption } from "./FilterAndSortContainer";
+import type { SortOption } from "./container/FilterAndSortContainer";
 
 import { TITLE_SORT_OPTIONS } from "./TitleSortOptions";
 

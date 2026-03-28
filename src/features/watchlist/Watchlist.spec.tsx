@@ -7,7 +7,7 @@ import {
   clickSortOption,
   clickToggleFilters,
   clickViewResults,
-} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
+} from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
 import {
   clickGenresFilterOption,
   fillReleaseYearFilter,

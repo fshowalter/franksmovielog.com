@@ -2,7 +2,7 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
+import { clickCheckboxListOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
 
 /**
  * Test helper to select a credited-as filter option.

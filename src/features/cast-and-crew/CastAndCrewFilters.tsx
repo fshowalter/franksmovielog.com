@@ -1,6 +1,6 @@
-import { AnimatedDetailsDisclosure } from "~/components/AnimatedDetailsDisclosure";
-import { CheckboxListField } from "~/components/fields/CheckboxListField";
-import { TextField } from "~/components/fields/TextField";
+import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
+import { CheckboxListField } from "~/components/filter-and-sort/fields/CheckboxListField";
+import { TextField } from "~/components/filter-and-sort/fields/TextField";
 import { capitalize } from "~/utils/capitalize";
 
 import type { CastAndCrewValue } from "./CastAndCrew";

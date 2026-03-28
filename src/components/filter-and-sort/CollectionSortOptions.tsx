@@ -1,4 +1,4 @@
-import type { SortOption } from "./FilterAndSortContainer";
+import type { SortOption } from "./container/FilterAndSortContainer";
 
 /**
  * Sort options for collections.

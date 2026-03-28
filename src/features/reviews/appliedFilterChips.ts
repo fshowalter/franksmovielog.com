@@ -1,11 +1,9 @@
-import type { FilterChip } from "~/components/filter-and-sort/AppliedFilters";
+import type { FilterChip } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 
-import {
-  buildGradeChip,
-  buildSearchChip,
-  buildYearRangeChip,
-} from "~/facets/filterChipBuilders";
-import { buildGenresFilterChip } from "~/facets/genres/genresFilterChip";
+import { buildYearRangeChip } from "~/components/filter-and-sort/facets/filterChipBuilders";
+import { buildGenresFilterChip } from "~/components/filter-and-sort/facets/genres/genresFilterChips";
+import { buildGradeFilterChip } from "~/components/filter-and-sort/facets/grade/gradeFilterChip";
+import { buildTitleFilterChip } from "~/components/filter-and-sort/facets/title/titleFilterChip";
 
 import type { ReviewsFiltersValues } from "./reducer";
 
@@ -18,7 +16,7 @@ export function buildAppliedFilterChips(
 ): FilterChip[] {
   return [
     ...buildGenresFilterChip(filterValues.genres),
-    ...buildGradeChip(filterValues.gradeValue),
+    ...buildGradeFilterChip(filterValues.gradeValue),
     ...buildYearRangeChip({
       category: "Release Year",
       distinctYears: context?.distinctReleaseYears ?? [],
@@ -31,6 +29,6 @@ export function buildAppliedFilterChips(
       id: "reviewYear",
       value: filterValues.reviewYear,
     }),
-    ...buildSearchChip({ id: "title", value: filterValues.title }),
+    ...buildTitleFilterChip(filterValues.title),
   ];
 }

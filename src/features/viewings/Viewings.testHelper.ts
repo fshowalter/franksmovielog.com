@@ -2,8 +2,8 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { clickCheckboxListOption } from "~/components/fields/CheckboxListField.testHelper";
-import { fillYearField } from "~/components/fields/YearField.testHelper";
+import { clickCheckboxListOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
+import { fillYearField } from "~/components/filter-and-sort/fields/YearField.testHelper";
 
 /**
  * Clicks a medium filter option (checkbox) in tests.

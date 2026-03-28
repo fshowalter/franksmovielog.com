@@ -13,7 +13,6 @@ export function loadJsonDirectory({
   loaderContext,
 }: {
   buildData?: (opts: {
-    id: string;
     raw: Record<string, unknown>;
   }) => Record<string, unknown>;
   directoryPath: string;
@@ -44,10 +43,9 @@ export function loadJsonDirectory({
         continue;
       }
 
-      const dataToLoad = buildData ? buildData({ id, raw }) : raw;
+      const rawData = buildData ? buildData({ raw }) : raw;
 
-      const data = await loaderContext.parseData({ data: dataToLoad, id });
-
+      const data = await loaderContext.parseData({ data: rawData, id });
       loaderContext.store.set({ data, digest, id });
     }
 
