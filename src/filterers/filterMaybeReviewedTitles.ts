@@ -1,4 +1,7 @@
-import type { MaybeReviewedTitleFiltersValues } from "~/reducers/maybeReviewedTitleFiltersReducer";
+import type { FilterableTitle } from "./filterTitles";
+
+import { createReviewedStatusFilter } from "./createReviewedStatusFilter";
+import { filterTitles } from "./filterTitles";
 
 type FilterableMaybeReviewedTitle = FilterableTitle & {
   gradeValue?: number;
@@ -6,10 +9,14 @@ type FilterableMaybeReviewedTitle = FilterableTitle & {
   reviewYear?: string;
 };
 
-import type { FilterableTitle } from "./filterTitles";
-
-import { createReviewedStatusFilter } from "./createReviewedStatusFilter";
-import { filterTitles } from "./filterTitles";
+type MaybeReviewedTitleFilterValues = {
+  genres?: readonly string[];
+  gradeValue?: [number, number];
+  releaseYear?: [string, string];
+  reviewedStatus?: readonly string[];
+  reviewYear?: [string, string];
+  title?: string;
+};
 
 /**
  * Filters titles that may or may not be reviewed based on various criteria.
@@ -21,7 +28,7 @@ import { filterTitles } from "./filterTitles";
 export function filterMaybeReviewedTitles<
   TValue extends FilterableMaybeReviewedTitle,
 >(
-  filterValues: MaybeReviewedTitleFiltersValues,
+  filterValues: MaybeReviewedTitleFilterValues,
   sortedValues: TValue[],
   extraFilters: ((value: TValue) => boolean)[],
 ) {

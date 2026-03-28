@@ -1,5 +1,3 @@
-import type { ReviewedTitleFiltersValues } from "~/reducers/reviewedTitleFiltersReducer";
-
 import type { FilterableTitle } from "./filterTitles";
 
 import { filterTitles } from "./filterTitles";
@@ -7,6 +5,14 @@ import { filterTitles } from "./filterTitles";
 type FilterableReviewedTitle = FilterableTitle & {
   gradeValue: number;
   reviewYear: string;
+};
+
+type ReviewedTitleFilterValues = {
+  genres?: readonly string[];
+  gradeValue?: [number, number];
+  releaseYear?: [string, string];
+  reviewYear?: [string, string];
+  title?: string;
 };
 
 /**
@@ -17,7 +23,7 @@ type FilterableReviewedTitle = FilterableTitle & {
  * @returns Filtered array of reviewed titles matching all filter criteria
  */
 export function filterReviewedTitles<TValue extends FilterableReviewedTitle>(
-  filterValues: ReviewedTitleFiltersValues,
+  filterValues: ReviewedTitleFilterValues,
   sortedValues: TValue[],
   extraFilters: ((value: TValue) => boolean)[],
 ) {

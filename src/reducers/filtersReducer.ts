@@ -91,13 +91,14 @@ export function createResetFiltersAction(): ResetFiltersAction {
 
 /**
  * Reducer function for handling filter state updates.
+ * Accepts any action; handles its own types and returns state unchanged for others.
  * @param state - Current filter state
- * @param action - Filter action to process
+ * @param action - Action to process
  * @returns Updated state with filter changes applied
  */
 export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
   state: TState,
-  action: FiltersAction,
+  action: { type: string },
 ): TState {
   switch (action.type) {
     case "filters/applied": {
@@ -109,11 +110,18 @@ export function filtersReducer<TValue, TState extends FiltersState<TValue>>(
     }
 
     case "filters/removeAppliedFilter": {
-      return removeAppliedFilter<TValue, TState>(state, action);
+      return removeAppliedFilter<TValue, TState>(
+        state,
+        action as RemoveAppliedFilterAction,
+      );
     }
 
     case "filters/reset": {
       return resetFilters<TValue, TState>(state);
+    }
+
+    default: {
+      return state;
     }
   }
 }
@@ -158,27 +166,15 @@ function clearFilters<TValue, TState extends FiltersState<TValue>>(
 }
 
 /**
- * Remove a specific filter from both pending and active filters
- * AIDEV-NOTE: Removes from both pending and active to provide immediate feedback
- * when user explicitly removes a filter via chip click
+ * Remove a specific filter from pending filters only (deferred).
+ * AIDEV-NOTE: Only updates pendingFilterValues — list update is deferred until
+ * "View Results" is clicked (which triggers filters/applied). This matches the
+ * facet pattern where chip removal is always deferred.
  *
- * AIDEV-NOTE: Child reducers often override this behavior for domain-specific handling.
- * Common scenarios that require overriding:
- *
- * 1. Array-valued filters (genres, medium, venue, etc.):
- *    - Base implementation removes entire filter key
- *    - But chips like "genre-horror" need to remove single value from genres array
- *    - Child must extract value from filterKey and filter the array
- *
- * 2. Multi-select filters with kebab-case IDs:
- *    - Chip IDs like "medium-blu-ray" need conversion to "Blu Ray"
- *    - Then remove from array while preserving other values
- *
- * CRITICAL: When overriding, child reducers MUST:
- * - Update BOTH activeFilterValues AND pendingFilterValues
- * - Otherwise UI won't update immediately when chip is clicked
- * - See titleFiltersReducer.ts, maybeReviewedTitleFiltersReducer.ts,
- *   Viewings.reducer.ts for examples
+ * Array-valued facets (genres, reviewedStatus, creditedAs, etc.) handle their
+ * own chip IDs (e.g. "genre-horror") in their respective facet reducers.
+ * This base handler covers scalar filters where filterKey exactly matches a
+ * pendingFilterValues key (e.g. "title", "gradeValue", "releaseYear").
  */
 function removeAppliedFilter<TValue, TState extends FiltersState<TValue>>(
   state: TState,
@@ -188,13 +184,8 @@ function removeAppliedFilter<TValue, TState extends FiltersState<TValue>>(
   const { [action.filterKey]: _removedPending, ...remainingPendingFilters } =
     state.pendingFilterValues;
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { [action.filterKey]: _removedActive, ...remainingActiveFilters } =
-    state.activeFilterValues;
-
   return {
     ...state,
-    activeFilterValues: remainingActiveFilters,
     pendingFilterValues: remainingPendingFilters,
   };
 }

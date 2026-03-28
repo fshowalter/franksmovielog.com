@@ -1,65 +1,100 @@
-import type {
-  MaybeReviewedTitleFiltersAction,
-  MaybeReviewedTitleFiltersState,
-  MaybeReviewedTitleFiltersValues,
-} from "~/reducers/maybeReviewedTitleFiltersReducer";
-import type { SortAction, SortState } from "~/reducers/sortReducer";
+import type { FiltersAction } from "~/reducers/filtersReducer";
+import type { SortAction } from "~/reducers/sortReducer";
 
+import { composeReducers } from "~/facets/composeReducers";
+import { genresFacetReducer } from "~/facets/genres/genresReducer";
+import { gradeFacetReducer } from "~/facets/grade/gradeReducer";
+import { releaseYearFacetReducer } from "~/facets/releaseYear/releaseYearReducer";
+import { reviewedStatusFacetReducer } from "~/facets/reviewedStatus/reviewedStatusReducer";
+import { reviewYearFacetReducer } from "~/facets/reviewYear/reviewYearReducer";
+import { titleFacetReducer } from "~/facets/title/titleReducer";
 import {
-  createInitialMaybeReviewedTitleFiltersState,
-  maybeReviewedTitleFiltersReducer,
-} from "~/reducers/maybeReviewedTitleFiltersReducer";
+  createInitialFiltersState,
+  filtersReducer,
+} from "~/reducers/filtersReducer";
 import {
   createInitialSortState,
   createSortActionCreator,
   sortReducer,
 } from "~/reducers/sortReducer";
 
-import type { CollectionTitlesValue } from "./CollectionTitles";
-import type { CollectionTitlesSort } from "./sortCollectionTitles";
-
+export { createGenresFilterChangedAction } from "~/facets/genres/genresReducer";
+export { createGradeFilterChangedAction } from "~/facets/grade/gradeReducer";
+export {
+  createReleaseYearFilterChangedAction,
+} from "~/facets/releaseYear/releaseYearReducer";
+export {
+  createReviewedStatusFilterChangedAction,
+} from "~/facets/reviewedStatus/reviewedStatusReducer";
+export {
+  createReviewYearFilterChangedAction,
+} from "~/facets/reviewYear/reviewYearReducer";
+export { createTitleFilterChangedAction } from "~/facets/title/titleReducer";
 export {
   createApplyFiltersAction,
   createClearFiltersAction,
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
   createRemoveAppliedFilterAction,
   createResetFiltersAction,
-  createReviewedStatusFilterChangedAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
   selectHasPendingFilters,
-} from "~/reducers/maybeReviewedTitleFiltersReducer";
+} from "~/reducers/filtersReducer";
 
-/**
- * Union type of all actions for collection titles state management.
- */
+import type { GenresFilterChangedAction } from "~/facets/genres/genresReducer";
+import type { GradeFilterChangedAction } from "~/facets/grade/gradeReducer";
+import type {
+  ReleaseYearFilterChangedAction,
+} from "~/facets/releaseYear/releaseYearReducer";
+import type {
+  ReviewedStatusFilterChangedAction,
+} from "~/facets/reviewedStatus/reviewedStatusReducer";
+import type {
+  ReviewYearFilterChangedAction,
+} from "~/facets/reviewYear/reviewYearReducer";
+import type { TitleFilterChangedAction } from "~/facets/title/titleReducer";
+
+import type { CollectionTitlesValue } from "./CollectionTitles";
+import type { CollectionTitlesSort } from "./sortCollectionTitles";
+
 export type CollectionTitlesAction =
-  | MaybeReviewedTitleFiltersAction
-  | SortAction<CollectionTitlesSort>;
+  | FiltersAction
+  | GenresFilterChangedAction
+  | GradeFilterChangedAction
+  | ReleaseYearFilterChangedAction
+  | ReviewedStatusFilterChangedAction
+  | ReviewYearFilterChangedAction
+  | SortAction<CollectionTitlesSort>
+  | TitleFilterChangedAction;
 
-/**
- * Filter values for collection titles.
- */
-export type CollectionTitlesFiltersValues = MaybeReviewedTitleFiltersValues;
+export type CollectionTitlesFiltersValues = {
+  genres?: readonly string[];
+  gradeValue?: [number, number];
+  releaseYear?: [string, string];
+  reviewedStatus?: readonly string[];
+  reviewYear?: [string, string];
+  title?: string;
+};
 
-type CollectionTitlesState = Omit<
-  MaybeReviewedTitleFiltersState<CollectionTitlesValue>,
-  "activeFilterValues" | "pendingFilterValues"
-> &
-  SortState<CollectionTitlesSort> & {
-    activeFilterValues: CollectionTitlesFiltersValues;
-    pendingFilterValues: CollectionTitlesFiltersValues;
-  };
+type CollectionTitlesState = {
+  activeFilterValues: CollectionTitlesFiltersValues;
+  pendingFilterValues: CollectionTitlesFiltersValues;
+  sort: CollectionTitlesSort;
+  values: CollectionTitlesValue[];
+};
 
-/**
- * Creates the initial state for collection titles.
- * @param options - Configuration options
- * @param options.initialSort - Initial sort configuration
- * @param options.values - Collection title values
- * @returns Initial state for collection titles reducer
- */
+const collectionTitlesComposedReducer =
+  composeReducers<CollectionTitlesState>(
+    filtersReducer,
+    titleFacetReducer,
+    genresFacetReducer,
+    gradeFacetReducer,
+    releaseYearFacetReducer,
+    reviewYearFacetReducer,
+    reviewedStatusFacetReducer,
+    (state, action) =>
+      action.type === "sort/sort"
+        ? sortReducer(state, action as SortAction<CollectionTitlesSort>)
+        : state,
+  );
+
 export function createInitialState({
   initialSort,
   values,
@@ -67,38 +102,17 @@ export function createInitialState({
   initialSort: CollectionTitlesSort;
   values: CollectionTitlesValue[];
 }): CollectionTitlesState {
-  const sortState = createInitialSortState({ initialSort });
-  const reviewedTitleFilterState = createInitialMaybeReviewedTitleFiltersState({
-    values,
-  });
-
   return {
-    ...reviewedTitleFilterState,
-    ...sortState,
+    ...createInitialFiltersState({ values }),
+    ...createInitialSortState({ initialSort }),
   };
 }
 
-/**
- * Reducer function for collection titles state management.
- * @param state - Current state
- * @param action - Action to process
- * @returns Updated state
- */
 export function reducer(
   state: CollectionTitlesState,
   action: CollectionTitlesAction,
-) {
-  switch (action.type) {
-    case "sort/sort": {
-      return sortReducer(state, action);
-    }
-    default: {
-      return maybeReviewedTitleFiltersReducer(state, action);
-    }
-  }
+): CollectionTitlesState {
+  return collectionTitlesComposedReducer(state, action);
 }
 
-/**
- * Action creator for collection titles sort actions.
- */
 export const createSortAction = createSortActionCreator<CollectionTitlesSort>();

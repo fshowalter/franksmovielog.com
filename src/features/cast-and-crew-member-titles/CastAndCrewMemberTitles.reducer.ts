@@ -1,89 +1,112 @@
-import type {
-  MaybeReviewedTitleFiltersAction,
-  MaybeReviewedTitleFiltersState,
-  MaybeReviewedTitleFiltersValues,
-} from "~/reducers/maybeReviewedTitleFiltersReducer";
-import type { SortAction, SortState } from "~/reducers/sortReducer";
+import type { FiltersAction } from "~/reducers/filtersReducer";
+import type { SortAction } from "~/reducers/sortReducer";
 
+import { composeReducers } from "~/facets/composeReducers";
 import {
-  createInitialMaybeReviewedTitleFiltersState,
-  maybeReviewedTitleFiltersReducer,
-} from "~/reducers/maybeReviewedTitleFiltersReducer";
+  creditedAsFacetReducer,
+} from "~/facets/creditedAs/creditedAsReducer";
+import { genresFacetReducer } from "~/facets/genres/genresReducer";
+import { gradeFacetReducer } from "~/facets/grade/gradeReducer";
+import { releaseYearFacetReducer } from "~/facets/releaseYear/releaseYearReducer";
+import { reviewedStatusFacetReducer } from "~/facets/reviewedStatus/reviewedStatusReducer";
+import { reviewYearFacetReducer } from "~/facets/reviewYear/reviewYearReducer";
+import { titleFacetReducer } from "~/facets/title/titleReducer";
+import {
+  createInitialFiltersState,
+  filtersReducer,
+} from "~/reducers/filtersReducer";
 import {
   createInitialSortState,
   createSortActionCreator,
   sortReducer,
 } from "~/reducers/sortReducer";
 
-import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
-import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
-
-export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
+export {
+  createCreditedAsFilterChangedAction,
+} from "~/facets/creditedAs/creditedAsReducer";
+export { createGenresFilterChangedAction } from "~/facets/genres/genresReducer";
+export { createGradeFilterChangedAction } from "~/facets/grade/gradeReducer";
+export {
+  createReleaseYearFilterChangedAction,
+} from "~/facets/releaseYear/releaseYearReducer";
+export {
+  createReviewedStatusFilterChangedAction,
+} from "~/facets/reviewedStatus/reviewedStatusReducer";
+export {
+  createReviewYearFilterChangedAction,
+} from "~/facets/reviewYear/reviewYearReducer";
+export { createTitleFilterChangedAction } from "~/facets/title/titleReducer";
 export {
   createApplyFiltersAction,
   createClearFiltersAction,
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
+  createRemoveAppliedFilterAction,
   createResetFiltersAction,
-  createReviewedStatusFilterChangedAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
   selectHasPendingFilters,
-} from "~/reducers/maybeReviewedTitleFiltersReducer";
+} from "~/reducers/filtersReducer";
 
-/**
- * Union type of all actions for cast and crew member titles state management.
- */
+import type {
+  CreditedAsFilterChangedAction,
+} from "~/facets/creditedAs/creditedAsReducer";
+import type { GenresFilterChangedAction } from "~/facets/genres/genresReducer";
+import type { GradeFilterChangedAction } from "~/facets/grade/gradeReducer";
+import type {
+  ReleaseYearFilterChangedAction,
+} from "~/facets/releaseYear/releaseYearReducer";
+import type {
+  ReviewedStatusFilterChangedAction,
+} from "~/facets/reviewedStatus/reviewedStatusReducer";
+import type {
+  ReviewYearFilterChangedAction,
+} from "~/facets/reviewYear/reviewYearReducer";
+import type { TitleFilterChangedAction } from "~/facets/title/titleReducer";
+
+import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
+import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
+
 export type CastAndCrewMemberTitlesAction =
   | CreditedAsFilterChangedAction
-  | MaybeReviewedTitleFiltersAction
-  | SortAction<CastAndCrewMemberTitlesSort>;
+  | FiltersAction
+  | GenresFilterChangedAction
+  | GradeFilterChangedAction
+  | ReleaseYearFilterChangedAction
+  | ReviewedStatusFilterChangedAction
+  | ReviewYearFilterChangedAction
+  | SortAction<CastAndCrewMemberTitlesSort>
+  | TitleFilterChangedAction;
 
-/**
- * Filter values for cast and crew member titles.
- */
-export type CastAndCrewMemberTitlesFiltersValues =
-  MaybeReviewedTitleFiltersValues & {
-    creditedAs?: readonly string[];
-  };
-
-/**
- * Internal state type for cast and crew member titles reducer.
- */
-type CastAndCrewMemberTitlesState = Omit<
-  MaybeReviewedTitleFiltersState<CastAndCrewMemberTitlesValue>,
-  "activeFilterValues" | "pendingFilterValues"
-> &
-  SortState<CastAndCrewMemberTitlesSort> & {
-    activeFilterValues: CastAndCrewMemberTitlesFiltersValues;
-    pendingFilterValues: CastAndCrewMemberTitlesFiltersValues;
-  };
-
-type CreditedAsFilterChangedAction = {
-  type: "castAndCrewMemberTitles/creditedAsFilterChanged";
-  values: string[];
+export type CastAndCrewMemberTitlesFiltersValues = {
+  creditedAs?: readonly string[];
+  genres?: readonly string[];
+  gradeValue?: [number, number];
+  releaseYear?: [string, string];
+  reviewedStatus?: readonly string[];
+  reviewYear?: [string, string];
+  title?: string;
 };
 
-/**
- * Creates an action for changing the credited-as filter.
- * Supports multiple selection.
- * @param values - The credited roles to filter by
- * @returns Credited-as filter changed action
- */
-export function createCreditedAsFilterChangedAction(
-  values: string[],
-): CreditedAsFilterChangedAction {
-  return { type: "castAndCrewMemberTitles/creditedAsFilterChanged", values };
-}
+type CastAndCrewMemberTitlesState = {
+  activeFilterValues: CastAndCrewMemberTitlesFiltersValues;
+  pendingFilterValues: CastAndCrewMemberTitlesFiltersValues;
+  sort: CastAndCrewMemberTitlesSort;
+  values: CastAndCrewMemberTitlesValue[];
+};
 
-/**
- * Creates the initial state for cast and crew member titles page.
- * @param options - Configuration object
- * @param options.initialSort - Initial sort order
- * @param options.values - Array of cast/crew member titles
- * @returns Initial state for the reducer
- */
+const castAndCrewMemberTitlesComposedReducer =
+  composeReducers<CastAndCrewMemberTitlesState>(
+    filtersReducer,
+    titleFacetReducer,
+    genresFacetReducer,
+    gradeFacetReducer,
+    releaseYearFacetReducer,
+    reviewYearFacetReducer,
+    reviewedStatusFacetReducer,
+    creditedAsFacetReducer,
+    (state, action) =>
+      action.type === "sort/sort"
+        ? sortReducer(state, action as SortAction<CastAndCrewMemberTitlesSort>)
+        : state,
+  );
+
 export function createInitialState({
   initialSort,
   values,
@@ -91,89 +114,18 @@ export function createInitialState({
   initialSort: CastAndCrewMemberTitlesSort;
   values: CastAndCrewMemberTitlesValue[];
 }): CastAndCrewMemberTitlesState {
-  const sortState = createInitialSortState({ initialSort });
-  const reviewedTitleFilterState = createInitialMaybeReviewedTitleFiltersState({
-    values,
-  });
-
   return {
-    ...reviewedTitleFilterState,
-    ...sortState,
+    ...createInitialFiltersState({ values }),
+    ...createInitialSortState({ initialSort }),
   };
 }
 
-/**
- * Reducer function for cast and crew member titles page state management.
- * @param state - Current state
- * @param action - Action to process
- * @returns Updated state
- */
 export function reducer(
   state: CastAndCrewMemberTitlesState,
   action: CastAndCrewMemberTitlesAction,
-) {
-  switch (action.type) {
-    case "castAndCrewMemberTitles/creditedAsFilterChanged": {
-      return handleCreditedAsFilterChanged(state, action);
-    }
-    case "filters/removeAppliedFilter": {
-      return handleRemoveAppliedFilter(state, action);
-    }
-    case "sort/sort": {
-      return sortReducer(state, action);
-    }
-    default: {
-      return maybeReviewedTitleFiltersReducer(state, action);
-    }
-  }
-}
-
-function handleCreditedAsFilterChanged(
-  state: CastAndCrewMemberTitlesState,
-  action: CreditedAsFilterChangedAction,
 ): CastAndCrewMemberTitlesState {
-  return {
-    ...state,
-    pendingFilterValues: {
-      ...state.pendingFilterValues,
-      creditedAs: action.values.length === 0 ? undefined : action.values,
-    },
-  };
+  return castAndCrewMemberTitlesComposedReducer(state, action);
 }
 
-function handleRemoveAppliedFilter(
-  state: CastAndCrewMemberTitlesState,
-  action: { filterKey: string; type: "filters/removeAppliedFilter" },
-): CastAndCrewMemberTitlesState {
-  // Handle removal of individual creditedAs values (e.g., "creditedAs-director")
-  // Updates BOTH pendingFilterValues and activeFilterValues to ensure UI updates.
-  if (action.filterKey.startsWith("creditedAs-")) {
-    const creditValue = action.filterKey.replace(/^creditedAs-/, "");
-    // AIDEV-NOTE: Credit values in data are lowercase ("director", "performer", "writer")
-    // Do NOT capitalize - use as-is to match actual data format
-
-    const currentCreditedAs = state.pendingFilterValues.creditedAs ?? [];
-    const newCreditedAs = currentCreditedAs.filter((c) => c !== creditValue);
-
-    return {
-      ...state,
-      activeFilterValues: {
-        ...state.activeFilterValues,
-        creditedAs: newCreditedAs.length === 0 ? undefined : newCreditedAs,
-      },
-      pendingFilterValues: {
-        ...state.pendingFilterValues,
-        creditedAs: newCreditedAs.length === 0 ? undefined : newCreditedAs,
-      },
-    };
-  }
-
-  // For all other filters, delegate to base reducer
-  return maybeReviewedTitleFiltersReducer(state, action);
-}
-
-/**
- * Action creator for cast and crew member titles sort actions.
- */
 export const createSortAction =
   createSortActionCreator<CastAndCrewMemberTitlesSort>();
