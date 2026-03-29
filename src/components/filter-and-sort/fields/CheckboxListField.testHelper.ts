@@ -1,120 +1,18 @@
 import type { UserEvent } from "@testing-library/user-event";
 
-import { screen, within } from "@testing-library/react";
+import { within } from "@testing-library/dom";
 
-/**
- * Test helper to click a checkbox option in a specific checkbox list field by label.
- * @param user - UserEvent instance for interactions
- * @param fieldLabel - Label of the checkbox list field (e.g., "Medium", "Genres")
- * @param optionValue - Value of the checkbox option to click
- */
-export async function clickCheckboxListOption(
+export async function clickCheckboxListFieldOption(
+  element: HTMLElement,
   user: UserEvent,
-  fieldLabel: string,
-  optionValue: string,
-) {
-  // Find the fieldset with matching legend that contains a group (CheckboxListField pattern)
-  const fieldsets = screen
-    .queryAllByRole("group")
-    .map((group) => {
-      // Check if this group is inside a fieldset
-      const fieldset = group.closest("fieldset");
-      return fieldset;
-    })
-    .filter(Boolean);
-
-  const targetFieldset = fieldsets.find((fieldset) => {
-    const legend = fieldset?.querySelector("legend");
-    return legend?.textContent?.includes(fieldLabel);
+  value: string,
+): Promise<void> {
+  const showMore = within(element).queryByRole("button", {
+    name: /show more/i,
   });
-
-  if (!targetFieldset) {
-    throw new Error(
-      `Unable to find checkbox list field with label "${fieldLabel}"`,
-    );
-  }
-
-  // Get the group inside the fieldset
-  const targetGroup = targetFieldset.querySelector('[role="group"]');
-
-  if (!targetGroup) {
-    throw new Error(
-      `Unable to find group inside checkbox list field with label "${fieldLabel}"`,
-    );
-  }
-
-  // Try to find the checkbox - it might be hidden behind "Show more"
-  let checkboxes = within(targetGroup as HTMLElement).getAllByRole("checkbox");
-  let checkbox = checkboxes.find(
-    (cb) => (cb as HTMLInputElement).value === optionValue,
-  );
-
-  // If not found, try clicking "Show more" button
-  // AIDEV-NOTE: The "Show more" button is inside the fieldset but OUTSIDE the role="group" div,
-  // so we must search within the fieldset (targetFieldset), not the group (targetGroup).
-  if (!checkbox) {
-    const showMoreButton = within(targetFieldset).queryByRole("button", {
-      name: /Show more/,
-    });
-
-    if (showMoreButton) {
-      await user.click(showMoreButton);
-
-      // Try finding the checkbox again
-      checkboxes = within(targetGroup as HTMLElement).getAllByRole("checkbox");
-      checkbox = checkboxes.find(
-        (cb) => (cb as HTMLInputElement).value === optionValue,
-      );
-    }
-  }
-
-  if (!checkbox) {
-    throw new Error(
-      `Unable to find checkbox with value "${optionValue}" in field "${fieldLabel}". Available values: ${checkboxes.map((cb) => (cb as HTMLInputElement).value).join(", ")}`,
-    );
-  }
-
-  await user.click(checkbox);
-}
-
-/**
- * Test helper to toggle a checkbox option in a checkbox list field.
- * @param user - UserEvent instance for interactions
- * @param optionLabel - Label text of the checkbox option to toggle (matches the option value)
- */
-export async function toggleCheckboxListOption(
-  user: UserEvent,
-  optionLabel: string,
-) {
-  // Try to find the checkbox - it might be hidden behind "Show more"
-  let checkboxes = screen.getAllByRole("checkbox");
-  let checkbox = checkboxes.find(
-    (cb) => (cb as HTMLInputElement).value === optionLabel,
-  );
-
-  // If not found, try clicking "Show more" button
-  if (!checkbox) {
-    const showMoreButtons = screen.queryAllByRole("button", {
-      name: /Show more/,
-    });
-
-    if (showMoreButtons.length > 0) {
-      // Click the first "Show more" button
-      await user.click(showMoreButtons[0]);
-
-      // Try finding the checkbox again
-      checkboxes = screen.getAllByRole("checkbox");
-      checkbox = checkboxes.find(
-        (cb) => (cb as HTMLInputElement).value === optionLabel,
-      );
-    }
-  }
-
-  if (!checkbox) {
-    throw new Error(
-      `Unable to find checkbox with value "${optionLabel}". Available values: ${checkboxes.map((cb) => (cb as HTMLInputElement).value).join(", ")}`,
-    );
-  }
-
-  await user.click(checkbox);
+  if (showMore) await user.click(showMore);
+  const checkboxes = within(element).getAllByRole("checkbox");
+  const cb = checkboxes.find((c) => (c as HTMLInputElement).value === value);
+  if (!cb) throw new Error(`Checkbox "${value}" not found`);
+  await user.click(cb);
 }

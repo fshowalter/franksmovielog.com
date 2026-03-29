@@ -29,6 +29,7 @@ const createCollection = (
     name,
     reviewCount: overrides.reviewCount ?? 10,
     slug: overrides.slug ?? name.toLowerCase().replaceAll(/[\s']/g, "-"),
+    sortName: name,
     ...overrides,
   };
 };

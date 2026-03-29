@@ -1,21 +1,12 @@
-import type { FiltersAction } from "~/reducers/filtersReducer";
-import type { SortAction } from "~/reducers/sortReducer";
+import type { FilterAndSortContainerAction } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import type { NameFilterChangedAction } from "~/components/filter-and-sort/facets/name/nameReducer";
 
-import { composeReducers } from "~/facets/composeReducers";
-import { nameFacetReducer } from "~/facets/name/nameReducer";
 import {
-  createInitialFiltersState,
-  filtersLifecycleReducer,
-} from "~/reducers/filtersReducer";
-import {
-  createInitialSortState,
-  createSortActionCreator,
-  sortReducer,
-} from "~/reducers/sortReducer";
-
-export { createNameFilterChangedAction } from "~/facets/name/nameReducer";
-
-import type { NameFilterChangedAction } from "~/facets/name/nameReducer";
+  createInitialFilterAndSortContainerState,
+  filterAndSortContainerReducer,
+} from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import { composeReducers } from "~/components/filter-and-sort/facets/composeReducers";
+import { nameFacetReducer } from "~/components/filter-and-sort/facets/name/nameReducer";
 
 import type { CollectionsValue } from "./Collections";
 import type { CollectionsSort } from "./sortCollections";
@@ -24,9 +15,8 @@ import type { CollectionsSort } from "./sortCollections";
  * Union type of all collection-specific filter and sort actions
  */
 export type CollectionsAction =
-  | FiltersAction
-  | NameFilterChangedAction
-  | SortAction<CollectionsSort>;
+  | FilterAndSortContainerAction<CollectionsSort>
+  | NameFilterChangedAction;
 
 /**
  * Type definition for Collections filter values
@@ -46,9 +36,8 @@ type CollectionsState = {
 };
 
 const collectionsComposedReducer = composeReducers<CollectionsState>(
-  filtersLifecycleReducer,
+  filterAndSortContainerReducer,
   nameFacetReducer,
-  sortReducer,
 );
 
 export function createInitialState({
@@ -59,8 +48,7 @@ export function createInitialState({
   values: CollectionsValue[];
 }): CollectionsState {
   return {
-    ...createInitialFiltersState({ values }),
-    ...createInitialSortState({ initialSort }),
+    ...createInitialFilterAndSortContainerState({ initialSort, values }),
   };
 }
 
@@ -74,8 +62,3 @@ export function reducer(
 ): CollectionsState {
   return collectionsComposedReducer(state, action);
 }
-
-/**
- * Action creator for sort actions specific to Collections.
- */
-export const createSortAction = createSortActionCreator<CollectionsSort>();

@@ -1,11 +1,12 @@
 import { screen, within } from "@testing-library/react";
 import { describe, it, vi } from "vitest";
 
+import { getAnimatedDetailsDisclosureElement } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure.testHelper";
 import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
-import { clickCheckboxListOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
+import { clickCheckboxListFieldOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 type GenresFacetItem = { genres: string[]; title: string };
@@ -35,7 +36,7 @@ export function genresFilterFacetTests(
       renderItems(items);
 
       await clickToggleFilters(user);
-      await clickCheckboxListOption(user, "Genre", "Horror");
+      await clickGenreOption(user, "Horror");
       await clickViewResults(user);
 
       const list = getList();
@@ -60,8 +61,8 @@ export function genresFilterFacetTests(
       renderItems(items);
 
       await clickToggleFilters(user);
-      await clickCheckboxListOption(user, "Genre", "Horror");
-      await clickCheckboxListOption(user, "Genre", "Sci-Fi");
+      await clickGenreOption(user, "Horror");
+      await clickGenreOption(user, "Sci-Fi");
       await clickViewResults(user);
 
       const list = getList();
@@ -85,7 +86,7 @@ export function genresFilterFacetTests(
       renderItems(items);
 
       await clickToggleFilters(user);
-      await clickCheckboxListOption(user, "Genre", "Horror");
+      await clickGenreOption(user, "Horror");
       await clickViewResults(user);
 
       await clickToggleFilters(user);
@@ -109,7 +110,7 @@ export function genresFilterFacetTests(
       renderItems(items);
 
       await clickToggleFilters(user);
-      await clickCheckboxListOption(user, "Genre", "Horror");
+      await clickGenreOption(user, "Horror");
       await clickViewResults(user);
 
       const list = getList();
@@ -136,4 +137,12 @@ export function genresFilterFacetTests(
       vi.useRealTimers();
     });
   });
+}
+
+async function clickGenreOption(
+  user: Parameters<typeof clickCheckboxListFieldOption>[1],
+  value: string,
+) {
+  const filter = getAnimatedDetailsDisclosureElement("Genres");
+  await clickCheckboxListFieldOption(filter, user, value);
 }

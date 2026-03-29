@@ -1,6 +1,9 @@
-import { omitPendingKey } from "~/facets/omitPendingKey";
+import type { RemoveFilterAction } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
 
-const STATE_KEY = "name";
+import { ActionTypes as FilterAndSortContainerActionTypes } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import { omitPendingKey } from "~/components/filter-and-sort/facets/omitPendingKey";
+
+export const STATE_KEY = "name";
 
 const ActionTypes = {
   CHANGED: "name/changed" as const,
@@ -17,6 +20,11 @@ export function createNameFilterChangedAction(
   return { type: ActionTypes.CHANGED, value };
 }
 
+/**
+ * Facet reducer for the name filter. Handles its own action and removes the
+ * filter on filters/removeAppliedFilter when id is "name". Passes everything
+ * else through unchanged.
+ */
 export function nameFacetReducer<
   TState extends { pendingFilterValues: { [STATE_KEY]?: string } },
 >(state: TState, action: { type: string }): TState {
@@ -40,9 +48,9 @@ export function nameFacetReducer<
         },
       };
     }
-    case "filters/removeAppliedFilter": {
-      const { filterKey } = action as { filterKey: string; type: string };
-      if (filterKey !== STATE_KEY) return state;
+    case FilterAndSortContainerActionTypes.FILTER_REMOVED: {
+      const { key } = action as RemoveFilterAction;
+      if (key !== STATE_KEY) return state;
       return {
         ...state,
         pendingFilterValues: omitPendingKey(

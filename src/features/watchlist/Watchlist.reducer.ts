@@ -10,7 +10,7 @@ import { composeReducers } from "~/components/filter-and-sort/facets/composeRedu
 import { directorsFacetReducer } from "~/components/filter-and-sort/facets/directors/directorsReducer";
 import { genresFacetReducer } from "~/components/filter-and-sort/facets/genres/genresReducer";
 import { performersFacetReducer } from "~/components/filter-and-sort/facets/performers/performersReducer";
-import { releaseYearFacetReducer } from "~/components/filter-and-sort/facets/releaseYear/releaseYearReducer";
+import { releaseYearFacetReducer } from "~/components/filter-and-sort/facets/release-year/releaseYearReducer";
 import { titleFacetReducer } from "~/components/filter-and-sort/facets/title/titleReducer";
 import { writersFacetReducer } from "~/components/filter-and-sort/facets/writers/writersReducer";
 import {
@@ -18,29 +18,29 @@ import {
   showMoreReducer,
 } from "~/reducers/showMoreReducer";
 
-export { createCollectionFilterChangedAction } from "~/components/filter-and-sort/facets/collection/collectionReducer";
-export { createDirectorFilterChangedAction } from "~/components/filter-and-sort/facets/directors/directorReducer";
-export { createGenresFilterChangedAction } from "~/components/filter-and-sort/facets/genres/genreReducer";
-export { createPerformerFilterChangedAction } from "~/components/filter-and-sort/facets/performer/performerReducer";
-export { createReleaseYearFilterChangedAction } from "~/components/filter-and-sort/facets/releaseYear/releaseYearReducer";
+export { createCollectionsFilterChangedAction } from "~/components/filter-and-sort/facets/collections/collectionsReducer";
+export { createDirectorsFilterChangedAction } from "~/components/filter-and-sort/facets/directors/directorsReducer";
+export { createGenresFilterChangedAction } from "~/components/filter-and-sort/facets/genres/genresReducer";
+export { createPerformersFilterChangedAction } from "~/components/filter-and-sort/facets/performers/performersReducer";
+export { createReleaseYearFilterChangedAction } from "~/components/filter-and-sort/facets/release-year/releaseYearReducer";
 export { createTitleFilterChangedAction } from "~/components/filter-and-sort/facets/title/titleReducer";
-export { createWriterFilterChangedAction } from "~/components/filter-and-sort/facets/writer/writerReducer";
+export { createWritersFilterChangedAction } from "~/components/filter-and-sort/facets/writers/writersReducer";
 export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
 export { createShowMoreAction } from "~/reducers/showMoreReducer";
 
-import type { CollectionFilterChangedAction } from "~/components/filter-and-sort/facets/collection/collectionReducer";
-import type { DirectorFilterChangedAction } from "~/components/filter-and-sort/facets/directors/directorReducer";
-import type { GenresFilterChangedAction } from "~/components/filter-and-sort/facets/genres/genreReducer";
-import type { PerformerFilterChangedAction } from "~/components/filter-and-sort/facets/performer/performerReducer";
-import type { ReleaseYearFilterChangedAction } from "~/components/filter-and-sort/facets/releaseYear/releaseYearReducer";
+import type { CollectionsFilterChangedAction } from "~/components/filter-and-sort/facets/collections/collectionsReducer";
+import type { DirectorsFilterChangedAction } from "~/components/filter-and-sort/facets/directors/directorsReducer";
+import type { GenresFilterChangedAction } from "~/components/filter-and-sort/facets/genres/genresReducer";
+import type { PerformersFilterChangedAction } from "~/components/filter-and-sort/facets/performers/performersReducer";
+import type { ReleaseYearFilterChangedAction } from "~/components/filter-and-sort/facets/release-year/releaseYearReducer";
 import type { TitleFilterChangedAction } from "~/components/filter-and-sort/facets/title/titleReducer";
-import type { WriterFilterChangedAction } from "~/components/filter-and-sort/facets/writer/writerReducer";
+import type { WritersFilterChangedAction } from "~/components/filter-and-sort/facets/writers/writersReducer";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
 import type { WatchlistValue } from "./Watchlist";
 
 export type WatchlistAction =
-  | CollectionFilterChangedAction
+  | CollectionsFilterChangedAction
   | DirectorsFilterChangedAction
   | FilterAndSortContainerAction<WatchlistSort>
   | GenresFilterChangedAction

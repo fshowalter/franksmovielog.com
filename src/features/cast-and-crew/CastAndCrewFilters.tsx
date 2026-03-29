@@ -1,19 +1,11 @@
-import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
-import { CheckboxListField } from "~/components/filter-and-sort/fields/CheckboxListField";
-import { TextField } from "~/components/filter-and-sort/fields/TextField";
-import { capitalize } from "~/utils/capitalize";
+import { CreditedAsFacet } from "~/components/filter-and-sort/facets/credited-as/CreditedAsFacet";
+import { NameFacet } from "~/components/filter-and-sort/facets/name/NameFacet";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type {
   CastAndCrewAction,
   CastAndCrewFiltersValues,
 } from "./CastAndCrew.reducer";
-
-import {
-  createCreditedAsFilterChangedAction,
-  createNameFilterChangedAction,
-} from "./CastAndCrew.reducer";
-import { calculateCreditedAsCounts } from "./filterCastAndCrew";
 
 /**
  * Filter controls for the cast and crew page.
@@ -32,34 +24,15 @@ export function CastAndCrewFilters({
   filterValues: CastAndCrewFiltersValues;
   values: readonly CastAndCrewValue[];
 }): React.JSX.Element {
-  // Calculate dynamic counts for creditedAs filter
-  const creditedAsCounts = calculateCreditedAsCounts([...values], filterValues);
-
   return (
     <>
-      <TextField
-        defaultValue={filterValues.name}
-        label="Name"
-        onInputChange={(value) =>
-          dispatch(createNameFilterChangedAction(value))
-        }
-        placeholder="Enter all or part of a name"
+      <NameFacet defaultValue={filterValues.name} dispatch={dispatch} />
+      <CreditedAsFacet
+        defaultValues={filterValues.creditedAs}
+        dispatch={dispatch}
+        distinctCreditKinds={["director", "performer", "writer"]}
+        values={values}
       />
-      <AnimatedDetailsDisclosure title="Credited As">
-        <CheckboxListField
-          defaultValues={filterValues.creditedAs ?? []}
-          label="Credited As"
-          onChange={(values) =>
-            dispatch(createCreditedAsFilterChangedAction(values))
-          }
-          onClear={() => dispatch(createCreditedAsFilterChangedAction([]))}
-          options={["director", "performer", "writer"].map((credit) => ({
-            count: creditedAsCounts.get(credit) ?? 0,
-            label: capitalize(credit),
-            value: credit,
-          }))}
-        />
-      </AnimatedDetailsDisclosure>
     </>
   );
 }

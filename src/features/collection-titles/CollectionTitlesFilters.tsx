@@ -1,30 +1,15 @@
-import type { CheckboxListFieldOption } from "~/components/filter-and-sort/fields/CheckboxListField";
-
-import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
-import { CheckboxListField } from "~/components/filter-and-sort/fields/CheckboxListField";
-import { GradeField } from "~/components/filter-and-sort/facets/grade/GradeFacet";
-import { TextField } from "~/components/filter-and-sort/fields/TextField";
-import { YearField } from "~/components/filter-and-sort/fields/YearField";
+import { GenresFacet } from "~/components/filter-and-sort/facets/genres/GenresFacet";
+import { GradeFacet } from "~/components/filter-and-sort/facets/grade/GradeFacet";
+import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/release-year/ReleaseYearFacet";
+import { ReviewYearFacet } from "~/components/filter-and-sort/facets/review-year/ReviewYearFacet";
+import { ReviewedStatusFacet } from "~/components/filter-and-sort/facets/reviewed-status/ReviewedStatusFacet";
+import { TitleFacet } from "~/components/filter-and-sort/facets/title/TitleFacet";
 
 import type { CollectionTitlesValue } from "./CollectionTitles";
 import type {
   CollectionTitlesAction,
   CollectionTitlesFiltersValues,
 } from "./CollectionTitles.reducer";
-
-import {
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
-  createRemoveAppliedFilterAction,
-  createReviewedStatusFilterChangedAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
-} from "./CollectionTitles.reducer";
-import {
-  calculateGenreCounts,
-  calculateReviewedStatusCounts,
-} from "./filterCollectionTitles";
 
 /**
  * Filter controls for the collection titles page.
@@ -50,95 +35,33 @@ export function CollectionTitlesFilters({
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: CollectionTitlesFiltersValues;
-  values?: CollectionTitlesValue[];
+  values: CollectionTitlesValue[];
 }): React.JSX.Element {
-  // Calculate genre counts dynamically (respects all non-genre filters)
-  const genreCounts = values
-    ? calculateGenreCounts(values, filterValues)
-    : undefined;
-
-  // Calculate reviewed status counts dynamically
-  const reviewedStatusCounts = values
-    ? calculateReviewedStatusCounts(values, filterValues)
-    : undefined;
-
-  const reviewedStatusOptions: CheckboxListFieldOption[] = [
-    {
-      count: reviewedStatusCounts?.get("Reviewed") ?? 0,
-      label: "Reviewed",
-      value: "Reviewed",
-    },
-    {
-      count: reviewedStatusCounts?.get("Not Reviewed") ?? 0,
-      label: "Not Reviewed",
-      value: "Not Reviewed",
-    },
-  ];
-
   return (
     <>
-      <TextField
-        defaultValue={filterValues.title}
-        label="Title"
-        onInputChange={(value) =>
-          dispatch(createTitleFilterChangedAction(value))
-        }
-        placeholder="Enter all or part of a title"
-      />
-      <YearField
+      <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />
+      <ReleaseYearFacet
         defaultValues={filterValues.releaseYear}
-        label="Release Year"
-        onClear={() => dispatch(createRemoveAppliedFilterAction("releaseYear"))}
-        onYearChange={(values) =>
-          dispatch(createReleaseYearFilterChangedAction(values))
-        }
-        years={distinctReleaseYears}
+        dispatch={dispatch}
+        distinctYears={distinctReleaseYears}
       />
-      <AnimatedDetailsDisclosure title="Genres">
-        <CheckboxListField
-          defaultValues={filterValues.genres}
-          label="Genres"
-          onChange={(values) =>
-            dispatch(createGenresFilterChangedAction(values))
-          }
-          onClear={() => dispatch(createRemoveAppliedFilterAction("genres"))}
-          options={distinctGenres.map((value) => ({
-            count: genreCounts?.get(value) ?? 0,
-            label: value,
-            value,
-          }))}
-        />
-      </AnimatedDetailsDisclosure>
-      <GradeField
-        defaultValues={filterValues.gradeValue}
-        label="Grade"
-        onClear={() => dispatch(createRemoveAppliedFilterAction("gradeValue"))}
-        onGradeChange={(values) =>
-          dispatch(createGradeFilterChangedAction(values))
-        }
+      <GenresFacet
+        defaultValues={filterValues.genres}
+        dispatch={dispatch}
+        distinctGenres={distinctGenres}
+        values={values}
       />
-      <YearField
+      <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
+      <ReviewYearFacet
         defaultValues={filterValues.reviewYear}
-        label="Review Year"
-        onClear={() => dispatch(createRemoveAppliedFilterAction("reviewYear"))}
-        onYearChange={(values) =>
-          dispatch(createReviewYearFilterChangedAction(values))
-        }
-        years={distinctReviewYears}
+        dispatch={dispatch}
+        distinctYears={distinctReviewYears}
       />
-      <AnimatedDetailsDisclosure title="Reviewed Status">
-        <CheckboxListField
-          defaultValues={filterValues.reviewedStatus ?? []}
-          label="Reviewed Status"
-          onChange={(values) =>
-            dispatch(createReviewedStatusFilterChangedAction(values))
-          }
-          onClear={() =>
-            dispatch(createRemoveAppliedFilterAction("reviewedStatus"))
-          }
-          options={reviewedStatusOptions}
-        />
-      </AnimatedDetailsDisclosure>
+      <ReviewedStatusFacet
+        defaultValues={filterValues.reviewedStatus}
+        dispatch={dispatch}
+        values={values}
+      />
     </>
   );
 }

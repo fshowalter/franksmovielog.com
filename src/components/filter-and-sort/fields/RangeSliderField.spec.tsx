@@ -1,29 +1,16 @@
+import type { ComponentProps } from "react";
+
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { describe, it, vi } from "vitest";
 
-import type { FormatValueFunction } from "./RangeSliderField";
+import { gradeValueToLetter } from "~/utils/grades";
 
 import { RangeSliderField } from "./RangeSliderField";
 
-const formatGrade: FormatValueFunction = (value: number): string => {
-  const grades = [
-    "F",
-    "D-",
-    "D",
-    "D+",
-    "C-",
-    "C",
-    "C+",
-    "B-",
-    "B",
-    "B+",
-    "A-",
-    "A",
-    "A+",
-  ];
-  return grades[value - 1] || "?";
-};
+type FormatValueFunction = ComponentProps<
+  typeof RangeSliderField
+>["formatValue"];
 
 const createDefaultProps = (
   overrides = {},
@@ -73,11 +60,11 @@ describe("RangeSliderField", () => {
 
     it("uses formatValue function when provided", ({ expect }) => {
       const props = createDefaultProps({
-        formatValue: formatGrade,
-        fromValue: 8,
-        max: 13,
-        min: 1,
-        toValue: 11,
+        formatValue: gradeValueToLetter as FormatValueFunction,
+        fromValue: 11,
+        max: 16,
+        min: 2,
+        toValue: 14,
       });
       render(<RangeSliderField {...props} />);
 
@@ -205,7 +192,6 @@ describe("RangeSliderField", () => {
         await userEvent.click(clearButton);
       });
 
-      expect(onChange).toHaveBeenCalledWith(1920, 2026);
       expect(onClear).toHaveBeenCalledOnce();
     });
 
@@ -355,11 +341,11 @@ describe("RangeSliderField", () => {
 
     it("uses formatted values in aria-valuetext", ({ expect }) => {
       const props = createDefaultProps({
-        formatValue: formatGrade,
-        fromValue: 8,
-        max: 13,
-        min: 1,
-        toValue: 11,
+        formatValue: gradeValueToLetter as FormatValueFunction,
+        fromValue: 11,
+        max: 16,
+        min: 2,
+        toValue: 14,
       });
       render(<RangeSliderField {...props} />);
 

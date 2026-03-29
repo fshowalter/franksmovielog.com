@@ -1,17 +1,25 @@
+import type { UserEvent } from "@testing-library/user-event";
+
 import { screen, within } from "@testing-library/react";
 import { describe, it, vi } from "vitest";
 
+import { getAnimatedDetailsDisclosureElement } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure.testHelper";
 import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
-import { clickCheckboxListOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
+import { clickCheckboxListFieldOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 type WritersFacetItem = { title: string; watchlistWriterNames: string[] };
 
+export async function clickWriterOption(user: UserEvent, value: string) {
+  const filter = getAnimatedDetailsDisclosureElement("Writers");
+  await clickCheckboxListFieldOption(filter, user, value);
+}
+
 /**
- * Shared genre filter facet tests.
+ * Shared writers filter facet tests.
  * @param renderItems - Renders the feature component with the given items
  * @param getList - Returns the list DOM element to assert against
  */
@@ -26,111 +34,117 @@ export function writersFilterFacetTests(
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
       const items: WritersFacetItem[] = [
-        { genres: ["Horror"], title: "The Exorcist" },
-        { genres: ["Horror", "Sci-Fi"], title: "Alien" },
-        { genres: ["Action"], title: "Die Hard" },
+        { title: "Rio Bravo", watchlistWriterNames: ["Leigh Brackett"] },
+        { title: "The Big Sleep", watchlistWriterNames: ["Leigh Brackett"] },
+        { title: "The Searchers", watchlistWriterNames: ["Frank S. Nugent"] },
       ];
 
       const user = getUserWithFakeTimers();
       renderItems(items);
 
       await clickToggleFilters(user);
-      await clickCheckboxListOption(user, "Genre", "Horror");
+      await clickWriterOption(user, "Leigh Brackett");
       await clickViewResults(user);
 
       const list = getList();
-      expect(within(list).getByText("The Exorcist")).toBeInTheDocument();
-      expect(within(list).getByText("Alien")).toBeInTheDocument();
-      expect(within(list).queryByText("Die Hard")).not.toBeInTheDocument();
+      expect(within(list).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(list).getByText("The Big Sleep")).toBeInTheDocument();
+      expect(within(list).queryByText("The Searchers")).not.toBeInTheDocument();
 
       vi.clearAllTimers();
       vi.useRealTimers();
     });
 
-    it("filters to multiple genre (OR logic)", async ({ expect }) => {
+    it("filters to multiple writers (OR logic)", async ({ expect }) => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
       const items: WritersFacetItem[] = [
-        { genres: ["Horror"], title: "The Exorcist" },
-        { genres: ["Sci-Fi"], title: "Star Wars" },
-        { genres: ["Action"], title: "Die Hard" },
+        { title: "Rio Bravo", watchlistWriterNames: ["Leigh Brackett"] },
+        { title: "The Big Sleep", watchlistWriterNames: ["Jules Furthman"] },
+        { title: "The Searchers", watchlistWriterNames: ["Frank S. Nugent"] },
       ];
 
       const user = getUserWithFakeTimers();
       renderItems(items);
 
       await clickToggleFilters(user);
-      await clickCheckboxListOption(user, "Genre", "Horror");
-      await clickCheckboxListOption(user, "Genre", "Sci-Fi");
+      await clickWriterOption(user, "Leigh Brackett");
+      await clickWriterOption(user, "Jules Furthman");
       await clickViewResults(user);
 
       const list = getList();
-      expect(within(list).getByText("The Exorcist")).toBeInTheDocument();
-      expect(within(list).getByText("Star Wars")).toBeInTheDocument();
-      expect(within(list).queryByText("Die Hard")).not.toBeInTheDocument();
+      expect(within(list).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(list).getByText("The Big Sleep")).toBeInTheDocument();
+      expect(within(list).queryByText("The Searchers")).not.toBeInTheDocument();
 
       vi.clearAllTimers();
       vi.useRealTimers();
     });
 
-    it("shows genre chip after applying", async ({ expect }) => {
+    it("shows writer chip after applying", async ({ expect }) => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
       const items: WritersFacetItem[] = [
-        { genres: ["Horror"], title: "The Exorcist" },
-        { genres: ["Action"], title: "Die Hard" },
+        { title: "Rio Bravo", watchlistWriterNames: ["Leigh Brackett"] },
+        { title: "The Searchers", watchlistWriterNames: ["Frank S. Nugent"] },
       ];
 
       const user = getUserWithFakeTimers();
       renderItems(items);
 
       await clickToggleFilters(user);
-      await clickCheckboxListOption(user, "Genre", "Horror");
+      await clickWriterOption(user, "Leigh Brackett");
       await clickViewResults(user);
 
       await clickToggleFilters(user);
-      expect(screen.getByLabelText("Remove Horror filter")).toBeInTheDocument();
+      expect(
+        screen.getByLabelText("Remove Writer: Leigh Brackett filter"),
+      ).toBeInTheDocument();
 
       vi.clearAllTimers();
       vi.useRealTimers();
     });
 
-    it("removing genre chip defers list update until View Results", async ({
+    it("removing writer chip defers list update until View Results", async ({
       expect,
     }) => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
       const items: WritersFacetItem[] = [
-        { genres: ["Horror"], title: "The Exorcist" },
-        { genres: ["Action"], title: "Die Hard" },
+        { title: "Rio Bravo", watchlistWriterNames: ["Leigh Brackett"] },
+        { title: "The Searchers", watchlistWriterNames: ["Frank S. Nugent"] },
       ];
 
       const user = getUserWithFakeTimers();
       renderItems(items);
 
       await clickToggleFilters(user);
-      await clickCheckboxListOption(user, "Genre", "Horror");
+      await clickWriterOption(user, "Leigh Brackett");
       await clickViewResults(user);
 
       const list = getList();
-      expect(within(list).getByText("The Exorcist")).toBeInTheDocument();
-      expect(within(list).queryByText("Die Hard")).not.toBeInTheDocument();
+      expect(within(list).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(list).queryByText("The Searchers")).not.toBeInTheDocument();
 
       // Open filter drawer and click the chip to remove
       await clickToggleFilters(user);
-      const chip = screen.getByLabelText("Remove Horror filter");
+      const chip = screen.getByLabelText(
+        "Remove Writer: Leigh Brackett filter",
+      );
       await user.click(chip);
 
       // Before clicking View Results, list should still be filtered
-      expect(within(getList()).getByText("The Exorcist")).toBeInTheDocument();
-      expect(within(getList()).queryByText("Die Hard")).not.toBeInTheDocument();
+      expect(within(getList()).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(
+        within(getList()).queryByText("The Searchers"),
+      ).not.toBeInTheDocument();
 
       // Apply the change
       await clickViewResults(user);
 
       // Now both items should appear
-      expect(within(getList()).getByText("The Exorcist")).toBeInTheDocument();
-      expect(within(getList()).getByText("Die Hard")).toBeInTheDocument();
+      expect(within(getList()).getByText("Rio Bravo")).toBeInTheDocument();
+      expect(within(getList()).getByText("The Searchers")).toBeInTheDocument();
 
       vi.clearAllTimers();
       vi.useRealTimers();

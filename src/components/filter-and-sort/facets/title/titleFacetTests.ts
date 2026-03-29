@@ -20,7 +20,7 @@ type TitleFacetItem = { sortTitle: string; title: string };
  * @param renderItems - Renders the feature component with the given items
  * @param getList - Returns the list DOM element to assert against
  */
-export function titleFilterFacetTests(
+export function titleFacetFilterTests(
   renderItems: (items: TitleFacetItem[]) => void,
   getList: () => HTMLElement,
 ): void {
@@ -164,7 +164,7 @@ export function titleFilterFacetTests(
  * @param renderItems - Renders the feature component with the given items
  * @param getList - Returns the list DOM element to assert against
  */
-export function titleSortFacetTests(
+export function titleFacetSortTests(
   renderItems: (items: TitleFacetItem[]) => void,
   getList: () => HTMLElement,
 ): void {

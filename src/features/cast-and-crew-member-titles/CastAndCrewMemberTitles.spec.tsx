@@ -1,39 +1,26 @@
-import { render, within } from "@testing-library/react";
-import { afterEach, beforeEach, describe, it, vi } from "vitest";
+import { render } from "@testing-library/react";
+import { afterEach, beforeEach, describe, vi } from "vitest";
 
-import {
-  clickCreditedAsFilterOption,
-  getCreditedAsFilter,
-} from "~/components/filter-and-sort/CreditedAsFilter.testHelper";
-import {
-  clickClearFilters,
-  clickToggleFilters,
-  clickViewResults,
-} from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
-import {
-  fillTitleFilter,
-  getTitleFilter,
-} from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
-import { getPosterList } from "~/components/poster-list/PosterList.testHelper";
-import { genresFilterFacetTests } from "~/facets/genres/genresFacetTests";
+import { creditedAsFilterFacetTests } from "~/components/filter-and-sort/facets/credited-as/creditedAsFacetTests";
+import { genresFilterFacetTests } from "~/components/filter-and-sort/facets/genres/genresFacetTests";
 import {
   gradeFilterFacetTests,
   gradeSortFacetTests,
-} from "~/facets/grade/gradeFacetTests";
+} from "~/components/filter-and-sort/facets/grade/gradeFacetTests";
 import {
   releaseYearFilterFacetTests,
   releaseYearSortFacetTests,
-} from "~/facets/releaseYear/releaseYearFacetTests";
-import { reviewedStatusFilterFacetTests } from "~/facets/reviewedStatus/reviewedStatusFacetTests";
+} from "~/components/filter-and-sort/facets/release-year/releaseYearFacetTests";
 import {
   reviewYearFilterFacetTests,
   reviewYearSortFacetTests,
-} from "~/facets/reviewYear/reviewYearFacetTests";
+} from "~/components/filter-and-sort/facets/review-year/reviewYearFacetTests";
+import { reviewedStatusFacetTests } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusFacetTests";
 import {
-  titleFilterFacetTests,
-  titleSortFacetTests,
-} from "~/facets/title/titleFacetTests";
-import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
+  titleFacetFilterTests,
+  titleFacetSortTests,
+} from "~/components/filter-and-sort/facets/title/titleFacetTests";
+import { getPosterList } from "~/components/poster-list/PosterList.testHelper";
 
 import type {
   CastAndCrewMemberTitlesProps,
@@ -84,106 +71,6 @@ const baseProps: CastAndCrewMemberTitlesProps = {
   values: [],
 };
 
-// AIDEV-NOTE: Facet test suites are called at module level (outside the outer describe)
-// so they don't inherit the describe's beforeEach/afterEach timer setup.
-// Each facet test manages its own vi.useFakeTimers() / vi.useRealTimers() lifecycle.
-titleFilterFacetTests(
-  (items) =>
-    render(
-      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-    ),
-  getPosterList,
-);
-
-titleSortFacetTests(
-  (items) =>
-    render(
-      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-    ),
-  getPosterList,
-);
-
-genresFilterFacetTests(
-  (items) =>
-    render(
-      <CastAndCrewMemberTitles
-        {...baseProps}
-        distinctGenres={[...baseProps.distinctGenres, "Sci-Fi"]}
-        values={createTitles(items)}
-      />,
-    ),
-  getPosterList,
-);
-
-gradeFilterFacetTests(
-  (items) =>
-    render(
-      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-    ),
-  getPosterList,
-);
-
-gradeSortFacetTests(
-  (items) =>
-    render(
-      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-    ),
-  getPosterList,
-);
-
-releaseYearFilterFacetTests({
-  distinctReleaseYears: baseProps.distinctReleaseYears,
-  getList: getPosterList,
-  renderItems: (items) =>
-    render(
-      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-    ),
-});
-
-releaseYearSortFacetTests(
-  (items) =>
-    render(
-      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-    ),
-  getPosterList,
-);
-
-reviewYearFilterFacetTests({
-  distinctReviewYears: baseProps.distinctReviewYears,
-  getList: getPosterList,
-  renderItems: (items) =>
-    render(
-      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-    ),
-});
-
-reviewYearSortFacetTests(
-  (items) =>
-    render(
-      <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-    ),
-  getPosterList,
-);
-
-// AIDEV-NOTE: reviewedStatus "reviewed" = has reviewSlug; map grade presence → reviewSlug presence
-reviewedStatusFilterFacetTests(
-  (items) =>
-    render(
-      <CastAndCrewMemberTitles
-        {...baseProps}
-        values={createTitles(
-          items.map((item) => ({
-            ...item,
-            reviewSequence: item.grade === undefined ? undefined : "1",
-            reviewSlug: item.grade === undefined ? undefined : "test-slug",
-            reviewYear: item.grade === undefined ? undefined : "2020",
-          })),
-        )}
-      />,
-    ),
-  getPosterList,
-);
-
 describe("CastAndCrewMemberTitles", () => {
   beforeEach(() => {
     vi.useFakeTimers({ shouldAdvanceTime: true });
@@ -194,88 +81,107 @@ describe("CastAndCrewMemberTitles", () => {
     vi.useRealTimers();
   });
 
-  describe("filtering", () => {
-    it("filters by credited as", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          creditedAs: ["Director"],
-          releaseYear: "1935",
-          title: "The 39 Steps",
-        },
-        {
-          creditedAs: ["Writer"],
-          releaseYear: "1929",
-          title: "Blackmail",
-        },
-        {
-          creditedAs: ["Performer"],
-          releaseYear: "1955",
-          title: "To Catch a Thief",
-        },
-      ]);
+  creditedAsFilterFacetTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
+    getPosterList,
+  );
+  titleFacetFilterTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
+    getPosterList,
+  );
 
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
+  titleFacetSortTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
+    getPosterList,
+  );
 
-      await clickToggleFilters(user);
-      await clickCreditedAsFilterOption(user, "Director");
-      await clickViewResults(user);
+  genresFilterFacetTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles
+          {...baseProps}
+          distinctGenres={[...baseProps.distinctGenres, "Sci-Fi"]}
+          values={createTitles(items)}
+        />,
+      ),
+    getPosterList,
+  );
 
-      const reviewCardList = getPosterList();
-      expect(
-        within(reviewCardList).getByText("The 39 Steps"),
-      ).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("Blackmail"),
-      ).not.toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("To Catch a Thief"),
-      ).not.toBeInTheDocument();
-    });
+  gradeFilterFacetTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
+    getPosterList,
+  );
+
+  gradeSortFacetTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
+    getPosterList,
+  );
+
+  releaseYearFilterFacetTests({
+    distinctReleaseYears: baseProps.distinctReleaseYears,
+    getList: getPosterList,
+    renderItems: (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
   });
 
-  describe("when clearing filters", () => {
-    it("clears all filters with clear button", async ({ expect }) => {
-      const titles = createTitles([
-        {
-          creditedAs: ["Director"],
-          releaseYear: "1946",
-          title: "Notorious",
-        },
-        {
-          creditedAs: ["Writer"],
-          releaseYear: "1943",
-          title: "Shadow of a Doubt",
-        },
-      ]);
+  releaseYearSortFacetTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
+    getPosterList,
+  );
 
-      const user = getUserWithFakeTimers();
-      render(<CastAndCrewMemberTitles {...baseProps} values={titles} />);
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "Notorious");
-      await clickCreditedAsFilterOption(user, "Director");
-      await clickViewResults(user);
-
-      let reviewCardList = getPosterList();
-      expect(within(reviewCardList).getByText("Notorious")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).queryByText("Shadow of a Doubt"),
-      ).not.toBeInTheDocument();
-
-      await clickToggleFilters(user);
-      await clickClearFilters(user);
-
-      expect(getTitleFilter()).toHaveValue("");
-      expect(getCreditedAsFilter()).toEqual([]);
-
-      await clickViewResults(user);
-
-      reviewCardList = getPosterList();
-      expect(within(reviewCardList).getByText("Notorious")).toBeInTheDocument();
-      expect(
-        within(reviewCardList).getByText("Shadow of a Doubt"),
-      ).toBeInTheDocument();
-    });
+  reviewYearFilterFacetTests({
+    distinctReviewYears: baseProps.distinctReviewYears,
+    getList: getPosterList,
+    renderItems: (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
   });
+
+  reviewYearSortFacetTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
+    getPosterList,
+  );
+
+  reviewedStatusFacetTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles
+          {...baseProps}
+          values={createTitles(
+            items.map((item) => ({
+              ...item,
+              reviewSequence: item.reviewSlug === undefined ? undefined : "1",
+              reviewSlug:
+                item.reviewSlug === undefined ? undefined : "test-slug",
+              reviewYear: item.reviewSlug === undefined ? undefined : "2020",
+            })),
+          )}
+        />,
+      ),
+    getPosterList,
+  );
 });

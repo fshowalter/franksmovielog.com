@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import type { CollectionsFiltersValues } from "./Collections.reducer";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 
 describe("buildAppliedFilterChips", () => {
   describe("when no filters are active", () => {

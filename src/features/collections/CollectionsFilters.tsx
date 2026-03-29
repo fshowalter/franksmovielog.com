@@ -1,11 +1,9 @@
-import { TextField } from "~/components/filter-and-sort/fields/TextField";
+import { NameFacet } from "~/components/filter-and-sort/facets/name/NameFacet";
 
 import type {
   CollectionsAction,
   CollectionsFiltersValues,
 } from "./Collections.reducer";
-
-import { createNameFilterChangedAction } from "./Collections.reducer";
 
 /**
  * Filter controls for the collections page.
@@ -21,12 +19,5 @@ export function CollectionsFilters({
   dispatch: React.Dispatch<CollectionsAction>;
   filterValues: CollectionsFiltersValues;
 }): React.JSX.Element {
-  return (
-    <TextField
-      defaultValue={filterValues.name}
-      label="Name"
-      onInputChange={(value) => dispatch(createNameFilterChangedAction(value))}
-      placeholder="Enter all or part of a name"
-    />
-  );
+  return <NameFacet defaultValue={filterValues.name} dispatch={dispatch} />;
 }

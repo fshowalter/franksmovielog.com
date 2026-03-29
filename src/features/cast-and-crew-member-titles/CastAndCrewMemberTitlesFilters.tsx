@@ -1,33 +1,16 @@
-import type { CheckboxListFieldOption } from "~/components/filter-and-sort/fields/CheckboxListField";
-
-import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
-import { CheckboxListField } from "~/components/filter-and-sort/fields/CheckboxListField";
-import { GradeField } from "~/components/filter-and-sort/facets/grade/GradeFacet";
-import { TextField } from "~/components/filter-and-sort/fields/TextField";
-import { YearField } from "~/components/filter-and-sort/fields/YearField";
-import { capitalize } from "~/utils/capitalize";
+import { CreditedAsFacet } from "~/components/filter-and-sort/facets/credited-as/CreditedAsFacet";
+import { GenresFacet } from "~/components/filter-and-sort/facets/genres/GenresFacet";
+import { GradeFacet } from "~/components/filter-and-sort/facets/grade/GradeFacet";
+import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/release-year/ReleaseYearFacet";
+import { ReviewYearFacet } from "~/components/filter-and-sort/facets/review-year/ReviewYearFacet";
+import { ReviewedStatusFacet } from "~/components/filter-and-sort/facets/reviewed-status/ReviewedStatusFacet";
+import { TitleFacet } from "~/components/filter-and-sort/facets/title/TitleFacet";
 
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type {
   CastAndCrewMemberTitlesAction,
   CastAndCrewMemberTitlesFiltersValues,
 } from "./CastAndCrewMemberTitles.reducer";
-
-import {
-  createCreditedAsFilterChangedAction,
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
-  createRemoveAppliedFilterAction,
-  createReviewedStatusFilterChangedAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
-} from "./CastAndCrewMemberTitles.reducer";
-import {
-  calculateCreditedAsCounts,
-  calculateGenreCounts,
-  calculateReviewedStatusCounts,
-} from "./filterCastAndCrewMemberTitles";
 
 /**
  * Filter controls for cast and crew member titles page.
@@ -58,114 +41,37 @@ export function CastAndCrewMemberTitlesFilters({
   filterValues: CastAndCrewMemberTitlesFiltersValues;
   values: CastAndCrewMemberTitlesValue[];
 }): React.JSX.Element {
-  // Calculate genre counts based on current filters
-  const genreCounts = calculateGenreCounts(values, filterValues);
-
-  // Calculate reviewed status counts dynamically
-  const reviewedStatusCounts = calculateReviewedStatusCounts(
-    values,
-    filterValues,
-  );
-
-  // Calculate credited as counts dynamically
-  const creditedAsCounts = calculateCreditedAsCounts(values, filterValues);
-
-  const reviewedStatusOptions: CheckboxListFieldOption[] = [
-    {
-      count: reviewedStatusCounts.get("Reviewed") ?? 0,
-      label: "Reviewed",
-      value: "Reviewed",
-    },
-    {
-      count: reviewedStatusCounts.get("Not Reviewed") ?? 0,
-      label: "Not Reviewed",
-      value: "Not Reviewed",
-    },
-  ];
-
   return (
     <>
-      {distinctCreditKinds.length > 1 && (
-        <AnimatedDetailsDisclosure title="Credited As">
-          <CheckboxListField
-            defaultValues={filterValues.creditedAs ?? []}
-            label="Credited As"
-            onChange={(values) =>
-              dispatch(createCreditedAsFilterChangedAction(values))
-            }
-            onClear={() =>
-              dispatch(createRemoveAppliedFilterAction("creditedAs"))
-            }
-            options={distinctCreditKinds.map((credit) => ({
-              count: creditedAsCounts.get(credit) ?? 0,
-              label: capitalize(credit),
-              value: credit,
-            }))}
-          />
-        </AnimatedDetailsDisclosure>
-      )}
-      <TextField
-        defaultValue={filterValues.title}
-        label="Title"
-        onInputChange={(value) =>
-          dispatch(createTitleFilterChangedAction(value))
-        }
-        placeholder="Enter all or part of a title"
+      <CreditedAsFacet
+        defaultValues={filterValues.creditedAs}
+        dispatch={dispatch}
+        distinctCreditKinds={distinctCreditKinds}
+        values={values}
       />
-      <YearField
+      <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />
+      <ReleaseYearFacet
         defaultValues={filterValues.releaseYear}
-        label="Release Year"
-        onClear={() => dispatch(createRemoveAppliedFilterAction("releaseYear"))}
-        onYearChange={(values) =>
-          dispatch(createReleaseYearFilterChangedAction(values))
-        }
-        years={distinctReleaseYears}
+        dispatch={dispatch}
+        distinctYears={distinctReleaseYears}
       />
-      <AnimatedDetailsDisclosure title="Genres">
-        <CheckboxListField
-          defaultValues={filterValues.genres}
-          label="Genres"
-          onChange={(values) =>
-            dispatch(createGenresFilterChangedAction(values))
-          }
-          onClear={() => dispatch(createRemoveAppliedFilterAction("genres"))}
-          options={distinctGenres.map((value) => ({
-            count: genreCounts.get(value) ?? 0,
-            label: value,
-            value,
-          }))}
-        />
-      </AnimatedDetailsDisclosure>
-      <GradeField
-        defaultValues={filterValues.gradeValue}
-        label="Grade"
-        onClear={() => dispatch(createRemoveAppliedFilterAction("gradeValue"))}
-        onGradeChange={(values) =>
-          dispatch(createGradeFilterChangedAction(values))
-        }
+      <GenresFacet
+        defaultValues={filterValues.genres}
+        dispatch={dispatch}
+        distinctGenres={distinctGenres}
+        values={values}
       />
-      <YearField
+      <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
+      <ReviewYearFacet
         defaultValues={filterValues.reviewYear}
-        label="Review Year"
-        onClear={() => dispatch(createRemoveAppliedFilterAction("reviewYear"))}
-        onYearChange={(values) =>
-          dispatch(createReviewYearFilterChangedAction(values))
-        }
-        years={distinctReviewYears}
+        dispatch={dispatch}
+        distinctYears={distinctReviewYears}
       />
-      <AnimatedDetailsDisclosure title="Reviewed Status">
-        <CheckboxListField
-          defaultValues={filterValues.reviewedStatus ?? []}
-          label="Reviewed Status"
-          onChange={(values) =>
-            dispatch(createReviewedStatusFilterChangedAction(values))
-          }
-          onClear={() =>
-            dispatch(createRemoveAppliedFilterAction("reviewedStatus"))
-          }
-          options={reviewedStatusOptions}
-        />
-      </AnimatedDetailsDisclosure>
+      <ReviewedStatusFacet
+        defaultValues={filterValues.reviewedStatus}
+        dispatch={dispatch}
+        values={values}
+      />
     </>
   );
 }

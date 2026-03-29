@@ -10,7 +10,7 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { WatchlistSort } from "./sortWatchlistValues";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 import { filterWatchlistValues } from "./filterWatchlistValues";
 import { sortWatchlistValues } from "./sortWatchlistValues";
 import {
@@ -102,9 +102,7 @@ export function Watchlist({
   );
 
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
-  const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
-    distinctReleaseYears,
-  });
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   return (
     <FilterAndSortContainer

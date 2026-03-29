@@ -2,7 +2,8 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { toggleCheckboxListOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
+import { getAnimatedDetailsDisclosureElement } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure.testHelper";
+import { clickCheckboxListFieldOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
 import { fillTextField } from "~/components/filter-and-sort/fields/TextField.testHelper";
 import { fillYearField } from "~/components/filter-and-sort/fields/YearField.testHelper";
 
@@ -12,33 +13,8 @@ import { fillYearField } from "~/components/filter-and-sort/fields/YearField.tes
  * @param value - Genre name to select
  */
 export async function clickGenresFilterOption(user: UserEvent, value: string) {
-  // Find all details elements (FilterSections)
-  const allDetailsElements = screen.queryAllByRole("group");
-  const summaries: HTMLElement[] = [];
-
-  // Get the summary element from each details
-  for (const details of allDetailsElements) {
-    const summary = details.querySelector("summary");
-    if (summary) {
-      summaries.push(summary);
-    }
-  }
-
-  const genresFilterSummary = summaries.find((summary) =>
-    summary.textContent?.includes("Genres"),
-  );
-
-  if (genresFilterSummary) {
-    // Find the details element that contains this summary
-    const detailsElement = genresFilterSummary.closest("details");
-
-    // Expand the section if it's collapsed
-    if (detailsElement && !detailsElement.open) {
-      await user.click(genresFilterSummary);
-    }
-  }
-
-  await toggleCheckboxListOption(user, value);
+  const filter = getAnimatedDetailsDisclosureElement("Genres");
+  await clickCheckboxListFieldOption(filter, user, value);
 }
 
 /**
@@ -62,6 +38,14 @@ export async function fillReleaseYearFilter(
  */
 export async function fillTitleFilter(user: UserEvent, value: string) {
   await fillTextField(user, "Title", value);
+}
+
+export async function fillViewingYearFilter(
+  user: UserEvent,
+  value1: string,
+  value2: string,
+) {
+  await fillYearField(user, "Viewing Year", value1, value2);
 }
 
 /**

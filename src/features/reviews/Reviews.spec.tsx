@@ -6,6 +6,23 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
+import { genresFilterFacetTests } from "~/components/filter-and-sort/facets/genres/genresFacetTests";
+import {
+  gradeFilterFacetTests,
+  gradeSortFacetTests,
+} from "~/components/filter-and-sort/facets/grade/gradeFacetTests";
+import {
+  releaseYearFilterFacetTests,
+  releaseYearSortFacetTests,
+} from "~/components/filter-and-sort/facets/release-year/releaseYearFacetTests";
+import {
+  reviewYearFilterFacetTests,
+  reviewYearSortFacetTests,
+} from "~/components/filter-and-sort/facets/review-year/reviewYearFacetTests";
+import {
+  titleFacetFilterTests,
+  titleFacetSortTests,
+} from "~/components/filter-and-sort/facets/title/titleFacetTests";
 import {
   clickGenresFilterOption,
   fillTitleFilter,
@@ -15,133 +32,12 @@ import {
   clickShowMore,
   getPosterList,
 } from "~/components/poster-list/PosterList.testHelper";
-import { genresFilterFacetTests } from "~/facets/genres/genresFacetTests";
-import {
-  gradeFilterFacetTests,
-  gradeSortFacetTests,
-} from "~/facets/grade/gradeFacetTests";
-import {
-  releaseYearFilterFacetTests,
-  releaseYearSortFacetTests,
-} from "~/facets/releaseYear/releaseYearFacetTests";
-import {
-  reviewYearFilterFacetTests,
-  reviewYearSortFacetTests,
-} from "~/facets/reviewYear/reviewYearFacetTests";
-import {
-  titleFilterFacetTests,
-  titleSortFacetTests,
-} from "~/facets/title/titleFacetTests";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import { Reviews } from "./Reviews";
 import { baseProps, createReviewValue, resetTestIdCounter } from "./testHelper";
 
-// AIDEV-NOTE: Facet test suites are called at module level (outside the outer describe)
-// so they don't inherit the describe's beforeEach/afterEach timer setup.
-// Each facet test manages its own vi.useFakeTimers() / vi.useRealTimers() lifecycle.
-titleFilterFacetTests(
-  (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-  getPosterList,
-);
-
-titleSortFacetTests(
-  (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-  getPosterList,
-);
-
-genresFilterFacetTests(
-  (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-  getPosterList,
-);
-
-gradeFilterFacetTests(
-  (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-  getPosterList,
-);
-
-gradeSortFacetTests(
-  (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-  getPosterList,
-);
-
-releaseYearFilterFacetTests({
-  distinctReleaseYears: baseProps.distinctReleaseYears,
-  getList: getPosterList,
-  renderItems: (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-});
-
-releaseYearSortFacetTests(
-  (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-  getPosterList,
-);
-
-reviewYearFilterFacetTests({
-  distinctReviewYears: baseProps.distinctReviewYears,
-  getList: getPosterList,
-  renderItems: (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-});
-
-reviewYearSortFacetTests(
-  (items) =>
-    render(
-      <Reviews
-        {...baseProps}
-        values={items.map((item) => createReviewValue(item))}
-      />,
-    ),
-  getPosterList,
-);
-
-describe("AllReviews", () => {
+describe("Reviews", () => {
   beforeEach(() => {
     resetTestIdCounter();
     vi.useFakeTimers({ shouldAdvanceTime: true });
@@ -151,6 +47,107 @@ describe("AllReviews", () => {
     vi.clearAllTimers();
     vi.useRealTimers();
   });
+
+  titleFacetFilterTests(
+    (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+    getPosterList,
+  );
+
+  titleFacetSortTests(
+    (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+    getPosterList,
+  );
+
+  genresFilterFacetTests(
+    (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+    getPosterList,
+  );
+
+  gradeFilterFacetTests(
+    (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+    getPosterList,
+  );
+
+  gradeSortFacetTests(
+    (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+    getPosterList,
+  );
+
+  releaseYearFilterFacetTests({
+    distinctReleaseYears: baseProps.distinctReleaseYears,
+    getList: getPosterList,
+    renderItems: (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+  });
+
+  releaseYearSortFacetTests(
+    (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+    getPosterList,
+  );
+
+  reviewYearFilterFacetTests({
+    distinctReviewYears: baseProps.distinctReviewYears,
+    getList: getPosterList,
+    renderItems: (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+  });
+
+  reviewYearSortFacetTests(
+    (items) =>
+      render(
+        <Reviews
+          {...baseProps}
+          values={items.map((item) => createReviewValue(item))}
+        />,
+      ),
+    getPosterList,
+  );
 
   describe("when clearing filters", () => {
     it("clears all filters with clear button", async ({ expect }) => {

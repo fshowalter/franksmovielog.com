@@ -1,49 +1,41 @@
-import type { FiltersAction } from "~/reducers/filtersReducer";
-import type { SortAction } from "~/reducers/sortReducer";
+import type { FilterAndSortContainerAction } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
 
-import { composeReducers } from "~/facets/composeReducers";
-import { mediumFacetReducer } from "~/facets/medium/mediumReducer";
-import { releaseYearFacetReducer } from "~/facets/releaseYear/releaseYearReducer";
-import { reviewedStatusFacetReducer } from "~/facets/reviewedStatus/reviewedStatusReducer";
-import { titleFacetReducer } from "~/facets/title/titleReducer";
-import { venueFacetReducer } from "~/facets/venue/venueReducer";
-import { viewingYearFacetReducer } from "~/facets/viewingYear/viewingYearReducer";
 import {
-  createInitialFiltersState,
-  filtersLifecycleReducer,
-} from "~/reducers/filtersReducer";
-import {
-  createInitialSortState,
-  createSortActionCreator,
-  sortReducer,
-} from "~/reducers/sortReducer";
+  createInitialFilterAndSortContainerState,
+  filterAndSortContainerReducer,
+} from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import { composeReducers } from "~/components/filter-and-sort/facets/composeReducers";
+import { mediumFacetReducer } from "~/components/filter-and-sort/facets/medium/mediumReducer";
+import { releaseYearFacetReducer } from "~/components/filter-and-sort/facets/release-year/releaseYearReducer";
+import { reviewedStatusFacetReducer } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusReducer";
+import { titleFacetReducer } from "~/components/filter-and-sort/facets/title/titleReducer";
+import { venueFacetReducer } from "~/components/filter-and-sort/facets/venue/venueReducer";
+import { viewingYearFacetReducer } from "~/components/filter-and-sort/facets/viewing-year/viewingYearReducer";
 
-export { createMediumFilterChangedAction } from "~/facets/medium/mediumReducer";
-export { createReleaseYearFilterChangedAction } from "~/facets/releaseYear/releaseYearReducer";
-export { createReviewedStatusFilterChangedAction } from "~/facets/reviewedStatus/reviewedStatusReducer";
-export { createTitleFilterChangedAction } from "~/facets/title/titleReducer";
-export { createVenueFilterChangedAction } from "~/facets/venue/venueReducer";
-export { createViewingYearFilterChangedAction } from "~/facets/viewingYear/viewingYearReducer";
-export { createRemoveAppliedFilterAction } from "~/reducers/filtersReducer";
+export { createMediumFilterChangedAction } from "~/components/filter-and-sort/facets/medium/mediumReducer";
+export { createReleaseYearFilterChangedAction } from "~/components/filter-and-sort/facets/release-year/releaseYearReducer";
+export { createReviewedStatusFilterChangedAction } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusReducer";
+export { createTitleFilterChangedAction } from "~/components/filter-and-sort/facets/title/titleReducer";
+export { createVenueFilterChangedAction } from "~/components/filter-and-sort/facets/venue/venueReducer";
+export { createViewingYearFilterChangedAction } from "~/components/filter-and-sort/facets/viewing-year/viewingYearReducer";
 
-import type { MediumFilterChangedAction } from "~/facets/medium/mediumReducer";
-import type { ReleaseYearFilterChangedAction } from "~/facets/releaseYear/releaseYearReducer";
-import type { ReviewedStatusFilterChangedAction } from "~/facets/reviewedStatus/reviewedStatusReducer";
-import type { TitleFilterChangedAction } from "~/facets/title/titleReducer";
-import type { VenueFilterChangedAction } from "~/facets/venue/venueReducer";
-import type { ViewingYearFilterChangedAction } from "~/facets/viewingYear/viewingYearReducer";
+import type { MediumFilterChangedAction } from "~/components/filter-and-sort/facets/medium/mediumReducer";
+import type { ReleaseYearFilterChangedAction } from "~/components/filter-and-sort/facets/release-year/releaseYearReducer";
+import type { ReviewedStatusFilterChangedAction } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusReducer";
+import type { TitleFilterChangedAction } from "~/components/filter-and-sort/facets/title/titleReducer";
+import type { VenueFilterChangedAction } from "~/components/filter-and-sort/facets/venue/venueReducer";
+import type { ViewingYearFilterChangedAction } from "~/components/filter-and-sort/facets/viewing-year/viewingYearReducer";
 
 import type { ViewingsSort } from "./sortViewings";
 import type { ViewingsValue } from "./Viewings";
 
 export type ViewingsAction =
-  | FiltersAction
+  | FilterAndSortContainerAction<ViewingsSort>
   | MediumFilterChangedAction
   | NextMonthClickedAction
   | PreviousMonthClickedAction
   | ReleaseYearFilterChangedAction
   | ReviewedStatusFilterChangedAction
-  | SortAction<ViewingsSort>
   | TitleFilterChangedAction
   | VenueFilterChangedAction
   | ViewingYearFilterChangedAction;
@@ -89,17 +81,17 @@ export function createPreviousMonthClickedAction(
 }
 
 const viewingsComposedReducer = composeReducers<ViewingsState>(
-  filtersLifecycleReducer,
+  filterAndSortContainerReducer,
   titleFacetReducer,
   releaseYearFacetReducer,
   reviewedStatusFacetReducer,
   mediumFacetReducer,
   venueFacetReducer,
   viewingYearFacetReducer,
-  sortReducer,
   // AIDEV-NOTE: Clear selectedMonthDate when sort changes or filters are applied.
   (state, action) =>
-    action.type === "sort/sort" || action.type === "filters/applied"
+    action.type === "filterAndSortContainer/sortChanged" ||
+    action.type === "filterAndSortContainer/filtersApplied"
       ? { ...state, selectedMonthDate: undefined }
       : state,
   // Month navigation actions: set selectedMonthDate
@@ -127,8 +119,7 @@ export function createInitialState({
   values: ViewingsValue[];
 }): ViewingsState {
   return {
-    ...createInitialFiltersState({ values }),
-    ...createInitialSortState({ initialSort }),
+    ...createInitialFilterAndSortContainerState({ initialSort, values }),
   };
 }
 
@@ -138,5 +129,3 @@ export function reducer(
 ): ViewingsState {
   return viewingsComposedReducer(state, action);
 }
-
-export const createSortAction = createSortActionCreator<ViewingsSort>();

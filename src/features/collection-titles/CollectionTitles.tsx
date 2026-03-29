@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
+import type { GradeText, GradeValue } from "~/utils/grades";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
@@ -9,12 +10,8 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionTitlesSort } from "./sortCollectionTitles";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import {
-  createInitialState,
-  createSortAction,
-  reducer,
-} from "./CollectionTitles.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
+import { createInitialState, reducer } from "./CollectionTitles.reducer";
 import { CollectionTitlesFilters } from "./CollectionTitlesFilters";
 import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
 import { filterCollectionTitles } from "./filterCollectionTitles";
@@ -36,8 +33,8 @@ export type CollectionTitlesProps = {
  */
 export type CollectionTitlesValue = {
   genres: string[];
-  grade: string | undefined;
-  gradeValue: number | undefined;
+  grade: GradeText | undefined;
+  gradeValue: GradeValue | undefined;
   imdbId: string;
   posterImageProps: PosterImageProps;
   releaseSequence: number;
@@ -90,15 +87,11 @@ export function CollectionTitles({
   );
 
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
-  const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
-    distinctReleaseYears,
-    distinctReviewYears,
-  });
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
-      createSortAction={createSortAction}
       dispatch={dispatch}
       filters={
         <CollectionTitlesFilters
@@ -111,7 +104,10 @@ export function CollectionTitles({
         />
       }
       pendingFilteredCount={pendingFilteredCount}
-      sortOptions={REVIEWED_TITLE_SORT_OPTIONS}
+      sortProps={{
+        currentSortValue: state.sort,
+        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
+      }}
       state={state}
       totalCount={filteredValues.length}
     >

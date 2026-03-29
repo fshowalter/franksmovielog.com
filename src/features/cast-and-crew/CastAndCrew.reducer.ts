@@ -1,22 +1,18 @@
-import type { FiltersAction } from "~/reducers/filtersReducer";
-import type { SortAction } from "~/reducers/sortReducer";
+import type { CreditedAsFilterChangedAction } from "~/components/filter-and-sort/facets/credited-as/creditedAsReducer";
 
-import { composeReducers } from "~/facets/composeReducers";
-import { creditedAsFacetReducer } from "~/facets/creditedAs/creditedAsReducer";
-import { nameFacetReducer } from "~/facets/name/nameReducer";
+import { composeReducers } from "~/components/filter-and-sort/facets/composeReducers";
+import { creditedAsFacetReducer } from "~/components/filter-and-sort/facets/credited-as/creditedAsReducer";
+import { nameFacetReducer } from "~/components/filter-and-sort/facets/name/nameReducer";
+
+export { createNameFilterChangedAction } from "~/components/filter-and-sort/facets/name/nameReducer";
+
+import type { FilterAndSortContainerAction } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import type { NameFilterChangedAction } from "~/components/filter-and-sort/facets/name/nameReducer";
+
 import {
-  createInitialFiltersState,
-  filtersLifecycleReducer,
-} from "~/reducers/filtersReducer";
-import {
-  createInitialSortState,
-  createSortActionCreator,
-  sortReducer,
-} from "~/reducers/sortReducer";
-
-export { createNameFilterChangedAction } from "~/facets/name/nameReducer";
-
-import type { NameFilterChangedAction } from "~/facets/name/nameReducer";
+  createInitialFilterAndSortContainerState,
+  filterAndSortContainerReducer,
+} from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
@@ -26,9 +22,8 @@ import type { CastAndCrewSort } from "./sortCastAndCrew";
  */
 export type CastAndCrewAction =
   | CreditedAsFilterChangedAction
-  | FiltersAction
-  | NameFilterChangedAction
-  | SortAction<CastAndCrewSort>;
+  | FilterAndSortContainerAction<CastAndCrewSort>
+  | NameFilterChangedAction;
 
 /**
  * Filter values for cast and crew.
@@ -48,44 +43,10 @@ type CastAndCrewState = {
   values: CastAndCrewValue[];
 };
 
-type CreditedAsFilterChangedAction = {
-  type: "creditedAs/changed";
-  values: readonly string[];
-};
-
-/**
- * Creates an action for changing the credited-as filter.
- * @param values - The credited roles to filter by
- * @returns Credited-as filter changed action
- */
-export function createCreditedAsFilterChangedAction(
-  values: readonly string[],
-): CreditedAsFilterChangedAction {
-  return { type: "creditedAs/changed", values };
-}
-
 const castAndCrewComposedReducer = composeReducers<CastAndCrewState>(
-  filtersLifecycleReducer,
+  filterAndSortContainerReducer,
   nameFacetReducer,
   creditedAsFacetReducer,
-  (state, action): CastAndCrewState => {
-    if (action.type !== "creditedAs/changed") return state;
-    // AIDEV-NOTE: Update both activeFilterValues and pendingFilterValues to ensure
-    // chips disappear immediately when clicked (not just when "Apply" is clicked).
-    const { values } = action as CreditedAsFilterChangedAction;
-    return {
-      ...state,
-      activeFilterValues: {
-        ...state.activeFilterValues,
-        creditedAs: values.length === 0 ? undefined : values,
-      },
-      pendingFilterValues: {
-        ...state.pendingFilterValues,
-        creditedAs: values.length === 0 ? undefined : values,
-      },
-    };
-  },
-  sortReducer,
 );
 
 /**
@@ -103,8 +64,7 @@ export function createInitialState({
   values: CastAndCrewValue[];
 }): CastAndCrewState {
   return {
-    ...createInitialFiltersState({ values }),
-    ...createInitialSortState({ initialSort }),
+    ...createInitialFilterAndSortContainerState({ initialSort, values }),
   };
 }
 
@@ -120,8 +80,3 @@ export function reducer(
 ): CastAndCrewState {
   return castAndCrewComposedReducer(state, action);
 }
-
-/**
- * Action creator for cast and crew sort actions.
- */
-export const createSortAction = createSortActionCreator<CastAndCrewSort>();

@@ -11,12 +11,8 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 import { AlphabetSideNav } from "./AlphabetSideNav";
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import {
-  createInitialState,
-  createSortAction,
-  reducer,
-} from "./CastAndCrew.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
+import { createInitialState, reducer } from "./CastAndCrew.reducer";
 import { CastAndCrewFilters } from "./CastAndCrewFilters";
 import { CastAndCrewListItem } from "./CastAndCrewListItem";
 import { filterCastAndCrew } from "./filterCastAndCrew";
@@ -83,7 +79,6 @@ export function CastAndCrew({
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
-      createSortAction={createSortAction}
       dispatch={dispatch}
       filters={
         <CastAndCrewFilters
@@ -96,7 +91,10 @@ export function CastAndCrew({
       sideNav={
         <AlphabetSideNav groupedValues={groupedValues} sortValue={state.sort} />
       }
-      sortOptions={COLLECTION_SORT_OPTIONS}
+      sortProps={{
+        currentSortValue: state.sort,
+        sortOptions: COLLECTION_SORT_OPTIONS,
+      }}
       state={state}
       totalCount={totalCount}
     >

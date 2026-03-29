@@ -1,6 +1,8 @@
 import { screen, within } from "@testing-library/react";
 import { describe, it, vi } from "vitest";
 
+import type { GradeText, GradeValue } from "~/utils/grades";
+
 import {
   clickSortOption,
   clickToggleFilters,
@@ -9,7 +11,11 @@ import {
 import { fillGradeFilter } from "~/components/filter-and-sort/ReviewedTitleFilters.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
-type GradeFacetItem = { grade: string; gradeValue: number; title: string };
+type GradeFacetItem = {
+  grade: GradeText | undefined;
+  gradeValue: GradeValue | undefined;
+  title: string;
+};
 
 /**
  * Shared grade filter facet tests.

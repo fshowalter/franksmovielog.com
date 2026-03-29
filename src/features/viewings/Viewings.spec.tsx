@@ -1,6 +1,8 @@
 import { render, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
+import type { PosterImageProps } from "~/assets/posters";
+
 import {
   clickClearFilters,
   clickCloseFilters,
@@ -8,30 +10,37 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
-import { clickReviewedStatusFilterOption } from "~/components/filter-and-sort/ReviewedStatusFilter.testHelper";
+import { mediumFacetTests } from "~/components/filter-and-sort/facets/medium/mediumFacetTests";
+import { releaseYearFilterFacetTests } from "~/components/filter-and-sort/facets/release-year/releaseYearFacetTests";
+import { reviewedStatusFacetTests } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusFacetTests";
+import { titleFacetFilterTests } from "~/components/filter-and-sort/facets/title/titleFacetTests";
+import { venueFacetTests } from "~/components/filter-and-sort/facets/venue/venueFacetTests";
+import { viewingYearFilterFacetTests } from "~/components/filter-and-sort/facets/viewing-year/viewingYearFacetTests";
 import {
-  fillReleaseYearFilter,
   fillTitleFilter,
   getTitleFilter,
 } from "~/components/filter-and-sort/TitleFilters.testHelper";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { ViewingsProps, ViewingsValue } from "./Viewings";
+import type { ViewingsFiltersValues } from "./Viewings.reducer";
 
+import {
+  calculateMediumCounts,
+  calculateReviewedStatusCounts,
+  calculateVenueCounts,
+} from "./filterViewings";
 import { Viewings } from "./Viewings";
 import {
   clickMediumFilterOption,
   clickNextMonthButton,
   clickPreviousMonthButton,
-  clickVenueFilterOption,
-  fillViewingYearFilter,
   getCalendar,
   getMediumFilter,
   queryNextMonthButton,
   queryPreviousMonthButton,
 } from "./Viewings.testHelper";
 
-// Test helpers
 let testIdCounter = 0;
 
 function createViewingValue(
@@ -64,7 +73,7 @@ function resetTestIdCounter(): void {
 const createProps = (
   overrides: Partial<ViewingsProps> = {},
 ): ViewingsProps => ({
-  distinctMedia: ["All", "Blu-ray", "DVD", "4K UHD", "35mm", "DCP"],
+  distinctMedia: ["All", "Blu-ray", "DVD", "4K UHD", "35mm", "DCP", "Digital"],
   distinctReleaseYears: [
     "1950",
     "1960",
@@ -78,8 +87,9 @@ const createProps = (
   distinctVenues: [
     "All",
     "Home",
-    "Alamo Drafthouse Cinema - One Loudoun",
     "Theater",
+    "Drive-In",
+    "Alamo Drafthouse Cinema - One Loudoun",
   ],
   distinctViewingYears: [
     "2012",
@@ -108,229 +118,82 @@ describe("Viewings", () => {
     vi.useRealTimers();
   });
 
-  describe("filtering", () => {
-    it("filters by title", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          date: "2024-01-15",
-          title: "The Curse of Frankenstein",
-        }),
-        createViewingValue({
-          date: "2024-01-16",
-          title: "Curse of the Demon",
-        }),
-        createViewingValue({
-          date: "2024-01-17",
-          title: "The Thing",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "Curse");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(
-        within(calendar).getByText("The Curse of Frankenstein"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).getByText("Curse of the Demon"),
-      ).toBeInTheDocument();
-      expect(within(calendar).queryByText("The Thing")).not.toBeInTheDocument();
-    });
-
-    it("filters by medium", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({ medium: "Blu-ray", title: "Movie on Blu-ray" }),
-        createViewingValue({ medium: "DVD", title: "Movie on DVD" }),
-        createViewingValue({ medium: "35mm", title: "Movie in Theater" }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await clickMediumFilterOption(user, "Blu-ray");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(
-        within(calendar).getByText("Movie on Blu-ray"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Movie on DVD"),
-      ).not.toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Movie in Theater"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by reviewed status", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          reviewSlug: "reviewed-movie",
-          title: "Reviewed Movie",
-        }),
-        createViewingValue({
-          reviewSlug: undefined,
-          title: "Unreviewed Movie",
-        }),
-        createViewingValue({
-          reviewSlug: "another-reviewed",
-          title: "Another Reviewed",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await clickReviewedStatusFilterOption(user, "Reviewed");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("Reviewed Movie")).toBeInTheDocument();
-      expect(
-        within(calendar).getByText("Another Reviewed"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Unreviewed Movie"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by unreviewed status", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          reviewSlug: "reviewed-movie",
-          title: "Reviewed Movie",
-        }),
-        createViewingValue({
-          reviewSlug: undefined,
-          title: "Unreviewed Movie",
-        }),
-        createViewingValue({
-          reviewSlug: undefined,
-          title: "Another Unreviewed",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await clickReviewedStatusFilterOption(user, "Not Reviewed");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(
-        within(calendar).getByText("Unreviewed Movie"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).getByText("Another Unreviewed"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Reviewed Movie"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by venue", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          title: "Movie at Alamo",
-          venue: "Alamo Drafthouse Cinema - One Loudoun",
-        }),
-        createViewingValue({ title: "Movie at Home", venue: "Home" }),
-        createViewingValue({
-          title: "Another Alamo Movie",
-          venue: "Alamo Drafthouse Cinema - One Loudoun",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await clickVenueFilterOption(
-        user,
-        "Alamo Drafthouse Cinema - One Loudoun",
-      );
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("Movie at Alamo")).toBeInTheDocument();
-      expect(
-        within(calendar).getByText("Another Alamo Movie"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Movie at Home"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by release year range", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({ releaseYear: "1950", title: "Old Movie" }),
-        createViewingValue({ releaseYear: "1970", title: "Mid Movie" }),
-        createViewingValue({ releaseYear: "2020", title: "New Movie" }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await fillReleaseYearFilter(user, "1960", "1980");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("Mid Movie")).toBeInTheDocument();
-      expect(within(calendar).queryByText("Old Movie")).not.toBeInTheDocument();
-      expect(within(calendar).queryByText("New Movie")).not.toBeInTheDocument();
-    });
-
-    it("filters by viewing year range", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          date: "2012-06-15",
-          title: "Movie 2012",
-          viewingYear: "2012",
-        }),
-        createViewingValue({
-          date: "2013-06-15",
-          title: "Movie 2013",
-          viewingYear: "2013",
-        }),
-        createViewingValue({
-          date: "2014-06-15",
-          title: "Movie 2014",
-          viewingYear: "2014",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
+  titleFacetFilterTests(
+    (items) =>
       render(
         <Viewings
           {...createProps({
-            initialSort: "viewing-date-asc",
-            values: viewings,
+            values: items.map((item) => createViewingValue(item)),
           })}
         />,
-      );
+      ),
+    getCalendar,
+  );
 
-      await clickToggleFilters(user);
-      await fillViewingYearFilter(user, "2012", "2013");
-      await clickViewResults(user);
+  mediumFacetTests(
+    (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map((item) => createViewingValue(item)),
+          })}
+        />,
+      ),
+    getCalendar,
+  );
 
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("Movie 2012")).toBeInTheDocument();
+  venueFacetTests(
+    (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map((item) => createViewingValue(item)),
+          })}
+        />,
+      ),
+    getCalendar,
+  );
 
-      await clickNextMonthButton(user);
-      expect(within(calendar).getByText("Movie 2013")).toBeInTheDocument();
+  reviewedStatusFacetTests(
+    (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map((item) => createViewingValue(item)),
+          })}
+        />,
+      ),
+    getCalendar,
+  );
 
-      const nextButton = queryNextMonthButton();
-      expect(nextButton).not.toBeInTheDocument();
-    });
+  releaseYearFilterFacetTests({
+    distinctReleaseYears: createProps().distinctReleaseYears,
+    getList: getCalendar,
+    renderItems: (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map(({ releaseYear, title }) =>
+              createViewingValue({ releaseYear, title }),
+            ),
+          })}
+        />,
+      ),
+  });
+
+  viewingYearFilterFacetTests({
+    distinctViewingYears: createProps().distinctViewingYears,
+    getList: getCalendar,
+    renderItems: (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map(({ title, viewingYear }) =>
+              createViewingValue({ title, viewingYear }),
+            ),
+          })}
+        />,
+      ),
   });
 
   describe("sorting", () => {
@@ -356,19 +219,10 @@ describe("Viewings", () => {
       render(<Viewings {...createProps({ values: viewings })} />);
 
       const calendar = getCalendar();
-
-      const movies = ["New Viewing", "Mid Viewing", "Old Viewing"];
-      const foundMovies = movies.filter((movie) =>
-        calendar.textContent?.includes(movie),
-      );
-
-      expect(foundMovies).toHaveLength(3);
-
-      // Verify they're in the right order by checking their position in the calendar
       const allText = calendar.textContent || "";
-      const newIndex = allText.indexOf("3New Viewing"); // Day 3
-      const midIndex = allText.indexOf("2Mid Viewing"); // Day 2
-      const oldIndex = allText.indexOf("1Old Viewing"); // Day 1
+      const newIndex = allText.indexOf("3New Viewing");
+      const midIndex = allText.indexOf("2Mid Viewing");
+      const oldIndex = allText.indexOf("1Old Viewing");
 
       expect(oldIndex).toBeLessThan(midIndex);
       expect(midIndex).toBeLessThan(newIndex);
@@ -424,13 +278,10 @@ describe("Viewings", () => {
       const user = getUserWithFakeTimers();
       render(<Viewings {...createProps({ values: viewings })} />);
 
-      // Default sort is newest first (by viewingSequence), initially shows February 2024
       let calendar = getCalendar();
 
-      // Verify we're on February
       const februaryText = calendar.textContent || "";
       if (!februaryText.includes("February Movie")) {
-        // We might be on January, click next to get to February
         const nextBtn = queryNextMonthButton();
         if (nextBtn) {
           await user.click(nextBtn);
@@ -442,7 +293,6 @@ describe("Viewings", () => {
 
       await clickPreviousMonthButton(user);
 
-      // Should now show January 2024
       calendar = getCalendar();
       expect(within(calendar).getByText("January Movie")).toBeInTheDocument();
       expect(
@@ -472,7 +322,6 @@ describe("Viewings", () => {
         />,
       );
 
-      // Initially should show January 2024 (oldest first)
       const calendar = getCalendar();
       expect(within(calendar).getByText("January Movie")).toBeInTheDocument();
       expect(
@@ -481,7 +330,6 @@ describe("Viewings", () => {
 
       await clickNextMonthButton(user);
 
-      // Should now show February 2024
       expect(within(calendar).getByText("February Movie")).toBeInTheDocument();
       expect(
         within(calendar).queryByText("January Movie"),
@@ -508,18 +356,14 @@ describe("Viewings", () => {
       const user = getUserWithFakeTimers();
       render(<Viewings {...createProps({ values: viewings })} />);
 
-      // Default sort is newest first, showing February 2024
       let prevMonthButton = queryPreviousMonthButton();
       let nextMonthButton = queryNextMonthButton();
 
-      // At newest month, should only have previous month button
       expect(prevMonthButton).toBeInTheDocument();
       expect(nextMonthButton).not.toBeInTheDocument();
 
-      // Sort by oldest first
       await clickSortOption(user, "Viewing Date (Oldest First)");
 
-      // At oldest month, should only have next month button
       prevMonthButton = queryPreviousMonthButton();
       nextMonthButton = queryNextMonthButton();
 
@@ -586,7 +430,6 @@ describe("Viewings", () => {
       await fillTitleFilter(user, "Different Movie");
       await clickCloseFilters(user);
 
-      // Should still show originally filtered results
       expect(
         within(calendar).getByText("The Curse of Frankenstein"),
       ).toBeInTheDocument();
@@ -594,6 +437,364 @@ describe("Viewings", () => {
 
       await clickToggleFilters(user);
       expect(getTitleFilter()).toHaveValue("Curse");
+    });
+  });
+
+  describe("filterViewings", () => {
+    const mockPosterImageProps: PosterImageProps = {
+      src: "/test.png",
+      srcSet: "/test.png 1x",
+    };
+
+    // AIDEV-NOTE: calculateMediumCounts uses a different data layout than venue/reviewedStatus:
+    // here Movie 3 is at Theater so the Blu-ray counts differ when filtering by venue.
+    describe("calculateMediumCounts", () => {
+      let mockValues: ViewingsValue[];
+
+      beforeEach(() => {
+        mockValues = [
+          {
+            date: "2023-01-15",
+            medium: "Blu-ray",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2020",
+            reviewSlug: "movie-1",
+            sequence: "1",
+            sortTitle: "movie 1",
+            title: "Movie 1",
+            venue: "Home",
+            viewingYear: "2023",
+          },
+          {
+            date: "2023-02-20",
+            medium: "4K UHD",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2021",
+            reviewSlug: "movie-2",
+            sequence: "2",
+            sortTitle: "movie 2",
+            title: "Movie 2",
+            venue: "Home",
+            viewingYear: "2023",
+          },
+          {
+            date: "2024-03-10",
+            medium: "Blu-ray",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2022",
+            reviewSlug: undefined,
+            sequence: "3",
+            sortTitle: "movie 3",
+            title: "Movie 3",
+            venue: "Theater",
+            viewingYear: "2024",
+          },
+          {
+            date: "2024-04-05",
+            medium: "Streaming",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2023",
+            reviewSlug: "movie-4",
+            sequence: "4",
+            sortTitle: "movie 4",
+            title: "Movie 4",
+            venue: "Home",
+            viewingYear: "2024",
+          },
+        ];
+      });
+
+      it("returns counts for all media types when no filters applied", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {};
+        const counts = calculateMediumCounts(mockValues, filterValues);
+
+        expect(counts.get("Blu-ray")).toBe(2);
+        expect(counts.get("4K UHD")).toBe(1);
+        expect(counts.get("Streaming")).toBe(1);
+      });
+
+      it("respects venue filter when calculating medium counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          venue: ["Home"],
+        };
+        const counts = calculateMediumCounts(mockValues, filterValues);
+
+        expect(counts.get("Blu-ray")).toBe(1);
+        expect(counts.get("4K UHD")).toBe(1);
+        expect(counts.get("Streaming")).toBe(1);
+        expect(counts.get("Theater")).toBe(undefined);
+      });
+
+      it("respects viewing year filter when calculating medium counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          viewingYear: ["2024", "2024"],
+        };
+        const counts = calculateMediumCounts(mockValues, filterValues);
+
+        expect(counts.get("Blu-ray")).toBe(1);
+        expect(counts.get("Streaming")).toBe(1);
+        expect(counts.get("4K UHD")).toBe(undefined);
+      });
+
+      it("respects reviewed status filter when calculating medium counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          reviewedStatus: ["Reviewed"],
+        };
+        const counts = calculateMediumCounts(mockValues, filterValues);
+
+        expect(counts.get("Blu-ray")).toBe(1);
+        expect(counts.get("4K UHD")).toBe(1);
+        expect(counts.get("Streaming")).toBe(1);
+      });
+
+      it("returns empty map when no viewings match filters", ({ expect }) => {
+        const filterValues: ViewingsFiltersValues = {
+          venue: ["Nonexistent"],
+        };
+        const counts = calculateMediumCounts(mockValues, filterValues);
+
+        expect(counts.size).toBe(0);
+      });
+    });
+
+    // AIDEV-NOTE: calculateVenueCounts and calculateReviewedStatusCounts share the same
+    // data layout: Movie 2 is at Theater (reviewed), Movie 3 is at Home (not reviewed).
+    describe("calculateVenueCounts", () => {
+      let mockValues: ViewingsValue[];
+
+      beforeEach(() => {
+        mockValues = [
+          {
+            date: "2023-01-15",
+            medium: "Blu-ray",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2020",
+            reviewSlug: "movie-1",
+            sequence: "1",
+            sortTitle: "movie 1",
+            title: "Movie 1",
+            venue: "Home",
+            viewingYear: "2023",
+          },
+          {
+            date: "2023-02-20",
+            medium: "4K UHD",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2021",
+            reviewSlug: "movie-2",
+            sequence: "2",
+            sortTitle: "movie 2",
+            title: "Movie 2",
+            venue: "Theater",
+            viewingYear: "2023",
+          },
+          {
+            date: "2024-03-10",
+            medium: "Blu-ray",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2022",
+            reviewSlug: undefined,
+            sequence: "3",
+            sortTitle: "movie 3",
+            title: "Movie 3",
+            venue: "Home",
+            viewingYear: "2024",
+          },
+          {
+            date: "2024-04-05",
+            medium: "Streaming",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2023",
+            reviewSlug: "movie-4",
+            sequence: "4",
+            sortTitle: "movie 4",
+            title: "Movie 4",
+            venue: "Home",
+            viewingYear: "2024",
+          },
+        ];
+      });
+
+      it("returns counts for all venues when no filters applied", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {};
+        const counts = calculateVenueCounts(mockValues, filterValues);
+
+        expect(counts.get("Home")).toBe(3);
+        expect(counts.get("Theater")).toBe(1);
+      });
+
+      it("respects medium filter when calculating venue counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          medium: ["Blu-ray"],
+        };
+        const counts = calculateVenueCounts(mockValues, filterValues);
+
+        expect(counts.get("Home")).toBe(2);
+        expect(counts.get("Theater")).toBe(undefined);
+      });
+
+      it("respects viewing year filter when calculating venue counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          viewingYear: ["2024", "2024"],
+        };
+        const counts = calculateVenueCounts(mockValues, filterValues);
+
+        expect(counts.get("Home")).toBe(2);
+        expect(counts.get("Theater")).toBe(undefined);
+      });
+
+      it("respects reviewed status filter when calculating venue counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          reviewedStatus: ["Not Reviewed"],
+        };
+        const counts = calculateVenueCounts(mockValues, filterValues);
+
+        expect(counts.get("Home")).toBe(1);
+        expect(counts.get("Theater")).toBe(undefined);
+      });
+
+      it("returns empty map when no viewings match filters", ({ expect }) => {
+        const filterValues: ViewingsFiltersValues = {
+          medium: ["Nonexistent"],
+        };
+        const counts = calculateVenueCounts(mockValues, filterValues);
+
+        expect(counts.size).toBe(0);
+      });
+    });
+
+    describe("calculateReviewedStatusCounts", () => {
+      let mockValues: ViewingsValue[];
+
+      beforeEach(() => {
+        mockValues = [
+          {
+            date: "2023-01-15",
+            medium: "Blu-ray",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2020",
+            reviewSlug: "movie-1",
+            sequence: "1",
+            sortTitle: "movie 1",
+            title: "Movie 1",
+            venue: "Home",
+            viewingYear: "2023",
+          },
+          {
+            date: "2023-02-20",
+            medium: "4K UHD",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2021",
+            reviewSlug: "movie-2",
+            sequence: "2",
+            sortTitle: "movie 2",
+            title: "Movie 2",
+            venue: "Theater",
+            viewingYear: "2023",
+          },
+          {
+            date: "2024-03-10",
+            medium: "Blu-ray",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2022",
+            reviewSlug: undefined,
+            sequence: "3",
+            sortTitle: "movie 3",
+            title: "Movie 3",
+            venue: "Home",
+            viewingYear: "2024",
+          },
+          {
+            date: "2024-04-05",
+            medium: "Streaming",
+            posterImageProps: mockPosterImageProps,
+            releaseYear: "2023",
+            reviewSlug: "movie-4",
+            sequence: "4",
+            sortTitle: "movie 4",
+            title: "Movie 4",
+            venue: "Home",
+            viewingYear: "2024",
+          },
+        ];
+      });
+
+      it("returns correct counts for all status types when no filters applied", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {};
+        const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+        expect(counts.get("All")).toBe(4);
+        expect(counts.get("Reviewed")).toBe(3);
+        expect(counts.get("Not Reviewed")).toBe(1);
+      });
+
+      it("respects medium filter when calculating reviewed status counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          medium: ["Blu-ray"],
+        };
+        const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+        expect(counts.get("All")).toBe(2);
+        expect(counts.get("Reviewed")).toBe(1);
+        expect(counts.get("Not Reviewed")).toBe(1);
+      });
+
+      it("respects venue filter when calculating reviewed status counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          venue: ["Theater"],
+        };
+        const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+        expect(counts.get("All")).toBe(1);
+        expect(counts.get("Reviewed")).toBe(1);
+        expect(counts.get("Not Reviewed")).toBe(0);
+      });
+
+      it("respects viewing year filter when calculating reviewed status counts", ({
+        expect,
+      }) => {
+        const filterValues: ViewingsFiltersValues = {
+          viewingYear: ["2024", "2024"],
+        };
+        const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+        expect(counts.get("All")).toBe(2);
+        expect(counts.get("Reviewed")).toBe(1);
+        expect(counts.get("Not Reviewed")).toBe(1);
+      });
+
+      it("returns zero counts when no viewings match filters", ({ expect }) => {
+        const filterValues: ViewingsFiltersValues = {
+          medium: ["Nonexistent"],
+        };
+        const counts = calculateReviewedStatusCounts(mockValues, filterValues);
+
+        expect(counts.get("All")).toBe(0);
+        expect(counts.get("Reviewed")).toBe(0);
+        expect(counts.get("Not Reviewed")).toBe(0);
+      });
     });
   });
 });

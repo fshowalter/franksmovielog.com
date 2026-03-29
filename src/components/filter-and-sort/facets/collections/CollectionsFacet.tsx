@@ -1,10 +1,10 @@
 import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/filter-and-sort/fields/CheckboxListField";
-import { createCollectionFilterChangedAction } from "~/features/watchlist/Watchlist.reducer";
 
 import type { CollectionsFilterChangedAction } from "./collectionsReducer";
 
 import { createCollectionsCountMap } from "./collectionsFilter";
+import { createCollectionsFilterChangedAction } from "./collectionsReducer";
 
 export function CollectionsFacet<
   TValue extends Parameters<typeof createCollectionsCountMap>[0][number],
@@ -27,7 +27,7 @@ export function CollectionsFacet<
         defaultValues={defaultValues}
         label="Collections"
         onChange={(values) =>
-          dispatch(createCollectionFilterChangedAction(values))
+          dispatch(createCollectionsFilterChangedAction(values))
         }
         options={distinctCollections.map((e) => ({
           count: collectionCounts?.get(e) ?? 0,

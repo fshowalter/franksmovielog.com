@@ -9,17 +9,13 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { ViewingsSort } from "./sortViewings";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 import { CalendarMonth } from "./CalendarMonth";
 import { filterViewings } from "./filterViewings";
 import { MonthNavigationHeader } from "./MonthNavigationHeader";
 import { sortViewings } from "./sortViewings";
 import { useMonthNavigation } from "./useMonthNavigation";
-import {
-  createInitialState,
-  createSortAction,
-  reducer,
-} from "./Viewings.reducer";
+import { createInitialState, reducer } from "./Viewings.reducer";
 import { ViewingsFilters } from "./ViewingsFilters";
 
 const VIEWINGS_SORT_OPTIONS: readonly SortOption[] = [
@@ -44,14 +40,14 @@ export type ViewingsProps = {
  */
 export type ViewingsValue = {
   date: string; // Full date string YYYY-MM-DD
-  medium?: string;
+  medium: string | undefined;
   posterImageProps: PosterImageProps;
   releaseYear: string;
-  reviewSlug?: string;
+  reviewSlug: string | undefined;
   sequence: string;
   sortTitle: string;
   title: string;
-  venue?: string;
+  venue: string | undefined;
   viewingYear: string;
 };
 
@@ -111,10 +107,7 @@ export function Viewings({
   );
 
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
-  const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
-    distinctReleaseYears,
-    distinctViewingYears,
-  });
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   const [previousMonthDate, currentMonthDate, nextMonthDate] =
     useMonthNavigation(filteredValues, state.sort, state.selectedMonthDate);
@@ -122,7 +115,6 @@ export function Viewings({
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
-      createSortAction={createSortAction}
       dispatch={dispatch}
       filters={
         <ViewingsFilters
@@ -137,7 +129,10 @@ export function Viewings({
       }
       headerLink={{ href: "/viewings/stats/", text: "stats" }}
       pendingFilteredCount={pendingFilteredCount}
-      sortOptions={VIEWINGS_SORT_OPTIONS}
+      sortProps={{
+        currentSortValue: state.sort,
+        sortOptions: VIEWINGS_SORT_OPTIONS,
+      }}
       state={state}
       totalCount={filteredValues.length}
     >

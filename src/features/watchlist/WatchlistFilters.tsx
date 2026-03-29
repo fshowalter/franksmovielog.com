@@ -2,7 +2,7 @@ import { CollectionsFacet } from "~/components/filter-and-sort/facets/collection
 import { DirectorsFacet } from "~/components/filter-and-sort/facets/directors/DirectorsFacet";
 import { GenresFacet } from "~/components/filter-and-sort/facets/genres/GenresFacet";
 import { PerformersFacet } from "~/components/filter-and-sort/facets/performers/PerformersFacet";
-import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/releaseYear/ReleaseYearFacet";
+import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/release-year/ReleaseYearFacet";
 import { TitleFacet } from "~/components/filter-and-sort/facets/title/TitleFacet";
 import { WritersFacet } from "~/components/filter-and-sort/facets/writers/WritersFacet";
 

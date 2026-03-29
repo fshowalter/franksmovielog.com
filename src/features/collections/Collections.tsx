@@ -10,12 +10,8 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionsSort } from "./sortCollections";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import {
-  createInitialState,
-  createSortAction,
-  reducer,
-} from "./Collections.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
+import { createInitialState, reducer } from "./Collections.reducer";
 import { CollectionsFilters } from "./CollectionsFilters";
 import { CollectionsListItem } from "./CollectionsListItem";
 import { filterCollections } from "./filterCollections";
@@ -37,6 +33,7 @@ export type CollectionsValue = {
   name: string;
   reviewCount: number;
   slug: string;
+  sortName: string;
 };
 
 /**
@@ -79,7 +76,6 @@ export function Collections({
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
-      createSortAction={createSortAction}
       dispatch={dispatch}
       filters={
         <CollectionsFilters
@@ -88,7 +84,10 @@ export function Collections({
         />
       }
       pendingFilteredCount={pendingFilteredCount}
-      sortOptions={COLLECTION_SORT_OPTIONS}
+      sortProps={{
+        currentSortValue: state.sort,
+        sortOptions: COLLECTION_SORT_OPTIONS,
+      }}
       state={state}
       totalCount={filteredValues.length}
     >

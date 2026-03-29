@@ -1,17 +1,15 @@
-import { filterCollections as baseFilterCollections } from "~/filterers/filterCollections";
+import { filterSortedValues } from "~/components/filter-and-sort/facets/filterSortedValues";
+import { createNameFilter } from "~/components/filter-and-sort/facets/name/nameFilter";
 
 import type { CollectionsValue } from "./Collections";
 import type { CollectionsFiltersValues } from "./Collections.reducer";
 
-/**
- * Filters collections based on name filter criteria.
- * @param sortedValues - Array of collections to filter
- * @param filterValues - Object containing filter values
- * @returns Filtered array of collections
- */
 export function filterCollections(
   sortedValues: CollectionsValue[],
   filterValues: CollectionsFiltersValues,
 ) {
-  return baseFilterCollections(filterValues, sortedValues, []);
+  const filters = [createNameFilter(filterValues.name)].filter(
+    (f) => f !== undefined,
+  );
+  return filterSortedValues({ filters, sortedValues });
 }

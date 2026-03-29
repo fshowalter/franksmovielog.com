@@ -2,7 +2,8 @@ import type { UserEvent } from "@testing-library/user-event";
 
 import { screen } from "@testing-library/react";
 
-import { clickCheckboxListOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
+import { getAnimatedDetailsDisclosureElement } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure.testHelper";
+import { clickCheckboxListFieldOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
 import { fillYearField } from "~/components/filter-and-sort/fields/YearField.testHelper";
 
 /**
@@ -11,7 +12,8 @@ import { fillYearField } from "~/components/filter-and-sort/fields/YearField.tes
  * @param value - Filter value to select
  */
 export async function clickMediumFilterOption(user: UserEvent, value: string) {
-  await clickCheckboxListOption(user, "Medium", value);
+  const filter = getAnimatedDetailsDisclosureElement("Medium");
+  await clickCheckboxListFieldOption(filter, user, value);
 }
 
 /**
@@ -44,7 +46,8 @@ export async function clickPreviousMonthButton(user: UserEvent) {
  * @param value - Filter value to select
  */
 export async function clickVenueFilterOption(user: UserEvent, value: string) {
-  await clickCheckboxListOption(user, "Venue", value);
+  const filter = getAnimatedDetailsDisclosureElement("Venue");
+  await clickCheckboxListFieldOption(filter, user, value);
 }
 
 /**

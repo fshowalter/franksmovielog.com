@@ -1,10 +1,13 @@
-import { omitPendingKey } from "~/facets/omitPendingKey";
+import type { RemoveFilterAction } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
 
-const STATE_KEY = "medium";
+import { ActionTypes as FilterAndSortContainerActionTypes } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import { omitPendingKey } from "~/components/filter-and-sort/facets/omitPendingKey";
 
 const ActionTypes = {
   CHANGED: "medium/changed" as const,
 };
+
+export const STATE_KEY = "medium";
 
 export type MediumFilterChangedAction = {
   type: typeof ActionTypes.CHANGED;
@@ -40,14 +43,11 @@ export function mediumFacetReducer<
         },
       };
     }
-    case "filters/removeAppliedFilter": {
-      const { filterKey } = action as { filterKey: string; type: string };
-      if (!filterKey.startsWith("medium-")) return state;
-      const slug = filterKey.replace("medium-", "");
+    case FilterAndSortContainerActionTypes.FILTER_REMOVED: {
+      const { key, value } = action as RemoveFilterAction;
+      if (key !== STATE_KEY) return state;
       const current = state.pendingFilterValues[STATE_KEY] ?? [];
-      const updated = current.filter(
-        (m) => m.toLowerCase().replaceAll(" ", "-") !== slug,
-      );
+      const updated = current.filter((k) => k !== value);
       if (updated.length === 0) {
         return {
           ...state,
@@ -61,7 +61,7 @@ export function mediumFacetReducer<
         ...state,
         pendingFilterValues: {
           ...state.pendingFilterValues,
-          [STATE_KEY]: updated,
+          [STATE_KEY]: updated as readonly string[],
         },
       };
     }

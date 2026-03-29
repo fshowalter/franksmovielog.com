@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
+import type { GradeText, GradeValue } from "~/utils/grades";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
@@ -9,12 +10,8 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import {
-  createInitialState,
-  createSortAction,
-  reducer,
-} from "./CastAndCrewMemberTitles.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
+import { createInitialState, reducer } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
 import { CastAndCrewMemberTitlesListItem } from "./CastAndCrewMemberTitlesListItem";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
@@ -38,8 +35,8 @@ export type CastAndCrewMemberTitlesProps = {
 export type CastAndCrewMemberTitlesValue = {
   creditedAs: string[];
   genres: string[];
-  grade: string | undefined;
-  gradeValue: number | undefined;
+  grade: GradeText | undefined;
+  gradeValue: GradeValue | undefined;
   imdbId: string;
   posterImageProps: PosterImageProps;
   releaseSequence: number;
@@ -93,11 +90,7 @@ export function CastAndCrewMemberTitles({
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   return (
     <FilterAndSortContainer
-      activeFilters={buildAppliedFilterChips(state.activeFilterValues, {
-        distinctReleaseYears,
-        distinctReviewYears,
-      })}
-      createSortAction={createSortAction}
+      activeFilters={buildAppliedFilterChips(state.activeFilterValues)}
       dispatch={dispatch}
       filters={
         <CastAndCrewMemberTitlesFilters
@@ -111,7 +104,10 @@ export function CastAndCrewMemberTitles({
         />
       }
       pendingFilteredCount={pendingFilteredCount}
-      sortOptions={REVIEWED_TITLE_SORT_OPTIONS}
+      sortProps={{
+        currentSortValue: state.sort,
+        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
+      }}
       state={state}
       totalCount={filteredValues.length}
     >

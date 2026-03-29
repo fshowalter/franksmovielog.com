@@ -47,6 +47,12 @@ export function showMoreReducer<TState extends ShowMoreState>(
   action: { type: string },
 ): TState {
   switch (action.type) {
+    // AIDEV-NOTE: Reset to first page when sort or filters change so users
+    // see the beginning of the new ordering/filtered result set.
+    case "filterAndSortContainer/filtersApplied":
+    case "filterAndSortContainer/sortChanged": {
+      return { ...state, showCount: SHOW_COUNT_INCREMENT };
+    }
     case "showMore/showMore": {
       return handleShowMoreAction<TState>(state);
     }

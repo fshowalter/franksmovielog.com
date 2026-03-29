@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import type { CastAndCrewFiltersValues } from "./CastAndCrew.reducer";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 
 describe("buildAppliedFilterChips", () => {
   it("returns empty array when no filters applied", () => {
