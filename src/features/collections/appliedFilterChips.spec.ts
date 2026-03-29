@@ -25,7 +25,7 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          displayText: "Search: horror",
+          displayText: "Name: horror",
           key: "name",
         },
       ]);
@@ -60,7 +60,7 @@ describe("buildAppliedFilterChips", () => {
 
       expect(result).toEqual([
         {
-          displayText: "Search: The Alien Collection",
+          displayText: "Name: The Alien Collection",
           key: "name",
         },
       ]);

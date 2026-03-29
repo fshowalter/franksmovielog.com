@@ -166,7 +166,7 @@ export function nameFacetSortTests(
       ]);
 
       const user = getUserWithFakeTimers();
-      await clickSortOption(user, "Author (A → Z)");
+      await clickSortOption(user, "Name (A → Z)");
 
       const list = getList();
       const text = list.textContent ?? "";
@@ -195,7 +195,7 @@ export function nameFacetSortTests(
       ]);
 
       const user = getUserWithFakeTimers();
-      await clickSortOption(user, "Author (Z → A)");
+      await clickSortOption(user, "Name (Z → A)");
 
       const list = getList();
       const text = list.textContent ?? "";

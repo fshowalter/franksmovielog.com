@@ -107,7 +107,7 @@ export function titleFacetFilterTests(
 
       await clickToggleFilters(user);
       expect(
-        screen.getByLabelText("Remove Search: Dracula filter"),
+        screen.getByLabelText("Remove Title: Dracula filter"),
       ).toBeInTheDocument();
 
       vi.clearAllTimers();
@@ -137,7 +137,7 @@ export function titleFacetFilterTests(
 
       // Open the filter drawer and click the chip to remove the filter
       await clickToggleFilters(user);
-      const chip = screen.getByLabelText("Remove Search: Dracula filter");
+      const chip = screen.getByLabelText("Remove Title: Dracula filter");
       await user.click(chip);
 
       // Before clicking View Results, the list should still be filtered
