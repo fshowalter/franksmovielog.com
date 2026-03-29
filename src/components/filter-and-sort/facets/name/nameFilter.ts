@@ -1,9 +1,10 @@
-/**
- * Create a Name filter function (regex match against name and sortName)
- */
-export function createNameFilter<
-  TValue extends { name: string; sortName: string },
->(filterValue?: string) {
+export type FilterableValue = { name: string; sortName: string };
+type Filters = { name?: string };
+
+export function createNameFilter<TValue extends FilterableValue>(
+  filters: Filters,
+) {
+  const filterValue = filters.name;
   if (!filterValue) return;
   const regex = new RegExp(filterValue, "i");
   return (value: TValue): boolean =>

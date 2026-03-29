@@ -8,23 +8,26 @@ import { createMediumFilterChangedAction } from "./mediumReducer";
 
 export function MediumFacet<
   TValue extends Parameters<typeof createMediumCountMap>[0][number],
+  TFilters extends Parameters<typeof createMediumCountMap>[1],
 >({
-  defaultValues,
   dispatch,
   distinctMedia,
+  filterer,
+  filterValues,
   values,
 }: {
-  defaultValues: readonly string[] | undefined;
   dispatch: React.Dispatch<MediumFilterChangedAction>;
   distinctMedia: readonly string[];
+  filterer: (values: readonly TValue[], filters: TFilters) => TValue[];
+  filterValues: TFilters;
   values: readonly TValue[];
 }): React.JSX.Element {
-  const mediaCounts = createMediumCountMap(values);
+  const mediaCounts = createMediumCountMap(values, filterValues, filterer);
 
   return (
     <AnimatedDetailsDisclosure title="Medium">
       <CheckboxListField
-        defaultValues={defaultValues}
+        defaultValues={filterValues.medium}
         label="Medium"
         onChange={(values) => dispatch(createMediumFilterChangedAction(values))}
         options={distinctMedia.map((e) => ({

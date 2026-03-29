@@ -1,25 +1,17 @@
 import { render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, vi } from "vitest";
 
-import { creditedAsFilterFacetTests } from "~/components/filter-and-sort/facets/credited-as/creditedAsFacetTests";
-import { genresFilterFacetTests } from "~/components/filter-and-sort/facets/genres/genresFacetTests";
-import {
-  gradeFilterFacetTests,
-  gradeSortFacetTests,
-} from "~/components/filter-and-sort/facets/grade/gradeFacetTests";
-import {
-  releaseYearFilterFacetTests,
-  releaseYearSortFacetTests,
-} from "~/components/filter-and-sort/facets/release-year/releaseYearFacetTests";
-import {
-  reviewYearFilterFacetTests,
-  reviewYearSortFacetTests,
-} from "~/components/filter-and-sort/facets/review-year/reviewYearFacetTests";
-import { reviewedStatusFacetTests } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusFacetTests";
-import {
-  titleFacetFilterTests,
-  titleFacetSortTests,
-} from "~/components/filter-and-sort/facets/title/titleFacetTests";
+import { creditedAsFilterTests } from "~/components/filter-and-sort/facets/credited-as/creditedAsFilterTests";
+import { genresFilterTests } from "~/components/filter-and-sort/facets/genres/genresFilterTests";
+import { gradeFilterFacetTests } from "~/components/filter-and-sort/facets/grade/gradeFilterTests";
+import { gradeSortTests } from "~/components/filter-and-sort/facets/grade/gradeSortTests";
+import { releaseDateSortTests } from "~/components/filter-and-sort/facets/release-date/releaseDateSortTests";
+import { releaseYearFilterTests } from "~/components/filter-and-sort/facets/release-year/releaseYearFilterTests";
+import { reviewDateSortTests } from "~/components/filter-and-sort/facets/review-date/reviewDateSortTests";
+import { reviewYearFilterTests } from "~/components/filter-and-sort/facets/review-year/reviewYearFilterTests";
+import { reviewedStatusFilterTests } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusFilterTests";
+import { titleFilterTests } from "~/components/filter-and-sort/facets/title/titleFilterTests";
+import { titleSortTests } from "~/components/filter-and-sort/facets/title/titleSortTests";
 import { getPosterList } from "~/components/poster-list/PosterList.testHelper";
 
 import type {
@@ -81,14 +73,7 @@ describe("CastAndCrewMemberTitles", () => {
     vi.useRealTimers();
   });
 
-  creditedAsFilterFacetTests(
-    (items) =>
-      render(
-        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-      ),
-    getPosterList,
-  );
-  titleFacetFilterTests(
+  creditedAsFilterTests(
     (items) =>
       render(
         <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
@@ -96,7 +81,7 @@ describe("CastAndCrewMemberTitles", () => {
     getPosterList,
   );
 
-  titleFacetSortTests(
+  titleFilterTests(
     (items) =>
       render(
         <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
@@ -104,7 +89,15 @@ describe("CastAndCrewMemberTitles", () => {
     getPosterList,
   );
 
-  genresFilterFacetTests(
+  titleSortTests(
+    (items) =>
+      render(
+        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
+      ),
+    getPosterList,
+  );
+
+  genresFilterTests(
     (items) =>
       render(
         <CastAndCrewMemberTitles
@@ -124,7 +117,7 @@ describe("CastAndCrewMemberTitles", () => {
     getPosterList,
   );
 
-  gradeSortFacetTests(
+  gradeSortTests(
     (items) =>
       render(
         <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
@@ -132,7 +125,7 @@ describe("CastAndCrewMemberTitles", () => {
     getPosterList,
   );
 
-  releaseYearFilterFacetTests({
+  releaseYearFilterTests({
     distinctReleaseYears: baseProps.distinctReleaseYears,
     getList: getPosterList,
     renderItems: (items) =>
@@ -141,7 +134,7 @@ describe("CastAndCrewMemberTitles", () => {
       ),
   });
 
-  releaseYearSortFacetTests(
+  releaseDateSortTests(
     (items) =>
       render(
         <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
@@ -149,7 +142,7 @@ describe("CastAndCrewMemberTitles", () => {
     getPosterList,
   );
 
-  reviewYearFilterFacetTests({
+  reviewYearFilterTests({
     distinctReviewYears: baseProps.distinctReviewYears,
     getList: getPosterList,
     renderItems: (items) =>
@@ -158,7 +151,7 @@ describe("CastAndCrewMemberTitles", () => {
       ),
   });
 
-  reviewYearSortFacetTests(
+  reviewDateSortTests(
     (items) =>
       render(
         <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
@@ -166,7 +159,7 @@ describe("CastAndCrewMemberTitles", () => {
     getPosterList,
   );
 
-  reviewedStatusFacetTests(
+  reviewedStatusFilterTests(
     (items) =>
       render(
         <CastAndCrewMemberTitles

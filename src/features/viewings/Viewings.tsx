@@ -15,8 +15,8 @@ import { filterViewings } from "./filterViewings";
 import { MonthNavigationHeader } from "./MonthNavigationHeader";
 import { sortViewings } from "./sortViewings";
 import { useMonthNavigation } from "./useMonthNavigation";
-import { createInitialState, reducer } from "./Viewings.reducer";
 import { ViewingsFilters } from "./ViewingsFilters";
+import { createInitialState, reducer } from "./viewingsReducer";
 
 const VIEWINGS_SORT_OPTIONS: readonly SortOption[] = [
   { label: "Viewing Date (Newest First)", value: "viewing-date-desc" },

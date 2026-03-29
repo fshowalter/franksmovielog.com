@@ -8,23 +8,26 @@ import { createWritersFilterChangedAction } from "./writersReducer";
 
 export function WritersFacet<
   TValue extends Parameters<typeof createWritersCountMap>[0][number],
+  TFilters extends Parameters<typeof createWritersCountMap>[1],
 >({
-  defaultValues,
   dispatch,
   distinctWriters,
+  filterer,
+  filterValues,
   values,
 }: {
-  defaultValues: readonly string[] | undefined;
   dispatch: React.Dispatch<WritersFilterChangedAction>;
   distinctWriters: readonly string[];
+  filterer: (values: readonly TValue[], filters: TFilters) => TValue[];
+  filterValues: TFilters;
   values: readonly TValue[];
 }): React.JSX.Element {
-  const writerCounts = createWritersCountMap(values);
+  const writerCounts = createWritersCountMap(values, filterValues, filterer);
 
   return (
     <AnimatedDetailsDisclosure title="Writers">
       <CheckboxListField
-        defaultValues={defaultValues}
+        defaultValues={filterValues.writers}
         label="Writers"
         onChange={(values) =>
           dispatch(createWritersFilterChangedAction(values))

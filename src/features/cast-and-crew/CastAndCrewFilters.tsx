@@ -5,7 +5,7 @@ import type { CastAndCrewValue } from "./CastAndCrew";
 import type {
   CastAndCrewAction,
   CastAndCrewFiltersValues,
-} from "./CastAndCrew.reducer";
+} from "./castAndCrewReducer";
 
 import { filterCastAndCrew } from "./filterCastAndCrew";
 

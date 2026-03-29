@@ -1,14 +1,14 @@
 import type { FilterChip } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 
-import { buildCreditedAsFilterChips } from "~/components/filter-and-sort/facets/credited-as/creditedAsFilterChips";
-import { buildGenresFilterChips } from "~/components/filter-and-sort/facets/genres/genresFilterChips";
-import { buildGradeFilterChip } from "~/components/filter-and-sort/facets/grade/gradeFilterChip";
-import { buildReleaseYearFilterChip } from "~/components/filter-and-sort/facets/release-year/releaseYearFilterChip";
-import { buildReviewYearFilterChip } from "~/components/filter-and-sort/facets/review-year/reviewYearFilterChip";
-import { buildReviewedStatusFilterChip } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusFilterChip";
-import { buildTitleFilterChip } from "~/components/filter-and-sort/facets/title/titleFilterChip";
+import { buildCreditedAsFilterChips } from "~/components/filter-and-sort/facets/credited-as/buildCreditedAsFilterChips";
+import { buildGenresFilterChips } from "~/components/filter-and-sort/facets/genres/buildGenresFilterChips";
+import { buildGradeFilterChip } from "~/components/filter-and-sort/facets/grade/buildGradeFilterChip";
+import { buildReleaseYearFilterChip } from "~/components/filter-and-sort/facets/release-year/buildReleaseYearFilterChip";
+import { buildReviewYearFilterChip } from "~/components/filter-and-sort/facets/review-year/buildReviewYearFilterChip";
+import { buildReviewedStatusFilterChip } from "~/components/filter-and-sort/facets/reviewed-status/buildReviewedStatusFilterChip";
+import { buildTitleFilterChip } from "~/components/filter-and-sort/facets/title/buildTitleFilterChip";
 
-import type { CastAndCrewMemberTitlesFiltersValues } from "./CastAndCrewMemberTitles.reducer";
+import type { CastAndCrewMemberTitlesFiltersValues } from "./castAndCrewMemberTitlesReducer";
 
 export function buildAppliedFilterChips(
   filterValues: CastAndCrewMemberTitlesFiltersValues,

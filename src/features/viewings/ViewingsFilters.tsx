@@ -6,7 +6,9 @@ import { VenueFacet } from "~/components/filter-and-sort/facets/venue/VenueFacet
 import { ViewingYearFacet } from "~/components/filter-and-sort/facets/viewing-year/ViewingYearFacet";
 
 import type { ViewingsValue } from "./Viewings";
-import type { ViewingsAction, ViewingsFiltersValues } from "./Viewings.reducer";
+import type { ViewingsAction, ViewingsFiltersValues } from "./viewingsReducer";
+
+import { filterViewings } from "./filterViewings";
 
 /**
  * Filter controls for the viewings page.
@@ -46,8 +48,9 @@ export function ViewingsFilters({
         distinctYears={distinctReleaseYears}
       />
       <ReviewedStatusFacet
-        defaultValues={filterValues.reviewedStatus}
         dispatch={dispatch}
+        filterer={filterViewings}
+        filterValues={filterValues}
         values={values}
       />
       <ViewingYearFacet
@@ -56,15 +59,17 @@ export function ViewingsFilters({
         distinctYears={distinctViewingYears}
       />
       <MediumFacet
-        defaultValues={filterValues.medium}
         dispatch={dispatch}
         distinctMedia={distinctMedia}
+        filterer={filterViewings}
+        filterValues={filterValues}
         values={values}
       />
       <VenueFacet
-        defaultValues={filterValues.venue}
         dispatch={dispatch}
         distinctVenues={distinctVenues}
+        filterer={filterViewings}
+        filterValues={filterValues}
         values={values}
       />
     </>

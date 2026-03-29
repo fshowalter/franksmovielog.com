@@ -4,18 +4,22 @@ import type { PosterImageProps } from "~/assets/posters";
 import type { GradeText, GradeValue } from "~/utils/grades";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
-import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
+import { PaginatedList } from "~/components/filter-and-sort/paginated-list/PaginatedList";
 import { PosterList } from "~/components/poster-list/PosterList";
+import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
 
 import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
-import { createInitialState, reducer } from "./CastAndCrewMemberTitles.reducer";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
 import { CastAndCrewMemberTitlesListItem } from "./CastAndCrewMemberTitlesListItem";
+import { createInitialState, reducer } from "./castAndCrewMemberTitlesReducer";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
-import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
+import {
+  sortCastAndCrewMemberTitles,
+  sortOptions,
+} from "./sortCastAndCrewMemberTitles";
 
 /**
  * Props for the CastAndCrewMemberTitles component.
@@ -75,10 +79,13 @@ export function CastAndCrewMemberTitles({
     createInitialState,
   );
 
-  const sortedValues = sortCastAndCrewMemberTitles(state.values, state.sort);
-  const filteredValues = filterCastAndCrewMemberTitles(
-    sortedValues,
+  const [paginatedValues, totalCount] = usePaginatedValues(
+    sortCastAndCrewMemberTitles,
+    filterCastAndCrewMemberTitles,
+    state.values,
+    state.sort,
     state.activeFilterValues,
+    state.showCount,
   );
 
   const pendingFilteredCount = usePendingFilterCount(
@@ -106,14 +113,18 @@ export function CastAndCrewMemberTitles({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
+        sortOptions,
       }}
       state={state}
-      totalCount={filteredValues.length}
+      totalCount={totalCount}
     >
-      <div className="tablet:-mx-6 tablet:pt-10">
+      <PaginatedList
+        dispatch={dispatch}
+        totalCount={totalCount}
+        visibleCount={state.showCount}
+      >
         <PosterList>
-          {[...filteredValues].map((value) => {
+          {[...paginatedValues].map((value) => {
             return (
               <CastAndCrewMemberTitlesListItem
                 key={value.imdbId}
@@ -122,7 +133,7 @@ export function CastAndCrewMemberTitles({
             );
           })}
         </PosterList>
-      </div>
+      </PaginatedList>
     </FilterAndSortContainer>
   );
 }

@@ -2,14 +2,19 @@ import type { GradeValue } from "~/utils/grades";
 
 import { GRADE_MAX, GRADE_MIN } from "~/utils/grades";
 
+export type FilterableValue = { gradeValue: GradeValue | undefined };
+type Filters = { gradeValue?: [GradeValue, GradeValue] };
+
 /**
  * Create a Grade filter function (range).
  * Full range [GRADE_MIN, GRADE_MAX] is treated as no-op to avoid excluding
  * Abandoned entries (gradeValue=0) when the slider is cleared.
  */
-export function createGradeFilter<
-  TValue extends { gradeValue: GradeValue | undefined },
->(filterValue?: [GradeValue, GradeValue]) {
+export function createGradeFilter<TValue extends FilterableValue>(
+  filters: Filters,
+) {
+  const filterValue = filters.gradeValue;
+
   if (
     !filterValue ||
     (filterValue[0] === GRADE_MIN && filterValue[1] === GRADE_MAX)

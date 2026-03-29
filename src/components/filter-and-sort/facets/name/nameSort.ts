@@ -1,6 +1,15 @@
 import { sortString } from "~/components/filter-and-sort/facets/createSorter";
 
-export const nameSortComparators = {
+export type NameSortKeys = "name-asc" | "name-desc";
+
+export type SortableByName = {
+  sortName: string;
+};
+
+export const nameSortComparators: Record<
+  NameSortKeys,
+  (a: SortableByName, b: SortableByName) => number
+> = {
   "name-asc": (a: { sortName: string }, b: { sortName: string }) =>
     sortString(a.sortName, b.sortName),
   "name-desc": (a: { sortName: string }, b: { sortName: string }) =>

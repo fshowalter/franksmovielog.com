@@ -1,9 +1,10 @@
-/**
- * Create a Review Year filter function (range)
- */
-export function createReviewYearFilter<
-  TValue extends { reviewYear: string | undefined },
->(filterValue?: [string, string]) {
+export type FilterableValue = { reviewYear: string | undefined };
+type Filters = { reviewYear?: [string, string] };
+
+export function createReviewYearFilter<TValue extends FilterableValue>(
+  filters: Filters,
+) {
+  const filterValue = filters.reviewYear;
   if (!filterValue) return;
   return (value: TValue): boolean => {
     return value.reviewYear

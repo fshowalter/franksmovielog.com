@@ -2,18 +2,18 @@ import type { GradeValue } from "~/utils/grades";
 
 import { sortNumber } from "~/components/filter-and-sort/facets/createSorter";
 
-type GradeSortKeys = "grade-asc" | "grade-desc";
+export type GradeSortKeys = "grade-asc" | "grade-desc";
 
-type SortableByGrade = {
-  gradeValue: GradeValue;
+export type SortableByGrade = {
+  gradeValue: GradeValue | undefined;
 };
 
 export const gradeSortComparators: Record<
   GradeSortKeys,
   (a: SortableByGrade, b: SortableByGrade) => number
 > = {
-  "grade-asc": (a, b) => sortNumber(a.gradeValue, b.gradeValue),
-  "grade-desc": (a, b) => sortNumber(a.gradeValue, b.gradeValue) * -1,
+  "grade-asc": (a, b) => sortNumber(a.gradeValue ?? 0, b.gradeValue ?? 0),
+  "grade-desc": (a, b) => sortNumber(b.gradeValue ?? 0, a.gradeValue ?? 0),
 };
 
 export const gradeSortOptions = [

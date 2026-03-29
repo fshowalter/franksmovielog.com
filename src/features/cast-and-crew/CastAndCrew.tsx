@@ -3,21 +3,20 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "~/assets/avatars";
 
 import { GroupedAvatarList } from "~/components/avatar-list/GroupedAvatarList";
-import { COLLECTION_SORT_OPTIONS } from "~/components/filter-and-sort/CollectionSortOptions";
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
-import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { useGroupedValues } from "~/features/cast-and-crew/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 import { AlphabetSideNav } from "./AlphabetSideNav";
 import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
-import { createInitialState, reducer } from "./CastAndCrew.reducer";
 import { CastAndCrewFilters } from "./CastAndCrewFilters";
 import { CastAndCrewListItem } from "./CastAndCrewListItem";
+import { createInitialState, reducer } from "./castAndCrewReducer";
 import { filterCastAndCrew } from "./filterCastAndCrew";
 import { groupCastAndCrew } from "./groupCastAndCrew";
-import { sortCastAndCrew } from "./sortCastAndCrew";
+import { sortCastAndCrew, sortOptions } from "./sortCastAndCrew";
 
 /**
  * Props for the CastAndCrew component.
@@ -96,7 +95,7 @@ export function CastAndCrew({
       sideNav={sideNav}
       sortProps={{
         currentSortValue: state.sort,
-        sortOptions: COLLECTION_SORT_OPTIONS,
+        sortOptions,
       }}
       state={state}
       totalCount={totalCount}

@@ -8,23 +8,30 @@ import { createCollectionsFilterChangedAction } from "./collectionsReducer";
 
 export function CollectionsFacet<
   TValue extends Parameters<typeof createCollectionsCountMap>[0][number],
+  TFilters extends Parameters<typeof createCollectionsCountMap>[1],
 >({
-  defaultValues,
   dispatch,
   distinctCollections,
+  filterer,
+  filterValues,
   values,
 }: {
-  defaultValues: readonly string[] | undefined;
   dispatch: React.Dispatch<CollectionsFilterChangedAction>;
   distinctCollections: readonly string[];
+  filterer: (values: readonly TValue[], filters: TFilters) => TValue[];
+  filterValues: TFilters;
   values: readonly TValue[];
 }): React.JSX.Element {
-  const collectionCounts = createCollectionsCountMap(values);
+  const collectionCounts = createCollectionsCountMap(
+    values,
+    filterValues,
+    filterer,
+  );
 
   return (
     <AnimatedDetailsDisclosure title="Collections">
       <CheckboxListField
-        defaultValues={defaultValues}
+        defaultValues={filterValues.collections}
         label="Collections"
         onChange={(values) =>
           dispatch(createCollectionsFilterChangedAction(values))

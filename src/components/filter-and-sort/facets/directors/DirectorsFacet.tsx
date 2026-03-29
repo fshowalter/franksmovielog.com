@@ -8,23 +8,30 @@ import { createDirectorsFilterChangedAction } from "./directorsReducer";
 
 export function DirectorsFacet<
   TValue extends Parameters<typeof createDirectorsCountMap>[0][number],
+  TFilters extends Parameters<typeof createDirectorsCountMap>[1],
 >({
-  defaultValues,
   dispatch,
   distinctDirectors,
+  filterer,
+  filterValues,
   values,
 }: {
-  defaultValues: readonly string[] | undefined;
   dispatch: React.Dispatch<DirectorsFilterChangedAction>;
   distinctDirectors: readonly string[];
+  filterer: (values: readonly TValue[], filters: TFilters) => TValue[];
+  filterValues: TFilters;
   values: readonly TValue[];
 }): React.JSX.Element {
-  const directorCounts = createDirectorsCountMap(values);
+  const directorCounts = createDirectorsCountMap(
+    values,
+    filterValues,
+    filterer,
+  );
 
   return (
     <AnimatedDetailsDisclosure title="Directors">
       <CheckboxListField
-        defaultValues={defaultValues}
+        defaultValues={filterValues.directors}
         label="Directors"
         onChange={(newValues) =>
           dispatch(createDirectorsFilterChangedAction(newValues))

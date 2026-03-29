@@ -1,16 +1,18 @@
+export type FilterableValue = { creditedAs: string[] };
+type Filters = { creditedAs?: readonly string[] };
+
 export function createCreditedAsCountMap<
-  TValue extends { creditedAs: string[] },
-  TFilters extends { creditedAs?: readonly string[] },
+  TValue extends FilterableValue,
+  TFilters extends Filters,
 >(
   values: readonly TValue[],
   filters: TFilters,
   filterer: (values: readonly TValue[], filters: TFilters) => TValue[],
 ): Map<string, number> {
-  // Apply all filters EXCEPT creditedAs
-  const filtersWithoutCreditedAs = { ...filters, creditedAs: undefined };
-  const filtered = filterer(values, filtersWithoutCreditedAs);
+  // Apply all filters EXCEPT this one
+  const otherFilters = { ...filters, creditedAs: undefined };
+  const filtered = filterer(values, otherFilters);
 
-  // Count occurrences of each credit role
   const counts = new Map<string, number>();
   for (const value of filtered) {
     for (const credit of value.creditedAs) {
@@ -21,9 +23,10 @@ export function createCreditedAsCountMap<
   return counts;
 }
 
-export function createCreditedAsFilter<TValue extends { creditedAs: string[] }>(
-  filterValue?: readonly string[],
+export function createCreditedAsFilter<TValue extends FilterableValue>(
+  filters: Filters,
 ) {
+  const filterValue = filters.creditedAs;
   if (!filterValue || filterValue.length === 0) return;
   return (value: TValue) =>
     filterValue.some((credit) => value.creditedAs.includes(credit));

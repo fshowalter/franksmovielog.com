@@ -10,7 +10,9 @@ import type { WatchlistValue } from "./Watchlist";
 import type {
   WatchlistAction,
   WatchlistFiltersValues,
-} from "./Watchlist.reducer";
+} from "./watchlistReducer";
+
+import { filterWatchlist } from "./filterWatchlist";
 
 /**
  * Filter controls for the watchlist page.
@@ -56,33 +58,38 @@ export function WatchlistFilters({
         distinctYears={distinctReleaseYears}
       />
       <GenresFacet
-        defaultValues={filterValues.genres}
         dispatch={dispatch}
         distinctGenres={distinctGenres}
+        filterer={filterWatchlist}
+        filterValues={filterValues}
         values={values}
       />
       <DirectorsFacet
-        defaultValues={filterValues.genres}
         dispatch={dispatch}
         distinctDirectors={distinctDirectors}
+        filterer={filterWatchlist}
+        filterValues={filterValues}
         values={values}
       />
       <PerformersFacet
-        defaultValues={filterValues.genres}
         dispatch={dispatch}
         distinctPerformers={distinctPerformers}
+        filterer={filterWatchlist}
+        filterValues={filterValues}
         values={values}
       />
       <WritersFacet
-        defaultValues={filterValues.genres}
         dispatch={dispatch}
         distinctWriters={distinctWriters}
+        filterer={filterWatchlist}
+        filterValues={filterValues}
         values={values}
       />
       <CollectionsFacet
-        defaultValues={filterValues.genres}
         dispatch={dispatch}
         distinctCollections={distinctCollections}
+        filterer={filterWatchlist}
+        filterValues={filterValues}
         values={values}
       />
     </>

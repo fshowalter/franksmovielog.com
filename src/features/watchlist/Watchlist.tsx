@@ -3,23 +3,19 @@ import { useReducer } from "react";
 import type { PosterImageProps } from "~/assets/posters";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
-import { TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/TitleSortOptions";
+import { PaginatedList } from "~/components/filter-and-sort/paginated-list/PaginatedList";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { WatchlistSort } from "./sortWatchlistValues";
+import type { WatchlistSort } from "./sortWatchlist";
 
 import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
-import { filterWatchlistValues } from "./filterWatchlistValues";
-import { sortWatchlistValues } from "./sortWatchlistValues";
-import {
-  createInitialState,
-  createShowMoreAction,
-  reducer,
-} from "./Watchlist.reducer";
+import { filterWatchlist } from "./filterWatchlist";
+import { sortOptions, sortWatchlist } from "./sortWatchlist";
 import { WatchlistFilters } from "./WatchlistFilters";
 import { WatchlistListItem } from "./WatchlistListItem";
+import { createInitialState, reducer } from "./watchlistReducer";
 
 /**
  * Props for the Watchlist component.
@@ -87,8 +83,8 @@ export function Watchlist({
   );
 
   const [paginatedValues, totalCount] = usePaginatedValues(
-    sortWatchlistValues,
-    filterWatchlistValues,
+    sortWatchlist,
+    filterWatchlist,
     state.values,
     state.sort,
     state.activeFilterValues,
@@ -96,7 +92,7 @@ export function Watchlist({
   );
 
   const pendingFilteredCount = usePendingFilterCount(
-    filterWatchlistValues,
+    filterWatchlist,
     state.values,
     state.pendingFilterValues,
   );
@@ -125,19 +121,17 @@ export function Watchlist({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        sortOptions: TITLE_SORT_OPTIONS,
+        sortOptions,
       }}
       state={state}
       totalCount={totalCount}
     >
-      <div className="tablet:-mx-6 tablet:pt-10">
-        <PosterList
-          onShowMore={
-            paginatedValues.length < totalCount
-              ? (): void => dispatch(createShowMoreAction())
-              : undefined
-          }
-        >
+      <PaginatedList
+        dispatch={dispatch}
+        totalCount={totalCount}
+        visibleCount={paginatedValues.length}
+      >
+        <PosterList>
           {[...paginatedValues].map((value) => {
             return (
               <WatchlistListItem
@@ -148,7 +142,7 @@ export function Watchlist({
             );
           })}
         </PosterList>
-      </div>
+      </PaginatedList>
     </FilterAndSortContainer>
   );
 }

@@ -8,23 +8,26 @@ import { createGenresFilterChangedAction } from "./genresReducer";
 
 export function GenresFacet<
   TValue extends Parameters<typeof createGenresCountMap>[0][number],
+  TFilters extends Parameters<typeof createGenresCountMap>[1],
 >({
-  defaultValues,
   dispatch,
   distinctGenres,
+  filterer,
+  filterValues,
   values,
 }: {
-  defaultValues: readonly string[] | undefined;
   dispatch: React.Dispatch<GenresFilterChangedAction>;
   distinctGenres: readonly string[];
+  filterer: (values: readonly TValue[], filters: TFilters) => TValue[];
+  filterValues: TFilters;
   values: readonly TValue[];
 }): React.JSX.Element {
-  const genreCounts = createGenresCountMap(values);
+  const genreCounts = createGenresCountMap(values, filterValues, filterer);
 
   return (
     <AnimatedDetailsDisclosure title="Genres">
       <CheckboxListField
-        defaultValues={defaultValues}
+        defaultValues={filterValues.genres}
         label="Genres"
         onChange={(newValues) =>
           dispatch(createGenresFilterChangedAction(newValues))

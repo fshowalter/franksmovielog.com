@@ -4,8 +4,10 @@ import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/release-ye
 import { ReviewYearFacet } from "~/components/filter-and-sort/facets/review-year/ReviewYearFacet";
 import { TitleFacet } from "~/components/filter-and-sort/facets/title/TitleFacet";
 
-import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
 import type { ReviewsValue } from "./ReviewsListItem";
+import type { ReviewsAction, ReviewsFiltersValues } from "./reviewsReducer";
+
+import { filterReviews } from "./filterReviews";
 
 /**
  * Filter controls for the reviews page.
@@ -42,9 +44,10 @@ export function ReviewsFilters({
         distinctYears={distinctReleaseYears}
       />
       <GenresFacet
-        defaultValues={filterValues.genres}
         dispatch={dispatch}
         distinctGenres={distinctGenres}
+        filterer={filterReviews}
+        filterValues={filterValues}
         values={values}
       />
       <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
@@ -56,9 +59,3 @@ export function ReviewsFilters({
     </>
   );
 }
-
-/**
- * Sort options for the reviews page.
- */
-
-export { REVIEWED_TITLE_SORT_OPTIONS as SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";

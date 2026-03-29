@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
+import { PaginatedList } from "~/components/filter-and-sort/paginated-list/PaginatedList";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
@@ -8,11 +9,11 @@ import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 import type { ReviewsProps } from "./ReviewsProps";
 
 import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
-import { filterReviews } from "./filteredReviews";
-import { createInitialState, createShowMoreAction, reducer } from "./reducer";
-import { ReviewsFilters, SORT_OPTIONS } from "./ReviewsFilters";
+import { filterReviews } from "./filterReviews";
+import { ReviewsFilters } from "./ReviewsFilters";
 import { ReviewsListItem } from "./ReviewsListItem";
-import { sortReviews } from "./sortReviews";
+import { createInitialState, reducer } from "./reviewsReducer";
+import { sortOptions, sortReviews } from "./sortReviews";
 
 export function Reviews({
   distinctGenres,
@@ -64,24 +65,22 @@ export function Reviews({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        sortOptions: SORT_OPTIONS,
+        sortOptions,
       }}
       state={state}
       totalCount={totalCount}
     >
-      <div className="tablet:-mx-6 tablet:pt-10">
-        <PosterList
-          onShowMore={
-            paginatedValues.length < totalCount
-              ? (): void => dispatch(createShowMoreAction())
-              : undefined
-          }
-        >
+      <PaginatedList
+        dispatch={dispatch}
+        totalCount={totalCount}
+        visibleCount={paginatedValues.length}
+      >
+        <PosterList>
           {[...paginatedValues].map((value) => {
             return <ReviewsListItem key={value.imdbId} value={value} />;
           })}
         </PosterList>
-      </div>
+      </PaginatedList>
     </FilterAndSortContainer>
   );
 }

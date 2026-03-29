@@ -1,11 +1,13 @@
-import { createSorter } from "~/sorters/createSorter";
+import type { ViewingDateSortKeys } from "~/components/filter-and-sort/facets/viewing-date/viewingDateSort";
+
+import { createSorter } from "~/components/filter-and-sort/facets/createSorter";
 
 import type { ViewingsValue } from "./Viewings";
 
 /**
  * Sort type for viewings.
  */
-export type ViewingsSort = "viewing-date-asc" | "viewing-date-desc";
+export type ViewingsSort = ViewingDateSortKeys;
 
 /**
  * Sorter function for viewings, supporting chronological sorting by viewing date.

@@ -1,14 +1,14 @@
 import type { FilterChip } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 
-import { buildCollectionsFilterChips } from "~/components/filter-and-sort/facets/collections/collectionsFilterChips";
-import { buildDirectorsFilterChips } from "~/components/filter-and-sort/facets/directors/directorsFilterChips";
-import { buildGenresFilterChips } from "~/components/filter-and-sort/facets/genres/genresFilterChips";
-import { buildPerformersFilterChips } from "~/components/filter-and-sort/facets/performers/performersFilterChips";
-import { buildReleaseYearFilterChip } from "~/components/filter-and-sort/facets/release-year/releaseYearFilterChip";
-import { buildTitleFilterChip } from "~/components/filter-and-sort/facets/title/titleFilterChip";
-import { buildWritersFilterChips } from "~/components/filter-and-sort/facets/writers/writersFilterChips";
+import { buildCollectionsFilterChips } from "~/components/filter-and-sort/facets/collections/buildCollectionsFilterChips";
+import { buildDirectorsFilterChips } from "~/components/filter-and-sort/facets/directors/buildDirectorsFilterChips";
+import { buildGenresFilterChips } from "~/components/filter-and-sort/facets/genres/buildGenresFilterChips";
+import { buildPerformersFilterChips } from "~/components/filter-and-sort/facets/performers/buildPerformersFilterChips";
+import { buildReleaseYearFilterChip } from "~/components/filter-and-sort/facets/release-year/buildReleaseYearFilterChip";
+import { buildTitleFilterChip } from "~/components/filter-and-sort/facets/title/buildTitleFilterChip";
+import { buildWritersFilterChips } from "~/components/filter-and-sort/facets/writers/buildWritersFilterChips";
 
-import type { WatchlistFiltersValues } from "./Watchlist.reducer";
+import type { WatchlistFiltersValues } from "./watchlistReducer";
 
 export function buildAppliedFilterChips(
   filterValues: WatchlistFiltersValues,

@@ -10,7 +10,7 @@ import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type {
   CastAndCrewMemberTitlesAction,
   CastAndCrewMemberTitlesFiltersValues,
-} from "./CastAndCrewMemberTitles.reducer";
+} from "./castAndCrewMemberTitlesReducer";
 
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 
@@ -59,9 +59,10 @@ export function CastAndCrewMemberTitlesFilters({
         distinctYears={distinctReleaseYears}
       />
       <GenresFacet
-        defaultValues={filterValues.genres}
         dispatch={dispatch}
         distinctGenres={distinctGenres}
+        filterer={filterCastAndCrewMemberTitles}
+        filterValues={filterValues}
         values={values}
       />
       <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
@@ -71,8 +72,9 @@ export function CastAndCrewMemberTitlesFilters({
         distinctYears={distinctReviewYears}
       />
       <ReviewedStatusFacet
-        defaultValues={filterValues.reviewedStatus}
         dispatch={dispatch}
+        filterer={filterCastAndCrewMemberTitles}
+        filterValues={filterValues}
         values={values}
       />
     </>

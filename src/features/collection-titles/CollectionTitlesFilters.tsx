@@ -11,6 +11,8 @@ import type {
   CollectionTitlesFiltersValues,
 } from "./CollectionTitles.reducer";
 
+import { filterCollectionTitles } from "./filterCollectionTitles";
+
 /**
  * Filter controls for the collection titles page.
  * @param props - Component props
@@ -46,9 +48,10 @@ export function CollectionTitlesFilters({
         distinctYears={distinctReleaseYears}
       />
       <GenresFacet
-        defaultValues={filterValues.genres}
         dispatch={dispatch}
         distinctGenres={distinctGenres}
+        filterer={filterCollectionTitles}
+        filterValues={filterValues}
         values={values}
       />
       <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
@@ -58,8 +61,9 @@ export function CollectionTitlesFilters({
         distinctYears={distinctReviewYears}
       />
       <ReviewedStatusFacet
-        defaultValues={filterValues.reviewedStatus}
         dispatch={dispatch}
+        filterer={filterCollectionTitles}
+        filterValues={filterValues}
         values={values}
       />
     </>

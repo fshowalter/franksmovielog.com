@@ -8,23 +8,26 @@ import { createVenueFilterChangedAction } from "./venueReducer";
 
 export function VenueFacet<
   TValue extends Parameters<typeof createVenueCountMap>[0][number],
+  TFilters extends Parameters<typeof createVenueCountMap>[1],
 >({
-  defaultValues,
   dispatch,
   distinctVenues,
+  filterer,
+  filterValues,
   values,
 }: {
-  defaultValues: readonly string[] | undefined;
   dispatch: React.Dispatch<VenueFilterChangedAction>;
   distinctVenues: readonly string[];
+  filterer: (values: readonly TValue[], filters: TFilters) => TValue[];
+  filterValues: TFilters;
   values: readonly TValue[];
 }): React.JSX.Element {
-  const venueCounts = createVenueCountMap(values);
+  const venueCounts = createVenueCountMap(values, filterValues, filterer);
 
   return (
     <AnimatedDetailsDisclosure title="Venue">
       <CheckboxListField
-        defaultValues={defaultValues}
+        defaultValues={filterValues.venue}
         label="Venue"
         onChange={(values) => dispatch(createVenueFilterChangedAction(values))}
         options={distinctVenues.map((e) => ({

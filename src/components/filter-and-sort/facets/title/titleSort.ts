@@ -1,10 +1,10 @@
 import { sortString } from "~/components/filter-and-sort/facets/createSorter";
 
-type SortableByTitle = {
+export type SortableByTitle = {
   sortTitle: string;
 };
 
-type TitleSortKeys = "title-asc" | "title-desc";
+export type TitleSortKeys = "title-asc" | "title-desc";
 
 export const titleSortComparators: Record<
   TitleSortKeys,

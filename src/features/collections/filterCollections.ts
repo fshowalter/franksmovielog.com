@@ -8,7 +8,7 @@ export function filterCollections(
   sortedValues: CollectionsValue[],
   filterValues: CollectionsFiltersValues,
 ) {
-  const filters = [createNameFilter(filterValues.name)].filter(
+  const filters = [createNameFilter(filterValues)].filter(
     (f) => f !== undefined,
   );
   return filterSortedValues({ filters, sortedValues });
