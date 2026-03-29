@@ -1,7 +1,6 @@
 import { useEffect, useReducer, useRef } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
-import type { SortOption } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { useFilteredValues } from "~/hooks/useFilteredValues";
@@ -13,15 +12,10 @@ import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 import { CalendarMonth } from "./CalendarMonth";
 import { filterViewings } from "./filterViewings";
 import { MonthNavigationHeader } from "./MonthNavigationHeader";
-import { sortViewings } from "./sortViewings";
+import { sortOptions, sortViewings } from "./sortViewings";
 import { useMonthNavigation } from "./useMonthNavigation";
 import { ViewingsFilters } from "./ViewingsFilters";
 import { createInitialState, reducer } from "./viewingsReducer";
-
-const VIEWINGS_SORT_OPTIONS: readonly SortOption[] = [
-  { label: "Viewing Date (Newest First)", value: "viewing-date-desc" },
-  { label: "Viewing Date (Oldest First)", value: "viewing-date-asc" },
-] as const;
 
 /**
  * Props for the Viewings component.
@@ -131,7 +125,7 @@ export function Viewings({
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        sortOptions: VIEWINGS_SORT_OPTIONS,
+        sortOptions,
       }}
       state={state}
       totalCount={filteredValues.length}

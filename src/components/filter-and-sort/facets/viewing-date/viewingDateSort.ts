@@ -6,7 +6,7 @@ export type SortableByViewingDate = {
 
 export type ViewingDateSortKeys = "viewing-date-asc" | "viewing-date-desc";
 
-export const viewingYearSortComparators: Record<
+export const viewingDateSortComparators: Record<
   ViewingDateSortKeys,
   (a: SortableByViewingDate, b: SortableByViewingDate) => number
 > = {
@@ -14,7 +14,7 @@ export const viewingYearSortComparators: Record<
   "viewing-date-desc": (a, b) => sortString(b.sequence, a.sequence),
 };
 
-export const viewingYearSortOptions = [
+export const viewingDateSortOptions = [
   { label: "Viewing Date (Newest First)", value: "viewing-date-desc" },
   { label: "Viewing Date (Oldest First)", value: "viewing-date-asc" },
 ];

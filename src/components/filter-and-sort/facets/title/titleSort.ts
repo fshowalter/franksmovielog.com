@@ -11,7 +11,7 @@ export const titleSortComparators: Record<
   (a: SortableByTitle, b: SortableByTitle) => number
 > = {
   "title-asc": (a, b) => sortString(a.sortTitle, b.sortTitle),
-  "title-desc": (a, b) => sortString(a.sortTitle, b.sortTitle) * -1,
+  "title-desc": (a, b) => sortString(b.sortTitle, a.sortTitle),
 };
 
 export const titleSortOptions = [

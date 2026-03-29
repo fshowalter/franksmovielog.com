@@ -3,15 +3,6 @@ import type { UserEvent } from "@testing-library/user-event";
 import { screen } from "@testing-library/react";
 
 /**
- * Clicks the "Clear all filters" button in tests.
- * @param user - UserEvent instance from testing library
- * @returns Promise that resolves when click is complete
- */
-export async function clickClearFilters(user: UserEvent) {
-  return user.click(screen.getByRole("button", { name: "Clear all filters" }));
-}
-
-/**
  * Clicks the "Close filters" button to close the filter drawer.
  * @param user - UserEvent instance from testing library
  * @returns Promise that resolves when click is complete

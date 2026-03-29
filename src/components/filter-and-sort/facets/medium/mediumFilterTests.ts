@@ -17,11 +17,6 @@ type MediumFilterItem = FilterableValue & {
   title: string;
 };
 
-export async function clickMediumOption(user: UserEvent, value: string) {
-  const filter = getAnimatedDetailsDisclosureElement("Medium");
-  await clickCheckboxListFieldOption(filter, user, value);
-}
-
 /**
  * Shared test suite for the medium filter facet.
  *
@@ -119,4 +114,9 @@ export function mediumFacetTests(
       expect(within(list).getByText("Movie on DVD")).toBeInTheDocument();
     });
   });
+}
+
+async function clickMediumOption(user: UserEvent, value: string) {
+  const filter = getAnimatedDetailsDisclosureElement("Medium");
+  await clickCheckboxListFieldOption(filter, user, value);
 }

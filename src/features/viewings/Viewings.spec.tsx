@@ -1,3 +1,6 @@
+import type { UserEvent } from "@testing-library/user-event";
+
+import { screen } from "@testing-library/react";
 import { render, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
@@ -14,13 +17,6 @@ import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 import type { ViewingsProps, ViewingsValue } from "./Viewings";
 
 import { Viewings } from "./Viewings";
-import {
-  clickNextMonthButton,
-  clickPreviousMonthButton,
-  getCalendar,
-  queryNextMonthButton,
-  queryPreviousMonthButton,
-} from "./Viewings.testHelper";
 
 let testIdCounter = 0;
 
@@ -301,3 +297,55 @@ describe("Viewings", () => {
     });
   });
 });
+
+/**
+ * Clicks the next month navigation button.
+ * @param user - User event instance
+ */
+async function clickNextMonthButton(user: UserEvent): Promise<void> {
+  // Find and click the next month button first to ensure we can go back
+  const nextMonthButton = await screen.findByRole("button", {
+    name: /Navigate to next month:/,
+  });
+  await user.click(nextMonthButton);
+}
+
+/**
+ * Clicks the previous month navigation button.
+ * @param user - User event instance
+ */
+async function clickPreviousMonthButton(user: UserEvent): Promise<void> {
+  // Find and click the next month button first to ensure we can go back
+  const previousMonthButton = await screen.findByRole("button", {
+    name: /Navigate to previous month:/,
+  });
+  await user.click(previousMonthButton);
+}
+
+/**
+ * Gets the calendar element.
+ * @returns Calendar element
+ */
+function getCalendar(): HTMLElement {
+  return screen.getByTestId("calendar");
+}
+
+/**
+ * Queries for the next month button.
+ * @returns Next month button element or null
+ */
+function queryNextMonthButton(): HTMLElement | null {
+  return screen.queryByRole("button", {
+    name: /Navigate to next month:/,
+  });
+}
+
+/**
+ * Queries for the previous month button.
+ * @returns Previous month button element or null
+ */
+function queryPreviousMonthButton(): HTMLElement | null {
+  return screen.queryByRole("button", {
+    name: /Navigate to previous month:/,
+  });
+}

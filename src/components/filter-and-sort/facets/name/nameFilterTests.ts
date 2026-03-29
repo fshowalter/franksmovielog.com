@@ -8,20 +8,11 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
-import { fillTextField } from "~/components/filter-and-sort/fields/TextField.testHelper";
 import { getUserWithFakeTimers } from "~/utils/testUtils";
 
 import type { FilterableValue } from "./nameFilter";
 
 type NameFilterItem = FilterableValue;
-
-export async function fillNameFilter(user: UserEvent, value: string) {
-  await fillTextField(user, "Name", value);
-}
-
-export function getNameFilter() {
-  return screen.getByLabelText("Name");
-}
 
 export function nameFilterTests(
   renderItems: (items: NameFilterItem[]) => void,
@@ -37,7 +28,7 @@ export function nameFilterTests(
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillTextField(user, "Name", "Stoker");
+      await fillNameFilter(user, "Stoker");
       await clickViewResults(user);
 
       const list = getList();
@@ -55,7 +46,7 @@ export function nameFilterTests(
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillTextField(user, "Name", "H.");
+      await fillNameFilter(user, "H.");
       await clickViewResults(user);
 
       const list = getList();
@@ -74,7 +65,7 @@ export function nameFilterTests(
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillTextField(user, "Name", "Bram Stoker");
+      await fillNameFilter(user, "Bram Stoker");
       await clickViewResults(user);
 
       await clickToggleFilters(user);
@@ -95,7 +86,7 @@ export function nameFilterTests(
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillTextField(user, "Name", "Bram Stoker");
+      await fillNameFilter(user, "Bram Stoker");
       await clickViewResults(user);
 
       const list = getList();
@@ -127,7 +118,7 @@ export function nameFilterTests(
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillTextField(user, "Name", "Bram Stoker");
+      await fillNameFilter(user, "Bram Stoker");
       await clickViewResults(user);
 
       const list = getList();
@@ -135,11 +126,15 @@ export function nameFilterTests(
       expect(within(list).queryByText("King, Stephen")).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
-      await fillTextField(user, "Name", "Different Author");
+      await fillNameFilter(user, "Different Author");
       await clickCloseFilters(user);
 
       expect(within(list).getByText("Stoker, Bram")).toBeInTheDocument();
       expect(within(list).queryByText("King, Stephen")).not.toBeInTheDocument();
     });
   });
+}
+
+async function fillNameFilter(user: UserEvent, value: string) {
+  await fillNameFilter(user, value);
 }

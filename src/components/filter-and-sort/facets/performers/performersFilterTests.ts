@@ -15,11 +15,6 @@ import type { FilterableValue } from "./performersFilter";
 
 type PerformersFilterItem = FilterableValue & { title: string };
 
-export async function clickPerformerOption(user: UserEvent, value: string) {
-  const filter = getAnimatedDetailsDisclosureElement("Performers");
-  await clickCheckboxListFieldOption(filter, user, value);
-}
-
 /**
  * Shared performers filter facet tests.
  * @param renderItems - Renders the feature component with the given items
@@ -170,4 +165,9 @@ export function performersFilterTests(
       vi.useRealTimers();
     });
   });
+}
+
+async function clickPerformerOption(user: UserEvent, value: string) {
+  const filter = getAnimatedDetailsDisclosureElement("Performers");
+  await clickCheckboxListFieldOption(filter, user, value);
 }

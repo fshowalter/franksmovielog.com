@@ -1,18 +1,14 @@
-import type { CreditedAsFilterChangedAction } from "~/components/filter-and-sort/facets/credited-as/creditedAsReducer";
-
-import { composeReducers } from "~/components/filter-and-sort/facets/composeReducers";
-import { creditedAsFacetReducer } from "~/components/filter-and-sort/facets/credited-as/creditedAsReducer";
-import { nameFacetReducer } from "~/components/filter-and-sort/facets/name/nameReducer";
-
-export { createNameFilterChangedAction } from "~/components/filter-and-sort/facets/name/nameReducer";
-
 import type { FilterAndSortContainerAction } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import type { CreditedAsFilterChangedAction } from "~/components/filter-and-sort/facets/credited-as/creditedAsReducer";
 import type { NameFilterChangedAction } from "~/components/filter-and-sort/facets/name/nameReducer";
 
 import {
   createInitialFilterAndSortContainerState,
   filterAndSortContainerReducer,
 } from "~/components/filter-and-sort/container/filterAndSortContainerReducer";
+import { composeReducers } from "~/components/filter-and-sort/facets/composeReducers";
+import { creditedAsFacetReducer } from "~/components/filter-and-sort/facets/credited-as/creditedAsReducer";
+import { nameFacetReducer } from "~/components/filter-and-sort/facets/name/nameReducer";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewSort } from "./sortCastAndCrew";

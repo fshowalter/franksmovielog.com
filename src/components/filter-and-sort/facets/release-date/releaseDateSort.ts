@@ -13,7 +13,7 @@ export const releaseDateSortComparators: Record<
   "release-date-asc": (a, b) =>
     sortNumber(a.releaseSequence, b.releaseSequence),
   "release-date-desc": (a, b) =>
-    sortNumber(a.releaseSequence, b.releaseSequence),
+    sortNumber(b.releaseSequence, a.releaseSequence),
 };
 
 export const releaseDateSortOptions = [

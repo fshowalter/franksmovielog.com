@@ -13,7 +13,7 @@ export const nameSortComparators: Record<
   "name-asc": (a: { sortName: string }, b: { sortName: string }) =>
     sortString(a.sortName, b.sortName),
   "name-desc": (a: { sortName: string }, b: { sortName: string }) =>
-    sortString(a.sortName, b.sortName) * -1,
+    sortString(b.sortName, a.sortName),
 };
 
 export const nameSortOptions = [

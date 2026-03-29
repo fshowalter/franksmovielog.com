@@ -17,11 +17,6 @@ type CollectionsFilterItem = FilterableValue & {
   title: string;
 };
 
-export async function clickCollectionOption(user: UserEvent, value: string) {
-  const filter = getAnimatedDetailsDisclosureElement("Collections");
-  await clickCheckboxListFieldOption(filter, user, value);
-}
-
 /**
  * Shared collections filter facet tests.
  * @param renderItems - Renders the feature component with the given items
@@ -177,4 +172,9 @@ export function collectionsFilterTests(
       vi.useRealTimers();
     });
   });
+}
+
+async function clickCollectionOption(user: UserEvent, value: string) {
+  const filter = getAnimatedDetailsDisclosureElement("Collections");
+  await clickCheckboxListFieldOption(filter, user, value);
 }
