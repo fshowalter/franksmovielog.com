@@ -7,6 +7,8 @@ import type {
   CastAndCrewFiltersValues,
 } from "./CastAndCrew.reducer";
 
+import { filterCastAndCrew } from "./filterCastAndCrew";
+
 /**
  * Filter controls for the cast and crew page.
  * @param props - Component props
@@ -28,9 +30,10 @@ export function CastAndCrewFilters({
     <>
       <NameFacet defaultValue={filterValues.name} dispatch={dispatch} />
       <CreditedAsFacet
-        defaultValues={filterValues.creditedAs}
         dispatch={dispatch}
         distinctCreditKinds={["director", "performer", "writer"]}
+        filterer={filterCastAndCrew}
+        filterValues={filterValues}
         values={values}
       />
     </>

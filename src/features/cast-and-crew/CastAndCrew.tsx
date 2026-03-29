@@ -36,6 +36,7 @@ export type CastAndCrewValue = {
   name: string;
   reviewCount: number;
   slug: string;
+  sortName: string;
 };
 
 /**

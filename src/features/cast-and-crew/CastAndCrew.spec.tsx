@@ -26,6 +26,7 @@ const createMembers = (
       name,
       reviewCount: 5,
       slug: name.toLowerCase().replaceAll(/\s+/g, "-"),
+      sortName: name,
       ...override,
     };
   });

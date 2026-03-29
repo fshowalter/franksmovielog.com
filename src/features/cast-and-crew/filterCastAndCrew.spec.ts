@@ -19,6 +19,7 @@ describe("filterCastAndCrew", () => {
         name: "Christopher Nolan",
         reviewCount: 10,
         slug: "christopher-nolan",
+        sortName: "Nolan, Christopher",
       },
       {
         avatarImageProps: undefined,
@@ -26,6 +27,7 @@ describe("filterCastAndCrew", () => {
         name: "Tom Hardy",
         reviewCount: 8,
         slug: "tom-hardy",
+        sortName: "Hardy, Tom",
       },
       {
         avatarImageProps: undefined,
@@ -33,6 +35,7 @@ describe("filterCastAndCrew", () => {
         name: "Denis Villeneuve",
         reviewCount: 6,
         slug: "denis-villeneuve",
+        sortName: "Villeneuve, Denis",
       },
       {
         avatarImageProps: undefined,
@@ -40,6 +43,7 @@ describe("filterCastAndCrew", () => {
         name: "Aaron Sorkin",
         reviewCount: 4,
         slug: "aaron-sorkin",
+        sortName: "Sorkin, Aaron",
       },
       {
         avatarImageProps: undefined,
@@ -47,6 +51,7 @@ describe("filterCastAndCrew", () => {
         name: "Clint Eastwood",
         reviewCount: 12,
         slug: "clint-eastwood",
+        sortName: "Eastwood, Clint",
       },
     ];
   });
@@ -149,6 +154,7 @@ describe("calculateCreditedAsCounts", () => {
         name: "Christopher Nolan",
         reviewCount: 10,
         slug: "christopher-nolan",
+        sortName: "Nolan, Christopher",
       },
       {
         avatarImageProps: undefined,
@@ -156,6 +162,7 @@ describe("calculateCreditedAsCounts", () => {
         name: "Tom Hardy",
         reviewCount: 8,
         slug: "tom-hardy",
+        sortName: "Hardy, Tom",
       },
       {
         avatarImageProps: undefined,
@@ -163,6 +170,7 @@ describe("calculateCreditedAsCounts", () => {
         name: "Denis Villeneuve",
         reviewCount: 6,
         slug: "denis-villeneuve",
+        sortName: "Villeneuve, Denis",
       },
       {
         avatarImageProps: undefined,
@@ -170,6 +178,7 @@ describe("calculateCreditedAsCounts", () => {
         name: "Aaron Sorkin",
         reviewCount: 4,
         slug: "aaron-sorkin",
+        sortName: "Sorkin, Aaron",
       },
       {
         avatarImageProps: undefined,
@@ -177,6 +186,7 @@ describe("calculateCreditedAsCounts", () => {
         name: "Clint Eastwood",
         reviewCount: 12,
         slug: "clint-eastwood",
+        sortName: "Eastwood, Clint",
       },
     ];
   });

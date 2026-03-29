@@ -1,4 +1,5 @@
-import { filterCollections } from "~/filterers/filterCollections";
+import { createNameFilter } from "~/components/filter-and-sort/facets/name/nameFilter";
+import { filterSortedValues } from "~/filterers/filterSortedValues";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewFiltersValues } from "./CastAndCrew.reducer";
@@ -40,14 +41,15 @@ export function calculateCreditedAsCounts(
  * @returns Filtered array of cast/crew members
  */
 export function filterCastAndCrew(
-  sortedValues: CastAndCrewValue[],
+  sortedValues: readonly CastAndCrewValue[],
   filterValues: CastAndCrewFiltersValues,
 ) {
-  const extraFilters = [createCreditedAsFilter(filterValues.creditedAs)].filter(
-    (filterFn) => filterFn !== undefined,
-  );
+  const filters = [
+    createNameFilter(filterValues.name),
+    createCreditedAsFilter(filterValues.creditedAs),
+  ].filter((f) => f !== undefined);
 
-  return filterCollections(filterValues, sortedValues, extraFilters);
+  return filterSortedValues({ filters, sortedValues });
 }
 
 function createCreditedAsFilter(filterValues?: readonly string[]) {

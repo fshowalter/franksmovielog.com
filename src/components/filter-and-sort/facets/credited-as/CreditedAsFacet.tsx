@@ -9,27 +9,34 @@ import { createCreditedAsFilterChangedAction } from "./creditedAsReducer";
 
 export function CreditedAsFacet<
   TValue extends Parameters<typeof createCreditedAsCountMap>[0][number],
+  TFilters extends Parameters<typeof createCreditedAsCountMap>[1],
 >({
-  defaultValues,
   dispatch,
   distinctCreditKinds,
+  filterer,
+  filterValues,
   values,
 }: {
-  defaultValues: readonly string[] | undefined;
   dispatch: React.Dispatch<CreditedAsFilterChangedAction>;
   distinctCreditKinds: readonly string[];
+  filterer: (values: readonly TValue[], filters: TFilters) => TValue[];
+  filterValues: TFilters;
   values: readonly TValue[];
 }): React.JSX.Element | undefined {
   if (distinctCreditKinds.length < 2) {
     return undefined;
   }
 
-  const creditedAsCounts = createCreditedAsCountMap(values);
+  const creditedAsCounts = createCreditedAsCountMap(
+    values,
+    filterValues,
+    filterer,
+  );
 
   return (
     <AnimatedDetailsDisclosure title="Credited As">
       <CheckboxListField
-        defaultValues={defaultValues}
+        defaultValues={filterValues.creditedAs}
         label="Credited As"
         onChange={(newValues) =>
           dispatch(createCreditedAsFilterChangedAction(newValues))

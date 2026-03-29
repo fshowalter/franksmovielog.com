@@ -12,6 +12,8 @@ import type {
   CastAndCrewMemberTitlesFiltersValues,
 } from "./CastAndCrewMemberTitles.reducer";
 
+import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
+
 /**
  * Filter controls for cast and crew member titles page.
  * @param props - Component props
@@ -44,9 +46,10 @@ export function CastAndCrewMemberTitlesFilters({
   return (
     <>
       <CreditedAsFacet
-        defaultValues={filterValues.creditedAs}
         dispatch={dispatch}
         distinctCreditKinds={distinctCreditKinds}
+        filterer={filterCastAndCrewMemberTitles}
+        filterValues={filterValues}
         values={values}
       />
       <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />

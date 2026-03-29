@@ -1,4 +1,10 @@
-import { filterMaybeReviewedTitles } from "~/filterers/filterMaybeReviewedTitles";
+import { createGenresFilter } from "~/components/filter-and-sort/facets/genres/genresFilter";
+import { createGradeFilter } from "~/components/filter-and-sort/facets/grade/gradeFilter";
+import { createReviewYearFilter } from "~/components/filter-and-sort/facets/review-year/reviewYearFilter";
+import { createReleaseYearFilter } from "~/filterers/createReleaseYearFilter";
+import { createReviewedStatusFilter } from "~/filterers/createReviewedStatusFilter";
+import { createTitleFilter } from "~/filterers/createTitleFilter";
+import { filterSortedValues } from "~/filterers/filterSortedValues";
 
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type { CastAndCrewMemberTitlesFiltersValues } from "./CastAndCrewMemberTitles.reducer";
@@ -97,14 +103,20 @@ export function calculateReviewedStatusCounts(
  * @returns Filtered array of cast/crew member titles
  */
 export function filterCastAndCrewMemberTitles(
-  sortedValues: CastAndCrewMemberTitlesValue[],
+  sortedValues: readonly CastAndCrewMemberTitlesValue[],
   filterValues: CastAndCrewMemberTitlesFiltersValues,
 ) {
-  const extraFilters = [createCreditedAsFilter(filterValues.creditedAs)].filter(
-    (filterFn) => filterFn !== undefined,
-  );
+  const filters = [
+    createGradeFilter(filterValues.gradeValue),
+    createCreditedAsFilter(filterValues.creditedAs),
+    createTitleFilter(filterValues.title),
+    createReviewedStatusFilter(filterValues.reviewedStatus),
+    createReleaseYearFilter(filterValues.releaseYear),
+    createGenresFilter(filterValues.genres),
+    createReviewYearFilter(filterValues.reviewYear),
+  ].filter((f) => f !== undefined);
 
-  return filterMaybeReviewedTitles(filterValues, sortedValues, extraFilters);
+  return filterSortedValues({ filters, sortedValues });
 }
 
 function createCreditedAsFilter(filterValues?: readonly string[]) {
