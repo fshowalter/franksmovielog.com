@@ -1,5 +1,3 @@
-import { SideNav, SideNavLink } from "~/components/side-nav/SideNav";
-
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
@@ -11,14 +9,16 @@ import type { CastAndCrewSort } from "./sortCastAndCrew";
  * @returns Alphabet navigation component or false if not sorting by name
  */
 export function AlphabetSideNav({
+  className,
   groupedValues,
   sortValue,
 }: {
+  className?: string;
   groupedValues: Map<string, CastAndCrewValue[]>;
   sortValue: CastAndCrewSort;
-}): false | React.JSX.Element {
+}): React.JSX.Element | undefined {
   if (!sortValue.startsWith("name-")) {
-    return false;
+    return undefined;
   }
 
   const letters = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
@@ -27,20 +27,56 @@ export function AlphabetSideNav({
   }
 
   return (
-    <SideNav>
-      {letters.map((letter) => {
-        return (
-          <SideNavLink
-            key={letter}
-            linkFunc={
-              groupedValues.has(letter)
-                ? (letter: string): string => `#${letter}`
-                : undefined
-            }
-            value={letter}
-          />
-        );
-      })}
-    </SideNav>
+    <nav
+      className={`
+        sticky top-[89px] z-nav-menu scrollbar-hidden h-[calc(100vh-88px)]
+        overflow-y-auto bg-sidenav
+        tablet:top-24 tablet:h-[calc(100vh-96px)] tablet:px-4
+        laptop:top-[97px]
+        ${className ?? ""}
+      `}
+    >
+      <div className={`flex flex-col text-md font-semibold tracking-wide`}>
+        <h3
+          className={`
+            sr-only shrink-0 snap-start p-4 font-sans text-xs font-normal
+            tracking-wide whitespace-nowrap text-subtle uppercase
+          `}
+        >
+          Jump to:
+        </h3>
+        <ul className={`contents`}>
+          {letters.map((letter) => {
+            const href = groupedValues.has(letter) ? `#${letter}` : undefined;
+
+            return (
+              <li
+                className={`
+                  snap-start text-center font-light
+                  first-of-type:pt-6
+                  last-of-type:pb-6
+                  ${href ? "text-default" : `text-grey`}
+                `}
+                key={letter}
+              >
+                {href ? (
+                  <a
+                    className={`
+                      group/item block transform-gpu px-4 py-3 transition-all
+                      hover:scale-110 hover:text-emphasis
+                    `}
+                    href={href}
+                  >
+                    {letter}
+                  </a>
+                ) : (
+                  <div className={`px-4 py-3`}>{letter}</div>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </nav>
   );
 }

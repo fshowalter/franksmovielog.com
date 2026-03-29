@@ -1,5 +1,6 @@
 import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
 import { CheckboxListField } from "~/components/filter-and-sort/fields/CheckboxListField";
+import { capitalize } from "~/utils/capitalize";
 
 import type { CreditedAsFilterChangedAction } from "./creditedAsReducer";
 
@@ -35,7 +36,7 @@ export function CreditedAsFacet<
         }
         options={distinctCreditKinds.map((e) => ({
           count: creditedAsCounts.get(e) ?? 0,
-          label: e,
+          label: capitalize(e),
           value: e,
         }))}
       />

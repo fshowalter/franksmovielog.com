@@ -1,5 +1,6 @@
-import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
-import { debounceOnChange } from "~/utils/debounce";
+import { useRef } from "react";
+
+import { debounceOnChange } from "~/components/utils/debounce";
 
 /**
  * Debounce delay for text filter input in milliseconds.
@@ -28,30 +29,27 @@ export function TextField({
   onInputChange: onChangeHandler;
   placeholder: string;
 }): React.JSX.Element {
-  const debouncedHandleChange = debounceOnChange(
-    onInputChange,
-    TEXT_FILTER_DEBOUNCE_MS,
+  const debouncedHandleChangeRef = useRef(
+    debounceOnChange(onInputChange, TEXT_FILTER_DEBOUNCE_MS),
   );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newValue = (e.target as HTMLInputElement).value;
-    debouncedHandleChange(newValue); // Debounce the callback
+    debouncedHandleChangeRef.current(newValue); // Debounce the callback
   };
 
   return (
-    <AnimatedDetailsDisclosure title={label}>
-      <input
-        aria-label={label}
-        className={`
-          w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all
-          outline-accent
-          placeholder:text-default placeholder:opacity-50
-        `}
-        defaultValue={defaultValue}
-        onChange={handleChange}
-        placeholder={placeholder}
-        type="text"
-      />
-    </AnimatedDetailsDisclosure>
+    <input
+      aria-label={label}
+      className={`
+        w-full border-0 bg-default px-4 py-2 text-base text-default shadow-all
+        outline-accent
+        placeholder:text-default placeholder:opacity-50
+      `}
+      defaultValue={defaultValue}
+      onChange={handleChange}
+      placeholder={placeholder}
+      type="text"
+    />
   );
 }

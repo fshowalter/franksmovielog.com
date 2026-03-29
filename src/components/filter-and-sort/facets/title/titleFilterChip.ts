@@ -5,5 +5,5 @@ import { buildSearchChip } from "~/components/filter-and-sort/facets/filterChipB
 import { STATE_KEY } from "./titleReducer";
 
 export function buildTitleFilterChip(title: string | undefined): FilterChip[] {
-  return buildSearchChip({ key: STATE_KEY, value: title });
+  return buildSearchChip({ key: STATE_KEY, label: "Title", value: title });
 }

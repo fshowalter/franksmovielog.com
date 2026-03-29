@@ -28,16 +28,18 @@ export function buildMultiSelectChips({
  */
 export function buildSearchChip({
   key,
+  label,
   value,
 }: {
   key: string;
+  label: string;
   value: string | undefined;
 }): FilterChip[] {
   const trimmed = value?.trim();
   if (!trimmed) return [];
   return [
     {
-      displayText: `Search: ${trimmed}`,
+      displayText: `${label}: ${trimmed}`,
       key,
       value: undefined,
     },

@@ -76,6 +76,10 @@ export function CastAndCrew({
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
+  const sideNav = state.sort.startsWith("name-") ? (
+    <AlphabetSideNav groupedValues={groupedValues} sortValue={state.sort} />
+  ) : undefined;
+
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
@@ -88,9 +92,7 @@ export function CastAndCrew({
         />
       }
       pendingFilteredCount={pendingFilteredCount}
-      sideNav={
-        <AlphabetSideNav groupedValues={groupedValues} sortValue={state.sort} />
-      }
+      sideNav={sideNav}
       sortProps={{
         currentSortValue: state.sort,
         sortOptions: COLLECTION_SORT_OPTIONS,
@@ -98,14 +100,16 @@ export function CastAndCrew({
       state={state}
       totalCount={totalCount}
     >
-      <GroupedAvatarList
-        groupedValues={groupedValues}
-        groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)]`}
-      >
-        {(value) => {
-          return <CastAndCrewListItem key={value.name} value={value} />;
-        }}
-      </GroupedAvatarList>
+      <div className={sideNav ? "" : "w-full"}>
+        <GroupedAvatarList
+          groupedValues={groupedValues}
+          groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)]`}
+        >
+          {(value) => {
+            return <CastAndCrewListItem key={value.name} value={value} />;
+          }}
+        </GroupedAvatarList>
+      </div>
     </FilterAndSortContainer>
   );
 }

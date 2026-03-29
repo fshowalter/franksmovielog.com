@@ -7,6 +7,7 @@ import { STATE_KEY } from "./nameReducer";
 export function buildNameFilterChip(name: string | undefined): FilterChip[] {
   return buildSearchChip({
     key: STATE_KEY,
+    label: "Name",
     value: name,
   });
 }
