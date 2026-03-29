@@ -49,9 +49,7 @@ export function mediumFacetTests(
       const list = getList();
       expect(within(list).getByText("Movie on Blu-ray")).toBeInTheDocument();
       expect(within(list).queryByText("Movie on DVD")).not.toBeInTheDocument();
-      expect(
-        within(list).queryByText("Digital Movie"),
-      ).not.toBeInTheDocument();
+      expect(within(list).queryByText("Digital Movie")).not.toBeInTheDocument();
     });
 
     it("filters to multiple mediums (OR logic)", async ({ expect }) => {
@@ -70,9 +68,7 @@ export function mediumFacetTests(
       const list = getList();
       expect(within(list).getByText("Movie on Blu-ray")).toBeInTheDocument();
       expect(within(list).getByText("Movie on DVD")).toBeInTheDocument();
-      expect(
-        within(list).queryByText("Digital Movie"),
-      ).not.toBeInTheDocument();
+      expect(within(list).queryByText("Digital Movie")).not.toBeInTheDocument();
     });
 
     it("shows medium chip after applying", async ({ expect }) => {
