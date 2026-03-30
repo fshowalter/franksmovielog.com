@@ -7,5 +7,5 @@ export function createNameFilter<TValue extends FilterableValue>(
   const filterValue = filters.name;
   if (!filterValue) return;
   return (value: TValue): boolean =>
-    value.name.toLocaleLowerCase().includes(filterValue);
+    value.name.toLocaleLowerCase().includes(filterValue.toLocaleLowerCase());
 }

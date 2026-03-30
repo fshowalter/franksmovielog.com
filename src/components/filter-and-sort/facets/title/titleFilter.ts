@@ -7,5 +7,5 @@ export function createTitleFilter<TValue extends FilterableValue>(
   const filterValue = filters.title;
   if (!filterValue) return;
   return (value: TValue): boolean =>
-    value.title.toLocaleLowerCase().includes(filterValue);
+    value.title.toLocaleLowerCase().includes(filterValue.toLocaleLowerCase());
 }
