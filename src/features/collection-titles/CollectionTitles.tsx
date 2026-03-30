@@ -1,29 +1,22 @@
 import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
+import type { GradeText, GradeValue } from "~/utils/grades";
 
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
+import { PaginatedList } from "~/components/filter-and-sort/paginated-list/PaginatedList";
 import { PosterList } from "~/components/poster-list/PosterList";
+import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionTitlesSort } from "./sortCollectionTitles";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  createSortAction,
-  reducer,
-  selectHasPendingFilters,
-} from "./CollectionTitles.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
+import { createInitialState, reducer } from "./CollectionTitles.reducer";
 import { CollectionTitlesFilters } from "./CollectionTitlesFilters";
 import { CollectionTitlesListItem } from "./CollectionTitlesListItem";
 import { filterCollectionTitles } from "./filterCollectionTitles";
-import { sortCollectionTitles } from "./sortCollectionTitles";
+import { sortCollectionTitles, sortOptions } from "./sortCollectionTitles";
 
 /**
  * Props for the CollectionTitles component.
@@ -41,8 +34,8 @@ export type CollectionTitlesProps = {
  */
 export type CollectionTitlesValue = {
   genres: string[];
-  grade: string | undefined;
-  gradeValue: number | undefined;
+  grade: GradeText | undefined;
+  gradeValue: GradeValue | undefined;
   imdbId: string;
   posterImageProps: PosterImageProps;
   releaseSequence: number;
@@ -81,11 +74,13 @@ export function CollectionTitles({
     createInitialState,
   );
 
-  const sortedValues = sortCollectionTitles(state.values, state.sort);
-
-  const filteredValues = filterCollectionTitles(
-    sortedValues,
+  const [paginatedValues, totalCount] = usePaginatedValues(
+    sortCollectionTitles,
+    filterCollectionTitles,
+    state.values,
+    state.sort,
     state.activeFilterValues,
+    state.showCount,
   );
 
   const pendingFilteredCount = usePendingFilterCount(
@@ -94,17 +89,13 @@ export function CollectionTitles({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
-  const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
-    distinctReleaseYears,
-    distinctReviewYears,
-  });
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      dispatch={dispatch}
       filters={
         <CollectionTitlesFilters
           dispatch={dispatch}
@@ -115,35 +106,27 @@ export function CollectionTitles({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={(filterId) =>
-        dispatch(createRemoveAppliedFilterAction(filterId))
-      }
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
+        sortOptions,
       }}
-      totalCount={filteredValues.length}
+      state={state}
+      totalCount={totalCount}
     >
-      <div className="tablet:-mx-6 tablet:pt-10">
+      <PaginatedList
+        dispatch={dispatch}
+        totalCount={totalCount}
+        visibleCount={state.showCount}
+      >
         <PosterList>
-          {[...filteredValues].map((value) => {
+          {[...paginatedValues].map((value) => {
             return (
               <CollectionTitlesListItem key={value.imdbId} value={value} />
             );
           })}
         </PosterList>
-      </div>
+      </PaginatedList>
     </FilterAndSortContainer>
   );
 }

@@ -1,36 +1,21 @@
 import { useEffect, useReducer, useRef } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
-import type { SortOption } from "~/components/filter-and-sort/FilterAndSortContainer";
 
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { useFilteredValues } from "~/hooks/useFilteredValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { ViewingsSort } from "./sortViewings";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 import { CalendarMonth } from "./CalendarMonth";
 import { filterViewings } from "./filterViewings";
 import { MonthNavigationHeader } from "./MonthNavigationHeader";
-import { sortViewings } from "./sortViewings";
+import { sortOptions, sortViewings } from "./sortViewings";
 import { useMonthNavigation } from "./useMonthNavigation";
-import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  createSortAction,
-  reducer,
-  selectHasPendingFilters,
-} from "./Viewings.reducer";
 import { ViewingsFilters } from "./ViewingsFilters";
-
-const VIEWINGS_SORT_OPTIONS: readonly SortOption[] = [
-  { label: "Viewing Date (Newest First)", value: "viewing-date-desc" },
-  { label: "Viewing Date (Oldest First)", value: "viewing-date-asc" },
-] as const;
+import { createInitialState, reducer } from "./viewingsReducer";
 
 /**
  * Props for the Viewings component.
@@ -49,14 +34,14 @@ export type ViewingsProps = {
  */
 export type ViewingsValue = {
   date: string; // Full date string YYYY-MM-DD
-  medium?: string;
+  medium: string | undefined;
   posterImageProps: PosterImageProps;
   releaseYear: string;
-  reviewSlug?: string;
+  reviewSlug: string | undefined;
   sequence: string;
   sortTitle: string;
   title: string;
-  venue?: string;
+  venue: string | undefined;
   viewingYear: string;
 };
 
@@ -115,13 +100,8 @@ export function Viewings({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
-  const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
-    distinctReleaseYears,
-    distinctViewingYears,
-  });
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   const [previousMonthDate, currentMonthDate, nextMonthDate] =
     useMonthNavigation(filteredValues, state.sort, state.selectedMonthDate);
@@ -129,6 +109,7 @@ export function Viewings({
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      dispatch={dispatch}
       filters={
         <ViewingsFilters
           dispatch={dispatch}
@@ -140,25 +121,13 @@ export function Viewings({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
       headerLink={{ href: "/viewings/stats/", text: "stats" }}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => {
-        dispatch(createResetFiltersAction());
-      }}
-      onRemoveFilter={(filterKey) => {
-        dispatch(createRemoveAppliedFilterAction(filterKey));
-      }}
-      onResetFilters={() => dispatch(createResetFiltersAction())}
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: VIEWINGS_SORT_OPTIONS,
+        sortOptions,
       }}
+      state={state}
       totalCount={filteredValues.length}
     >
       {currentMonthDate ? (

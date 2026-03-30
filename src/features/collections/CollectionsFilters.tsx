@@ -1,11 +1,9 @@
-import { CollectionFilters } from "~/components/filter-and-sort/CollectionFilters";
+import { NameFacet } from "~/components/filter-and-sort/facets/name/NameFacet";
 
 import type {
   CollectionsAction,
   CollectionsFiltersValues,
 } from "./Collections.reducer";
-
-import { createNameFilterChangedAction } from "./Collections.reducer";
 
 /**
  * Filter controls for the collections page.
@@ -21,12 +19,5 @@ export function CollectionsFilters({
   dispatch: React.Dispatch<CollectionsAction>;
   filterValues: CollectionsFiltersValues;
 }): React.JSX.Element {
-  return (
-    <CollectionFilters
-      name={{
-        defaultValue: filterValues.name,
-        onChange: (value) => dispatch(createNameFilterChangedAction(value)),
-      }}
-    />
-  );
+  return <NameFacet defaultValue={filterValues.name} dispatch={dispatch} />;
 }

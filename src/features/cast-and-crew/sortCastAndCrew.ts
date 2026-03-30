@@ -1,18 +1,23 @@
-import type { CollectionSort } from "~/sorters/createCollectionSorter";
+import type { NameSortKeys } from "~/components/filter-and-sort/facets/name/nameSort";
+import type { ReviewCountSortKeys } from "~/components/filter-and-sort/facets/review-count/reviewCountSort";
 
-import { createCollectionSorter } from "~/sorters/createCollectionSorter";
+import { createSorter } from "~/components/filter-and-sort/facets/createSorter";
+import {
+  nameSortComparators,
+  nameSortOptions,
+} from "~/components/filter-and-sort/facets/name/nameSort";
+import {
+  reviewCountSortComparators,
+  reviewCountSortOptions,
+} from "~/components/filter-and-sort/facets/review-count/reviewCountSort";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 
-/**
- * Sort type for cast and crew.
- */
-export type CastAndCrewSort = CollectionSort;
+export type CastAndCrewSort = NameSortKeys | ReviewCountSortKeys;
 
-/**
- * Sorter function for cast and crew members, supporting name and review count sorting.
- */
-export const sortCastAndCrew = createCollectionSorter<
-  CastAndCrewValue,
-  CastAndCrewSort
->();
+export const sortCastAndCrew = createSorter<CastAndCrewValue, CastAndCrewSort>({
+  ...nameSortComparators,
+  ...reviewCountSortComparators,
+});
+
+export const sortOptions = [...nameSortOptions, ...reviewCountSortOptions];

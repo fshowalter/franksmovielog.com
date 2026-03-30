@@ -1,29 +1,25 @@
 import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
+import type { GradeText, GradeValue } from "~/utils/grades";
 
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { REVIEWED_TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
+import { PaginatedList } from "~/components/filter-and-sort/paginated-list/PaginatedList";
 import { PosterList } from "~/components/poster-list/PosterList";
+import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewMemberTitlesSort } from "./sortCastAndCrewMemberTitles";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  createSortAction,
-  reducer,
-  selectHasPendingFilters,
-} from "./CastAndCrewMemberTitles.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 import { CastAndCrewMemberTitlesFilters } from "./CastAndCrewMemberTitlesFilters";
 import { CastAndCrewMemberTitlesListItem } from "./CastAndCrewMemberTitlesListItem";
+import { createInitialState, reducer } from "./castAndCrewMemberTitlesReducer";
 import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
-import { sortCastAndCrewMemberTitles } from "./sortCastAndCrewMemberTitles";
+import {
+  sortCastAndCrewMemberTitles,
+  sortOptions,
+} from "./sortCastAndCrewMemberTitles";
 
 /**
  * Props for the CastAndCrewMemberTitles component.
@@ -43,8 +39,8 @@ export type CastAndCrewMemberTitlesProps = {
 export type CastAndCrewMemberTitlesValue = {
   creditedAs: string[];
   genres: string[];
-  grade: string | undefined;
-  gradeValue: number | undefined;
+  grade: GradeText | undefined;
+  gradeValue: GradeValue | undefined;
   imdbId: string;
   posterImageProps: PosterImageProps;
   releaseSequence: number;
@@ -83,10 +79,13 @@ export function CastAndCrewMemberTitles({
     createInitialState,
   );
 
-  const sortedValues = sortCastAndCrewMemberTitles(state.values, state.sort);
-  const filteredValues = filterCastAndCrewMemberTitles(
-    sortedValues,
+  const [paginatedValues, totalCount] = usePaginatedValues(
+    sortCastAndCrewMemberTitles,
+    filterCastAndCrewMemberTitles,
+    state.values,
+    state.sort,
     state.activeFilterValues,
+    state.showCount,
   );
 
   const pendingFilteredCount = usePendingFilterCount(
@@ -95,15 +94,11 @@ export function CastAndCrewMemberTitles({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   return (
     <FilterAndSortContainer
-      activeFilters={buildAppliedFilterChips(state.activeFilterValues, {
-        distinctReleaseYears,
-        distinctReviewYears,
-      })}
+      activeFilters={buildAppliedFilterChips(state.activeFilterValues)}
+      dispatch={dispatch}
       filters={
         <CastAndCrewMemberTitlesFilters
           dispatch={dispatch}
@@ -115,29 +110,21 @@ export function CastAndCrewMemberTitles({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={(filterId) =>
-        dispatch(createRemoveAppliedFilterAction(filterId))
-      }
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: REVIEWED_TITLE_SORT_OPTIONS,
+        sortOptions,
       }}
-      totalCount={filteredValues.length}
+      state={state}
+      totalCount={totalCount}
     >
-      <div className="tablet:-mx-6 tablet:pt-10">
+      <PaginatedList
+        dispatch={dispatch}
+        totalCount={totalCount}
+        visibleCount={state.showCount}
+      >
         <PosterList>
-          {[...filteredValues].map((value) => {
+          {[...paginatedValues].map((value) => {
             return (
               <CastAndCrewMemberTitlesListItem
                 key={value.imdbId}
@@ -146,7 +133,7 @@ export function CastAndCrewMemberTitles({
             );
           })}
         </PosterList>
-      </div>
+      </PaginatedList>
     </FilterAndSortContainer>
   );
 }

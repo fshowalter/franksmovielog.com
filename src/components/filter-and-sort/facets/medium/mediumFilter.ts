@@ -1,0 +1,34 @@
+export type FilterableValue = { medium: string | undefined };
+type Filters = { medium?: readonly string[] };
+
+export function createMediumCountMap<
+  TValue extends FilterableValue,
+  TFilters extends Filters,
+>(
+  values: readonly TValue[],
+  filters: TFilters,
+  filterer: (values: readonly TValue[], filters: TFilters) => TValue[],
+): Map<string, number> {
+  // Apply all filters EXCEPT this one
+  const otherFilters = { ...filters, medium: undefined };
+  const filtered = filterer(values, otherFilters);
+
+  const counts = new Map<string, number>();
+  for (const value of filtered) {
+    if (!value.medium) {
+      continue;
+    }
+    counts.set(value.medium, (counts.get(value.medium) ?? 0) + 1);
+  }
+
+  return counts;
+}
+
+export function createMediumFilter<TValue extends FilterableValue>(
+  filters: Filters,
+) {
+  const filterValue = filters.medium;
+  if (!filterValue || filterValue.length === 0) return;
+  return (value: TValue) =>
+    value.medium ? filterValue.includes(value.medium) : false;
+}

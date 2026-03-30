@@ -1,27 +1,18 @@
-import { CreditedAsFilter } from "~/components/filter-and-sort/CreditedAsFilter";
-import { MaybeReviewedTitleFilters } from "~/components/filter-and-sort/MaybeReviewedTitleFilters";
+import { CreditedAsFacet } from "~/components/filter-and-sort/facets/credited-as/CreditedAsFacet";
+import { GenresFacet } from "~/components/filter-and-sort/facets/genres/GenresFacet";
+import { GradeFacet } from "~/components/filter-and-sort/facets/grade/GradeFacet";
+import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/release-year/ReleaseYearFacet";
+import { ReviewYearFacet } from "~/components/filter-and-sort/facets/review-year/ReviewYearFacet";
+import { ReviewedStatusFacet } from "~/components/filter-and-sort/facets/reviewed-status/ReviewedStatusFacet";
+import { TitleFacet } from "~/components/filter-and-sort/facets/title/TitleFacet";
 
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 import type {
   CastAndCrewMemberTitlesAction,
   CastAndCrewMemberTitlesFiltersValues,
-} from "./CastAndCrewMemberTitles.reducer";
+} from "./castAndCrewMemberTitlesReducer";
 
-import {
-  createCreditedAsFilterChangedAction,
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
-  createRemoveAppliedFilterAction,
-  createReviewedStatusFilterChangedAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
-} from "./CastAndCrewMemberTitles.reducer";
-import {
-  calculateCreditedAsCounts,
-  calculateGenreCounts,
-  calculateReviewedStatusCounts,
-} from "./filterCastAndCrewMemberTitles";
+import { filterCastAndCrewMemberTitles } from "./filterCastAndCrewMemberTitles";
 
 /**
  * Filter controls for cast and crew member titles page.
@@ -52,77 +43,39 @@ export function CastAndCrewMemberTitlesFilters({
   filterValues: CastAndCrewMemberTitlesFiltersValues;
   values: CastAndCrewMemberTitlesValue[];
 }): React.JSX.Element {
-  // Calculate genre counts based on current filters
-  const genreCounts = calculateGenreCounts(values, filterValues);
-
-  // Calculate reviewed status counts dynamically
-  const reviewedStatusCounts = calculateReviewedStatusCounts(
-    values,
-    filterValues,
-  );
-
-  // Calculate credited as counts dynamically
-  const creditedAsCounts = calculateCreditedAsCounts(values, filterValues);
-
   return (
     <>
-      {distinctCreditKinds.length > 1 && (
-        <CreditedAsFilter
-          counts={creditedAsCounts}
-          defaultValues={filterValues.creditedAs ?? []}
-          onChange={(values) =>
-            dispatch(createCreditedAsFilterChangedAction(values))
-          }
-          onClear={() =>
-            dispatch(createRemoveAppliedFilterAction("creditedAs"))
-          }
-          values={distinctCreditKinds}
-        />
-      )}
-      <MaybeReviewedTitleFilters
-        genres={{
-          counts: genreCounts,
-          defaultValues: filterValues.genres,
-          onChange: (values) =>
-            dispatch(createGenresFilterChangedAction(values)),
-          onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
-          values: distinctGenres,
-        }}
-        grade={{
-          defaultValues: filterValues.gradeValue,
-          onChange: (values) =>
-            dispatch(createGradeFilterChangedAction(values)),
-          onClear: () =>
-            dispatch(createRemoveAppliedFilterAction("gradeValue")),
-        }}
-        releaseYear={{
-          defaultValues: filterValues.releaseYear,
-          onChange: (values) =>
-            dispatch(createReleaseYearFilterChangedAction(values)),
-          onClear: () =>
-            dispatch(createRemoveAppliedFilterAction("releaseYear")),
-          values: distinctReleaseYears,
-        }}
-        reviewedStatus={{
-          counts: reviewedStatusCounts,
-          defaultValues: filterValues.reviewedStatus,
-          onChange: (values) =>
-            dispatch(createReviewedStatusFilterChangedAction(values)),
-          onClear: () =>
-            dispatch(createRemoveAppliedFilterAction("reviewedStatus")),
-        }}
-        reviewYear={{
-          defaultValues: filterValues.reviewYear,
-          onChange: (values) =>
-            dispatch(createReviewYearFilterChangedAction(values)),
-          onClear: () =>
-            dispatch(createRemoveAppliedFilterAction("reviewYear")),
-          values: distinctReviewYears,
-        }}
-        title={{
-          defaultValue: filterValues.title,
-          onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
-        }}
+      <CreditedAsFacet
+        dispatch={dispatch}
+        distinctCreditKinds={distinctCreditKinds}
+        filterer={filterCastAndCrewMemberTitles}
+        filterValues={filterValues}
+        values={values}
+      />
+      <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />
+      <ReleaseYearFacet
+        defaultValues={filterValues.releaseYear}
+        dispatch={dispatch}
+        distinctYears={distinctReleaseYears}
+      />
+      <GenresFacet
+        dispatch={dispatch}
+        distinctGenres={distinctGenres}
+        filterer={filterCastAndCrewMemberTitles}
+        filterValues={filterValues}
+        values={values}
+      />
+      <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
+      <ReviewYearFacet
+        defaultValues={filterValues.reviewYear}
+        dispatch={dispatch}
+        distinctYears={distinctReviewYears}
+      />
+      <ReviewedStatusFacet
+        dispatch={dispatch}
+        filterer={filterCastAndCrewMemberTitles}
+        filterValues={filterValues}
+        values={values}
       />
     </>
   );

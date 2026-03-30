@@ -4,6 +4,8 @@ import { z } from "astro/zod";
 import { defineCollection, reference } from "astro:content";
 import path from "node:path";
 
+import { GRADE_VALUES, GRADES, gradeToValue } from "~/utils/grades";
+
 import { CONTENT_ROOT } from "./contentRoot";
 import { loadJsonDirectory } from "./utils/loadJsonDirectory";
 
@@ -27,7 +29,8 @@ const ReviewedTitleSchema = z
     countries: z.array(z.string()),
     directorNames: z.array(z.string()),
     genres: z.array(z.string()),
-    grade: z.string(),
+    grade: z.enum(GRADES),
+    gradeValue: z.literal(GRADE_VALUES),
     imdbId: z.string(),
     moreCastAndCrew: z.array(MoreCastAndCrewMemberSchema),
     moreCollections: z.array(MoreCollectionsSchema),
@@ -52,6 +55,7 @@ const ReviewedTitleSchema = z
       directorNames,
       genres,
       grade,
+      gradeValue,
       imdbId,
       moreCastAndCrew,
       moreCollections,
@@ -74,6 +78,7 @@ const ReviewedTitleSchema = z
         directorNames,
         genres,
         grade,
+        gradeValue,
         imdbId,
         moreCastAndCrew,
         moreCollections,
@@ -93,10 +98,21 @@ const ReviewedTitleSchema = z
     },
   );
 
+const ReviewTitleGradeSchema = z.object({
+  grade: z.enum(GRADES),
+});
+
 export const reviewedTitles = defineCollection({
   loader: {
     load: (loaderContext: LoaderContext) =>
       loadJsonDirectory({
+        buildData: ({ raw }) => {
+          const { grade } = ReviewTitleGradeSchema.parse(raw);
+
+          raw["gradeValue"] = gradeToValue(grade);
+
+          return raw;
+        },
         directoryPath: path.join(CONTENT_ROOT, "data", "reviewed-titles"),
         getId: (raw) => raw.review as string,
         loaderContext,

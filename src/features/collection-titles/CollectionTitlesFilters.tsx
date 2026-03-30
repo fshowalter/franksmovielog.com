@@ -1,4 +1,9 @@
-import { MaybeReviewedTitleFilters } from "~/components/filter-and-sort/MaybeReviewedTitleFilters";
+import { GenresFacet } from "~/components/filter-and-sort/facets/genres/GenresFacet";
+import { GradeFacet } from "~/components/filter-and-sort/facets/grade/GradeFacet";
+import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/release-year/ReleaseYearFacet";
+import { ReviewYearFacet } from "~/components/filter-and-sort/facets/review-year/ReviewYearFacet";
+import { ReviewedStatusFacet } from "~/components/filter-and-sort/facets/reviewed-status/ReviewedStatusFacet";
+import { TitleFacet } from "~/components/filter-and-sort/facets/title/TitleFacet";
 
 import type { CollectionTitlesValue } from "./CollectionTitles";
 import type {
@@ -6,19 +11,7 @@ import type {
   CollectionTitlesFiltersValues,
 } from "./CollectionTitles.reducer";
 
-import {
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
-  createRemoveAppliedFilterAction,
-  createReviewedStatusFilterChangedAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
-} from "./CollectionTitles.reducer";
-import {
-  calculateGenreCounts,
-  calculateReviewedStatusCounts,
-} from "./filterCollectionTitles";
+import { filterCollectionTitles } from "./filterCollectionTitles";
 
 /**
  * Filter controls for the collection titles page.
@@ -44,58 +37,35 @@ export function CollectionTitlesFilters({
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   filterValues: CollectionTitlesFiltersValues;
-  values?: CollectionTitlesValue[];
+  values: CollectionTitlesValue[];
 }): React.JSX.Element {
-  // Calculate genre counts dynamically (respects all non-genre filters)
-  const genreCounts = values
-    ? calculateGenreCounts(values, filterValues)
-    : undefined;
-
-  // Calculate reviewed status counts dynamically
-  const reviewedStatusCounts = values
-    ? calculateReviewedStatusCounts(values, filterValues)
-    : undefined;
-
   return (
-    <MaybeReviewedTitleFilters
-      genres={{
-        counts: genreCounts,
-        defaultValues: filterValues.genres,
-        onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
-        values: distinctGenres,
-      }}
-      grade={{
-        defaultValues: filterValues.gradeValue,
-        onChange: (values) => dispatch(createGradeFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("gradeValue")),
-      }}
-      releaseYear={{
-        defaultValues: filterValues.releaseYear,
-        onChange: (values) =>
-          dispatch(createReleaseYearFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("releaseYear")),
-        values: distinctReleaseYears,
-      }}
-      reviewedStatus={{
-        counts: reviewedStatusCounts,
-        defaultValues: filterValues.reviewedStatus,
-        onChange: (values) =>
-          dispatch(createReviewedStatusFilterChangedAction(values)),
-        onClear: () =>
-          dispatch(createRemoveAppliedFilterAction("reviewedStatus")),
-      }}
-      reviewYear={{
-        defaultValues: filterValues.reviewYear,
-        onChange: (values) =>
-          dispatch(createReviewYearFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("reviewYear")),
-        values: distinctReviewYears,
-      }}
-      title={{
-        defaultValue: filterValues.title,
-        onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
-      }}
-    />
+    <>
+      <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />
+      <ReleaseYearFacet
+        defaultValues={filterValues.releaseYear}
+        dispatch={dispatch}
+        distinctYears={distinctReleaseYears}
+      />
+      <GenresFacet
+        dispatch={dispatch}
+        distinctGenres={distinctGenres}
+        filterer={filterCollectionTitles}
+        filterValues={filterValues}
+        values={values}
+      />
+      <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
+      <ReviewYearFacet
+        defaultValues={filterValues.reviewYear}
+        dispatch={dispatch}
+        distinctYears={distinctReviewYears}
+      />
+      <ReviewedStatusFacet
+        dispatch={dispatch}
+        filterer={filterCollectionTitles}
+        filterValues={filterValues}
+        values={values}
+      />
+    </>
   );
 }

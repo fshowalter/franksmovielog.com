@@ -1,9 +1,9 @@
-import type { ViewingsAction } from "./Viewings.reducer";
+import type { ViewingsAction } from "./viewingsReducer";
 
 import {
   createNextMonthClickedAction,
   createPreviousMonthClickedAction,
-} from "./Viewings.reducer";
+} from "./viewingsReducer";
 
 /**
  * Header component for calendar month navigation.

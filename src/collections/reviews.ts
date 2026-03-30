@@ -7,6 +7,8 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import remarkRehype from "remark-rehype";
 
+import { GRADE_VALUES, GRADES, gradeToValue } from "~/utils/grades";
+
 import { CONTENT_ROOT } from "./contentRoot";
 import { getBaseMarkdownProcessor } from "./utils/getBaseMarkdownProcessor";
 import { loadMarkdownDirectory } from "./utils/loadMarkdownDirectory";
@@ -35,11 +37,16 @@ const ReviewSchema = z.object({
   date: z.coerce.date(),
   description: z.string(),
   excerptHtml: z.string(),
-  grade: z.string(),
+  grade: z.enum(GRADES),
+  gradeValue: z.literal(GRADE_VALUES),
   html: z.string(),
   reviewedTitle: reference("reviewedTitles"),
   slug: z.string(),
   synopsis: z.optional(z.string()),
+});
+
+const ReviewFrontmatterSchema = z.object({
+  grade: z.enum(GRADES),
 });
 
 export const reviews = defineCollection({
@@ -47,12 +54,14 @@ export const reviews = defineCollection({
     load: (loaderContext: LoaderContext) =>
       loadMarkdownDirectory({
         buildData: ({ body, frontmatter }) => {
+          const { grade } = ReviewFrontmatterSchema.parse(frontmatter);
           return {
             body,
             date: frontmatter.date,
             description: markdownToDescription(body),
             excerptHtml: parseExcerpt(frontmatter, body),
-            grade: frontmatter.grade as string,
+            grade: grade,
+            gradeValue: gradeToValue(grade),
             html: markdownToHtml(body),
             reviewedTitle: frontmatter.slug as string,
             slug: frontmatter.slug as string,

@@ -1,37 +1,23 @@
-import { render, waitFor, within } from "@testing-library/react";
+import type { UserEvent } from "@testing-library/user-event";
+
+import { screen } from "@testing-library/react";
+import { render, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import {
-  clickClearFilters,
-  clickCloseFilters,
-  clickSortOption,
-  clickToggleFilters,
-  clickViewResults,
-} from "~/components/filter-and-sort/FilterAndSortContainer.testHelper";
-import { clickReviewedStatusFilterOption } from "~/components/filter-and-sort/ReviewedStatusFilter.testHelper";
-import {
-  fillReleaseYearFilter,
-  fillTitleFilter,
-  getTitleFilter,
-} from "~/components/filter-and-sort/TitleFilters.testHelper";
+import { clickSortOption } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
+import { mediumFacetTests } from "~/components/filter-and-sort/facets/medium/mediumFilterTests";
+import { releaseYearFilterTests } from "~/components/filter-and-sort/facets/release-year/releaseYearFilterTests";
+import { reviewedStatusFilterTests } from "~/components/filter-and-sort/facets/reviewed-status/reviewedStatusFilterTests";
+import { titleFilterTests } from "~/components/filter-and-sort/facets/title/titleFilterTests";
+import { venueFilterTests } from "~/components/filter-and-sort/facets/venue/venueFilterTests";
+import { viewingDateFacetTests } from "~/components/filter-and-sort/facets/viewing-date/viewingDateSortTests";
+import { viewingYearFilterTests } from "~/components/filter-and-sort/facets/viewing-year/viewingYearFilterTests";
 import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { ViewingsProps, ViewingsValue } from "./Viewings";
 
 import { Viewings } from "./Viewings";
-import {
-  clickMediumFilterOption,
-  clickNextMonthButton,
-  clickPreviousMonthButton,
-  clickVenueFilterOption,
-  fillViewingYearFilter,
-  getCalendar,
-  getMediumFilter,
-  queryNextMonthButton,
-  queryPreviousMonthButton,
-} from "./Viewings.testHelper";
 
-// Test helpers
 let testIdCounter = 0;
 
 function createViewingValue(
@@ -64,7 +50,7 @@ function resetTestIdCounter(): void {
 const createProps = (
   overrides: Partial<ViewingsProps> = {},
 ): ViewingsProps => ({
-  distinctMedia: ["All", "Blu-ray", "DVD", "4K UHD", "35mm", "DCP"],
+  distinctMedia: ["All", "Blu-ray", "DVD", "4K UHD", "35mm", "DCP", "Digital"],
   distinctReleaseYears: [
     "1950",
     "1960",
@@ -78,8 +64,9 @@ const createProps = (
   distinctVenues: [
     "All",
     "Home",
-    "Alamo Drafthouse Cinema - One Loudoun",
     "Theater",
+    "Drive-In",
+    "Alamo Drafthouse Cinema - One Loudoun",
   ],
   distinctViewingYears: [
     "2012",
@@ -108,303 +95,95 @@ describe("Viewings", () => {
     vi.useRealTimers();
   });
 
-  describe("filtering", () => {
-    it("filters by title", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          date: "2024-01-15",
-          title: "The Curse of Frankenstein",
-        }),
-        createViewingValue({
-          date: "2024-01-16",
-          title: "Curse of the Demon",
-        }),
-        createViewingValue({
-          date: "2024-01-17",
-          title: "The Thing",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "Curse");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(
-        within(calendar).getByText("The Curse of Frankenstein"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).getByText("Curse of the Demon"),
-      ).toBeInTheDocument();
-      expect(within(calendar).queryByText("The Thing")).not.toBeInTheDocument();
-    });
-
-    it("filters by medium", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({ medium: "Blu-ray", title: "Movie on Blu-ray" }),
-        createViewingValue({ medium: "DVD", title: "Movie on DVD" }),
-        createViewingValue({ medium: "35mm", title: "Movie in Theater" }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await clickMediumFilterOption(user, "Blu-ray");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(
-        within(calendar).getByText("Movie on Blu-ray"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Movie on DVD"),
-      ).not.toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Movie in Theater"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by reviewed status", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          reviewSlug: "reviewed-movie",
-          title: "Reviewed Movie",
-        }),
-        createViewingValue({
-          reviewSlug: undefined,
-          title: "Unreviewed Movie",
-        }),
-        createViewingValue({
-          reviewSlug: "another-reviewed",
-          title: "Another Reviewed",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await clickReviewedStatusFilterOption(user, "Reviewed");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("Reviewed Movie")).toBeInTheDocument();
-      expect(
-        within(calendar).getByText("Another Reviewed"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Unreviewed Movie"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by unreviewed status", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          reviewSlug: "reviewed-movie",
-          title: "Reviewed Movie",
-        }),
-        createViewingValue({
-          reviewSlug: undefined,
-          title: "Unreviewed Movie",
-        }),
-        createViewingValue({
-          reviewSlug: undefined,
-          title: "Another Unreviewed",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await clickReviewedStatusFilterOption(user, "Not Reviewed");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(
-        within(calendar).getByText("Unreviewed Movie"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).getByText("Another Unreviewed"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Reviewed Movie"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by venue", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          title: "Movie at Alamo",
-          venue: "Alamo Drafthouse Cinema - One Loudoun",
-        }),
-        createViewingValue({ title: "Movie at Home", venue: "Home" }),
-        createViewingValue({
-          title: "Another Alamo Movie",
-          venue: "Alamo Drafthouse Cinema - One Loudoun",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await clickVenueFilterOption(
-        user,
-        "Alamo Drafthouse Cinema - One Loudoun",
-      );
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("Movie at Alamo")).toBeInTheDocument();
-      expect(
-        within(calendar).getByText("Another Alamo Movie"),
-      ).toBeInTheDocument();
-      expect(
-        within(calendar).queryByText("Movie at Home"),
-      ).not.toBeInTheDocument();
-    });
-
-    it("filters by release year range", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({ releaseYear: "1950", title: "Old Movie" }),
-        createViewingValue({ releaseYear: "1970", title: "Mid Movie" }),
-        createViewingValue({ releaseYear: "2020", title: "New Movie" }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await fillReleaseYearFilter(user, "1960", "1980");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("Mid Movie")).toBeInTheDocument();
-      expect(within(calendar).queryByText("Old Movie")).not.toBeInTheDocument();
-      expect(within(calendar).queryByText("New Movie")).not.toBeInTheDocument();
-    });
-
-    it("filters by viewing year range", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          date: "2012-06-15",
-          title: "Movie 2012",
-          viewingYear: "2012",
-        }),
-        createViewingValue({
-          date: "2013-06-15",
-          title: "Movie 2013",
-          viewingYear: "2013",
-        }),
-        createViewingValue({
-          date: "2014-06-15",
-          title: "Movie 2014",
-          viewingYear: "2014",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
+  titleFilterTests(
+    (items) =>
       render(
         <Viewings
           {...createProps({
-            initialSort: "viewing-date-asc",
-            values: viewings,
+            values: items.map((item) => createViewingValue(item)),
           })}
         />,
-      );
+      ),
+    getCalendar,
+  );
 
-      await clickToggleFilters(user);
-      await fillViewingYearFilter(user, "2012", "2013");
-      await clickViewResults(user);
+  mediumFacetTests(
+    (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map((item) => createViewingValue(item)),
+          })}
+        />,
+      ),
+    getCalendar,
+  );
 
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("Movie 2012")).toBeInTheDocument();
+  venueFilterTests(
+    (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map((item) => createViewingValue(item)),
+          })}
+        />,
+      ),
+    getCalendar,
+  );
 
-      await clickNextMonthButton(user);
-      expect(within(calendar).getByText("Movie 2013")).toBeInTheDocument();
+  reviewedStatusFilterTests(
+    (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map((item) => createViewingValue(item)),
+          })}
+        />,
+      ),
+    getCalendar,
+  );
 
-      const nextButton = queryNextMonthButton();
-      expect(nextButton).not.toBeInTheDocument();
-    });
+  releaseYearFilterTests({
+    distinctReleaseYears: createProps().distinctReleaseYears,
+    getList: getCalendar,
+    renderItems: (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map(({ releaseYear, title }) =>
+              createViewingValue({ releaseYear, title }),
+            ),
+          })}
+        />,
+      ),
   });
 
-  describe("sorting", () => {
-    it("sorts by viewing date newest first", ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          date: "2024-01-01",
-          sequence: "1",
-          title: "Old Viewing",
-        }),
-        createViewingValue({
-          date: "2024-01-03",
-          sequence: "3",
-          title: "New Viewing",
-        }),
-        createViewingValue({
-          date: "2024-01-02",
-          sequence: "2",
-          title: "Mid Viewing",
-        }),
-      ];
-
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      const calendar = getCalendar();
-
-      const movies = ["New Viewing", "Mid Viewing", "Old Viewing"];
-      const foundMovies = movies.filter((movie) =>
-        calendar.textContent?.includes(movie),
-      );
-
-      expect(foundMovies).toHaveLength(3);
-
-      // Verify they're in the right order by checking their position in the calendar
-      const allText = calendar.textContent || "";
-      const newIndex = allText.indexOf("3New Viewing"); // Day 3
-      const midIndex = allText.indexOf("2Mid Viewing"); // Day 2
-      const oldIndex = allText.indexOf("1Old Viewing"); // Day 1
-
-      expect(oldIndex).toBeLessThan(midIndex);
-      expect(midIndex).toBeLessThan(newIndex);
-    });
-
-    it("sorts by viewing date oldest first", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({
-          date: "2024-01-03",
-          title: "New Viewing",
-        }),
-        createViewingValue({
-          date: "2024-01-01",
-          title: "Old Viewing",
-        }),
-        createViewingValue({
-          date: "2024-01-02",
-          title: "Mid Viewing",
-        }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickSortOption(user, "Viewing Date (Oldest First)");
-
-      const calendar = getCalendar();
-      const allText = calendar.textContent || "";
-      const oldIndex = allText.indexOf("Old Viewing");
-      const midIndex = allText.indexOf("Mid Viewing");
-      const newIndex = allText.indexOf("New Viewing");
-
-      expect(oldIndex).toBeLessThan(midIndex);
-      expect(midIndex).toBeLessThan(newIndex);
-    });
+  viewingYearFilterTests({
+    distinctViewingYears: createProps().distinctViewingYears,
+    getList: getCalendar,
+    renderItems: (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map(({ title, viewingYear }) =>
+              createViewingValue({ title, viewingYear }),
+            ),
+          })}
+        />,
+      ),
   });
+
+  viewingDateFacetTests(
+    (items) =>
+      render(
+        <Viewings
+          {...createProps({
+            values: items.map((item) => createViewingValue(item)),
+          })}
+        />,
+      ),
+    getCalendar,
+  );
 
   describe("month navigation", () => {
     it("navigates to previous month", async ({ expect }) => {
@@ -424,13 +203,10 @@ describe("Viewings", () => {
       const user = getUserWithFakeTimers();
       render(<Viewings {...createProps({ values: viewings })} />);
 
-      // Default sort is newest first (by viewingSequence), initially shows February 2024
       let calendar = getCalendar();
 
-      // Verify we're on February
       const februaryText = calendar.textContent || "";
       if (!februaryText.includes("February Movie")) {
-        // We might be on January, click next to get to February
         const nextBtn = queryNextMonthButton();
         if (nextBtn) {
           await user.click(nextBtn);
@@ -442,7 +218,6 @@ describe("Viewings", () => {
 
       await clickPreviousMonthButton(user);
 
-      // Should now show January 2024
       calendar = getCalendar();
       expect(within(calendar).getByText("January Movie")).toBeInTheDocument();
       expect(
@@ -472,7 +247,6 @@ describe("Viewings", () => {
         />,
       );
 
-      // Initially should show January 2024 (oldest first)
       const calendar = getCalendar();
       expect(within(calendar).getByText("January Movie")).toBeInTheDocument();
       expect(
@@ -481,7 +255,6 @@ describe("Viewings", () => {
 
       await clickNextMonthButton(user);
 
-      // Should now show February 2024
       expect(within(calendar).getByText("February Movie")).toBeInTheDocument();
       expect(
         within(calendar).queryByText("January Movie"),
@@ -508,18 +281,14 @@ describe("Viewings", () => {
       const user = getUserWithFakeTimers();
       render(<Viewings {...createProps({ values: viewings })} />);
 
-      // Default sort is newest first, showing February 2024
       let prevMonthButton = queryPreviousMonthButton();
       let nextMonthButton = queryNextMonthButton();
 
-      // At newest month, should only have previous month button
       expect(prevMonthButton).toBeInTheDocument();
       expect(nextMonthButton).not.toBeInTheDocument();
 
-      // Sort by oldest first
       await clickSortOption(user, "Viewing Date (Oldest First)");
 
-      // At oldest month, should only have next month button
       prevMonthButton = queryPreviousMonthButton();
       nextMonthButton = queryNextMonthButton();
 
@@ -527,73 +296,56 @@ describe("Viewings", () => {
       expect(nextMonthButton).toBeInTheDocument();
     });
   });
-
-  describe("when clearing filters", () => {
-    it("clears all filters with clear button", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({ medium: "Blu-ray", title: "The Thing" }),
-        createViewingValue({ medium: "DVD", title: "Halloween" }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "The Thing");
-      await clickMediumFilterOption(user, "Blu-ray");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(within(calendar).getByText("The Thing")).toBeInTheDocument();
-      expect(within(calendar).queryByText("Halloween")).not.toBeInTheDocument();
-
-      await clickToggleFilters(user);
-      await clickClearFilters(user);
-
-      await waitFor(() => {
-        expect(getTitleFilter()).toHaveValue("");
-        expect(getMediumFilter().values).toEqual([]);
-      });
-
-      await clickViewResults(user);
-
-      expect(within(calendar).getByText("The Thing")).toBeInTheDocument();
-      expect(within(calendar).getByText("Halloween")).toBeInTheDocument();
-    });
-  });
-
-  describe("when closing filter drawer without applying", () => {
-    it("resets pending filter changes", async ({ expect }) => {
-      const viewings = [
-        createViewingValue({ title: "The Curse of Frankenstein" }),
-        createViewingValue({ title: "The Thing" }),
-      ];
-
-      const user = getUserWithFakeTimers();
-      render(<Viewings {...createProps({ values: viewings })} />);
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "Curse");
-      await clickViewResults(user);
-
-      const calendar = getCalendar();
-      expect(
-        within(calendar).getByText("The Curse of Frankenstein"),
-      ).toBeInTheDocument();
-      expect(within(calendar).queryByText("The Thing")).not.toBeInTheDocument();
-
-      await clickToggleFilters(user);
-      await fillTitleFilter(user, "Different Movie");
-      await clickCloseFilters(user);
-
-      // Should still show originally filtered results
-      expect(
-        within(calendar).getByText("The Curse of Frankenstein"),
-      ).toBeInTheDocument();
-      expect(within(calendar).queryByText("The Thing")).not.toBeInTheDocument();
-
-      await clickToggleFilters(user);
-      expect(getTitleFilter()).toHaveValue("Curse");
-    });
-  });
 });
+
+/**
+ * Clicks the next month navigation button.
+ * @param user - User event instance
+ */
+async function clickNextMonthButton(user: UserEvent): Promise<void> {
+  // Find and click the next month button first to ensure we can go back
+  const nextMonthButton = await screen.findByRole("button", {
+    name: /Navigate to next month:/,
+  });
+  await user.click(nextMonthButton);
+}
+
+/**
+ * Clicks the previous month navigation button.
+ * @param user - User event instance
+ */
+async function clickPreviousMonthButton(user: UserEvent): Promise<void> {
+  // Find and click the next month button first to ensure we can go back
+  const previousMonthButton = await screen.findByRole("button", {
+    name: /Navigate to previous month:/,
+  });
+  await user.click(previousMonthButton);
+}
+
+/**
+ * Gets the calendar element.
+ * @returns Calendar element
+ */
+function getCalendar(): HTMLElement {
+  return screen.getByTestId("calendar");
+}
+
+/**
+ * Queries for the next month button.
+ * @returns Next month button element or null
+ */
+function queryNextMonthButton(): HTMLElement | null {
+  return screen.queryByRole("button", {
+    name: /Navigate to next month:/,
+  });
+}
+
+/**
+ * Queries for the previous month button.
+ * @returns Previous month button element or null
+ */
+function queryPreviousMonthButton(): HTMLElement | null {
+  return screen.queryByRole("button", {
+    name: /Navigate to previous month:/,
+  });
+}

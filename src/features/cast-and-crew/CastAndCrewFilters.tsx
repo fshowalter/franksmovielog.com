@@ -1,18 +1,13 @@
-import { CollectionFilters } from "~/components/filter-and-sort/CollectionFilters";
-import { CreditedAsFilter } from "~/components/filter-and-sort/CreditedAsFilter";
+import { CreditedAsFacet } from "~/components/filter-and-sort/facets/credited-as/CreditedAsFacet";
+import { NameFacet } from "~/components/filter-and-sort/facets/name/NameFacet";
 
 import type { CastAndCrewValue } from "./CastAndCrew";
 import type {
   CastAndCrewAction,
   CastAndCrewFiltersValues,
-} from "./CastAndCrew.reducer";
+} from "./castAndCrewReducer";
 
-import {
-  createCreditedAsFilterChangedAction,
-  createNameFilterChangedAction,
-  createRemoveAppliedFilterAction,
-} from "./CastAndCrew.reducer";
-import { calculateCreditedAsCounts } from "./filterCastAndCrew";
+import { filterCastAndCrew } from "./filterCastAndCrew";
 
 /**
  * Filter controls for the cast and crew page.
@@ -31,25 +26,15 @@ export function CastAndCrewFilters({
   filterValues: CastAndCrewFiltersValues;
   values: readonly CastAndCrewValue[];
 }): React.JSX.Element {
-  // Calculate dynamic counts for creditedAs filter
-  const creditedAsCounts = calculateCreditedAsCounts([...values], filterValues);
-
   return (
     <>
-      <CollectionFilters
-        name={{
-          defaultValue: filterValues.name,
-          onChange: (value) => dispatch(createNameFilterChangedAction(value)),
-        }}
-      />
-      <CreditedAsFilter
-        counts={creditedAsCounts}
-        defaultValues={filterValues.creditedAs ?? []}
-        onChange={(value) =>
-          dispatch(createCreditedAsFilterChangedAction(value))
-        }
-        onClear={() => dispatch(createRemoveAppliedFilterAction("creditedAs"))}
-        values={["director", "performer", "writer"]}
+      <NameFacet defaultValue={filterValues.name} dispatch={dispatch} />
+      <CreditedAsFacet
+        dispatch={dispatch}
+        distinctCreditKinds={["director", "performer", "writer"]}
+        filterer={filterCastAndCrew}
+        filterValues={filterValues}
+        values={values}
       />
     </>
   );

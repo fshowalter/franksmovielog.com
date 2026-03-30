@@ -1,17 +1,13 @@
-import { ReviewedTitleFilters } from "~/components/filter-and-sort/ReviewedTitleFilters";
+import { GenresFacet } from "~/components/filter-and-sort/facets/genres/GenresFacet";
+import { GradeFacet } from "~/components/filter-and-sort/facets/grade/GradeFacet";
+import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/release-year/ReleaseYearFacet";
+import { ReviewYearFacet } from "~/components/filter-and-sort/facets/review-year/ReviewYearFacet";
+import { TitleFacet } from "~/components/filter-and-sort/facets/title/TitleFacet";
 
-import type { ReviewsAction, ReviewsFiltersValues } from "./reducer";
 import type { ReviewsValue } from "./ReviewsListItem";
+import type { ReviewsAction, ReviewsFiltersValues } from "./reviewsReducer";
 
-import { calculateGenreCounts } from "./filteredReviews";
-import {
-  createGenresFilterChangedAction,
-  createGradeFilterChangedAction,
-  createReleaseYearFilterChangedAction,
-  createRemoveAppliedFilterAction,
-  createReviewYearFilterChangedAction,
-  createTitleFilterChangedAction,
-} from "./reducer";
+import { filterReviews } from "./filterReviews";
 
 /**
  * Filter controls for the reviews page.
@@ -39,47 +35,27 @@ export function ReviewsFilters({
   filterValues: ReviewsFiltersValues;
   values: ReviewsValue[];
 }): React.JSX.Element {
-  // Calculate dynamic counts for genre filter options
-  const genreCounts = calculateGenreCounts(values, filterValues);
-
   return (
-    <ReviewedTitleFilters
-      genres={{
-        counts: genreCounts,
-        defaultValues: filterValues.genres,
-        onChange: (values) => dispatch(createGenresFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("genres")),
-        values: distinctGenres,
-      }}
-      grade={{
-        defaultValues: filterValues.gradeValue,
-        onChange: (values) => dispatch(createGradeFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("gradeValue")),
-      }}
-      releaseYear={{
-        defaultValues: filterValues.releaseYear,
-        onChange: (values) =>
-          dispatch(createReleaseYearFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("releaseYear")),
-        values: distinctReleaseYears,
-      }}
-      reviewYear={{
-        defaultValues: filterValues.reviewYear,
-        onChange: (values) =>
-          dispatch(createReviewYearFilterChangedAction(values)),
-        onClear: () => dispatch(createRemoveAppliedFilterAction("reviewYear")),
-        values: distinctReviewYears,
-      }}
-      title={{
-        defaultValue: filterValues.title,
-        onChange: (value) => dispatch(createTitleFilterChangedAction(value)),
-      }}
-    />
+    <>
+      <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />
+      <ReleaseYearFacet
+        defaultValues={filterValues.releaseYear}
+        dispatch={dispatch}
+        distinctYears={distinctReleaseYears}
+      />
+      <GenresFacet
+        dispatch={dispatch}
+        distinctGenres={distinctGenres}
+        filterer={filterReviews}
+        filterValues={filterValues}
+        values={values}
+      />
+      <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
+      <ReviewYearFacet
+        defaultValues={filterValues.reviewYear}
+        dispatch={dispatch}
+        distinctYears={distinctReviewYears}
+      />
+    </>
   );
 }
-
-/**
- * Sort options for the reviews page.
- */
-
-export { REVIEWED_TITLE_SORT_OPTIONS as SORT_OPTIONS } from "~/components/filter-and-sort/ReviewedTitleSortOptions";

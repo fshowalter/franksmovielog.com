@@ -1,3 +1,5 @@
+import type { GradeText } from "~/utils/grades";
+
 import { Grade } from "~/components/grade/Grade";
 
 /**
@@ -6,6 +8,10 @@ import { Grade } from "~/components/grade/Grade";
  * @param props.grade - The letter grade to display (e.g., "A", "B+")
  * @returns Styled grade component
  */
-export function ListItemGrade({ grade }: { grade: string }): React.JSX.Element {
+export function ListItemGrade({
+  grade,
+}: {
+  grade: GradeText;
+}): React.JSX.Element {
   return <Grade className="pb-px" height={15} value={grade} />;
 }

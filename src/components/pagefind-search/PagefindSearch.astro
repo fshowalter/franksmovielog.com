@@ -14,7 +14,7 @@ const { class: className, variant = "button" } = Astro.props;
       aria-label="Search"
       class={`
         flex transform-gpu cursor-pointer items-center justify-center
-        overflow-hidden ring-default transition-all duration-500
+        overflow-hidden text-sm/6 ring-default transition-all duration-500
         hover:text-accent
       `}
       data-open-search
@@ -22,45 +22,44 @@ const { class: className, variant = "button" } = Astro.props;
       title="Search: Control+K"
       type="button"
     >
-      {variant === "text" && <span>Search</span>}
-      {
-        variant === "button" && (
-          <div
-            class={`
-              flex size-10 items-center justify-center text-sm/6
+      {variant === "text" && <span class="pr-3 text-2xl">Search</span>}
+      <div
+        class:list={[
+          variant === "button" &&
+            `
+              flex size-10 items-center justify-center
               laptop:ml-6
-            `}
-          >
-            <svg
-              aria-hidden="true"
-              class="size-7"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        )
-      }
+            `,
+        ]}
+      >
+        <svg
+          aria-hidden="true"
+          class="size-7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
     </button>
   </div>
   <dialog
     aria-label="Search"
     class={`
-      fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default
-      bg-default shadow-lg
+      fixed inset-x-4 m-auto h-screen w-full scale-0 rounded-lg border
+      border-default bg-default opacity-0 shadow-lg transition-all duration-500
       backdrop:bg-[#000] backdrop:opacity-40 backdrop:backdrop-blur-xs
-      open:flex open:flex-col
+      open:flex open:scale-100 open:flex-col open:opacity-100
       tablet:mx-auto tablet:mt-16 tablet:h-min
       tablet:max-h-[min(100vh-128px,900px)] tablet:max-w-[min(100vw-64px,36rem)]
       tablet:rounded-xl
+      starting:transform-[scale(0)] starting:opacity-0
     `}
   >
     <div class="contents" data-dialog-frame>

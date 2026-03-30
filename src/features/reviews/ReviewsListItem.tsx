@@ -1,4 +1,5 @@
 import type { PosterImageProps } from "~/assets/posters";
+import type { GradeText, GradeValue } from "~/utils/grades";
 
 import { ListItemDetails } from "~/components/list-item-details/ListItemDetails";
 import { ListItemGenres } from "~/components/list-item-genres/ListItemGenres";
@@ -9,8 +10,8 @@ import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 export type ReviewsValue = {
   genres: string[];
-  grade: string;
-  gradeValue: number;
+  grade: GradeText;
+  gradeValue: GradeValue;
   imdbId: string;
   posterImageProps: PosterImageProps;
   releaseSequence: number;

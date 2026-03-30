@@ -3,31 +3,20 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "~/assets/avatars";
 
 import { GroupedAvatarList } from "~/components/avatar-list/GroupedAvatarList";
-import { COLLECTION_SORT_OPTIONS } from "~/components/filter-and-sort/CollectionSortOptions";
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { useGroupedValues } from "~/hooks/useGroupedValues";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
+import { useGroupedValues } from "~/features/cast-and-crew/useGroupedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CastAndCrewSort } from "./sortCastAndCrew";
 
 import { AlphabetSideNav } from "./AlphabetSideNav";
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createCreditedAsFilterChangedAction,
-  createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  createSortAction,
-  reducer,
-  selectHasPendingFilters,
-} from "./CastAndCrew.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 import { CastAndCrewFilters } from "./CastAndCrewFilters";
 import { CastAndCrewListItem } from "./CastAndCrewListItem";
+import { createInitialState, reducer } from "./castAndCrewReducer";
 import { filterCastAndCrew } from "./filterCastAndCrew";
 import { groupCastAndCrew } from "./groupCastAndCrew";
-import { sortCastAndCrew } from "./sortCastAndCrew";
+import { sortCastAndCrew, sortOptions } from "./sortCastAndCrew";
 
 /**
  * Props for the CastAndCrew component.
@@ -46,6 +35,7 @@ export type CastAndCrewValue = {
   name: string;
   reviewCount: number;
   slug: string;
+  sortName: string;
 };
 
 /**
@@ -83,28 +73,17 @@ export function CastAndCrew({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
-  // Custom handler for removing individual creditedAs values
-  function handleRemoveAppliedFilter(filterId: string): void {
-    if (filterId.startsWith("creditedAs-")) {
-      const roleToRemove = filterId.replace("creditedAs-", "");
-      const currentRoles = state.pendingFilterValues.creditedAs || [];
-      const updatedRoles = currentRoles.filter(
-        (role) => role.toLowerCase() !== roleToRemove,
-      );
-      dispatch(createCreditedAsFilterChangedAction(updatedRoles));
-    } else {
-      dispatch(createRemoveAppliedFilterAction(filterId));
-    }
-  }
+  const sideNav = state.sort.startsWith("name-") ? (
+    <AlphabetSideNav groupedValues={groupedValues} sortValue={state.sort} />
+  ) : undefined;
 
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      dispatch={dispatch}
       filters={
         <CastAndCrewFilters
           dispatch={dispatch}
@@ -112,35 +91,25 @@ export function CastAndCrew({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={handleRemoveAppliedFilter}
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
-      sideNav={
-        <AlphabetSideNav groupedValues={groupedValues} sortValue={state.sort} />
-      }
+      sideNav={sideNav}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: COLLECTION_SORT_OPTIONS,
+        sortOptions,
       }}
+      state={state}
       totalCount={totalCount}
     >
-      <GroupedAvatarList
-        groupedValues={groupedValues}
-        groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)]`}
-      >
-        {(value) => {
-          return <CastAndCrewListItem key={value.name} value={value} />;
-        }}
-      </GroupedAvatarList>
+      <div className={sideNav ? "" : "w-full"}>
+        <GroupedAvatarList
+          groupedValues={groupedValues}
+          groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)]`}
+        >
+          {(value) => {
+            return <CastAndCrewListItem key={value.name} value={value} />;
+          }}
+        </GroupedAvatarList>
+      </div>
     </FilterAndSortContainer>
   );
 }

@@ -2,31 +2,20 @@ import { useReducer } from "react";
 
 import type { PosterImageProps } from "~/assets/posters";
 
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
-import { TITLE_SORT_OPTIONS } from "~/components/filter-and-sort/TitleSortOptions";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
+import { PaginatedList } from "~/components/filter-and-sort/paginated-list/PaginatedList";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { WatchlistSort } from "./sortWatchlistValues";
+import type { WatchlistSort } from "./sortWatchlist";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import { filterWatchlistValues } from "./filterWatchlistValues";
-import { sortWatchlistValues } from "./sortWatchlistValues";
-import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  createShowMoreAction,
-  createSortAction,
-  createWatchlistFilterChangedAction,
-  reducer,
-  selectHasPendingFilters,
-} from "./Watchlist.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
+import { filterWatchlist } from "./filterWatchlist";
+import { sortOptions, sortWatchlist } from "./sortWatchlist";
 import { WatchlistFilters } from "./WatchlistFilters";
 import { WatchlistListItem } from "./WatchlistListItem";
+import { createInitialState, reducer } from "./watchlistReducer";
 
 /**
  * Props for the Watchlist component.
@@ -94,8 +83,8 @@ export function Watchlist({
   );
 
   const [paginatedValues, totalCount] = usePaginatedValues(
-    sortWatchlistValues,
-    filterWatchlistValues,
+    sortWatchlist,
+    filterWatchlist,
     state.values,
     state.sort,
     state.activeFilterValues,
@@ -103,81 +92,18 @@ export function Watchlist({
   );
 
   const pendingFilteredCount = usePendingFilterCount(
-    filterWatchlistValues,
+    filterWatchlist,
     state.values,
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
-  const activeFilters = buildAppliedFilterChips(state.activeFilterValues, {
-    distinctReleaseYears,
-  });
-
-  /**
-   * Handles removal of individual filter chips.
-   * For director/performer/writer/collection, removes specific value from array.
-   * For other filters, removes entire filter key.
-   */
-  function handleRemoveAppliedFilter(filterId: string): void {
-    // Parse the filter ID to determine type and value
-    if (filterId.startsWith("director-")) {
-      const directorName = filterId
-        .replace("director-", "")
-        .replaceAll("-", " ")
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-      const newDirectors =
-        state.pendingFilterValues.director?.filter((d) => d !== directorName) ??
-        [];
-      dispatch(createWatchlistFilterChangedAction("director", newDirectors));
-    } else if (filterId.startsWith("performer-")) {
-      const performerName = filterId
-        .replace("performer-", "")
-        .replaceAll("-", " ")
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-      const newPerformers =
-        state.pendingFilterValues.performer?.filter(
-          (p) => p !== performerName,
-        ) ?? [];
-      dispatch(createWatchlistFilterChangedAction("performer", newPerformers));
-    } else if (filterId.startsWith("writer-")) {
-      const writerName = filterId
-        .replace("writer-", "")
-        .replaceAll("-", " ")
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-      const newWriters =
-        state.pendingFilterValues.writer?.filter((w) => w !== writerName) ?? [];
-      dispatch(createWatchlistFilterChangedAction("writer", newWriters));
-    } else if (filterId.startsWith("collection-")) {
-      const collectionName = filterId
-        .replace("collection-", "")
-        .replaceAll("-", " ")
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
-      const newCollections =
-        state.pendingFilterValues.collection?.filter(
-          (c) => c !== collectionName,
-        ) ?? [];
-      dispatch(
-        createWatchlistFilterChangedAction("collection", newCollections),
-      );
-    } else {
-      // For other filters (genres, releaseYear, title), use the standard removal
-      dispatch(createRemoveAppliedFilterAction(filterId));
-    }
-  }
+  const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      dispatch={dispatch}
       filters={
         <WatchlistFilters
           dispatch={dispatch}
@@ -191,33 +117,21 @@ export function Watchlist({
           values={values}
         />
       }
-      hasPendingFilters={hasPendingFilters}
       headerLink={{ href: "/watchlist/progress/", text: "progress" }}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={handleRemoveAppliedFilter}
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: TITLE_SORT_OPTIONS,
+        sortOptions,
       }}
+      state={state}
       totalCount={totalCount}
     >
-      <div className="tablet:-mx-6 tablet:pt-10">
-        <PosterList
-          onShowMore={
-            paginatedValues.length < totalCount
-              ? (): void => dispatch(createShowMoreAction())
-              : undefined
-          }
-        >
+      <PaginatedList
+        dispatch={dispatch}
+        totalCount={totalCount}
+        visibleCount={paginatedValues.length}
+      >
+        <PosterList>
           {[...paginatedValues].map((value) => {
             return (
               <WatchlistListItem
@@ -228,7 +142,7 @@ export function Watchlist({
             );
           })}
         </PosterList>
-      </div>
+      </PaginatedList>
     </FilterAndSortContainer>
   );
 }

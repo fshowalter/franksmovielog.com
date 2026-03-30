@@ -3,28 +3,18 @@ import { useReducer } from "react";
 import type { AvatarImageProps } from "~/assets/avatars";
 
 import { AvatarList } from "~/components/avatar-list/AvatarList";
-import { COLLECTION_SORT_OPTIONS } from "~/components/filter-and-sort/CollectionSortOptions";
-import { FilterAndSortContainer } from "~/components/filter-and-sort/FilterAndSortContainer";
+import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { useFilteredValues } from "~/hooks/useFilteredValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
 import type { CollectionsSort } from "./sortCollections";
 
-import { buildAppliedFilterChips } from "./appliedFilterChips";
-import {
-  createApplyFiltersAction,
-  createClearFiltersAction,
-  createInitialState,
-  createRemoveAppliedFilterAction,
-  createResetFiltersAction,
-  createSortAction,
-  reducer,
-  selectHasPendingFilters,
-} from "./Collections.reducer";
+import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
+import { createInitialState, reducer } from "./Collections.reducer";
 import { CollectionsFilters } from "./CollectionsFilters";
 import { CollectionsListItem } from "./CollectionsListItem";
 import { filterCollections } from "./filterCollections";
-import { sortCollections } from "./sortCollections";
+import { sortCollections, sortOptions } from "./sortCollections";
 
 /**
  * Props for the Collections component.
@@ -42,6 +32,7 @@ export type CollectionsValue = {
   name: string;
   reviewCount: number;
   slug: string;
+  sortName: string;
 };
 
 /**
@@ -78,38 +69,25 @@ export function Collections({
     state.pendingFilterValues,
   );
 
-  const hasPendingFilters = selectHasPendingFilters(state);
-
   // AIDEV-NOTE: Applied filters only show after clicking "View X results" to avoid layout shift
   const activeFilters = buildAppliedFilterChips(state.activeFilterValues);
 
   return (
     <FilterAndSortContainer
       activeFilters={activeFilters}
+      dispatch={dispatch}
       filters={
         <CollectionsFilters
           dispatch={dispatch}
           filterValues={state.pendingFilterValues}
         />
       }
-      hasPendingFilters={hasPendingFilters}
-      onApplyFilters={() => dispatch(createApplyFiltersAction())}
-      onClearFilters={() => {
-        dispatch(createClearFiltersAction());
-      }}
-      onFilterDrawerOpen={() => dispatch(createResetFiltersAction())}
-      onRemoveFilter={(filterId) =>
-        dispatch(createRemoveAppliedFilterAction(filterId))
-      }
-      onResetFilters={() => {
-        dispatch(createResetFiltersAction());
-      }}
       pendingFilteredCount={pendingFilteredCount}
       sortProps={{
         currentSortValue: state.sort,
-        onSortChange: (value) => dispatch(createSortAction(value)),
-        sortOptions: COLLECTION_SORT_OPTIONS,
+        sortOptions,
       }}
+      state={state}
       totalCount={filteredValues.length}
     >
       <AvatarList

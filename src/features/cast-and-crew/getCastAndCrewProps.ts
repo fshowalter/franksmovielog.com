@@ -26,6 +26,7 @@ export async function getCastAndCrewProps(
         name: member.name,
         reviewCount: member.reviewCount,
         slug: member.slug,
+        sortName: member.name,
       };
 
       return value;

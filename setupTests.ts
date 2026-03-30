@@ -11,3 +11,18 @@ failOnConsole();
 if (typeof Element !== "undefined") {
   Element.prototype.scrollIntoView = vi.fn();
 }
+
+// Mock HTMLDialogElement methods not supported in jsdom
+if (typeof HTMLDialogElement !== "undefined") {
+  HTMLDialogElement.prototype.showModal = vi.fn(function (
+    this: HTMLDialogElement,
+  ) {
+    this.open = true;
+  });
+  HTMLDialogElement.prototype.close = vi.fn(function (this: HTMLDialogElement) {
+    if (this.open) {
+      this.open = false;
+      this.dispatchEvent(new Event("close"));
+    }
+  });
+}
