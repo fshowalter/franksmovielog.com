@@ -8,6 +8,7 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
+import { fillTextField } from "~/components/filter-and-sort/fields/TextField.testHelper";
 import { getUserWithFakeTimers } from "~/utils/testUtils";
 
 import type { FilterableValue } from "./nameFilter";
@@ -21,57 +22,56 @@ export function nameFilterTests(
   describe("nameFilter", () => {
     it("filters to matching names", async ({ expect }) => {
       renderItems([
-        { name: "Bram Stoker", sortName: "Stoker, Bram" },
-        { name: "Stephen King", sortName: "King, Stephen" },
-        { name: "Anne Rice", sortName: "Rice, Anne" },
+        { name: "John Ford", sortName: "Ford, John" },
+        { name: "John Huston", sortName: "Huston, John" },
+        { name: "Howard Hawks", sortName: "Hawks, Howard" },
       ]);
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillNameFilter(user, "Stoker");
+      await fillNameFilter(user, "Huston");
       await clickViewResults(user);
 
       const list = getList();
-      expect(within(list).getByText("Stoker, Bram")).toBeInTheDocument();
-      expect(within(list).queryByText("King, Stephen")).not.toBeInTheDocument();
-      expect(within(list).queryByText("Rice, Anne")).not.toBeInTheDocument();
+      expect(within(list).getByText("John Huston")).toBeInTheDocument();
+      expect(within(list).queryByText("Howard Hawks")).not.toBeInTheDocument();
+      expect(within(list).queryByText("John Ford")).not.toBeInTheDocument();
     });
 
     it("filters by partial name match", async ({ expect }) => {
       renderItems([
-        { name: "H.P. Lovecraft", sortName: "Lovecraft, H.P." },
-        { name: "H.G. Wells", sortName: "Wells, H.G." },
-        { name: "Edgar Allan Poe", sortName: "Poe, Edgar Allan" },
+        { name: "John Ford", sortName: "Ford, John" },
+        { name: "John Huston", sortName: "Huston, John" },
+        { name: "Howard Hawks", sortName: "Hawks, Howard" },
       ]);
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillNameFilter(user, "H.");
+      await fillNameFilter(user, "John");
       await clickViewResults(user);
 
       const list = getList();
-      expect(within(list).getByText("Lovecraft, H.P.")).toBeInTheDocument();
-      expect(within(list).getByText("Wells, H.G.")).toBeInTheDocument();
-      expect(
-        within(list).queryByText("Poe, Edgar Allan"),
-      ).not.toBeInTheDocument();
+      expect(within(list).getByText("John Ford")).toBeInTheDocument();
+      expect(within(list).getByText("John Huston")).toBeInTheDocument();
+      expect(within(list).queryByText("Howard Hawks")).not.toBeInTheDocument();
     });
 
     it("shows search chip after applying", async ({ expect }) => {
       renderItems([
-        { name: "Bram Stoker", sortName: "Stoker, Bram" },
-        { name: "Stephen King", sortName: "King, Stephen" },
+        { name: "John Ford", sortName: "Ford, John" },
+        { name: "John Huston", sortName: "Huston, John" },
+        { name: "Howard Hawks", sortName: "Hawks, Howard" },
       ]);
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillNameFilter(user, "Bram Stoker");
+      await fillNameFilter(user, "Howard Hawks");
       await clickViewResults(user);
 
       await clickToggleFilters(user);
       expect(
         screen.getByRole("button", {
-          name: "Remove Search: Bram Stoker filter",
+          name: "Remove Name: Howard Hawks filter",
         }),
       ).toBeInTheDocument();
     });
@@ -80,61 +80,65 @@ export function nameFilterTests(
       expect,
     }) => {
       renderItems([
-        { name: "Bram Stoker", sortName: "Stoker, Bram" },
-        { name: "Stephen King", sortName: "King, Stephen" },
+        { name: "John Ford", sortName: "Ford, John" },
+        { name: "John Huston", sortName: "Huston, John" },
+        { name: "Howard Hawks", sortName: "Hawks, Howard" },
       ]);
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillNameFilter(user, "Bram Stoker");
+      await fillNameFilter(user, "John Ford");
       await clickViewResults(user);
 
       const list = getList();
-      expect(within(list).queryByText("King, Stephen")).not.toBeInTheDocument();
+      expect(within(list).queryByText("Howard Hawks")).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
       await user.click(
         screen.getByRole("button", {
-          name: "Remove Search: Bram Stoker filter",
+          name: "Remove Name: John Ford filter",
         }),
       );
 
       expect(
         screen.queryByRole("button", {
-          name: "Remove Search: Bram Stoker filter",
+          name: "Remove Name: Howard Hawks filter",
         }),
       ).not.toBeInTheDocument();
-      expect(within(list).queryByText("King, Stephen")).not.toBeInTheDocument();
+      expect(within(list).queryByText("Howard Hawks")).not.toBeInTheDocument();
 
       await clickViewResults(user);
-      expect(within(list).getByText("King, Stephen")).toBeInTheDocument();
+      expect(within(list).getByText("Howard Hawks")).toBeInTheDocument();
     });
 
     it("resets when closing drawer without applying", async ({ expect }) => {
       renderItems([
-        { name: "Bram Stoker", sortName: "Stoker, Bram" },
-        { name: "Stephen King", sortName: "King, Stephen" },
+        { name: "John Ford", sortName: "Ford, John" },
+        { name: "John Huston", sortName: "Huston, John" },
+        { name: "Howard Hawks", sortName: "Hawks, Howard" },
       ]);
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillNameFilter(user, "Bram Stoker");
+      await fillNameFilter(user, "Howard Hawks");
       await clickViewResults(user);
 
       const list = getList();
-      expect(within(list).getByText("Stoker, Bram")).toBeInTheDocument();
-      expect(within(list).queryByText("King, Stephen")).not.toBeInTheDocument();
+      expect(within(list).getByText("Howard Hawks")).toBeInTheDocument();
+      expect(within(list).queryByText("John Ford")).not.toBeInTheDocument();
+      expect(within(list).queryByText("John Huston")).not.toBeInTheDocument();
 
       await clickToggleFilters(user);
-      await fillNameFilter(user, "Different Author");
+      await fillNameFilter(user, "Different Name");
       await clickCloseFilters(user);
 
-      expect(within(list).getByText("Stoker, Bram")).toBeInTheDocument();
-      expect(within(list).queryByText("King, Stephen")).not.toBeInTheDocument();
+      expect(within(list).getByText("Howard Hawks")).toBeInTheDocument();
+      expect(within(list).queryByText("John Ford")).not.toBeInTheDocument();
+      expect(within(list).queryByText("John Huston")).not.toBeInTheDocument();
     });
   });
 }
 
 async function fillNameFilter(user: UserEvent, value: string) {
-  await fillNameFilter(user, value);
+  await fillTextField(user, "Name", value);
 }

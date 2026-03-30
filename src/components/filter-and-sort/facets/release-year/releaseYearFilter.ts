@@ -1,10 +1,12 @@
+import { STATE_KEY } from "./releaseYearReducer";
+
 export type FilterableValue = { releaseYear: string };
-type Filters = { releaseYear?: [string, string] };
+type Filters = { [STATE_KEY]?: [string, string] };
 
 export function createReleaseYearFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
-  const filterValue = filters.releaseYear;
+  const filterValue = filters[STATE_KEY];
   if (!filterValue) return;
   return (value: TValue): boolean => {
     return (

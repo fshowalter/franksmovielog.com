@@ -11,7 +11,7 @@ import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
 
 import type { FilterableValue } from "./creditedAsFilter";
 
-type CreditedAsFilterItem = FilterableValue & { title: string };
+type CreditedAsFilterItem = FilterableValue & { name: string };
 
 /**
  * Shared genre filter facet tests.
@@ -28,14 +28,13 @@ export function creditedAsFilterTests(
     }) => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
-      const items: CreditedAsFilterItem[] = [
-        { creditedAs: ["director"], title: "The Exorcist" },
-        { creditedAs: ["director", "writer"], title: "Alien" },
-        { creditedAs: ["performer"], title: "Die Hard" },
-      ];
+      renderItems([
+        { creditedAs: ["director"], name: "The Exorcist" },
+        { creditedAs: ["director", "writer"], name: "Alien" },
+        { creditedAs: ["performer"], name: "Die Hard" },
+      ]);
 
       const user = getUserWithFakeTimers();
-      renderItems(items);
 
       await clickToggleFilters(user);
       await clickCreditedAsOption(user, "Director");
@@ -53,14 +52,13 @@ export function creditedAsFilterTests(
     it("filters to multiple credits (OR logic)", async ({ expect }) => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
-      const items: CreditedAsFilterItem[] = [
-        { creditedAs: ["director"], title: "The Exorcist" },
-        { creditedAs: ["writer"], title: "Star Wars" },
-        { creditedAs: ["performer"], title: "Die Hard" },
-      ];
+      renderItems([
+        { creditedAs: ["director"], name: "The Exorcist" },
+        { creditedAs: ["writer"], name: "Star Wars" },
+        { creditedAs: ["performer"], name: "Die Hard" },
+      ]);
 
       const user = getUserWithFakeTimers();
-      renderItems(items);
 
       await clickToggleFilters(user);
       await clickCreditedAsOption(user, "Director");
@@ -76,16 +74,15 @@ export function creditedAsFilterTests(
       vi.useRealTimers();
     });
 
-    it("shows genre chip after applying", async ({ expect }) => {
+    it("shows filter chip after applying", async ({ expect }) => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
-      const items: CreditedAsFilterItem[] = [
-        { creditedAs: ["director"], title: "The Exorcist" },
-        { creditedAs: ["writer"], title: "Die Hard" },
-      ];
+      renderItems([
+        { creditedAs: ["director"], name: "The Exorcist" },
+        { creditedAs: ["writer"], name: "Die Hard" },
+      ]);
 
       const user = getUserWithFakeTimers();
-      renderItems(items);
 
       await clickToggleFilters(user);
       await clickCreditedAsOption(user, "Director");
@@ -100,14 +97,14 @@ export function creditedAsFilterTests(
       vi.useRealTimers();
     });
 
-    it("removing genre chip defers list update until View Results", async ({
+    it("removing filter chip defers list update until View Results", async ({
       expect,
     }) => {
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
       const items: CreditedAsFilterItem[] = [
-        { creditedAs: ["director"], title: "The Exorcist" },
-        { creditedAs: ["writer"], title: "Die Hard" },
+        { creditedAs: ["director"], name: "The Exorcist" },
+        { creditedAs: ["writer"], name: "Die Hard" },
       ];
 
       const user = getUserWithFakeTimers();

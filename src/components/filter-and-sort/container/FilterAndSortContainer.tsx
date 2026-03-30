@@ -216,11 +216,10 @@ export function FilterAndSortContainer<T extends string, V>({
               backdrop:transition-discrete backdrop:duration-200
               open:flex open:translate-x-0
               open:backdrop:opacity-40
-              tablet:gap-y-10
+              tablet:max-w-[420px] tablet:gap-y-10
               starting:open:transform-[translateX(100%)]
               starting:open:backdrop:opacity-0
             `}
-            data-filter-drawer=""
             id="filters"
             onClick={(e) => {
               // Backdrop click: event.target is the dialog itself, not any child
@@ -330,7 +329,9 @@ export function FilterAndSortContainer<T extends string, V>({
                               type="radio"
                               value={value}
                             />
-                            <span className="font-sans text-base">{label}</span>
+                            <span className="font-sans text-base text-default">
+                              {label}
+                            </span>
                           </label>
                         ))}
                       </div>

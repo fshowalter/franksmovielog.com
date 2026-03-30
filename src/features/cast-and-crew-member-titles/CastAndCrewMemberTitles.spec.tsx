@@ -26,9 +26,9 @@ const createTitles = (
 ): CastAndCrewMemberTitlesValue[] => {
   return overrides.map((override, index) => {
     return {
-      creditedAs: ["Director"],
+      creditedAs: override.creditedAs ?? ["Director"],
       excerpt: "test excerpt",
-      genres: ["Drama"],
+      genres: override.genres ?? ["Drama"],
       grade: "B+",
       gradeValue: 8,
       imdbId: `tt${String(index).padStart(7, "0")}`,
@@ -44,7 +44,7 @@ const createTitles = (
       reviewYear: "2020",
       slug: `test-movie-${index}`,
       sortTitle: `Test Movie ${index}`,
-      title: `Test Movie ${index}`,
+      title: override.title ?? `Test Movie ${index}`,
       watchlistCollectionNames: [],
       watchlistDirectorNames: [],
       watchlistPerformerNames: [],
@@ -55,7 +55,7 @@ const createTitles = (
 };
 
 const baseProps: CastAndCrewMemberTitlesProps = {
-  distinctCreditKinds: ["Director", "Writer", "Performer"],
+  distinctCreditKinds: ["director", "writer", "performer"],
   distinctGenres: ["Drama", "Thriller", "Horror", "Comedy", "Action"],
   distinctReleaseYears: ["1950", "1960", "1965", "1970", "1975", "1980"],
   distinctReviewYears: ["2019", "2020", "2021", "2022"],
@@ -73,13 +73,19 @@ describe("CastAndCrewMemberTitles", () => {
     vi.useRealTimers();
   });
 
-  creditedAsFilterTests(
-    (items) =>
-      render(
-        <CastAndCrewMemberTitles {...baseProps} values={createTitles(items)} />,
-      ),
-    getPosterList,
-  );
+  creditedAsFilterTests((items) => {
+    render(
+      <CastAndCrewMemberTitles
+        {...baseProps}
+        values={createTitles(
+          items.map((item) => ({
+            ...item,
+            title: item.name,
+          })),
+        )}
+      />,
+    );
+  }, getPosterList);
 
   titleFilterTests(
     (items) =>

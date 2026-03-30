@@ -133,6 +133,7 @@ describe("Reviews", () => {
       render(
         <Reviews
           {...baseProps}
+          initialSort="title-asc"
           values={items.map((item) => createReviewValue({ title: item }))}
         />,
       ),

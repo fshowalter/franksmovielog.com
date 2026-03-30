@@ -10,10 +10,8 @@ export const nameSortComparators: Record<
   NameSortKeys,
   (a: SortableByName, b: SortableByName) => number
 > = {
-  "name-asc": (a: { sortName: string }, b: { sortName: string }) =>
-    sortString(a.sortName, b.sortName),
-  "name-desc": (a: { sortName: string }, b: { sortName: string }) =>
-    sortString(b.sortName, a.sortName),
+  "name-asc": (a, b) => sortString(a.sortName, b.sortName),
+  "name-desc": (a, b) => sortString(b.sortName, a.sortName),
 };
 
 export const nameSortOptions = [

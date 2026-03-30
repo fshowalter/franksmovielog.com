@@ -25,7 +25,7 @@ const createCollectionTitles = (
 ): CollectionTitlesValue[] => {
   return overrides.map((override, index) => {
     return {
-      genres: ["Action", "Adventure"],
+      genres: override.genres ?? ["Action", "Adventure"],
       grade: "B",
       gradeValue: 7,
       imdbId: `tt${String(index).padStart(7, "0")}`,
@@ -40,7 +40,7 @@ const createCollectionTitles = (
       reviewSlug: `test-slug-${index}`,
       reviewYear: "2024",
       sortTitle: "Dr. No",
-      title: "Dr. No",
+      title: override.title ?? "Dr. No",
       ...override,
     };
   });
@@ -84,16 +84,21 @@ describe("CollectionTitles", () => {
     getPosterList,
   );
 
-  genresFilterTests(
-    (items) =>
-      render(
-        <CollectionTitles
-          {...baseProps}
-          values={createCollectionTitles(items)}
-        />,
-      ),
-    getPosterList,
-  );
+  genresFilterTests((items) => {
+    const distinctGenres = new Set<string>();
+    for (const item of items) {
+      for (const genre of item.genres) {
+        distinctGenres.add(genre);
+      }
+    }
+    render(
+      <CollectionTitles
+        {...baseProps}
+        distinctGenres={[...distinctGenres]}
+        values={createCollectionTitles(items)}
+      />,
+    );
+  }, getPosterList);
 
   releaseYearFilterTests({
     distinctReleaseYears: baseProps.distinctReleaseYears,

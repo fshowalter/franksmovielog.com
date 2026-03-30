@@ -43,23 +43,29 @@ export function reviewYearFilterTests({
       `reviewYearFilterFacetTests: distinctReviewYears must have at least 3 elements (got ${distinctReviewYears.length.toString()})`,
     );
   }
+
   describe("reviewYearFilter", () => {
     it("filters to items within review year range", async ({ expect }) => {
       renderItems([
-        { reviewYear: "2022", title: "2022 Review" },
-        { reviewYear: "2023", title: "2023 Review" },
-        { reviewYear: "2024", title: "2024 Review" },
+        { reviewYear: distinctReviewYears[0], title: "0 Review" },
+        { reviewYear: distinctReviewYears[1], title: "1 Review" },
+        { reviewYear: distinctReviewYears[2], title: "2 Review" },
       ]);
 
       const user = getUserWithFakeTimers();
       await clickToggleFilters(user);
-      await fillYearField(user, "Review Year", "2023", "2023");
+      await fillYearField(
+        user,
+        "Review Year",
+        distinctReviewYears[1],
+        distinctReviewYears[1],
+      );
       await clickViewResults(user);
 
       const list = getList();
-      expect(within(list).getByText("2023 Review")).toBeInTheDocument();
-      expect(within(list).queryByText("2022 Review")).not.toBeInTheDocument();
-      expect(within(list).queryByText("2024 Review")).not.toBeInTheDocument();
+      expect(within(list).getByText("1 Review")).toBeInTheDocument();
+      expect(within(list).queryByText("0 Review")).not.toBeInTheDocument();
+      expect(within(list).queryByText("2 Review")).not.toBeInTheDocument();
     });
   });
 

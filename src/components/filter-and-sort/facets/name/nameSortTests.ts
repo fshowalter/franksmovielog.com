@@ -17,18 +17,9 @@ export function nameSortTests(
   describe("nameSort", () => {
     it("sorts A → Z by sortName", async ({ expect }) => {
       renderItems([
-        {
-          name: "Zelda Fitzgerald",
-          sortName: "Fitzgerald, Zelda",
-        },
-        {
-          name: "Arthur Conan Doyle",
-          sortName: "Doyle, Arthur Conan",
-        },
-        {
-          name: "Mary Shelley",
-          sortName: "Shelley, Mary",
-        },
+        { name: "John Ford", sortName: "John Ford" },
+        { name: "John Huston", sortName: "John Huston" },
+        { name: "Howard Hawks", sortName: "Howard Hawks" },
       ]);
 
       const user = getUserWithFakeTimers();
@@ -36,28 +27,19 @@ export function nameSortTests(
 
       const list = getList();
       const text = list.textContent ?? "";
-      expect(text.indexOf("Doyle, Arthur Conan")).toBeLessThan(
-        text.indexOf("Fitzgerald, Zelda"),
+      expect(text.indexOf("Howard Hawks")).toBeLessThan(
+        text.indexOf("John Ford"),
       );
-      expect(text.indexOf("Fitzgerald, Zelda")).toBeLessThan(
-        text.indexOf("Shelley, Mary"),
+      expect(text.indexOf("John Ford")).toBeLessThan(
+        text.indexOf("John Huston"),
       );
     });
 
     it("sorts Z → A by  sortName", async ({ expect }) => {
       renderItems([
-        {
-          name: "Arthur Conan Doyle",
-          sortName: "Doyle, Arthur Conan",
-        },
-        {
-          name: "Zelda Fitzgerald",
-          sortName: "Fitzgerald, Zelda",
-        },
-        {
-          name: "Mary Shelley",
-          sortName: "Shelley, Mary",
-        },
+        { name: "John Ford", sortName: "John Ford" },
+        { name: "John Huston", sortName: "John Huston" },
+        { name: "Howard Hawks", sortName: "Howard Hawks" },
       ]);
 
       const user = getUserWithFakeTimers();
@@ -65,11 +47,11 @@ export function nameSortTests(
 
       const list = getList();
       const text = list.textContent ?? "";
-      expect(text.indexOf("Shelley, Mary")).toBeLessThan(
-        text.indexOf("Fitzgerald, Zelda"),
+      expect(text.indexOf("John Huston")).toBeLessThan(
+        text.indexOf("John Ford"),
       );
-      expect(text.indexOf("Fitzgerald, Zelda")).toBeLessThan(
-        text.indexOf("Doyle, Arthur Conan"),
+      expect(text.indexOf("John Ford")).toBeLessThan(
+        text.indexOf("Howard Hawks"),
       );
     });
   });

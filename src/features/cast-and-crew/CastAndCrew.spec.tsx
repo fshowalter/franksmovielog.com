@@ -15,15 +15,15 @@ import { CastAndCrew } from "./CastAndCrew";
 const createMembers = (
   overrides: Partial<CastAndCrewValue>[],
 ): CastAndCrewValue[] => {
-  return overrides.map((override) => {
-    const name = override.name || "Test Person";
+  return overrides.map((override, index) => {
+    const name = override.name ?? `Test Person ${index}`;
     return {
       avatarImageProps: undefined,
-      creditedAs: ["director"],
+      creditedAs: override.creditedAs ?? ["director"],
       name,
       reviewCount: 5,
       slug: name.toLowerCase().replaceAll(/\s+/g, "-"),
-      sortName: name,
+      sortName: override.sortName ?? name,
       ...override,
     };
   });
@@ -49,6 +49,7 @@ describe("CastAndCrew", () => {
       render(<CastAndCrew {...baseProps} values={createMembers(items)} />),
     getGroupedAvatarList,
   );
+
   creditedAsFilterTests(
     (items) =>
       render(<CastAndCrew {...baseProps} values={createMembers(items)} />),
