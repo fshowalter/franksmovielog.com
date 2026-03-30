@@ -52,13 +52,14 @@ const { class: className, variant = "button" } = Astro.props;
   <dialog
     aria-label="Search"
     class={`
-      fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default
-      bg-default shadow-lg
+      fixed inset-x-4 m-auto h-screen w-full scale-0 rounded-lg border
+      border-default bg-default opacity-0 shadow-lg transition-all duration-500
       backdrop:bg-[#000] backdrop:opacity-40 backdrop:backdrop-blur-xs
-      open:flex open:flex-col
+      open:flex open:scale-100 open:flex-col open:opacity-100
       tablet:mx-auto tablet:mt-16 tablet:h-min
       tablet:max-h-[min(100vh-128px,900px)] tablet:max-w-[min(100vw-64px,36rem)]
       tablet:rounded-xl
+      starting:transform-[scale(0)] starting:opacity-0
     `}
   >
     <div class="contents" data-dialog-frame>

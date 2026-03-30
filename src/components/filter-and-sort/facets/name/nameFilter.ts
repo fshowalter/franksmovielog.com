@@ -6,7 +6,6 @@ export function createNameFilter<TValue extends FilterableValue>(
 ) {
   const filterValue = filters.name;
   if (!filterValue) return;
-  const regex = new RegExp(filterValue, "i");
   return (value: TValue): boolean =>
-    regex.test(value.name) || regex.test(value.sortName);
+    value.name.toLocaleLowerCase().includes(filterValue);
 }

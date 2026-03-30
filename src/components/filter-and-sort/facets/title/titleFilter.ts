@@ -6,6 +6,6 @@ export function createTitleFilter<TValue extends FilterableValue>(
 ) {
   const filterValue = filters.title;
   if (!filterValue) return;
-  const regex = new RegExp(filterValue, "i");
-  return (value: TValue): boolean => regex.test(value.title);
+  return (value: TValue): boolean =>
+    value.title.toLocaleLowerCase().includes(filterValue);
 }

@@ -76,7 +76,15 @@
           group-open/dialog:after:transform-[rotate(90deg)]
         `}></span>
     </button>
-    <nav class="flex flex-col gap-y-6">
+    <nav
+      class={`
+        flex translate-x-0 flex-col gap-y-6 opacity-0 transition-all
+        transition-discrete delay-50 duration-600
+        group-open/dialog:opacity-100
+        group-open/dialog:starting:transform-[translateX(100%)]
+        group-open/dialog:starting:opacity-0
+      `}
+    >
       <slot />
     </nav>
   </dialog>
