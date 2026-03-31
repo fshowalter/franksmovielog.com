@@ -29,8 +29,10 @@ function createViewingValue(
     date,
     medium: "Blu-ray",
     posterImageProps: {
+      height: 372,
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
+      width: 248,
     },
     releaseYear: "1970",
     reviewSlug: `test-movie-${testIdCounter}`,

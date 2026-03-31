@@ -72,7 +72,6 @@ export function CalendarCell({
           >
             {value.viewings!.map((viewing) => (
               <PosterListItem
-                className="items-center"
                 key={viewing.sequence}
                 posterImageProps={viewing.posterImageProps}
               >

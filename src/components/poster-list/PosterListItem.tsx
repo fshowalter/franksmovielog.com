@@ -2,32 +2,15 @@ import type { PosterImageProps } from "~/assets/posters";
 
 import { PosterListItemPoster } from "./PosterListItemPoster";
 
-/**
- * Image configuration for poster list items.
- */
-export const PosterListItemImageConfig = {
-  height: 375,
-  sizes:
-    "(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)",
-  width: 250,
-};
+const posterSizes =
+  "(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)";
 
-/**
- * List item component for poster-based content display.
- * @param props - Component props
- * @param props.children - Content to display alongside the poster
- * @param props.hasReview - Whether the item has a review
- * @param props.posterImageProps - Poster image properties
- * @returns Poster list item element
- */
 export function PosterListItem({
   children,
   hasReview = true,
   posterImageProps,
 }: {
-  bgClasses?: string;
   children: React.ReactNode;
-  className?: string;
   hasReview?: boolean;
   posterImageProps: PosterImageProps;
 }): React.JSX.Element {
@@ -51,10 +34,7 @@ export function PosterListItem({
         }
       `}
     >
-      <PosterListItemPoster
-        imageConfig={PosterListItemImageConfig}
-        imageProps={posterImageProps}
-      />
+      <PosterListItemPoster imageProps={posterImageProps} sizes={posterSizes} />
       {children}
     </li>
   );

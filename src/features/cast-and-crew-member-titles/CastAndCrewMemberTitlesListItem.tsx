@@ -21,7 +21,7 @@ export function CastAndCrewMemberTitlesListItem({
 }): React.JSX.Element {
   return (
     <PosterListItem
-      hasReview={!!value.reviewSlug}
+      hasReview={Boolean(value.reviewSlug)}
       posterImageProps={value.posterImageProps}
     >
       <ListItemDetails>

@@ -1,7 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
 import { getFluidWidthPosterImageProps } from "~/assets/posters";
-import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { toDisplayDate } from "~/components/utils/toDisplayDate";
 import { toSortYear } from "~/components/utils/toSortYear";
 import { gradeToValue } from "~/utils/grades";
@@ -54,10 +53,7 @@ async function buildReviewValues(
         grade: title.grade,
         gradeValue: gradeToValue(title.grade),
         imdbId: title.imdbId,
-        posterImageProps: await getFluidWidthPosterImageProps(
-          title.review.id,
-          PosterListItemImageConfig,
-        ),
+        posterImageProps: await getFluidWidthPosterImageProps(title.review.id),
         releaseSequence: index,
         releaseYear: title.releaseYear,
         reviewDisplayDate: toDisplayDate(title.reviewDate),

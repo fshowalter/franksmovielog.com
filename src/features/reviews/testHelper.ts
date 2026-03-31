@@ -18,8 +18,10 @@ export function createReviewValue(
     gradeValue: 9,
     imdbId: `tt${String(testIdCounter).padStart(7, "0")}`,
     posterImageProps: {
+      height: 372,
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
+      width: 248,
     },
     releaseSequence: testIdCounter,
     releaseYear: "1970",

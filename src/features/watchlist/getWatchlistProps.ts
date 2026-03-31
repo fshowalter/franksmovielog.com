@@ -1,7 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
 import { getFluidWidthPosterImageProps } from "~/assets/posters";
-import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 
 import type { WatchlistProps } from "./Watchlist";
 
@@ -19,10 +18,8 @@ export async function getWatchlistProps(
   const distinctReleaseYears = new Set<string>();
   const distinctWriters = new Set<string>();
 
-  const defaultPosterImageProps = await getFluidWidthPosterImageProps(
-    "default",
-    PosterListItemImageConfig,
-  );
+  const defaultPosterImageProps =
+    await getFluidWidthPosterImageProps("default");
 
   watchlistTitles.sort((a, b) => a.releaseDate.localeCompare(b.releaseDate));
 

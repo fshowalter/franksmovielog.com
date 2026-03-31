@@ -1,11 +1,12 @@
 ---
 import type { MostWatchedPerson } from "~/collections/stats";
 
+import { getFluidWidthPosterImageProps } from "~/assets/posters";
 import { ListItemMediumAndVenue } from "~/components/list-item-medium-and-venue/ListItemMediumAndVenue";
 import { ListItemReviewDate } from "~/components/list-item-review-date/ListItemReviewDate";
 import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
-import PosterList from "~/components/poster-list/PosterList.astro";
-import PosterListItem from "~/components/poster-list/PosterListItem.astro";
+import { PosterList } from "~/components/poster-list/PosterList";
+import { PosterListItem } from "~/components/poster-list/PosterListItem";
 import { toDisplayDate } from "~/components/utils/toDisplayDate";
 
 type Props = {
@@ -34,109 +35,120 @@ const { header, values } = Astro.props;
         {header}
       </h2>
       <div class={`w-full`}>
-        {values.map((person) => {
-          return (
-            <div class="py-3">
-              <div
-                class={`
-                  flex justify-between px-container
-                  tablet:px-0
-                `}
-              >
+        {await Promise.all(
+          values.map(async (person) => {
+            return (
+              <div class="py-3">
                 <div
                   class={`
-                    transform-gpu font-sans text-xs text-muted
-                    transition-transform
-                    tablet:text-sm
+                    flex justify-between px-container
+                    tablet:px-0
                   `}
                 >
-                  {person.slug ? (
-                    <a
-                      class={`
-                        relative inline-block font-serif text-base/6 font-medium
-                        text-accent
-                        after:absolute after:bottom-0 after:left-0 after:h-px
-                        after:w-full after:origin-bottom-left after:scale-x-0
-                        after:bg-(--fg-accent) after:transition-all
-                        after:duration-500
-                        hover:after:scale-x-100
-                      `}
-                      href={`/cast-and-crew/${person.slug}/`}
-                    >
-                      {person.name}
-                    </a>
-                  ) : (
-                    <span
-                      class={`
-                        inline-block font-serif text-base/6 font-normal
-                        text-muted
-                      `}
-                    >
-                      {person.name}
-                    </span>
-                  )}
-                </div>
-                <div
-                  class={`
-                    col-start-2 self-center pr-1 pb-1 text-right font-sans
-                    text-sm text-nowrap text-subtle
-                  `}
-                >
-                  {person.count}
-                </div>
-              </div>
-              <div
-                class={`
-                  col-span-2 row-start-2 px-container
-                  tablet:px-0
-                `}
-              >
-                <details
-                  class={`
-                    rounded-md bg-canvas px-2
-                    open:pb-2
-                  `}
-                >
-                  <summary
+                  <div
                     class={`
-                      cursor-pointer rounded-sm py-1 font-sans text-sm
-                      font-normal tracking-prose text-subtle
+                      transform-gpu font-sans text-xs text-muted
+                      transition-transform
+                      tablet:text-sm
                     `}
                   >
-                    Details
-                  </summary>
-                  <PosterList class="bg-subtle">
-                    {person.viewings.map((viewing) => {
-                      return (
-                        <PosterListItem posterSlug={viewing.reviewSlug}>
-                          <div
-                            class={`
-                              flex grow flex-col items-start gap-y-1
-                              tablet:mt-2 tablet:w-full tablet:px-1
-                            `}
-                          >
-                            <ListItemTitle
-                              reviewSlug={viewing.reviewSlug}
-                              title={viewing.title}
-                              year={viewing.releaseYear}
-                            />
-                            <ListItemReviewDate
-                              displayDate={toDisplayDate(viewing.date)}
-                            />
-                            <ListItemMediumAndVenue
-                              medium={viewing.medium}
-                              venue={viewing.venue}
-                            />
-                          </div>
-                        </PosterListItem>
-                      );
-                    })}
-                  </PosterList>
-                </details>
+                    {person.slug ? (
+                      <a
+                        class={`
+                          relative inline-block font-serif text-base/6
+                          font-medium text-accent
+                          after:absolute after:bottom-0 after:left-0 after:h-px
+                          after:w-full after:origin-bottom-left after:scale-x-0
+                          after:bg-(--fg-accent) after:transition-all
+                          after:duration-500
+                          hover:after:scale-x-100
+                        `}
+                        href={`/cast-and-crew/${person.slug}/`}
+                      >
+                        {person.name}
+                      </a>
+                    ) : (
+                      <span
+                        class={`
+                          inline-block font-serif text-base/6 font-normal
+                          text-muted
+                        `}
+                      >
+                        {person.name}
+                      </span>
+                    )}
+                  </div>
+                  <div
+                    class={`
+                      col-start-2 self-center pr-1 pb-1 text-right font-sans
+                      text-sm text-nowrap text-subtle
+                    `}
+                  >
+                    {person.count}
+                  </div>
+                </div>
+                <div
+                  class={`
+                    col-span-2 row-start-2 px-container
+                    tablet:px-0
+                  `}
+                >
+                  <details
+                    class={`
+                      rounded-md bg-canvas px-2
+                      open:pb-2
+                    `}
+                  >
+                    <summary
+                      class={`
+                        cursor-pointer rounded-sm py-1 font-sans text-sm
+                        font-normal tracking-prose text-subtle
+                      `}
+                    >
+                      Details
+                    </summary>
+                    <PosterList className="bg-subtle">
+                      {await Promise.all(
+                        person.viewings.map(async (viewing) => {
+                          const posterImageProps =
+                            await getFluidWidthPosterImageProps(
+                              viewing.reviewSlug,
+                            );
+                          return (
+                            <PosterListItem
+                              hasReview={Boolean(viewing.reviewSlug)}
+                              posterImageProps={posterImageProps}
+                            >
+                              <div
+                                class={`
+                                  flex grow flex-col items-start gap-y-1
+                                  tablet:mt-2 tablet:w-full tablet:px-1
+                                `}
+                              >
+                                <ListItemTitle
+                                  reviewSlug={viewing.reviewSlug}
+                                  title={viewing.title}
+                                  year={viewing.releaseYear}
+                                />
+                                <ListItemReviewDate
+                                  displayDate={toDisplayDate(viewing.date)}
+                                />
+                                <ListItemMediumAndVenue
+                                  medium={viewing.medium}
+                                  venue={viewing.venue}
+                                />
+                              </div>
+                            </PosterListItem>
+                          );
+                        }),
+                      )}
+                    </PosterList>
+                  </details>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          }),
+        )}
       </div>
     </section>
   )

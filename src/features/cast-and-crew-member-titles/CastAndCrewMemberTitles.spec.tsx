@@ -33,8 +33,10 @@ const createTitles = (
       gradeValue: 8,
       imdbId: `tt${String(index).padStart(7, "0")}`,
       posterImageProps: {
+        height: 372,
         src: "/poster.jpg",
         srcSet: "/poster.jpg 1x",
+        width: 248,
       },
       releaseSequence: index,
       releaseYear: "1960",
