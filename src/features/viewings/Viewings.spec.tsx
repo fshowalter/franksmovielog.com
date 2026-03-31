@@ -12,7 +12,7 @@ import { titleFilterTests } from "~/components/filter-and-sort/facets/title/titl
 import { venueFilterTests } from "~/components/filter-and-sort/facets/venue/venueFilterTests";
 import { viewingDateFacetTests } from "~/components/filter-and-sort/facets/viewing-date/viewingDateSortTests";
 import { viewingYearFilterTests } from "~/components/filter-and-sort/facets/viewing-year/viewingYearFilterTests";
-import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
+import { getUserWithFakeTimers } from "~/utils/testUtils";
 
 import type { ViewingsProps, ViewingsValue } from "./Viewings";
 

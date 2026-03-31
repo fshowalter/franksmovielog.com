@@ -1,7 +1,7 @@
 import { describe, it } from "vitest";
 
 import { clickSortOption } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
-import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
+import { getUserWithFakeTimers } from "~/utils/testUtils";
 
 import type { SortableByViewingDate } from "./viewingDateSort";
 

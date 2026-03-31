@@ -7,7 +7,7 @@ import {
   clickToggleFilters,
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
-import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
+import { getUserWithFakeTimers } from "~/utils/testUtils";
 
 import type { FilterableValue } from "./gradeFilter";
 

@@ -8,7 +8,7 @@ import {
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
 import { fillYearField } from "~/components/filter-and-sort/fields/YearField.testHelper";
-import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
+import { getUserWithFakeTimers } from "~/utils/testUtils";
 
 import type { FilterableValue } from "./viewingYearFilter";
 
