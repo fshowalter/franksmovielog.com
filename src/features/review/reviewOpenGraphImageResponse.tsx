@@ -33,14 +33,11 @@ export async function reviewOpenGraphImageResponse({
       data: still,
       src: "still",
     },
-  ];
-
-  if (gradeBuffer) {
-    fetchedResources.push({
+    {
       data: new Uint8Array(gradeBuffer).buffer,
       src: "grade",
-    });
-  }
+    },
+  ];
 
   return await componentToImageResponse(
     <ReviewOpenGraphImage releaseYear={releaseYear} title={title} />,
