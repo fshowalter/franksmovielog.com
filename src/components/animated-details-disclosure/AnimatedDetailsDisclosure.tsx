@@ -152,6 +152,7 @@ export function AnimatedDetailsDisclosure({
         {/* Disclosure triangle on far right - points up when closed, rotates 180° to point down when open */}
         {/* SVG points UP by default, then rotates 180° when details[open] to point DOWN */}
         <svg
+          aria-hidden="true"
           className="
             mr-0.5 ml-auto size-5 text-subtle transition-transform duration-200
             group-open:rotate-180
