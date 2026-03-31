@@ -47,7 +47,6 @@ class PagefindSearch extends HTMLElement {
   private emptyTemplate!: HTMLTemplateElement;
   private errorTemplate!: HTMLTemplateElement;
   private input!: HTMLInputElement;
-  private iosHandler: (() => void) | undefined;
   private keydownHandler: ((e: KeyboardEvent) => void) | undefined;
   private loadMoreButton!: HTMLButtonElement;
   private loadMoreWrapper!: HTMLElement;
@@ -344,7 +343,6 @@ class PagefindSearch extends HTMLElement {
     if (remaining.length === 0) return;
 
     const nextBatch = remaining.slice(0, this.config.pageSize);
-    const scrollPosition = this.resultsContainer.scrollTop;
     const gen = this.searchGeneration;
 
     try {
@@ -365,9 +363,6 @@ class PagefindSearch extends HTMLElement {
         visibleCount: visibleCount + resultData.length,
       };
       this.render();
-
-      // Restore scroll position
-      this.resultsContainer.scrollTop = scrollPosition;
 
       // Announce to screen readers that new results were loaded
       this.announceToScreenReader(`${resultData.length} more results loaded`);
