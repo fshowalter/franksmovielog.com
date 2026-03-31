@@ -1,9 +1,10 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
+import { getFluidWidthPosterImageProps } from "~/assets/posters";
 import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
-import PosterList from "~/components/poster-list/PosterList.astro";
-import PosterListItem from "~/components/poster-list/PosterListItem.astro";
+import { PosterList } from "~/components/poster-list/PosterList";
+import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 type MostWatchedMoviesListItemValue =
   CollectionEntry<"alltimeStats">["data"]["mostWatchedTitles"][number];
@@ -37,34 +38,42 @@ const { class: className, values } = Astro.props;
       >
         Most Watched Movies
       </h2>
-      <PosterList class={`justify-center`}>
-        {values.map((value) => {
-          return (
-            <PosterListItem posterSlug={value.reviewSlug}>
-              <div
-                class={`
-                  flex flex-col justify-center
-                  tablet:mt-2 tablet:w-full tablet:text-center
-                `}
+      <PosterList className={`justify-center`}>
+        {await Promise.all(
+          values.map(async (value) => {
+            const posterImageProps = await getFluidWidthPosterImageProps(
+              value.reviewSlug,
+            );
+            return (
+              <PosterListItem
+                hasReview={!value.reviewSlug}
+                posterImageProps={posterImageProps}
               >
-                <ListItemTitle
-                  reviewSlug={value.reviewSlug}
-                  title={value.title}
-                  year={value.releaseYear}
-                />
                 <div
                   class={`
-                    mt-1 flex justify-start font-sans text-[13px] font-normal
-                    text-subtle
-                    tablet:justify-center
+                    flex flex-col justify-center
+                    tablet:mt-2 tablet:w-full tablet:text-center
                   `}
                 >
-                  {value.count.toLocaleString()} times
+                  <ListItemTitle
+                    reviewSlug={value.reviewSlug}
+                    title={value.title}
+                    year={value.releaseYear}
+                  />
+                  <div
+                    class={`
+                      mt-1 flex justify-start font-sans text-[13px] font-normal
+                      text-subtle
+                      tablet:justify-center
+                    `}
+                  >
+                    {value.count.toLocaleString()} times
+                  </div>
                 </div>
-              </div>
-            </PosterListItem>
-          );
-        })}
+              </PosterListItem>
+            );
+          }),
+        )}
       </PosterList>
     </section>
   )

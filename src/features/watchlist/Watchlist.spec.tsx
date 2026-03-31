@@ -40,8 +40,10 @@ const createWatchlistTitle = (
 
 const baseProps: WatchlistProps = {
   defaultPosterImageProps: {
+    height: 372,
     src: "/default-poster.jpg",
     srcSet: "/default-poster.jpg 1x",
+    width: 248,
   },
   distinctCollections: ["Universal Monsters", "Hammer Horror"],
   distinctDirectors: [

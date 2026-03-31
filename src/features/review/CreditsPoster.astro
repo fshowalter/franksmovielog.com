@@ -6,10 +6,6 @@ import type { PosterImageProps } from "~/assets/posters";
 type Props = HTMLAttributes<"img"> & {
   class?: string;
   decoding: "async" | "auto" | "sync";
-  imageConfig: {
-    height: number;
-    width: number;
-  };
   imageProps: PosterImageProps | undefined;
   loading: "eager" | "lazy";
 };
@@ -17,7 +13,6 @@ type Props = HTMLAttributes<"img"> & {
 const {
   class: className,
   decoding,
-  imageConfig,
   imageProps,
   loading,
   ...rest
@@ -28,7 +23,6 @@ const {
   {...rest}
   {...imageProps}
   alt=""
-  {...imageConfig}
   class:list={["aspect-poster", className]}
   decoding={decoding}
   loading={loading}

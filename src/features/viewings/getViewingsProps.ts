@@ -1,7 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
 import { getFluidWidthPosterImageProps } from "~/assets/posters";
-import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { toSortDate } from "~/components/utils/toSortDate";
 import { toSortYear } from "~/components/utils/toSortYear";
 
@@ -36,10 +35,7 @@ export async function getViewingLogProps(
       const value: ViewingsValue = {
         date: toSortDate(entry.date),
         medium: entry.medium,
-        posterImageProps: await getFluidWidthPosterImageProps(
-          entry.reviewSlug,
-          PosterListItemImageConfig,
-        ),
+        posterImageProps: await getFluidWidthPosterImageProps(entry.reviewSlug),
         releaseYear: entry.releaseYear,
         reviewSlug: entry.reviewSlug,
         sequence: entry.sequence,

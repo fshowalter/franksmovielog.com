@@ -21,7 +21,7 @@ export function PosterList({
           @min-[calc((250px*3)+1px)]/poster-list:[--poster-list-item-width:25%]
           @min-[calc((250px*4)+1px)]/poster-list:[--poster-list-item-width:20%]
           @min-[calc((250px*5)+1px)]/poster-list:[--poster-list-item-width:16.66%]
-          ${className}
+          ${className ?? ""}
         `}
         data-testid="poster-list"
       >

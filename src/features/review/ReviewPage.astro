@@ -40,15 +40,7 @@ const { data: review } = await getEntry(reviewedTitle.review);
 const reviewedTitles = await getCollection("reviewedTitles");
 const moreReviews = await getEntries(reviewedTitle.moreReviews);
 
-const PosterImageConfig = {
-  height: 372,
-  width: 248,
-};
-
-const posterImageProps = await getFixedWidthPosterImageProps(
-  review.slug,
-  PosterImageConfig,
-);
+const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
 ---
 
 <BaseLayout
@@ -214,7 +206,6 @@ const posterImageProps = await getFixedWidthPosterImageProps(
               <CreditsPoster
                 class="h-auto"
                 decoding="async"
-                imageConfig={PosterImageConfig}
                 imageProps={posterImageProps}
                 loading="lazy"
               />

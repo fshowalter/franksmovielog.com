@@ -1,22 +1,11 @@
 import type { PosterImageProps } from "~/assets/posters";
 
-/**
- * Poster image component for list items.
- * @param props - Component props
- * @param props.imageConfig - Image sizing configuration
- * @param props.imageProps - Poster image properties
- * @returns Poster element with hover effects
- */
 export function PosterListItemPoster({
-  imageConfig,
   imageProps,
+  sizes,
 }: {
-  imageConfig: {
-    height: number;
-    sizes: string;
-    width: number;
-  };
   imageProps: PosterImageProps;
+  sizes: string;
 }): React.JSX.Element {
   return (
     <div
@@ -33,7 +22,6 @@ export function PosterListItemPoster({
       <img
         {...imageProps}
         alt=""
-        {...imageConfig}
         className={`
           aspect-poster w-full transform-gpu object-cover transition-transform
           duration-500
@@ -41,6 +29,7 @@ export function PosterListItemPoster({
         `}
         decoding="async"
         loading="lazy"
+        sizes={sizes}
       />
     </div>
   );

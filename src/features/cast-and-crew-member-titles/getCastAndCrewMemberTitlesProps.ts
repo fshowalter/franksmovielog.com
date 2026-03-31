@@ -3,7 +3,6 @@ import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
 
 import { getFluidWidthPosterImageProps } from "~/assets/posters";
-import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
 import { toDisplayDate } from "~/components/utils/toDisplayDate";
 import { toSortYear } from "~/components/utils/toSortYear";
 import { gradeToValue } from "~/utils/grades";
@@ -57,7 +56,6 @@ export async function getCastAndCrewMemberTitlesProps(
         imdbId: title.imdbId,
         posterImageProps: await getFluidWidthPosterImageProps(
           reviewedTitle ? title.reviewSlug : "default",
-          PosterListItemImageConfig,
         ),
         releaseSequence: index,
         releaseYear: title.releaseYear,
