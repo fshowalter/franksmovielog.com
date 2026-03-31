@@ -7,7 +7,7 @@ import {
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
 import { clickCheckboxListFieldOption } from "~/components/filter-and-sort/fields/CheckboxListField.testHelper";
-import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
+import { getUserWithFakeTimers } from "~/utils/testUtils";
 
 import type { FilterableValue } from "./genresFilter";
 

@@ -9,7 +9,7 @@ import {
   clickViewResults,
 } from "~/components/filter-and-sort/container/FilterAndSortContainer.testHelper";
 import { fillTextField } from "~/components/filter-and-sort/fields/TextField.testHelper";
-import { getUserWithFakeTimers } from "~/utils/getUserWithFakeTimers";
+import { getUserWithFakeTimers } from "~/utils/testUtils";
 
 import type { FilterableValue } from "./titleFilter";
 

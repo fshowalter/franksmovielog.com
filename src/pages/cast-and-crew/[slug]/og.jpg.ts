@@ -2,7 +2,7 @@ import type { APIRoute, InferGetStaticPropsType } from "astro";
 
 import { getCollection } from "astro:content";
 
-import { openGraphImageResponse } from "~/utils/openGraphImageResponse";
+import { createOpenGraphImageResponse } from "~/utils/createOpenGraphImageResponse";
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 export const GET: APIRoute = async function get({ props }) {
   const { castAndCrewMember } = props as Props;
 
-  return await openGraphImageResponse(
+  return await createOpenGraphImageResponse(
     castAndCrewMember.name,
     castAndCrewMember.slug,
   );

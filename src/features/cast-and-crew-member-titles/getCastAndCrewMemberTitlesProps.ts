@@ -3,9 +3,9 @@ import type { CollectionEntry } from "astro:content";
 import { getEntry } from "astro:content";
 
 import { getFluidWidthPosterImageProps } from "~/assets/posters";
-import { toDisplayDate } from "~/components/utils/toDisplayDate";
-import { toSortYear } from "~/components/utils/toSortYear";
 import { gradeToValue } from "~/utils/grades";
+import { toDisplayDate } from "~/utils/toDisplayDate";
+import { toSortYear } from "~/utils/toSortYear";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
 
