@@ -76,7 +76,7 @@ export function gradeValueToLetter(gradeValue: GradeValue): GradeText {
 }
 
 export const GRADE_SVG_MAP: Record<
-  Exclude<GradeText, "Abandoned">,
+  GradeText,
   { altText: string; src: string }
 > = {
   A: { altText: "5 stars (out of 5)", src: "/svg/5-stars.svg" },

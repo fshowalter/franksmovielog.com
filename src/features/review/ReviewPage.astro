@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 import { getEntries } from "astro:content";
 
 import { getFixedWidthPosterImageProps } from "~/assets/posters";
-import Grade from "~/components/grade/Grade.astro";
+import { Grade } from "~/components/grade/Grade";
 import BaseLayout from "~/components/layout/BaseLayout.astro";
 import Mast from "~/components/layout/Mast.astro";
 import LongFormText from "~/components/long-form-text/LongFormText.astro";
@@ -112,7 +112,7 @@ const posterImageProps = await getFixedWidthPosterImageProps(
           )
         }
       </div>
-      <Grade class="mb-6" height={24} value={reviewedTitle.grade} />
+      <Grade className="mb-6" height={24} value={reviewedTitle.grade} />
       <div
         class={`
           mb-10 text-center font-sans text-sm tracking-wide text-subtle
