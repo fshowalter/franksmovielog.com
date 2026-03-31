@@ -207,8 +207,8 @@ export function FilterAndSortContainer<T extends string, V>({
           <dialog
             aria-label="Filters"
             className={`
-              group/dialog fixed top-0 right-0 left-auto z-nav-menu m-0 flex
-              size-full max-h-full max-w-[380px] translate-x-full flex-col
+              group/dialog fixed top-0 right-0 left-auto z-nav-menu m-0
+              size-full max-h-full max-w-[380px] translate-x-full
               overflow-hidden border-0 bg-default p-0 text-left drop-shadow-2xl
               transition-all transition-discrete duration-600
               ease-[cubic-bezier(0.19,1,0.22,1)]
@@ -234,64 +234,65 @@ export function FilterAndSortContainer<T extends string, V>({
           >
             <form
               className={`
-                flex size-full grow flex-col overflow-auto text-sm
+                flex size-full flex-col overflow-hidden text-sm
                 tablet:text-base
               `}
               ref={formRef}
             >
-              <header
-                className={`
-                  flex w-full items-center justify-between px-container py-7
-                  shadow-bottom
-                  tablet-landscape:px-12
-                `}
-              >
-                <h3
+              <div className="grow overflow-auto">
+                <header
                   className={`
-                    mb-0 block font-sans text-base/10 font-bold tracking-wide
-                    text-subtle uppercase
+                    flex w-full items-center justify-between px-container py-7
+                    shadow-bottom
+                    tablet-landscape:px-12
                   `}
                 >
-                  Filter
-                </h3>
-                {/* Close button */}
-                <button
-                  aria-label="Close filters"
-                  className={`
-                    size-6 cursor-pointer items-center justify-center
-                    rounded-full text-default transition-all
-                    hover:scale-125 hover:text-accent
-                  `}
-                  onClick={() => {
-                    dispatch(createResetFiltersAction());
-                    formRef.current?.reset();
-                    dialogRef.current?.close();
-                    toggleButtonRef.current?.focus();
-                  }}
-                  type="button"
-                >
-                  <svg
+                  <h3
                     className={`
-                      size-6 rotate-45 transform-gpu transition-[rotate]
-                      delay-200 duration-200
-                      group-open/dialog:rotate-0
+                      mb-0 block font-sans text-base/10 font-bold tracking-wide
+                      text-subtle uppercase
                     `}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path
-                      d="M6 18 18 6M6 6l12 12"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-              </header>
-
-              <fieldset className={`mt-0 flex grow-0 flex-col`}>
+                    Filter
+                  </h3>
+                  {/* Close button */}
+                  <button
+                    aria-label="Close filters"
+                    className={`
+                      size-6 safari-border-radius-fix cursor-pointer
+                      rounded-full text-default transition-all
+                      hover:scale-125 hover:text-accent
+                    `}
+                    onClick={() => {
+                      dispatch(createResetFiltersAction());
+                      formRef.current?.reset();
+                      dialogRef.current?.close();
+                      toggleButtonRef.current?.focus();
+                    }}
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className={`
+                        size-6 rotate-0 transform-gpu transition-all delay-200
+                        duration-300
+                        group-open/dialog:rotate-0
+                        group-open/dialog:starting:rotate-45
+                      `}
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 18 18 6M6 6l12 12"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </header>
                 <div
                   className="
                     px-container
@@ -348,75 +349,76 @@ export function FilterAndSortContainer<T extends string, V>({
                   </div>
                   {filters}
                 </div>
-              </fieldset>
-            </form>
-            <div
-              className={`
-                sticky bottom-0 z-filter-footer mt-auto w-full translate-y-full
-                border-t border-t-default bg-default px-8 py-4 drop-shadow-2xl
-                transition-all transition-discrete duration-600
-                group-open/dialog:translate-y-0
-                tablet-landscape:px-12
-                group-open/dialog:starting:transform-[translateY(100%)]
-              `}
-            >
-              <div className="flex gap-x-4">
-                <button
-                  aria-label="Clear all filters"
-                  className={`
-                    flex items-center justify-center gap-x-4 rounded-sm
-                    bg-canvas px-4 py-3 font-sans text-xs text-nowrap uppercase
-                    transition-transform
-                    ${
-                      hasPendingFilters
-                        ? `
-                          cursor-pointer text-default
-                          enabled:hover:scale-105 enabled:hover:drop-shadow-md
-                        `
-                        : "cursor-not-allowed text-muted opacity-50"
-                    }
-                  `}
-                  disabled={!hasPendingFilters}
-                  onClick={() => {
-                    if (hasPendingFilters) {
-                      dispatch(createClearFiltersAction());
-                    }
-                  }}
-                  type="reset"
-                >
-                  Clear
-                </button>
-                <button
-                  className={`
-                    flex flex-1 transform-gpu items-center justify-center
-                    gap-x-4 rounded-sm bg-footer px-4 py-3 font-sans text-xs
-                    font-bold tracking-wide text-nowrap text-white uppercase
-                    transition-transform
-                    ${
-                      pendingFilteredCount === 0
-                        ? "cursor-not-allowed text-muted opacity-50"
-                        : `
-                          cursor-pointer
-                          hover:scale-105 hover:drop-shadow-md
-                        `
-                    }
-                  `}
-                  disabled={pendingFilteredCount === 0}
-                  onClick={() => {
-                    const formData = new FormData(formRef.current!);
-                    const sortValue = formData.get("sort") as T;
-                    suppressSortScrollRef.current = true;
-                    dispatch(createSortAction(sortValue));
-                    dispatch(createApplyFiltersAction());
-                    dialogRef.current?.close();
-                    listRef.current?.scrollIntoView();
-                  }}
-                  type="button"
-                >
-                  View {pendingFilteredCount} Results
-                </button>
               </div>
-            </div>
+              <div
+                className={`
+                  sticky bottom-0 z-filter-footer mt-auto w-full
+                  translate-y-full border-t border-t-default bg-default px-8
+                  py-4 drop-shadow-2xl transition-all transition-discrete
+                  duration-600
+                  group-open/dialog:translate-y-0
+                  tablet-landscape:px-12
+                  group-open/dialog:starting:transform-[translateY(100%)]
+                `}
+              >
+                <div className="flex gap-x-4">
+                  <button
+                    aria-label="Clear all filters"
+                    className={`
+                      flex items-center justify-center gap-x-4 rounded-sm
+                      bg-canvas px-4 py-3 font-sans text-xs text-nowrap
+                      uppercase transition-transform
+                      ${
+                        hasPendingFilters
+                          ? `
+                            cursor-pointer text-default
+                            enabled:hover:scale-105 enabled:hover:drop-shadow-md
+                          `
+                          : "cursor-not-allowed text-muted opacity-50"
+                      }
+                    `}
+                    disabled={!hasPendingFilters}
+                    onClick={() => {
+                      if (hasPendingFilters) {
+                        dispatch(createClearFiltersAction());
+                      }
+                    }}
+                    type="reset"
+                  >
+                    Clear
+                  </button>
+                  <button
+                    className={`
+                      flex flex-1 transform-gpu items-center justify-center
+                      gap-x-4 rounded-sm bg-footer px-4 py-3 font-sans text-xs
+                      font-bold tracking-wide text-nowrap text-white uppercase
+                      transition-transform
+                      ${
+                        pendingFilteredCount === 0
+                          ? "cursor-not-allowed text-muted opacity-50"
+                          : `
+                            cursor-pointer
+                            hover:scale-105 hover:drop-shadow-md
+                          `
+                      }
+                    `}
+                    disabled={pendingFilteredCount === 0}
+                    onClick={() => {
+                      const formData = new FormData(formRef.current!);
+                      const sortValue = formData.get("sort") as T;
+                      suppressSortScrollRef.current = true;
+                      dispatch(createSortAction(sortValue));
+                      dispatch(createApplyFiltersAction());
+                      dialogRef.current?.close();
+                      listRef.current?.scrollIntoView();
+                    }}
+                    type="button"
+                  >
+                    View {pendingFilteredCount} Results
+                  </button>
+                </div>
+              </div>
+            </form>
           </dialog>
         </div>
       </div>
