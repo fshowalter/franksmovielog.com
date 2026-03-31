@@ -17,14 +17,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/avatars/*.png",
 );
 
-/**
- * Generates optimized avatar image properties for a given slug.
- * @param slug - The identifier for the avatar image file
- * @param options - Image dimensions configuration
- * @param options.height - Target height for the avatar image
- * @param options.width - Target width for the avatar image
- * @returns Avatar image properties with src and srcSet, or undefined if not found
- */
 export async function getAvatarImageProps(
   slug: string | undefined,
 ): Promise<AvatarImageProps | undefined> {
