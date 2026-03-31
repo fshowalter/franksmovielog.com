@@ -22,10 +22,6 @@ export function buildMultiSelectChips({
   }));
 }
 
-/**
- * Builds a search chip for a text search field.
- * Returns an empty array if the value is blank or undefined.
- */
 export function buildSearchChip({
   key,
   label,

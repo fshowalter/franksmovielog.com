@@ -7,7 +7,7 @@ export default getViteConfig({
       exclude: [
         "src/**/*.astro",
         "src/assets/**",
-        "src/collections/*.ts",
+        "src/collections/**",
         "src/components/nav-drawer/**",
         "src/components/open-graph-image/**",
         "src/components/pagefind-search/**",
@@ -19,6 +19,7 @@ export default getViteConfig({
         "src/features/how-i-grade/**",
         "src/features/review/**",
         "src/features/stats/**",
+        "src/features/updates/**",
         "src/pages/**",
       ],
       include: ["src/**"],

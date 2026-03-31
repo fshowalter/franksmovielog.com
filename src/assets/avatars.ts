@@ -8,6 +8,11 @@ export type AvatarImageProps = {
   srcSet: string;
 };
 
+const AvatarImageConfig = {
+  height: 80,
+  width: 80,
+};
+
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/avatars/*.png",
 );
@@ -22,13 +27,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
  */
 export async function getAvatarImageProps(
   slug: string | undefined,
-  {
-    height,
-    width,
-  }: {
-    height: number;
-    width: number;
-  },
 ): Promise<AvatarImageProps | undefined> {
   const avatarFilePath = Object.keys(images).find((path) => {
     return path.endsWith(`${slug}.png`);
@@ -43,10 +41,10 @@ export async function getAvatarImageProps(
   const optimizedImage = await getImage({
     densities: [1, 2],
     format: "avif",
-    height: height,
+    height: AvatarImageConfig.height,
     quality: 80,
     src: avatarFile.default,
-    width: width,
+    width: AvatarImageConfig.width,
   });
 
   return {

@@ -1,11 +1,9 @@
 import type { AvatarImageProps } from "~/assets/avatars";
 
-type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+type AvatarProps = {
   className?: string;
-  height: number;
   imageProps: AvatarImageProps | undefined;
   loading: "eager" | "lazy";
-  width: number;
 };
 
 /**
@@ -18,10 +16,9 @@ type AvatarProps = React.ImgHTMLAttributes<HTMLImageElement> & {
 export function Avatar({
   className,
   imageProps,
-  ...rest
 }: AvatarProps): React.JSX.Element {
   if (imageProps) {
-    return <img alt="" {...imageProps} {...rest} className={className} />;
+    return <img alt="" {...imageProps} className={className} />;
   }
 
   return (

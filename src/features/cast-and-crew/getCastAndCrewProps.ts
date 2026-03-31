@@ -1,7 +1,6 @@
 import type { CollectionEntry } from "astro:content";
 
 import { getAvatarImageProps } from "~/assets/avatars";
-import { AvatarListItemImageConfig } from "~/components/avatar-list/AvatarListItem";
 
 import type { CastAndCrewProps } from "./CastAndCrew";
 import type { CastAndCrewValue } from "./CastAndCrew";
@@ -18,10 +17,7 @@ export async function getCastAndCrewProps(
   const values = await Promise.all(
     castAndCrew.map(async (member) => {
       const value: CastAndCrewValue = {
-        avatarImageProps: await getAvatarImageProps(
-          member.slug,
-          AvatarListItemImageConfig,
-        ),
+        avatarImageProps: await getAvatarImageProps(member.slug),
         creditedAs: member.creditedAs,
         name: member.name,
         reviewCount: member.reviewCount,
