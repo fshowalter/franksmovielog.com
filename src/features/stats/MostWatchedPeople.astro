@@ -116,7 +116,7 @@ const { header, values } = Astro.props;
                             );
                           return (
                             <PosterListItem
-                              hasReview={!viewing.reviewSlug}
+                              hasReview={Boolean(viewing.reviewSlug)}
                               posterImageProps={posterImageProps}
                             >
                               <div

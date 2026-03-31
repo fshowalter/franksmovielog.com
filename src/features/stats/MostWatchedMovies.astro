@@ -46,7 +46,7 @@ const { class: className, values } = Astro.props;
             );
             return (
               <PosterListItem
-                hasReview={!value.reviewSlug}
+                hasReview={Boolean(value.reviewSlug)}
                 posterImageProps={posterImageProps}
               >
                 <div
