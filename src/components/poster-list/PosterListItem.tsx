@@ -2,7 +2,7 @@ import type { PosterImageProps } from "~/assets/posters";
 
 import { PosterListItemPoster } from "./PosterListItemPoster";
 
-const posterListItemImageSizes =
+const posterSizes =
   "(min-width: 1800px) 216px, (min-width: 1380px) calc(13.25vw - 20px), (min-width: 1280px) calc(20vw - 70px), (min-width: 1060px) calc(20vw - 57px), (min-width: 800px) calc(25vw - 60px), (min-width: 680px) calc(33vw - 61px), calc(23.06vw + 4px)";
 
 export function PosterListItem({
@@ -10,9 +10,7 @@ export function PosterListItem({
   hasReview = true,
   posterImageProps,
 }: {
-  bgClasses?: string;
   children: React.ReactNode;
-  className?: string;
   hasReview?: boolean;
   posterImageProps: PosterImageProps;
 }): React.JSX.Element {
@@ -36,10 +34,7 @@ export function PosterListItem({
         }
       `}
     >
-      <PosterListItemPoster
-        imageProps={posterImageProps}
-        sizes={posterListItemImageSizes}
-      />
+      <PosterListItemPoster imageProps={posterImageProps} sizes={posterSizes} />
       {children}
     </li>
   );
