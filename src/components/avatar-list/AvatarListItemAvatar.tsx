@@ -14,7 +14,6 @@ export function AvatarListItemAvatar({
         group-has-[a:hover]/list-item:scale-110
       `}
       imageProps={imageProps}
-      loading="lazy"
     />
   );
 

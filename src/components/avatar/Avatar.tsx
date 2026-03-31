@@ -3,7 +3,6 @@ import type { AvatarImageProps } from "~/assets/avatars";
 type AvatarProps = {
   className?: string;
   imageProps: AvatarImageProps | undefined;
-  loading: "eager" | "lazy";
 };
 
 /**
