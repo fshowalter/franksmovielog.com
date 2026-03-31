@@ -37,7 +37,6 @@ type SearchState =
   | { kind: "loading"; query: string };
 
 class PagefindSearch extends HTMLElement {
-  private clearButton!: HTMLButtonElement;
   private clickHandler: ((e: MouseEvent) => void) | undefined;
   private readonly config = {
     bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
@@ -67,6 +66,7 @@ class PagefindSearch extends HTMLElement {
   private readonly win = globalThis as unknown as Window;
 
   connectedCallback(): void {
+    const isGlobal = "global" in this.dataset;
     const { win } = this;
 
     const openBtn = this.querySelector<HTMLButtonElement>(
@@ -74,7 +74,7 @@ class PagefindSearch extends HTMLElement {
     );
     if (!openBtn) return;
 
-    if (/(Mac|iPhone|iPod|iPad)/i.test(win.navigator.userAgent)) {
+    if (isGlobal && /(Mac|iPhone|iPod|iPad)/i.test(win.navigator.userAgent)) {
       openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
       openBtn.setAttribute("title", "Search: ⌘K");
     }
@@ -91,8 +91,6 @@ class PagefindSearch extends HTMLElement {
 
     // Cache element refs — IDs prefixed with search-box- to avoid collisions
     this.input = this.querySelector<HTMLInputElement>("#search-box-input")!;
-    this.clearButton =
-      this.querySelector<HTMLButtonElement>("#search-box-clear")!;
     this.resultsCounter = this.querySelector<HTMLElement>(
       "#search-box-counter",
     )!;
@@ -123,7 +121,6 @@ class PagefindSearch extends HTMLElement {
 
     if (
       !this.input ||
-      !this.clearButton ||
       !this.resultsCounter ||
       !this.resultsContainer ||
       !this.loadMoreWrapper ||
@@ -142,9 +139,10 @@ class PagefindSearch extends HTMLElement {
 
     this.setupEventListeners();
 
-    // ios safari doesn't bubble click events unless a parent has a listener
-    this.iosHandler = () => {};
-    win.document.body.addEventListener("click", this.iosHandler);
+    const closeModal = () => {
+      this.clearSearch();
+      dialog.close();
+    };
 
     /** Close the modal if a user clicks on a link or outside of the modal. */
     const onClick = (event: MouseEvent) => {
@@ -153,7 +151,9 @@ class PagefindSearch extends HTMLElement {
 
       if (link?.href) {
         // For links, only close modal after a small delay to allow navigation
-        setTimeout(() => closeModal(), 100);
+        setTimeout(() => {
+          dialog.close();
+        }, 100);
         return;
       }
 
@@ -198,8 +198,6 @@ class PagefindSearch extends HTMLElement {
       }
     };
 
-    const closeModal = () => dialog.close();
-
     openBtn.addEventListener("click", (e) => void openModal(e));
     openBtn.disabled = false;
     closeBtn.addEventListener("click", closeModal);
@@ -208,16 +206,23 @@ class PagefindSearch extends HTMLElement {
       win.removeEventListener("click", onClick);
     });
 
-    // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
-    this.keydownHandler = (e: KeyboardEvent) => {
-      if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
-        if (dialog.open) closeModal();
-        else void openModal();
-        e.preventDefault();
-      }
-    };
+    if (isGlobal) {
+      // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
+      this.keydownHandler = (e: KeyboardEvent) => {
+        if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
+          if (dialog.open) closeModal();
+          else void openModal();
+          e.preventDefault();
+        }
 
-    win.addEventListener("keydown", this.keydownHandler);
+        // Safari dialog modals don't close on escape if a text input has focus.
+        if (e.key === "Escape" && dialog.open) {
+          closeModal();
+        }
+      };
+
+      win.addEventListener("keydown", this.keydownHandler);
+    }
   }
 
   disconnectedCallback(): void {
@@ -227,9 +232,6 @@ class PagefindSearch extends HTMLElement {
     }
     if (this.clickHandler) {
       win.removeEventListener("click", this.clickHandler);
-    }
-    if (this.iosHandler) {
-      win.document.body.removeEventListener("click", this.iosHandler);
     }
     // disconnectedCallback is synchronous so fire-and-forget is intentional here.
     void this.pagefind?.destroy();
@@ -250,7 +252,6 @@ class PagefindSearch extends HTMLElement {
 
   private clearSearch(): void {
     this.input.value = "";
-    this.clearButton.classList.add("hidden");
     this.state = { kind: "idle" };
     this.render();
   }
@@ -273,12 +274,11 @@ class PagefindSearch extends HTMLElement {
     if (imageWrapper) {
       const { image, image_alt } = doc.meta;
       if (image) {
-        const resultUrl = new URL(doc.url);
-        const imageUrl = `${resultUrl.protocol}//${resultUrl.host}/${image}`;
+        const imageUrl = new URL(image, document.baseURI);
         const img = clone.querySelector<HTMLImageElement>(
           "[data-field='image']",
         )!;
-        img.src = imageUrl;
+        img.src = imageUrl.toString();
         img.alt = image_alt ?? "";
       } else {
         imageWrapper.remove();
@@ -478,9 +478,6 @@ class PagefindSearch extends HTMLElement {
     this.input.addEventListener("input", (e) => {
       const target = e.target as HTMLInputElement;
 
-      // Show/hide clear button based on input content
-      this.clearButton.classList.toggle("hidden", !target.value);
-
       this.debouncedSearch(target.value);
     });
 
@@ -489,14 +486,6 @@ class PagefindSearch extends HTMLElement {
       if (e.key === "Enter") {
         this.input.blur();
       }
-    });
-
-    // Clear button — stopPropagation prevents the click from reaching the modal's
-    // global onClick handler, which would otherwise attempt to close the modal.
-    this.clearButton.addEventListener("click", (e) => {
-      e.stopPropagation();
-      this.clearSearch();
-      this.input.focus();
     });
 
     // Load more button
