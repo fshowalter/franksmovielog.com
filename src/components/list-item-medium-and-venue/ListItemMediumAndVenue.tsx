@@ -8,6 +8,9 @@ export function ListItemMediumAndVenue({
   const value = medium && venue ? `${medium} at ${venue}` : (medium ?? venue);
 
   if (!value) {
+    {
+      /* pre-2012 viewings don't have venue or medium */
+    }
     return undefined;
   }
 
