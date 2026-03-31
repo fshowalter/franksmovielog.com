@@ -4,7 +4,7 @@ import { ReleaseYearFacet } from "~/components/filter-and-sort/facets/release-ye
 import { ReviewYearFacet } from "~/components/filter-and-sort/facets/review-year/ReviewYearFacet";
 import { TitleFacet } from "~/components/filter-and-sort/facets/title/TitleFacet";
 
-import type { ReviewsValue } from "./ReviewsListItem";
+import type { ReviewsValue } from "./Reviews";
 import type { ReviewsAction, ReviewsFiltersValues } from "./reviewsReducer";
 
 import { filterReviews } from "./filterReviews";

@@ -1,14 +1,12 @@
 import type { CollectionEntry } from "astro:content";
 
-import type { ReviewsValue } from "~/features/reviews/ReviewsListItem";
-
 import { getFluidWidthPosterImageProps } from "~/assets/posters";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
-import { displayDate } from "~/utils/displayDate";
+import { toDisplayDate } from "~/components/utils/toDisplayDate";
+import { toSortYear } from "~/components/utils/toSortYear";
 import { gradeToValue } from "~/utils/grades";
-import { toSortYear } from "~/utils/toSortYear";
 
-import type { ReviewsProps } from "./ReviewsProps";
+import type { ReviewsProps, ReviewsValue } from "./Reviews";
 
 /**
  * Fetches data for the all reviews page including poster images and metadata.
@@ -62,7 +60,7 @@ async function buildReviewValues(
         ),
         releaseSequence: index,
         releaseYear: title.releaseYear,
-        reviewDisplayDate: displayDate(title.reviewDate),
+        reviewDisplayDate: toDisplayDate(title.reviewDate),
         reviewSequence: title.reviewSequence,
         reviewYear: toSortYear(title.reviewDate),
         slug: title.review.id,

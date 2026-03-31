@@ -25,7 +25,7 @@ export function CollectionTitlesListItem({
     >
       <ListItemDetails>
         <ListItemTitle
-          slug={value.reviewSlug}
+          reviewSlug={value.reviewSlug}
           title={value.title}
           year={value.releaseYear}
         />

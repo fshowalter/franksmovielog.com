@@ -1,12 +1,15 @@
 import { useReducer } from "react";
 
+import type { PosterImageProps } from "~/assets/posters";
+import type { GradeText, GradeValue } from "~/utils/grades";
+
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { PaginatedList } from "~/components/filter-and-sort/paginated-list/PaginatedList";
 import { PosterList } from "~/components/poster-list/PosterList";
 import { usePaginatedValues } from "~/hooks/usePaginatedValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
 
-import type { ReviewsProps } from "./ReviewsProps";
+import type { ReviewsSort } from "./sortReviews";
 
 import { buildAppliedFilterChips } from "./buildAppliedFilterChips";
 import { filterReviews } from "./filterReviews";
@@ -14,6 +17,30 @@ import { ReviewsFilters } from "./ReviewsFilters";
 import { ReviewsListItem } from "./ReviewsListItem";
 import { createInitialState, reducer } from "./reviewsReducer";
 import { sortOptions, sortReviews } from "./sortReviews";
+
+export type ReviewsProps = {
+  distinctGenres: readonly string[];
+  distinctReleaseYears: readonly string[];
+  distinctReviewYears: readonly string[];
+  initialSort: ReviewsSort;
+  values: ReviewsValue[];
+};
+
+export type ReviewsValue = {
+  genres: string[];
+  grade: GradeText;
+  gradeValue: GradeValue;
+  imdbId: string;
+  posterImageProps: PosterImageProps;
+  releaseSequence: number;
+  releaseYear: string;
+  reviewDisplayDate: string;
+  reviewSequence: string;
+  reviewYear: string;
+  slug: string;
+  sortTitle: string;
+  title: string;
+};
 
 export function Reviews({
   distinctGenres,

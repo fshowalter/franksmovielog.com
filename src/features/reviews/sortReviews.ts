@@ -21,7 +21,7 @@ import {
   titleSortOptions,
 } from "~/components/filter-and-sort/facets/title/titleSort";
 
-import type { ReviewsValue } from "./ReviewsListItem";
+import type { ReviewsValue } from "./Reviews";
 
 /**
  * Sort type for reviews.

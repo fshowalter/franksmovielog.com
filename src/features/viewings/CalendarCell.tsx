@@ -83,7 +83,7 @@ export function CalendarCell({
                   `}
                 >
                   <ListItemTitle
-                    slug={viewing.reviewSlug}
+                    reviewSlug={viewing.reviewSlug}
                     title={viewing.title}
                     year={viewing.releaseYear}
                   />

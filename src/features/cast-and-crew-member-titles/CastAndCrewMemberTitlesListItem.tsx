@@ -26,7 +26,7 @@ export function CastAndCrewMemberTitlesListItem({
     >
       <ListItemDetails>
         <ListItemTitle
-          slug={value.reviewSlug}
+          reviewSlug={value.reviewSlug}
           title={value.title}
           year={value.releaseYear}
         />
