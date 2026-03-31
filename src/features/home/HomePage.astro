@@ -1,7 +1,7 @@
 ---
 import { getEntry } from "astro:content";
 
-import Grade from "~/components/grade/Grade.astro";
+import { Grade } from "~/components/grade/Grade";
 import HeroLayout from "~/components/layout/HeroLayout.astro";
 import RenderedMarkdown from "~/components/rendered-markdown/RenderedMarkdown.astro";
 import Still from "~/components/still/Still.astro";
@@ -129,7 +129,7 @@ function formatDate(reviewDate: Date): string {
                     `}>{reviewedTitle.releaseYear}</span>
                   </a>
                   <Grade
-                    class={`
+                    className={`
                       mb-5
                       tablet:mb-8
                     `}

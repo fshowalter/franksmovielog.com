@@ -1,12 +1,14 @@
 import path from "node:path";
 import sharp from "sharp";
 
+import type { GradeText } from "~/utils/grades";
+
 import { getOpenGraphStill } from "~/assets/stills";
-import { fileForGrade } from "~/components/grade/fileForGrade";
 import { componentToImageResponse } from "~/utils/componentToImageResponse";
+import { GRADE_SVG_MAP } from "~/utils/grades";
 
 type Props = {
-  grade: string;
+  grade: GradeText;
   releaseYear: string;
   stillSlug: string;
   title: string;
@@ -22,10 +24,10 @@ export async function reviewOpenGraphImageResponse({
 
   let gradeBuffer;
 
-  const gradeFile = fileForGrade(grade);
+  const { src: gradeFile } = GRADE_SVG_MAP[grade];
 
   if (gradeFile) {
-    gradeBuffer = await sharp(path.resolve(`./public${fileForGrade(grade)}`))
+    gradeBuffer = await sharp(path.resolve(`./public${gradeFile}`))
       .resize(240)
       .toBuffer();
   }

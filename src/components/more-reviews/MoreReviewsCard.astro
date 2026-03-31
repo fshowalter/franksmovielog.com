@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content";
 
 import { getEntry } from "astro:content";
 
-import Grade from "~/components/grade/Grade.astro";
+import { Grade } from "~/components/grade/Grade";
 import RenderedMarkdown from "~/components/rendered-markdown/RenderedMarkdown.astro";
 import Still from "~/components/still/Still.astro";
 
@@ -70,7 +70,7 @@ const { data: review } = await getEntry(value.review);
         <span class="whitespace-nowrap">&thinsp;</span>{value.releaseYear}
       </span>
     </a>
-    <Grade class="mb-4" height={18} value={value.grade} />
+    <Grade className="mb-4" height={18} value={value.grade} />
     <RenderedMarkdown
       class={`mb-8 leading-[1.6] tracking-prose text-muted`}
       text={review.excerptHtml}
