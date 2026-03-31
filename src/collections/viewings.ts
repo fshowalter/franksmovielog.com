@@ -34,6 +34,7 @@ const ViewingFrontmatterSchema = z
       .optional()
       .transform((v) => v ?? undefined),
   })
+  .refine((val) => !val.medium && !val.venue, { error: "No medium or venue" })
   .transform(
     ({
       date,

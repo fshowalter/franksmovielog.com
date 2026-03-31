@@ -4,11 +4,11 @@ export function ListItemMediumAndVenue({
 }: {
   medium?: string | undefined;
   venue?: string | undefined;
-}): false | React.JSX.Element {
+}): React.JSX.Element | undefined {
   const value = medium && venue ? `${medium} at ${venue}` : (medium ?? venue);
 
   if (!value) {
-    throw new Error("Neither medium nor venue provided.");
+    return undefined;
   }
 
   return (
