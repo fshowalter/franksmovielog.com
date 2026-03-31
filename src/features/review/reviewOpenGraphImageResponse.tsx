@@ -22,15 +22,11 @@ export async function reviewOpenGraphImageResponse({
 }: Props): Promise<Response> {
   const still = await getOpenGraphStill(stillSlug);
 
-  let gradeBuffer;
-
   const { src: gradeFile } = GRADE_SVG_MAP[grade];
 
-  if (gradeFile) {
-    gradeBuffer = await sharp(path.resolve(`./public${gradeFile}`))
-      .resize(240)
-      .toBuffer();
-  }
+  const gradeBuffer = await sharp(path.resolve(`./public${gradeFile}`))
+    .resize(240)
+    .toBuffer();
 
   const fetchedResources = [
     {
