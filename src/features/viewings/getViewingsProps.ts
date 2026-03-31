@@ -2,8 +2,8 @@ import type { CollectionEntry } from "astro:content";
 
 import { getFluidWidthPosterImageProps } from "~/assets/posters";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
-import { toSortDate } from "~/utils/toSortDate";
-import { toSortYear } from "~/utils/toSortYear";
+import { toSortDate } from "~/components/utils/toSortDate";
+import { toSortYear } from "~/components/utils/toSortYear";
 
 import type { ViewingsProps, ViewingsValue } from "./Viewings";
 

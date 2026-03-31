@@ -1,9 +1,3 @@
-/**
- * Displays a formatted review date in a list item.
- * @param props - Component props
- * @param props.displayDate - The formatted date string to display
- * @returns Styled review date text
- */
 export function ListItemReviewDate({
   displayDate,
 }: {

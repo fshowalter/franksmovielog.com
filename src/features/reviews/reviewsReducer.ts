@@ -22,7 +22,7 @@ import {
   paginationReducer,
 } from "~/components/filter-and-sort/paginated-list/paginationReducer";
 
-import type { ReviewsValue } from "./ReviewsListItem";
+import type { ReviewsValue } from "./Reviews";
 import type { ReviewsSort } from "./sortReviews";
 
 export type ReviewsAction =

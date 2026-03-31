@@ -4,9 +4,9 @@ import { getEntry } from "astro:content";
 
 import { getFluidWidthPosterImageProps } from "~/assets/posters";
 import { PosterListItemImageConfig } from "~/components/poster-list/PosterListItem";
-import { displayDate } from "~/utils/displayDate";
+import { toDisplayDate } from "~/components/utils/toDisplayDate";
+import { toSortYear } from "~/components/utils/toSortYear";
 import { gradeToValue } from "~/utils/grades";
-import { toSortYear } from "~/utils/toSortYear";
 
 import type { CastAndCrewMemberTitlesProps } from "./CastAndCrewMemberTitles";
 
@@ -62,7 +62,7 @@ export async function getCastAndCrewMemberTitlesProps(
         releaseSequence: index,
         releaseYear: title.releaseYear,
         reviewDisplayDate: reviewedTitle
-          ? displayDate(reviewedTitle.data.reviewDate, {
+          ? toDisplayDate(reviewedTitle.data.reviewDate, {
               dayFormat: "numeric",
             })
           : undefined,

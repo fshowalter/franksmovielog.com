@@ -5,7 +5,7 @@ import { createReleaseYearFilter } from "~/components/filter-and-sort/facets/rel
 import { createReviewYearFilter } from "~/components/filter-and-sort/facets/review-year/reviewYearFilter";
 import { createTitleFilter } from "~/components/filter-and-sort/facets/title/titleFilter";
 
-import type { ReviewsValue } from "./ReviewsListItem";
+import type { ReviewsValue } from "./Reviews";
 import type { ReviewsFiltersValues } from "./reviewsReducer";
 
 /**

@@ -1,11 +1,12 @@
 ---
 import type { MostWatchedPerson } from "~/collections/stats";
 
-import ListItemMediumAndVenue from "~/components/list-item-medium-and-venue/ListItemMediumAndVenue.astro";
-import ListItemReviewDate from "~/components/list-item-review-date/ListItemReviewDate.astro";
-import ListItemTitle from "~/components/list-item-title/ListItemTitle.astro";
+import { ListItemMediumAndVenue } from "~/components/list-item-medium-and-venue/ListItemMediumAndVenue";
+import { ListItemReviewDate } from "~/components/list-item-review-date/ListItemReviewDate";
+import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
 import PosterList from "~/components/poster-list/PosterList.astro";
 import PosterListItem from "~/components/poster-list/PosterListItem.astro";
+import { toDisplayDate } from "~/components/utils/toDisplayDate";
 
 type Props = {
   header: string;
@@ -119,7 +120,9 @@ const { header, values } = Astro.props;
                               title={viewing.title}
                               year={viewing.releaseYear}
                             />
-                            <ListItemReviewDate value={viewing.date} />
+                            <ListItemReviewDate
+                              displayDate={toDisplayDate(viewing.date)}
+                            />
                             <ListItemMediumAndVenue
                               medium={viewing.medium}
                               venue={viewing.venue}

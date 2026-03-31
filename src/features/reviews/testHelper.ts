@@ -1,4 +1,4 @@
-import type { ReviewsValue } from "./ReviewsListItem";
+import type { ReviewsValue } from "./Reviews";
 
 // Shared test helper for all review feature specs
 let testIdCounter = 0;
