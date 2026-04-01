@@ -33,8 +33,8 @@ export async function getStaticPaths() {
 export const GET: APIRoute = async function get({ props }) {
   const { castAndCrewMember } = props as Props;
 
-  return await createOpenGraphImageResponse(
-    castAndCrewMember.name,
-    castAndCrewMember.slug,
-  );
+  return await createOpenGraphImageResponse({
+    backdropSlug: castAndCrewMember.slug,
+    title: castAndCrewMember.name,
+  });
 };

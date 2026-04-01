@@ -3,8 +3,8 @@ import type { APIRoute } from "astro";
 import { createOpenGraphImageResponse } from "~/utils/createOpenGraphImageResponse";
 
 export const GET: APIRoute = async function get() {
-  return await createOpenGraphImageResponse(
-    "Overrated Disappointments",
-    "overrated",
-  );
+  return await createOpenGraphImageResponse({
+    backdropSlug: "overrated",
+    title: "Overrated Disappointments",
+  });
 };

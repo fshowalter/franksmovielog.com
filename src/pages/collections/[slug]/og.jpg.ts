@@ -33,5 +33,8 @@ export async function getStaticPaths() {
 export const GET: APIRoute = async function get({ props }) {
   const { collection } = props as Props;
 
-  return await createOpenGraphImageResponse(collection.name, collection.slug);
+  return await createOpenGraphImageResponse({
+    backdropSlug: collection.slug,
+    title: collection.name,
+  });
 };
