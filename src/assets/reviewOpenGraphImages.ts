@@ -11,7 +11,7 @@ import { GRADE_SVG_MAP } from "~/utils/grades";
 const reviewOpenGraphImageComponentHash = createHash("md5")
   .update(
     await fs.readFile(
-      new URL("features/Review/ReviewOpenGraphImage.tsx", srcDir),
+      new URL("features/review/ReviewOpenGraphImage.tsx", srcDir),
       "utf8",
     ),
   )
