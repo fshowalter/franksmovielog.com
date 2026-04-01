@@ -1,6 +1,7 @@
 import { cacheDir, srcDir } from "astro:config/server";
 import { createHash } from "node:crypto";
 import { existsSync, promises as fs } from "node:fs";
+import path from "node:path";
 import sharp from "sharp";
 
 import type { GradeText } from "~/utils/grades";
@@ -71,7 +72,10 @@ export async function getReviewOpenGraphImage({
     gradeBuffer = gradeCacheEntry.buffer;
   } else {
     const { src: gradeFile } = GRADE_SVG_MAP[grade];
-    gradeBuffer = await fs.readFile(`./public${gradeFile}`);
+
+    gradeBuffer = await sharp(path.resolve(`./public${gradeFile}`))
+      .resize(240)
+      .toBuffer();
 
     gradeHash = createHash("md5").update(gradeBuffer).digest("hex").toString();
 
