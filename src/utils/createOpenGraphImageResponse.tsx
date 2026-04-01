@@ -1,6 +1,6 @@
 import { getOpenGraphBackdrop } from "~/assets/backdrops";
 import { OpenGraphImage } from "~/components/open-graph-image/OpenGraphImage";
-import { componentToImageResponse } from "~/utils/componentToImageResponse";
+import { componentToImageResponse } from "~/utils/componentToImage";
 
 export async function createOpenGraphImageResponse(
   title: string,

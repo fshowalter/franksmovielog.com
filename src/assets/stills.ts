@@ -1,6 +1,4 @@
 import { getImage } from "astro:assets";
-import path from "node:path";
-import sharp from "sharp";
 
 /**
  * Props for still images.
@@ -9,16 +7,6 @@ type StillImageProps = {
   src: string;
   srcSet: string;
 };
-
-export async function getOpenGraphStill(slug: string) {
-  const buffer = await sharp(
-    path.resolve(`./content/assets/stills/${slug}.png`),
-  )
-    .resize(1200)
-    .toBuffer();
-
-  return new Uint8Array(buffer).buffer;
-}
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/stills/*.png",
