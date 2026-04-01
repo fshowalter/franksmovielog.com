@@ -1,4 +1,4 @@
-let imdbIdMap: Record<string, string | undefined>;
+let imdbIdToSlugCache: Record<string, string | undefined>;
 
 const re = new RegExp(/(<span data-imdb-id="(tt\d+)">)(.*?)(<\/span>)/, "g");
 
@@ -14,10 +14,10 @@ export function linkReviewedTitles(
 
   const matches = [...text.matchAll(re)];
 
-  const map = getImdbIdMap(reviewedTitles);
+  const cache = getImdbIdToSlugCache(reviewedTitles);
 
   for (const match of matches) {
-    const matchingSlug = map[match[2]];
+    const matchingSlug = cache[match[2]];
 
     if (matchingSlug) {
       result = result.replace(
@@ -37,18 +37,18 @@ export function linkReviewedTitles(
   return result;
 }
 
-function getImdbIdMap(
+function getImdbIdToSlugCache(
   reviewedTitles: { imdbId: string; slug: string }[],
 ): Record<string, string | undefined> {
-  if (imdbIdMap) {
-    return imdbIdMap;
+  if (imdbIdToSlugCache) {
+    return imdbIdToSlugCache;
   }
 
-  imdbIdMap = {};
+  imdbIdToSlugCache = {};
 
   for (const title of reviewedTitles) {
-    imdbIdMap[title.imdbId] = title.slug;
+    imdbIdToSlugCache[title.imdbId] = title.slug;
   }
 
-  return imdbIdMap;
+  return imdbIdToSlugCache;
 }
