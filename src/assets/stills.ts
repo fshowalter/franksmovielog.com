@@ -10,16 +10,6 @@ type StillImageProps = {
   srcSet: string;
 };
 
-export async function getOpenGraphStill(slug: string) {
-  const buffer = await sharp(
-    path.resolve(`./content/assets/stills/${slug}.png`),
-  )
-    .resize(1200)
-    .toBuffer();
-
-  return new Uint8Array(buffer).buffer;
-}
-
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/stills/*.png",
 );
