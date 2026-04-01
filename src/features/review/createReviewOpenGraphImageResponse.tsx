@@ -51,7 +51,6 @@ export async function createReviewOpenGraphImageResponse({
   title,
 }: Props): Promise<Response> {
   const image = await getReviewOpenGraphImage({
-    component: <ReviewOpenGraphImage releaseYear={releaseYear} title={title} />,
     grade,
     releaseYear,
     stillSlug,
@@ -60,19 +59,17 @@ export async function createReviewOpenGraphImageResponse({
 
   return new Response(image as ArrayBufferView<ArrayBuffer>, {
     headers: {
-      "Content-Type": "image/jpg",
+      "Content-Type": "image/jpeg",
     },
   });
 }
 
 async function getReviewOpenGraphImage({
-  component,
   grade,
   releaseYear,
   stillSlug,
   title,
 }: {
-  component: React.ReactNode;
   grade: GradeText;
   releaseYear: string;
   stillSlug: string;
@@ -144,7 +141,10 @@ async function getReviewOpenGraphImage({
     },
   ];
 
-  const heroImage = await componentToImageBytes(component, fetchedResources);
+  const heroImage = await componentToImageBytes(
+    <ReviewOpenGraphImage releaseYear={releaseYear} title={title} />,
+    fetchedResources,
+  );
 
   await fs.writeFile(cacheFilePath, heroImage);
 
