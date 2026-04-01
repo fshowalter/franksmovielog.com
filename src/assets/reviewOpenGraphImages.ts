@@ -2,6 +2,9 @@ import { cacheDir, srcDir } from "astro:config/server";
 import { createHash } from "node:crypto";
 import { existsSync, promises as fs } from "node:fs";
 import path from "node:path";
+import { cacheDir } from "astro:config/server";
+import { createHash } from "node:crypto";
+import { existsSync, promises as fs } from "node:fs";
 import sharp from "sharp";
 
 import type { GradeText } from "~/utils/grades";
@@ -17,6 +20,10 @@ const reviewOpenGraphImageComponentHash = createHash("md5")
     ),
   )
   .digest("hex");
+    await fs.readFile("./src/features/Review/ReviewOpenGraphImage.tsx", "utf8"),
+  )
+  .digest("hex")
+  .toString();
 
 const gradeCache: Record<
   GradeText,
@@ -56,7 +63,14 @@ export async function getReviewOpenGraphImage({
     `./content/assets/stills/${stillSlug}.png`,
   );
 
+<<<<<<< HEAD
   const stillHash = createHash("md5").update(stillBuffer).digest("hex");
+=======
+  const stillHash = createHash("md5")
+    .update(stillBuffer)
+    .digest("hex")
+    .toString();
+>>>>>>> 56f31abf0 (refactor: add disk-caching for review OG images and extract `ReviewOpenGraphImage` component)
 
   let gradeHash: string;
   let gradeBuffer: Buffer;
@@ -74,6 +88,9 @@ export async function getReviewOpenGraphImage({
       .toBuffer();
 
     gradeHash = createHash("md5").update(gradeBuffer).digest("hex");
+    gradeBuffer = await fs.readFile(`./public${gradeFile}`);
+
+    gradeHash = createHash("md5").update(gradeBuffer).digest("hex").toString();
 
     gradeCache[grade] = { buffer: gradeBuffer, hash: gradeHash };
   }
@@ -87,6 +104,10 @@ export async function getReviewOpenGraphImage({
   });
 
   const cacheDigest = createHash("md5").update(cacheProps).digest("hex");
+  const cacheDigest = createHash("md5")
+    .update(cacheProps)
+    .digest("hex")
+    .toString();
 
   const assetsCacheDir = new URL("reviewOpenGraphImages/", cacheDir);
   await fs.mkdir(assetsCacheDir, { recursive: true });
