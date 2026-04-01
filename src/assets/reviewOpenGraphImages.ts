@@ -2,9 +2,12 @@ import { cacheDir, srcDir } from "astro:config/server";
 import { createHash } from "node:crypto";
 import { existsSync, promises as fs } from "node:fs";
 import path from "node:path";
+<<<<<<< HEAD
 import { cacheDir } from "astro:config/server";
 import { createHash } from "node:crypto";
 import { existsSync, promises as fs } from "node:fs";
+=======
+>>>>>>> 846a29773 (resize grade buffer)
 import sharp from "sharp";
 
 import type { GradeText } from "~/utils/grades";
@@ -86,9 +89,12 @@ export async function getReviewOpenGraphImage({
     gradeBuffer = await sharp(path.resolve(`./public${gradeFile}`))
       .resize(240)
       .toBuffer();
+<<<<<<< HEAD
 
     gradeHash = createHash("md5").update(gradeBuffer).digest("hex");
     gradeBuffer = await fs.readFile(`./public${gradeFile}`);
+=======
+>>>>>>> 846a29773 (resize grade buffer)
 
     gradeHash = createHash("md5").update(gradeBuffer).digest("hex").toString();
 
