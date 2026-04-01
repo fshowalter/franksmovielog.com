@@ -1,12 +1,7 @@
-/**
- * Converts special work reference spans into links to reviewed works.
- * Processes HTML text to find spans with data-work-slug attributes and
- * replaces them with links to review pages if the work has been reviewed.
- *
- * @param text - HTML text containing work reference spans
- * @param reviewedTitles - Array of reviewed titles with imdb IDs and slugs
- * @returns HTML text with work references converted to links
- */
+let imdbIdMap: Record<string, string | undefined>;
+
+const re = new RegExp(/(<span data-imdb-id="(tt\d+)">)(.*?)(<\/span>)/, "g");
+
 export function linkReviewedTitles(
   text: string | undefined,
   reviewedTitles: { imdbId: string; slug: string }[],
@@ -17,19 +12,17 @@ export function linkReviewedTitles(
 
   let result = text;
 
-  const re = new RegExp(/(<span data-imdb-id="(tt\d+)">)(.*?)(<\/span>)/, "g");
-
   const matches = [...text.matchAll(re)];
 
-  for (const match of matches) {
-    const matchingTitle = reviewedTitles.find(
-      (title) => title.imdbId === match[2],
-    );
+  const map = getImdbIdMap(reviewedTitles);
 
-    if (matchingTitle) {
+  for (const match of matches) {
+    const matchingSlug = map[match[2]];
+
+    if (matchingSlug) {
       result = result.replace(
         `<span data-imdb-id="${match[2]}">${match[3]}</span>`,
-        `<a href="/reviews/${matchingTitle.slug}/">${match[3]}</a>`,
+        `<a href="/reviews/${matchingSlug}/">${match[3]}</a>`,
       );
     } else {
       if (match[3]) {
@@ -42,4 +35,20 @@ export function linkReviewedTitles(
   }
 
   return result;
+}
+
+function getImdbIdMap(
+  reviewedTitles: { imdbId: string; slug: string }[],
+): Record<string, string | undefined> {
+  if (imdbIdMap) {
+    return imdbIdMap;
+  }
+
+  imdbIdMap = {};
+
+  for (const title of reviewedTitles) {
+    imdbIdMap[title.imdbId] = title.slug;
+  }
+
+  return imdbIdMap;
 }
