@@ -36,5 +36,8 @@ export async function getStaticPaths() {
 export const GET: APIRoute = async function get({ props }) {
   const { year } = props as Props;
 
-  return await createOpenGraphImageResponse(`${year} Stats`, year);
+  return await createOpenGraphImageResponse({
+    backdropSlug: year,
+    title: `${year} Stats`,
+  });
 };

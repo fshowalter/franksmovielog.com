@@ -3,8 +3,8 @@ import type { APIRoute } from "astro";
 import { createOpenGraphImageResponse } from "~/utils/createOpenGraphImageResponse";
 
 export const GET: APIRoute = async function get() {
-  return await createOpenGraphImageResponse(
-    "Watchlist Progress",
-    "watchlist-progress",
-  );
+  return await createOpenGraphImageResponse({
+    backdropSlug: "watchlist-progress",
+    title: "Watchlist Progress",
+  });
 };
