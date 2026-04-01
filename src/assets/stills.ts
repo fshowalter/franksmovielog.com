@@ -1,6 +1,4 @@
 import { getImage } from "astro:assets";
-import path from "node:path";
-import sharp from "sharp";
 
 /**
  * Props for still images.

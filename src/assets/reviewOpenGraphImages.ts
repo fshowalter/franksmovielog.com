@@ -1,4 +1,4 @@
-import { cacheDir } from "astro:config/server";
+import { cacheDir, srcDir } from "astro:config/server";
 import { createHash } from "node:crypto";
 import { existsSync, promises as fs } from "node:fs";
 import sharp from "sharp";
@@ -10,7 +10,10 @@ import { GRADE_SVG_MAP } from "~/utils/grades";
 
 const reviewOpenGraphImageComponentHash = createHash("md5")
   .update(
-    await fs.readFile("./src/features/Review/ReviewOpenGraphImage.tsx", "utf8"),
+    await fs.readFile(
+      new URL("features/Review/ReviewOpenGraphImage.tsx", srcDir),
+      "utf8",
+    ),
   )
   .digest("hex")
   .toString();
