@@ -21,6 +21,9 @@ const reviewOpenGraphImageComponentHash = createHash("md5")
   )
   .digest("hex");
     await fs.readFile("./src/features/Review/ReviewOpenGraphImage.tsx", "utf8"),
+      new URL("features/Review/ReviewOpenGraphImage.tsx", srcDir),
+      "utf8",
+    ),
   )
   .digest("hex")
   .toString();
@@ -63,14 +66,11 @@ export async function getReviewOpenGraphImage({
     `./content/assets/stills/${stillSlug}.png`,
   );
 
-<<<<<<< HEAD
   const stillHash = createHash("md5").update(stillBuffer).digest("hex");
-=======
   const stillHash = createHash("md5")
     .update(stillBuffer)
     .digest("hex")
     .toString();
->>>>>>> 56f31abf0 (refactor: add disk-caching for review OG images and extract `ReviewOpenGraphImage` component)
 
   let gradeHash: string;
   let gradeBuffer: Buffer;
