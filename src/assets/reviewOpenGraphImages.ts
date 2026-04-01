@@ -1,6 +1,6 @@
 import { cacheDir, srcDir } from "astro:config/server";
 import { createHash } from "node:crypto";
-import { existsSync, promises as fs } from "node:fs";
+import { promises as fs } from "node:fs";
 import path from "node:path";
 import { cacheDir } from "astro:config/server";
 import { createHash } from "node:crypto";
@@ -27,6 +27,9 @@ const reviewOpenGraphImageComponentHash = createHash("md5")
   )
   .digest("hex")
   .toString();
+
+const assetsCacheDir = new URL("reviewOpenGraphImages/", cacheDir);
+await fs.mkdir(assetsCacheDir, { recursive: true });
 
 const gradeCache: Record<
   GradeText,
@@ -109,17 +112,13 @@ export async function getReviewOpenGraphImage({
     .digest("hex")
     .toString();
 
-  const assetsCacheDir = new URL("reviewOpenGraphImages/", cacheDir);
-  await fs.mkdir(assetsCacheDir, { recursive: true });
-
   const cacheFilePath = new URL(
-    `${stillSlug}.${cacheDigest}.png`,
+    `${stillSlug}.${cacheDigest}.jpg`,
     assetsCacheDir,
   );
 
-  if (existsSync(cacheFilePath)) {
-    return await fs.readFile(cacheFilePath);
-  }
+  const cached = await fs.readFile(cacheFilePath).catch();
+  if (cached) return cached;
 
   const still = await sharp(stillBuffer).resize(1200).toBuffer();
 
