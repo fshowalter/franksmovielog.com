@@ -16,8 +16,7 @@ const reviewOpenGraphImageComponentHash = createHash("md5")
       "utf8",
     ),
   )
-  .digest("hex")
-  .toString();
+  .digest("hex");
 
 const gradeCache: Record<
   GradeText,
@@ -57,10 +56,7 @@ export async function getReviewOpenGraphImage({
     `./content/assets/stills/${stillSlug}.png`,
   );
 
-  const stillHash = createHash("md5")
-    .update(stillBuffer)
-    .digest("hex")
-    .toString();
+  const stillHash = createHash("md5").update(stillBuffer).digest("hex");
 
   let gradeHash: string;
   let gradeBuffer: Buffer;
@@ -77,7 +73,7 @@ export async function getReviewOpenGraphImage({
       .resize(240)
       .toBuffer();
 
-    gradeHash = createHash("md5").update(gradeBuffer).digest("hex").toString();
+    gradeHash = createHash("md5").update(gradeBuffer).digest("hex");
 
     gradeCache[grade] = { buffer: gradeBuffer, hash: gradeHash };
   }
@@ -90,10 +86,7 @@ export async function getReviewOpenGraphImage({
     title,
   });
 
-  const cacheDigest = createHash("md5")
-    .update(cacheProps)
-    .digest("hex")
-    .toString();
+  const cacheDigest = createHash("md5").update(cacheProps).digest("hex");
 
   const assetsCacheDir = new URL("reviewOpenGraphImages/", cacheDir);
   await fs.mkdir(assetsCacheDir, { recursive: true });
