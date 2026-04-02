@@ -14,7 +14,10 @@ await fs.mkdir(assetsCacheDir, { recursive: true });
 
 const sourceComponentHash = createHash("md5")
   .update(
-    await fs.readFile(`./src/utils/createOpenGraphImageResponse.tsx`, "utf8"),
+    await fs.readFile(
+      `./src/features/review/createReviewOpenGraphImageResponse.tsx`,
+      "utf8",
+    ),
   )
   .digest("hex");
 
