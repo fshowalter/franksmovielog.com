@@ -68,15 +68,11 @@ async function getOpenGraphImage({
     });
 
   if (cached) {
-    console.log(
-      `createOpenGraphImageResponse: Review used cache entry for ${backdropSlug}`,
-    );
+    console.log(` (reused cache entry)`);
     return cached;
   }
 
-  console.log(
-    `createOpenGraphImageResponse: Cache miss for entry ${cacheProps}`,
-  );
+  console.log(` (cache miss for entry ${cacheProps})`);
 
   const still = await sharp(stillBuffer).resize(1200).toBuffer();
 
