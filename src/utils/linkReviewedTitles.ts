@@ -43,13 +43,15 @@ async function getImdbIdToSlugCache(): Promise<
     return imdbIdToSlugCache;
   }
 
-  imdbIdToSlugCache = {};
+  const cache: Record<string, string | undefined> = {};
 
   const reviewedTitles = await getCollection("reviewedTitles");
 
   for (const { data: title } of reviewedTitles) {
-    imdbIdToSlugCache[title.imdbId] = title.review.id;
+    cache[title.imdbId] = title.review.id;
   }
+
+  imdbIdToSlugCache = cache;
 
   return imdbIdToSlugCache;
 }
