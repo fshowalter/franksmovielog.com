@@ -13,7 +13,12 @@ const assetsCacheDir = new URL("reviewOpenGraphImages/", cacheDir);
 await fs.mkdir(assetsCacheDir, { recursive: true });
 
 const sourceComponentHash = createHash("md5")
-  .update(await fs.readFile(new URL(import.meta.url), "utf8"))
+  .update(
+    await fs.readFile(
+      `./src/features/review/createReviewOpenGraphImageResponse.tsx`,
+      "utf8",
+    ),
+  )
   .digest("hex");
 
 const gradeCache: Record<
@@ -130,8 +135,6 @@ async function getReviewOpenGraphImage({
     console.log(` (reused cache entry)`);
     return cached;
   }
-
-  console.log(` (cache miss for entry ${cacheProps})`);
 
   const still = await sharp(stillBuffer).resize(1200).toBuffer();
 

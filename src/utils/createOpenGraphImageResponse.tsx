@@ -9,7 +9,9 @@ const assetsCacheDir = new URL("openGraphImages/", cacheDir);
 await fs.mkdir(assetsCacheDir, { recursive: true });
 
 const sourceComponentHash = createHash("md5")
-  .update(await fs.readFile(new URL(import.meta.url), "utf8"))
+  .update(
+    await fs.readFile(`./src/utils/createOpenGraphImageResponse.tsx`, "utf8"),
+  )
   .digest("hex");
 
 export async function createOpenGraphImageResponse({
@@ -71,8 +73,6 @@ async function getOpenGraphImage({
     console.log(` (reused cache entry)`);
     return cached;
   }
-
-  console.log(` (cache miss for entry ${cacheProps})`);
 
   const still = await sharp(stillBuffer).resize(1200).toBuffer();
 
