@@ -44,13 +44,15 @@ async function getOpenGraphImage({
 
   const stillHash = createHash("md5").update(stillBuffer).digest("hex");
 
-  const cacheProps = JSON.stringify({
+  const cacheProps = {
     sourceComponentHash,
     stillHash,
     title,
-  });
+  };
 
-  const cacheDigest = createHash("md5").update(cacheProps).digest("hex");
+  const cacheDigest = createHash("md5")
+    .update(JSON.stringify(cacheProps))
+    .digest("hex");
 
   const cacheFilePath = new URL(
     `${backdropSlug}.${cacheDigest}.jpg`,
@@ -72,7 +74,9 @@ async function getOpenGraphImage({
     return cached;
   }
 
-  console.log(` (cache miss for entry ${cacheProps})`);
+  console.log(
+    ` (cache miss for entry ${JSON.stringify({ ...cacheProps, componentFile: import.meta.url })})`,
+  );
 
   const still = await sharp(stillBuffer).resize(1200).toBuffer();
 
