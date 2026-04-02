@@ -5,11 +5,14 @@ import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import remarkRehype from "remark-rehype";
 
+import { toSortDate } from "~/utils/toSortDate";
+
 import { CONTENT_ROOT } from "./contentRoot";
 import { getBaseMarkdownProcessor } from "./utils/getBaseMarkdownProcessor";
 import { loadMarkdownDirectory } from "./utils/loadMarkdownDirectory";
 import { rootAsSpan } from "./utils/markdown-plugins/rootAsSpan";
 import { markdownToHtml } from "./utils/markdownToHtml";
+import { parseFrontmatter } from "./utils/parseFrontmatter";
 
 const ViewingFrontmatterSchema = z
   .object({
@@ -157,6 +160,14 @@ export const viewings = defineCollection({
           };
         },
         directoryPath: path.join(CONTENT_ROOT, "viewings"),
+        getId: (rawContent, filePath) => {
+          const { frontmatter } = parseFrontmatter(rawContent, filePath);
+
+          const validatedFrontmatter =
+            ViewingFrontmatterSchema.parse(frontmatter);
+
+          return `${toSortDate(validatedFrontmatter.date)}-${validatedFrontmatter.sequence.toString().padStart(2, "0")}`;
+        },
         loaderContext,
       }),
     name: "viewings-loader",

@@ -179,7 +179,7 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
         `}
         text={await linkReviewedTitles(review.html)}
       />
-      <ViewingHistory imdbId={reviewedTitle.imdbId} />
+      <ViewingHistory reviewedTitle={reviewedTitle} />
       <aside
         class={`
           group/credits w-full max-w-popout bg-subtle px-container py-8
