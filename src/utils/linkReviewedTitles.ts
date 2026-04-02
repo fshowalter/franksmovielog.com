@@ -1,6 +1,6 @@
 import { getCollection } from "astro:content";
 
-let titleToSlugCache: Record<string, string | undefined>;
+let imdbIdToSlugCache: Record<string, string | undefined>;
 
 const re = new RegExp(/(<span data-title-id="([^"]*)">)(.*?)(<\/span>)/, "g");
 
@@ -39,8 +39,8 @@ export async function linkReviewedTitles(text: string | undefined) {
 async function getTitleIdToSlugCache(): Promise<
   Record<string, string | undefined>
 > {
-  if (titleToSlugCache) {
-    return titleToSlugCache;
+  if (imdbIdToSlugCache) {
+    return imdbIdToSlugCache;
   }
 
   const cache: Record<string, string | undefined> = {};
@@ -51,7 +51,7 @@ async function getTitleIdToSlugCache(): Promise<
     cache[title.imdbId] = title.review.id;
   }
 
-  titleToSlugCache = cache;
+  imdbIdToSlugCache = cache;
 
-  return titleToSlugCache;
+  return imdbIdToSlugCache;
 }
