@@ -9,7 +9,12 @@ const assetsCacheDir = new URL("openGraphImages/", cacheDir);
 await fs.mkdir(assetsCacheDir, { recursive: true });
 
 const sourceComponentHash = createHash("md5")
-  .update(await fs.readFile(new URL(import.meta.url), "utf8"))
+  .update(
+    await fs.readFile(
+      `./src/features/review/createReviewOpenGraphImageResponse.tsx`,
+      "utf8",
+    ),
+  )
   .digest("hex");
 
 export async function createOpenGraphImageResponse({
@@ -44,15 +49,13 @@ async function getOpenGraphImage({
 
   const stillHash = createHash("md5").update(stillBuffer).digest("hex");
 
-  const cacheProps = {
+  const cacheProps = JSON.stringify({
     sourceComponentHash,
     stillHash,
     title,
-  };
+  });
 
-  const cacheDigest = createHash("md5")
-    .update(JSON.stringify(cacheProps))
-    .digest("hex");
+  const cacheDigest = createHash("md5").update(cacheProps).digest("hex");
 
   const cacheFilePath = new URL(
     `${backdropSlug}.${cacheDigest}.jpg`,
@@ -73,10 +76,6 @@ async function getOpenGraphImage({
     console.log(` (reused cache entry)`);
     return cached;
   }
-
-  console.log(
-    ` (cache miss for entry ${JSON.stringify({ ...cacheProps, componentFile: import.meta.url })})`,
-  );
 
   const still = await sharp(stillBuffer).resize(1200).toBuffer();
 
