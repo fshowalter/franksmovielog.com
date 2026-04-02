@@ -1,8 +1,8 @@
 import { getCollection } from "astro:content";
 
-let imdbIdToSlugCache: Record<string, string | undefined>;
+let titleToSlugCache: Record<string, string | undefined>;
 
-const re = new RegExp(/(<span data-imdb-id="(tt\d+)">)(.*?)(<\/span>)/, "g");
+const re = new RegExp(/(<span data-title-id="([^"]*)">)(.*?)(<\/span>)/, "g");
 
 export async function linkReviewedTitles(text: string | undefined) {
   if (!text) {
@@ -13,20 +13,20 @@ export async function linkReviewedTitles(text: string | undefined) {
 
   const matches = [...text.matchAll(re)];
 
-  const cache = await getImdbIdToSlugCache();
+  const cache = await getTitleIdToSlugCache();
 
   for (const match of matches) {
     const matchingSlug = cache[match[2]];
 
     if (matchingSlug) {
       result = result.replace(
-        `<span data-imdb-id="${match[2]}">${match[3]}</span>`,
+        `<span data-title-id="${match[2]}">${match[3]}</span>`,
         `<a href="/reviews/${matchingSlug}/">${match[3]}</a>`,
       );
     } else {
       if (match[3]) {
         result = result.replace(
-          `<span data-imdb-id="${match[2]}">${match[3]}</span>`,
+          `<span data-title-id="${match[2]}">${match[3]}</span>`,
           match[3],
         );
       }
@@ -36,11 +36,11 @@ export async function linkReviewedTitles(text: string | undefined) {
   return result;
 }
 
-async function getImdbIdToSlugCache(): Promise<
+async function getTitleIdToSlugCache(): Promise<
   Record<string, string | undefined>
 > {
-  if (imdbIdToSlugCache) {
-    return imdbIdToSlugCache;
+  if (titleToSlugCache) {
+    return titleToSlugCache;
   }
 
   const cache: Record<string, string | undefined> = {};
@@ -51,7 +51,7 @@ async function getImdbIdToSlugCache(): Promise<
     cache[title.imdbId] = title.review.id;
   }
 
-  imdbIdToSlugCache = cache;
+  titleToSlugCache = cache;
 
-  return imdbIdToSlugCache;
+  return titleToSlugCache;
 }
