@@ -47,6 +47,7 @@ const ReviewedTitleSchema = z
     runtimeMinutes: z.number(),
     sortTitle: z.string(),
     title: z.string(),
+    viewings: reference("viewings"),
     writerNames: z.array(z.string()),
   })
   .transform(
@@ -70,6 +71,7 @@ const ReviewedTitleSchema = z
       runtimeMinutes,
       sortTitle,
       title,
+      viewings,
       writerNames,
     }) => {
       // fix zod making anything with undefined optional
@@ -93,6 +95,7 @@ const ReviewedTitleSchema = z
         runtimeMinutes,
         sortTitle,
         title,
+        viewings,
         writerNames,
       };
     },
