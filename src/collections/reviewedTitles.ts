@@ -47,7 +47,7 @@ const ReviewedTitleSchema = z
     runtimeMinutes: z.number(),
     sortTitle: z.string(),
     title: z.string(),
-    viewings: reference("viewings"),
+    viewings: z.array(reference("viewings")),
     writerNames: z.array(z.string()),
   })
   .transform(

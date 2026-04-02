@@ -1,5 +1,7 @@
 ---
-import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+import { getEntries } from "astro:content";
 
 import RenderedMarkdown from "~/components/rendered-markdown/RenderedMarkdown.astro";
 import SubHeading from "~/components/sub-heading/SubHeading.astro";
@@ -13,15 +15,12 @@ import {
 } from "./viewingHistoryDateFormats";
 
 type Props = {
-  imdbId: string;
+  reviewedTitle: CollectionEntry<"reviewedTitles">["data"];
 };
 
-const { imdbId } = Astro.props;
+const { reviewedTitle } = Astro.props;
 
-const viewings = await getCollection(
-  "viewings",
-  (entry) => entry.data.imdbId === imdbId,
-);
+const viewings = await getEntries(reviewedTitle.viewings);
 
 viewings.sort((a, b) => `${b.id}`.localeCompare(a.id));
 ---
