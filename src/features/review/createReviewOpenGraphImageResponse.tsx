@@ -126,7 +126,16 @@ async function getReviewOpenGraphImage({
       }
     });
 
-  if (cached) return cached;
+  if (cached) {
+    console.log(
+      `createReviewOpenGraphImageResponse: Review used cache entry for ${stillSlug}`,
+    );
+    return cached;
+  }
+
+  console.log(
+    `createReviewOpenGraphImageResponse: Cache miss for entry ${cacheProps}`,
+  );
 
   const still = await sharp(stillBuffer).resize(1200).toBuffer();
 

@@ -67,7 +67,16 @@ async function getOpenGraphImage({
       }
     });
 
-  if (cached) return cached;
+  if (cached) {
+    console.log(
+      `createOpenGraphImageResponse: Review used cache entry for ${backdropSlug}`,
+    );
+    return cached;
+  }
+
+  console.log(
+    `createOpenGraphImageResponse: Cache miss for entry ${cacheProps}`,
+  );
 
   const still = await sharp(stillBuffer).resize(1200).toBuffer();
 
