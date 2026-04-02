@@ -2,7 +2,6 @@
 import type { CollectionEntry } from "astro:content";
 
 import { getEntry } from "astro:content";
-import { getCollection } from "astro:content";
 import { getEntries } from "astro:content";
 
 import { getFixedWidthPosterImageProps } from "~/assets/posters";
@@ -37,7 +36,6 @@ const StillImageConfig = {
 const { reviewedTitle } = Astro.props;
 
 const { data: review } = await getEntry(reviewedTitle.review);
-const reviewedTitles = await getCollection("reviewedTitles");
 const moreReviews = await getEntries(reviewedTitle.moreReviews);
 
 const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
@@ -179,12 +177,7 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
           [&>p:first-child]:first-letter:text-[56px]
           [&>p:first-child]:first-letter:font-bold
         `}
-        text={linkReviewedTitles(
-          review.html,
-          reviewedTitles.map(({ data: e }) => {
-            return { imdbId: e.imdbId, slug: e.review.id };
-          }),
-        )}
+        text={await linkReviewedTitles(review.html)}
       />
       <ViewingHistory imdbId={reviewedTitle.imdbId} />
       <aside
