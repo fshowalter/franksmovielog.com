@@ -1,11 +1,10 @@
+import { getCollection } from "astro:content";
+
 let imdbIdToSlugCache: Record<string, string | undefined>;
 
 const re = new RegExp(/(<span data-imdb-id="(tt\d+)">)(.*?)(<\/span>)/, "g");
 
-export function linkReviewedTitles(
-  text: string | undefined,
-  reviewedTitles: { imdbId: string; slug: string }[],
-) {
+export async function linkReviewedTitles(text: string | undefined) {
   if (!text) {
     return text;
   }
@@ -14,7 +13,7 @@ export function linkReviewedTitles(
 
   const matches = [...text.matchAll(re)];
 
-  const cache = getImdbIdToSlugCache(reviewedTitles);
+  const cache = await getImdbIdToSlugCache();
 
   for (const match of matches) {
     const matchingSlug = cache[match[2]];
@@ -37,18 +36,22 @@ export function linkReviewedTitles(
   return result;
 }
 
-function getImdbIdToSlugCache(
-  reviewedTitles: { imdbId: string; slug: string }[],
-): Record<string, string | undefined> {
+async function getImdbIdToSlugCache(): Promise<
+  Record<string, string | undefined>
+> {
   if (imdbIdToSlugCache) {
     return imdbIdToSlugCache;
   }
 
-  imdbIdToSlugCache = {};
+  const cache: Record<string, string | undefined> = {};
 
-  for (const title of reviewedTitles) {
-    imdbIdToSlugCache[title.imdbId] = title.slug;
+  const reviewedTitles = await getCollection("reviewedTitles");
+
+  for (const { data: title } of reviewedTitles) {
+    cache[title.imdbId] = title.review.id;
   }
+
+  imdbIdToSlugCache = cache;
 
   return imdbIdToSlugCache;
 }
