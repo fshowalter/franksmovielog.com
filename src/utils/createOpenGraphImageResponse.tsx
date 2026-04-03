@@ -70,7 +70,6 @@ async function getOpenGraphImage({
     });
 
   if (cached) {
-    console.log(` (reused cache entry)`);
     return cached;
   }
 
