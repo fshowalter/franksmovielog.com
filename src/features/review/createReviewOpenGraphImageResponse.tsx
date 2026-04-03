@@ -132,7 +132,6 @@ async function getReviewOpenGraphImage({
     });
 
   if (cached) {
-    console.log(` (reused cache entry)`);
     return cached;
   }
 
