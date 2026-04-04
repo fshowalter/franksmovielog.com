@@ -61,6 +61,7 @@ const CastAndCrewMemberSchema = z.object({
   name: z.string(),
   reviewCount: z.number(),
   slug: z.string(),
+  sortName: z.string(),
   titles: z.array(CastAndCrewMemberTitleSchema),
 });
 

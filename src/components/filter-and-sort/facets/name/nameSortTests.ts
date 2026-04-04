@@ -17,9 +17,9 @@ export function nameSortTests(
   describe("nameSort", () => {
     it("sorts A → Z by sortName", async ({ expect }) => {
       renderItems([
-        { name: "John Ford", sortName: "John Ford" },
-        { name: "John Huston", sortName: "John Huston" },
-        { name: "Howard Hawks", sortName: "Howard Hawks" },
+        { name: "John Ford", sortName: "Ford, John" },
+        { name: "John Huston", sortName: "Huston, John" },
+        { name: "Howard Hawks", sortName: "Hawks, Howard" },
       ]);
 
       const user = getUserWithFakeTimers();
@@ -27,19 +27,19 @@ export function nameSortTests(
 
       const list = getList();
       const text = list.textContent ?? "";
-      expect(text.indexOf("Howard Hawks")).toBeLessThan(
-        text.indexOf("John Ford"),
+      expect(text.indexOf("Ford, John")).toBeLessThan(
+        text.indexOf("Hawks, Howard"),
       );
-      expect(text.indexOf("John Ford")).toBeLessThan(
-        text.indexOf("John Huston"),
+      expect(text.indexOf("Hawks, Howard")).toBeLessThan(
+        text.indexOf("Huston, John"),
       );
     });
 
     it("sorts Z → A by  sortName", async ({ expect }) => {
       renderItems([
-        { name: "John Ford", sortName: "John Ford" },
-        { name: "John Huston", sortName: "John Huston" },
-        { name: "Howard Hawks", sortName: "Howard Hawks" },
+        { name: "John Ford", sortName: "Ford, John" },
+        { name: "John Huston", sortName: "Huston, John" },
+        { name: "Howard Hawks", sortName: "Hawks, Howard" },
       ]);
 
       const user = getUserWithFakeTimers();
@@ -47,11 +47,11 @@ export function nameSortTests(
 
       const list = getList();
       const text = list.textContent ?? "";
-      expect(text.indexOf("John Huston")).toBeLessThan(
-        text.indexOf("John Ford"),
+      expect(text.indexOf("Huston, John")).toBeLessThan(
+        text.indexOf("Hawks, Howard"),
       );
-      expect(text.indexOf("John Ford")).toBeLessThan(
-        text.indexOf("Howard Hawks"),
+      expect(text.indexOf("Hawks, Howard")).toBeLessThan(
+        text.indexOf("Ford, John"),
       );
     });
   });

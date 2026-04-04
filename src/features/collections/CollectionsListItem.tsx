@@ -17,7 +17,10 @@ export function CollectionsListItem({
   return (
     <AvatarListItem avatarImageProps={value.avatarImageProps}>
       <div className="flex flex-col justify-center">
-        <ListItemName href={`/collections/${value.slug}/`} name={value.name} />
+        <ListItemName
+          href={`/collections/${value.slug}/`}
+          name={value.sortName}
+        />
         <div
           className={`
             font-sans text-[13px] font-normal tracking-prose text-nowrap
