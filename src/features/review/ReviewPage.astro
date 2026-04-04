@@ -42,6 +42,7 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
 ---
 
 <BaseLayout
+  bodyBackgroundClass="bg-default"
   canonical={true}
   meta={{ description: review.description }}
   openGraph={{
@@ -50,18 +51,6 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
   }}
   title={reviewPageTitle(reviewedTitle)}
 >
-  <Fragment slot="meta-theme-color">
-    <meta
-      content="#fff"
-      media="(prefers-color-scheme: light)"
-      name="theme-color"
-    />
-    <meta
-      content="#322f2f"
-      media="(prefers-color-scheme: dark)"
-      name="theme-color"
-    />
-  </Fragment>
   <Mast addGradient={false} hasBackdrop={false} hideLogo={false} slot="mast" />
   <div data-pagefind-body>
     <header
