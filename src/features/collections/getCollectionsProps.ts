@@ -19,7 +19,7 @@ export async function getCollectionsProps(
         name: collection.name,
         reviewCount: collection.reviewCount,
         slug: collection.slug,
-        sortName: collection.name,
+        sortName: collection.sortName,
       };
 
       return listItemValue;

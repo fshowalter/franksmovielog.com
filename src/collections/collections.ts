@@ -71,6 +71,7 @@ const CollectionSchema = z.object({
   name: z.string(),
   reviewCount: z.number(),
   slug: z.string(),
+  sortName: z.string(),
   titles: z.array(CollectionTitleSchema),
 });
 
@@ -90,6 +91,7 @@ export const collections = defineCollection({
             name: raw.name,
             reviewCount: raw.reviewCount,
             slug: raw.slug,
+            sortName: raw.sortName,
             titles: raw.titles,
           };
         },

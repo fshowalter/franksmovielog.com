@@ -22,9 +22,9 @@ export function nameFilterTests(
   describe("nameFilter", () => {
     it("filters to matching names", async ({ expect }) => {
       renderItems([
-        { name: "John Ford", sortName: "Ford, John" },
-        { name: "John Huston", sortName: "Huston, John" },
-        { name: "Howard Hawks", sortName: "Hawks, Howard" },
+        { name: "John Ford", sortName: "John Ford" },
+        { name: "John Huston", sortName: "John Huston" },
+        { name: "Howard Hawks", sortName: "Howard Hawks" },
       ]);
 
       const user = getUserWithFakeTimers();
@@ -40,9 +40,9 @@ export function nameFilterTests(
 
     it("filters by partial name match", async ({ expect }) => {
       renderItems([
-        { name: "John Ford", sortName: "Ford, John" },
-        { name: "John Huston", sortName: "Huston, John" },
-        { name: "Howard Hawks", sortName: "Hawks, Howard" },
+        { name: "John Ford", sortName: "John Ford" },
+        { name: "John Huston", sortName: "John Huston" },
+        { name: "Howard Hawks", sortName: "Howard Hawks" },
       ]);
 
       const user = getUserWithFakeTimers();
@@ -58,9 +58,9 @@ export function nameFilterTests(
 
     it("shows search chip after applying", async ({ expect }) => {
       renderItems([
-        { name: "John Ford", sortName: "Ford, John" },
-        { name: "John Huston", sortName: "Huston, John" },
-        { name: "Howard Hawks", sortName: "Hawks, Howard" },
+        { name: "John Ford", sortName: "John Ford" },
+        { name: "John Huston", sortName: "John Huston" },
+        { name: "Howard Hawks", sortName: "Howard Hawks" },
       ]);
 
       const user = getUserWithFakeTimers();
@@ -80,9 +80,9 @@ export function nameFilterTests(
       expect,
     }) => {
       renderItems([
-        { name: "John Ford", sortName: "Ford, John" },
-        { name: "John Huston", sortName: "Huston, John" },
-        { name: "Howard Hawks", sortName: "Hawks, Howard" },
+        { name: "John Ford", sortName: "John Ford" },
+        { name: "John Huston", sortName: "John Huston" },
+        { name: "Howard Hawks", sortName: "Howard Hawks" },
       ]);
 
       const user = getUserWithFakeTimers();
@@ -113,9 +113,9 @@ export function nameFilterTests(
 
     it("resets when closing drawer without applying", async ({ expect }) => {
       renderItems([
-        { name: "John Ford", sortName: "Ford, John" },
-        { name: "John Huston", sortName: "Huston, John" },
-        { name: "Howard Hawks", sortName: "Hawks, Howard" },
+        { name: "John Ford", sortName: "John Ford" },
+        { name: "John Huston", sortName: "John Huston" },
+        { name: "Howard Hawks", sortName: "Howard Hawks" },
       ]);
 
       const user = getUserWithFakeTimers();

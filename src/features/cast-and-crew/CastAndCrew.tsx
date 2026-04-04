@@ -106,7 +106,13 @@ export function CastAndCrew({
           groupItemClassName={`scroll-mt-[var(--filter-and-sort-container-scroll-offset)]`}
         >
           {(value) => {
-            return <CastAndCrewListItem key={value.name} value={value} />;
+            return (
+              <CastAndCrewListItem
+                key={value.name}
+                sort={state.sort}
+                value={value}
+              />
+            );
           }}
         </GroupedAvatarList>
       </div>

@@ -6,6 +6,11 @@ export function createNameFilter<TValue extends FilterableValue>(
 ) {
   const filterValue = filters.name;
   if (!filterValue) return;
-  return (value: TValue): boolean =>
-    value.name.toLocaleLowerCase().includes(filterValue.toLocaleLowerCase());
+  return (value: TValue): boolean => {
+    const filterValueLowerCase = filterValue.toLocaleLowerCase();
+    return (
+      value.name.toLocaleLowerCase().includes(filterValueLowerCase) ||
+      value.sortName.toLocaleLowerCase().includes(filterValueLowerCase)
+    );
+  };
 }
