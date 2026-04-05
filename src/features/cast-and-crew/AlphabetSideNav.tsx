@@ -29,7 +29,7 @@ export function AlphabetSideNav({
   return (
     <nav
       className={`
-        sticky top-[89px] z-nav-menu scrollbar-hidden h-[calc(100vh-88px)]
+        sticky top-[89px] z-above scrollbar-hidden h-[calc(100vh-88px)]
         overflow-y-auto bg-sidenav
         tablet:top-24 tablet:h-[calc(100vh-96px)] tablet:px-4
         laptop:top-[97px]

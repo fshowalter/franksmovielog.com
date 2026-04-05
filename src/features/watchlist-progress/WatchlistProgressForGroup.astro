@@ -57,7 +57,7 @@ const { class: className, label, values, valueType } = Astro.props;
                 grid-cols-subgrid grid-rows-[1fr_auto_auto_1fr] bg-default py-4
                 text-subtle transition-all duration-500
                 last-of-type:shadow-none
-                tablet-landscape:has-[a:hover]:z-hover
+                tablet-landscape:has-[a:hover]:z-above
                 tablet-landscape:has-[a:hover]:scale-[102.5%]
                 tablet-landscape:has-[a:hover]:shadow-all
                 tablet-landscape:has-[a:hover]:drop-shadow-2xl
@@ -66,10 +66,9 @@ const { class: className, label, values, valueType } = Astro.props;
               <div
                 class={`
                   relative col-start-2 row-span-4 transition-all
-                  after:absolute after:top-0 after:left-0
-                  after:z-watchlist-overlay after:size-full
-                  after:overflow-hidden after:rounded-full after:bg-default
-                  after:opacity-20 after:duration-500
+                  after:absolute after:top-0 after:left-0 after:z-above
+                  after:size-full after:overflow-hidden after:rounded-full
+                  after:bg-default after:opacity-20 after:duration-500
                   group-has-[a:hover]/list-item:after:opacity-0
                 `}
               >
@@ -94,7 +93,7 @@ const { class: className, label, values, valueType } = Astro.props;
                       class={`
                         pb-1 text-base leading-none font-normal text-default
                         transition-all duration-500
-                        after:absolute after:top-0 after:left-0 after:z-hover
+                        after:absolute after:top-0 after:left-0 after:z-above
                         after:size-full after:opacity-0
                         hover:text-accent
                       `}
