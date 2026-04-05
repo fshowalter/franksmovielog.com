@@ -1,16 +1,16 @@
 {
   "year": "2026",
   "newTitleCount": 17,
-  "viewingCount": 37,
-  "titleCount": 37,
+  "viewingCount": 41,
+  "titleCount": 41,
   "mediaDistribution": [
+    {
+      "name": "4k UHD Blu-ray",
+      "count": 14
+    },
     {
       "name": "Blu-ray",
       "count": 12
-    },
-    {
-      "name": "4k UHD Blu-ray",
-      "count": 10
     },
     {
       "name": "Watch TCM",
@@ -41,11 +41,11 @@
     },
     {
       "name": "1940s",
-      "count": 4
+      "count": 5
     },
     {
       "name": "1950s",
-      "count": 2
+      "count": 3
     },
     {
       "name": "1960s",
@@ -53,7 +53,7 @@
     },
     {
       "name": "1970s",
-      "count": 7
+      "count": 8
     },
     {
       "name": "1980s",
@@ -61,7 +61,7 @@
     },
     {
       "name": "1990s",
-      "count": 5
+      "count": 6
     },
     {
       "name": "2000s",
@@ -101,7 +101,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 3,
+      "count": 4,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -126,6 +126,14 @@
           "reviewSlug": "she-1965",
           "date": "2026-02-08",
           "medium": "DVD",
+          "venue": null
+        },
+        {
+          "title": "The Wicker Man",
+          "releaseYear": "1973",
+          "reviewSlug": "the-wicker-man-1973",
+          "date": "2026-04-04",
+          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
