@@ -22,6 +22,7 @@ export function PosterListItem({
         duration-500
         tablet:w-(--poster-list-item-width) tablet:flex-col
         tablet:bg-transparent tablet:p-6
+        desktop:p-7
         ${
           hasReview
             ? `
