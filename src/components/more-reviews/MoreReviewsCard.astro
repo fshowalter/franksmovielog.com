@@ -61,7 +61,7 @@ const { data: review } = await getEntry(value.review);
     <a
       class={`
         mb-3 block text-xl/6 font-medium transition-all duration-500
-        after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+        after:absolute after:top-0 after:left-0 after:z-above after:size-full
         hover:text-accent
       `}
       href={`/reviews/${review.slug}/`}

@@ -74,7 +74,7 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
     >
       <button
         class={`
-          absolute right-4 z-sticky mt-5 h-6 cursor-pointer rounded-sm
+          absolute right-4 z-above mt-5 h-6 cursor-pointer rounded-sm
           border-none bg-subtle px-2 font-mono text-xs font-light text-muted
           transition-all
           hover:scale-105 hover:bg-accent hover:text-white
@@ -220,7 +220,7 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
         grid-cols-[min(25%,80px)_1fr] gap-x-6 bg-default px-[8%] py-6
         transition-all
         tablet:px-6
-        tablet-landscape:has-[a:hover]:z-5
+        tablet-landscape:has-[a:hover]:z-above
         tablet-landscape:has-[a:hover]:-translate-y-2
         tablet-landscape:has-[a:hover]:drop-shadow-2xl
         laptop:px-8
@@ -230,7 +230,7 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
         class={`
           relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
           rounded-sm shadow-all
-          after:absolute after:top-0 after:left-0 after:z-sticky after:size-full
+          after:absolute after:top-0 after:left-0 after:z-above after:size-full
           after:bg-default after:opacity-15 after:transition-all
           after:duration-500
           group-has-[a:hover]/list-item:after:opacity-0
@@ -254,7 +254,7 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
           <a
             class={`
               block text-default transition-colors
-              after:absolute after:top-0 after:left-0 after:z-sticky
+              after:absolute after:top-0 after:left-0 after:z-above
               after:size-full after:opacity-0
               hover:text-accent
             `}
