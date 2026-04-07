@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 17,
-  "viewingCount": 42,
-  "titleCount": 42,
+  "viewingCount": 43,
+  "titleCount": 43,
   "mediaDistribution": [
     {
       "name": "4k UHD Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "Blu-ray",
-      "count": 13
+      "count": 14
     },
     {
       "name": "Watch TCM",
@@ -49,7 +49,7 @@
     },
     {
       "name": "1960s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "1970s",
@@ -74,6 +74,29 @@
   ],
   "mostWatchedTitles": [],
   "mostWatchedDirectors": [
+    {
+      "name": "John Gilling",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "The Shadow of the Cat",
+          "releaseYear": "1961",
+          "reviewSlug": "the-shadow-of-the-cat-1961",
+          "date": "2026-01-19",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Pirates of Blood River",
+          "releaseYear": "1962",
+          "reviewSlug": "the-pirates-of-blood-river-1962",
+          "date": "2026-04-06",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
     {
       "name": "David Cronenberg",
       "count": 2,
@@ -101,7 +124,7 @@
   "mostWatchedPerformers": [
     {
       "name": "Christopher Lee",
-      "count": 4,
+      "count": 5,
       "slug": "christopher-lee",
       "viewings": [
         {
@@ -134,6 +157,14 @@
           "reviewSlug": "the-wicker-man-1973",
           "date": "2026-04-04",
           "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Pirates of Blood River",
+          "releaseYear": "1962",
+          "reviewSlug": "the-pirates-of-blood-river-1962",
+          "date": "2026-04-06",
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -364,6 +395,29 @@
   ],
   "mostWatchedWriters": [
     {
+      "name": "Jimmy Sangster",
+      "count": 2,
+      "slug": "jimmy-sangster",
+      "viewings": [
+        {
+          "title": "The Curse of Frankenstein",
+          "releaseYear": "1957",
+          "reviewSlug": "the-curse-of-frankenstein-1957",
+          "date": "2026-01-08",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Pirates of Blood River",
+          "releaseYear": "1962",
+          "reviewSlug": "the-pirates-of-blood-river-1962",
+          "date": "2026-04-06",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "John Milius",
       "count": 2,
       "slug": null,
@@ -410,5 +464,5 @@
       ]
     }
   ],
-  "reviewCount": 34
+  "reviewCount": 35
 }
