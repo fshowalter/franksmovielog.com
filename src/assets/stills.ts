@@ -74,6 +74,24 @@ export async function getStillImageProps(
   };
 }
 
+export async function getStructuredDataStillSrc(slug: string) {
+  const stillFilePath = Object.keys(images).find((path) => {
+    return path.endsWith(`/${slug}.png`);
+  })!;
+
+  const stillFile = await images[stillFilePath]();
+
+  const image = await getImage({
+    format: "jpeg",
+    height: 675,
+    quality: 80,
+    src: stillFile.default,
+    width: 1200,
+  });
+
+  return image.src;
+}
+
 export async function getUpdateStillProps(
   slug: string,
 ): Promise<StillImageProps> {
