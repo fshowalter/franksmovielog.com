@@ -8,6 +8,7 @@ const HeroImageConfig = {
 };
 
 type Props = {
+  backdropAlign?: string;
   backdropSlug: string;
   bottomShadow?: boolean;
   breadcrumb?: {
@@ -22,6 +23,7 @@ type Props = {
 };
 
 const {
+  backdropAlign = "object-top",
   backdropSlug,
   breadcrumb,
   centerText = false,
@@ -56,7 +58,7 @@ const backdropImageProps = await getBackdropImageProps(
   ]}
 >
   <img
-    class={`absolute inset-0 size-full object-cover object-top`}
+    class:list={[`absolute inset-0 size-full object-cover`, backdropAlign]}
     {...backdropImageProps}
     {...HeroImageConfig}
     alt=""
