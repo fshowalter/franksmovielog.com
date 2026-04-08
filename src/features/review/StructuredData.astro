@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
+import { getStructuredDataStillSrc } from "~/assets/stills";
+
 const gradeMap: Record<string, number> = {
   A: 5,
   B: 4,
@@ -14,6 +16,8 @@ type Props = {
 };
 
 const { value } = Astro.props;
+
+const imageSrc = await getStructuredDataStillSrc(value.review.id);
 ---
 
 <script
@@ -32,6 +36,7 @@ const { value } = Astro.props;
         "@type": "Person",
         name: value.directorNames[0],
       },
+      image: imageSrc,
       name: value.title,
       sameAs: `http://www.imdb.com/title/${value.imdbId}/`,
     },
