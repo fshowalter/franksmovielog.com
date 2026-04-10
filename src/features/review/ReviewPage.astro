@@ -106,7 +106,7 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
             if (index === 0) {
               return country;
             }
-            return `&ndash;${country}`;
+            return <Fragment set:html={`&ndash;${country}`} />;
           })
         }
         <span>|</span>{" "}
