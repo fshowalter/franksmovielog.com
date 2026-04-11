@@ -51,9 +51,7 @@ const backdropImageProps = await getBackdropImageProps(
     sizes,
     `
       relative flex w-full flex-col content-start items-center justify-end gap-6
-      bg-[#2A2B2A] pt-40 pb-8 text-white
-      tablet:pt-40 tablet:pb-10
-      laptop:pt-40 laptop:pb-16
+      bg-[#2A2B2A] pt-40 text-white
     `,
   ]}
 >
@@ -70,9 +68,11 @@ const backdropImageProps = await getBackdropImageProps(
       { "items-center": centerText },
       `
         z-above mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
-        px-container
+        px-container pt-6 pb-8
         after:absolute after:top-0 after:left-0 after:z-behind after:size-full
         after:bg-(image:--hero-gradient)
+        tablet:pb-10
+        laptop:pb-16
       `,
     ]}
   >
@@ -113,8 +113,8 @@ const backdropImageProps = await getBackdropImageProps(
     <p
       class:list={[
         `
-          text-base font-normal text-white text-shadow-[rgba(0,0,0,.55)]
-          text-shadow-md
+          text-base font-normal text-white
+          [text-shadow:1px_1px_2px_rgba(0,0,0,.85)]
           tablet:mt-1
           laptop:text-xl
         `,
