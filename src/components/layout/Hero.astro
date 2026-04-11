@@ -71,8 +71,6 @@ const backdropImageProps = await getBackdropImageProps(
       `
         z-above mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
         px-container
-        after:absolute after:top-0 after:left-0 after:z-behind after:size-full
-        after:bg-(image:--hero-gradient)
       `,
     ]}
   >
@@ -83,6 +81,7 @@ const backdropImageProps = await getBackdropImageProps(
             class={`
               relative inline-block font-sans text-sm/relaxed font-bold
               tracking-wide text-accent uppercase transition-all duration-500
+              text-shadow-[rgba(0,0,0,.3)] text-shadow-md
               after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
               after:origin-center after:scale-x-0 after:bg-accent
               after:transition-transform after:duration-500
@@ -101,7 +100,7 @@ const backdropImageProps = await getBackdropImageProps(
         `
           ${centerText ? "text-center" : ""}
           text-[2rem]/10 font-extrabold
-          [text-shadow:1px_1px_2px_rgba(0,0,0,.25)]
+          [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
           tablet:text-4xl
           laptop:text-7xl
         `}
@@ -112,8 +111,8 @@ const backdropImageProps = await getBackdropImageProps(
     <p
       class:list={[
         `
-          text-base font-normal text-white/90 mix-blend-hard-light
-          [text-shadow:1px_1px_2px_black]
+          text-base font-normal text-white mix-blend-hard-light
+          text-shadow-[rgba(0,0,0,.55)] text-shadow-md
           tablet:mt-1
           laptop:text-xl
         `,

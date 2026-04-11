@@ -1,11 +1,23 @@
 ---
+type Props = {
+  dropShadow?: boolean;
+};
 
+const { dropShadow = false } = Astro.props;
 ---
 
 <div
-  class=`
-        flex transform-gpu flex-col transition-all duration-500
-        has-[a:hover]:text-accent`
+  class:list={[
+    `
+      flex transform-gpu flex-col transition-all duration-500
+      has-[a:hover]:text-accent
+    `,
+    dropShadow &&
+      `
+        text-shadow-[rgba(0,0,0,.55)] text-shadow-sm
+        hover:text-shadow-none
+      `,
+  ]}
 >
   <div
     class=`
@@ -13,7 +25,7 @@
           tablet:text-[1.5625rem]
         `
   >
-    <a href="/">Frank&apos;s Movie Log</a>
+    <a class="drop-shadow-inherit" href="/">Frank&apos;s Movie Log</a>
   </div>
   <p class={"w-full pl-px text-sm/4 italic opacity-85"}>by Frank Showalter</p>
 </div>
