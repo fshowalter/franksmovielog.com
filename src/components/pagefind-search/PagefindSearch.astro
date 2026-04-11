@@ -1,11 +1,17 @@
 ---
 type Props = {
   class?: string;
+  dropShadow?: boolean;
   isGlobal?: boolean;
   variant?: "button" | "text";
 };
 
-const { class: className, isGlobal = false, variant = "button" } = Astro.props;
+const {
+  class: className,
+  dropShadow = false,
+  isGlobal = false,
+  variant = "button",
+} = Astro.props;
 
 const dataProperties = isGlobal ? { "data-global": true } : {};
 ---
@@ -36,7 +42,10 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
       >
         <svg
           aria-hidden="true"
-          class="size-7"
+          class:list={[
+            "size-7",
+            dropShadow && `drop-shadow-[0_2px_4px_rgba(0,0,0,0.85)]`,
+          ]}
           fill="none"
           stroke="currentColor"
           stroke-width="1.5"

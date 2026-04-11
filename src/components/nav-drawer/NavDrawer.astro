@@ -1,5 +1,9 @@
 ---
+type Props = {
+  dropShadow?: boolean;
+};
 
+const { dropShadow = false } = Astro.props;
 ---
 
 <nav-drawer>
@@ -15,10 +19,13 @@
     type="button"
   >
     <svg
-      class={`
-        size-8
-        group-hover/button:text-accent
-      `}
+      class:list={[
+        `
+          size-8
+          group-hover/button:text-accent
+        `,
+        dropShadow && `drop-shadow-[0_2px_4px_rgba(0,0,0,0.85)]`,
+      ]}
       fill="none"
       stroke="currentColor"
       stroke-width="1.5"

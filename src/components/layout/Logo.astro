@@ -1,11 +1,23 @@
 ---
+type Props = {
+  dropShadow?: boolean;
+};
 
+const { dropShadow = false } = Astro.props;
 ---
 
 <div
-  class=`
-        flex transform-gpu flex-col transition-all duration-500
-        has-[a:hover]:text-accent`
+  class:list={[
+    `
+      flex transform-gpu flex-col transition-all duration-500
+      has-[a:hover]:text-accent
+    `,
+    dropShadow &&
+      `
+        text-shadow-[rgba(0,0,0,.55)] text-shadow-sm
+        hover:text-shadow-none
+      `,
+  ]}
 >
   <div
     class=`
