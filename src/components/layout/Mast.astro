@@ -59,11 +59,7 @@ const { addGradient, hasBackdrop, hideLogo } = Astro.props;
                       hover:text-accent
                       hover:after:scale-x-100
                     `,
-                    hasBackdrop &&
-                      `
-                        text-shadow-[rgba(0,0,0,.55)] text-shadow-md
-                        hover:text-shadow-none
-                      `,
+                    hasBackdrop && `[text-shadow:1px_1px_2px_rgba(0,0,0,.55)]`,
                   ]}
                   href={page.href}
                 >

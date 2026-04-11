@@ -12,11 +12,7 @@ const { dropShadow = false } = Astro.props;
       flex transform-gpu flex-col transition-all duration-500
       has-[a:hover]:text-accent
     `,
-    dropShadow &&
-      `
-        text-shadow-[rgba(0,0,0,.55)] text-shadow-sm
-        hover:text-shadow-none
-      `,
+    dropShadow && `[text-shadow:1px_1px_2px_rgba(0,0,0,.55)]`,
   ]}
 >
   <div
