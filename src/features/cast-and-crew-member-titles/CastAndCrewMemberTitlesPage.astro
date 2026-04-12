@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
-import { getBackdropImageProps } from "~/assets/backdrops";
+import { getPortraitImageProps } from "~/assets/portraits";
 import BaseLayout from "~/components/layout/BaseLayout.astro";
 import Mast from "~/components/layout/Mast.astro";
 import { CastAndCrewMemberTitles } from "~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles";
@@ -33,7 +33,7 @@ const ImageConfig = {
 };
 
 const metaDescription = `Reviews of movies ${creditString} ${castAndCrewMember.name}. Sort reviews by best or worst, newest or oldest. Filter by credit kind, year, or title.`;
-const backdropImageProps = await getBackdropImageProps(
+const backdropImageProps = await getPortraitImageProps(
   castAndCrewMember.slug,
   ImageConfig,
 );
