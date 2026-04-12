@@ -1,7 +1,9 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
-import HeroLayout from "~/components/layout/HeroLayout.astro";
+import { getBackdropImageProps } from "~/assets/backdrops";
+import BaseLayout from "~/components/layout/BaseLayout.astro";
+import Mast from "~/components/layout/Mast.astro";
 import { CastAndCrewMemberTitles } from "~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles";
 import { getCastAndCrewMemberTitlesProps } from "~/features/cast-and-crew-member-titles/getCastAndCrewMemberTitlesProps";
 
@@ -24,28 +26,101 @@ const creditString = new Intl.ListFormat("en", {
   type: "disjunction",
 }).format(castAndCrewMember.creditedAs.map((credit) => creditMap[credit]));
 
+const ImageConfig = {
+  height: 1200,
+  sizes: "100vw",
+  width: 1200,
+};
+
 const metaDescription = `Reviews of movies ${creditString} ${castAndCrewMember.name}. Sort reviews by best or worst, newest or oldest. Filter by credit kind, year, or title.`;
+const backdropImageProps = await getBackdropImageProps(
+  castAndCrewMember.slug,
+  ImageConfig,
+);
 ---
 
-<HeroLayout
-  baseLayoutProps={{
-    canonical: true,
-    meta: {
-      description: metaDescription,
-    },
-    openGraph: {
-      description: castAndCrewMember.description,
-      type: "website",
-    },
-    title: `${castAndCrewMember.name} movie reviews`,
-  }}
-  heroProps={{
-    backdropAlign: "object-center",
-    backdropSlug: castAndCrewMember.slug,
-    breadcrumb: { href: "/cast-and-crew/", text: "Cast & Crew" },
-    deck: castAndCrewMember.description,
-    title: castAndCrewMember.name,
-  }}
+<BaseLayout
+  canonical
+  meta={{ description: metaDescription }}
+  openGraph={{ description: castAndCrewMember.description, type: "website" }}
+  title={`${castAndCrewMember.name} movie reviews`}
 >
+  <Mast addGradient={false} hasBackdrop={true} hideLogo={false} slot="mast" />
+  <header
+    class:list={[
+      `
+        min-h-[400px]
+        laptop:min-h-[clamp(640px,70vh,1350px)]
+      `,
+      `
+        relative flex w-full flex-wrap bg-[#2A2B2A] text-white
+        tablet:flex-nowrap
+      `,
+    ]}
+  >
+    <div class=`w-full tablet:w-1/2`>
+      <img
+        class:list={[`size-full object-cover`, "object-top"]}
+        {...backdropImageProps}
+        {...ImageConfig}
+        alt=""
+        fetchpriority="high"
+        loading="eager"
+      />
+    </div>
+    <div
+      class:list={[
+        { "items-center": false },
+        `
+          flex w-full max-w-(--breakpoint-desktop) flex-col items-center
+          justify-center px-container pt-20 pb-25
+          tablet:w-1/2
+        `,
+      ]}
+    >
+      {
+        (
+          <p class="tablet:mb-1">
+            <a
+              class={`
+                relative inline-block font-sans text-sm/relaxed font-bold
+                tracking-wide text-accent uppercase transition-all duration-500
+                [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
+                after:absolute after:bottom-0 after:left-0 after:h-px
+                after:w-full after:origin-center after:scale-x-0 after:bg-accent
+                after:transition-transform after:duration-500
+                hover:text-accent
+                hover:after:scale-x-100
+              `}
+              href={"/cast-and-crew/"}
+            >
+              Cast &amp; Crew
+            </a>
+          </p>
+        )
+      }
+      <h1
+        class={`
+          mt-1 text-center text-[2rem]/8 font-extrabold
+          [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
+          tablet-landscape:text-5xl
+          laptop:text-7xl/16
+        `}
+        data-pagefind-weight="10"
+      >
+        {castAndCrewMember.name}
+      </h1>
+      <p
+        class:list={[
+          `
+            mt-2 text-center text-base font-normal text-white
+            [text-shadow:1px_1px_2px_rgba(0,0,0,.85)]
+            laptop:text-xl
+          `,
+        ]}
+        set:html={castAndCrewMember.description}
+      />
+    </div>
+  </header>
   <CastAndCrewMemberTitles client:load {...castAndCrewMemberTitlesProps} />
-</HeroLayout>
+</BaseLayout>
