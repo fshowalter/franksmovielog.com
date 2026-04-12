@@ -49,73 +49,78 @@ const backdropImageProps = await getBackdropImageProps(
   <header
     class:list={[
       // `laptop:min-h-[clamp(640px,70vh,1350px)]`,
-      `
-        relative flex w-full flex-wrap items-center bg-footer text-white
-        tablet:flex-nowrap
-      `,
+      `relative bg-footer text-white`,
     ]}
   >
-    <div class=`tablet:w-1/2 laptop:w-auto aspect-square laptop:max-h-[75vh]`>
-      <img
-        class:list={[`size-full object-contain object-top`]}
-        {...backdropImageProps}
-        {...ImageConfig}
-        alt=""
-        fetchpriority="high"
-        loading="eager"
-      />
-    </div>
     <div
-      class:list={[
-        { "items-center": false },
-        `
-          flex max-w-(--breakpoint-desktop) shrink-0 grow basis-1/2 flex-col
-          items-center justify-center px-container pt-20 pb-25
-        `,
-      ]}
+      class={`
+        mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap items-center
+        tablet:flex-nowrap
+        laptop:px-container
+      `}
     >
-      {
-        (
-          <p class="tablet:mb-1">
-            <a
-              class={`
-                relative inline-block font-sans text-sm/relaxed font-bold
-                tracking-wide text-accent uppercase transition-all duration-500
-                [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
-                after:absolute after:bottom-0 after:left-0 after:h-px
-                after:w-full after:origin-center after:scale-x-0 after:bg-accent
-                after:transition-transform after:duration-500
-                hover:text-accent
-                hover:after:scale-x-100
-              `}
-              href={"/cast-and-crew/"}
-            >
-              Cast &amp; Crew
-            </a>
-          </p>
-        )
-      }
-      <h1
-        class={`
-          mt-1 text-center text-[2rem]/8 font-extrabold
-          [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
-          tablet-landscape:text-5xl
-          laptop:text-7xl/16
-        `}
-        data-pagefind-weight="10"
-      >
-        {castAndCrewMember.name}
-      </h1>
-      <p
+      <div class=`tablet:w-1/2 w-full aspect-square`>
+        <img
+          class:list={[`size-full object-contain object-top`]}
+          {...backdropImageProps}
+          {...ImageConfig}
+          alt=""
+          fetchpriority="high"
+          loading="eager"
+        />
+      </div>
+      <div
         class:list={[
+          { "items-center": false },
           `
-            mt-2 text-center text-base font-normal text-white
-            [text-shadow:1px_1px_2px_rgba(0,0,0,.85)]
-            laptop:text-xl
+            flex max-w-(--breakpoint-desktop) shrink-0 grow basis-1/2 flex-col
+            items-center justify-center px-container pt-20 pb-25
           `,
         ]}
-        set:html={castAndCrewMember.description}
-      />
+      >
+        {
+          (
+            <p class="tablet:mb-1">
+              <a
+                class={`
+                  relative inline-block font-sans text-sm/relaxed font-bold
+                  tracking-wide text-accent uppercase transition-all
+                  duration-500 [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
+                  after:absolute after:bottom-0 after:left-0 after:h-px
+                  after:w-full after:origin-center after:scale-x-0
+                  after:bg-accent after:transition-transform after:duration-500
+                  hover:text-accent
+                  hover:after:scale-x-100
+                `}
+                href={"/cast-and-crew/"}
+              >
+                Cast &amp; Crew
+              </a>
+            </p>
+          )
+        }
+        <h1
+          class={`
+            mt-1 text-center text-[2rem]/8 font-extrabold
+            [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
+            tablet-landscape:text-5xl
+            laptop:text-7xl/16
+          `}
+          data-pagefind-weight="10"
+        >
+          {castAndCrewMember.name}
+        </h1>
+        <p
+          class:list={[
+            `
+              mt-2 text-center text-base font-normal text-white
+              [text-shadow:1px_1px_2px_rgba(0,0,0,.85)]
+              laptop:text-xl
+            `,
+          ]}
+          set:html={castAndCrewMember.description}
+        />
+      </div>
     </div>
   </header>
   <CastAndCrewMemberTitles client:load {...castAndCrewMemberTitlesProps} />
