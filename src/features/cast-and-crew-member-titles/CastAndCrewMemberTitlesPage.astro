@@ -48,19 +48,16 @@ const backdropImageProps = await getBackdropImageProps(
   <Mast addGradient={false} hasBackdrop={true} hideLogo={false} slot="mast" />
   <header
     class:list={[
+      // `laptop:min-h-[clamp(640px,70vh,1350px)]`,
       `
-        min-h-[400px]
-        laptop:min-h-[clamp(640px,70vh,1350px)]
-      `,
-      `
-        relative flex w-full flex-wrap bg-[#2A2B2A] text-white
+        relative flex w-full flex-wrap items-center bg-footer text-white
         tablet:flex-nowrap
       `,
     ]}
   >
-    <div class=`w-full tablet:w-1/2`>
+    <div class=`laptop:w-[40%] tablet:w-1/2`>
       <img
-        class:list={[`size-full object-cover`, "object-top"]}
+        class:list={[`size-full object-contain object-top`]}
         {...backdropImageProps}
         {...ImageConfig}
         alt=""
@@ -72,9 +69,8 @@ const backdropImageProps = await getBackdropImageProps(
       class:list={[
         { "items-center": false },
         `
-          flex w-full max-w-(--breakpoint-desktop) flex-col items-center
-          justify-center px-container pt-20 pb-25
-          tablet:w-1/2
+          flex max-w-(--breakpoint-desktop) shrink-0 grow basis-1/2 flex-col
+          items-center justify-center px-container pt-20 pb-25
         `,
       ]}
     >
