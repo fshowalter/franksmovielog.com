@@ -27,9 +27,9 @@ const creditString = new Intl.ListFormat("en", {
 }).format(castAndCrewMember.creditedAs.map((credit) => creditMap[credit]));
 
 const ImageConfig = {
-  height: 1200,
+  height: 800,
   sizes: "100vw",
-  width: 1200,
+  width: 800,
 };
 
 const metaDescription = `Reviews of movies ${creditString} ${castAndCrewMember.name}. Sort reviews by best or worst, newest or oldest. Filter by credit kind, year, or title.`;
@@ -56,7 +56,7 @@ const backdropImageProps = await getPortraitImageProps(
       class={`
         mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap items-center
         tablet:flex-nowrap
-        laptop:px-container
+        laptop:px-[calc(var(--container-padding)-24px)]
       `}
     >
       <div class=`tablet:w-1/2 w-full aspect-square`>
@@ -104,7 +104,7 @@ const backdropImageProps = await getPortraitImageProps(
             mt-1 text-center text-[2rem]/8 font-extrabold
             [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
             tablet-landscape:text-5xl
-            laptop:text-7xl/16
+            laptop:text-7xl/17
           `}
           data-pagefind-weight="10"
         >
