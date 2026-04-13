@@ -106,7 +106,12 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
       >
         Skip to content
       </a>
-      <div class="flex min-h-full w-full flex-col bg-default">
+      <div
+        class={`
+          relative mx-auto flex min-h-full w-full max-w-[1600px] flex-col
+          bg-default
+        `}
+      >
         <slot name="mast" />
         <main class:list={["grow", mainClassNames]} id="content" {...rest}>
           <slot />

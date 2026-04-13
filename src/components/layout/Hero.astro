@@ -65,14 +65,14 @@ const backdropImageProps = await getBackdropImageProps(
   />
   <div
     class:list={[
-      { "items-center": centerText },
+      { "w-full items-center": centerText },
       `
-        z-above mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
+        relative z-above mr-auto flex max-w-(--breakpoint-desktop) flex-col
         px-container pt-6 pb-8
         after:absolute after:top-0 after:left-0 after:z-behind after:size-full
-        after:bg-(image:--hero-gradient)
-        tablet:pb-10
-        laptop:pb-16
+        after:bg-[rgba(0,0,0,0.5)] after:blur-3xl
+        tablet:mb-2
+        laptop:mb-8
       `,
     ]}
   >
