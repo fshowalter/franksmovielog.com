@@ -64,63 +64,69 @@ const backdropImageProps = await getBackdropImageProps(
     loading="eager"
   />
   <div
-    class:list={[
-      { "w-full items-center": centerText },
-      `
-        relative z-above mr-auto flex max-w-(--breakpoint-desktop) flex-col
-        px-container pt-6 pb-8
-        after:absolute after:top-0 after:left-0 after:z-behind after:size-full
-        after:bg-[rgba(0,0,0,0.5)] after:blur-3xl
-        tablet:mb-2
-        laptop:mb-8
-      `,
-    ]}
+    class={`
+      mx-auto grid w-full max-w-(--breakpoint-desktop) grid-cols-[auto_1fr]
+    `}
   >
-    {
-      breadcrumb && (
-        <p class="tablet:mb-1">
-          <a
-            class={`
-              relative inline-block font-sans text-sm/relaxed font-bold
-              tracking-wide text-accent uppercase transition-all duration-500
-              [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
-              after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
-              after:origin-center after:scale-x-0 after:bg-accent
-              after:transition-transform after:duration-500
-              hover:text-accent
-              hover:after:scale-x-100
-            `}
-            href={breadcrumb.href}
-          >
-            {breadcrumb.text}
-          </a>
-        </p>
-      )
-    }
-    <h1
-      class={titleClassNames ||
-        `
-          ${centerText ? "text-center" : ""}
-          text-[2rem]/10 font-extrabold
-          [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
-          tablet:text-4xl
-          laptop:text-7xl
-        `}
-      data-pagefind-weight="10"
-    >
-      {title}
-    </h1>
-    <p
+    <div
       class:list={[
+        { "w-full items-center": centerText },
         `
-          text-base font-normal text-white
-          [text-shadow:1px_1px_2px_rgba(0,0,0,.85)]
-          tablet:mt-1
-          laptop:text-xl
+          relative z-above col-start-1 mr-auto flex max-w-(--breakpoint-desktop)
+          flex-col px-container pt-6 pb-8
+          after:absolute after:top-0 after:left-0 after:z-behind after:size-full
+          after:bg-[rgba(0,0,0,0.5)] after:blur-3xl
+          tablet:mb-2
+          laptop:mb-8
         `,
-        { "text-center": centerText },
       ]}
-      set:html={deck}
-    />
+    >
+      {
+        breadcrumb && (
+          <p class="tablet:mb-1">
+            <a
+              class={`
+                relative inline-block font-sans text-sm/relaxed font-bold
+                tracking-wide text-accent uppercase transition-all duration-500
+                [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
+                after:absolute after:bottom-0 after:left-0 after:h-px
+                after:w-full after:origin-center after:scale-x-0 after:bg-accent
+                after:transition-transform after:duration-500
+                hover:text-accent
+                hover:after:scale-x-100
+              `}
+              href={breadcrumb.href}
+            >
+              {breadcrumb.text}
+            </a>
+          </p>
+        )
+      }
+      <h1
+        class={titleClassNames ||
+          `
+            ${centerText ? "text-center" : ""}
+            text-[2rem]/10 font-extrabold
+            [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
+            tablet:text-4xl
+            laptop:text-7xl
+          `}
+        data-pagefind-weight="10"
+      >
+        {title}
+      </h1>
+      <p
+        class:list={[
+          `
+            text-base font-normal text-white
+            [text-shadow:1px_1px_2px_rgba(0,0,0,.85)]
+            tablet:mt-1
+            laptop:text-xl
+          `,
+          { "text-center": centerText },
+        ]}
+        set:html={deck}
+      />
+    </div>
   </div>
 </header>
