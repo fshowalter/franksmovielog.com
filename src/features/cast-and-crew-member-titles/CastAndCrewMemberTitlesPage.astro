@@ -54,11 +54,11 @@ const backdropImageProps = await getPortraitImageProps(
   >
     <div
       class={`
-        mx-auto flex w-full max-w-(--breakpoint-desktop) flex-wrap items-center
+        mx-auto flex w-full flex-wrap items-center justify-center
         tablet:flex-nowrap
       `}
     >
-      <div class=`tablet:w-1/2 w-full aspect-square`>
+      <div class=`tablet:w-1/2 max-w-200 w-full aspect-square`>
         <img
           class:list={[`size-full object-contain object-top`]}
           {...backdropImageProps}
@@ -72,8 +72,8 @@ const backdropImageProps = await getPortraitImageProps(
         class:list={[
           { "items-center": false },
           `
-            flex max-w-(--breakpoint-desktop) shrink-0 grow basis-1/2 flex-col
-            items-center justify-center px-container pt-20 pb-25
+            flex max-w-200 shrink-0 grow basis-1/2 flex-col items-center
+            justify-center px-container pt-20 pb-25
           `,
         ]}
       >
