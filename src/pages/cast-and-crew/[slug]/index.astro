@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content";
 
 import { getCollection } from "astro:content";
 
-import CastAndCrewMemberTitlesPage from "~/features/cast-and-crew-member-titles/CastAndCrewMemberTitlesPage.astro";
+import CastAndCrewMemberPage from "~/features/cast-and-crew-member/CastAndCrewMemberPage.astro";
 
 type Props = {
   castAndCrewMember: CollectionEntry<"castAndCrew">["data"];
@@ -25,4 +25,4 @@ export async function getStaticPaths() {
 const { castAndCrewMember } = Astro.props;
 ---
 
-<CastAndCrewMemberTitlesPage castAndCrewMember={castAndCrewMember} />
+<CastAndCrewMemberPage castAndCrewMember={castAndCrewMember} />

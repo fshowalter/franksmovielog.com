@@ -1,8 +1,5 @@
 import { getImage } from "astro:assets";
 
-/**
- * Props for backdrop images.
- */
 type PortraitImageProps = {
   src: string;
   srcSet: string;

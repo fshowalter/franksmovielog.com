@@ -6,12 +6,11 @@ import Logo from "./Logo.astro";
 import SiteHierarchy, { siteHierarchy } from "./SiteHierarchy.astro";
 
 type Props = {
-  addGradient: boolean;
   hasBackdrop: boolean;
   hideLogo: boolean;
 };
 
-const { addGradient, hasBackdrop, hideLogo } = Astro.props;
+const { hasBackdrop, hideLogo } = Astro.props;
 ---
 
 <header
@@ -46,7 +45,7 @@ const { addGradient, hasBackdrop, hideLogo } = Astro.props;
                     relative block leading-10 tracking-serif-wide
                     whitespace-nowrap
                   `,
-                  addGradient &&
+                  hasBackdrop &&
                     `
                       after:absolute after:top-0 after:left-0 after:size-full
                       after:bg-[rgba(0,0,0,.9)] after:blur-3xl

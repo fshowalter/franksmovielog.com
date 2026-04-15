@@ -4,8 +4,8 @@ import type { CollectionEntry } from "astro:content";
 import { getPortraitImageProps } from "~/assets/portraits";
 import BaseLayout from "~/components/layout/BaseLayout.astro";
 import Mast from "~/components/layout/Mast.astro";
-import { CastAndCrewMemberTitles } from "~/features/cast-and-crew-member-titles/CastAndCrewMemberTitles";
-import { getCastAndCrewMemberTitlesProps } from "~/features/cast-and-crew-member-titles/getCastAndCrewMemberTitlesProps";
+import { CastAndCrewMemberTitles } from "~/features/cast-and-crew-member/CastAndCrewMemberTitles";
+import { getCastAndCrewMemberTitlesProps } from "~/features/cast-and-crew-member/getCastAndCrewMemberTitlesProps";
 
 type Props = {
   castAndCrewMember: CollectionEntry<"castAndCrew">["data"];
@@ -45,13 +45,8 @@ const backdropImageProps = await getPortraitImageProps(
   openGraph={{ description: castAndCrewMember.description, type: "website" }}
   title={`${castAndCrewMember.name} movie reviews`}
 >
-  <Mast addGradient={true} hasBackdrop={true} hideLogo={false} slot="mast" />
-  <header
-    class:list={[
-      // `laptop:min-h-[clamp(640px,70vh,1350px)]`,
-      `relative bg-footer text-white`,
-    ]}
-  >
+  <Mast hasBackdrop={true} hideLogo={false} slot="mast" />
+  <header class:list={[`relative bg-footer text-white`]}>
     <div
       class={`
         mx-auto flex w-full flex-wrap items-center justify-center
@@ -70,7 +65,6 @@ const backdropImageProps = await getPortraitImageProps(
       </div>
       <div
         class:list={[
-          { "items-center": false },
           `
             flex max-w-200 shrink-0 grow basis-1/2 flex-col items-center
             justify-center px-container pt-20 pb-25
