@@ -27,7 +27,6 @@ const createTitles = (
   return overrides.map((override, index) => {
     return {
       creditedAs: override.creditedAs ?? ["Director"],
-      excerpt: "test excerpt",
       genres: override.genres ?? ["Drama"],
       grade: "B+",
       gradeValue: 8,
@@ -44,7 +43,6 @@ const createTitles = (
       reviewSequence: index.toLocaleString(),
       reviewSlug: undefined,
       reviewYear: "2020",
-      slug: `test-movie-${index}`,
       sortTitle: `Test Movie ${index}`,
       title: override.title ?? `Test Movie ${index}`,
       watchlistCollectionNames: [],
