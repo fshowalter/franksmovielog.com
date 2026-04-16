@@ -1,3 +1,4 @@
+import { ListItemCreditedAs } from "~/components/list-item-credited-as/ListItemCreditedAs";
 import { ListItemDetails } from "~/components/list-item-details/ListItemDetails";
 import { ListItemGenres } from "~/components/list-item-genres/ListItemGenres";
 import { ListItemGrade } from "~/components/list-item-grade/ListItemGrade";
@@ -19,6 +20,7 @@ export function CastAndCrewMemberTitlesListItem({
       posterImageProps={value.posterImageProps}
     >
       <ListItemDetails>
+        <ListItemCreditedAs values={value.creditedAs} />
         <ListItemTitle
           reviewSlug={value.reviewSlug}
           title={value.title}
