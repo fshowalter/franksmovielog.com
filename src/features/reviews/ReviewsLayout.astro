@@ -10,6 +10,7 @@ import ReviewsSubNav from "./ReviewsSubNav.astro";
 
 type Props = {
   activeTab: ComponentProps<typeof ReviewsSubNav>["active"];
+  backdropAlign?: string;
   backdropSlug: string;
   deck: string;
   metaDescription: string;
@@ -20,6 +21,7 @@ type Props = {
 
 const {
   activeTab,
+  backdropAlign = "object-top",
   backdropSlug,
   deck,
   metaDescription,
@@ -44,6 +46,7 @@ const reviewsProps = await getReviewsProps(titles.map((e) => e.data));
     title: pageTitle,
   }}
   heroProps={{
+    backdropAlign,
     backdropSlug,
     deck,
     title,

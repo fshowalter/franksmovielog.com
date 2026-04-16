@@ -81,12 +81,6 @@
     --font-sans: "Assistant";
     --font-serif: "FrankRuhlLibre";
     --list-item-poster-width: 64px;
-    --hero-gradient: linear-gradient(
-      to top,
-      transparent 80%,
-      rgb(0 0 0 / 10%) 85%,
-      rgb(0 0 0 / 30%) 100%
-    );
     --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 15%);
     --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 12%);
     --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 15%);
@@ -119,13 +113,6 @@
   @media (prefers-color-scheme: dark) {
     :root {
       --image-filter: brightness(0.8) contrast(1);
-
-      --hero-gradient: linear-gradient(
-        to top,
-        transparent 80%,
-        rgb(0 0 0 / 10%) 85%,
-        rgb(0 0 0 / 20%) 100%
-      );
 
       --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
       --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 80%);

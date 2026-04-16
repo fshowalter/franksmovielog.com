@@ -24,7 +24,11 @@ const { dropShadow = false } = Astro.props;
           size-8
           group-hover/button:text-accent
         `,
-        dropShadow && `drop-shadow-[0_2px_4px_rgba(0,0,0,0.85)]`,
+        dropShadow &&
+          `
+            drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)] transition-all duration-500
+            group-hover/button:drop-shadow-none
+          `,
       ]}
       fill="none"
       stroke="currentColor"

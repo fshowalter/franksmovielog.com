@@ -1,0 +1,122 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getPortraitImageProps } from "~/assets/portraits";
+import BaseLayout from "~/components/layout/BaseLayout.astro";
+import Mast from "~/components/layout/Mast.astro";
+import { CastAndCrewMemberTitles } from "~/features/cast-and-crew-member/CastAndCrewMemberTitles";
+import { getCastAndCrewMemberTitlesProps } from "~/features/cast-and-crew-member/getCastAndCrewMemberTitlesProps";
+
+type Props = {
+  castAndCrewMember: CollectionEntry<"castAndCrew">["data"];
+};
+
+const { castAndCrewMember } = Astro.props;
+
+const castAndCrewMemberTitlesProps =
+  await getCastAndCrewMemberTitlesProps(castAndCrewMember);
+
+const creditMap: Record<string, string> = {
+  director: "directed by",
+  performer: "with",
+  writer: "written by",
+};
+
+const creditString = new Intl.ListFormat("en", {
+  type: "disjunction",
+}).format(castAndCrewMember.creditedAs.map((credit) => creditMap[credit]));
+
+const ImageConfig = {
+  height: 800,
+  sizes:
+    "(min-width: 1700px) 800px, (min-width: 640px) calc(46.15vw + 25px), 100vw",
+  width: 800,
+};
+
+const metaDescription = `Reviews of movies ${creditString} ${castAndCrewMember.name}. Sort reviews by best or worst, newest or oldest. Filter by credit kind, year, or title.`;
+const portraitImageProps = await getPortraitImageProps(
+  castAndCrewMember.slug,
+  ImageConfig,
+);
+---
+
+<BaseLayout
+  canonical
+  meta={{ description: metaDescription }}
+  openGraph={{ description: castAndCrewMember.description, type: "website" }}
+  title={`${castAndCrewMember.name} movie reviews`}
+>
+  <Mast hasBackdrop={true} hideLogo={false} slot="mast" />
+  <header class:list={[`relative bg-footer text-white`]}>
+    <div
+      class={`
+        mx-auto flex w-full flex-wrap items-center justify-center
+        tablet:flex-nowrap
+      `}
+    >
+      <div class=`tablet:w-1/2 max-w-200 w-full aspect-square`>
+        <img
+          class:list={[`size-full object-contain object-top`]}
+          {...portraitImageProps}
+          {...ImageConfig}
+          alt=""
+          fetchpriority="high"
+          loading="eager"
+        />
+      </div>
+      <div
+        class:list={[
+          `
+            flex max-w-200 shrink-0 grow basis-1/2 flex-col items-center
+            justify-center px-container pt-8 pb-11
+            tablet:pt-20 tablet:pb-25
+          `,
+        ]}
+      >
+        {
+          (
+            <p class="tablet:mb-1">
+              <a
+                class={`
+                  relative inline-block font-sans text-sm/relaxed font-bold
+                  tracking-wide text-accent uppercase transition-all
+                  duration-500 [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
+                  after:absolute after:bottom-0 after:left-0 after:h-px
+                  after:w-full after:origin-center after:scale-x-0
+                  after:bg-accent after:transition-transform after:duration-500
+                  hover:text-accent
+                  hover:after:scale-x-100
+                `}
+                href={"/cast-and-crew/"}
+              >
+                Cast &amp; Crew
+              </a>
+            </p>
+          )
+        }
+        <h1
+          class={`
+            mt-1 text-center text-[2rem]/8 font-extrabold
+            [text-shadow:1px_1px_2px_rgba(0,0,0,.55)]
+            tablet-landscape:text-5xl
+            laptop:text-7xl/17
+          `}
+          data-pagefind-weight="10"
+        >
+          {castAndCrewMember.name}
+        </h1>
+        <p
+          class:list={[
+            `
+              mt-2 grow-0 text-center text-base font-normal text-white
+              [text-shadow:1px_1px_2px_rgba(0,0,0,.85)]
+              laptop:text-xl
+            `,
+          ]}
+          set:html={castAndCrewMember.description}
+        />
+      </div>
+    </div>
+  </header>
+  <CastAndCrewMemberTitles client:load {...castAndCrewMemberTitlesProps} />
+</BaseLayout>
