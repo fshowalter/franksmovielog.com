@@ -147,7 +147,7 @@ async function getCastAndCrewMemberOpenGraphImage({
     return cached;
   }
 
-  const still = await sharp(portraitBuffer).resize(1200).toBuffer();
+  const still = await sharp(portraitBuffer).resize(630).toBuffer();
 
   const fetchedResources = [
     {

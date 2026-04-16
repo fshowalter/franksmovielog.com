@@ -66,8 +66,8 @@ const backdropImageProps = await getBackdropImageProps(
   />
   <div
     class:list={[
-      `mx-auto w-full max-w-(--breakpoint-desktop)`,
-      centerText ? "flex items-center" : "grid grid-cols-[auto_1fr]",
+      `mx-auto flex w-full max-w-(--breakpoint-desktop)`,
+      centerText && "items-center",
     ]}
   >
     <div
