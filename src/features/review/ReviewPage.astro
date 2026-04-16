@@ -129,6 +129,7 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
       <Still
         class="mx-auto mb-[.191px]"
         decoding="sync"
+        fetchpriority="high"
         imageConfig={StillImageConfig}
         loading="eager"
         slug={review.slug}
