@@ -43,9 +43,9 @@ export function CollectionTitlesFilters({
     <>
       <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />
       <ReleaseYearFacet
-        defaultValues={filterValues.releaseYear}
         dispatch={dispatch}
         distinctYears={distinctReleaseYears}
+        selectedValues={filterValues.releaseYear}
       />
       <GenresFacet
         dispatch={dispatch}
@@ -54,11 +54,14 @@ export function CollectionTitlesFilters({
         filterValues={filterValues}
         values={values}
       />
-      <GradeFacet defaultValues={filterValues.gradeValue} dispatch={dispatch} />
+      <GradeFacet
+        dispatch={dispatch}
+        selectedValues={filterValues.gradeValue}
+      />
       <ReviewYearFacet
-        defaultValues={filterValues.reviewYear}
         dispatch={dispatch}
         distinctYears={distinctReviewYears}
+        selectedValues={filterValues.reviewYear}
       />
       <ReviewedStatusFacet
         dispatch={dispatch}

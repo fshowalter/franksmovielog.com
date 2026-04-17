@@ -6,18 +6,18 @@ import type { ViewingYearFilterChangedAction } from "./viewingYearReducer";
 import { createViewingYearFilterChangedAction } from "./viewingYearReducer";
 
 export function ViewingYearFacet({
-  defaultValues,
   dispatch,
   distinctYears,
+  selectedValues,
 }: {
-  defaultValues: readonly [string, string] | undefined;
   dispatch: React.Dispatch<ViewingYearFilterChangedAction>;
   distinctYears: readonly string[];
+  selectedValues: readonly [string, string] | undefined;
 }): React.JSX.Element {
   return (
     <AnimatedDetailsDisclosure title="Viewing Year">
       <YearField
-        defaultValues={defaultValues}
+        allValues={distinctYears}
         label="Viewing Year"
         onYearChange={(values) =>
           dispatch(
@@ -28,7 +28,7 @@ export function ViewingYearFacet({
             ),
           )
         }
-        years={distinctYears}
+        selectedValues={selectedValues}
       />
     </AnimatedDetailsDisclosure>
   );

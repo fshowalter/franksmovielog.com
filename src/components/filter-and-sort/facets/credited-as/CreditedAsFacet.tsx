@@ -36,7 +36,6 @@ export function CreditedAsFacet<
   return (
     <AnimatedDetailsDisclosure title="Credited As">
       <CheckboxListField
-        defaultValues={filterValues.creditedAs}
         label="Credited As"
         onChange={(newValues) =>
           dispatch(createCreditedAsFilterChangedAction(newValues))
@@ -46,6 +45,7 @@ export function CreditedAsFacet<
           label: capitalize(e),
           value: e,
         }))}
+        selectedValues={filterValues.creditedAs}
       />
     </AnimatedDetailsDisclosure>
   );

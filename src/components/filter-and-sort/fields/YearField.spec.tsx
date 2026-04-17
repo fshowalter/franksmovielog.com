@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 
@@ -11,10 +11,10 @@ describe("YearField", () => {
     it("renders field with label", () => {
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -25,10 +25,10 @@ describe("YearField", () => {
     it("renders from and to dropdowns", () => {
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -42,10 +42,10 @@ describe("YearField", () => {
     it("renders range slider beneath dropdowns", () => {
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -56,13 +56,13 @@ describe("YearField", () => {
       expect(toSlider).toBeInTheDocument();
     });
 
-    it("defaults to full range when no default values", () => {
+    it("defaults to full range when no selected values", () => {
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -77,13 +77,13 @@ describe("YearField", () => {
       expect(toSelect.value).toBe("2024");
     });
 
-    it("uses provided default values", () => {
+    it("uses provided selected values", () => {
       render(
         <YearField
-          defaultValues={["2021", "2023"]}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={["2021", "2023"]}
         />,
       );
 
@@ -106,10 +106,10 @@ describe("YearField", () => {
 
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={onYearChange}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -125,10 +125,10 @@ describe("YearField", () => {
 
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={onYearChange}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -144,10 +144,10 @@ describe("YearField", () => {
 
       render(
         <YearField
-          defaultValues={["2021", "2023"]}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={onYearChange}
-          years={mockYears}
+          selectedValues={["2021", "2023"]}
         />,
       );
 
@@ -163,10 +163,10 @@ describe("YearField", () => {
 
       render(
         <YearField
-          defaultValues={["2021", "2023"]}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={onYearChange}
-          years={mockYears}
+          selectedValues={["2021", "2023"]}
         />,
       );
 
@@ -183,10 +183,10 @@ describe("YearField", () => {
 
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={onYearChange}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -202,10 +202,10 @@ describe("YearField", () => {
 
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={onYearChange}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -215,39 +215,16 @@ describe("YearField", () => {
 
       expect(onYearChange).toHaveBeenCalledWith(["2020", "2022"]);
     });
-
-    it("syncs slider with dropdown changes", async () => {
-      const user = userEvent.setup();
-      const onYearChange = vi.fn();
-
-      render(
-        <YearField
-          defaultValues={undefined}
-          label="Release Year"
-          onYearChange={onYearChange}
-          years={mockYears}
-        />,
-      );
-
-      const fromSelect = screen.getByRole("combobox", { name: /from/i });
-      await user.selectOptions(fromSelect, "2022");
-
-      const fromSlider = screen.getByLabelText<HTMLInputElement>(
-        "Release Year minimum value",
-      );
-
-      expect(fromSlider.value).toBe("2022");
-    });
   });
 
   describe("Clear Functionality", () => {
     it("does not show clear button when at full range", () => {
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -261,10 +238,10 @@ describe("YearField", () => {
     it("shows clear button when range is not full", () => {
       render(
         <YearField
-          defaultValues={["2021", "2023"]}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={["2021", "2023"]}
         />,
       );
 
@@ -281,10 +258,10 @@ describe("YearField", () => {
 
       render(
         <YearField
-          defaultValues={["2021", "2023"]}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={onYearChange}
-          years={mockYears}
+          selectedValues={["2021", "2023"]}
         />,
       );
 
@@ -302,10 +279,10 @@ describe("YearField", () => {
     it("has proper ARIA labels for sliders", () => {
       render(
         <YearField
-          defaultValues={undefined}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={undefined}
         />,
       );
 
@@ -321,10 +298,10 @@ describe("YearField", () => {
     it("announces current range to screen readers", () => {
       render(
         <YearField
-          defaultValues={["2021", "2023"]}
+          allValues={mockYears}
           label="Release Year"
           onYearChange={vi.fn()}
-          years={mockYears}
+          selectedValues={["2021", "2023"]}
         />,
       );
 
@@ -333,95 +310,6 @@ describe("YearField", () => {
       expect(announcement).toBeInTheDocument();
       const liveRegion = announcement.closest('[aria-live="polite"]');
       expect(liveRegion).toBeInTheDocument();
-    });
-  });
-
-  describe("Bidirectional Sync", () => {
-    it("updates slider when dropdown changes", async () => {
-      const user = userEvent.setup();
-
-      render(
-        <YearField
-          defaultValues={undefined}
-          label="Release Year"
-          onYearChange={vi.fn()}
-          years={mockYears}
-        />,
-      );
-
-      const fromSelect = screen.getByRole("combobox", { name: /from/i });
-      const fromSlider = screen.getByLabelText<HTMLInputElement>(
-        "Release Year minimum value",
-      );
-
-      await user.selectOptions(fromSelect, "2022");
-
-      expect(fromSlider.value).toBe("2022");
-    });
-
-    it("resets internal state when defaultValues changes to undefined", async () => {
-      const { rerender } = render(
-        <YearField
-          defaultValues={["2021", "2023"]}
-          label="Release Year"
-          onYearChange={vi.fn()}
-          years={mockYears}
-        />,
-      );
-
-      // Verify initial state
-      expect(
-        screen.getByRole<HTMLSelectElement>("combobox", { name: /from/i })
-          .value,
-      ).toBe("2021");
-      expect(
-        screen.getByRole<HTMLSelectElement>("combobox", { name: /to/i }).value,
-      ).toBe("2023");
-      expect(
-        screen.getByLabelText<HTMLInputElement>("Release Year minimum value")
-          .value,
-      ).toBe("2021");
-      expect(
-        screen.getByLabelText<HTMLInputElement>("Release Year maximum value")
-          .value,
-      ).toBe("2023");
-
-      // Simulate clearing filter via applied filters section
-      rerender(
-        <YearField
-          defaultValues={undefined}
-          label="Release Year"
-          onYearChange={vi.fn()}
-          years={mockYears}
-        />,
-      );
-
-      // Wait for useEffect to run and state to update - query fresh elements after rerender
-      await waitFor(() => {
-        expect(
-          screen.getByRole<HTMLSelectElement>("combobox", { name: /from/i })
-            .value,
-        ).toBe("2020");
-      });
-
-      // Verify full state resets to full range - query fresh elements
-      expect(
-        screen.getByRole<HTMLSelectElement>("combobox", { name: /to/i }).value,
-      ).toBe("2024");
-      expect(
-        screen.getByLabelText<HTMLInputElement>("Release Year minimum value")
-          .value,
-      ).toBe("2020");
-      expect(
-        screen.getByLabelText<HTMLInputElement>("Release Year maximum value")
-          .value,
-      ).toBe("2024");
-
-      // Clear button should not be visible at full range
-      const clearButton = screen.queryByRole("button", {
-        name: /reset release year to full range/i,
-      });
-      expect(clearButton).not.toBeInTheDocument();
     });
   });
 });

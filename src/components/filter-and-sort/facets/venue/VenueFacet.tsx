@@ -27,7 +27,6 @@ export function VenueFacet<
   return (
     <AnimatedDetailsDisclosure title="Venue">
       <CheckboxListField
-        defaultValues={filterValues.venue}
         label="Venue"
         onChange={(values) => dispatch(createVenueFilterChangedAction(values))}
         options={distinctVenues.map((e) => ({
@@ -35,6 +34,7 @@ export function VenueFacet<
           label: e,
           value: e,
         }))}
+        selectedValues={filterValues.venue}
       />
     </AnimatedDetailsDisclosure>
   );

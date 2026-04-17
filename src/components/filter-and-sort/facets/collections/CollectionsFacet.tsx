@@ -31,7 +31,6 @@ export function CollectionsFacet<
   return (
     <AnimatedDetailsDisclosure title="Collections">
       <CheckboxListField
-        defaultValues={filterValues.collections}
         label="Collections"
         onChange={(values) =>
           dispatch(createCollectionsFilterChangedAction(values))
@@ -41,6 +40,7 @@ export function CollectionsFacet<
           label: e,
           value: e,
         }))}
+        selectedValues={filterValues.collections}
       />
     </AnimatedDetailsDisclosure>
   );

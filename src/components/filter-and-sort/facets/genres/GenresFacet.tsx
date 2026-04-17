@@ -27,7 +27,6 @@ export function GenresFacet<
   return (
     <AnimatedDetailsDisclosure title="Genres">
       <CheckboxListField
-        defaultValues={filterValues.genres}
         label="Genres"
         onChange={(newValues) =>
           dispatch(createGenresFilterChangedAction(newValues))
@@ -37,6 +36,7 @@ export function GenresFacet<
           label: e,
           value: e,
         }))}
+        selectedValues={filterValues.genres}
       />
     </AnimatedDetailsDisclosure>
   );

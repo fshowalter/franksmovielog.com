@@ -43,9 +43,9 @@ export function ViewingsFilters({
     <>
       <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />
       <ReleaseYearFacet
-        defaultValues={filterValues.releaseYear}
         dispatch={dispatch}
         distinctYears={distinctReleaseYears}
+        selectedValues={filterValues.releaseYear}
       />
       <ReviewedStatusFacet
         dispatch={dispatch}
@@ -54,9 +54,9 @@ export function ViewingsFilters({
         values={values}
       />
       <ViewingYearFacet
-        defaultValues={filterValues.viewingYear}
         dispatch={dispatch}
         distinctYears={distinctViewingYears}
+        selectedValues={filterValues.viewingYear}
       />
       <MediumFacet
         dispatch={dispatch}
