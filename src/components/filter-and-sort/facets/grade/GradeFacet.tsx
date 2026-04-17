@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import type { GradeValue } from "~/utils/grades";
 
 import { AnimatedDetailsDisclosure } from "~/components/animated-details-disclosure/AnimatedDetailsDisclosure";
@@ -27,56 +25,41 @@ const gradeOptions = Object.entries(GRADE_VALUE_TO_LETTER).map(
 const gradeOptionsReversed = [...gradeOptions].reverse();
 
 export function GradeFacet({
-  defaultValues,
   dispatch,
+  selectedValues,
 }: {
-  defaultValues: [GradeValue, GradeValue] | undefined;
   dispatch: React.Dispatch<GradeFilterChangedAction>;
+  selectedValues: [GradeValue, GradeValue] | undefined;
 }): React.JSX.Element {
-  const [minValue, setMinValue] = useState(defaultMinValue(defaultValues));
-  const [maxValue, setMaxValue] = useState(defaultMaxValue(defaultValues));
-
-  const onGradeChange = (values: [GradeValue, GradeValue]): void =>
-    dispatch(createGradeFilterChangedAction(values));
-
-  // Sync internal state when defaultValues changes (e.g., when cleared via applied filters)
-  useEffect(() => {
-    setMinValue(defaultMinValue(defaultValues));
-    setMaxValue(defaultMaxValue(defaultValues));
-  }, [defaultValues]);
+  const onGradeChange = (newValues: [GradeValue, GradeValue]): void =>
+    dispatch(createGradeFilterChangedAction(newValues));
 
   const handleMinChange = (value: string): void => {
     const newMin = Number.parseInt(value, 10) as GradeValue;
-    setMinValue(newMin);
 
-    if (newMin <= maxValue) {
-      onGradeChange([newMin, maxValue]);
+    if (newMin <= maxValue(selectedValues)) {
+      onGradeChange([newMin, maxValue(selectedValues)]);
     } else {
-      onGradeChange([maxValue, newMin]);
+      onGradeChange([maxValue(selectedValues), newMin]);
     }
   };
 
   const handleMaxChange = (value: string): void => {
     const newMax = Number.parseInt(value, 10) as GradeValue;
-    setMaxValue(newMax);
 
-    if (minValue <= newMax) {
-      onGradeChange([minValue, newMax]);
+    if (minValue(selectedValues) <= newMax) {
+      onGradeChange([minValue(selectedValues), newMax]);
     } else {
-      onGradeChange([newMax, minValue]);
+      onGradeChange([newMax, minValue(selectedValues)]);
     }
   };
 
   // Handle slider changes - updates dropdowns bidirectionally
   const handleSliderChange = (from: GradeValue, to: GradeValue): void => {
-    setMinValue(from);
-    setMaxValue(to);
     onGradeChange([from, to]);
   };
 
   const handleClear = (): void => {
-    setMinValue(GRADE_MIN);
-    setMaxValue(GRADE_MAX);
     onGradeChange([GRADE_MIN, GRADE_MAX]);
   };
 
@@ -90,7 +73,7 @@ export function GradeFacet({
                 From
               </span>
               <SelectInput
-                defaultValue={minValue}
+                defaultValue={minValue(selectedValues)}
                 onChange={(e) => handleMinChange(e.target.value)}
               >
                 {[...gradeOptionsReversed]}
@@ -101,7 +84,7 @@ export function GradeFacet({
                 to
               </span>
               <SelectInput
-                defaultValue={maxValue}
+                defaultValue={maxValue(selectedValues)}
                 onChange={(e) => handleMaxChange(e.target.value)}
               >
                 {[...gradeOptions]}
@@ -113,27 +96,23 @@ export function GradeFacet({
         {/* Range slider beneath dropdowns - syncs bidirectionally */}
         <RangeSliderField
           formatValue={gradeValueToLetter}
-          fromValue={minValue}
+          fromValue={minValue(selectedValues)}
           label={"Grade"}
           max={GRADE_MAX}
           min={GRADE_MIN}
           onChange={handleSliderChange}
           onClear={handleClear}
-          toValue={maxValue}
+          toValue={maxValue(selectedValues)}
         />
       </div>
     </AnimatedDetailsDisclosure>
   );
 }
 
-function defaultMaxValue(
-  selectedValues?: [GradeValue, GradeValue],
-): GradeValue {
+function maxValue(selectedValues?: [GradeValue, GradeValue]): GradeValue {
   return selectedValues ? selectedValues[1] : GRADE_MAX;
 }
 
-function defaultMinValue(
-  selectedValues?: [GradeValue, GradeValue],
-): GradeValue {
+function minValue(selectedValues?: [GradeValue, GradeValue]): GradeValue {
   return selectedValues ? selectedValues[0] : GRADE_MIN;
 }

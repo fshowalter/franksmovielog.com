@@ -27,7 +27,6 @@ export function MediumFacet<
   return (
     <AnimatedDetailsDisclosure title="Medium">
       <CheckboxListField
-        defaultValues={filterValues.medium}
         label="Medium"
         onChange={(values) => dispatch(createMediumFilterChangedAction(values))}
         options={distinctMedia.map((e) => ({
@@ -35,6 +34,7 @@ export function MediumFacet<
           label: e,
           value: e,
         }))}
+        selectedValues={filterValues.medium}
       />
     </AnimatedDetailsDisclosure>
   );

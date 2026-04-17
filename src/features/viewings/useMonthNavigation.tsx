@@ -8,11 +8,13 @@ import type { ViewingsValue } from "./Viewings";
  * @param selectedMonthDate - Currently selected month date
  * @returns Tuple of [previousMonthDate, currentMonthDate, nextMonthDate]
  */
-export function useMonthNavigation(
+export function useMonthNavigation( // eslint-disable-line @eslint-react/no-unnecessary-use-prefix
   filteredValues: ViewingsValue[],
   sort: ViewingsSort,
   selectedMonthDate?: string,
 ): [string | undefined, string | undefined, string | undefined] {
+  "use memo";
+
   let nextMonthDate;
   let previousMonthDate;
   let currentMonthValue;

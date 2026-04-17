@@ -6,18 +6,18 @@ import type { ReleaseYearFilterChangedAction } from "./releaseYearReducer";
 import { createReleaseYearFilterChangedAction } from "./releaseYearReducer";
 
 export function ReleaseYearFacet({
-  defaultValues,
   dispatch,
   distinctYears,
+  selectedValues,
 }: {
-  defaultValues: readonly [string, string] | undefined;
   dispatch: React.Dispatch<ReleaseYearFilterChangedAction>;
   distinctYears: readonly string[];
+  selectedValues: readonly [string, string] | undefined;
 }): React.JSX.Element {
   return (
     <AnimatedDetailsDisclosure title="Release Year">
       <YearField
-        defaultValues={defaultValues}
+        allValues={distinctYears}
         label="Release Year"
         onYearChange={(values) =>
           dispatch(
@@ -28,7 +28,7 @@ export function ReleaseYearFacet({
             ),
           )
         }
-        years={distinctYears}
+        selectedValues={selectedValues}
       />
     </AnimatedDetailsDisclosure>
   );

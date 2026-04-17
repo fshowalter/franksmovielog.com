@@ -27,7 +27,6 @@ export function WritersFacet<
   return (
     <AnimatedDetailsDisclosure title="Writers">
       <CheckboxListField
-        defaultValues={filterValues.writers}
         label="Writers"
         onChange={(values) =>
           dispatch(createWritersFilterChangedAction(values))
@@ -37,6 +36,7 @@ export function WritersFacet<
           label: e,
           value: e,
         }))}
+        selectedValues={filterValues.writers}
       />
     </AnimatedDetailsDisclosure>
   );

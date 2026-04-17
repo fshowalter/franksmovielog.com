@@ -11,10 +11,10 @@ type CheckboxListFieldOption = {
 };
 
 type CheckboxListFieldProps = {
-  defaultValues?: readonly string[];
   label: string;
   onChange: (values: string[]) => void;
   options: readonly CheckboxListFieldOption[];
+  selectedValues?: readonly string[];
   showMoreThreshold?: number;
 };
 
@@ -22,7 +22,7 @@ type CheckboxListFieldProps = {
  * Checkbox list field for multi-selection with show more/less and clear functionality.
  * Selected items automatically move to top of list.
  * @param props - Component props
- * @param props.defaultValues - Default selected values
+ * @param props.selectedValues - Selected values
  * @param props.label - Field label text (visually hidden but accessible)
  * @param props.onChange - Handler for selection changes
  * @param props.onClear - Handler for clear action
@@ -31,15 +31,12 @@ type CheckboxListFieldProps = {
  * @returns Checkbox list field with show more and clear functionality
  */
 export function CheckboxListField({
-  defaultValues,
   label,
   onChange,
   options,
+  selectedValues = [],
   showMoreThreshold = 3,
 }: CheckboxListFieldProps): React.JSX.Element {
-  const [selectedValues, setSelectedValues] = useState<string[]>(
-    defaultValues ? [...defaultValues] : [],
-  );
   const [showAll, setShowAll] = useState(false);
 
   // Determine if we need show more functionality
@@ -85,12 +82,10 @@ export function CheckboxListField({
       ? [...selectedValues, value]
       : selectedValues.filter((v) => v !== value);
 
-    setSelectedValues(newValues);
     onChange(newValues);
   };
 
   const handleClear = (): void => {
-    setSelectedValues([]);
     onChange([]);
   };
 
@@ -109,20 +104,13 @@ export function CheckboxListField({
     }
   };
 
-  // AIDEV-NOTE: Sync selectedValues when defaultValues changes from parent
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- Intentionally syncing controlled state from props
-    setSelectedValues(defaultValues ? [...defaultValues] : []);
-  }, [defaultValues]);
-
-  // AIDEV-NOTE: Listen for form reset events and clear selections when form is reset
+  // Listen for form reset events and clear selections when form is reset
   useEffect(() => {
     // Find the parent form element
     const form = document.querySelector("form");
     if (!form) return;
 
     const handleFormReset = (): void => {
-      setSelectedValues(defaultValues ? [...defaultValues] : []);
       setShowAll(false);
     };
 
@@ -131,7 +119,7 @@ export function CheckboxListField({
     return (): void => {
       form.removeEventListener("reset", handleFormReset);
     };
-  }, [defaultValues]);
+  }, []);
 
   const fieldsetId = `checkbox-list-${label.toLowerCase().replaceAll(/\s+/g, "-")}`;
   const hasSelections = selectedValues.length > 0;

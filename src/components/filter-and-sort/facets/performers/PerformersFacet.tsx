@@ -31,7 +31,6 @@ export function PerformersFacet<
   return (
     <AnimatedDetailsDisclosure title="Performers">
       <CheckboxListField
-        defaultValues={filterValues.performers}
         label="Performers"
         onChange={(values) =>
           dispatch(createPerformersFilterChangedAction(values))
@@ -41,6 +40,7 @@ export function PerformersFacet<
           label: e,
           value: e,
         }))}
+        selectedValues={filterValues.performers}
       />
     </AnimatedDetailsDisclosure>
   );

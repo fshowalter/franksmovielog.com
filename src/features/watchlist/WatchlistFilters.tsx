@@ -53,9 +53,9 @@ export function WatchlistFilters({
     <>
       <TitleFacet defaultValue={filterValues.title} dispatch={dispatch} />
       <ReleaseYearFacet
-        defaultValues={filterValues.releaseYear}
         dispatch={dispatch}
         distinctYears={distinctReleaseYears}
+        selectedValues={filterValues.releaseYear}
       />
       <GenresFacet
         dispatch={dispatch}

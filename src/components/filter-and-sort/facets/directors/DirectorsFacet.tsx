@@ -31,7 +31,6 @@ export function DirectorsFacet<
   return (
     <AnimatedDetailsDisclosure title="Directors">
       <CheckboxListField
-        defaultValues={filterValues.directors}
         label="Directors"
         onChange={(newValues) =>
           dispatch(createDirectorsFilterChangedAction(newValues))
@@ -41,6 +40,7 @@ export function DirectorsFacet<
           label: e,
           value: e,
         }))}
+        selectedValues={filterValues.directors}
       />
     </AnimatedDetailsDisclosure>
   );
