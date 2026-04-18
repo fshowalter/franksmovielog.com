@@ -166,9 +166,9 @@ export function FilterAndSortContainer<T extends string, V>({
       <div className={`group/list-with-filters mx-auto bg-subtle`}>
         <div
           className={`
-            sticky top-0 z-above scroll-mt-0 border-b border-default bg-default
-            text-xs
-            tablet:col-span-full
+            sticky top-0 z-[calc(var(--z-index-above)+2)] h-22 scroll-mt-0
+            border-b border-default bg-default text-xs
+            tablet:col-span-full tablet:h-24
           `}
         >
           <FilterAndSortToolbar
@@ -193,10 +193,10 @@ export function FilterAndSortContainer<T extends string, V>({
             className={`
               mx-auto max-w-(--breakpoint-desktop) grow
               scroll-mt-(--filter-and-sort-container-scroll-offset,0px) pb-10
-              [--filter-and-sort-container-scroll-offset:89px]
+              [--filter-and-sort-container-scroll-offset:88px]
               tablet:px-container
               ${sideNav ? `max-w-[calc(var(--breakpoint-desktop)-80px)]` : ``}
-              tablet:[--filter-and-sort-container-scroll-offset:97px]
+              tablet:[--filter-and-sort-container-scroll-offset:96px]
             `}
             id="list"
             ref={listRef}

@@ -26,7 +26,7 @@ export function CalendarMonth({
   return (
     <div
       className={`
-        scroll-mt-(--calendar-scroll-offset)
+        scroll-mt-(--calendar-scroll-offset) px-px
         [--calendar-scroll-offset:calc(var(--filter-and-sort-container-scroll-offset)+93px)]
         tablet:mt-8
         tablet-landscape:mt-16
@@ -34,15 +34,10 @@ export function CalendarMonth({
       data-testid="calendar"
       id="calendar"
     >
-      <table
-        className={`
-          w-full border-default
-          tablet-landscape:border-collapse tablet-landscape:border
-        `}
-      >
+      <table className={`w-full border-default`}>
         <thead
           className={`
-            hidden transform-gpu bg-calendar
+            hidden bg-calendar
             tablet-landscape:sticky
             tablet-landscape:top-(--calendar-scroll-offset)
             tablet-landscape:z-above tablet-landscape:table-header-group
@@ -76,8 +71,8 @@ function WeekdayHeader({ value }: { value: string }): React.JSX.Element {
   return (
     <th
       className={`
-        border-separate border border-default px-2 py-3 text-center font-sans
-        text-sm font-normal tracking-wide text-subtle uppercase
+        bg-calendar px-2 py-3 text-center font-sans text-sm font-normal
+        tracking-wide text-subtle uppercase shadow-all
       `}
     >
       {value}
