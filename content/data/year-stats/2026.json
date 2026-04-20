@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 24,
-  "viewingCount": 50,
-  "titleCount": 50,
+  "viewingCount": 51,
+  "titleCount": 51,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -18,7 +18,7 @@
     },
     {
       "name": "DVD",
-      "count": 3
+      "count": 4
     },
     {
       "name": "iTunes",
@@ -49,7 +49,7 @@
     },
     {
       "name": "1960s",
-      "count": 8
+      "count": 9
     },
     {
       "name": "1970s",
@@ -170,6 +170,45 @@
       ]
     },
     {
+      "name": "Frank Sinatra",
+      "count": 4,
+      "slug": "frank-sinatra",
+      "viewings": [
+        {
+          "title": "Step Lively",
+          "releaseYear": "1944",
+          "reviewSlug": "step-lively-1944",
+          "date": "2026-02-14",
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "title": "4 for Texas",
+          "releaseYear": "1963",
+          "reviewSlug": "4-for-texas-1963",
+          "date": "2026-02-16",
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "title": "The Kissing Bandit",
+          "releaseYear": "1948",
+          "reviewSlug": "the-kissing-bandit-1948",
+          "date": "2026-02-18",
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "title": "Marriage on the Rocks",
+          "releaseYear": "1965",
+          "reviewSlug": "marriage-on-the-rocks-1965",
+          "date": "2026-04-19",
+          "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Wei-Ho Tu",
       "count": 3,
       "slug": null,
@@ -196,37 +235,6 @@
           "reviewSlug": "men-from-the-gutter-1983",
           "date": "2026-02-12",
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Frank Sinatra",
-      "count": 3,
-      "slug": "frank-sinatra",
-      "viewings": [
-        {
-          "title": "Step Lively",
-          "releaseYear": "1944",
-          "reviewSlug": "step-lively-1944",
-          "date": "2026-02-14",
-          "medium": "Watch TCM",
-          "venue": null
-        },
-        {
-          "title": "4 for Texas",
-          "releaseYear": "1963",
-          "reviewSlug": "4-for-texas-1963",
-          "date": "2026-02-16",
-          "medium": "Watch TCM",
-          "venue": null
-        },
-        {
-          "title": "The Kissing Bandit",
-          "releaseYear": "1948",
-          "reviewSlug": "the-kissing-bandit-1948",
-          "date": "2026-02-18",
-          "medium": "Watch TCM",
           "venue": null
         }
       ]
@@ -347,6 +355,29 @@
       ]
     },
     {
+      "name": "Kathleen Freeman",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Mail Order Bride",
+          "releaseYear": "1964",
+          "reviewSlug": "mail-order-bride-1964",
+          "date": "2026-01-20",
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "title": "Marriage on the Rocks",
+          "releaseYear": "1965",
+          "reviewSlug": "marriage-on-the-rocks-1965",
+          "date": "2026-04-19",
+          "medium": "DVD",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Julian Sands",
       "count": 2,
       "slug": null,
@@ -364,29 +395,6 @@
           "releaseYear": "1998",
           "reviewSlug": "the-phantom-of-the-opera-1998",
           "date": "2026-01-25",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Lung Ti",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Jade Tiger",
-          "releaseYear": "1977",
-          "reviewSlug": "jade-tiger-1977",
-          "date": "2026-01-27",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Mercenaries from Hong Kong",
-          "releaseYear": "1982",
-          "reviewSlug": "mercenaries-from-hong-kong-1982",
-          "date": "2026-02-01",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -464,5 +472,5 @@
       ]
     }
   ],
-  "reviewCount": 42
+  "reviewCount": 43
 }
