@@ -37,7 +37,7 @@ export function FilterAndSortToolbar<T extends string>({
     <div
       className={`
         mx-auto grid max-w-(--breakpoint-desktop) grid-cols-[auto_auto_1fr_auto]
-        items-baseline gap-y-5 px-container py-7 font-sans font-medium
+        items-center gap-y-5 px-container py-7 font-sans font-medium
         tracking-wide text-subtle uppercase
         tablet:grid-cols-[auto_auto_1fr_auto_auto] tablet:gap-x-4 tablet:gap-y-7
         tablet-landscape:grid-cols-[auto_auto_1fr_minmax(302px,calc(33%-192px))_auto]
@@ -104,7 +104,36 @@ export function FilterAndSortToolbar<T extends string>({
         ref={toggleButtonRef}
         type="button"
       >
-        <span className="tablet:hidden">Filter & Sort</span>
+        <span
+          className="
+            text-default
+            min-[375px]:hidden
+          "
+        >
+          <svg
+            className="size-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <span
+          className="
+            hidden
+            min-[375px]:inline
+            tablet:hidden
+          "
+        >
+          Filter & Sort
+        </span>
         <span
           className="
             hidden
