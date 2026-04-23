@@ -55,7 +55,7 @@ export function collectionsFacetReducer<
         ...state,
         pendingFilterValues: {
           ...state.pendingFilterValues,
-          [STATE_KEY]: updated as readonly string[],
+          [STATE_KEY]: updated,
         },
       };
     }
