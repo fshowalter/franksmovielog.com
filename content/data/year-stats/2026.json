@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 25,
-  "viewingCount": 52,
-  "titleCount": 52,
+  "newTitleCount": 26,
+  "viewingCount": 53,
+  "titleCount": 53,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -26,7 +26,7 @@
     },
     {
       "name": "Criterion Channel",
-      "count": 2
+      "count": 3
     },
     {
       "name": "HBO Max",
@@ -41,7 +41,7 @@
     },
     {
       "name": "1940s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "1950s",
@@ -116,6 +116,29 @@
           "reviewSlug": "a-history-of-violence-2005",
           "date": "2026-02-05",
           "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Howard Hawks",
+      "count": 2,
+      "slug": "howard-hawks",
+      "viewings": [
+        {
+          "title": "Barbary Coast",
+          "releaseYear": "1935",
+          "reviewSlug": "barbary-coast-1935",
+          "date": "2026-04-20",
+          "medium": "Criterion Channel",
+          "venue": null
+        },
+        {
+          "title": "Ball of Fire",
+          "releaseYear": "1941",
+          "reviewSlug": "ball-of-fire-1941",
+          "date": "2026-04-21",
+          "medium": "Criterion Channel",
           "venue": null
         }
       ]
@@ -472,5 +495,5 @@
       ]
     }
   ],
-  "reviewCount": 44
+  "reviewCount": 45
 }
