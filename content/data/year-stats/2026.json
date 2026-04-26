@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 26,
-  "viewingCount": 53,
-  "titleCount": 53,
+  "newTitleCount": 27,
+  "viewingCount": 54,
+  "titleCount": 54,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 15
+      "count": 16
     },
     {
       "name": "Watch TCM",
@@ -61,7 +61,7 @@
     },
     {
       "name": "1990s",
-      "count": 7
+      "count": 8
     },
     {
       "name": "2000s",
@@ -263,6 +263,37 @@
       ]
     },
     {
+      "name": "Hsiang Lin Yin",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Mercenaries from Hong Kong",
+          "releaseYear": "1982",
+          "reviewSlug": "mercenaries-from-hong-kong-1982",
+          "date": "2026-02-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hard Boiled",
+          "releaseYear": "1992",
+          "reviewSlug": "hard-boiled-1992",
+          "date": "2026-04-23",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Allen Garfield",
       "count": 2,
       "slug": null,
@@ -399,29 +430,6 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Julian Sands",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Naked Lunch",
-          "releaseYear": "1991",
-          "reviewSlug": "naked-lunch-1991",
-          "date": "2026-01-24",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "The Phantom of the Opera",
-          "releaseYear": "1998",
-          "reviewSlug": "the-phantom-of-the-opera-1998",
-          "date": "2026-01-25",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedWriters": [
@@ -495,5 +503,5 @@
       ]
     }
   ],
-  "reviewCount": 45
+  "reviewCount": 46
 }
