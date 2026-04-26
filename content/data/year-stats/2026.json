@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 27,
-  "viewingCount": 54,
-  "titleCount": 54,
+  "newTitleCount": 28,
+  "viewingCount": 55,
+  "titleCount": 55,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 20
+      "count": 21
     },
     {
       "name": "4k UHD Blu-ray",
@@ -61,7 +61,7 @@
     },
     {
       "name": "1990s",
-      "count": 8
+      "count": 9
     },
     {
       "name": "2000s",
@@ -116,6 +116,29 @@
           "reviewSlug": "a-history-of-violence-2005",
           "date": "2026-02-05",
           "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Ngai Choi Lam",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Cat",
+          "releaseYear": "1991",
+          "reviewSlug": "the-cat-1991",
+          "date": "2026-04-23",
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -193,6 +216,45 @@
       ]
     },
     {
+      "name": "Hsiang Lin Yin",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Mercenaries from Hong Kong",
+          "releaseYear": "1982",
+          "reviewSlug": "mercenaries-from-hong-kong-1982",
+          "date": "2026-02-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hard Boiled",
+          "releaseYear": "1992",
+          "reviewSlug": "hard-boiled-1992",
+          "date": "2026-04-23",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Cat",
+          "releaseYear": "1991",
+          "reviewSlug": "the-cat-1991",
+          "date": "2026-04-23",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Frank Sinatra",
       "count": 4,
       "slug": "frank-sinatra",
@@ -258,37 +320,6 @@
           "reviewSlug": "men-from-the-gutter-1983",
           "date": "2026-02-12",
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Hsiang Lin Yin",
-      "count": 3,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Mercenaries from Hong Kong",
-          "releaseYear": "1982",
-          "reviewSlug": "mercenaries-from-hong-kong-1982",
-          "date": "2026-02-01",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Men from the Gutter",
-          "releaseYear": "1983",
-          "reviewSlug": "men-from-the-gutter-1983",
-          "date": "2026-02-12",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Hard Boiled",
-          "releaseYear": "1992",
-          "reviewSlug": "hard-boiled-1992",
-          "date": "2026-04-23",
-          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -501,7 +532,30 @@
           "venue": null
         }
       ]
+    },
+    {
+      "name": "Gordon Chan",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Hard Boiled",
+          "releaseYear": "1992",
+          "reviewSlug": "hard-boiled-1992",
+          "date": "2026-04-23",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Cat",
+          "releaseYear": "1991",
+          "reviewSlug": "the-cat-1991",
+          "date": "2026-04-23",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
     }
   ],
-  "reviewCount": 46
+  "reviewCount": 47
 }
