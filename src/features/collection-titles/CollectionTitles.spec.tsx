@@ -29,11 +29,9 @@ const createCollectionTitles = (
       grade: "B",
       gradeValue: 7,
       imdbId: `tt${String(index).padStart(7, "0")}`,
-      posterImageProps: {
-        height: 372,
+      posterSrcProps: {
         src: "/poster.jpg",
         srcSet: "/poster.jpg 1x",
-        width: 248,
       },
       releaseSequence: index,
       releaseYear: "1962",
@@ -60,8 +58,11 @@ const baseProps: CollectionTitlesProps = {
     "1973",
     "1974",
   ],
+
   distinctReviewYears: ["2022", "2023", "2024"],
   initialSort: "release-date-desc",
+  posterHeight: 372,
+  posterWidth: 248,
   values: [],
 };
 

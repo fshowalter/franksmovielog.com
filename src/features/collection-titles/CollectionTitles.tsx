@@ -1,6 +1,5 @@
 import { useReducer } from "react";
 
-import type { PosterImageProps } from "~/assets/posters";
 import type { GradeText, GradeValue } from "~/utils/grades";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
@@ -26,6 +25,8 @@ export type CollectionTitlesProps = {
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: CollectionTitlesSort;
+  posterHeight: number;
+  posterWidth: number;
   values: CollectionTitlesValue[];
 };
 
@@ -34,35 +35,30 @@ export type CollectionTitlesProps = {
  */
 export type CollectionTitlesValue = {
   genres: string[];
-  grade: GradeText | undefined;
-  gradeValue: GradeValue | undefined;
+  grade?: GradeText;
+  gradeValue?: GradeValue;
   imdbId: string;
-  posterImageProps: PosterImageProps;
+  posterSrcProps: {
+    src: string;
+    srcSet: string;
+  };
   releaseSequence: number;
   releaseYear: string;
-  reviewDisplayDate: string | undefined;
-  reviewSequence: string | undefined;
-  reviewSlug: string | undefined;
-  reviewYear: string | undefined;
+  reviewDisplayDate?: string;
+  reviewSequence?: string;
+  reviewSlug?: string;
+  reviewYear?: string;
   sortTitle: string;
   title: string;
 };
 
-/**
- * CollectionTitles component for displaying titles in a collection.
- * @param props - Component props
- * @param props.distinctGenres - Available genres for filtering
- * @param props.distinctReleaseYears - Available release years for filtering
- * @param props.distinctReviewYears - Available review years for filtering
- * @param props.initialSort - Initial sort configuration
- * @param props.values - Title values to display
- * @returns CollectionTitles component with filtering and sorting capabilities
- */
 export function CollectionTitles({
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
+  posterHeight,
+  posterWidth,
   values,
 }: CollectionTitlesProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
@@ -122,7 +118,12 @@ export function CollectionTitles({
         <PosterList>
           {[...paginatedValues].map((value) => {
             return (
-              <CollectionTitlesListItem key={value.imdbId} value={value} />
+              <CollectionTitlesListItem
+                key={value.imdbId}
+                posterHeight={posterHeight}
+                posterWidth={posterWidth}
+                value={value}
+              />
             );
           })}
         </PosterList>
