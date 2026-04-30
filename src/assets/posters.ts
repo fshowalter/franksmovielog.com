@@ -1,6 +1,6 @@
 import { getImage } from "astro:assets";
 
-const PosterImageConfig = {
+export const PosterImageConfig = {
   format: "avif",
   height: 372,
   quality: 80,

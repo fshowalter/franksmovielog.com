@@ -28,11 +28,9 @@ function createViewingValue(
   return {
     date,
     medium: "Blu-ray",
-    posterImageProps: {
-      height: 372,
+    posterSrcProps: {
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
-      width: 248,
     },
     releaseYear: "1970",
     reviewSlug: `test-movie-${testIdCounter}`,
@@ -82,6 +80,8 @@ const createProps = (
     "2024",
   ],
   initialSort: "viewing-date-desc" as const,
+  posterHeight: 372,
+  posterWidth: 248,
   values: [],
   ...overrides,
 });

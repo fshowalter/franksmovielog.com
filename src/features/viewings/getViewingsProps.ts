@@ -1,6 +1,9 @@
 import type { CollectionEntry } from "astro:content";
 
-import { getFluidWidthPosterImageProps } from "~/assets/posters";
+import {
+  getFluidWidthPosterImageProps,
+  PosterImageConfig,
+} from "~/assets/posters";
 import { toSortDate } from "~/utils/toSortDate";
 import { toSortYear } from "~/utils/toSortYear";
 
@@ -31,10 +34,16 @@ export async function getViewingLogProps(
       }
       distinctViewingYears.add(toSortYear(entry.date));
       distinctReleaseYears.add(entry.releaseYear);
+      const posterImageProps = await getFluidWidthPosterImageProps(
+        entry.reviewSlug,
+      );
 
       const value: ViewingsValue = {
         date: toSortDate(entry.date),
-        posterImageProps: await getFluidWidthPosterImageProps(entry.reviewSlug),
+        posterSrcProps: {
+          src: posterImageProps.src,
+          srcSet: posterImageProps.srcSet,
+        },
         releaseYear: entry.releaseYear,
         sequence: entry.sequence,
         sortTitle: entry.sortTitle,
@@ -55,6 +64,8 @@ export async function getViewingLogProps(
     distinctVenues: [...distinctVenues].toSorted(),
     distinctViewingYears: [...distinctViewingYears].toSorted(),
     initialSort: "viewing-date-desc",
+    posterHeight: PosterImageConfig.height,
+    posterWidth: PosterImageConfig.width,
     values: sortViewings(values, "viewing-date-desc"),
   };
 }
