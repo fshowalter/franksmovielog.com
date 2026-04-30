@@ -8,12 +8,22 @@ import { PosterListItem } from "~/components/poster-list/PosterListItem";
 import type { ReviewsValue } from "./Reviews";
 
 export function ReviewsListItem({
+  posterHeight,
+  posterWidth,
   value,
 }: {
+  posterHeight: number;
+  posterWidth: number;
   value: ReviewsValue;
 }): React.JSX.Element {
   return (
-    <PosterListItem posterImageProps={value.posterImageProps}>
+    <PosterListItem
+      posterImageProps={{
+        height: posterHeight,
+        width: posterWidth,
+        ...value.posterSrcProps,
+      }}
+    >
       <ListItemDetails>
         <ListItemTitle
           reviewSlug={value.slug}

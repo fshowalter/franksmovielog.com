@@ -1,6 +1,9 @@
 import type { CollectionEntry } from "astro:content";
 
-import { getFluidWidthPosterImageProps } from "~/assets/posters";
+import {
+  getFluidWidthPosterImageProps,
+  PosterImageConfig,
+} from "~/assets/posters";
 import { gradeToValue } from "~/utils/grades";
 import { toDisplayDate } from "~/utils/toDisplayDate";
 import { toSortYear } from "~/utils/toSortYear";
@@ -22,6 +25,8 @@ export async function getReviewsProps(
     distinctReleaseYears,
     distinctReviewYears,
     initialSort: "title-asc",
+    posterHeight: PosterImageConfig.height,
+    posterWidth: PosterImageConfig.width,
     values,
   };
 }
@@ -48,12 +53,16 @@ async function buildReviewValues(
       distinctReleaseYears.add(title.releaseYear);
       distinctReviewYears.add(toSortYear(title.reviewDate));
 
+      const { src, srcSet } = await getFluidWidthPosterImageProps(
+        title.review.id,
+      );
+
       const value: ReviewsValue = {
         genres: title.genres,
         grade: title.grade,
         gradeValue: gradeToValue(title.grade),
         imdbId: title.imdbId,
-        posterImageProps: await getFluidWidthPosterImageProps(title.review.id),
+        posterSrcProps: { src, srcSet },
         releaseSequence: index,
         releaseYear: title.releaseYear,
         reviewDisplayDate: toDisplayDate(title.reviewDate),
