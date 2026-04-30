@@ -1,4 +1,4 @@
-export type FilterableValue = { medium: string | undefined };
+export type FilterableValue = { medium?: string };
 type Filters = { medium?: readonly string[] };
 
 export function createMediumCountMap<
