@@ -34,14 +34,14 @@ export type ViewingsProps = {
  */
 export type ViewingsValue = {
   date: string; // Full date string YYYY-MM-DD
-  medium: string | undefined;
+  medium?: string;
   posterImageProps: PosterImageProps;
   releaseYear: string;
-  reviewSlug: string | undefined;
+  reviewSlug?: string;
   sequence: string;
   sortTitle: string;
   title: string;
-  venue: string | undefined;
+  venue?: string;
   viewingYear: string;
 };
 

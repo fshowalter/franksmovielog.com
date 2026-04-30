@@ -34,16 +34,25 @@ export async function getViewingLogProps(
 
       const value: ViewingsValue = {
         date: toSortDate(entry.date),
-        medium: entry.medium,
         posterImageProps: await getFluidWidthPosterImageProps(entry.reviewSlug),
         releaseYear: entry.releaseYear,
-        reviewSlug: entry.reviewSlug,
         sequence: entry.sequence,
         sortTitle: entry.sortTitle,
         title: entry.title,
-        venue: entry.venue,
         viewingYear: toSortYear(entry.date),
       };
+
+      if (entry.medium) {
+        value.medium = entry.medium;
+      }
+
+      if (entry.venue) {
+        value.venue = entry.venue;
+      }
+
+      if (entry.reviewSlug) {
+        value.reviewSlug = entry.reviewSlug;
+      }
 
       return value;
     }),

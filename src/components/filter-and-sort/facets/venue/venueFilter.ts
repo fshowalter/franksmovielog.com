@@ -1,4 +1,4 @@
-export type FilterableValue = { venue: string | undefined };
+export type FilterableValue = { venue?: string };
 type Filters = { venue?: readonly string[] };
 
 export function createVenueCountMap<

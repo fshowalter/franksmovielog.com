@@ -1,5 +1,5 @@
 export type FilterableValue = {
-  reviewSlug: string | undefined;
+  reviewSlug?: string;
 };
 
 type Filters = { reviewedStatus?: readonly string[] };
