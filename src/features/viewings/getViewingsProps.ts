@@ -40,19 +40,10 @@ export async function getViewingLogProps(
         sortTitle: entry.sortTitle,
         title: entry.title,
         viewingYear: toSortYear(entry.date),
+        ...(entry.medium && { medium: entry.medium }),
+        ...(entry.venue && { venue: entry.venue }),
+        ...(entry.reviewSlug && { reviewSlug: entry.reviewSlug }),
       };
-
-      if (entry.medium) {
-        value.medium = entry.medium;
-      }
-
-      if (entry.venue) {
-        value.venue = entry.venue;
-      }
-
-      if (entry.reviewSlug) {
-        value.reviewSlug = entry.reviewSlug;
-      }
 
       return value;
     }),
