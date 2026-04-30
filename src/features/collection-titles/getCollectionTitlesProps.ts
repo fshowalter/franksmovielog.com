@@ -2,7 +2,10 @@ import type { CollectionEntry } from "astro:content";
 
 import { getEntry } from "astro:content";
 
-import { getFluidWidthPosterImageProps } from "~/assets/posters";
+import {
+  getFluidWidthPosterImageProps,
+  PosterImageConfig,
+} from "~/assets/posters";
 import { gradeToValue } from "~/utils/grades";
 import { toDisplayDate } from "~/utils/toDisplayDate";
 import { toSortYear } from "~/utils/toSortYear";
@@ -41,30 +44,28 @@ export async function getCollectionTitlesProps(
       }
       distinctReleaseYears.add(title.releaseYear);
 
+      const { src, srcSet } = await getFluidWidthPosterImageProps(
+        title.reviewSlug,
+      );
       return {
         genres: title.genres,
-        grade: reviewedTitle ? reviewedTitle.data.grade : undefined,
-        gradeValue: reviewedTitle
-          ? gradeToValue(reviewedTitle.data.grade)
-          : undefined,
         imdbId: title.imdbId,
-        posterImageProps: await getFluidWidthPosterImageProps(title.reviewSlug),
+        posterSrcProps: { src, srcSet },
         releaseSequence: index,
         releaseYear: title.releaseYear,
-        reviewDisplayDate: reviewedTitle
-          ? toDisplayDate(reviewedTitle.data.reviewDate, {
-              dayFormat: "numeric",
-            })
-          : undefined,
-        reviewSequence: reviewedTitle
-          ? reviewedTitle.data.reviewSequence
-          : undefined,
-        reviewSlug: reviewedTitle ? title.reviewSlug : undefined,
-        reviewYear: reviewedTitle
-          ? toSortYear(reviewedTitle.data.reviewDate)
-          : undefined,
         sortTitle: title.sortTitle,
         title: title.title,
+
+        ...(reviewedTitle && {
+          grade: reviewedTitle.data.grade,
+          gradeValue: gradeToValue(reviewedTitle.data.grade),
+          reviewDisplayDate: toDisplayDate(reviewedTitle.data.reviewDate, {
+            dayFormat: "numeric",
+          }),
+          reviewSequence: reviewedTitle.data.reviewSequence,
+          reviewSlug: title.reviewSlug,
+          reviewYear: toSortYear(reviewedTitle.data.reviewDate),
+        }),
       };
     }),
   );
@@ -74,6 +75,8 @@ export async function getCollectionTitlesProps(
     distinctReleaseYears: [...distinctReleaseYears].toSorted(),
     distinctReviewYears: [...distinctReviewYears].toSorted(),
     initialSort: "release-date-asc",
+    posterHeight: PosterImageConfig.height,
+    posterWidth: PosterImageConfig.width,
     values,
   };
 }

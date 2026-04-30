@@ -14,14 +14,22 @@ import type { CollectionTitlesValue } from "./CollectionTitles";
  * @returns List item with poster, title, grade, and details
  */
 export function CollectionTitlesListItem({
+  posterHeight,
+  posterWidth,
   value,
 }: {
+  posterHeight: number;
+  posterWidth: number;
   value: CollectionTitlesValue;
 }): React.JSX.Element {
   return (
     <PosterListItem
       hasReview={!!value.reviewSlug}
-      posterImageProps={value.posterImageProps}
+      posterImageProps={{
+        ...value.posterSrcProps,
+        height: posterHeight,
+        width: posterWidth,
+      }}
     >
       <ListItemDetails>
         <ListItemTitle
