@@ -3,7 +3,7 @@ import { sortString } from "~/components/filter-and-sort/facets/createSorter";
 export type ReviewDateSortKeys = "review-date-asc" | "review-date-desc";
 
 export type SortableByReviewDate = {
-  reviewSequence: string | undefined;
+  reviewSequence?: string;
 };
 
 export const reviewDateSortComparators: Record<

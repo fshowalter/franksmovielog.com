@@ -5,7 +5,7 @@ import { sortNumber } from "~/components/filter-and-sort/facets/createSorter";
 export type GradeSortKeys = "grade-asc" | "grade-desc";
 
 export type SortableByGrade = {
-  gradeValue: GradeValue | undefined;
+  gradeValue?: GradeValue;
 };
 
 export const gradeSortComparators: Record<

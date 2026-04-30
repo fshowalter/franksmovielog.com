@@ -2,7 +2,7 @@ import type { GradeValue } from "~/utils/grades";
 
 import { GRADE_MAX, GRADE_MIN } from "~/utils/grades";
 
-export type FilterableValue = { gradeValue: GradeValue | undefined };
+export type FilterableValue = { gradeValue?: GradeValue };
 type Filters = { gradeValue?: [GradeValue, GradeValue] };
 
 /**

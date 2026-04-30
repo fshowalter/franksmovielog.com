@@ -10,14 +10,22 @@ import { PosterListItem } from "~/components/poster-list/PosterListItem";
 import type { CastAndCrewMemberTitlesValue } from "./CastAndCrewMemberTitles";
 
 export function CastAndCrewMemberTitlesListItem({
+  posterHeight,
+  posterWidth,
   value,
 }: {
+  posterHeight: number;
+  posterWidth: number;
   value: CastAndCrewMemberTitlesValue;
 }): React.JSX.Element {
   return (
     <PosterListItem
       hasReview={Boolean(value.reviewSlug)}
-      posterImageProps={value.posterImageProps}
+      posterImageProps={{
+        height: posterHeight,
+        width: posterWidth,
+        ...value.posterSrcProps,
+      }}
     >
       <ListItemDetails>
         <ListItemCreditedAs values={value.creditedAs} />
