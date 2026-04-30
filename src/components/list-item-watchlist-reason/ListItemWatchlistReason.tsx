@@ -15,10 +15,10 @@ export function ListItemWatchlistReason({
   performerNames,
   writerNames,
 }: {
-  collectionNames: readonly string[];
-  directorNames: readonly string[];
-  performerNames: readonly string[];
-  writerNames: readonly string[];
+  collectionNames?: readonly string[];
+  directorNames?: readonly string[];
+  performerNames?: readonly string[];
+  writerNames?: readonly string[];
 }): React.JSX.Element {
   const credits = [
     ...formatPeopleNames(directorNames, "directed"),
@@ -39,8 +39,8 @@ export function ListItemWatchlistReason({
   );
 }
 
-function formatCollectionNames(names: readonly string[]): string[] {
-  if (names.length === 0) {
+function formatCollectionNames(names: readonly string[] | undefined): string[] {
+  if (!names || names.length === 0) {
     return [];
   }
 
@@ -50,10 +50,10 @@ function formatCollectionNames(names: readonly string[]): string[] {
 }
 
 function formatPeopleNames(
-  names: readonly string[],
+  names: readonly string[] | undefined,
   suffix: string | string[],
 ): string[] {
-  if (names.length === 0) {
+  if (!names || names.length === 0) {
     return [];
   }
 

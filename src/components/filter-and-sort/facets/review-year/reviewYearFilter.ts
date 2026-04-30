@@ -1,4 +1,4 @@
-export type FilterableValue = { reviewYear: string | undefined };
+export type FilterableValue = { reviewYear?: string };
 type Filters = { reviewYear?: [string, string] };
 
 export function createReviewYearFilter<TValue extends FilterableValue>(

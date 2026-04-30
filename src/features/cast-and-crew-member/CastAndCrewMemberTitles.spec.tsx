@@ -31,11 +31,9 @@ const createTitles = (
       grade: "B+",
       gradeValue: 8,
       imdbId: `tt${String(index).padStart(7, "0")}`,
-      posterImageProps: {
-        height: 372,
+      posterSrcProps: {
         src: "/poster.jpg",
         srcSet: "/poster.jpg 1x",
-        width: 248,
       },
       releaseSequence: index,
       releaseYear: "1960",
@@ -60,6 +58,8 @@ const baseProps: CastAndCrewMemberTitlesProps = {
   distinctReleaseYears: ["1950", "1960", "1965", "1970", "1975", "1980"],
   distinctReviewYears: ["2019", "2020", "2021", "2022"],
   initialSort: "release-date-desc",
+  posterHeight: 372,
+  posterWidth: 248,
   values: [],
 };
 

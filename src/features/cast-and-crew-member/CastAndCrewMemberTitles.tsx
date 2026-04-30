@@ -1,6 +1,5 @@
 import { useReducer } from "react";
 
-import type { PosterImageProps } from "~/assets/posters";
 import type { GradeText, GradeValue } from "~/utils/grades";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
@@ -30,6 +29,8 @@ export type CastAndCrewMemberTitlesProps = {
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: CastAndCrewMemberTitlesSort;
+  posterHeight: number;
+  posterWidth: number;
   values: CastAndCrewMemberTitlesValue[];
 };
 
@@ -39,35 +40,35 @@ export type CastAndCrewMemberTitlesProps = {
 export type CastAndCrewMemberTitlesValue = {
   creditedAs: string[];
   genres: string[];
-  grade: GradeText | undefined;
-  gradeValue: GradeValue | undefined;
+  grade?: GradeText;
+  gradeValue?: GradeValue;
   imdbId: string;
-  posterImageProps: PosterImageProps;
+  posterSrcProps: {
+    src: string;
+    srcSet: string;
+  };
   releaseSequence: number;
   releaseYear: string;
-  reviewDisplayDate: string | undefined;
-  reviewSequence: string | undefined;
-  reviewSlug: string | undefined;
-  reviewYear: string | undefined;
+  reviewDisplayDate?: string;
+  reviewSequence?: string;
+  reviewSlug?: string;
+  reviewYear?: string;
   sortTitle: string;
   title: string;
-  watchlistCollectionNames: string[];
-  watchlistDirectorNames: string[];
-  watchlistPerformerNames: string[];
-  watchlistWriterNames: string[];
+  watchlistCollectionNames?: string[];
+  watchlistDirectorNames?: string[];
+  watchlistPerformerNames?: string[];
+  watchlistWriterNames?: string[];
 };
 
-/**
- * Component for displaying titles associated with a cast or crew member.
- * @param props - Component props
- * @returns Filtered and sorted list of member titles
- */
 export function CastAndCrewMemberTitles({
   distinctCreditKinds,
   distinctGenres,
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
+  posterHeight,
+  posterWidth,
   values,
 }: CastAndCrewMemberTitlesProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
@@ -128,6 +129,8 @@ export function CastAndCrewMemberTitles({
             return (
               <CastAndCrewMemberTitlesListItem
                 key={value.imdbId}
+                posterHeight={posterHeight}
+                posterWidth={posterWidth}
                 value={value}
               />
             );
