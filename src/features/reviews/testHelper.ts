@@ -17,11 +17,9 @@ export function createReviewValue(
     grade: "B",
     gradeValue: 9,
     imdbId: `tt${String(testIdCounter).padStart(7, "0")}`,
-    posterImageProps: {
-      height: 372,
+    posterSrcProps: {
       src: "/poster.jpg",
       srcSet: "/poster.jpg 1x",
-      width: 248,
     },
     releaseSequence: testIdCounter,
     releaseYear: "1970",
@@ -56,5 +54,7 @@ export const baseProps = {
   ],
   distinctReviewYears: ["2018", "2019", "2020", "2021", "2022", "2023", "2024"],
   initialSort: "review-date-desc" as const,
+  posterHeight: 372,
+  posterWidth: 248,
   values: [],
 };

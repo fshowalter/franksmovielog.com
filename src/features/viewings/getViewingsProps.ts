@@ -34,15 +34,15 @@ export async function getViewingLogProps(
       }
       distinctViewingYears.add(toSortYear(entry.date));
       distinctReleaseYears.add(entry.releaseYear);
-      const posterImageProps = await getFluidWidthPosterImageProps(
+      const { src, srcSet } = await getFluidWidthPosterImageProps(
         entry.reviewSlug,
       );
 
       const value: ViewingsValue = {
         date: toSortDate(entry.date),
         posterSrcProps: {
-          src: posterImageProps.src,
-          srcSet: posterImageProps.srcSet,
+          src,
+          srcSet,
         },
         releaseYear: entry.releaseYear,
         sequence: entry.sequence,

@@ -1,5 +1,5 @@
-import { ListItemTitle } from "~/components//list-item-title/ListItemTitle";
 import { ListItemMediumAndVenue } from "~/components/list-item-medium-and-venue/ListItemMediumAndVenue";
+import { ListItemTitle } from "~/components/list-item-title/ListItemTitle";
 import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 import type { CalendarCellData } from "./useCalendar";

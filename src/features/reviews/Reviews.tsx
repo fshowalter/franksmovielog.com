@@ -1,6 +1,5 @@
 import { useReducer } from "react";
 
-import type { PosterImageProps } from "~/assets/posters";
 import type { GradeText, GradeValue } from "~/utils/grades";
 
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
@@ -23,6 +22,8 @@ export type ReviewsProps = {
   distinctReleaseYears: readonly string[];
   distinctReviewYears: readonly string[];
   initialSort: ReviewsSort;
+  posterHeight: number;
+  posterWidth: number;
   values: ReviewsValue[];
 };
 
@@ -31,7 +32,7 @@ export type ReviewsValue = {
   grade: GradeText;
   gradeValue: GradeValue;
   imdbId: string;
-  posterImageProps: PosterImageProps;
+  posterSrcProps: { src: string; srcSet: string };
   releaseSequence: number;
   releaseYear: string;
   reviewDisplayDate: string;
@@ -47,6 +48,8 @@ export function Reviews({
   distinctReleaseYears,
   distinctReviewYears,
   initialSort,
+  posterHeight,
+  posterWidth,
   values,
 }: ReviewsProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
@@ -104,7 +107,14 @@ export function Reviews({
       >
         <PosterList>
           {[...paginatedValues].map((value) => {
-            return <ReviewsListItem key={value.imdbId} value={value} />;
+            return (
+              <ReviewsListItem
+                key={value.imdbId}
+                posterHeight={posterHeight}
+                posterWidth={posterWidth}
+                value={value}
+              />
+            );
           })}
         </PosterList>
       </PaginatedList>
