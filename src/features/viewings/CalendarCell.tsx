@@ -4,15 +4,13 @@ import { PosterListItem } from "~/components/poster-list/PosterListItem";
 
 import type { CalendarCellData } from "./useCalendar";
 
-/**
- * Renders a single cell in the viewings calendar grid.
- * @param props - Component props
- * @param props.value - Calendar cell data including date and viewings
- * @returns Table cell element with optional viewing list
- */
 export function CalendarCell({
+  posterHeight,
+  posterWidth,
   value,
 }: {
+  posterHeight: number;
+  posterWidth: number;
   value: CalendarCellData;
 }): React.JSX.Element {
   if (!value.date) {
@@ -73,7 +71,11 @@ export function CalendarCell({
             {value.viewings!.map((viewing) => (
               <PosterListItem
                 key={viewing.sequence}
-                posterImageProps={viewing.posterImageProps}
+                posterImageProps={{
+                  height: posterHeight,
+                  width: posterWidth,
+                  ...viewing.posterSrcProps,
+                }}
               >
                 <div
                   className={`

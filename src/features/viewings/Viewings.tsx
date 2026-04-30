@@ -1,7 +1,5 @@
 import { useEffect, useReducer, useRef } from "react";
 
-import type { PosterImageProps } from "~/assets/posters";
-
 import { FilterAndSortContainer } from "~/components/filter-and-sort/container/FilterAndSortContainer";
 import { useFilteredValues } from "~/hooks/useFilteredValues";
 import { usePendingFilterCount } from "~/hooks/usePendingFilterCount";
@@ -26,6 +24,8 @@ export type ViewingsProps = {
   distinctVenues: readonly string[];
   distinctViewingYears: readonly string[];
   initialSort: ViewingsSort;
+  posterHeight: number;
+  posterWidth: number;
   values: ViewingsValue[];
 };
 
@@ -35,7 +35,10 @@ export type ViewingsProps = {
 export type ViewingsValue = {
   date: string; // Full date string YYYY-MM-DD
   medium?: string;
-  posterImageProps: PosterImageProps;
+  posterSrcProps: {
+    src: string;
+    srcSet: string;
+  };
   releaseYear: string;
   reviewSlug?: string;
   sequence: string;
@@ -45,23 +48,14 @@ export type ViewingsValue = {
   viewingYear: string;
 };
 
-/**
- * Component for displaying viewing history with calendar view.
- * @param props - Component props
- * @param props.distinctMedia - Available media types for filtering
- * @param props.distinctReleaseYears - Available release years for filtering
- * @param props.distinctVenues - Available venues for filtering
- * @param props.distinctViewingYears - Available viewing years for filtering
- * @param props.initialSort - Initial sort configuration
- * @param props.values - Viewing values to display
- * @returns Viewings component with calendar view and filtering
- */
 export function Viewings({
   distinctMedia,
   distinctReleaseYears,
   distinctVenues,
   distinctViewingYears,
   initialSort,
+  posterHeight,
+  posterWidth,
   values,
 }: ViewingsProps): React.JSX.Element {
   const [state, dispatch] = useReducer(
@@ -141,6 +135,8 @@ export function Viewings({
           <CalendarMonth
             currentMonthDate={currentMonthDate}
             filteredValues={filteredValues}
+            posterHeight={posterHeight}
+            posterWidth={posterWidth}
             sort={state.sort}
           />
         </div>
