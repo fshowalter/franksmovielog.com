@@ -101,9 +101,13 @@ const metaDescription = `My ${stats.year} viewing stats. Includes my most-watche
         <DecadeDistribution values={stats.decadeDistribution} />
         <MediaDistribution values={stats.mediaDistribution} />
       </div>
-      <div class="mx-auto w-full max-w-popout">
-        <VenueDistribution values={stats.venueDistribution} />
-      </div>
+      {
+        stats.venueDistribution.length > 0 && (
+          <div class="mx-auto w-full max-w-popout">
+            <VenueDistribution values={stats.venueDistribution} />
+          </div>
+        )
+      }
       <div class={`mx-auto flex w-full max-w-popout flex-col gap-y-8`}>
         <MostWatchedDirectors values={stats.mostWatchedDirectors} />
         <MostWatchedPerformers values={stats.mostWatchedPerformers} />
