@@ -1,12 +1,12 @@
 {
   "year": "2026",
   "newTitleCount": 32,
-  "viewingCount": 59,
-  "titleCount": 59,
+  "viewingCount": 60,
+  "titleCount": 60,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 24
+      "count": 25
     },
     {
       "name": "4k UHD Blu-ray",
@@ -41,7 +41,7 @@
     },
     {
       "name": "1940s",
-      "count": 7
+      "count": 8
     },
     {
       "name": "1950s",
@@ -356,6 +356,37 @@
       ]
     },
     {
+      "name": "Boris Karloff",
+      "count": 3,
+      "slug": "boris-karloff",
+      "viewings": [
+        {
+          "title": "Five Star Final",
+          "releaseYear": "1931",
+          "reviewSlug": "five-star-final-1931",
+          "date": "2026-02-07",
+          "medium": "Criterion Channel",
+          "venue": null
+        },
+        {
+          "title": "The Body Snatcher",
+          "releaseYear": "1945",
+          "reviewSlug": "the-body-snatcher-1945",
+          "date": "2026-04-05",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Devil Commands",
+          "releaseYear": "1941",
+          "reviewSlug": "the-devil-commands-1941",
+          "date": "2026-05-02",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Allen Garfield",
       "count": 2,
       "slug": null,
@@ -443,29 +474,6 @@
           "reviewSlug": "the-brinks-job-1978",
           "date": "2026-02-10",
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Kathleen Freeman",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Mail Order Bride",
-          "releaseYear": "1964",
-          "reviewSlug": "mail-order-bride-1964",
-          "date": "2026-01-20",
-          "medium": "DVD",
-          "venue": null
-        },
-        {
-          "title": "Marriage on the Rocks",
-          "releaseYear": "1965",
-          "reviewSlug": "marriage-on-the-rocks-1965",
-          "date": "2026-04-19",
-          "medium": "DVD",
           "venue": null
         }
       ]
@@ -565,5 +573,5 @@
       ]
     }
   ],
-  "reviewCount": 51
+  "reviewCount": 52
 }
