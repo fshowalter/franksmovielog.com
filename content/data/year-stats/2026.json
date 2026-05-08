@@ -1,12 +1,12 @@
 {
   "year": "2026",
   "newTitleCount": 35,
-  "viewingCount": 64,
-  "titleCount": 64,
+  "viewingCount": 65,
+  "titleCount": 65,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 29
+      "count": 30
     },
     {
       "name": "4k UHD Blu-ray",
@@ -37,7 +37,7 @@
   "decadeDistribution": [
     {
       "name": "1930s",
-      "count": 4
+      "count": 5
     },
     {
       "name": "1940s",
@@ -391,6 +391,37 @@
       ]
     },
     {
+      "name": "Cary Grant",
+      "count": 3,
+      "slug": "cary-grant",
+      "viewings": [
+        {
+          "title": "Walk Don't Run",
+          "releaseYear": "1966",
+          "reviewSlug": "walk-dont-run-1966",
+          "date": "2026-02-15",
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "title": "Ladies Should Listen",
+          "releaseYear": "1934",
+          "reviewSlug": "ladies-should-listen-1934",
+          "date": "2026-04-30",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Alice in Wonderland",
+          "releaseYear": "1933",
+          "reviewSlug": "alice-in-wonderland-1933",
+          "date": "2026-05-06",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Allen Garfield",
       "count": 2,
       "slug": null,
@@ -455,29 +486,6 @@
           "reviewSlug": "she-1965",
           "date": "2026-02-08",
           "medium": "DVD",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Warren Oates",
-      "count": 2,
-      "slug": "warren-oates",
-      "viewings": [
-        {
-          "title": "Mail Order Bride",
-          "releaseYear": "1964",
-          "reviewSlug": "mail-order-bride-1964",
-          "date": "2026-01-20",
-          "medium": "DVD",
-          "venue": null
-        },
-        {
-          "title": "The Brink's Job",
-          "releaseYear": "1978",
-          "reviewSlug": "the-brinks-job-1978",
-          "date": "2026-02-10",
-          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -577,5 +585,5 @@
       ]
     }
   ],
-  "reviewCount": 56
+  "reviewCount": 57
 }
