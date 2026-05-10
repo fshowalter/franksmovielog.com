@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 36,
-  "viewingCount": 66,
-  "titleCount": 66,
+  "newTitleCount": 37,
+  "viewingCount": 67,
+  "titleCount": 67,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 16
+      "count": 17
     },
     {
       "name": "Watch TCM",
@@ -57,7 +57,7 @@
     },
     {
       "name": "1980s",
-      "count": 10
+      "count": 11
     },
     {
       "name": "1990s",
@@ -143,6 +143,29 @@
           "reviewSlug": "the-cat-1991",
           "date": "2026-04-23",
           "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Sam Raimi",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Army of Darkness",
+          "releaseYear": "1992",
+          "reviewSlug": null,
+          "date": "2026-03-12",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Evil Dead II",
+          "releaseYear": "1987",
+          "reviewSlug": "evil-dead-ii-1987",
+          "date": "2026-05-07",
+          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -562,6 +585,29 @@
       ]
     },
     {
+      "name": "Sam Raimi",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Army of Darkness",
+          "releaseYear": "1992",
+          "reviewSlug": null,
+          "date": "2026-03-12",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Evil Dead II",
+          "releaseYear": "1987",
+          "reviewSlug": "evil-dead-ii-1987",
+          "date": "2026-05-07",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Gordon Chan",
       "count": 2,
       "slug": null,
@@ -585,5 +631,5 @@
       ]
     }
   ],
-  "reviewCount": 58
+  "reviewCount": 59
 }
