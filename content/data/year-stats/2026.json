@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 38,
-  "viewingCount": 69,
-  "titleCount": 69,
+  "newTitleCount": 39,
+  "viewingCount": 70,
+  "titleCount": 70,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 33
+      "count": 34
     },
     {
       "name": "4k UHD Blu-ray",
@@ -57,7 +57,7 @@
     },
     {
       "name": "1980s",
-      "count": 12
+      "count": 13
     },
     {
       "name": "1990s",
@@ -244,7 +244,7 @@
     },
     {
       "name": "Hsiang Lin Yin",
-      "count": 4,
+      "count": 5,
       "slug": null,
       "viewings": [
         {
@@ -276,6 +276,14 @@
           "releaseYear": "1991",
           "reviewSlug": "the-cat-1991",
           "date": "2026-04-23",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hell Has No Boundary",
+          "releaseYear": "1982",
+          "reviewSlug": "hell-has-no-boundary-1982",
+          "date": "2026-05-10",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -352,6 +360,130 @@
       ]
     },
     {
+      "name": "Tung Ting",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Jade Tiger",
+          "releaseYear": "1977",
+          "reviewSlug": "jade-tiger-1977",
+          "date": "2026-01-27",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hell Has No Boundary",
+          "releaseYear": "1982",
+          "reviewSlug": "hell-has-no-boundary-1982",
+          "date": "2026-05-10",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Ching-Ho Wang",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Jade Tiger",
+          "releaseYear": "1977",
+          "reviewSlug": "jade-tiger-1977",
+          "date": "2026-01-27",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hell Has No Boundary",
+          "releaseYear": "1982",
+          "reviewSlug": "hell-has-no-boundary-1982",
+          "date": "2026-05-10",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Han-Chen Wang",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Jade Tiger",
+          "releaseYear": "1977",
+          "reviewSlug": "jade-tiger-1977",
+          "date": "2026-01-27",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Mercenaries from Hong Kong",
+          "releaseYear": "1982",
+          "reviewSlug": "mercenaries-from-hong-kong-1982",
+          "date": "2026-02-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hell Has No Boundary",
+          "releaseYear": "1982",
+          "reviewSlug": "hell-has-no-boundary-1982",
+          "date": "2026-05-10",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Yung-Shao Teng",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Mercenaries from Hong Kong",
+          "releaseYear": "1982",
+          "reviewSlug": "mercenaries-from-hong-kong-1982",
+          "date": "2026-02-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hell Has No Boundary",
+          "releaseYear": "1982",
+          "reviewSlug": "hell-has-no-boundary-1982",
+          "date": "2026-05-10",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Wei-Ho Tu",
       "count": 3,
       "slug": null,
@@ -409,106 +541,6 @@
           "reviewSlug": "the-devil-commands-1941",
           "date": "2026-05-02",
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Cary Grant",
-      "count": 3,
-      "slug": "cary-grant",
-      "viewings": [
-        {
-          "title": "Walk Don't Run",
-          "releaseYear": "1966",
-          "reviewSlug": "walk-dont-run-1966",
-          "date": "2026-02-15",
-          "medium": "Watch TCM",
-          "venue": null
-        },
-        {
-          "title": "Ladies Should Listen",
-          "releaseYear": "1934",
-          "reviewSlug": "ladies-should-listen-1934",
-          "date": "2026-04-30",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Alice in Wonderland",
-          "releaseYear": "1933",
-          "reviewSlug": "alice-in-wonderland-1933",
-          "date": "2026-05-06",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Allen Garfield",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "The Ninth Gate",
-          "releaseYear": "1999",
-          "reviewSlug": "the-ninth-gate-1999",
-          "date": "2026-01-01",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "The Brink's Job",
-          "releaseYear": "1978",
-          "reviewSlug": "the-brinks-job-1978",
-          "date": "2026-02-10",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Lynn Theel",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Big Wednesday",
-          "releaseYear": "1978",
-          "reviewSlug": "big-wednesday-1978",
-          "date": "2026-01-18",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Humanoids from the Deep",
-          "releaseYear": "1980",
-          "reviewSlug": "humanoids-from-the-deep-1980",
-          "date": "2026-02-02",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Andr\u00e9 Morell",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "The Shadow of the Cat",
-          "releaseYear": "1961",
-          "reviewSlug": "the-shadow-of-the-cat-1961",
-          "date": "2026-01-19",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "She",
-          "releaseYear": "1965",
-          "reviewSlug": "she-1965",
-          "date": "2026-02-08",
-          "medium": "DVD",
           "venue": null
         }
       ]
@@ -631,5 +663,5 @@
       ]
     }
   ],
-  "reviewCount": 61
+  "reviewCount": 62
 }
