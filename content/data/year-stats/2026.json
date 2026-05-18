@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 42,
-  "viewingCount": 74,
-  "titleCount": 74,
+  "newTitleCount": 43,
+  "viewingCount": 75,
+  "titleCount": 75,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 36
+      "count": 37
     },
     {
       "name": "4k UHD Blu-ray",
@@ -45,7 +45,7 @@
     },
     {
       "name": "1950s",
-      "count": 3
+      "count": 4
     },
     {
       "name": "1960s",
@@ -664,6 +664,29 @@
       ]
     },
     {
+      "name": "Warren Duff",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Step Lively",
+          "releaseYear": "1944",
+          "reviewSlug": "step-lively-1944",
+          "date": "2026-02-14",
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "title": "The Turning Point",
+          "releaseYear": "1952",
+          "reviewSlug": "the-turning-point-1952",
+          "date": "2026-05-16",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Philip MacDonald",
       "count": 2,
       "slug": null,
@@ -756,5 +779,5 @@
       ]
     }
   ],
-  "reviewCount": 66
+  "reviewCount": 67
 }
