@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 46,
-  "viewingCount": 80,
-  "titleCount": 80,
+  "newTitleCount": 47,
+  "viewingCount": 81,
+  "titleCount": 81,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 41
+      "count": 42
     },
     {
       "name": "4k UHD Blu-ray",
@@ -49,7 +49,7 @@
     },
     {
       "name": "1960s",
-      "count": 12
+      "count": 13
     },
     {
       "name": "1970s",
@@ -321,6 +321,45 @@
       ]
     },
     {
+      "name": "Peter Cushing",
+      "count": 4,
+      "slug": "peter-cushing",
+      "viewings": [
+        {
+          "title": "The Curse of Frankenstein",
+          "releaseYear": "1957",
+          "reviewSlug": "the-curse-of-frankenstein-1957",
+          "date": "2026-01-08",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "She",
+          "releaseYear": "1965",
+          "reviewSlug": "she-1965",
+          "date": "2026-02-08",
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "title": "The Risk",
+          "releaseYear": "1960",
+          "reviewSlug": "the-risk-1960",
+          "date": "2026-04-25",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Dr. Who and the Daleks",
+          "releaseYear": "1965",
+          "reviewSlug": "dr-who-and-the-daleks-1965",
+          "date": "2026-05-22",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Ching-Ho Wang",
       "count": 4,
       "slug": null,
@@ -472,37 +511,6 @@
           "reviewSlug": "marriage-on-the-rocks-1965",
           "date": "2026-04-19",
           "medium": "DVD",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Peter Cushing",
-      "count": 3,
-      "slug": "peter-cushing",
-      "viewings": [
-        {
-          "title": "The Curse of Frankenstein",
-          "releaseYear": "1957",
-          "reviewSlug": "the-curse-of-frankenstein-1957",
-          "date": "2026-01-08",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "She",
-          "releaseYear": "1965",
-          "reviewSlug": "she-1965",
-          "date": "2026-02-08",
-          "medium": "DVD",
-          "venue": null
-        },
-        {
-          "title": "The Risk",
-          "releaseYear": "1960",
-          "reviewSlug": "the-risk-1960",
-          "date": "2026-04-25",
-          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -787,5 +795,5 @@
       ]
     }
   ],
-  "reviewCount": 72
+  "reviewCount": 73
 }
