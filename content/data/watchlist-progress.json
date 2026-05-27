@@ -1,8 +1,8 @@
 {
-  "total": 2799,
-  "reviewed": 1050,
-  "directorTotal": 894,
-  "directorReviewed": 371,
+  "total": 2617,
+  "reviewed": 1041,
+  "directorTotal": 844,
+  "directorReviewed": 368,
   "directorDetails": [
     {
       "name": "Alfred Hitchcock",
@@ -35,16 +35,10 @@
       "reviewCount": 13
     },
     {
-      "name": "David Lean",
-      "titleCount": 16,
-      "slug": "david-lean",
-      "reviewCount": 3
-    },
-    {
-      "name": "Fritz Lang",
-      "titleCount": 30,
-      "slug": "fritz-lang",
-      "reviewCount": 3
+      "name": "Don Siegel",
+      "titleCount": 36,
+      "slug": "don-siegel",
+      "reviewCount": 5
     },
     {
       "name": "George A. Romero",
@@ -60,7 +54,7 @@
     },
     {
       "name": "Ingmar Bergman",
-      "titleCount": 56,
+      "titleCount": 57,
       "slug": "ingmar-bergman",
       "reviewCount": 23
     },
@@ -131,12 +125,6 @@
       "reviewCount": 5
     },
     {
-      "name": "Robert Altman",
-      "titleCount": 42,
-      "slug": "robert-altman",
-      "reviewCount": 2
-    },
-    {
       "name": "Roman Polanski",
       "titleCount": 24,
       "slug": "roman-polanski",
@@ -197,8 +185,8 @@
       "reviewCount": 8
     }
   ],
-  "performerTotal": 1566,
-  "performerReviewed": 653,
+  "performerTotal": 1495,
+  "performerReviewed": 640,
   "performerDetails": [
     {
       "name": "Bela Lugosi",
@@ -250,7 +238,7 @@
     },
     {
       "name": "James Coburn",
-      "titleCount": 86,
+      "titleCount": 85,
       "slug": "james-coburn",
       "reviewCount": 20
     },
@@ -285,12 +273,6 @@
       "reviewCount": 50
     },
     {
-      "name": "Sean Connery",
-      "titleCount": 71,
-      "slug": "sean-connery",
-      "reviewCount": 13
-    },
-    {
       "name": "Steve McQueen",
       "titleCount": 29,
       "slug": "steve-mcqueen",
@@ -298,7 +280,7 @@
     },
     {
       "name": "Vincent Price",
-      "titleCount": 105,
+      "titleCount": 104,
       "slug": "vincent-price",
       "reviewCount": 42
     },
@@ -321,20 +303,14 @@
       "reviewCount": 48
     }
   ],
-  "writerTotal": 128,
-  "writerReviewed": 31,
+  "writerTotal": 19,
+  "writerReviewed": 8,
   "writerDetails": [
     {
       "name": "Anthony Shaffer",
       "titleCount": 9,
       "slug": "anthony-shaffer",
       "reviewCount": 4
-    },
-    {
-      "name": "Ben Hecht",
-      "titleCount": 109,
-      "slug": "ben-hecht",
-      "reviewCount": 23
     },
     {
       "name": "Leigh Brackett",
