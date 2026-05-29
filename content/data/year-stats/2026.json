@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 47,
-  "viewingCount": 82,
-  "titleCount": 82,
+  "newTitleCount": 48,
+  "viewingCount": 83,
+  "titleCount": 83,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -31,9 +31,18 @@
     {
       "name": "HBO Max",
       "count": 1
+    },
+    {
+      "name": "70mm",
+      "count": 1
     }
   ],
-  "venueDistribution": [],
+  "venueDistribution": [
+    {
+      "name": "AFI Silver",
+      "count": 1
+    }
+  ],
   "decadeDistribution": [
     {
       "name": "1930s",
@@ -61,7 +70,7 @@
     },
     {
       "name": "1990s",
-      "count": 14
+      "count": 15
     },
     {
       "name": "2000s",
@@ -795,5 +804,5 @@
       ]
     }
   ],
-  "reviewCount": 74
+  "reviewCount": 75
 }
