@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 51,
-  "viewingCount": 88,
-  "titleCount": 88,
+  "newTitleCount": 52,
+  "viewingCount": 89,
+  "titleCount": 89,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 46
+      "count": 47
     },
     {
       "name": "4k UHD Blu-ray",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1980s",
-      "count": 13
+      "count": 14
     },
     {
       "name": "1990s",
@@ -88,6 +88,37 @@
   "mostWatchedTitles": [],
   "mostWatchedDirectors": [
     {
+      "name": "David Cronenberg",
+      "count": 3,
+      "slug": "david-cronenberg",
+      "viewings": [
+        {
+          "title": "Naked Lunch",
+          "releaseYear": "1991",
+          "reviewSlug": "naked-lunch-1991",
+          "date": "2026-01-24",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "A History of Violence",
+          "releaseYear": "2005",
+          "reviewSlug": "a-history-of-violence-2005",
+          "date": "2026-02-05",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Fly",
+          "releaseYear": "1986",
+          "reviewSlug": "the-fly-1986",
+          "date": "2026-06-01",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "John Gilling",
       "count": 2,
       "slug": null,
@@ -106,29 +137,6 @@
           "reviewSlug": "the-pirates-of-blood-river-1962",
           "date": "2026-04-06",
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "David Cronenberg",
-      "count": 2,
-      "slug": "david-cronenberg",
-      "viewings": [
-        {
-          "title": "Naked Lunch",
-          "releaseYear": "1991",
-          "reviewSlug": "naked-lunch-1991",
-          "date": "2026-01-24",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "A History of Violence",
-          "releaseYear": "2005",
-          "reviewSlug": "a-history-of-violence-2005",
-          "date": "2026-02-05",
-          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -690,6 +698,29 @@
       ]
     },
     {
+      "name": "David Cronenberg",
+      "count": 2,
+      "slug": "david-cronenberg",
+      "viewings": [
+        {
+          "title": "Naked Lunch",
+          "releaseYear": "1991",
+          "reviewSlug": "naked-lunch-1991",
+          "date": "2026-01-24",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Fly",
+          "releaseYear": "1986",
+          "reviewSlug": "the-fly-1986",
+          "date": "2026-06-01",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Lung Ku",
       "count": 2,
       "slug": null,
@@ -828,5 +859,5 @@
       ]
     }
   ],
-  "reviewCount": 80
+  "reviewCount": 81
 }
