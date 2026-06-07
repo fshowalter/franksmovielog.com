@@ -1,12 +1,12 @@
 {
   "year": "2026",
   "newTitleCount": 54,
-  "viewingCount": 93,
-  "titleCount": 93,
+  "viewingCount": 94,
+  "titleCount": 94,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 50
+      "count": 51
     },
     {
       "name": "4k UHD Blu-ray",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1960s",
-      "count": 14
+      "count": 15
     },
     {
       "name": "1970s",
@@ -228,6 +228,29 @@
           "releaseYear": "1972",
           "reviewSlug": "fat-city-1972",
           "date": "2026-06-05",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Michael Carreras",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "The Curse of the Mummy's Tomb",
+          "releaseYear": "1964",
+          "reviewSlug": "the-curse-of-the-mummys-tomb-1964",
+          "date": "2026-04-10",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Maniac",
+          "releaseYear": "1963",
+          "reviewSlug": "maniac-1963",
+          "date": "2026-06-06",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -676,7 +699,7 @@
   "mostWatchedWriters": [
     {
       "name": "Jimmy Sangster",
-      "count": 2,
+      "count": 3,
       "slug": "jimmy-sangster",
       "viewings": [
         {
@@ -692,6 +715,14 @@
           "releaseYear": "1962",
           "reviewSlug": "the-pirates-of-blood-river-1962",
           "date": "2026-04-06",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Maniac",
+          "releaseYear": "1963",
+          "reviewSlug": "maniac-1963",
+          "date": "2026-06-06",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -882,5 +913,5 @@
       ]
     }
   ],
-  "reviewCount": 85
+  "reviewCount": 86
 }
