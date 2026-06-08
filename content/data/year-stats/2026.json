@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 54,
-  "viewingCount": 94,
-  "titleCount": 94,
+  "newTitleCount": 55,
+  "viewingCount": 95,
+  "titleCount": 95,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 21
+      "count": 22
     },
     {
       "name": "Watch TCM",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1980s",
-      "count": 15
+      "count": 16
     },
     {
       "name": "1990s",
@@ -911,7 +911,30 @@
           "venue": null
         }
       ]
+    },
+    {
+      "name": "Dardano Sacchetti",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "The Tough Ones",
+          "releaseYear": "1976",
+          "reviewSlug": "the-tough-ones-1976",
+          "date": "2026-06-04",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "A Blade in the Dark",
+          "releaseYear": "1983",
+          "reviewSlug": "a-blade-in-the-dark-1983",
+          "date": "2026-06-06",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
     }
   ],
-  "reviewCount": 86
+  "reviewCount": 87
 }
