@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 55,
-  "viewingCount": 95,
-  "titleCount": 95,
+  "viewingCount": 96,
+  "titleCount": 96,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -30,7 +30,7 @@
     },
     {
       "name": "HBO Max",
-      "count": 1
+      "count": 2
     },
     {
       "name": "70mm",
@@ -54,7 +54,7 @@
     },
     {
       "name": "1950s",
-      "count": 4
+      "count": 5
     },
     {
       "name": "1960s",
@@ -229,6 +229,29 @@
           "reviewSlug": "fat-city-1972",
           "date": "2026-06-05",
           "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Robert Wise",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "The Body Snatcher",
+          "releaseYear": "1945",
+          "reviewSlug": "the-body-snatcher-1945",
+          "date": "2026-04-05",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Executive Suite",
+          "releaseYear": "1954",
+          "reviewSlug": "executive-suite-1954",
+          "date": "2026-06-07",
+          "medium": "HBO Max",
           "venue": null
         }
       ]
@@ -936,5 +959,5 @@
       ]
     }
   ],
-  "reviewCount": 87
+  "reviewCount": 88
 }
