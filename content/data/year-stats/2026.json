@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 56,
-  "viewingCount": 97,
-  "titleCount": 97,
+  "viewingCount": 98,
+  "titleCount": 98,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -25,12 +25,12 @@
       "count": 4
     },
     {
-      "name": "Criterion Channel",
+      "name": "HBO Max",
       "count": 3
     },
     {
-      "name": "HBO Max",
-      "count": 2
+      "name": "Criterion Channel",
+      "count": 3
     },
     {
       "name": "70mm",
@@ -46,7 +46,7 @@
   "decadeDistribution": [
     {
       "name": "1930s",
-      "count": 5
+      "count": 6
     },
     {
       "name": "1940s",
@@ -844,6 +844,29 @@
       ]
     },
     {
+      "name": "W.R. Burnett",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "4 for Texas",
+          "releaseYear": "1963",
+          "reviewSlug": "4-for-texas-1963",
+          "date": "2026-02-16",
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "title": "King of the Underworld",
+          "releaseYear": "1939",
+          "reviewSlug": "king-of-the-underworld-1939",
+          "date": "2026-06-10",
+          "medium": "HBO Max",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Philip MacDonald",
       "count": 2,
       "slug": null,
@@ -934,30 +957,7 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Dardano Sacchetti",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "The Tough Ones",
-          "releaseYear": "1976",
-          "reviewSlug": "the-tough-ones-1976",
-          "date": "2026-06-04",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "A Blade in the Dark",
-          "releaseYear": "1983",
-          "reviewSlug": "a-blade-in-the-dark-1983",
-          "date": "2026-06-06",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
-  "reviewCount": 89
+  "reviewCount": 90
 }
