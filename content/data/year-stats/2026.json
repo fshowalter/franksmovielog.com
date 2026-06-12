@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 55,
-  "viewingCount": 96,
-  "titleCount": 96,
+  "newTitleCount": 56,
+  "viewingCount": 97,
+  "titleCount": 97,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 51
+      "count": 52
     },
     {
       "name": "4k UHD Blu-ray",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1980s",
-      "count": 16
+      "count": 17
     },
     {
       "name": "1990s",
@@ -524,6 +524,45 @@
       ]
     },
     {
+      "name": "Fei Ai",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Jade Tiger",
+          "releaseYear": "1977",
+          "reviewSlug": "jade-tiger-1977",
+          "date": "2026-01-27",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Mercenaries from Hong Kong",
+          "releaseYear": "1982",
+          "reviewSlug": "mercenaries-from-hong-kong-1982",
+          "date": "2026-02-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Clans",
+          "releaseYear": "1976",
+          "reviewSlug": "killer-clans-1976",
+          "date": "2026-05-13",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-06-09",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Miao Ching",
       "count": 4,
       "slug": null,
@@ -674,45 +713,6 @@
           "releaseYear": "1972",
           "reviewSlug": "the-14-amazons-1972",
           "date": "2026-05-30",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Wei-Ho Tu",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Mercenaries from Hong Kong",
-          "releaseYear": "1982",
-          "reviewSlug": "mercenaries-from-hong-kong-1982",
-          "date": "2026-02-01",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "One-Armed Boxer",
-          "releaseYear": "1972",
-          "reviewSlug": "one-armed-boxer-1972",
-          "date": "2026-02-04",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Men from the Gutter",
-          "releaseYear": "1983",
-          "reviewSlug": "men-from-the-gutter-1983",
-          "date": "2026-02-12",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Clans",
-          "releaseYear": "1976",
-          "reviewSlug": "killer-clans-1976",
-          "date": "2026-05-13",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -959,5 +959,5 @@
       ]
     }
   ],
-  "reviewCount": 88
+  "reviewCount": 89
 }
