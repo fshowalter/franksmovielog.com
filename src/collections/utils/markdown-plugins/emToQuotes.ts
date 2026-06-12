@@ -19,6 +19,7 @@ function pluginFunction(tree: Node) {
         return CONTINUE;
       }
 
+      // eslint-disable-next-line unicorn/better-dom-traversing
       const firstChild = node.children[0] as Literal;
       if (firstChild && typeof firstChild.value === "string") {
         // Create new text node with quotes instead of modifying in place

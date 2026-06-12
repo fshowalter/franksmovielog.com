@@ -23,7 +23,7 @@ const imageSrc = await getStructuredDataStillSrc(value.review.id);
 <script
   is:inline
   set:html={JSON.stringify({
-    "@context": "http://schema.org",
+    "@context": "https://schema.org",
     "@type": "Review",
     author: {
       "@type": "Person",
@@ -38,7 +38,7 @@ const imageSrc = await getStructuredDataStillSrc(value.review.id);
       },
       image: imageSrc,
       name: value.title,
-      sameAs: `http://www.imdb.com/title/${value.imdbId}/`,
+      sameAs: `https://www.imdb.com/title/${value.imdbId}/`,
     },
     reviewRating: {
       "@type": "Rating",
