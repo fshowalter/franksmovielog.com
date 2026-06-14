@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 57,
-  "viewingCount": 100,
-  "titleCount": 100,
+  "viewingCount": 101,
+  "titleCount": 101,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -21,11 +21,11 @@
       "count": 6
     },
     {
-      "name": "iTunes",
-      "count": 4
+      "name": "HBO Max",
+      "count": 5
     },
     {
-      "name": "HBO Max",
+      "name": "iTunes",
       "count": 4
     },
     {
@@ -46,7 +46,7 @@
   "decadeDistribution": [
     {
       "name": "1930s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "1940s",
@@ -752,6 +752,37 @@
       ]
     },
     {
+      "name": "Warren Duff",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Step Lively",
+          "releaseYear": "1944",
+          "reviewSlug": "step-lively-1944",
+          "date": "2026-02-14",
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "title": "The Turning Point",
+          "releaseYear": "1952",
+          "reviewSlug": "the-turning-point-1952",
+          "date": "2026-05-16",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Racket Busters",
+          "releaseYear": "1938",
+          "reviewSlug": "racket-busters-1938",
+          "date": "2026-06-14",
+          "medium": "HBO Max",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "John Milius",
       "count": 2,
       "slug": null,
@@ -815,29 +846,6 @@
           "releaseYear": "1976",
           "reviewSlug": "killer-clans-1976",
           "date": "2026-05-13",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Warren Duff",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Step Lively",
-          "releaseYear": "1944",
-          "reviewSlug": "step-lively-1944",
-          "date": "2026-02-14",
-          "medium": "Watch TCM",
-          "venue": null
-        },
-        {
-          "title": "The Turning Point",
-          "releaseYear": "1952",
-          "reviewSlug": "the-turning-point-1952",
-          "date": "2026-05-16",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -959,5 +967,5 @@
       ]
     }
   ],
-  "reviewCount": 92
+  "reviewCount": 93
 }
