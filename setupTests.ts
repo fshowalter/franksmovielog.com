@@ -17,15 +17,11 @@ if (typeof HTMLDialogElement !== "undefined") {
   HTMLDialogElement.prototype.showModal = vi.fn(function (
     this: HTMLDialogElement,
   ) {
-    // eslint-disable-next-line unicorn/no-this-outside-of-class
     this.open = true;
   });
   HTMLDialogElement.prototype.close = vi.fn(function (this: HTMLDialogElement) {
-    // eslint-disable-next-line unicorn/no-this-outside-of-class
     if (this.open) {
-      // eslint-disable-next-line unicorn/no-this-outside-of-class
       this.open = false;
-      // eslint-disable-next-line unicorn/no-this-outside-of-class
       this.dispatchEvent(new Event("close"));
     }
   });
