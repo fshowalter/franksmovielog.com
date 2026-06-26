@@ -99,7 +99,7 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
         `}
       >
         {reviewedTitle.releaseYear}
-        <span>|</span>
+        {" "}|{" "}
         {
           reviewedTitle.countries.map((country, index) => {
             if (index === 0) {
@@ -108,23 +108,21 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
             return <Fragment set:html={`&ndash;${country}`} />;
           })
         }
-        <span>|</span>{" "}
-        {reviewedTitle.runtimeMinutes}&nbsp;min{" "}
-        <span>
-          <span>|</span>{" "}
-          <a
-            class={`
-              relative -mb-1 inline-block origin-bottom-left pb-1 text-accent
-              after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
-              after:origin-left after:scale-x-0 after:bg-accent
-              after:transition-transform
-              hover:after:scale-x-100
-            `}
-            href="#credits"
-          >
-            More...
-          </a>
-        </span>
+        {" "}|{" "}
+        {reviewedTitle.runtimeMinutes}&nbsp;min
+        {" "}|{" "}
+        <a
+          class={`
+            relative -mb-1 inline-block origin-bottom-left pb-1 text-accent
+            after:absolute after:bottom-1 after:left-0 after:h-px after:w-full
+            after:origin-left after:scale-x-0 after:bg-accent
+            after:transition-transform
+            hover:after:scale-x-100
+          `}
+          href="#credits"
+        >
+          More...
+        </a>
       </div>
       <Still
         class="mx-auto mb-[.191px]"
