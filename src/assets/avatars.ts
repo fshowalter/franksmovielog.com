@@ -1,11 +1,10 @@
 import { getImage } from "astro:assets";
 
-/**
- * Props for avatar images.
- */
 export type AvatarImageProps = {
+  height: number;
   src: string;
   srcSet: string;
+  width: number;
 };
 
 const AvatarImageConfig = {
@@ -40,6 +39,7 @@ export async function getAvatarImageProps(
   });
 
   return {
+    ...AvatarImageConfig,
     src: optimizedImage.src,
     srcSet: optimizedImage.srcSet.attribute,
   };
