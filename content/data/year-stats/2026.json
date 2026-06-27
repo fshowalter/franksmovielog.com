@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 59,
-  "viewingCount": 103,
-  "titleCount": 103,
+  "newTitleCount": 60,
+  "viewingCount": 104,
+  "titleCount": 104,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 23
+      "count": 24
     },
     {
       "name": "Watch TCM",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1980s",
-      "count": 18
+      "count": 19
     },
     {
       "name": "1990s",
@@ -298,6 +298,29 @@
           "reviewSlug": "ball-of-fire-1941",
           "date": "2026-04-21",
           "medium": "Criterion Channel",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Michael A. Simpson",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Sleepaway Camp II: Unhappy Campers",
+          "releaseYear": "1988",
+          "reviewSlug": "sleepaway-camp-ii-unhappy-campers-1988",
+          "date": "2026-06-20",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Sleepaway Camp III: Teenage Wasteland",
+          "releaseYear": "1989",
+          "reviewSlug": "sleepaway-camp-iii-teenage-wasteland-1989",
+          "date": "2026-06-20",
+          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -967,5 +990,5 @@
       ]
     }
   ],
-  "reviewCount": 95
+  "reviewCount": 96
 }
