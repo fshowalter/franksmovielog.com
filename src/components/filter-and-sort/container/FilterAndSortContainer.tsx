@@ -129,7 +129,7 @@ export function FilterAndSortContainer<T extends string, V>({
   // Scroll to top of list when sort changes via desktop select
   useEffect(() => {
     if (prevSortValueRef.current === sortProps.currentSortValue) {
-    	return;
+      return;
     }
 
     prevSortValueRef.current = sortProps.currentSortValue;
@@ -226,7 +226,7 @@ export function FilterAndSortContainer<T extends string, V>({
             onClick={(e) => {
               // Backdrop click: event.target is the dialog itself, not any child
               if (e.target !== dialogRef.current) {
-              	return;
+                return;
               }
 
               dispatch(createResetFiltersAction());

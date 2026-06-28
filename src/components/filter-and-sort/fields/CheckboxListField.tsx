@@ -98,7 +98,7 @@ export function CheckboxListField({
     value: string,
   ): void => {
     if (e.key !== " ") {
-    	return;
+      return;
     }
 
     e.preventDefault();

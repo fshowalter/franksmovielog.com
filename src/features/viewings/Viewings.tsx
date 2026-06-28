@@ -71,7 +71,7 @@ export function Viewings({
   // Scroll to top of calendar when month changes
   useEffect(() => {
     if (prevMonthRef.current === state.selectedMonthDate) {
-    	return;
+      return;
     }
 
     prevMonthRef.current = state.selectedMonthDate;
