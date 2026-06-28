@@ -97,11 +97,13 @@ export function CheckboxListField({
     e: KeyboardEvent<HTMLInputElement>,
     value: string,
   ): void => {
-    if (e.key === " ") {
-      e.preventDefault();
-      const checked = !selectedValues.includes(value);
-      handleCheckboxChange(value, checked);
+    if (e.key !== " ") {
+    	return;
     }
+
+    e.preventDefault();
+    const checked = !selectedValues.includes(value);
+    handleCheckboxChange(value, checked);
   };
 
   // Listen for form reset events and clear selections when form is reset

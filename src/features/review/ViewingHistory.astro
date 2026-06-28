@@ -22,7 +22,7 @@ const { reviewedTitle } = Astro.props;
 
 const viewings = await getEntries(reviewedTitle.viewings);
 
-viewings.sort((a, b) => `${b.id}`.localeCompare(a.id));
+viewings.sort((a, b) => b.id.localeCompare(a.id));
 ---
 
 <aside class="w-full max-w-popout">

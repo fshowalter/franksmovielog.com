@@ -20,9 +20,11 @@ if (typeof HTMLDialogElement !== "undefined") {
     this.open = true;
   });
   HTMLDialogElement.prototype.close = vi.fn(function (this: HTMLDialogElement) {
-    if (this.open) {
-      this.open = false;
-      this.dispatchEvent(new Event("close"));
+    if (!this.open) {
+      return;
     }
+
+    this.open = false;
+    this.dispatchEvent(new Event("close"));
   });
 }
