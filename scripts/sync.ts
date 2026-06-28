@@ -10,35 +10,37 @@ chokidar
     { awaitWriteFinish: true },
   )
   .on("all", (event, sourcePath) => {
-    if (event === "add" || event === "change") {
-      console.log(event, sourcePath);
+    if (!["add", "change"].includes(event)) {
+      return;
+    }
 
-      let dest;
-      const name = sourcePath.replace(
-        /..\/movielog\/(export|reviews|viewings)\//,
-        "",
-      );
+    console.log(event, sourcePath);
 
-      if (/\/reviews\//.test(sourcePath)) {
-        dest = `${import.meta.dirname}/../content/reviews/${name}`;
+    let dest;
+    const name = sourcePath.replace(
+      /..\/movielog\/(export|reviews|viewings)\//,
+      "",
+    );
+
+    if (/\/reviews\//.test(sourcePath)) {
+      dest = `${import.meta.dirname}/../content/reviews/${name}`;
+    }
+
+    if (/\/viewings\//.test(sourcePath)) {
+      dest = `${import.meta.dirname}/../content/viewings/${name}`;
+    }
+
+    if (/\/export\//.test(sourcePath)) {
+      dest = `${import.meta.dirname}/../content/data/${name}`;
+    }
+
+    if (dest) {
+      const destPath = path.parse(dest).dir;
+
+      if (!fs.existsSync(destPath)) {
+        fs.mkdirSync(destPath);
       }
 
-      if (/\/viewings\//.test(sourcePath)) {
-        dest = `${import.meta.dirname}/../content/viewings/${name}`;
-      }
-
-      if (/\/export\//.test(sourcePath)) {
-        dest = `${import.meta.dirname}/../content/data/${name}`;
-      }
-
-      if (dest) {
-        const destPath = path.parse(dest).dir;
-
-        if (!fs.existsSync(destPath)) {
-          fs.mkdirSync(destPath);
-        }
-
-        fs.copyFileSync(sourcePath, dest);
-      }
+      fs.copyFileSync(sourcePath, dest);
     }
   });
