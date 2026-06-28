@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 60,
-  "viewingCount": 104,
-  "titleCount": 104,
+  "newTitleCount": 61,
+  "viewingCount": 105,
+  "titleCount": 105,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 53
+      "count": 54
     },
     {
       "name": "4k UHD Blu-ray",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1960s",
-      "count": 15
+      "count": 16
     },
     {
       "name": "1970s",
@@ -303,24 +303,24 @@
       ]
     },
     {
-      "name": "Michael A. Simpson",
+      "name": "Gordon Flemyng",
       "count": 2,
       "slug": null,
       "viewings": [
         {
-          "title": "Sleepaway Camp II: Unhappy Campers",
-          "releaseYear": "1988",
-          "reviewSlug": "sleepaway-camp-ii-unhappy-campers-1988",
-          "date": "2026-06-20",
-          "medium": "4k UHD Blu-ray",
+          "title": "Dr. Who and the Daleks",
+          "releaseYear": "1965",
+          "reviewSlug": "dr-who-and-the-daleks-1965",
+          "date": "2026-05-22",
+          "medium": "Blu-ray",
           "venue": null
         },
         {
-          "title": "Sleepaway Camp III: Teenage Wasteland",
-          "releaseYear": "1989",
-          "reviewSlug": "sleepaway-camp-iii-teenage-wasteland-1989",
-          "date": "2026-06-20",
-          "medium": "4k UHD Blu-ray",
+          "title": "Daleks' Invasion Earth 2150 A.D.",
+          "releaseYear": "1966",
+          "reviewSlug": "daleks-invasion-earth-2150-a-d-1966",
+          "date": "2026-06-26",
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -383,6 +383,53 @@
       ]
     },
     {
+      "name": "Peter Cushing",
+      "count": 5,
+      "slug": "peter-cushing",
+      "viewings": [
+        {
+          "title": "The Curse of Frankenstein",
+          "releaseYear": "1957",
+          "reviewSlug": "the-curse-of-frankenstein-1957",
+          "date": "2026-01-08",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "She",
+          "releaseYear": "1965",
+          "reviewSlug": "she-1965",
+          "date": "2026-02-08",
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "title": "The Risk",
+          "releaseYear": "1960",
+          "reviewSlug": "the-risk-1960",
+          "date": "2026-04-25",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Dr. Who and the Daleks",
+          "releaseYear": "1965",
+          "reviewSlug": "dr-who-and-the-daleks-1965",
+          "date": "2026-05-22",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Daleks' Invasion Earth 2150 A.D.",
+          "releaseYear": "1966",
+          "reviewSlug": "daleks-invasion-earth-2150-a-d-1966",
+          "date": "2026-06-26",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Hsiang Lin Yin",
       "count": 5,
       "slug": null,
@@ -424,45 +471,6 @@
           "releaseYear": "1982",
           "reviewSlug": "hell-has-no-boundary-1982",
           "date": "2026-05-10",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Peter Cushing",
-      "count": 4,
-      "slug": "peter-cushing",
-      "viewings": [
-        {
-          "title": "The Curse of Frankenstein",
-          "releaseYear": "1957",
-          "reviewSlug": "the-curse-of-frankenstein-1957",
-          "date": "2026-01-08",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "She",
-          "releaseYear": "1965",
-          "reviewSlug": "she-1965",
-          "date": "2026-02-08",
-          "medium": "DVD",
-          "venue": null
-        },
-        {
-          "title": "The Risk",
-          "releaseYear": "1960",
-          "reviewSlug": "the-risk-1960",
-          "date": "2026-04-25",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Dr. Who and the Daleks",
-          "releaseYear": "1965",
-          "reviewSlug": "dr-who-and-the-daleks-1965",
-          "date": "2026-05-22",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -990,5 +998,5 @@
       ]
     }
   ],
-  "reviewCount": 96
+  "reviewCount": 97
 }
