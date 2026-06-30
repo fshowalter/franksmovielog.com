@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 62,
-  "viewingCount": 107,
-  "titleCount": 107,
+  "newTitleCount": 63,
+  "viewingCount": 108,
+  "titleCount": 108,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -22,7 +22,7 @@
     },
     {
       "name": "iTunes",
-      "count": 5
+      "count": 6
     },
     {
       "name": "HBO Max",
@@ -58,7 +58,7 @@
     },
     {
       "name": "1960s",
-      "count": 17
+      "count": 18
     },
     {
       "name": "1970s",
@@ -753,7 +753,7 @@
   "mostWatchedWriters": [
     {
       "name": "Jimmy Sangster",
-      "count": 3,
+      "count": 4,
       "slug": "jimmy-sangster",
       "viewings": [
         {
@@ -778,6 +778,14 @@
           "reviewSlug": "maniac-1963",
           "date": "2026-06-06",
           "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hysteria",
+          "releaseYear": "1965",
+          "reviewSlug": "hysteria-1965",
+          "date": "2026-06-29",
+          "medium": "iTunes",
           "venue": null
         }
       ]
@@ -998,5 +1006,5 @@
       ]
     }
   ],
-  "reviewCount": 99
+  "reviewCount": 100
 }
