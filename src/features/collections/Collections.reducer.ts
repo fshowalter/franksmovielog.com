@@ -15,8 +15,7 @@ import type { CollectionsSort } from "./sortCollections";
  * Union type of all collection-specific filter and sort actions
  */
 export type CollectionsAction =
-  | FilterAndSortContainerAction<CollectionsSort>
-  | NameFilterChangedAction;
+  FilterAndSortContainerAction<CollectionsSort> | NameFilterChangedAction;
 
 /**
  * Type definition for Collections filter values

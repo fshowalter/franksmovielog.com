@@ -27,10 +27,7 @@ import type { CollectionTitlesValue } from "./CollectionTitles";
  * Sort type for collection titles.
  */
 export type CollectionTitlesSort =
-  | GradeSortKeys
-  | ReleaseDateSortKeys
-  | ReviewDateSortKeys
-  | TitleSortKeys;
+  GradeSortKeys | ReleaseDateSortKeys | ReviewDateSortKeys | TitleSortKeys;
 
 /**
  * Sorter function for collection titles with support for title, grade, and release date sorting.
