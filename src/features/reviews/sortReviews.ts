@@ -27,10 +27,7 @@ import type { ReviewsValue } from "./Reviews";
  * Sort type for reviews.
  */
 export type ReviewsSort =
-  | GradeSortKeys
-  | ReleaseDateSortKeys
-  | ReviewDateSortKeys
-  | TitleSortKeys;
+  GradeSortKeys | ReleaseDateSortKeys | ReviewDateSortKeys | TitleSortKeys;
 
 /**
  * Sorter function for reviews, supporting title, grade, review date, and release date sorting.
