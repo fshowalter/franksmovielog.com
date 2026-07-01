@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 63,
-  "viewingCount": 108,
-  "titleCount": 108,
+  "newTitleCount": 64,
+  "viewingCount": 109,
+  "titleCount": 109,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -13,15 +13,15 @@
       "count": 24
     },
     {
+      "name": "iTunes",
+      "count": 7
+    },
+    {
       "name": "Watch TCM",
       "count": 7
     },
     {
       "name": "DVD",
-      "count": 6
-    },
-    {
-      "name": "iTunes",
       "count": 6
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "name": "1950s",
-      "count": 5
+      "count": 6
     },
     {
       "name": "1960s",
@@ -845,6 +845,29 @@
       ]
     },
     {
+      "name": "Burt Kennedy",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Mail Order Bride",
+          "releaseYear": "1964",
+          "reviewSlug": "mail-order-bride-1964",
+          "date": "2026-01-20",
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "title": "7 Men from Now",
+          "releaseYear": "1956",
+          "reviewSlug": "7-men-from-now-1956",
+          "date": "2026-06-30",
+          "medium": "iTunes",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "David Cronenberg",
       "count": 2,
       "slug": "david-cronenberg",
@@ -981,30 +1004,7 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Kuang Ni",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "The Cat",
-          "releaseYear": "1991",
-          "reviewSlug": "the-cat-1991",
-          "date": "2026-04-23",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Clans",
-          "releaseYear": "1976",
-          "reviewSlug": "killer-clans-1976",
-          "date": "2026-05-13",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
-  "reviewCount": 100
+  "reviewCount": 101
 }
