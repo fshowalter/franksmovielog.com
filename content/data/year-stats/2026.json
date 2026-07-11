@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 64,
-  "viewingCount": 111,
-  "titleCount": 111,
+  "newTitleCount": 65,
+  "viewingCount": 112,
+  "titleCount": 112,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 26
+      "count": 27
     },
     {
       "name": "iTunes",
@@ -62,7 +62,7 @@
     },
     {
       "name": "1970s",
-      "count": 23
+      "count": 24
     },
     {
       "name": "1980s",
@@ -114,6 +114,29 @@
           "reviewSlug": "the-fly-1986",
           "date": "2026-06-01",
           "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Roman Polanski",
+      "count": 2,
+      "slug": "roman-polanski",
+      "viewings": [
+        {
+          "title": "The Ninth Gate",
+          "releaseYear": "1999",
+          "reviewSlug": "the-ninth-gate-1999",
+          "date": "2026-01-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Tenant",
+          "releaseYear": "1976",
+          "reviewSlug": "the-tenant-1976",
+          "date": "2026-07-08",
+          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -298,29 +321,6 @@
           "reviewSlug": "ball-of-fire-1941",
           "date": "2026-04-21",
           "medium": "Criterion Channel",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Gordon Flemyng",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Dr. Who and the Daleks",
-          "releaseYear": "1965",
-          "reviewSlug": "dr-who-and-the-daleks-1965",
-          "date": "2026-05-22",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Daleks' Invasion Earth 2150 A.D.",
-          "releaseYear": "1966",
-          "reviewSlug": "daleks-invasion-earth-2150-a-d-1966",
-          "date": "2026-06-26",
-          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -822,6 +822,29 @@
       ]
     },
     {
+      "name": "Roman Polanski",
+      "count": 2,
+      "slug": "roman-polanski",
+      "viewings": [
+        {
+          "title": "The Ninth Gate",
+          "releaseYear": "1999",
+          "reviewSlug": "the-ninth-gate-1999",
+          "date": "2026-01-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Tenant",
+          "releaseYear": "1976",
+          "reviewSlug": "the-tenant-1976",
+          "date": "2026-07-08",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "John Milius",
       "count": 2,
       "slug": null,
@@ -886,6 +909,29 @@
           "reviewSlug": "the-fly-1986",
           "date": "2026-06-01",
           "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "G\u00e9rard Brach",
+      "count": 2,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "The Phantom of the Opera",
+          "releaseYear": "1998",
+          "reviewSlug": "the-phantom-of-the-opera-1998",
+          "date": "2026-01-25",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Tenant",
+          "releaseYear": "1976",
+          "reviewSlug": "the-tenant-1976",
+          "date": "2026-07-08",
+          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
@@ -958,53 +1004,7 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Sam Raimi",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Army of Darkness",
-          "releaseYear": "1992",
-          "reviewSlug": null,
-          "date": "2026-03-12",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Evil Dead II",
-          "releaseYear": "1987",
-          "reviewSlug": "evil-dead-ii-1987",
-          "date": "2026-05-07",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Billy Wilder",
-      "count": 2,
-      "slug": "billy-wilder",
-      "viewings": [
-        {
-          "title": "Ball of Fire",
-          "releaseYear": "1941",
-          "reviewSlug": "ball-of-fire-1941",
-          "date": "2026-04-21",
-          "medium": "Criterion Channel",
-          "venue": null
-        },
-        {
-          "title": "Double Indemnity",
-          "releaseYear": "1944",
-          "reviewSlug": "double-indemnity-1944",
-          "date": "2026-07-01",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
-  "reviewCount": 103
+  "reviewCount": 104
 }
