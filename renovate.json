@@ -1,24 +1,37 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
-  "assignees": ["fshowalter"],
+  "extends": [
+    "config:best-practices"
+  ],
+  "assignees": [
+    "fshowalter"
+  ],
   "rangeStrategy": "pin",
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["at any time"]
+    "schedule": [
+      "at any time"
+    ]
   },
   "packageRules": [
     {
-      "extends": ["packages:stylelint"],
+      "extends": [
+        "packages:stylelint"
+      ],
       "groupName": "Stylelint packages"
     },
     {
       "groupName": "Takumi packages",
-      "matchPackageNames": ["@takumi-rs/{/,}**"]
+      "matchPackageNames": [
+        "@takumi-rs/{/,}**"
+      ]
     }
   ],
-  "postUpdateOptions": ["npmDedupe"],
-  "automerge": true
+  "postUpdateOptions": [
+    "npmDedupe"
+  ],
+  "automerge": true,
+  "rebaseWhen": "behind-base-branch"
 }
