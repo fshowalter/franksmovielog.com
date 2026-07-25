@@ -20,5 +20,6 @@
     }
   ],
   "postUpdateOptions": ["npmDedupe"],
-  "automerge": true
+  "automerge": true,
+  "rebaseWhen": "behind-base-branch"
 }
