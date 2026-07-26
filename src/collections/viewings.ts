@@ -1,10 +1,6 @@
 import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
-import {
-  parseFrontmatter,
-  renderInlineHtml,
-  renderMarkdown,
-} from "markdown-utils";
+import { parseFrontmatter, renderHtml, renderInlineHtml } from "markdown-utils";
 import path from "node:path";
 
 import { toSortDate } from "~/utils/toSortDate";
@@ -123,7 +119,7 @@ export const viewings = defineCollection({
       loadMarkdownDirectory({
         buildData: ({ frontmatter, source }) => {
           const parsedFrontmatter = ViewingFrontmatterSchema.parse(frontmatter);
-          const notesHtml = renderMarkdown(source);
+          const notesHtml = renderHtml(source);
 
           return {
             date: parsedFrontmatter.date,
