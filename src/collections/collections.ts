@@ -2,35 +2,11 @@ import type { LoaderContext } from "astro/loaders";
 
 import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
+import { renderInlineHtml, renderPlainText } from "markdown-utils";
 import path from "node:path";
-import rehypeRaw from "rehype-raw";
-import rehypeStringify from "rehype-stringify";
-import remarkRehype from "remark-rehype";
-import strip from "strip-markdown";
 
 import { CONTENT_ROOT } from "./contentRoot";
-import { getBaseMarkdownProcessor } from "./utils/getBaseMarkdownProcessor";
 import { loadJsonDirectory } from "./utils/loadJsonDirectory";
-import { emToQuotes } from "./utils/markdown-plugins/emToQuotes";
-import { rootAsSpan } from "./utils/markdown-plugins/rootAsSpan";
-
-function descriptionToHtml(description: string) {
-  return getBaseMarkdownProcessor()
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rootAsSpan)
-    .use(rehypeStringify)
-    .processSync(description)
-    .toString();
-}
-
-function descriptionToString(description: string) {
-  return getBaseMarkdownProcessor()
-    .use(emToQuotes)
-    .use(strip)
-    .processSync(description)
-    .toString();
-}
 
 const CollectionTitleSchema = z
   .object({
@@ -86,8 +62,10 @@ export const collections = defineCollection({
         buildData: ({ raw }) => {
           const rawCollection = RawCollectionSchema.parse(raw);
           return {
-            description: descriptionToString(rawCollection.description),
-            descriptionHtml: descriptionToHtml(rawCollection.description),
+            description: renderPlainText(rawCollection.description, {
+              quoteUnderscoreEmphasis: true,
+            }),
+            descriptionHtml: renderInlineHtml(rawCollection.description),
             name: raw.name,
             reviewCount: raw.reviewCount,
             slug: raw.slug,

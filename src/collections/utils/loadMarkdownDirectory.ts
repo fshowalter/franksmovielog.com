@@ -1,9 +1,9 @@
 import type { LoaderContext } from "astro/loaders";
 
+import { parseFrontmatter } from "markdown-utils";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
-import { parseFrontmatter } from "./parseFrontmatter";
 import { watchDirectory } from "./watchDirectory";
 
 /** Load a directory of Markdown files, one entry per file.
@@ -16,9 +16,9 @@ export function loadMarkdownDirectory({
   loaderContext,
 }: {
   buildData: (opts: {
-    body: string;
     frontmatter: Record<string, unknown>;
     id: string;
+    source: string;
   }) => Record<string, unknown>;
   directoryPath: string;
   getId?: (raw: string, filePath: string) => string;
@@ -50,11 +50,11 @@ export function loadMarkdownDirectory({
         continue;
       }
 
-      const { body, frontmatter } = parseFrontmatter(fileContents, filePath);
+      const frontmatter = parseFrontmatter(fileContents, filePath);
 
       // buildData runs remark/rehype WITHOUT linkReviewedWorks (applied in API layer)
       const data = await loaderContext.parseData({
-        data: buildData({ body, frontmatter, id }),
+        data: buildData({ frontmatter, id, source: fileContents }),
         id,
       });
       loaderContext.store.set({ data, digest, id });

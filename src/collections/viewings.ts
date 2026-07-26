@@ -1,18 +1,12 @@
 import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
+import { parseFrontmatter, renderHtml, renderInlineHtml } from "markdown-utils";
 import path from "node:path";
-import rehypeRaw from "rehype-raw";
-import rehypeStringify from "rehype-stringify";
-import remarkRehype from "remark-rehype";
 
 import { toSortDate } from "~/utils/toSortDate";
 
 import { CONTENT_ROOT } from "./contentRoot";
-import { getBaseMarkdownProcessor } from "./utils/getBaseMarkdownProcessor";
 import { loadMarkdownDirectory } from "./utils/loadMarkdownDirectory";
-import { rootAsSpan } from "./utils/markdown-plugins/rootAsSpan";
-import { markdownToHtml } from "./utils/markdownToHtml";
-import { parseFrontmatter } from "./utils/parseFrontmatter";
 
 const ViewingFrontmatterSchema = z
   .object({
@@ -62,20 +56,8 @@ const ViewingFrontmatterSchema = z
     },
   );
 
-/** Inline span HTML pipeline — wraps in <span>, no linkReviewedWorks */
-function toInlineSpanHtml(content: string): string {
-  return getBaseMarkdownProcessor()
-    .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rootAsSpan)
-    .use(rehypeStringify)
-    .processSync(content)
-    .toString();
-}
-
 const ViewingSchema = z
   .object({
-    body: z.string(),
     date: z.coerce.date(),
     imdbId: z.string(),
     medium: z
@@ -102,7 +84,6 @@ const ViewingSchema = z
   })
   .transform(
     ({
-      body,
       date,
       imdbId,
       medium,
@@ -117,7 +98,6 @@ const ViewingSchema = z
     }) => {
       // fix zod making anything with undefined optional
       return {
-        body,
         date,
         imdbId,
         medium,
@@ -137,31 +117,31 @@ export const viewings = defineCollection({
   loader: {
     load: (loaderContext) =>
       loadMarkdownDirectory({
-        buildData: ({ body, frontmatter }) => {
+        buildData: ({ frontmatter, source }) => {
           const parsedFrontmatter = ViewingFrontmatterSchema.parse(frontmatter);
+          const notesHtml = renderHtml(source);
 
           return {
-            body,
             date: parsedFrontmatter.date,
             imdbId: parsedFrontmatter.imdbId,
             medium: parsedFrontmatter.medium,
             mediumNotes: parsedFrontmatter.mediumNotes,
             mediumNotesHtml: parsedFrontmatter.mediumNotes?.trim()
-              ? toInlineSpanHtml(parsedFrontmatter.mediumNotes)
+              ? renderInlineHtml(parsedFrontmatter.mediumNotes)
               : undefined,
             sequence: parsedFrontmatter.sequence,
             slug: parsedFrontmatter.slug,
             venue: parsedFrontmatter.venue,
             venueNotes: parsedFrontmatter.venueNotes,
             venueNotesHtml: parsedFrontmatter.venueNotes?.trim()
-              ? toInlineSpanHtml(parsedFrontmatter.venueNotes)
+              ? renderInlineHtml(parsedFrontmatter.venueNotes)
               : undefined,
-            viewingNotesHtml: body.trim() ? markdownToHtml(body) : undefined,
+            viewingNotesHtml: notesHtml.trim() ? notesHtml : undefined,
           };
         },
         directoryPath: path.join(CONTENT_ROOT, "viewings"),
         getId: (rawContent, filePath) => {
-          const { frontmatter } = parseFrontmatter(rawContent, filePath);
+          const frontmatter = parseFrontmatter(rawContent, filePath);
 
           const validatedFrontmatter =
             ViewingFrontmatterSchema.parse(frontmatter);
