@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 67,
-  "viewingCount": 116,
-  "titleCount": 116,
+  "newTitleCount": 68,
+  "viewingCount": 117,
+  "titleCount": 117,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 59
+      "count": 60
     },
     {
       "name": "4k UHD Blu-ray",
@@ -62,7 +62,7 @@
     },
     {
       "name": "1960s",
-      "count": 18
+      "count": 19
     },
     {
       "name": "1970s",
@@ -757,7 +757,7 @@
   "mostWatchedWriters": [
     {
       "name": "Jimmy Sangster",
-      "count": 4,
+      "count": 5,
       "slug": "jimmy-sangster",
       "viewings": [
         {
@@ -790,6 +790,14 @@
           "reviewSlug": "hysteria-1965",
           "date": "2026-06-29",
           "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "title": "The Nanny",
+          "releaseYear": "1965",
+          "reviewSlug": "the-nanny-1965",
+          "date": "2026-07-16",
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -1010,5 +1018,5 @@
       ]
     }
   ],
-  "reviewCount": 108
+  "reviewCount": 109
 }
