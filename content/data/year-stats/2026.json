@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 69,
-  "viewingCount": 119,
-  "titleCount": 119,
+  "newTitleCount": 70,
+  "viewingCount": 120,
+  "titleCount": 120,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 60
+      "count": 61
     },
     {
       "name": "4k UHD Blu-ray",
@@ -70,7 +70,7 @@
     },
     {
       "name": "1970s",
-      "count": 28
+      "count": 29
     },
     {
       "name": "1980s",
@@ -336,6 +336,61 @@
   ],
   "mostWatchedPerformers": [
     {
+      "name": "Peter Cushing",
+      "count": 6,
+      "slug": "peter-cushing",
+      "viewings": [
+        {
+          "title": "The Curse of Frankenstein",
+          "releaseYear": "1957",
+          "reviewSlug": "the-curse-of-frankenstein-1957",
+          "date": "2026-01-08",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "She",
+          "releaseYear": "1965",
+          "reviewSlug": "she-1965",
+          "date": "2026-02-08",
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "title": "The Risk",
+          "releaseYear": "1960",
+          "reviewSlug": "the-risk-1960",
+          "date": "2026-04-25",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Dr. Who and the Daleks",
+          "releaseYear": "1965",
+          "reviewSlug": "dr-who-and-the-daleks-1965",
+          "date": "2026-05-22",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Daleks' Invasion Earth 2150 A.D.",
+          "releaseYear": "1966",
+          "reviewSlug": "daleks-invasion-earth-2150-a-d-1966",
+          "date": "2026-06-26",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "At the Earth's Core",
+          "releaseYear": "1976",
+          "reviewSlug": "at-the-earths-core-1976",
+          "date": "2026-08-03",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Christopher Lee",
       "count": 6,
       "slug": "christopher-lee",
@@ -385,53 +440,6 @@
           "releaseYear": "1966",
           "reviewSlug": "rasputin-the-mad-monk-1966",
           "date": "2026-05-18",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Peter Cushing",
-      "count": 5,
-      "slug": "peter-cushing",
-      "viewings": [
-        {
-          "title": "The Curse of Frankenstein",
-          "releaseYear": "1957",
-          "reviewSlug": "the-curse-of-frankenstein-1957",
-          "date": "2026-01-08",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "She",
-          "releaseYear": "1965",
-          "reviewSlug": "she-1965",
-          "date": "2026-02-08",
-          "medium": "DVD",
-          "venue": null
-        },
-        {
-          "title": "The Risk",
-          "releaseYear": "1960",
-          "reviewSlug": "the-risk-1960",
-          "date": "2026-04-25",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Dr. Who and the Daleks",
-          "releaseYear": "1965",
-          "reviewSlug": "dr-who-and-the-daleks-1965",
-          "date": "2026-05-22",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Daleks' Invasion Earth 2150 A.D.",
-          "releaseYear": "1966",
-          "reviewSlug": "daleks-invasion-earth-2150-a-d-1966",
-          "date": "2026-06-26",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -838,6 +846,37 @@
       ]
     },
     {
+      "name": "Milton Subotsky",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Dr. Who and the Daleks",
+          "releaseYear": "1965",
+          "reviewSlug": "dr-who-and-the-daleks-1965",
+          "date": "2026-05-22",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Daleks' Invasion Earth 2150 A.D.",
+          "releaseYear": "1966",
+          "reviewSlug": "daleks-invasion-earth-2150-a-d-1966",
+          "date": "2026-06-26",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "At the Earth's Core",
+          "releaseYear": "1976",
+          "reviewSlug": "at-the-earths-core-1976",
+          "date": "2026-08-03",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Roman Polanski",
       "count": 2,
       "slug": "roman-polanski",
@@ -997,30 +1036,7 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Philip MacDonald",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Sahara",
-          "releaseYear": "1943",
-          "reviewSlug": "sahara-1943",
-          "date": "2026-02-17",
-          "medium": "Watch TCM",
-          "venue": null
-        },
-        {
-          "title": "The Body Snatcher",
-          "releaseYear": "1945",
-          "reviewSlug": "the-body-snatcher-1945",
-          "date": "2026-04-05",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
-  "reviewCount": 111
+  "reviewCount": 112
 }
