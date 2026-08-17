@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 74,
-  "viewingCount": 127,
-  "titleCount": 127,
+  "newTitleCount": 75,
+  "viewingCount": 128,
+  "titleCount": 128,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -14,7 +14,7 @@
     },
     {
       "name": "iTunes",
-      "count": 11
+      "count": 12
     },
     {
       "name": "Watch TCM",
@@ -70,7 +70,7 @@
     },
     {
       "name": "1970s",
-      "count": 29
+      "count": 30
     },
     {
       "name": "1980s",
@@ -493,6 +493,45 @@
       ]
     },
     {
+      "name": "Donald Sutherland",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "The Castle of the Living Dead",
+          "releaseYear": "1964",
+          "reviewSlug": "the-castle-of-the-living-dead-1964",
+          "date": "2026-01-26",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Kentucky Fried Movie",
+          "releaseYear": "1977",
+          "reviewSlug": "the-kentucky-fried-movie-1977",
+          "date": "2026-05-21",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Die! Die! My Darling!",
+          "releaseYear": "1965",
+          "reviewSlug": "die-die-my-darling-1965",
+          "date": "2026-06-28",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Kelly's Heroes",
+          "releaseYear": "1970",
+          "reviewSlug": "kellys-heroes-1970",
+          "date": "2026-08-15",
+          "medium": "iTunes",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Lo Lieh",
       "count": 4,
       "slug": null,
@@ -721,45 +760,6 @@
           "releaseYear": "1976",
           "reviewSlug": "killer-clans-1976",
           "date": "2026-05-13",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Chih-Ching Yang",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Jade Tiger",
-          "releaseYear": "1977",
-          "reviewSlug": "jade-tiger-1977",
-          "date": "2026-01-27",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Men from the Gutter",
-          "releaseYear": "1983",
-          "reviewSlug": "men-from-the-gutter-1983",
-          "date": "2026-02-12",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Clans",
-          "releaseYear": "1976",
-          "reviewSlug": "killer-clans-1976",
-          "date": "2026-05-13",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "The 14 Amazons",
-          "releaseYear": "1972",
-          "reviewSlug": "the-14-amazons-1972",
-          "date": "2026-05-30",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1038,5 +1038,5 @@
       ]
     }
   ],
-  "reviewCount": 119
+  "reviewCount": 120
 }
