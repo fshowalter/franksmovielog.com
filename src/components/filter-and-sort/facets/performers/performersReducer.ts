@@ -26,16 +26,13 @@ export function performersFacetReducer<
   switch (action.type) {
     case ActionTypes.CHANGED: {
       const { values } = action as PerformersFilterChangedAction;
-      if (values.length === 0) {
-        return {
+      return values.length === 0 ? {
           ...state,
           pendingFilterValues: omitPendingKey(
             state.pendingFilterValues,
             STATE_KEY,
           ),
-        };
-      }
-      return {
+        } : {
         ...state,
         pendingFilterValues: {
           ...state.pendingFilterValues,
@@ -48,16 +45,13 @@ export function performersFacetReducer<
       if (key !== STATE_KEY) return state;
       const current = state.pendingFilterValues[STATE_KEY] ?? [];
       const updated = current.filter((k) => k !== value);
-      if (updated.length === 0) {
-        return {
+      return updated.length === 0 ? {
           ...state,
           pendingFilterValues: omitPendingKey(
             state.pendingFilterValues,
             STATE_KEY,
           ),
-        };
-      }
-      return {
+        } : {
         ...state,
         pendingFilterValues: {
           ...state.pendingFilterValues,

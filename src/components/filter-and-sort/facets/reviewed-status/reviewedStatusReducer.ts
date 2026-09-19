@@ -33,16 +33,13 @@ export function reviewedStatusFacetReducer<
   switch (action.type) {
     case ActionTypes.CHANGED: {
       const { values } = action as ReviewedStatusFilterChangedAction;
-      if (values.length === 0) {
-        return {
+      return values.length === 0 ? {
           ...state,
           pendingFilterValues: omitPendingKey(
             state.pendingFilterValues,
             STATE_KEY,
           ),
-        };
-      }
-      return {
+        } : {
         ...state,
         pendingFilterValues: {
           ...state.pendingFilterValues,
@@ -56,16 +53,13 @@ export function reviewedStatusFacetReducer<
 
       const current = state.pendingFilterValues[STATE_KEY] ?? [];
       const updated = current.filter((s) => s !== value);
-      if (updated.length === 0) {
-        return {
+      return updated.length === 0 ? {
           ...state,
           pendingFilterValues: omitPendingKey(
             state.pendingFilterValues,
             STATE_KEY,
           ),
-        };
-      }
-      return {
+        } : {
         ...state,
         pendingFilterValues: {
           ...state.pendingFilterValues,

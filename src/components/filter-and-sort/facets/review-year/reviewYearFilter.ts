@@ -5,10 +5,9 @@ export function createReviewYearFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.reviewYear;
-  if (!filterValue) return;
-  return (value: TValue): boolean => {
+  return filterValue ? (value: TValue): boolean => {
     return value.reviewYear
       ? value.reviewYear >= filterValue[0] && value.reviewYear <= filterValue[1]
       : false;
-  };
+  } : undefined;
 }

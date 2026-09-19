@@ -28,7 +28,6 @@ export function createMediumFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.medium;
-  if (!filterValue || filterValue.length === 0) return;
-  return (value: TValue) =>
+  return !filterValue || filterValue.length === 0 ? undefined : (value: TValue) =>
     value.medium ? filterValue.includes(value.medium) : false;
 }

@@ -98,10 +98,7 @@ const posterImageProps = await getFixedWidthPosterImageProps(review.slug);
       >
         {reviewedTitle.releaseYear} |{" "}
         {reviewedTitle.countries.map((country, index) => {
-          if (index === 0) {
-            return country;
-          }
-          return <Fragment set:html={`&ndash;${country}`} />;
+          return index === 0 ? country : <Fragment set:html={`&ndash;${country}`} />;
         })}{" "}
         | {reviewedTitle.runtimeMinutes}&nbsp;min |{" "}
         <a

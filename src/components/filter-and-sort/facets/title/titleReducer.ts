@@ -31,16 +31,13 @@ export function titleFacetReducer<
   switch (action.type) {
     case ActionTypes.CHANGED: {
       const { value } = action as TitleFilterChangedAction;
-      if (value === "") {
-        return {
+      return value === "" ? {
           ...state,
           pendingFilterValues: omitPendingKey(
             state.pendingFilterValues,
             STATE_KEY,
           ),
-        };
-      }
-      return {
+        } : {
         ...state,
         pendingFilterValues: {
           ...state.pendingFilterValues,
@@ -50,14 +47,13 @@ export function titleFacetReducer<
     }
     case FilterAndSortContainerActionTypes.FILTER_REMOVED: {
       const { key } = action as RemoveFilterAction;
-      if (key !== STATE_KEY) return state;
-      return {
+      return key === STATE_KEY ? {
         ...state,
         pendingFilterValues: omitPendingKey(
           state.pendingFilterValues,
           STATE_KEY,
         ),
-      };
+      } : state;
     }
     default: {
       return state;

@@ -7,14 +7,9 @@ export function ListItemMediumAndVenue({
 }): React.JSX.Element | undefined {
   const value = medium && venue ? `${medium} at ${venue}` : (medium ?? venue);
 
-  if (!value) {
-    // pre-2012 viewings don't have venue or medium
-    return undefined;
-  }
-
-  return (
+  return value ? (
     <div className={`font-sans text-xs font-light tracking-prose text-subtle`}>
       {value}
     </div>
-  );
+  ) : undefined; // pre-2012 viewings don't have venue or medium
 }
