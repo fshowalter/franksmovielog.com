@@ -21,11 +21,7 @@ export function ListItemCreditedAs({
       `}
     >
       {values.map((value, index) => {
-        if (index === 0) {
-          return capitalize(value);
-        }
-
-        return `, ${capitalize(value)}`;
+        return index === 0 ? capitalize(value) : `, ${capitalize(value)}`;
       })}
     </div>
   );

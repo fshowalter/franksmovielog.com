@@ -12,11 +12,9 @@ export type GroupFn<TValue, TSort extends string> = (
 export function getGroupLetter(str: string): string {
   const letter = str.slice(0, 1);
 
-  if (letter.toLowerCase() === letter.toUpperCase()) {
-    return "#";
-  }
-
-  return letter.toLocaleUpperCase();
+  return letter.toLowerCase() === letter.toUpperCase()
+    ? "#"
+    : letter.toLocaleUpperCase();
 }
 
 /**

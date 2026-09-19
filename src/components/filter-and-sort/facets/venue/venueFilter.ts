@@ -28,7 +28,8 @@ export function createVenueFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.venue;
-  if (!filterValue || filterValue.length === 0) return;
-  return (value: TValue) =>
-    value.venue ? filterValue.includes(value.venue) : false;
+  return !filterValue || filterValue.length === 0
+    ? undefined
+    : (value: TValue) =>
+        value.venue ? filterValue.includes(value.venue) : false;
 }

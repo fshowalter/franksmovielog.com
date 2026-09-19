@@ -64,11 +64,7 @@ const metaDescription = `My ${stats.year} viewing stats. Includes my most-watche
       class="mb-12 w-full"
       currentYear={stats.year}
       linkFunc={(year: string) => {
-        if (year === "all") {
-          return "/viewings/stats/";
-        }
-
-        return `/viewings/stats/${year}/`;
+        return year === "all" ? "/viewings/stats/" : `/viewings/stats/${year}/`;
       }}
       years={allStatsYears}
     />

@@ -27,7 +27,10 @@ export function createPerformersFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.performers;
-  if (!filterValue || filterValue.length === 0) return;
-  return (value: TValue) =>
-    filterValue.some((name) => value.watchlistPerformerNames.includes(name));
+  return !filterValue || filterValue.length === 0
+    ? undefined
+    : (value: TValue) =>
+        filterValue.some((name) =>
+          value.watchlistPerformerNames.includes(name),
+        );
 }

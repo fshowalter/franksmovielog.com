@@ -16,11 +16,9 @@ export function Avatar({
   className,
   imageProps,
 }: AvatarProps): React.JSX.Element {
-  if (imageProps) {
-    return <img alt="" {...imageProps} className={className} />;
-  }
-
-  return (
+  return imageProps ? (
+    <img alt="" {...imageProps} className={className} />
+  ) : (
     <div>
       <div className={className}>
         <svg

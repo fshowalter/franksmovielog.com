@@ -13,13 +13,13 @@ export function buildMultiSelectChips({
   label?: string;
   values: readonly string[] | undefined;
 }): FilterChip[] {
-  if (!values || values.length === 0) return [];
-
-  return values.map((value) => ({
-    displayText: label ? `${label}: ${value}` : value,
-    key,
-    value,
-  }));
+  return !values || values.length === 0
+    ? []
+    : values.map((value) => ({
+        displayText: label ? `${label}: ${value}` : value,
+        key,
+        value,
+      }));
 }
 
 export function buildSearchChip({
@@ -32,14 +32,15 @@ export function buildSearchChip({
   value: string | undefined;
 }): FilterChip[] {
   const trimmed = value?.trim();
-  if (!trimmed) return [];
-  return [
-    {
-      displayText: `${label}: ${trimmed}`,
-      key,
-      value: undefined,
-    },
-  ];
+  return trimmed
+    ? [
+        {
+          displayText: `${label}: ${trimmed}`,
+          key,
+          value: undefined,
+        },
+      ]
+    : [];
 }
 
 /**
