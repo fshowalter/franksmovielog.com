@@ -33,19 +33,21 @@ export function reviewedStatusFacetReducer<
   switch (action.type) {
     case ActionTypes.CHANGED: {
       const { values } = action as ReviewedStatusFilterChangedAction;
-      return values.length === 0 ? {
-          ...state,
-          pendingFilterValues: omitPendingKey(
-            state.pendingFilterValues,
-            STATE_KEY,
-          ),
-        } : {
-        ...state,
-        pendingFilterValues: {
-          ...state.pendingFilterValues,
-          [STATE_KEY]: values,
-        },
-      };
+      return values.length === 0
+        ? {
+            ...state,
+            pendingFilterValues: omitPendingKey(
+              state.pendingFilterValues,
+              STATE_KEY,
+            ),
+          }
+        : {
+            ...state,
+            pendingFilterValues: {
+              ...state.pendingFilterValues,
+              [STATE_KEY]: values,
+            },
+          };
     }
     case FilterAndSortContainerActionTypes.FILTER_REMOVED: {
       const { key, value } = action as RemoveFilterAction;
@@ -53,19 +55,21 @@ export function reviewedStatusFacetReducer<
 
       const current = state.pendingFilterValues[STATE_KEY] ?? [];
       const updated = current.filter((s) => s !== value);
-      return updated.length === 0 ? {
-          ...state,
-          pendingFilterValues: omitPendingKey(
-            state.pendingFilterValues,
-            STATE_KEY,
-          ),
-        } : {
-        ...state,
-        pendingFilterValues: {
-          ...state.pendingFilterValues,
-          [STATE_KEY]: updated,
-        },
-      };
+      return updated.length === 0
+        ? {
+            ...state,
+            pendingFilterValues: omitPendingKey(
+              state.pendingFilterValues,
+              STATE_KEY,
+            ),
+          }
+        : {
+            ...state,
+            pendingFilterValues: {
+              ...state.pendingFilterValues,
+              [STATE_KEY]: updated,
+            },
+          };
     }
     default: {
       return state;

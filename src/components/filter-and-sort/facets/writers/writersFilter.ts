@@ -27,6 +27,8 @@ export function createWritersFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.writers;
-  return !filterValue || filterValue.length === 0 ? undefined : (value: TValue) =>
-    filterValue.some((name) => value.watchlistWriterNames.includes(name));
+  return !filterValue || filterValue.length === 0
+    ? undefined
+    : (value: TValue) =>
+        filterValue.some((name) => value.watchlistWriterNames.includes(name));
 }

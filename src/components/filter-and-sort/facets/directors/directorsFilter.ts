@@ -27,6 +27,8 @@ export function createDirectorsFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.directors;
-  return !filterValue || filterValue.length === 0 ? undefined : (value: TValue) =>
-    filterValue.some((name) => value.watchlistDirectorNames.includes(name));
+  return !filterValue || filterValue.length === 0
+    ? undefined
+    : (value: TValue) =>
+        filterValue.some((name) => value.watchlistDirectorNames.includes(name));
 }

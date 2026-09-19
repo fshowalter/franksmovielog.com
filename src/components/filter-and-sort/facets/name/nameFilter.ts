@@ -5,11 +5,13 @@ export function createNameFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.name;
-  return filterValue ? (value: TValue): boolean => {
-    const filterValueLowerCase = filterValue.toLocaleLowerCase();
-    return (
-      value.name.toLocaleLowerCase().includes(filterValueLowerCase) ||
-      value.sortName.toLocaleLowerCase().includes(filterValueLowerCase)
-    );
-  } : undefined;
+  return filterValue
+    ? (value: TValue): boolean => {
+        const filterValueLowerCase = filterValue.toLocaleLowerCase();
+        return (
+          value.name.toLocaleLowerCase().includes(filterValueLowerCase) ||
+          value.sortName.toLocaleLowerCase().includes(filterValueLowerCase)
+        );
+      }
+    : undefined;
 }

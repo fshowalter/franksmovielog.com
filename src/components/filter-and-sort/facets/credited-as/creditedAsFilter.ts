@@ -27,6 +27,8 @@ export function createCreditedAsFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.creditedAs;
-  return !filterValue || filterValue.length === 0 ? undefined : (value: TValue) =>
-    filterValue.some((credit) => value.creditedAs.includes(credit));
+  return !filterValue || filterValue.length === 0
+    ? undefined
+    : (value: TValue) =>
+        filterValue.some((credit) => value.creditedAs.includes(credit));
 }

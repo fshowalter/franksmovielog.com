@@ -27,6 +27,8 @@ export function createGenresFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.genres;
-  return !filterValue || filterValue.length === 0 ? undefined : (value: TValue) =>
-    filterValue.some((name) => value.genres.includes(name));
+  return !filterValue || filterValue.length === 0
+    ? undefined
+    : (value: TValue) =>
+        filterValue.some((name) => value.genres.includes(name));
 }

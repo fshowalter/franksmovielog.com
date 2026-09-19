@@ -16,9 +16,12 @@ export function createGradeFilter<TValue extends FilterableValue>(
   const filterValue = filters.gradeValue;
 
   return !filterValue ||
-    (filterValue[0] === GRADE_MIN && filterValue[1] === GRADE_MAX) ? undefined : (value: TValue): boolean => {
-    return value.gradeValue
-      ? value.gradeValue >= filterValue[0] && value.gradeValue <= filterValue[1]
-      : false;
-  };
+    (filterValue[0] === GRADE_MIN && filterValue[1] === GRADE_MAX)
+    ? undefined
+    : (value: TValue): boolean => {
+        return value.gradeValue
+          ? value.gradeValue >= filterValue[0] &&
+              value.gradeValue <= filterValue[1]
+          : false;
+      };
 }

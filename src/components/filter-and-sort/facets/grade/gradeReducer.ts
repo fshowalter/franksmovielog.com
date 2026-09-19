@@ -30,29 +30,33 @@ export function gradeFacetReducer<
   switch (action.type) {
     case ActionTypes.CHANGED: {
       const { values } = action as GradeFilterChangedAction;
-      return values[0] === GRADE_MIN && values[1] === GRADE_MAX ? {
-          ...state,
-          pendingFilterValues: omitPendingKey(
-            state.pendingFilterValues,
-            STATE_KEY,
-          ),
-        } : {
-        ...state,
-        pendingFilterValues: {
-          ...state.pendingFilterValues,
-          [STATE_KEY]: values,
-        },
-      };
+      return values[0] === GRADE_MIN && values[1] === GRADE_MAX
+        ? {
+            ...state,
+            pendingFilterValues: omitPendingKey(
+              state.pendingFilterValues,
+              STATE_KEY,
+            ),
+          }
+        : {
+            ...state,
+            pendingFilterValues: {
+              ...state.pendingFilterValues,
+              [STATE_KEY]: values,
+            },
+          };
     }
     case FilterAndSortContainerActionTypes.FILTER_REMOVED: {
       const { key } = action as RemoveFilterAction;
-      return key === STATE_KEY ? {
-        ...state,
-        pendingFilterValues: omitPendingKey(
-          state.pendingFilterValues,
-          STATE_KEY,
-        ),
-      } : state;
+      return key === STATE_KEY
+        ? {
+            ...state,
+            pendingFilterValues: omitPendingKey(
+              state.pendingFilterValues,
+              STATE_KEY,
+            ),
+          }
+        : state;
     }
     default: {
       return state;

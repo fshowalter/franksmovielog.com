@@ -20,38 +20,42 @@ export function collectionsFacetReducer<
   switch (action.type) {
     case ActionTypes.CHANGED: {
       const { values } = action as CollectionsFilterChangedAction;
-      return values.length === 0 ? {
-          ...state,
-          pendingFilterValues: omitPendingKey(
-            state.pendingFilterValues,
-            STATE_KEY,
-          ),
-        } : {
-        ...state,
-        pendingFilterValues: {
-          ...state.pendingFilterValues,
-          [STATE_KEY]: values,
-        },
-      };
+      return values.length === 0
+        ? {
+            ...state,
+            pendingFilterValues: omitPendingKey(
+              state.pendingFilterValues,
+              STATE_KEY,
+            ),
+          }
+        : {
+            ...state,
+            pendingFilterValues: {
+              ...state.pendingFilterValues,
+              [STATE_KEY]: values,
+            },
+          };
     }
     case FilterAndSortContainerActionTypes.FILTER_REMOVED: {
       const { key, value } = action as RemoveFilterAction;
       if (key !== STATE_KEY) return state;
       const current = state.pendingFilterValues[STATE_KEY] ?? [];
       const updated = current.filter((k) => k !== value);
-      return updated.length === 0 ? {
-          ...state,
-          pendingFilterValues: omitPendingKey(
-            state.pendingFilterValues,
-            STATE_KEY,
-          ),
-        } : {
-        ...state,
-        pendingFilterValues: {
-          ...state.pendingFilterValues,
-          [STATE_KEY]: updated,
-        },
-      };
+      return updated.length === 0
+        ? {
+            ...state,
+            pendingFilterValues: omitPendingKey(
+              state.pendingFilterValues,
+              STATE_KEY,
+            ),
+          }
+        : {
+            ...state,
+            pendingFilterValues: {
+              ...state.pendingFilterValues,
+              [STATE_KEY]: updated,
+            },
+          };
     }
     default: {
       return state;

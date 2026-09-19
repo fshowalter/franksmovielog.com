@@ -89,12 +89,14 @@ const viewingsComposedReducer = composeReducers<ViewingsState>(
   // Month navigation actions: set selectedMonthDate
   (state, action) => {
     return action.type === "viewings/nextMonthClicked" ||
-      action.type === "viewings/previousMonthClicked" ? {
-        ...state,
-        selectedMonthDate: (
-          action as NextMonthClickedAction | PreviousMonthClickedAction
-        ).value,
-      } : state;
+      action.type === "viewings/previousMonthClicked"
+      ? {
+          ...state,
+          selectedMonthDate: (
+            action as NextMonthClickedAction | PreviousMonthClickedAction
+          ).value,
+        }
+      : state;
   },
 );
 

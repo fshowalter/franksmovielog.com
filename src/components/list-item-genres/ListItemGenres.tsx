@@ -12,7 +12,9 @@ export function ListItemGenres({
   return (
     <div className={`font-sans text-xs/4 tracking-prose text-subtle`}>
       {values.map((value, index) => {
-        return index === 0 ? <span key={value}>{value}</span> : (
+        return index === 0 ? (
+          <span key={value}>{value}</span>
+        ) : (
           <span key={value}>
             , <span className="whitespace-nowrap">{value}</span>
           </span>

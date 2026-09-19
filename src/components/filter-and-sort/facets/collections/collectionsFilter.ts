@@ -27,6 +27,10 @@ export function createCollectionsFilter<TValue extends FilterableValue>(
   filters: Filters,
 ) {
   const filterValue = filters.collections;
-  return !filterValue || filterValue.length === 0 ? undefined : (value: TValue) =>
-    filterValue.some((name) => value.watchlistCollectionNames.includes(name));
+  return !filterValue || filterValue.length === 0
+    ? undefined
+    : (value: TValue) =>
+        filterValue.some((name) =>
+          value.watchlistCollectionNames.includes(name),
+        );
 }
