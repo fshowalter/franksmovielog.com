@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 88,
-  "viewingCount": 147,
-  "titleCount": 147,
+  "viewingCount": 148,
+  "titleCount": 148,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -10,7 +10,7 @@
     },
     {
       "name": "4k UHD Blu-ray",
-      "count": 31
+      "count": 32
     },
     {
       "name": "iTunes",
@@ -74,7 +74,7 @@
     },
     {
       "name": "1970s",
-      "count": 32
+      "count": 33
     },
     {
       "name": "1980s",
@@ -638,6 +638,45 @@
       ]
     },
     {
+      "name": "Ian Holm",
+      "count": 4,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Naked Lunch",
+          "releaseYear": "1991",
+          "reviewSlug": "naked-lunch-1991",
+          "date": "2026-01-24",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Brazil",
+          "releaseYear": "1985",
+          "reviewSlug": "brazil-1985",
+          "date": "2026-08-08",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Time Bandits",
+          "releaseYear": "1981",
+          "reviewSlug": "time-bandits-1981",
+          "date": "2026-08-24",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Alien",
+          "releaseYear": "1979",
+          "reviewSlug": "alien-1979",
+          "date": "2026-09-10",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Donald Sutherland",
       "count": 4,
       "slug": null,
@@ -749,45 +788,6 @@
           "releaseYear": "1972",
           "reviewSlug": "the-14-amazons-1972",
           "date": "2026-05-30",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Biu Gam",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Jade Tiger",
-          "releaseYear": "1977",
-          "reviewSlug": "jade-tiger-1977",
-          "date": "2026-01-27",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Men from the Gutter",
-          "releaseYear": "1983",
-          "reviewSlug": "men-from-the-gutter-1983",
-          "date": "2026-02-12",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Constable",
-          "releaseYear": "1980",
-          "reviewSlug": "killer-constable-1980",
-          "date": "2026-06-09",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Bewitched",
-          "releaseYear": "1981",
-          "reviewSlug": "bewitched-1981",
-          "date": "2026-08-20",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1066,5 +1066,5 @@
       ]
     }
   ],
-  "reviewCount": 139
+  "reviewCount": 140
 }
