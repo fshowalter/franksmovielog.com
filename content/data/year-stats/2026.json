@@ -1,8 +1,8 @@
 {
   "year": "2026",
   "newTitleCount": 89,
-  "viewingCount": 150,
-  "titleCount": 150,
+  "viewingCount": 151,
+  "titleCount": 151,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -17,11 +17,11 @@
       "count": 14
     },
     {
-      "name": "DVD",
-      "count": 7
+      "name": "Watch TCM",
+      "count": 8
     },
     {
-      "name": "Watch TCM",
+      "name": "DVD",
       "count": 7
     },
     {
@@ -34,7 +34,7 @@
     },
     {
       "name": "70mm",
-      "count": 2
+      "count": 3
     },
     {
       "name": "35mm",
@@ -66,7 +66,7 @@
     },
     {
       "name": "1950s",
-      "count": 6
+      "count": 7
     },
     {
       "name": "1960s",
@@ -200,6 +200,29 @@
       ]
     },
     {
+      "name": "John Sturges",
+      "count": 2,
+      "slug": "john-sturges",
+      "viewings": [
+        {
+          "title": "The People Against O'Hara",
+          "releaseYear": "1951",
+          "reviewSlug": "the-people-against-ohara-1951",
+          "date": "2026-02-08",
+          "medium": "Watch TCM",
+          "venue": null
+        },
+        {
+          "title": "Jeopardy",
+          "releaseYear": "1953",
+          "reviewSlug": "jeopardy-1953",
+          "date": "2026-09-14",
+          "medium": "Watch TCM",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Ngai Choi Lam",
       "count": 2,
       "slug": null,
@@ -310,29 +333,6 @@
           "reviewSlug": "executive-suite-1954",
           "date": "2026-06-07",
           "medium": "HBO Max",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Michael Carreras",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "The Curse of the Mummy's Tomb",
-          "releaseYear": "1964",
-          "reviewSlug": "the-curse-of-the-mummys-tomb-1964",
-          "date": "2026-04-10",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Maniac",
-          "releaseYear": "1963",
-          "reviewSlug": "maniac-1963",
-          "date": "2026-06-06",
-          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -1066,5 +1066,5 @@
       ]
     }
   ],
-  "reviewCount": 142
+  "reviewCount": 143
 }
