@@ -104,7 +104,7 @@ export default defineConfig({
     },
   },
   integrations: [
-    react({ compiler: !process.env.TEST_COVERAGE }),
+    react({ compiler: true }),
     sitemap({
       filter: (page) => page !== "https://www.franksmovielog.com/gone/",
     }),
