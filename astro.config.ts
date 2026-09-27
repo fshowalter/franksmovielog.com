@@ -104,13 +104,7 @@ export default defineConfig({
     },
   },
   integrations: [
-    react({
-      babel: {
-        plugins: process.env.TEST_COVERAGE
-          ? []
-          : [["babel-plugin-react-compiler"]],
-      },
-    }),
+    react({ compiler: true }),
     sitemap({
       filter: (page) => page !== "https://www.franksmovielog.com/gone/",
     }),
