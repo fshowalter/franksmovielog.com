@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 91,
-  "viewingCount": 153,
-  "titleCount": 153,
+  "newTitleCount": 92,
+  "viewingCount": 154,
+  "titleCount": 154,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 74
+      "count": 75
     },
     {
       "name": "4k UHD Blu-ray",
@@ -74,7 +74,7 @@
     },
     {
       "name": "1960s",
-      "count": 22
+      "count": 23
     },
     {
       "name": "1970s",
@@ -801,7 +801,7 @@
   "mostWatchedWriters": [
     {
       "name": "Jimmy Sangster",
-      "count": 5,
+      "count": 6,
       "slug": "jimmy-sangster",
       "viewings": [
         {
@@ -841,6 +841,14 @@
           "releaseYear": "1965",
           "reviewSlug": "the-nanny-1965",
           "date": "2026-07-16",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Anniversary",
+          "releaseYear": "1968",
+          "reviewSlug": "the-anniversary-1968",
+          "date": "2026-09-21",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1070,5 +1078,5 @@
       ]
     }
   ],
-  "reviewCount": 145
+  "reviewCount": 146
 }
