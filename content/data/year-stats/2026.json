@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 92,
-  "viewingCount": 154,
-  "titleCount": 154,
+  "newTitleCount": 93,
+  "viewingCount": 155,
+  "titleCount": 155,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 75
+      "count": 76
     },
     {
       "name": "4k UHD Blu-ray",
@@ -82,7 +82,7 @@
     },
     {
       "name": "1980s",
-      "count": 32
+      "count": 33
     },
     {
       "name": "1990s",
@@ -454,6 +454,61 @@
       ]
     },
     {
+      "name": "Hsiang Lin Yin",
+      "count": 6,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Mercenaries from Hong Kong",
+          "releaseYear": "1982",
+          "reviewSlug": "mercenaries-from-hong-kong-1982",
+          "date": "2026-02-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hard Boiled",
+          "releaseYear": "1992",
+          "reviewSlug": "hard-boiled-1992",
+          "date": "2026-04-23",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "The Cat",
+          "releaseYear": "1991",
+          "reviewSlug": "the-cat-1991",
+          "date": "2026-04-23",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Hell Has No Boundary",
+          "releaseYear": "1982",
+          "reviewSlug": "hell-has-no-boundary-1982",
+          "date": "2026-05-10",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Portrait in Crystal",
+          "releaseYear": "1983",
+          "reviewSlug": "portrait-in-crystal-1983",
+          "date": "2026-09-22",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Fei Ai",
       "count": 5,
       "slug": null,
@@ -595,7 +650,7 @@
       ]
     },
     {
-      "name": "Hsiang Lin Yin",
+      "name": "Wei-Ho Tu",
       "count": 5,
       "slug": null,
       "viewings": [
@@ -608,6 +663,14 @@
           "venue": null
         },
         {
+          "title": "One-Armed Boxer",
+          "releaseYear": "1972",
+          "reviewSlug": "one-armed-boxer-1972",
+          "date": "2026-02-04",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
           "title": "Men from the Gutter",
           "releaseYear": "1983",
           "reviewSlug": "men-from-the-gutter-1983",
@@ -616,26 +679,18 @@
           "venue": null
         },
         {
-          "title": "Hard Boiled",
-          "releaseYear": "1992",
-          "reviewSlug": "hard-boiled-1992",
-          "date": "2026-04-23",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "The Cat",
-          "releaseYear": "1991",
-          "reviewSlug": "the-cat-1991",
-          "date": "2026-04-23",
+          "title": "Killer Clans",
+          "releaseYear": "1976",
+          "reviewSlug": "killer-clans-1976",
+          "date": "2026-05-13",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "title": "Hell Has No Boundary",
-          "releaseYear": "1982",
-          "reviewSlug": "hell-has-no-boundary-1982",
-          "date": "2026-05-10",
+          "title": "Portrait in Crystal",
+          "releaseYear": "1983",
+          "reviewSlug": "portrait-in-crystal-1983",
+          "date": "2026-09-22",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -737,45 +792,6 @@
           "releaseYear": "1982",
           "reviewSlug": "mercenaries-from-hong-kong-1982",
           "date": "2026-02-01",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Clans",
-          "releaseYear": "1976",
-          "reviewSlug": "killer-clans-1976",
-          "date": "2026-05-13",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "The 14 Amazons",
-          "releaseYear": "1972",
-          "reviewSlug": "the-14-amazons-1972",
-          "date": "2026-05-30",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Yueh Hua",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Jade Tiger",
-          "releaseYear": "1977",
-          "reviewSlug": "jade-tiger-1977",
-          "date": "2026-01-27",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Hell Has No Boundary",
-          "releaseYear": "1982",
-          "reviewSlug": "hell-has-no-boundary-1982",
-          "date": "2026-05-10",
           "medium": "Blu-ray",
           "venue": null
         },
@@ -1078,5 +1094,5 @@
       ]
     }
   ],
-  "reviewCount": 146
+  "reviewCount": 147
 }
