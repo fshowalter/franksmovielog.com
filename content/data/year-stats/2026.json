@@ -1,12 +1,12 @@
 {
   "year": "2026",
   "newTitleCount": 95,
-  "viewingCount": 158,
+  "viewingCount": 159,
   "titleCount": 158,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 77
+      "count": 78
     },
     {
       "name": "4k UHD Blu-ray",
@@ -86,7 +86,7 @@
     },
     {
       "name": "1990s",
-      "count": 19
+      "count": 20
     },
     {
       "name": "2000s",
@@ -101,7 +101,16 @@
       "count": 12
     }
   ],
-  "mostWatchedTitles": [],
+  "mostWatchedTitles": [
+    {
+      "imdbId": "tt0103644",
+      "title": "Alien\u00b3",
+      "releaseYear": "1992",
+      "reviewSlug": "alien3-1992",
+      "count": 2,
+      "lastViewingDate": "2026-10-04"
+    }
+  ],
   "mostWatchedDirectors": [
     {
       "name": "David Cronenberg",
@@ -933,6 +942,68 @@
       ]
     },
     {
+      "name": "David Giler",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Aliens",
+          "releaseYear": "1986",
+          "reviewSlug": "aliens-1986",
+          "date": "2026-09-12",
+          "medium": "70mm",
+          "venue": "AFI Silver"
+        },
+        {
+          "title": "Alien\u00b3",
+          "releaseYear": "1992",
+          "reviewSlug": "alien3-1992",
+          "date": "2026-09-23",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Alien\u00b3",
+          "releaseYear": "1992",
+          "reviewSlug": "alien3-1992",
+          "date": "2026-10-04",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Walter Hill",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Aliens",
+          "releaseYear": "1986",
+          "reviewSlug": "aliens-1986",
+          "date": "2026-09-12",
+          "medium": "70mm",
+          "venue": "AFI Silver"
+        },
+        {
+          "title": "Alien\u00b3",
+          "releaseYear": "1992",
+          "reviewSlug": "alien3-1992",
+          "date": "2026-09-23",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Alien\u00b3",
+          "releaseYear": "1992",
+          "reviewSlug": "alien3-1992",
+          "date": "2026-10-04",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Roman Polanski",
       "count": 2,
       "slug": "roman-polanski",
@@ -1046,53 +1117,7 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "Lung Ku",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Jade Tiger",
-          "releaseYear": "1977",
-          "reviewSlug": "jade-tiger-1977",
-          "date": "2026-01-27",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Clans",
-          "releaseYear": "1976",
-          "reviewSlug": "killer-clans-1976",
-          "date": "2026-05-13",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "P.J. Wolfson",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Rendezvous",
-          "releaseYear": "1935",
-          "reviewSlug": "rendezvous-1935",
-          "date": "2026-02-01",
-          "medium": "Watch TCM",
-          "venue": null
-        },
-        {
-          "title": "Allegheny Uprising",
-          "releaseYear": "1939",
-          "reviewSlug": "allegheny-uprising-1939",
-          "date": "2026-09-20",
-          "medium": "Watch TCM",
-          "venue": null
-        }
-      ]
     }
   ],
-  "reviewCount": 149
+  "reviewCount": 150
 }
