@@ -1,8 +1,8 @@
 {
   "year": "2026",
-  "newTitleCount": 99,
-  "viewingCount": 165,
-  "titleCount": 164,
+  "newTitleCount": 100,
+  "viewingCount": 166,
+  "titleCount": 165,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
@@ -17,12 +17,12 @@
       "count": 15
     },
     {
-      "name": "Watch TCM",
+      "name": "DVD",
       "count": 9
     },
     {
-      "name": "DVD",
-      "count": 8
+      "name": "Watch TCM",
+      "count": 9
     },
     {
       "name": "HBO Max",
@@ -78,7 +78,7 @@
     },
     {
       "name": "1970s",
-      "count": 34
+      "count": 35
     },
     {
       "name": "1980s",
@@ -834,7 +834,7 @@
   "mostWatchedWriters": [
     {
       "name": "Jimmy Sangster",
-      "count": 6,
+      "count": 7,
       "slug": "jimmy-sangster",
       "viewings": [
         {
@@ -883,6 +883,14 @@
           "reviewSlug": "the-anniversary-1968",
           "date": "2026-09-21",
           "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Crescendo",
+          "releaseYear": "1970",
+          "reviewSlug": "crescendo-1970",
+          "date": "2026-10-11",
+          "medium": "DVD",
           "venue": null
         }
       ]
@@ -1127,5 +1135,5 @@
       ]
     }
   ],
-  "reviewCount": 156
+  "reviewCount": 157
 }
