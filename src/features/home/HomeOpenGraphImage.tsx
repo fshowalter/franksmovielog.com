@@ -1,7 +1,5 @@
 /**
  * OpenGraph image component for the home page.
- * @param props - Component props
- * @param props.backdrop - URL of the backdrop image
  * @returns OpenGraph image element
  */
 export function HomeOpenGraphImage(): React.JSX.Element {
