@@ -1,12 +1,12 @@
 {
   "year": "2026",
-  "newTitleCount": 100,
-  "viewingCount": 166,
-  "titleCount": 165,
+  "newTitleCount": 101,
+  "viewingCount": 167,
+  "titleCount": 166,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 80
+      "count": 81
     },
     {
       "name": "4k UHD Blu-ray",
@@ -86,7 +86,7 @@
     },
     {
       "name": "1990s",
-      "count": 21
+      "count": 22
     },
     {
       "name": "2000s",
@@ -714,6 +714,53 @@
       ]
     },
     {
+      "name": "Sigourney Weaver",
+      "count": 5,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Alien",
+          "releaseYear": "1979",
+          "reviewSlug": "alien-1979",
+          "date": "2026-09-10",
+          "medium": "4k UHD Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Aliens",
+          "releaseYear": "1986",
+          "reviewSlug": "aliens-1986",
+          "date": "2026-09-12",
+          "medium": "70mm",
+          "venue": "AFI Silver"
+        },
+        {
+          "title": "Alien\u00b3",
+          "releaseYear": "1992",
+          "reviewSlug": "alien3-1992",
+          "date": "2026-09-23",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Alien\u00b3",
+          "releaseYear": "1992",
+          "reviewSlug": "alien3-1992",
+          "date": "2026-10-04",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Alien: Resurrection",
+          "releaseYear": "1997",
+          "reviewSlug": "alien-resurrection-1997",
+          "date": "2026-10-17",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Ian Holm",
       "count": 4,
       "slug": null,
@@ -787,45 +834,6 @@
           "reviewSlug": "kellys-heroes-1970",
           "date": "2026-08-15",
           "medium": "iTunes",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Lo Lieh",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Jade Tiger",
-          "releaseYear": "1977",
-          "reviewSlug": "jade-tiger-1977",
-          "date": "2026-01-27",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Mercenaries from Hong Kong",
-          "releaseYear": "1982",
-          "reviewSlug": "mercenaries-from-hong-kong-1982",
-          "date": "2026-02-01",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Clans",
-          "releaseYear": "1976",
-          "reviewSlug": "killer-clans-1976",
-          "date": "2026-05-13",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "The 14 Amazons",
-          "releaseYear": "1972",
-          "reviewSlug": "the-14-amazons-1972",
-          "date": "2026-05-30",
-          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -1135,5 +1143,5 @@
       ]
     }
   ],
-  "reviewCount": 157
+  "reviewCount": 158
 }
