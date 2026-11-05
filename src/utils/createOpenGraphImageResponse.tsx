@@ -115,7 +115,7 @@ function OpenGraphImage({ title }: { title: string }): React.JSX.Element {
       <div
         style={{
           backgroundImage:
-            "radial-gradient(ellipse at left bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75) 15%, rgba(0, 0, 0, 0)) 25%",
+            "radial-gradient(ellipse at left bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75) 11%, rgba(0, 0, 0, 0) 70%)",
           bottom: 0,
           display: "flex",
           flexDirection: "column",
