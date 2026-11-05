@@ -37,14 +37,14 @@ export async function componentToImageBytes(
   component: ReactNode,
   images: { data: ArrayBuffer; src: string }[],
 ): Promise<Buffer> {
-  const { node, stylesheets } = await fromJsx(component);
+  const { css, node } = await fromJsx(component);
 
   return await renderer.render(node, {
+    css,
     fonts,
     format: "jpeg",
     height: 630,
     images,
-    stylesheets,
     width: 1200,
   });
 }
