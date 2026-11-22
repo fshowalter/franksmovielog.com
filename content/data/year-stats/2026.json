@@ -1,12 +1,12 @@
 {
   "year": "2026",
   "newTitleCount": 105,
-  "viewingCount": 178,
+  "viewingCount": 180,
   "titleCount": 175,
   "mediaDistribution": [
     {
       "name": "Blu-ray",
-      "count": 88
+      "count": 89
     },
     {
       "name": "4k UHD Blu-ray",
@@ -14,7 +14,7 @@
     },
     {
       "name": "iTunes",
-      "count": 15
+      "count": 16
     },
     {
       "name": "DVD",
@@ -70,7 +70,7 @@
     },
     {
       "name": "1950s",
-      "count": 8
+      "count": 9
     },
     {
       "name": "1960s",
@@ -82,7 +82,7 @@
     },
     {
       "name": "1980s",
-      "count": 40
+      "count": 41
     },
     {
       "name": "1990s",
@@ -102,6 +102,22 @@
     }
   ],
   "mostWatchedTitles": [
+    {
+      "imdbId": "tt0083313",
+      "title": "Killer Constable",
+      "releaseYear": "1980",
+      "reviewSlug": "killer-constable-1980",
+      "count": 2,
+      "lastViewingDate": "2026-11-19"
+    },
+    {
+      "imdbId": "tt0049743",
+      "title": "7 Men from Now",
+      "releaseYear": "1956",
+      "reviewSlug": "7-men-from-now-1956",
+      "count": 2,
+      "lastViewingDate": "2026-11-19"
+    },
     {
       "imdbId": "tt0069865",
       "title": "Charley Varrick",
@@ -186,6 +202,37 @@
           "reviewSlug": "murder-rock-dancing-death-1984",
           "date": "2026-10-08",
           "medium": "4k UHD Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Chih-Hung Kuei",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-06-09",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Bewitched",
+          "releaseYear": "1981",
+          "reviewSlug": "bewitched-1981",
+          "date": "2026-08-20",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-11-19",
+          "medium": "Blu-ray",
           "venue": null
         }
       ]
@@ -350,29 +397,6 @@
           "venue": null
         }
       ]
-    },
-    {
-      "name": "John Huston",
-      "count": 2,
-      "slug": "john-huston",
-      "viewings": [
-        {
-          "title": "The Maltese Falcon",
-          "releaseYear": "1941",
-          "reviewSlug": "the-maltese-falcon-1941",
-          "date": "2026-04-04",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Fat City",
-          "releaseYear": "1972",
-          "reviewSlug": "fat-city-1972",
-          "date": "2026-06-05",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
     }
   ],
   "mostWatchedPerformers": [
@@ -487,6 +511,61 @@
       ]
     },
     {
+      "name": "Fei Ai",
+      "count": 6,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Jade Tiger",
+          "releaseYear": "1977",
+          "reviewSlug": "jade-tiger-1977",
+          "date": "2026-01-27",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Mercenaries from Hong Kong",
+          "releaseYear": "1982",
+          "reviewSlug": "mercenaries-from-hong-kong-1982",
+          "date": "2026-02-01",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Clans",
+          "releaseYear": "1976",
+          "reviewSlug": "killer-clans-1976",
+          "date": "2026-05-13",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-06-09",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Bewitched",
+          "releaseYear": "1981",
+          "reviewSlug": "bewitched-1981",
+          "date": "2026-08-20",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-11-19",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Hsiang Lin Yin",
       "count": 6,
       "slug": null,
@@ -542,53 +621,6 @@
       ]
     },
     {
-      "name": "Fei Ai",
-      "count": 5,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Jade Tiger",
-          "releaseYear": "1977",
-          "reviewSlug": "jade-tiger-1977",
-          "date": "2026-01-27",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Mercenaries from Hong Kong",
-          "releaseYear": "1982",
-          "reviewSlug": "mercenaries-from-hong-kong-1982",
-          "date": "2026-02-01",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Clans",
-          "releaseYear": "1976",
-          "reviewSlug": "killer-clans-1976",
-          "date": "2026-05-13",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Killer Constable",
-          "releaseYear": "1980",
-          "reviewSlug": "killer-constable-1980",
-          "date": "2026-06-09",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Bewitched",
-          "releaseYear": "1981",
-          "reviewSlug": "bewitched-1981",
-          "date": "2026-08-20",
-          "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
       "name": "Miao Ching",
       "count": 5,
       "slug": null,
@@ -630,6 +662,53 @@
           "releaseYear": "1981",
           "reviewSlug": "bewitched-1981",
           "date": "2026-08-20",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "Biu Gam",
+      "count": 5,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Jade Tiger",
+          "releaseYear": "1977",
+          "reviewSlug": "jade-tiger-1977",
+          "date": "2026-01-27",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-06-09",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Bewitched",
+          "releaseYear": "1981",
+          "reviewSlug": "bewitched-1981",
+          "date": "2026-08-20",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-11-19",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -730,126 +809,95 @@
       ]
     },
     {
-      "name": "Sigourney Weaver",
+      "name": "Han Chiang",
       "count": 5,
       "slug": null,
       "viewings": [
         {
-          "title": "Alien",
-          "releaseYear": "1979",
-          "reviewSlug": "alien-1979",
-          "date": "2026-09-10",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Aliens",
-          "releaseYear": "1986",
-          "reviewSlug": "aliens-1986",
-          "date": "2026-09-12",
-          "medium": "70mm",
-          "venue": "AFI Silver"
-        },
-        {
-          "title": "Alien\u00b3",
-          "releaseYear": "1992",
-          "reviewSlug": "alien3-1992",
-          "date": "2026-09-23",
+          "title": "Men from the Gutter",
+          "releaseYear": "1983",
+          "reviewSlug": "men-from-the-gutter-1983",
+          "date": "2026-02-12",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "title": "Alien\u00b3",
-          "releaseYear": "1992",
-          "reviewSlug": "alien3-1992",
-          "date": "2026-10-04",
+          "title": "Killer Clans",
+          "releaseYear": "1976",
+          "reviewSlug": "killer-clans-1976",
+          "date": "2026-05-13",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "title": "Alien: Resurrection",
-          "releaseYear": "1997",
-          "reviewSlug": "alien-resurrection-1997",
-          "date": "2026-10-17",
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-06-09",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Portrait in Crystal",
+          "releaseYear": "1983",
+          "reviewSlug": "portrait-in-crystal-1983",
+          "date": "2026-09-22",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-11-19",
           "medium": "Blu-ray",
           "venue": null
         }
       ]
     },
     {
-      "name": "Ian Holm",
-      "count": 4,
+      "name": "Ping Ha",
+      "count": 5,
       "slug": null,
       "viewings": [
         {
-          "title": "Naked Lunch",
-          "releaseYear": "1991",
-          "reviewSlug": "naked-lunch-1991",
-          "date": "2026-01-24",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Brazil",
-          "releaseYear": "1985",
-          "reviewSlug": "brazil-1985",
-          "date": "2026-08-08",
+          "title": "Hell Has No Boundary",
+          "releaseYear": "1982",
+          "reviewSlug": "hell-has-no-boundary-1982",
+          "date": "2026-05-10",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "title": "Time Bandits",
-          "releaseYear": "1981",
-          "reviewSlug": "time-bandits-1981",
-          "date": "2026-08-24",
+          "title": "Killer Clans",
+          "releaseYear": "1976",
+          "reviewSlug": "killer-clans-1976",
+          "date": "2026-05-13",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "title": "Alien",
-          "releaseYear": "1979",
-          "reviewSlug": "alien-1979",
-          "date": "2026-09-10",
-          "medium": "4k UHD Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "Donald Sutherland",
-      "count": 4,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "The Castle of the Living Dead",
-          "releaseYear": "1964",
-          "reviewSlug": "the-castle-of-the-living-dead-1964",
-          "date": "2026-01-26",
+          "title": "The 14 Amazons",
+          "releaseYear": "1972",
+          "reviewSlug": "the-14-amazons-1972",
+          "date": "2026-05-30",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "title": "The Kentucky Fried Movie",
-          "releaseYear": "1977",
-          "reviewSlug": "the-kentucky-fried-movie-1977",
-          "date": "2026-05-21",
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-06-09",
           "medium": "Blu-ray",
           "venue": null
         },
         {
-          "title": "Die! Die! My Darling!",
-          "releaseYear": "1965",
-          "reviewSlug": "die-die-my-darling-1965",
-          "date": "2026-06-28",
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-11-19",
           "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "Kelly's Heroes",
-          "releaseYear": "1970",
-          "reviewSlug": "kellys-heroes-1970",
-          "date": "2026-08-15",
-          "medium": "iTunes",
           "venue": null
         }
       ]
@@ -920,6 +968,37 @@
       ]
     },
     {
+      "name": "Burt Kennedy",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Mail Order Bride",
+          "releaseYear": "1964",
+          "reviewSlug": "mail-order-bride-1964",
+          "date": "2026-01-20",
+          "medium": "DVD",
+          "venue": null
+        },
+        {
+          "title": "7 Men from Now",
+          "releaseYear": "1956",
+          "reviewSlug": "7-men-from-now-1956",
+          "date": "2026-06-30",
+          "medium": "iTunes",
+          "venue": null
+        },
+        {
+          "title": "7 Men from Now",
+          "releaseYear": "1956",
+          "reviewSlug": "7-men-from-now-1956",
+          "date": "2026-11-19",
+          "medium": "iTunes",
+          "venue": null
+        }
+      ]
+    },
+    {
       "name": "Warren Duff",
       "count": 3,
       "slug": null,
@@ -976,6 +1055,37 @@
           "releaseYear": "1976",
           "reviewSlug": "at-the-earths-core-1976",
           "date": "2026-08-03",
+          "medium": "Blu-ray",
+          "venue": null
+        }
+      ]
+    },
+    {
+      "name": "On Szeto",
+      "count": 3,
+      "slug": null,
+      "viewings": [
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-06-09",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Bewitched",
+          "releaseYear": "1981",
+          "reviewSlug": "bewitched-1981",
+          "date": "2026-08-20",
+          "medium": "Blu-ray",
+          "venue": null
+        },
+        {
+          "title": "Killer Constable",
+          "releaseYear": "1980",
+          "reviewSlug": "killer-constable-1980",
+          "date": "2026-11-19",
           "medium": "Blu-ray",
           "venue": null
         }
@@ -1090,29 +1200,6 @@
       ]
     },
     {
-      "name": "Burt Kennedy",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "Mail Order Bride",
-          "releaseYear": "1964",
-          "reviewSlug": "mail-order-bride-1964",
-          "date": "2026-01-20",
-          "medium": "DVD",
-          "venue": null
-        },
-        {
-          "title": "7 Men from Now",
-          "releaseYear": "1956",
-          "reviewSlug": "7-men-from-now-1956",
-          "date": "2026-06-30",
-          "medium": "iTunes",
-          "venue": null
-        }
-      ]
-    },
-    {
       "name": "David Cronenberg",
       "count": 2,
       "slug": "david-cronenberg",
@@ -1131,29 +1218,6 @@
           "reviewSlug": "the-fly-1986",
           "date": "2026-06-01",
           "medium": "Blu-ray",
-          "venue": null
-        }
-      ]
-    },
-    {
-      "name": "G\u00e9rard Brach",
-      "count": 2,
-      "slug": null,
-      "viewings": [
-        {
-          "title": "The Phantom of the Opera",
-          "releaseYear": "1998",
-          "reviewSlug": "the-phantom-of-the-opera-1998",
-          "date": "2026-01-25",
-          "medium": "Blu-ray",
-          "venue": null
-        },
-        {
-          "title": "The Tenant",
-          "releaseYear": "1976",
-          "reviewSlug": "the-tenant-1976",
-          "date": "2026-07-08",
-          "medium": "4k UHD Blu-ray",
           "venue": null
         }
       ]
